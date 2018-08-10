@@ -1,0 +1,71 @@
+2005-10-20T15:45:00.000Z	sn9	freddy244	modprobe -r
+2005-10-20T15:49:00.000Z	freddy244	sn9	it said that it didn't find it, but insmod is saying that its installed
+2005-10-20T15:50:00.000Z	sn9	freddy244	use lsmod to see what's loaded and what's used
+2005-10-20T15:51:00.000Z	freddy244	sn9	lsmod... then what?
+2005-10-20T15:52:00.000Z	sn9	freddy244	is the offending module listed?
+2005-10-20T15:52:00.000Z	freddy244	sn9	do i just type lsmod
+2005-10-20T15:52:00.000Z	sn9	freddy244	yes
+2005-10-20T15:56:00.000Z	freddy244	sn9	nope it's not in there
+2005-10-20T15:56:00.000Z	sn9	freddy244	then it's not loaded
+2005-10-20T15:58:00.000Z	freddy244	sn9	so what shall I do then?
+2005-10-20T15:59:00.000Z	freddy244	sn9	modprobe wont load it and insmod says its loaded
+2005-10-21T16:00:00.000Z	sn9	freddy244	what are you trying to load?
+2005-10-21T16:01:00.000Z	freddy244	sn9	a ndiswrapper module to get my wireless card running
+2005-10-21T16:01:00.000Z	freddy244	sn9	modprobe ndiswrapper worked with hoary but it's not with breezy
+2005-10-21T16:01:00.000Z	sn9	freddy244	did you reinstall ndiswrapper-utils?
+2005-10-21T16:03:00.000Z	freddy244	sn9	yeah i reinstalled it why?
+2005-10-21T16:04:00.000Z	sn9	freddy244	did you do ndiswrapper -i again?
+2005-10-21T16:08:00.000Z	sn9	freddy244	is this a self-compiled ndiswrapper? or ubuntu's?
+2005-10-21T16:12:00.000Z	freddy244	sn9	i just reinstalled ndiswrapper and tried again but modprobe won't add the module
+2005-10-21T16:12:00.000Z	sn9	freddy244	is this a self-compiled ndiswrapper? or ubuntu's?
+2005-10-21T16:13:00.000Z	freddy244	sn9	it's Ubuntu's they called it ndiswrapper-utils
+2005-10-21T16:14:00.000Z	sn9	freddy244	dpkg -L ndiswrapper-utils
+2005-10-21T16:18:00.000Z	freddy244	sn9	i get file and folder locations?
+2005-10-21T16:18:00.000Z	sn9	freddy244	anything in /lib/modules ?
+2005-10-21T16:20:00.000Z	freddy244	sn9	no there isn't
+2005-10-21T16:20:00.000Z	sn9	freddy244	try installing linux-restricted-modules
+2005-10-21T16:20:00.000Z	freddy244	sn9	ok
+2005-10-21T16:22:00.000Z	freddy244	sn9	they're already installed
+2005-10-21T16:25:00.000Z	freddy244	sn9	it gave me two directories
+2005-10-21T16:26:00.000Z	freddy244	sn9	/lib/modules/2.6.12-9-386/kernel/drivers/net/ndiswrapper and /lib/modules/2.6.12-9-386/kernel/drivers/net/ndiswrapper/ndiswrapper.ko
+2005-10-21T16:27:00.000Z	sn9	freddy244	now dpkg -S on both those files
+2005-10-21T16:28:00.000Z	freddy244	sn9	i've done that
+2005-10-21T16:29:00.000Z	sn9	freddy244	output?
+2005-10-21T16:29:00.000Z	freddy244	sn9	nothing
+2005-10-21T16:30:00.000Z	sn9	freddy244	whaaa...
+2005-10-21T16:31:00.000Z	freddy244	sn9	when I typed it I just got a "fred@linux:"
+2005-10-21T16:31:00.000Z	sn9	freddy244	dpkg -S /lib/modules/2.6.12-9-386/kernel/drivers/net/ndiswrapper/ndiswrapper.ko
+2005-10-21T16:31:00.000Z	freddy244	sn9	any ideas?
+2005-10-21T16:32:00.000Z	sn9	freddy244	are you running the 386 kernel?
+2005-10-21T16:32:00.000Z	freddy244	sn9	that's what I typed
+2005-10-21T16:33:00.000Z	freddy244	sn9	I think so
+2005-10-21T16:33:00.000Z	freddy244	sn9	I downloaded the i386 cd
+2005-10-21T16:33:00.000Z	sn9	freddy244	that's not what i mean
+2005-10-21T16:34:00.000Z	sn9	freddy244	the i386 cd has kernels for 386, 686, 686-smp, k7, etc
+2005-10-21T16:35:00.000Z	freddy244	sn9	how do i check then?
+2005-10-21T16:35:00.000Z	sn9	freddy244	uname -a
+2005-10-21T16:36:00.000Z	freddy244	sn9	686
+2005-10-21T16:37:00.000Z	sn9	freddy244	no mention of 386?
+2005-10-21T16:38:00.000Z	freddy244	sn9	only in 2.6.12-9-386
+2005-10-21T16:38:00.000Z	sn9	freddy244	so it does say 386 in uname?
+2005-10-21T16:39:00.000Z	freddy244	sn9	it says both
+2005-10-21T16:41:00.000Z	freddy244	sn9	uname gives me: Linux Nexus 2.6.12-9-386 *date and time* i686 GNU/LINUX
+2005-10-21T16:41:00.000Z	sn9	freddy244	type: sudo depmod -a
+2005-10-21T16:42:00.000Z	sn9	freddy244	type: sudo depmod -a
+2005-10-21T16:43:00.000Z	freddy244	sn9	I typed that. I was waiting for a few seconds as though it was processing something, but it didn't give an output
+2005-10-21T16:43:00.000Z	sn9	freddy244	type: sudo modprobe ndiswrapper
+2005-10-21T16:45:00.000Z	sn9	freddy244	how now brown cow?
+2005-10-21T16:45:00.000Z	freddy244	sn9	i still get the same error
+2005-10-21T16:46:00.000Z	sn9	freddy244	it can't find it?
+2005-10-21T16:46:00.000Z	freddy244	sn9	it had the fatal error that i gave you ages ago
+2005-10-21T16:47:00.000Z	sn9	freddy244	try a reboot and on a fresh start, ndiswrapper -i foo.inf, modprobe ndiswrapper
+2005-10-21T16:48:00.000Z	freddy244	sn9	i've rebooted but still no joy
+2005-10-21T16:48:00.000Z	freddy244	sn9	it's as though the kernel is blocking the module being added "operation not permitted"
+2005-10-21T16:48:00.000Z	sn9	freddy244	yes, but have you done so after the depmod -a ?
+2005-10-21T16:48:00.000Z	freddy244	sn9	no
+2005-10-21T16:53:00.000Z	freddy244	sn9	it's still not working
+2005-10-21T16:54:00.000Z	sn9	freddy244	 what happens if you insmod with a full path?
+2005-10-21T16:55:00.000Z	freddy244	sn9	it doesn't give an error, but doesn't give an output
+2005-10-21T16:56:00.000Z	sn9	freddy244	lsmod now
+2005-10-21T16:56:00.000Z	freddy244	sn9	but it still doesn't activate the card (add it to networking dialog like modprobe does)
+2005-10-21T16:57:00.000Z	freddy244	sn9	can i pmsg you?

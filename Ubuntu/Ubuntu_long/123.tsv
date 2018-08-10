@@ -1,0 +1,49 @@
+2010-01-26T15:27:00.000Z	Jimi_Neutral		I am getting this error when installing ubuntu enterprise file:///cdrom/pool/main/p/pam/libpam-runtime_1.1.0-2ubuntu1_all.deb was corrupt
+2010-01-26T15:27:00.000Z	Myrtti	Jimi_Neutral	when installing what? Ubuntu Enterprise?
+2010-01-26T15:28:00.000Z	Jimi_Neutral	Myrtti	aye
+2010-01-26T15:33:00.000Z	Myrtti	Jimi_Neutral	you could try if the version in the internet isn't corrupted
+2010-01-26T15:36:00.000Z	Jimi_Neutral	Myrtti	thats the one i downloaded
+2010-01-26T15:37:00.000Z	Myrtti	Jimi_Neutral	did you do a md5sum on the iso and the disc before burning?
+2010-01-26T15:39:00.000Z	Jimi_Neutral	Myrtti	 ah no i didnt
+2010-01-26T15:39:00.000Z	Myrtti	Jimi_Neutral	you can check the disk now, with the check tool, but my guess is that some bits and bytes have gone bad
+2010-01-26T15:39:00.000Z	Jimi_Neutral	Myrtti	ty
+2010-01-26T15:43:00.000Z	Jimi_Neutral	Myrtti	yeah corrupt
+2010-01-26T15:43:00.000Z	Jimi_Neutral	Myrtti	dammit
+2010-01-26T15:44:00.000Z	Myrtti	Jimi_Neutral	if possible, use torrent next time, it has it's own checkup method. or md5sum before burning
+2010-01-26T15:44:00.000Z	Jimi_Neutral	Myrtti	ok cheers :)
+2010-01-26T15:46:00.000Z	Jimi_Neutral	Myrtti	you got a link for the torrent?
+2010-01-26T15:47:00.000Z	Jimi_Neutral	Myrtti	nm
+2010-01-28T15:44:00.000Z	Myrtti	Jimi_Neutral	AMD64 is a legacy name for 64-bit OS architectures
+2010-01-28T15:44:00.000Z	Jimi_Neutral	Myrtti	 oh, thanks :)
+2010-02-04T17:25:00.000Z	Myrtti	Jimi_Neutral	can you ping 8.8.8.8?
+2010-02-04T17:26:00.000Z	Jimi_Neutral	Myrtti	yup yup
+2010-02-04T17:26:00.000Z	Myrtti	Jimi_Neutral	then you've got a dns problem, most likely
+2010-02-04T17:26:00.000Z	Myrtti	Jimi_Neutral	or on your computer
+2010-02-04T17:27:00.000Z	Jimi_Neutral	Myrtti	well this box connects fine so i assume it is on the computer
+2010-02-04T17:27:00.000Z	Jimi_Neutral	Myrtti	how do i config that?
+2010-02-04T17:30:00.000Z	Myrtti	Jimi_Neutral	you are connecting to the router by wifi or cable?
+2010-02-04T17:31:00.000Z	Jimi_Neutral	Myrtti	this is at work....my box is attacthed to a switch which is then attactched to the floor ports then to the server room (obviously lol) it is all wired
+2010-02-04T17:31:00.000Z	Jimi_Neutral	Myrtti	its weird that it worked fine yesterday, i restarted today and it doesnt work anymore
+2010-02-04T17:32:00.000Z	Myrtti	Jimi_Neutral	that happened at my old workplace quite often. It can be an error in the network itself. you can try to set your dns servers to google or opendns, but of course it would be better if you'd use the ones your work network provides
+2010-02-04T17:38:00.000Z	Myrtti	Jimi_Neutral	where you set up the static address? on the Graphical dialog for it? you can change your dns in the same place
+2010-02-04T17:40:00.000Z	Jimi_Neutral	Myrtti	what is the syntax? i cant find it on the net,  everythin to do with DNS just points me at downloading somethign called BIND
+2010-02-04T17:40:00.000Z	Myrtti	Jimi_Neutral	did you do the setting of the static ip address on command line?
+2010-02-04T17:41:00.000Z	Jimi_Neutral	Myrtti	in /etc/network interfaces
+2010-02-04T17:42:00.000Z	Myrtti	Jimi_Neutral	you can start by making a backup of a file, with sudo cp /etc/resolv.conf /etc/resolv.conf.auto
+2010-02-04T17:43:00.000Z	Myrtti	Jimi_Neutral	then you edit /etc/dhcp3/dhclient.conf , you can do it with sudo nano or gksudo gedit or whatever you prefer
+2010-02-04T17:44:00.000Z	Jimi_Neutral	Myrtti	i got command not found doing that backup
+2010-02-04T17:46:00.000Z	Jimi_Neutral	Myrtti	ok that dhcp file is confusing lol, which do i change to the dns I need
+2010-02-04T17:46:00.000Z	Myrtti	Jimi_Neutral	go to the bottom of the file, and add "prepend domain-name-servers 208.67.222.222,208.67.220.220;" without the quotes in the end
+2010-02-04T17:47:00.000Z	Jimi_Neutral	Myrtti	is that second one supposed to have 5 octets?
+2010-02-04T17:48:00.000Z	Jimi_Neutral	Myrtti	ok added that on the end and done a networking restart
+2010-02-04T17:49:00.000Z	Myrtti	Jimi_Neutral	then you should be ready to go
+2010-02-04T17:50:00.000Z	Jimi_Neutral	Myrtti	it still has not done anything....the bottom of that file had a #} was it supposed to be in them brackets?
+2010-02-04T17:50:00.000Z	Myrtti	Jimi_Neutral	no
+2010-02-04T17:51:00.000Z	Jimi_Neutral	Myrtti	hmmm
+2010-02-04T17:58:00.000Z	Jimi_Neutral	Myrtti	still not worknig bud
+2010-02-04T17:58:00.000Z	Myrtti	Jimi_Neutral	:-(
+2010-02-04T17:58:00.000Z	Myrtti	Jimi_Neutral	have you tried to ask the network admins if they are aware of any problems in the network dns yet?
+2010-02-04T18:01:00.000Z	Jimi_Neutral	Myrtti	i am the network admin and its fine cause all the other boxs and pc are ok
+2010-02-04T18:01:00.000Z	Myrtti	Jimi_Neutral	X-D
+2010-02-09T17:25:00.000Z	Myrtti	Jimi_Neutral	if you've got an intel card, it's likely that you already have the best possible drivers in your use. what makes you think you need to download and install them?
+2010-02-09T17:26:00.000Z	Jimi_Neutral	Myrtti	cause it doesnt look like the other box that is on the same hardware

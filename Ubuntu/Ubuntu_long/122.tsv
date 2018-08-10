@@ -1,0 +1,40 @@
+2010-08-05T22:41:00.000Z	Mjuksel		hi
+2010-08-05T22:42:00.000Z	Mjuksel		hello all
+2010-08-05T22:42:00.000Z	Mjuksel		i have a question
+2010-08-05T22:42:00.000Z	Mjuksel		my minimize/maximize (so title bar i guess) disappeared for all programs :S
+2010-08-05T22:42:00.000Z	ActionParsnip	Mjuksel	its called the window decorator
+2010-08-05T22:43:00.000Z	ActionParsnip	Mjuksel	do you use an nvidia video card?
+2010-08-05T22:43:00.000Z	Mjuksel		ah okay
+2010-08-05T22:43:00.000Z	Mjuksel		yeah i have nvidia
+2010-08-05T22:43:00.000Z	ActionParsnip	Mjuksel	http://ubuntuforums.org/showthread.php?t=649480
+2010-08-05T22:43:00.000Z	Mjuksel		i know how to move them , thank you
+2010-08-05T22:43:00.000Z	Mjuksel		but sometimes they just tend to dissappear
+2010-08-05T22:43:00.000Z	ActionParsnip	Mjuksel	you need that in your cxorg.conf
+2010-08-05T22:44:00.000Z	ActionParsnip	Mjuksel	if you install emerald then press ALT+F2 and run: emerald --replace    you can use that instead
+2010-08-05T22:44:00.000Z	Mjuksel		i dont have emerald installed ActionParsnip :)
+2010-08-05T22:45:00.000Z	ActionParsnip		!info g77
+2010-08-05T22:45:00.000Z	ActionParsnip	Mjuksel	grab it
+2010-08-05T22:45:00.000Z	ActionParsnip		!info emerald
+2010-08-05T22:46:00.000Z	Mjuksel		ok how do i install it ?
+2010-08-05T22:46:00.000Z	Mjuksel		using terminal or packet control ?
+2010-08-05T22:46:00.000Z	ActionParsnip	Mjuksel	same as ANY software
+2010-08-05T22:46:00.000Z	Mjuksel		or software centre OR ubuntu tweak lol :p
+2010-08-05T22:46:00.000Z	ActionParsnip	Mjuksel	sudo apt-get install emerald    will do it, or you can use software centre
+2010-08-05T22:46:00.000Z	ActionParsnip		!java | muthu
+2010-08-05T22:47:00.000Z	Mjuksel		ok after that do i need sudo apt-get install/upgrade?
+2010-08-05T22:47:00.000Z	ActionParsnip	Mjuksel	you should be fully upgraded anyway
+2010-08-05T22:48:00.000Z	ActionParsnip	Mjuksel	then run: emerald --replace      in an ALT+F2 dialogue and the decorators will be red, you can then get an emerald theme and apply it
+2010-08-05T22:49:00.000Z	ActionParsnip	Mjuksel	it'll look like this: http://video.linux-noob.com/screenshots/ubuntu/7.04/post-1-1178480994.png
+2010-08-05T22:49:00.000Z	Mjuksel		ok well i installed emerald now
+2010-08-05T22:49:00.000Z	Mjuksel		but nothing changed
+2010-08-05T22:49:00.000Z	Mjuksel		so i can remove emerald right away :p
+2010-08-05T22:50:00.000Z	Mjuksel		ah it uses gtk-window-decorator
+2010-08-05T22:50:00.000Z	ActionParsnip	Mjuksel	did you run the command?
+2010-08-05T22:50:00.000Z	Mjuksel		yes i did
+2010-08-05T22:50:00.000Z	ActionParsnip	Mjuksel	ok then launch it in a terminal, see what it says
+2010-08-05T22:50:00.000Z	Mjuksel		start emerald in terminal
+2010-08-05T22:51:00.000Z	Mjuksel		im running emerald --replace now
+2010-08-05T22:51:00.000Z	Mjuksel		takes some time
+2010-08-05T22:51:00.000Z	ActionParsnip	Mjuksel	personally I'd run:   sudo nvidia-xconfig   then add the extra options I gave in the link earlier, nvidia sometimes need those options
+2010-08-05T22:52:00.000Z	Mjuksel	ActionParsnip	VALIDATION ERROR: Data incomplete in file /etc/X11/xorg.conf.
+2010-08-05T22:52:00.000Z	ActionParsnip	Mjuksel	the command will make an xorg.conf for you

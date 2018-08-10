@@ -1,0 +1,57 @@
+2008-09-06T17:10:00.000Z	spiritssight		I need help getting video to play on YouTube and also getting flash to work on other sites like google Gadget
+2008-09-06T17:10:00.000Z	jrib	spiritssight	have you installed flash?
+2008-09-06T17:11:00.000Z	jrib	spiritssight	pastebin the output of the following command: apt-cache policy flashplugin-nonfree && ls -l /usr/lib/firefox/plugins/
+2008-09-06T17:12:00.000Z	jrib	spiritssight	just use paste.ubuntu.com
+2008-09-06T17:15:00.000Z	spiritssight	jrib	I have the pastebinit installed how can I have it send it using this
+2008-09-06T17:15:00.000Z	jrib	spiritssight	COMMAND | pastebinit     ?  I don't know
+2008-09-06T17:18:00.000Z	jrib	spiritssight	ok, now do apt-cache policy flashplugin-nonfree
+2008-09-06T17:18:00.000Z	spiritssight	jrib	I did it wrong the first time which is why I ask you what I did wrong was the | I put no space in between it and the computer :-(
+2008-09-06T17:19:00.000Z	spiritssight	jrib	http://pastebin.com/f1535bca9
+2008-09-06T17:20:00.000Z	jrib	spiritssight	k, pastebin the contents of the page you get when you visit "about:plugins" in your browser
+2008-09-06T17:22:00.000Z	spiritssight	jrib	how do I do this it has a face in place of some letters
+2008-09-06T17:23:00.000Z	jrib	spiritssight	your client is changing a ':' and a 'p' into a smiley.  Here it is with spaces added: a b o u t : p l u g i n s
+2008-09-06T17:24:00.000Z	jrib	spiritssight	you type it in the address bar
+2008-09-06T17:28:00.000Z	jrib	spiritssight	uninstall mozilla-plugin-gnash
+2008-09-06T17:29:00.000Z	spiritssight	jrib	how can I do that?
+2008-09-06T17:29:00.000Z	jrib	spiritssight	you can use synaptic
+2008-09-06T17:30:00.000Z	jrib	spiritssight	system -> administration -> synaptic
+2008-09-06T17:32:00.000Z	spiritssight	jrib	I did a complet removal of mozilla-plugin-gnash
+2008-09-06T17:32:00.000Z	jrib	spiritssight	restart your browser
+2008-09-06T17:33:00.000Z	jrib	spiritssight	gnash is the open source flash player, but it isn't able to do everything adobe's can
+2008-09-17T19:08:00.000Z	jrib	spiritssight	does anything have sound right now?
+2008-09-17T19:10:00.000Z	jrib	spiritssight	close all your browser windows and other audio video players, run 'sudo /etc/init.d/pulseaudio restart' and then try mplayer again
+2008-09-17T19:25:00.000Z	jrib	spiritssight	you have some app that is using the soundcard directly.  Probably flash
+2008-09-17T19:27:00.000Z	spiritssight	jrib	so your saying I can not have more then one audio program running at once, so when i have pigdin and say mplayer open its not going to work one of them
+2010-01-21T02:49:00.000Z	jrib	spiritssight	pastebin exactly what you are doing and the full output
+2010-01-21T02:51:00.000Z	spiritssight	jrib	http://pastebin.com/d9233c79
+2010-01-21T02:52:00.000Z	jrib	spiritssight	why are you running update-manager -d?
+2010-01-21T02:53:00.000Z	spiritssight	jrib	Doing a upgrade from 8.10 to latest
+2010-01-21T02:53:00.000Z	jrib	spiritssight	you don't run update-manage -d for that
+2010-01-21T03:00:00.000Z	spiritssight	jrib	when i do it from update manager in UI it says upgrade partilite then it quits that when I ran the cmd that I showed u so what do I need to fix the dependceys ?
+2010-01-21T03:00:00.000Z	jrib	spiritssight	"partilite"?
+2010-01-21T03:01:00.000Z	spiritssight	jrib	partial oops
+2010-01-21T03:02:00.000Z	jrib	spiritssight	is your system up to date?  i.e. run updates
+2010-01-21T03:04:00.000Z	spiritssight	jrib	that what I was trying to do first and that what I get when I go to admin then update manager
+2010-01-21T03:04:00.000Z	jrib	spiritssight	what is "that" in your sentence?
+2010-01-21T03:05:00.000Z	spiritssight	jrib	update the system before upgrading verison
+2010-01-21T03:05:00.000Z	jrib	spiritssight	yes, have you done that?
+2010-01-21T03:07:00.000Z	spiritssight	jrib	it won't let me, I get the not all updates can be installed dialog, I click  do partial upgrade
+2010-01-21T03:08:00.000Z	jrib	spiritssight	in a terminal: sudo aptitude update && sudo aptitude safe-upgrade    and then pastebin
+2010-01-21T03:10:00.000Z	spiritssight	jrib	http://pastebin.com/d5d53c81f
+2010-01-21T03:10:00.000Z	jrib	spiritssight	pastebin your /etc/apt/sources.list*
+2010-01-21T03:16:00.000Z	spiritssight	jrib	u want to know the files that all start with sources.list correct?
+2010-01-21T03:16:00.000Z	jrib	spiritssight	yes
+2010-01-21T03:18:00.000Z	spiritssight	jrib	http://pastebin.com/d1507bd9c
+2010-01-21T03:18:00.000Z	jrib	spiritssight	I need teh actual contents...
+2010-01-21T03:18:00.000Z	jrib	spiritssight	just sources.list and anything in sources.list.d
+2010-01-21T03:23:00.000Z	spiritssight	jrib	here they are if its not what you wanted please explain on to obtain http://pastebin.com/d11ba83ae
+2010-01-21T03:24:00.000Z	jrib	spiritssight	thanks.  Have you installed anything outside the repositories?
+2010-01-21T04:05:00.000Z	spiritssight	jrib	No I have not installed any thing that I can recall (nope :-) )  sorry for the delay was eating
+2010-01-21T04:05:00.000Z	jrib	spiritssight	pastebin: apt-cache policy libgnomekbd2
+2010-01-21T04:09:00.000Z	spiritssight	jrib	http://pastebin.com/d6c1cb94e
+2010-01-21T04:09:00.000Z	jrib	spiritssight	that suggests that package isn't from any ubuntu repository
+2010-01-21T04:11:00.000Z	spiritssight	jrib	so how can I fix it as I its been over a year since used this system
+2010-01-21T04:11:00.000Z	jrib	spiritssight	well removing the package would be one way
+2010-01-21T04:11:00.000Z	spiritssight	jrib	what the best way to do that
+2010-01-21T04:12:00.000Z	jrib	spiritssight	use synaptic.  After  you do that pastebin the apt-cache policy result for the other 3 packages in http://pastebin.com/d5d53c81f
+2010-01-21T04:20:00.000Z	spiritssight	jrib	the update manger UI told me to run apt-get install -f I think it was and not update UI is allowing the update

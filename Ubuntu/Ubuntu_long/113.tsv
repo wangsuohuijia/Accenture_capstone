@@ -1,0 +1,38 @@
+2010-09-09T10:20:00.000Z	FalseLobster		Okay, seriously
+2010-09-09T10:20:00.000Z	Emanon	FalseLobster	if it doesnt work when opened as root idk what to tell ya bud
+2010-09-09T10:20:00.000Z	FalseLobster		Do I really need to pull the old "Insult linux, get awesome tech support card" ?
+2010-09-09T10:21:00.000Z	FalseLobster	Emanon	Alright, well treat me like I'm clueless
+2010-09-09T10:21:00.000Z	Emanon		that only works in fanboi support channels dude
+2010-09-09T10:21:00.000Z	Emanon		hehe
+2010-09-09T10:21:00.000Z	FalseLobster		How do I open file-roller as root?
+2010-09-09T10:21:00.000Z	Emanon		ok alt f2
+2010-09-09T10:21:00.000Z	Emanon		that will open a run dialogue
+2010-09-09T10:21:00.000Z	FalseLobster		yea
+2010-09-09T10:21:00.000Z	Emanon		then type gksu <command here> and hit enter
+2010-09-09T10:22:00.000Z	Emanon		it will ask for ur password then open the stated program as root
+2010-09-09T10:22:00.000Z	FalseLobster		I'm on a live cd
+2010-09-09T10:22:00.000Z	FalseLobster		does that make a difference?
+2010-09-09T10:22:00.000Z	FalseLobster		cause its still read only
+2010-09-09T10:22:00.000Z	Emanon		shoudnt
+2010-09-09T10:22:00.000Z	Emanon		gksu file-roller
+2010-09-09T10:22:00.000Z	FalseLobster		yea
+2010-09-09T10:23:00.000Z	FalseLobster		It's still read only
+2010-09-09T10:23:00.000Z	FalseLobster		Whyyyyyyyyyyyy
+2010-09-09T10:23:00.000Z	FalseLobster		its been a long day
+2010-09-09T10:23:00.000Z	FalseLobster		I have to write a shitty Linux shell by friday
+2010-09-09T10:23:00.000Z	FalseLobster		and I can't even install linux
+2010-09-09T10:23:00.000Z	Emanon		try gksu nautilus FalseLobster
+2010-09-09T10:23:00.000Z	Emanon		then just navigate to the file manually in your now root file browser
+2010-09-09T10:24:00.000Z	FalseLobster		That opens nautilus as root but it doesn't open archive manager as root
+2010-09-09T10:24:00.000Z	Emanon		yea real1adam plug it in go to System>Administration>Hardware Drivers
+2010-09-09T10:25:00.000Z	Emanon	FalseLobster	 now go to wherever the archive is in the root file manager
+2010-09-09T10:25:00.000Z	Emanon		if you try to open it in file roller from a root nautilus it should force file roller to be root too
+2010-09-09T10:25:00.000Z	FalseLobster	Emanon	yea yea.  That opens nautilus as root, but opening hte archive doesn't open it in root
+2010-09-09T10:25:00.000Z	FalseLobster		it's still read only
+2010-09-09T10:25:00.000Z	Emanon		idk then but it just wants to f you
+2010-09-09T10:26:00.000Z	Emanon		np real1adam
+2010-09-09T10:27:00.000Z	Emanon		u said you gave root read write permissions on the file FalseLobster?
+2010-09-09T10:27:00.000Z	Emanon		!maverick systm
+2010-09-09T10:27:00.000Z	Emanon		ahh that doesnt work?
+2010-09-09T10:27:00.000Z	Emanon		geh
+2010-09-09T10:27:00.000Z	FalseLobster	Emanon	yes

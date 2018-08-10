@@ -1,0 +1,70 @@
+2006-09-07T12:13:00.000Z	adil		please someone help me
+2006-09-07T12:14:00.000Z	adil		there isnt grub.conf in etc/
+2006-09-07T12:15:00.000Z	BlueEagle	adil	/boot/grub/menu.lst perhaps?
+2006-09-07T12:26:00.000Z	BlueEagle	adil	Wat was your problem again?
+2006-09-07T12:27:00.000Z	BlueEagle	adil	Ok, to remove the extra kernels (You'll notice that the version numbers are not the same) open synaptic in System->Admin->synaptic pakcage manager.
+2006-09-07T12:29:00.000Z	BlueEagle	adil	use the search feature and search for: linux-image
+2006-09-07T12:29:00.000Z	BlueEagle	adil	Now, which architecture are you running on? (ie. which processor?)
+2006-09-07T12:29:00.000Z	BlueEagle	adil	any spesific intel?
+2006-09-07T12:30:00.000Z	adil	BlueEagle	, dont know that.. I know i got Pentium 4 on 3.2 GHz
+2006-09-07T12:30:00.000Z	adil	BlueEagle	, btw i see that there are 3 linux images installed
+2006-09-07T12:30:00.000Z	BlueEagle	adil	Ok. are any of them suffixed by -686?
+2006-09-07T12:31:00.000Z	adil	BlueEagle	no but each of them is suffixed by 386
+2006-09-07T12:33:00.000Z	BlueEagle	adil	Ok.
+2006-09-07T12:33:00.000Z	BlueEagle	adil	Now: use the search window again and search for: kernel
+2006-09-07T12:34:00.000Z	adil	BlueEagle	ok. what should i look for on the results?
+2006-09-07T12:35:00.000Z	BlueEagle	adil	You'll need to scroll down some but I want you to remove the following: linux-386 and linux-image-*-386
+2006-09-07T12:35:00.000Z	BlueEagle	adil	where * are version numbers
+2006-09-07T12:35:00.000Z	BlueEagle	adil	YOu might want to leave the lastest version in place in case the 686 kernel (which we are about to install) doesn't work
+2006-09-07T12:35:00.000Z	BlueEagle	adil	Now scroll and find linux-686 package. You want that installed.
+2006-09-07T12:36:00.000Z	BlueEagle	adil	it should depend on a linux-image-*-686 and linux-restricted*-686
+2006-09-07T12:37:00.000Z	BlueEagle	adil	now use the search feature again and search for: restricted
+2006-09-07T12:37:00.000Z	adil	BlueEagle	i marked everything you told me for install/unistall
+2006-09-07T12:38:00.000Z	BlueEagle	adil	You might want to keep the latest version in case the -686 kernel doesn't work properly
+2006-09-07T12:39:00.000Z	BlueEagle	adil	also check that you've got a linux-restricted-modules-*-686 marked for installation.
+2006-09-07T12:39:00.000Z	BlueEagle	adil	When all that is done click Use to update your system.
+2006-09-07T12:39:00.000Z	adil	BlueEagle	yes, i did that and 686 was allready marked for installation
+2006-09-07T12:39:00.000Z	BlueEagle	adil	good
+2006-09-07T12:40:00.000Z	BlueEagle	adil	What will happen now is that the old kernels will be removed and the new (right) kernel will be installed.
+2006-09-07T12:40:00.000Z	BlueEagle	adil	After that is done we'll have a look-see in /boot/grub/menu.lst to see if your windows entry has magically re-appeared.
+2006-09-07T12:40:00.000Z	adil	BlueEagle	you worth gold. Thanks alot for your kind help. Should now I Apply?
+2006-09-07T12:40:00.000Z	BlueEagle	adil	yes, apply now.
+2006-09-07T12:41:00.000Z	BlueEagle	adil	and tell me when it's done processing the changes and we'll move along
+2006-09-07T12:41:00.000Z	adil	BlueEagle	it looks like this will take some time. It needs 52 MB to download
+2006-09-07T12:41:00.000Z	adil	BlueEagle	that is normal, right?
+2006-09-07T12:41:00.000Z	BlueEagle	adil	that sounds about right, yes.
+2006-09-07T12:41:00.000Z	BlueEagle	adil	You're not on dial-up are you? o.O
+2006-09-07T12:42:00.000Z	adil	BlueEagle	no, i am on wireless adsl (512/128) :)
+2006-09-07T12:43:00.000Z	adil	BlueEagle	it will take like 12m
+2006-09-07T12:44:00.000Z	BlueEagle	adil	Good. That gives me some time to get breakfeast. :)
+2006-09-07T12:52:00.000Z	adil	BlueEagle	3 more minutes :)
+2006-09-07T12:53:00.000Z	BlueEagle	adil	good, good.
+2006-09-07T12:57:00.000Z	adil	BlueEagle	this finished and now asks for restart
+2006-09-07T12:57:00.000Z	BlueEagle	adil	don't restart just yet
+2006-09-07T12:57:00.000Z	BlueEagle	adil	close synaptic and press ALT+F2 to get the run dialog. There you type: gksudo gedit /boot/grub/menu.lst
+2006-09-07T12:58:00.000Z	BlueEagle	adil	at the bottom of the file you should have an entry similar (but not neccessarily identical) to http://paste.ubuntu-nl.org/22788
+2006-09-07T12:59:00.000Z	BlueEagle	adil	Do you have huch an entry?
+2006-09-07T13:00:00.000Z	adil	BlueEagle	no, there's alot of Ubuntu and none windows xp :(
+2006-09-07T13:00:00.000Z	BlueEagle	adil	Yes, but you must be sure to specify the correct root device
+2006-09-07T13:00:00.000Z	BlueEagle	adil	if it's on the first harddrive then you can use (hd0,0) as it stands
+2006-09-07T13:01:00.000Z	BlueEagle	adil	(that's where microsoft puts windows by default)
+2006-09-07T13:01:00.000Z	adil	BlueEagle	http://paste.ubuntu-nl.org/22789
+2006-09-07T13:01:00.000Z	BlueEagle	adil	When that's done save and close and then cross your fingers and reboot
+2006-09-07T13:03:00.000Z	BlueEagle	adil	it seems you installed an old and a new version of the 686 kernel tbh. :)
+2006-09-07T13:03:00.000Z	BlueEagle	adil	but no matter. that's an easy fix.
+2006-09-07T13:04:00.000Z	BlueEagle	adil	Where is windows installed on your machine? Which harddrive and partition?
+2006-09-07T13:06:00.000Z	BlueEagle	adil	C: is not very descriptive (ie. windows drive names does not neccessarily reflect partition number)
+2006-09-07T13:07:00.000Z	BlueEagle	adil	if you're unsure of which partition windows is on you can type this in a terminal: sudo fdisk -l|grep NTFS
+2006-09-07T13:07:00.000Z	BlueEagle	adil	have you got more than one hard disk?
+2006-09-07T13:08:00.000Z	BlueEagle	adil	ok.
+2006-09-07T13:08:00.000Z	BlueEagle	adil	so do this in a terminal: sudo cp /boot/grub/menu.lst /boot/grub/menu.lst.old
+2006-09-07T13:09:00.000Z	BlueEagle	adil	then edit your /boot/grub/menu.lst to look like this: http://paste.ubuntu-nl.org/22790
+2006-09-07T13:09:00.000Z	BlueEagle	adil	that should in theory give you two kernel options (386 and 686) + safe mode and a windows option in grub.
+2006-09-07T13:10:00.000Z	BlueEagle	adil	oh, and the memtest ofcourse.
+2006-09-07T13:11:00.000Z	BlueEagle	adil	when that is done you can save the file and reboot
+2006-09-07T13:11:00.000Z	BlueEagle	adil	and cross your fingers. :)
+2006-09-07T13:13:00.000Z	adil	BlueEagle	done and saved. restart? :)
+2006-09-07T13:13:00.000Z	BlueEagle	adil	good luck
+2006-09-07T13:13:00.000Z	adil	BlueEagle	thank you :) be right back
+2006-09-07T13:20:00.000Z	adil	BlueEagle	god bless you, it worked!
+2006-09-07T13:20:00.000Z	BlueEagle	adil	good stuff. :)

@@ -1,0 +1,35 @@
+2011-03-13T03:35:00.000Z	Habstinat		Hi, I'm trying to edit files on my USB device but I can't because it is a "Read only filesystem". The filesystem type is VFAT and it is at /dev/sdd1. I can't seem to change permissions in the Properties dialog in Nautilus because every time I try I get, "Sorry, could not change the permissions of "disk": Error setting permissions: Read-only file system". Any ideas?
+2011-03-13T03:35:00.000Z	soreau	Habstinat	Try to remount it manually
+2011-03-13T03:36:00.000Z	soreau	Habstinat	See sys>prefs>Disk Utility
+2011-03-13T03:38:00.000Z	Habstinat	soreau	There is no "Disk Utility" in my System/Preferences folder. Also, the device is a PSP. I don't think it should matter though.
+2011-03-13T03:39:00.000Z	soreau	Habstinat	Which version of ubuntu?
+2011-03-13T03:39:00.000Z	Habstinat	soreau	Maverick.
+2011-03-13T03:39:00.000Z	Habstinat	soreau	Found it, it was in System -> Administration.
+2011-03-13T03:40:00.000Z	soreau	Habstinat	Sorry, sys>admin>Disk Utility
+2011-03-13T03:41:00.000Z	Habstinat	soreau	Alright. Will this require me to back up my stuff then reformat it?
+2011-03-13T03:41:00.000Z	soreau	Habstinat	No, you can just unmount it then mount it again and see if it's rw
+2011-03-13T03:41:00.000Z	Habstinat	soreau	Good. So I should press "unmount"?
+2011-03-13T03:42:00.000Z	soreau	Habstinat	yes
+2011-03-13T03:42:00.000Z	Habstinat	soreau	Then mount again?
+2011-03-13T03:42:00.000Z	soreau	Habstinat	right
+2011-03-13T03:42:00.000Z	Habstinat	soreau	It's still RO.
+2011-03-13T03:44:00.000Z	soreau	Habstinat	Hmm. Maybe anything like this http://ubuntuforums.org/showthread.php?t=58380
+2011-03-13T03:47:00.000Z	Habstinat	soreau	When I try to run sudo mount /dev/sda1 /dev/sdd1 -t vfat -o user,shortname=winnt, I get, "mount: /dev/sda1 already mounted or /dev/sdd1 busy
+2011-03-13T03:48:00.000Z	soreau	Habstinat	No, don't use /dev/sda1
+2011-03-13T03:48:00.000Z	soreau	Habstinat	You want the device node for your psp, /dev/sdd1
+2011-03-13T03:49:00.000Z	soreau	Habstinat	Run 'mount' to see what's mounted, 'sudo umount /dev/sdd1' and sudo mount /dev/sdd1 /location/ etc etc etc
+2011-03-13T03:58:00.000Z	Habstinat	soreau	Ok, so now it's mounted with the special options to /home/habs/PSP/mount. The filesystem is still read only though. I can't do anything as a user, but when I run Nautilus as root I can at least try to change the permissions before I get the same error I was getting earlier.
+2011-03-13T03:59:00.000Z	Habstinat	soreau	Sorry, I have to go. Thanks for all your help. I'll stay idle on the chat if you come up with something.
+2011-03-13T03:59:00.000Z	soreau	Habstinat	You'll just have to google. ISTR having a similar issue when messing with a PSP, though it's been awhile. Hope you figure it out
+2011-03-14T01:45:00.000Z	soreau	Habstinat	If an app captures any input, you can't get it back until that app releases it
+2011-06-25T21:52:00.000Z	soreau	Habstinat	Should work, try it
+2011-06-25T21:58:00.000Z	Habstinat	soreau	I did. Here is my blacklist file: http://pastebin.com/CjTWK8JU And here is my output of lsmod after rebooting: http://pastebin.com/XrWeNyCY Any ideas?
+2011-06-25T22:00:00.000Z	Habstinat	soreau	And here is the output of the modprobe method: http://pastebin.com/tgdWr0Z2
+2011-06-25T22:02:00.000Z	soreau	Habstinat	Hmm, not sure but you can boot with i915.dontloadme=1 to prevent it from loading..
+2011-06-25T22:02:00.000Z	soreau	Habstinat	I would try adding i915 to /etc/blacklist directly
+2011-06-25T22:03:00.000Z	soreau	Habstinat	I mean /etc/modprobe.d/blacklist.conf
+2011-06-25T22:04:00.000Z	Habstinat	soreau	Thanks. I'll try that.
+2011-06-25T22:08:00.000Z	Habstinat	soreau	So I add i915.dontloadme=1 to the end of the boot parameters (after "splash")?
+2011-06-25T22:08:00.000Z	soreau	Habstinat	correct
+2011-06-25T22:16:00.000Z	Habstinat	soreau	Added i915 to the blacklist and as a boot parameter, and here's my lsmod: http://pastebin.com/qX0xruxF
+2011-06-25T22:17:00.000Z	soreau	Habstinat	Well i915 isn't loaded.. and that's what you were after, right?

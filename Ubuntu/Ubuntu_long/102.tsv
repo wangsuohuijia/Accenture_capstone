@@ -1,0 +1,74 @@
+2010-03-11T16:09:00.000Z	aperson	will__	what is the name of the program?
+2010-03-11T16:10:00.000Z	aperson	will__	no, I need the name of the executable
+2010-03-11T16:10:00.000Z	aperson	will__	how did you install it?
+2010-03-11T16:11:00.000Z	aperson	will__	that's where you got it from, I need to know the steps you took to install it
+2010-03-11T16:12:00.000Z	aperson	will__	just a second then
+2010-03-11T16:14:00.000Z	aperson	will__	by keeping your replies to one line
+2010-03-11T16:14:00.000Z	aperson	will__	what language did you pick?
+2010-03-11T16:15:00.000Z	aperson	will__	I just needed the language, thanks, I'll have a line to remove it for you in a second
+2010-03-11T16:16:00.000Z	aperson	will__	all you should have to do after you remove it is change your wallpaper
+2010-03-11T16:17:00.000Z	aperson	will__	also, fwiw, make sure you know just what you're installing from gnome-look, and try to install .deb files only until you can have an idea how to undo things like this :)
+2010-03-11T16:20:00.000Z	aperson	will__	gnome-look is not a trusted source for software, use it at your own .  I'll be right back
+2010-03-11T16:37:00.000Z	aperson	will__	sorry, I just got back, I'm examining the script and working on it now
+2010-03-11T16:39:00.000Z	aperson	will__	for starters, can you open up a terminal?
+2010-03-11T16:39:00.000Z	aperson	will__	then run sudo rm /usr/share/locale/en/LC_MESSAGES/xml-background-creator.mo
+2010-03-11T16:40:00.000Z	aperson	will__	then: sudo rm ~/.gnome2/nautilus-scripts/*
+2010-03-11T16:40:00.000Z	aperson	will__	I'm sorry, remove the e off of locale
+2010-03-11T16:41:00.000Z	aperson	will__	wait, you said that doesn't exist? that should be right according to the script
+2010-03-11T16:42:00.000Z	aperson	will__	the second one should still remove the script
+2010-03-11T16:43:00.000Z	aperson	will__	did you run: sudo rm ~/.gnome2/nautilus-scripts/* ?
+2010-03-11T16:44:00.000Z	aperson	will__	did that run without error?
+2010-03-11T16:45:00.000Z	aperson	will__	then it ran without error, that should have removed the script then
+2010-03-11T16:46:00.000Z	aperson	will__	yessir, can you access appearance now?
+2010-03-11T16:50:00.000Z	aperson	will__	can you can you try: sudo find /usr/share/locale/ -name xml-background-creator.mo -delete
+2010-03-11T16:52:00.000Z	aperson	will__	 what did you put for the name of nautilus dialog?
+2010-03-11T16:56:00.000Z	aperson	will__	the script deleted that
+2010-03-11T16:57:00.000Z	aperson	will__	I had you delete both things that the script added, I'd say it's worth a shot to log out
+2010-03-11T17:04:00.000Z	aperson	will__	well, something else happened that wasn't in the scope of that script
+2010-03-11T17:07:00.000Z	aperson	will__	can you run gnome-appearance-preferences in a terminal?
+2010-03-11T17:07:00.000Z	aperson	will__	just open up a terminal and enter that in
+2010-03-11T17:07:00.000Z	aperson	will__	what I need is the output of that
+2010-03-11T17:09:00.000Z	aperson	will__	I'm sorry again, properties, not preferences
+2010-03-11T17:10:00.000Z	aperson	will__	that's all?
+2010-03-11T17:12:00.000Z	aperson	will__	ok, just a second...
+2010-03-11T17:14:00.000Z	aperson	will__	can you run: gconftool-2 --type=string --set /desktop/gnome/background/picture_options none
+2010-03-11T17:15:00.000Z	aperson	will__	a terminal. your wallpaper should disappear
+2010-03-11T17:16:00.000Z	aperson	will__	well, this should clear what was supposed to be set for your wallpaper
+2010-03-11T17:16:00.000Z	aperson	will__	now try opening up gnome-appearance-properties again
+2010-03-11T17:19:00.000Z	aperson	will__	you should be able to change your wallpaper from there
+2010-03-11T17:21:00.000Z	aperson	will__	can you select a new wallpaper, even if it doesn't change it?
+2010-03-11T17:22:00.000Z	aperson	will__	can you run: gconftool-2 --type=string --set /desktop/gnome/background/picture_options stretched
+2010-03-11T17:25:00.000Z	aperson	will__	nautilus is not the problem
+2010-03-11T17:26:00.000Z	aperson	will__	not yet
+2010-03-11T17:27:00.000Z	aperson	will__	can you run: gconftool-2 --type=string --set /desktop/gnome/background/picture_filename /usr/share/backgrounds/Bay.jpg
+2010-03-11T17:30:00.000Z	aperson	will__	we're changing those now
+2010-03-11T17:30:00.000Z	aperson	will__	that script wasn't very well written
+2010-03-11T17:31:00.000Z	will__	aperson	would it help to see my system log, see what was changed today?
+2010-03-11T17:32:00.000Z	aperson	will__	sorry, lost power for a second there
+2010-03-11T17:33:00.000Z	aperson	will__	no, that script doesn't log anything
+2010-03-11T17:34:00.000Z	aperson	will__	I'm sorry I'm apparently not being very helpful
+2010-03-11T17:35:00.000Z	aperson	will__	that, I can help you with
+2010-03-11T17:35:00.000Z	aperson	will__	any other settings you want to keep?
+2010-03-11T17:36:00.000Z	aperson	will__	how are you exporting the settings?
+2010-03-11T17:40:00.000Z	aperson	will__	nope most configuration settings are text files
+2010-03-11T17:42:00.000Z	aperson	will__	upload it to imgur.com , I always have troubles with dcc
+2010-03-11T17:43:00.000Z	aperson	will__	my method was to just back up the directory where the configuration was stored and then copy it back when you've reinstalled
+2010-03-11T17:43:00.000Z	aperson	will__	that's the easiest way to back up all most any of your system's configurations
+2010-03-11T17:44:00.000Z	aperson	will__	that should work fine then
+2010-03-11T17:44:00.000Z	aperson	will__	just save it to a safe spot
+2010-03-11T17:46:00.000Z	aperson	will__	should be, that'll save your compiz settings .  is that all you're backing up?
+2010-03-11T17:48:00.000Z	aperson	will__	if you backup your home folder, hidden files and all, that would essentially back up all of your settings and files
+2010-03-11T17:49:00.000Z	aperson	will__	I'd throw it all into a tar.gz first
+2010-03-11T17:50:00.000Z	aperson	will__	backing up your home folder wouldn't be backing up your whole system, just your settings and files
+2010-03-11T17:51:00.000Z	aperson	will__	and we already pruned that wallpaper crap in your home
+2010-03-11T17:51:00.000Z	aperson	will__	nope, pruned = deleted
+2010-03-11T17:52:00.000Z	aperson	will__	make sure you have hidden files showing
+2010-03-11T17:52:00.000Z	aperson	will__	yep
+2010-03-11T17:53:00.000Z	aperson	will__	no problem
+2010-03-11T17:53:00.000Z	aperson	will__	be careful with things on gnome-look, wallpapers and themes are fine, but be extra cautious of any scripts or programs
+2010-03-11T17:55:00.000Z	aperson	will__	it's good to be able to discern just what some of those scripts do :)
+2010-03-11T17:55:00.000Z	aperson	will__	anyways, best of luck, and I hope your next run will be trouble free
+2010-03-11T18:02:00.000Z	aperson	will__	?
+2010-03-11T18:03:00.000Z	aperson	will__	sweet, I knew those gconf settings would do it :P
+2010-03-11T18:04:00.000Z	aperson	will__	no problem, I'm usually always here if you need anything
+2010-03-11T18:05:00.000Z	aperson	will__	that'd work

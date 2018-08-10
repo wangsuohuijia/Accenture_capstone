@@ -1,0 +1,49 @@
+2009-05-21T19:10:00.000Z	jonaskoelker		Hi all.  In 9.04, where should I configure frequency scaling?
+2009-05-21T19:10:00.000Z	eurythmia	jonaskoelker	are you running a laptop?
+2009-05-21T19:10:00.000Z	jonaskoelker	eurythmia	yes
+2009-05-21T19:11:00.000Z	eurythmia	jonaskoelker	don't worry about frequency scaling ... the amount of power it saves is negligible, if any. The kernel supports putting the CPU into longer sleep states somewhere after kernel 2.6.27 .
+2009-05-21T19:12:00.000Z	jonaskoelker	eurythmia	okay, but somehow my box gets scaled down to 800 mhz whenever it gets hot (or rather, I notice it's hot whenever I see 100% cpu usage of 800mhz).  Would it be safe to disable this "feature"?
+2009-05-21T19:12:00.000Z	eurythmia	jonaskoelker	if you *really* want to save power, do things like configure the kernel (and recompile it) with dynamic ticks on, and lower timer frequency.
+2009-05-21T19:12:00.000Z	jonaskoelker	eurythmia	and if so, how do I do it?
+2009-05-21T19:13:00.000Z	eurythmia	jonaskoelker	hmm. What type of CPU? (and are you running gnome, kde, ?)
+2009-05-21T19:13:00.000Z	jonaskoelker	eurythmia	gnome, model name      : Intel(R) Pentium(R) M processor 2.13GHz
+2009-05-21T19:14:00.000Z	jonaskoelker	eurythmia	hmm... is it /etc/laptop-mode/conf.d/cpufreq.conf -- set CONTROL_CPU_FERQUENCY=0
+2009-05-21T19:15:00.000Z	eurythmia	jonaskoelker	that might work. If it doesn't, give me a moment?
+2009-05-21T19:16:00.000Z	jonaskoelker	eurythmia	it _seems_ to have worked, after echoing 2133000 >! scaling_max_freq in /proc/<somewhere>
+2009-05-21T19:17:00.000Z	jonaskoelker	eurythmia	no, /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+2009-05-21T19:17:00.000Z	eurythmia	jonaskoelker	make a cron job that will log the frequency to a file every minute for an hour, and see if that fix holds under load.
+2009-05-21T19:19:00.000Z	eurythmia	jonaskoelker	well, poo. I'll try to find the resource I had before then ;)
+2009-05-21T19:24:00.000Z	eurythmia	jonaskoelker	http://ubuntuforums.org/showthread.php?t=248867
+2009-05-21T19:32:00.000Z	eurythmia	jonaskoelker	how is your grub-ese ?
+2009-05-21T20:10:00.000Z	eurythmia	jonaskoelker	would you mind pmming me a stanza of your grub's menu.lst? Mine's busted.
+2009-05-21T20:10:00.000Z	jonaskoelker	eurythmia	http://rafb.net/p/0E95Yj33.html
+2009-05-21T20:10:00.000Z	eurythmia	jonaskoelker	thanks.l
+2009-05-21T20:10:00.000Z	jonaskoelker	eurythmia	np
+2009-05-21T20:11:00.000Z	jonaskoelker	eurythmia	best of luck :)
+2009-05-21T20:11:00.000Z	eurythmia	jonaskoelker	thanks. I think I'll get it this time around, it's just a matter of fixing where the kernel is looking for my root :)
+2009-05-21T20:32:00.000Z	eurythmia	jonaskoelker	my menu.lst is here (http://www.pastebin.ca/1429987 ), my linux root is on /dev/sda6 (home is on /dev/sda7), and my system stops on "waiting for root filesystem" on boot (I removed quiet and splash from the boot args). help :/
+2009-05-21T20:33:00.000Z	jonaskoelker	eurythmia	and the only thing you changed going from bootable to not-bootable is menu.list?
+2009-05-21T20:34:00.000Z	eurythmia	jonaskoelker	nope ... it was switching from lilo to grub.
+2009-05-21T20:34:00.000Z	jonaskoelker	eurythmia	ah
+2009-05-21T20:35:00.000Z	eurythmia	jonaskoelker	yeah; the only reason I installed lilo was because I accidentally hit enter when the choice of bootloader to install came up (why, oh WHY is lilo selected first by default, and why isn't there a confirmation dialogue?)
+2009-05-21T20:40:00.000Z	jonaskoelker	eurythmia	well, I don't know how to fix your menu.list, but you could try all other device names instead of /dev/sda6
+2009-05-21T20:40:00.000Z	eurythmia	jonaskoelker	at this point in time, it would be easier and less time consuming for me to reinstall the base system and bootloader, so I think that's what I'm gonna do :/
+2009-05-21T20:41:00.000Z	jonaskoelker	eurythmia	that sometimes works :)  I did that for my video box the other week :D
+2009-05-21T20:42:00.000Z	eurythmia	jonaskoelker	:/
+2009-05-21T20:44:00.000Z	eurythmia	jonaskoelker	you could do caching, but I can't remember how to do that with mplayer.
+2009-05-21T20:44:00.000Z	eurythmia	jonaskoelker	celeron ... yuck. how old is it?
+2009-05-21T20:45:00.000Z	jonaskoelker	eurythmia	~4 years
+2009-05-21T20:45:00.000Z	eurythmia	jonaskoelker	and it's not dead yet? I'm impressed.
+2009-05-21T20:46:00.000Z	eurythmia	jonaskoelker	pull the cover off of the computer and go mad with a can of compressed air.
+2009-05-21T20:46:00.000Z	jonaskoelker	eurythmia	hey, cool; apparently -cache 65536 seems to do wonders
+2009-05-21T20:46:00.000Z	eurythmia	jonaskoelker	won't help the cooling problem, unfortunately ;)
+2009-05-21T20:46:00.000Z	jonaskoelker	eurythmia	compressed air is sold where? grocery stores, hardware stores?
+2009-05-21T20:47:00.000Z	eurythmia	jonaskoelker	you can usually find it at staples, the source, or any computer store.
+2009-05-21T20:48:00.000Z	jonaskoelker	eurythmia	"blowing will work wonders" -- I told that to my girlfriend as well :D
+2009-05-21T20:49:00.000Z	eurythmia	jonaskoelker	mine already knows it ;)\
+2009-05-21T20:50:00.000Z	jonaskoelker	eurythmia	:)
+2009-05-21T21:30:00.000Z	eurythmia	jonaskoelker	well, reinstalling jaunty did the trick ... now I'm doing a dist-upgrade to karmic ;)
+2009-05-21T21:30:00.000Z	jonaskoelker	eurythmia	gl & hf :)
+2009-05-21T21:31:00.000Z	jonaskoelker	eurythmia	with the latest few releases, I've always found upgrading ubuntu to bring me new and different bugs and not much in terms of features (except fixing some old bugs)... so do it at your own peril
+2009-05-21T21:32:00.000Z	eurythmia	jonaskoelker	I've never had problems with apt-get dist-upgrade, debian or otherwise ;)
+2009-05-21T21:32:00.000Z	jonaskoelker	eurythmia	good for you :)

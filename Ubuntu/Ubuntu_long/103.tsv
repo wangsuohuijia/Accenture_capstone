@@ -1,0 +1,50 @@
+2009-03-26T00:13:00.000Z	jasballz		was it treeleaf?
+2009-03-26T00:13:00.000Z	jasballz		someone gave me a terminal command to try and I lost the dialogue.
+2009-03-26T00:14:00.000Z	jasballz		vstfpd help??
+2009-03-26T00:15:00.000Z	jasballz		how to port the wlan panel icon in gnome to kde?
+2009-03-26T00:15:00.000Z	jasballz		hello?
+2009-03-26T00:16:00.000Z	jasballz		vsftpd help!
+2009-03-26T00:17:00.000Z	jasballz		now for some reason I can't hear music after starting a gnome session
+2009-03-26T00:17:00.000Z	jasballz		fosco ubottu where were the moderators here 5 min ago they had good help?
+2009-03-26T00:18:00.000Z	jasballz		netstat schows that I am connected so why do I have problems?
+2009-03-26T00:18:00.000Z	jasballz		fosco: ubutto: where were the moderators that were here 5 mins ago they wer informative?
+2009-03-26T00:19:00.000Z	twolane	jasballz	connected to what, your ftp server?
+2009-03-26T00:19:00.000Z	jasballz	twolane	yes
+2009-03-26T00:19:00.000Z	jasballz	twolane	or a site said that if netstat gave output you're pretty much good-to-go
+2009-03-26T00:20:00.000Z	twolane	jasballz	is the ftp server open to the WAN or are you connected via LAN / localhost
+2009-03-26T00:20:00.000Z	jasballz	twolane	what do you mean?
+2009-03-26T00:21:00.000Z	twolane	jasballz	what did you use for the ftp address to connect
+2009-03-26T00:21:00.000Z	jasballz	twolane	I'm using vsftpd to host, trying ftp terminal command to connect and test
+2009-03-26T00:22:00.000Z	twolane	jasballz	using what address ftp localhost, ftp 192.168.x.x or a world-routeable address?
+2009-03-26T00:23:00.000Z	jasballz	twolane	honestly i don't know where vsftpd hosts the files // address
+2009-03-26T00:24:00.000Z	jasballz	twolane	and I've had difficulty connecting to "localhost" or my reported ip.
+2009-03-26T00:25:00.000Z	twolane	jasballz	virtualizing will make that difficult. insufficient data to help you.
+2009-03-26T00:26:00.000Z	jasballz	twolane	virtualization is irrelevant. Im just talking about using KDE or Gnome and vsftpd to host. Virtualization is for fun//not being implemented in ftp hosting.
+2009-03-26T00:27:00.000Z	twolane	jasballz	and kde or gnome have nothing to do with this, its a matter of addresses
+2009-03-26T00:29:00.000Z	jasballz	twolane	w/e i just need help
+2009-03-26T00:29:00.000Z	jasballz	twolane	u can try connect to help troubleshoot
+2009-03-26T00:31:00.000Z	twolane	jasballz	whats the ip
+2009-03-26T00:33:00.000Z	jasballz	twolane	I have 24.103.201.39 user: user1 pword:developers
+2009-03-26T00:34:00.000Z	twolane	jasballz	that address does not respond
+2009-03-26T00:36:00.000Z	jasballz	twolane	try to goto buddhabuntu.8m.net and read my netstat -a output there and see if ip addresses there are live if possible
+2009-03-26T00:38:00.000Z	twolane	jasballz	All 1714 scanned ports on rrcs-24-103-201-39.nys.biz.rr.com (24.103.201.39) are filtered, that's you!
+2009-03-26T00:38:00.000Z	twolane	jasballz	either rr.com blocks or you need port-forwarding or firewall rules
+2009-03-26T00:38:00.000Z	jasballz	twolane	so obviously that must mean I'm behind a firewalled isp? so how to encrypt or solve for hosting?
+2009-03-26T00:39:00.000Z	jasballz	twolane	yah, thats why Im at a new locale, a cafe with wifi hoping that their isp had portforwarding versus my campus
+2009-03-26T00:39:00.000Z	twolane	jasballz	some ISP's block service ports, are YOU behind a router or firewall?
+2009-03-26T00:40:00.000Z	jasballz	twolane	that's what IDK thot not, because of new locale, plus easy IRC access and torrenting. Maybe ill check out an open port scanner site
+2009-03-26T00:40:00.000Z	jasballz	twolane	is there a way to encrypt FTP in order to get around that?
+2009-03-26T00:41:00.000Z	twolane	jasballz	your ftp service port is not being allowed outside access for some reason. you could configure ftp to use another port that may not be blocked.
+2009-03-26T00:43:00.000Z	jasballz	twolane	hmmm, okay. Then why all the good output from netstat?
+2009-03-26T00:44:00.000Z	jasballz	twolane	i had one guy manage to connect (almost) just had error of bad password.
+2009-03-26T00:44:00.000Z	jasballz	twolane	so i think portforwarding is good, but scanning n.e.way
+2009-03-26T00:45:00.000Z	twolane	jasballz	netstat is the system saying what ports/services are running and or connected. thats all, you have a route issue
+2009-03-26T00:46:00.000Z	jasballz	twolane	okay
+2009-03-26T00:47:00.000Z	jasballz	twolane	are there ways to host like 8gb stuff behind firewalls?
+2009-03-26T00:47:00.000Z	twolane	jasballz	yes
+2009-03-26T00:48:00.000Z	jasballz	twolane	how's that
+2009-03-26T00:48:00.000Z	twolane	jasballz	run the service, open the firewall and adjust accordingly.
+2009-03-26T00:48:00.000Z	jasballz	twolane	how's that?
+2009-03-26T00:49:00.000Z	jasballz	twolane	i'm a newb to ftping
+2009-03-26T00:50:00.000Z	twolane	jasballz	if your connected in a wifi-cafe i doubt service ports are allowed, 0 through 1024 tcp/udp ports
+2009-03-26T00:53:00.000Z	twolane	jasballz	do you know your vsftp.conf file very well?

@@ -1,0 +1,36 @@
+2010-12-14T23:29:00.000Z	luxurymode		hey all. installed ubuntu on my laptop, but cannot adjust screen brightness. when i click my keyboard button to increase brightness, it does bring up the brightness dialog, and shows its increasing, but it doesnt actually increase.
+2010-12-14T23:30:00.000Z	ActionParsnip	luxurymode	what make / model laptop? You completely forgot to state that
+2010-12-14T23:54:00.000Z	ActionParsnip	luxurymode	run: gksudo gedit /etc/default/grub     change GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" to GRUB_CMDLINE_LINUX_DEFAULT="quiet splash apci=off"   save the new file and run; sudo update-grub    reboot to test, should make the backlight work a bit better but you'll loose battery information
+2010-12-14T23:56:00.000Z	ActionParsnip	luxurymode	it will open in a text editor, i'm sure you've used one of those before
+2010-12-14T23:56:00.000Z	ActionParsnip	luxurymode	i gave the EXACT command to run to get it opened and writable
+2010-12-15T00:05:00.000Z	ActionParsnip	luxurymode	not sure about the adjust, is there a bug logged?
+2010-12-15T00:23:00.000Z	ActionParsnip	luxurymode	acpi probably
+2010-12-15T00:29:00.000Z	ActionParsnip	luxurymode	press ALT+F2 and type: gedit
+2010-12-15T00:30:00.000Z	ActionParsnip	luxurymode	or there is gedit in the Applications -> accessories menu
+2010-12-16T23:26:00.000Z	ActionParsnip	luxurymode	then leave the channel, nobody is forcing you to stay
+2010-12-16T23:27:00.000Z	luxurymode	ActionParsnip	no im very appreciative of advice and very courteous, but thats just outta line
+2010-12-16T23:27:00.000Z	ActionParsnip	luxurymode	and "luxurymode: ok, honestly you guys are losers"  is not "outta line"??
+2010-12-16T23:28:00.000Z	luxurymode	ActionParsnip	you're right maybe it was, but when joey pasted my comment, kinda made me feel stupid
+2010-12-16T23:29:00.000Z	ActionParsnip	luxurymode	are you connecting to a windows PC from Ubuntu to access folder shares?
+2010-12-16T23:30:00.000Z	luxurymode	ActionParsnip	no dont think so, just followed this tutorial that said i needed to " grants my account (me@localhost) all the permissions on  database and sets my password"
+2010-12-16T23:30:00.000Z	luxurymode	ActionParsnip	i guess i can just forget about that part, huh?
+2010-12-16T23:30:00.000Z	luxurymode	ActionParsnip	and just do mysql -u root -p
+2010-12-16T23:32:00.000Z	luxurymode	ActionParsnip	when i command to SHOW DATABASES, i just see "-> "
+2010-12-16T23:33:00.000Z	ActionParsnip	luxurymode	what database technology are you using?
+2010-12-16T23:33:00.000Z	luxurymode	ActionParsnip	my bad i got. bad syntax. its SHOW DATABASES; im using mysql
+2010-12-16T23:35:00.000Z	ActionParsnip	luxurymode	have you tried asking in #mysql
+2010-12-16T23:37:00.000Z	luxurymode	ActionParsnip	nope i havent. will do. thank you!
+2010-12-31T03:25:00.000Z	ActionParsnip	luxurymode	sudo add-apt-repository ppa:eclipse-team/debian-package; sudo apt-get update; sudo apt-get install eclipse
+2010-12-31T03:26:00.000Z	luxurymode	ActionParsnip	that'll gimme classic 3.6?
+2010-12-31T03:28:00.000Z	ActionParsnip	luxurymode	not sure about classic, but it'll give you 3.6
+2011-03-23T03:44:00.000Z	ActionParsnip	luxurymode	make a symlink to the binary in /usr/bin (give the link a weird name), then make a launcher to run the link
+2011-03-23T03:45:00.000Z	luxurymode	ActionParsnip	just make a path to a nonexistent file in usr/bin?
+2011-03-23T03:45:00.000Z	ActionParsnip	luxurymode	exactly
+2011-03-23T03:45:00.000Z	luxurymode	ActionParsnip	great thanks dude
+2011-03-23T03:46:00.000Z	ActionParsnip	luxurymode	not too wacky so you don't know what it is
+2011-03-23T03:47:00.000Z	luxurymode	ActionParsnip	i can just use the right-click and use "make link"?
+2011-03-23T03:48:00.000Z	ActionParsnip	luxurymode	run:    sudo ln -s /path/to/binary /usr/bin/linkname
+2011-03-23T03:49:00.000Z	ActionParsnip	luxurymode	obviously change the /path/to/binary bit and the linkname
+2011-03-23T03:50:00.000Z	ActionParsnip	luxurymode	then you can create a desktop launcher or even run: alacarte     and add it to the menu system as you wish
+2011-03-23T03:50:00.000Z	luxurymode	ActionParsnip	cool. and to make a launcher i can just add a menu item?
+2011-03-23T03:52:00.000Z	luxurymode	ActionParsnip	nevermind, i see. system > pref > main menu

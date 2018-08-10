@@ -1,0 +1,47 @@
+2012-09-09T03:05:00.000Z	lunaphyte		hi, i've inadvertently removed a package which provides the "new" menu bar in ubuntu desktop 120.04.  can someone tell me which package that is?
+2012-09-09T03:06:00.000Z	trism	lunaphyte	indicator-appmenu, appmenu-{gtk,gtk3,qt}
+2012-09-09T03:08:00.000Z	lunaphyte	trism	those four packages are already installed
+2012-09-09T03:08:00.000Z	trism	lunaphyte	that should be pretty much it, is this in unity or gnome-panel?
+2012-09-09T03:08:00.000Z	lunaphyte	trism	unity - to be clear, the menu is there, it's just the "old" one.
+2012-09-09T03:09:00.000Z	lunaphyte		for example, the network manager icon is two computers vs the up and down arrows
+2012-09-09T03:09:00.000Z	trism	lunaphyte	old means, not it the top panel?
+2012-09-09T03:14:00.000Z	trism	lunaphyte	oh do you mean the hud? it should still be the same set of packages, though I did have an issue before 12.04 released where it wouldn't show up, but a: unity --reset; fixed it
+2012-09-09T03:16:00.000Z	lunaphyte	trism	that didn't seem to work.
+2012-09-09T03:18:00.000Z	trism	lunaphyte	is the hud service running? you would need to restart your session after the unity --reset
+2012-09-09T03:18:00.000Z	trism	lunaphyte	log out/back in
+2012-09-09T03:21:00.000Z	lunaphyte	trism	no luck after relogging in.  when i did unity -- reset i got pages full of errors and warnings though.
+2012-09-09T03:23:00.000Z	trism	lunaphyte	most of them are probably harmless, did you mess with any options in ccsm?
+2012-09-09T03:23:00.000Z	lunaphyte	trism	no, i haven't used ccsm
+2012-09-09T03:25:00.000Z	trism	lunaphyte	not really sure at this point, is hud-service running? is this unity-2d or unity-3d?
+2012-09-09T03:26:00.000Z	lunaphyte	trism	how can i see if it's unity-2d or unity-3d?
+2012-09-09T03:27:00.000Z	lunaphyte	trism	hud-service appears to be running.
+2012-09-09T03:27:00.000Z	lunaphyte		oh, i've just noticed maybe another clue.  all of the windows and dialogs are that sort of clunky, windows 95-ish look now too.
+2012-09-09T03:27:00.000Z	trism	lunaphyte	is gnome-settings-daemon running?
+2012-09-09T03:28:00.000Z	trism	lunaphyte	echo $DESKTOP_SESSION; should tell you if you are in unity or unity-2d
+2012-09-09T03:33:00.000Z	lunaphyte	trism	echo $DESKTOP_SESSION says "ubuntu"
+2012-09-09T03:33:00.000Z	trism	lunaphyte	then should be unity-3d
+2012-09-09T03:34:00.000Z	lunaphyte	trism	gnome-settings-daemon is running
+2012-09-09T03:34:00.000Z	trism	lunaphyte	so hitting alt doesn't pop up the hud? or is this not what you are talking about
+2012-09-09T03:36:00.000Z	lunaphyte	trism	oh, sorry - no.  when i press alt, the hud comes up yes.  i didn't know what's what that was called.  i'm referring to the menu bar at the top of the screen where the icons are on the right side for various things like battery, network, etc [as well as the window style too, it appears]
+2012-09-09T03:40:00.000Z	trism	lunaphyte	so you are missing the file/edit/help etc menus or are you missing the indicators on the right?
+2012-09-09T03:41:00.000Z	trism	lunaphyte	the window style is kind of odd that usually means gnome-settings-daemon crashed
+2012-09-09T03:41:00.000Z	lunaphyte	trism	the indicators are there, they're just not the same ones as were there initially.
+2012-09-09T03:41:00.000Z	trism	lunaphyte	unless you removed light-themes
+2012-09-09T03:41:00.000Z	trism	lunaphyte	do you have a screenshot?
+2012-09-09T03:42:00.000Z	lunaphyte	trism	light-themes is installed.  let me see if i can get a screenshot
+2012-09-09T03:45:00.000Z	lunaphyte	trism	http://oi45.tinypic.com/oacg1g.jpg
+2012-09-09T03:46:00.000Z	trism	lunaphyte	what is: gsettings get org.gnome.desktop.interface gtk-theme;
+2012-09-09T03:47:00.000Z	trism	lunaphyte	I'm guessing the problem is that the icons are weird, looks like it is the gnome or hicolor icon theme (icon-theme might be interesting to check too)
+2012-09-09T03:53:00.000Z	lunaphyte		gsettings get org.gnome.desktop.interface gtk-theme; says "adwaita"
+2012-09-09T03:53:00.000Z	trism	lunaphyte	ah hah, try going to System Settings/Appearance and set it to Ambiance
+2012-09-09T03:54:00.000Z	trism	lunaphyte	alternatively you could make sure gnome-themes-standard is installed so you could successfully use that theme
+2012-09-09T03:55:00.000Z	lunaphyte	trism	aha - setting it to ambiance seemed to do the trick
+2012-09-09T03:55:00.000Z	trism	lunaphyte	fixed the icons too?
+2012-09-09T03:56:00.000Z	lunaphyte	trism	just checking a bit - seems to have though, yeah.
+2012-09-09T03:56:00.000Z	trism	lunaphyte	excellent
+2012-09-09T03:57:00.000Z	lunaphyte	trism	thanks much for the help.  gnome-themes-standard wasn't installed, but i was able to switch to the ambiance theme.  what did you mean by successfully use that theme?
+2012-09-09T03:59:00.000Z	trism	lunaphyte	adwaita is the default gnome 3 theme, but unity/ubuntu uses Ambiance/unico by default, so adwaita isn't installed
+2012-09-09T04:00:00.000Z	trism	lunaphyte	but it is in the package gnome-themes-standard if you ever were looking for it
+2012-09-09T04:00:00.000Z	lunaphyte		ah, i see.  you meant if i wanted to use the adwaita theme.
+2012-09-09T04:00:00.000Z	trism		indeed
+2012-09-09T04:01:00.000Z	lunaphyte	trism	understood.  i wonder how it got switched form ambiance to adwaita

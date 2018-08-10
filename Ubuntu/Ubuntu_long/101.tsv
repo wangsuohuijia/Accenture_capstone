@@ -1,0 +1,60 @@
+2007-01-02T07:16:00.000Z	Rainbyte_	kenthomson	i'm using shockwave with firefox and wine, and it works
+2007-01-02T07:16:00.000Z	kenthomson	Rainbyte_	Could you please help me? I am stuck.
+2007-01-02T07:17:00.000Z	kenthomson	Rainbyte_	i tried WINE and everything that is given in the write-up at the above link, still it doesn't work
+2007-01-02T07:19:00.000Z	kenthomson	Rainbyte_	yeah i did that too
+2007-01-02T07:19:00.000Z	kenthomson	Rainbyte_	I installed WINE, downloaded a Firefox.exe, and installed that through wine, than i opened the windows version of firefox through wine, and went to a site requiring shockwave and downloaded and installed it
+2007-01-02T07:20:00.000Z	kenthomson	Rainbyte_	what did you do afterwards?
+2007-01-02T07:23:00.000Z	kenthomson	Rainbyte_	Did you install the shockwave plugin in the firefox running through WINE or the ubuntu's firefox
+2007-01-02T07:25:00.000Z	kenthomson	Rainbyte_	after that you closed the wine's firefox and all the firefoxes that are there :). Is there anything that you did after that?
+2007-01-02T07:27:00.000Z	kenthomson	Rainbyte_	So now if you open anything in ubuntu's firefox that required shockwave, how do you (automatically) switch to wine's firefox? Or what do you do to run something that requires shockwave?
+2007-01-02T07:28:00.000Z	kenthomson	Rainbyte_	i want that task automated
+2007-01-02T07:30:00.000Z	kenthomson	Rainbyte_	according the the guide at (!shockwave), they use something called mozplugger in ubuntu that makes the task of opening wine's firefox automated when anything requiring shockwave is loaded
+2007-01-02T07:34:00.000Z	Rainbyte_	kenthomson	so you have firefox installed with wine, and it works, but you cant open shockwave animations with ubuntu's firefox?
+2007-01-02T07:35:00.000Z	kenthomson	Rainbyte_	ya
+2007-01-02T07:35:00.000Z	kenthomson	Rainbyte_	and according to that article WINE's firefox should be automatically opened when something with shockwave is encountered in Ubuntu's FF
+2007-01-02T07:37:00.000Z	Rainbyte_	kenthomson	did you set the correct path to wine's firefox?
+2007-01-02T07:38:00.000Z	kenthomson	Rainbyte_	I don't know how to do that, so i just copied-pasted what they give me at that articel
+2007-01-02T07:40:00.000Z	kenthomson	Rainbyte_	it actually is "/home/ken/.wine/drive_c\Program\ Files/Mozilla\ Firefox/firefox.exe"
+2007-01-02T07:41:00.000Z	Rainbyte_	kenthomson	yes, the path is ok
+2007-01-02T07:41:00.000Z	kenthomson	Rainbyte_	should i put that in "etc/mozpluggerrc"?
+2007-01-02T07:43:00.000Z	kenthomson	Rainbyte_	currently when i visit any site with shockwave, wine's version of firefox automatically opens and asks me "You have chose to open 01f5abc2d01, whic is a:application/octet-stream, from Z:\home\ken\mozilla\firefox\sqthajiy.defaukt\cache, what should firefox do with this file? open with, save to disk ?"
+2007-01-02T07:44:00.000Z	kenthomson	Rainbyte_	Are you sure that, THAT file can understand forward slashes"/" like you are suggesting instead of the ones given at the ubuntu site, which are "\"?
+2007-01-02T07:44:00.000Z	Rainbyte_	kenthomson	open
+2007-01-02T07:46:00.000Z	Rainbyte_	kenthomson	wine understand / and \
+2007-01-02T07:47:00.000Z	kenthomson	Rainbyte_	ok :), let me change and see
+2007-01-02T07:48:00.000Z	kenthomson	Rainbyte_	in a terminal i on doing "cd <that_path_i_mentioned>", get " No such file or directory"
+2007-01-02T07:49:00.000Z	Rainbyte_	kenthomson	try CD /home/ken/.wine/drive_c\Program\ Files/Mozilla\ Firefox/
+2007-01-02T07:50:00.000Z	kenthomson	Rainbyte_	"no such file or dir"
+2007-01-02T07:50:00.000Z	Rainbyte_	kenthomson	and with  cd /home/ken/.wine/drive_c
+2007-01-02T07:51:00.000Z	kenthomson	Rainbyte_	"no such file or dir"
+2007-01-02T07:52:00.000Z	kenthomson	Rainbyte_	when i manually navigate to that folder in firefox and do a "pwd" i get "/home/ken/.wine/drive_c/Program Files/Mozilla Firefox"
+2007-01-02T07:53:00.000Z	Rainbyte_	kenthomson	try cd ~/.wine
+2007-01-02T07:55:00.000Z	kenthomson	Rainbyte_	this works "cd ~/.wine/drive_c/Program\ Files/Mozilla\ Firefox". Should i add it to "/etc/mozpluggerrc"? And do you have any idea why "/home/ken/*" didn'y work?
+2007-01-02T07:56:00.000Z	Rainbyte_	kenthomson	yes, try to add that
+2007-01-02T07:56:00.000Z	kenthomson	Rainbyte_	ok, lets see, thank you for your help, it is much appreciated :)
+2007-01-02T08:22:00.000Z	kenthomson	Rainbyte_	now that i changed that path, when i visit any shockwave sites, WINE doesn't even open firefox.exe, but before it used to open firefox.exe, and open a dialog box asking me what to do with a <numbers_here> object?
+2007-01-02T08:25:00.000Z	kenthomson	Rainbyte_	Did you read my query?
+2007-01-02T08:25:00.000Z	Rainbyte_	kenthomson	wine "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+2007-01-02T08:26:00.000Z	kenthomson	Rainbyte_	that was what was in the howto, and that was what i did, before trying anything else, but that didn;t work
+2007-01-02T08:28:00.000Z	Rainbyte_	kenthomson	i don't have anwsers for the problem
+2007-01-02T08:29:00.000Z	Rainbyte_	kenthomson	wait, maybe if you change "file://Z:$file"  with "$file"
+2007-01-02T08:33:00.000Z	kenthomson	Rainbyte_	And can you tell me what "change "file://Z:$file"  with "$file"" will do?
+2007-01-02T08:36:00.000Z	kenthomson	Rainbyte_	on doing that "The wine's firefox opens, in the embedded space on the web page where there actually should be a shockwave video"!!
+2007-01-02T08:56:00.000Z	Rainbyte_	kenthomson	yes i know
+2007-01-02T08:42:00.000Z	kenthomson	Rainbyte_	ITS DONE!!!!!!!!! Thank you so so so much :) [though if only i would have carefully read !shockwave, i would have saved you and me countless minutes, or wait is that hours?]  :)
+2007-01-02T08:44:00.000Z	Rainbyte_	kenthomson	its good that you solve your problem
+2007-01-02T08:45:00.000Z	kenthomson	Rainbyte_	though if you load a shockwave game in Ubuntu's firefox, should wine's firefox open in a next window and display the game, or should it appear as a embedded object in the same (ubuntu's firefox) window?
+2007-01-02T08:46:00.000Z	Rainbyte_	kenthomson	i dont know, you have to try it a then tell us
+2007-01-02T08:48:00.000Z	kenthomson	Rainbyte_	the test site (adobe's) displays in a animated screen that shockwave is installed, but when i load any game requiring shockwave (yes it loads as a embedded object), i can't play/interact with the game
+2007-01-02T08:50:00.000Z	Rainbyte_	kenthomson	try to open the game with wine's firefox to be sure that it works well
+2007-01-02T08:50:00.000Z	kenthomson	Rainbyte_	basically, it doesn't work :(, though the test site says so
+2007-01-02T08:50:00.000Z	kenthomson	Rainbyte_	you man manually open "wine firefox.exe" and than navigate to that site? That is bound to work, or i shall riot at ubuntu's HQ :)
+2007-01-02T08:51:00.000Z	kenthomson	Rainbyte_	*mean
+2007-01-02T08:52:00.000Z	Rainbyte_	kenthomson	try to navigate to that site with wine's firefox
+2007-01-02T08:53:00.000Z	kenthomson	Rainbyte_	that works
+2007-01-02T08:53:00.000Z	kenthomson	Rainbyte_	all this headache is to automatise the task
+2007-01-02T08:56:00.000Z	kenthomson	Rainbyte_	can you suggest some games that require shockwave to run? I tried searching, but can't find reliable ones
+2007-01-02T08:58:00.000Z	Rainbyte_	kenthomson	i don't know many games, but i can ask my sister, wait a minute
+2007-01-02T08:58:00.000Z	kenthomson	Rainbyte_	that would help :)
+2007-01-02T09:00:00.000Z	Rainbyte_	kenthomson	no, she doesn't know :(
+2007-01-02T09:01:00.000Z	kenthomson	Rainbyte_	never mind, you helped me enough for today :)

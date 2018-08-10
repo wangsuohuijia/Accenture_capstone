@@ -1,0 +1,74 @@
+2005-02-09T06:25:00.000Z	scoon		anyone here running hoary w/ alsa and an audigy2 with no sound ?
+2005-02-09T06:26:00.000Z	SirFred	scoon	No, anyway I have a problem that could be related.
+2005-02-09T06:26:00.000Z	scoon	SirFred	lay it on me.
+2005-02-09T06:26:00.000Z	SirFred	scoon	My CrystalClear SoundFusion Audio Accelerator don't work with the last kernel.
+2005-02-09T06:27:00.000Z	SirFred	scoon	The module loads fine, but alsa claims that there's no sound card.
+2005-02-09T06:27:00.000Z	SirFred	scoon	Under 2.6.10-1-686 it works fine.
+2005-02-09T06:28:00.000Z	scoon	SirFred	that could be something as simple as the new kernel not being made correctly tho.
+2005-02-09T06:28:00.000Z	scoon	SirFred	btw what is the current hoary kernel? (i roll my own)
+2005-02-09T06:28:00.000Z	SirFred	scoon	2.6.10-2-686
+2005-02-09T06:29:00.000Z	scoon	SirFred	that would def be my guess then.  same kernel w/ different options.
+2005-02-09T06:30:00.000Z	SirFred	scoon	I'm not sure, but the last kernel was updated three or four times and my card don't work for any of the upgrades.
+2005-02-09T06:30:00.000Z	SirFred	scoon	I've seen no error on the kernel logs.
+2005-02-09T06:30:00.000Z	scoon	SirFred	you may not always see error on the logs.
+2005-02-09T06:31:00.000Z	SirFred	scoon	I know.
+2005-02-09T06:31:00.000Z	scoon	SirFred	my problem has NO errors i updated alsa-utils and then my sound stopped working.
+2005-02-09T06:31:00.000Z	SirFred	scoon	Are you able to "see" your card under the /proc/asound directory?
+2005-02-09T06:32:00.000Z	scoon	SirFred	yes i can.
+2005-02-09T06:33:00.000Z	SirFred	scoon	So your problem is different than mine. My card isn't even detected.
+2005-02-23T16:16:00.000Z	scoon	SirFred	yes.  mail-notification
+2005-02-23T16:16:00.000Z	scoon	SirFred	even does gmail
+2005-02-23T16:17:00.000Z	SirFred	scoon	Oh, is that the package-name ?
+2005-02-23T16:17:00.000Z	scoon	SirFred	yes
+2005-02-23T16:17:00.000Z	SirFred	scoon	Thanks a lot
+2005-02-23T16:17:00.000Z	scoon	SirFred	np
+2005-02-23T16:26:00.000Z	SirFred	scoon	I've tried it a little.
+2005-02-23T16:26:00.000Z	SirFred	scoon	But only a pair of times. It worked fine, I think.
+2005-02-23T16:26:00.000Z	scoon	SirFred	w/ ubuntu ?
+2005-02-23T16:26:00.000Z	SirFred	scoon	Yes.
+2005-02-23T16:26:00.000Z	SirFred	scoon	Hoary
+2005-02-23T16:26:00.000Z	scoon	SirFred	are you still warty ?
+2005-02-23T16:27:00.000Z	SirFred	scoon	No, sorry
+2005-02-23T16:27:00.000Z	scoon	SirFred	i am hoary.  the version is .63
+2005-02-23T16:27:00.000Z	scoon	SirFred	i have found that it requires libflac4 but i have libflac6
+2005-02-23T16:28:00.000Z	SirFred	scoon	0.6.3 here.
+2005-02-23T16:28:00.000Z	SirFred	scoon	I installed it yesterday or the day before yesterday with no problem.
+2005-02-23T16:28:00.000Z	scoon	SirFred	yeah that is what i mean.
+2005-02-23T16:28:00.000Z	SirFred	scoon	So, you're getting dependency problems?
+2005-02-23T16:29:00.000Z	scoon	SirFred	yeah.  it wants libflac4 but only libflac6 is avail.
+2005-02-23T16:29:00.000Z	scoon	SirFred	but there is a newer version out: .8.4 or something like that.
+2005-02-23T16:29:00.000Z	SirFred	scoon	On hoary repositories?
+2005-02-23T16:29:00.000Z	scoon	SirFred	yea
+2005-02-23T16:30:00.000Z	SirFred	scoon	apt-cache show muine only gets for me the Version: 0.6.3-4
+2005-02-23T16:30:00.000Z	scoon	SirFred	that is correct, but there is a newer version out there.
+2005-02-23T16:31:00.000Z	scoon	SirFred	my question is: does muine play over samba.
+2005-02-23T16:31:00.000Z	SirFred	scoon	Out where?
+2005-02-23T16:31:00.000Z	SirFred	scoon	No idea.
+2005-02-23T16:31:00.000Z	SirFred	scoon	Perhaps it uses gnome-vfs2 functionality
+2005-02-23T16:31:00.000Z	scoon	SirFred	well xmms doesn't and neither does beep-media-player.
+2005-02-23T16:32:00.000Z	SirFred	scoon	Can't you just mount that volume using nautilus?
+2005-02-23T16:32:00.000Z	scoon	SirFred	i have.
+2005-02-23T16:33:00.000Z	SirFred	scoon	So you mean muine is not able to access mounted volumes in nautilus?
+2005-02-23T16:33:00.000Z	scoon	SirFred	that would be much appreciated.
+2005-02-23T16:36:00.000Z	SirFred	scoon	Well, the muine file dialog is the old gtk one.
+2005-02-23T16:36:00.000Z	SirFred	scoon	It seems I'm not able to see the network mounted volumes.
+2005-02-23T16:37:00.000Z	SirFred	scoon	Because they're not mounted at SO level.
+2005-02-23T16:37:00.000Z	SirFred	scoon	Let's try with beep-media-player.
+2005-02-23T16:37:00.000Z	scoon	SirFred	thank you.
+2005-02-23T16:39:00.000Z	scoon	SirFred	i wonder if i could write a plugin for muine.
+2005-02-23T16:42:00.000Z	scoon	SirFred	i think i may look at the changelog for the newer version and see if smb support has been added.
+2005-02-23T16:43:00.000Z	SirFred	scoon	But the point is that the smb support is only needed on gnome-vfs2
+2005-02-23T16:43:00.000Z	SirFred	scoon	That should be enough.
+2005-02-23T16:43:00.000Z	scoon	SirFred	understood.  but that is not what is happening here.
+2005-02-23T16:44:00.000Z	SirFred	scoon	Perhaps you should file a bug.
+2005-02-23T16:45:00.000Z	scoon	SirFred	maybe.  I am not quite certain where it will be approp to do so.  with gnome-vfs or every other music player.
+2005-02-23T16:45:00.000Z	scoon	SirFred	i wonder what kde does w/ this stuff.
+2005-02-23T16:45:00.000Z	SirFred	scoon	Not sure.
+2005-02-23T16:45:00.000Z	scoon	SirFred	i will figure that out as time goes on.
+2005-02-23T16:47:00.000Z	SirFred	scoon	Or just on the component you've found the bug. One not from universe or multiverse.
+2005-02-23T16:48:00.000Z	scoon	SirFred	yes but that is a limited way of fixing the bug. i would like to know if it is a gnome-vfs problem or not.
+2005-02-23T16:48:00.000Z	SirFred	scoon	So, file the bug on gnome-vfs2
+2005-02-23T16:48:00.000Z	scoon	SirFred	but frankly i am not at the point where i care about the bug so much.
+2005-02-23T16:48:00.000Z	SirFred	scoon	The gnome-vfs2 maintainer should know if it's a problem on gnome-vfs2 or not.
+2005-02-23T16:49:00.000Z	SirFred	scoon	I recommend you to take a time searching on the bugzilla, before firing the bug.
+2005-02-23T16:49:00.000Z	scoon	SirFred	that is what i'd do when i get there.

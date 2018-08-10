@@ -1,0 +1,59 @@
+2008-01-19T10:32:00.000Z	BoltClock		can anyone else help me with my problem?
+2008-01-19T10:34:00.000Z	scguy318	BoltClock	perhaps you should paste your Xorg.0.log
+2008-01-19T10:34:00.000Z	BoltClock	scguy318	where is it?
+2008-01-19T10:35:00.000Z	BoltClock	scguy318	i know the pastebin but where do i find the log file?
+2008-01-19T10:35:00.000Z	scguy318	BoltClock	/var/log/Xorg.0.log
+2008-01-19T10:35:00.000Z	BoltClock	scguy318	ok
+2008-01-19T10:36:00.000Z	BoltClock	scguy318	http://paste.ubuntu-nl.org/52548/
+2008-01-19T10:38:00.000Z	scguy318	BoltClock	could you also paste /etc/X11/xorg.conf
+2008-01-19T10:39:00.000Z	BoltClock	scguy318	earlier i overwrote it with xorg.conf.backup
+2008-01-19T10:39:00.000Z	BoltClock	scguy318	paste it anyway?
+2008-01-19T10:39:00.000Z	scguy318	BoltClock	yes
+2008-01-19T10:39:00.000Z	BoltClock	scguy318	http://paste.ubuntu-nl.org/52550/
+2008-01-19T10:42:00.000Z	scguy318	BoltClock	are there any other Xorg logs in /var/log?
+2008-01-19T10:43:00.000Z	BoltClock	scguy318	um, Xorg.0.log.old and Xorg.20.log
+2008-01-19T10:43:00.000Z	scguy318	BoltClock	mm, could you paste Xorg.0.log.old? sorry for the inconvenience
+2008-01-19T10:44:00.000Z	BoltClock	scguy318	http://paste.ubuntu-nl.org/52551/ thats fine im very patient :)
+2008-01-19T10:47:00.000Z	BoltClock	scguy318	how is it?
+2008-01-19T10:48:00.000Z	scguy318	BoltClock	your logs seem to only show X launching successfully in low graphics mm
+2008-01-19T10:49:00.000Z	BoltClock	scguy318	ubuntu keeps asking to launch in low gfx and no other
+2008-01-19T10:51:00.000Z	scguy318	BoltClock	a temporary measure may be to select vesa, so it won't constantly complain
+2008-01-19T10:52:00.000Z	BoltClock	scguy318	huh?
+2008-01-19T10:52:00.000Z	scguy318	BoltClock	for your monitor driver in the safe mode selection
+2008-01-19T10:53:00.000Z	scguy318	BoltClock	other than that I'm afraid the limits of my knowledge are reached :(
+2008-01-19T10:53:00.000Z	scguy318	BoltClock	perhaps it may be that nvidia restricted isn't installed (properly)
+2008-01-19T10:53:00.000Z	BoltClock	scguy318	the dialog where ubuntu warns me that its starting in low gfx?
+2008-01-19T10:53:00.000Z	scguy318	BoltClock	yes, or you could reconfigure xorg.conf yourself and specify vesa
+2008-01-19T10:53:00.000Z	BoltClock	scguy318	restricted drivers manager isnt reporting any problems
+2008-01-19T10:54:00.000Z	BoltClock	scguy318	will reboot now and take a look
+2008-01-19T10:59:00.000Z	BoltClock	scguy318	oh dear, i cant even start ubuntu now
+2008-01-19T10:59:00.000Z	BoltClock	scguy318	im currently on win xp pro sp2
+2008-01-19T11:00:00.000Z	scguy318	BoltClock	the X server failed?
+2008-01-19T11:00:00.000Z	BoltClock	scguy318	ubuntu prints five lines and does nothing else
+2008-01-19T11:00:00.000Z	scguy318	BoltClock	in that case, you may either choose to install the ext2 driver at http://fs-driver.org to gain access to your Ubuntu partition, and copy /var/log/Xorg.0.log
+2008-01-19T11:00:00.000Z	scguy318	BoltClock	and paste that, or
+2008-01-19T11:01:00.000Z	scguy318	BoltClock	hmm, what messages?
+2008-01-19T11:06:00.000Z	BoltClock	scguy318	wait hold on
+2008-01-19T11:08:00.000Z	BoltClock	scguy318	they dont look like they have anything to do with my problem but http://paste.ubuntu-nl.org/52553/
+2008-01-19T11:09:00.000Z	scguy318	BoltClock	I'm thinking Ubuntu loaded up okay, but X didn't
+2008-01-19T11:10:00.000Z	scguy318	BoltClock	take your time, I can wait
+2008-01-19T11:10:00.000Z	BoltClock	scguy318	take my time to..?
+2008-01-19T11:11:00.000Z	scguy318	BoltClock	get access to your Linux partition and paste Xorg.0.log
+2008-01-19T11:11:00.000Z	scguy318	BoltClock	I guess if you know your way at the Terminal you could possibly copy Xorg.0.log to your Windows partition at the command line or
+2008-01-19T11:11:00.000Z	scguy318	BoltClock	use http://fs-driver.org to gain access from windows
+2008-01-19T11:12:00.000Z	scguy318	BoltClock	actually, I guess a simpler way I've overlooked is to go to Recovery Console and just dpkg-reconfigure xserver-xorg all over again
+2008-01-19T11:13:00.000Z	BoltClock	scguy318	so do that or retrieve the log file?
+2008-01-19T11:14:00.000Z	scguy318	BoltClock	for now just dpkg-reconfigure xserver-xorg
+2008-01-19T11:14:00.000Z	scguy318	BoltClock	I would hate to have you do undue work
+2008-01-19T11:15:00.000Z	BoltClock	scguy318	lol, ok. also why is the program seeing my linux disk (i installed win and linux on separate disks) as ext2 and not ext3?
+2008-01-19T11:16:00.000Z	scguy318	BoltClock	because the app does not understand ext3 journaling
+2008-01-19T11:16:00.000Z	scguy318	BoltClock	ext3 is backwards compatible with ext2, apart from journaling
+2008-01-19T11:16:00.000Z	BoltClock	scguy318	ok, will reboot ubuntu in recovery mode now
+2008-01-19T11:20:00.000Z	scguy318	BoltClock	dpkg-reconfigure xserver-xorg, after you finish, just jam Ctrl-Alt-Delete to reboot
+2008-01-19T11:21:00.000Z	BoltClock	scguy318	exactly what i did to reboot lol
+2008-01-19T11:28:00.000Z	BoltClock	scguy318	reconfigured, tried starting ubuntu again, still stuck at those five lines
+2008-01-19T11:29:00.000Z	BoltClock	scguy318	what now?
+2008-01-19T11:34:00.000Z	scguy318	BoltClock	hmm, perhaps remove nvidia-glx? might fix your xorg.conf, else, err, I'm unfortunately out of ideas (getting late for me :()
+2008-01-19T11:34:00.000Z	BoltClock	scguy318	remove nvidia-glx?
+2008-01-19T11:56:00.000Z	scguy318	BoltClock	I'll apologize for my inability to assist, I am going for the night, good luck
+2008-01-19T11:57:00.000Z	BoltClock	scguy318	its ok. good night

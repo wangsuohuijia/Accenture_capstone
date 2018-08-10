@@ -1,0 +1,70 @@
+2005-11-02T14:39:00.000Z	taotime		okay installed xmms now how to play internet radio station
+2005-11-02T14:41:00.000Z	thoreauputic	taotime	easy and nice way - install streamtuner
+2005-11-02T14:50:00.000Z	thoreauputic	taotime	under Edit Preferences in streamtuner, see if xmms is the default player
+2005-11-02T14:51:00.000Z	thoreauputic	taotime	in streamtuner, when you click "Tune in" you should get xmms by default I think
+2005-11-02T14:51:00.000Z	taotime	thoreauputic	let me try just give me a sec  dont go away
+2005-11-02T14:52:00.000Z	thoreauputic	taotime	heh - I'll be here for a while :)
+2005-11-02T15:01:00.000Z	thoreauputic	taotime	ah actually you don't - I just noticed mine runs fine with alsa output plugin
+2005-11-02T14:54:00.000Z	taotime	thoreauputic	:  says i have to make sure i have to check about sound card, no audio, etc. i have no audio on this computer for two weeks.
+2005-11-02T14:55:00.000Z	thoreauputic	taotime	oh so it's a sound issue ?
+2005-11-02T14:55:00.000Z	thoreauputic	taotime	you never had sound on this install ?
+2005-11-02T14:55:00.000Z	taotime	thoreauputic	: man i can listen to music cd and the opening and closing music which ubuntu plays
+2005-11-02T14:56:00.000Z	thoreauputic	taotime	under system- preferences - multimedia systems selector, seeif you have esd as sink and oss as source
+2005-11-02T14:57:00.000Z	thoreauputic	taotime	and if you are getting system sounds but not others, I suggest you turn off system sounds and log back in
+2005-11-02T14:57:00.000Z	taotime	thoreauputic	: i have alsa as sink and oss as source
+2005-11-02T14:57:00.000Z	thoreauputic	taotime	try changing sink to esd - is this breezy?
+2005-11-02T14:58:00.000Z	taotime	thoreauputic	yes the latest one they had i downloaded and installed about 2 weeks ago.
+2005-11-02T14:58:00.000Z	thoreauputic	taotime	OK try esd sink and test
+2005-11-02T14:58:00.000Z	thoreauputic	taotime	works here
+2005-11-02T14:59:00.000Z	taotime	thoreauputic	works as esd and also worked as alsa before
+2005-11-02T14:59:00.000Z	thoreauputic	taotime	but if esd sink works it might solve our problem
+2005-11-02T14:59:00.000Z	thoreauputic	taotime	try it out
+2005-11-02T15:00:00.000Z	thoreauputic	taotime	in which case you need the output plugin for xmms set to esound of course
+2005-11-02T15:01:00.000Z	taotime	thoreauputic	how do i change xmms to direct to esound
+2005-11-02T15:01:00.000Z	thoreauputic	taotime	under options- preferences, output plugin
+2005-11-02T15:02:00.000Z	thoreauputic	taotime	you might need to try various options out
+2005-11-02T15:04:00.000Z	taotime	thoreauputic	i have tried that and works thanxs a bunch i m trying to show it to my wife that you can listen to radio on linux. anyways. i don't understand it all, can you like write me down two or three lines of manual.. like ok whas alsa, what is esd. ofcourse i don't want to know the whole thing, i want to know why this works now and not for two weeks
+2005-11-02T15:05:00.000Z	thoreauputic	taotime	basically breezy works with a thing called "dmix" which can use esound happily
+2005-11-02T15:05:00.000Z	thoreauputic	taotime	I don't know enough to give you a full explanation :)
+2005-11-02T15:06:00.000Z	thoreauputic	taotime	esd is a "sound server"
+2005-11-02T15:12:00.000Z	taotime	thoreauputic	check this out for me por fabor ; www.raaga.com click hindi click anything select all songs and see if you can listen to them
+2005-11-02T15:12:00.000Z	thoreauputic	taotime	umm - I have a stream playing and I'm on dialup :)
+2005-11-02T15:13:00.000Z	thoreauputic	taotime	checking the URL -hang on :)
+2005-11-02T15:13:00.000Z	taotime	thoreauputic	:  i know bro, i lived with dialup for about 11 years, i appreciate in a texas manner what you are doing for me.
+2005-11-02T15:16:00.000Z	thoreauputic	taotime	erm, thay seem tohab=ve some kind of "built-in" player
+2005-11-02T15:17:00.000Z	thoreauputic	taotime	I have no idea what sort of stream that would be
+2005-11-02T15:17:00.000Z	taotime	thoreauputic	: first of all i appreciate what you did for me.
+2005-11-02T15:19:00.000Z	thoreauputic	taotime	bleh - that site is full of ads and spam :(
+2005-11-02T15:19:00.000Z	taotime	thoreauputic	i don't know what but if i play it on windows ( dont' tell nobody around here i touch windows) it starts a small window and says, checking for media player and then asks me to choose between windows media player and real player i choose one of them, and it starts working. i know why but i don't know how of doing it in linux, and i want to show my wife it can be done in linux.
+2005-11-02T15:19:00.000Z	thoreauputic	taotime	you might need to install realplayer then
+2005-11-02T15:20:00.000Z	taotime	thoreauputic	:  has to be it is the only thing from my country that has some decent selection of free music so they punish you with spam and popus and stuff like that.
+2005-11-02T15:20:00.000Z	thoreauputic	taotime	google real player for linux
+2005-11-02T15:20:00.000Z	taotime	thoreauputic	i installed real player about two weeks ago, right after i installed ubuntu on my laptop.... but i can't get it to work, as in with that website.
+2005-11-02T15:20:00.000Z	thoreauputic	taotime	I have realplayer working OK here - I need it to listen to the BBC
+2005-11-02T15:21:00.000Z	thoreauputic	taotime	well, that site is doing something weird with its "player" - it might have issues with th elinux version, I don't know
+2005-11-02T15:22:00.000Z	thoreauputic	taotime	mine works fine with the BBC "player" but just hangs on your site
+2005-11-02T15:22:00.000Z	thoreauputic	taotime	does realplay work for you on BBC streams?
+2005-11-02T15:23:00.000Z	taotime	thoreauputic	 that's coool, i might send the site administrator a terse email asking for help....  but in the mean while, you know how to get streamripper running with streamtuner since i have streamtuner, xmms, and rhythmbox, not to mention totem
+2005-11-02T15:23:00.000Z	taotime	thoreauputic	let me check about that bbc stuff
+2005-11-02T15:23:00.000Z	thoreauputic	taotime	if you installed streamripper, you can just click "record" in streamtuner
+2005-11-02T15:24:00.000Z	taotime	thoreauputic	: streamtuner has pre installed radio stations. how about i want to go to some xyz-website-.com and listen to their tunes and download
+2005-11-02T15:25:00.000Z	taotime	thoreauputic	can i just do it any website or is it limited to live365 etc.
+2005-11-02T15:25:00.000Z	thoreauputic	taotime	then you need to get the m3u or pls file, and load the right url in streamripper
+2005-11-02T15:25:00.000Z	taotime	thoreauputic	:  any direct way of doing it like click and play
+2005-11-02T15:26:00.000Z	thoreauputic	taotime	normally firefox pops up a dialogue box that asks what you want to do with the stream - you can choose for instance totem or beep or xmms etc
+2005-11-02T15:27:00.000Z	thoreauputic	taotime	if that works you can set "dp this every time"
+2005-11-02T15:27:00.000Z	taotime	thoreauputic	:  what if if dosen't how to make it change, like i said, i just opens totem, and looks at me like a drooling child who has no clue about who broke the bottle
+2005-11-02T15:28:00.000Z	thoreauputic	taotime	heh - umm - ifthe format is compatible, it should play
+2005-11-02T15:28:00.000Z	thoreauputic	taotime	you have mp3 support and win 32 codecs installed?
+2005-11-02T15:29:00.000Z	taotime	thoreauputic	: dont't know how do i check it
+2005-11-02T15:29:00.000Z	thoreauputic	taotime	read the URL ubotu just messaged to you
+2005-11-02T15:30:00.000Z	thoreauputic	taotime	see it?
+2005-11-02T15:30:00.000Z	taotime	thoreauputic	: got it i m gonn read it.
+2005-11-02T15:30:00.000Z	taotime	thoreauputic	: yeah i see it... just gimme a sec
+2005-11-02T15:30:00.000Z	thoreauputic	taotime	also a good place to read is http://help.ubuntu.com
+2005-11-02T15:30:00.000Z	thoreauputic	taotime	and that one
+2005-11-02T15:31:00.000Z	taotime	thoreauputic	: yeah i m off to read http://help.ubuntu.com
+2005-11-02T15:32:00.000Z	thoreauputic	taotime	most of th einfo you need is there :)
+2005-11-02T15:32:00.000Z	taotime	thoreauputic	thank you i appreciate it.
+2005-11-02T15:32:00.000Z	thoreauputic	taotime	plus other useful stuff
+2005-11-02T15:32:00.000Z	thoreauputic	taotime	you're welcome :)

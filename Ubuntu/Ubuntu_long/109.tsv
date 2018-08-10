@@ -1,0 +1,71 @@
+2005-11-25T17:57:00.000Z	tdn		I have a computer with Debian installed. Now is it possible for me to take a sources.list from Ubuntu and do an apt-get dist-upgrade and then get Ubuntu?
+2005-11-25T17:57:00.000Z	erUSUL	tdn	no
+2005-11-25T17:59:00.000Z	tdn	erUSUL	ok. Is there any way to do a thing like that? To "upgrade" from Debian to Ubuntu?
+2005-11-25T06:00:00.000Z	erUSUL	tdn	i do not think so :(.
+2005-11-25T06:02:00.000Z	tdn	erUSUL	Ok. Why not? I mean, what would go wrong if I tried it?
+2005-11-25T06:04:00.000Z	erUSUL	tdn	the packages are not the same on both distros you can end up with an unusable system. in warty it was possible iirci but not in breezy
+2005-11-25T06:05:00.000Z	tdn	erUSUL	hmm.... But would'nt it be possible to put warty sources in my sources.list, "upgrade" to Ubuntu warty, then put breezy sources in the sources.list and upgrade to Ubuntu breezy?
+2005-11-25T06:07:00.000Z	erUSUL	tdn	is a long and painfull way and as i said i'm not sure if it's possible. why not reinstall?
+2005-11-25T06:07:00.000Z	tdn	erUSUL	I do not have a CD-set.
+2005-11-25T06:08:00.000Z	erUSUL	tdn	download an iso and burn it
+2005-11-25T06:09:00.000Z	tdn	erUSUL	hmm... Yeah... I would like to do that... But my net is really slow.
+2005-11-25T06:11:00.000Z	erUSUL	tdn	if you make a net install you will be waiting forever too :(. i have 56 kbps modem too but persuade a friend of mine to dl the iso
+2005-11-25T06:12:00.000Z	tdn	erUSUL	ok.
+2005-11-25T06:12:00.000Z	tdn	erUSUL	but *does* Ubuntu have a net install image?
+2005-11-25T06:13:00.000Z	erUSUL	tdn	no afaik
+2005-11-25T06:13:00.000Z	tdn	erUSUL	ok.
+2005-11-25T06:15:00.000Z	tdn	erUSUL	Ok. I'm downloading the image now. What program should I use to burn it with? (I only have console)
+2005-11-25T06:17:00.000Z	erUSUL	tdn	cdrecord
+2005-11-25T06:17:00.000Z	tdn	erUSUL	ok.
+2007-01-23T14:22:00.000Z	erUSUL	tdn	install bum (graphical) or use update-rc.d (man update-rc.d)
+2007-01-23T14:23:00.000Z	tdn	erUSUL	I do not have GUI. Only CLI.
+2008-09-07T19:41:00.000Z	erUSUL	tdn	why did you compiled a external driver instead of using the provided one? /lib/modules/$(uname -r)/kernel/drivers/net/wireless/rt2x00/rt73usb.ko
+2008-09-07T19:42:00.000Z	tdn	erUSUL	I did not compile an external driver at first. It was because the provided one did not work.
+2010-01-29T22:21:00.000Z	erUSUL	tdn	you have to install the pae kernel
+2010-01-29T22:21:00.000Z	tdn	erUSUL	should I just install linux-generic-pae ?
+2010-01-29T22:21:00.000Z	erUSUL	tdn	yes
+2010-01-29T22:21:00.000Z	tdn	erUSUL	ok.
+2010-01-29T22:22:00.000Z	tdn	erUSUL	any drawbacks of using this kernel?
+2010-01-29T22:23:00.000Z	tdn	erUSUL	why isn't a PAE kernel image installed by the Ubuntu installer, if a PAE enabled CPU is detected?
+2010-01-29T22:23:00.000Z	erUSUL	tdn	there is a performance hit iirc. but i too use 64 bits so i can not tell if it matters in practice
+2010-01-29T22:23:00.000Z	erUSUL	tdn	if it is not needed is slower
+2010-01-29T22:23:00.000Z	tdn	erUSUL	ok. What are the drawbacks of using 64bit instead of 32bit? Other than problems getting Java working proberly?
+2010-01-29T22:24:00.000Z	tdn	erUSUL	how much slower? Where can I find info in this performance loss?
+2010-01-29T22:24:00.000Z	erUSUL	tdn	only the java plugin for mozilla is "somewhat" problematic
+2010-01-29T22:24:00.000Z	erUSUL	tdn	google should have plenty of hits
+2010-01-29T22:24:00.000Z	tdn	erUSUL	well, it is a show stopper me, because it makes me unable to use home banking.
+2010-01-29T22:27:00.000Z	erUSUL	tdn	a plugin is aviable based on openjdk that should be mostly compatible. you can try from a livecd
+2010-01-29T22:28:00.000Z	tdn	erUSUL	ok.
+2010-01-29T22:28:00.000Z	tdn	erUSUL	what package should I install to get it?
+2010-01-29T22:28:00.000Z	erUSUL	tdn	from a RH paper « The performance impact is highly workload dependent, but on a fairly typical kernel
+2010-01-29T22:29:00.000Z	erUSUL	tdn	so maximun 10% hit
+2010-01-29T22:30:00.000Z	tdn	erUSUL	ok.
+2010-07-15T14:06:00.000Z	erUSUL	tdn	most players can open iso files directly
+2010-07-15T14:06:00.000Z	erUSUL	tdn	i.e. « vlc file.iso » should just work
+2010-07-15T14:10:00.000Z	tdn	erUSUL	llutz: Ok. I was not aware. But I think using the terminal to start a video is too difficult for many users. Can this be done using GUI?
+2010-07-15T14:10:00.000Z	erUSUL	tdn	try it and see ?
+2010-07-15T14:10:00.000Z	tdn	erUSUL	I will. I am not on the system right now.
+2010-07-15T14:10:00.000Z	tdn	erUSUL	llutz: thanks for input.
+2010-07-21T20:02:00.000Z	erUSUL	tdn	7zip is your best option.
+2010-07-21T20:04:00.000Z	erUSUL	tdn	all compressions program in windows manage tar.gz and tar.bz2 without problems ...
+2010-07-21T20:04:00.000Z	tdn	erUSUL	ok. So how do I split it with tar?
+2010-07-21T20:04:00.000Z	erUSUL	tdn	but splitting in tar's is not easy either... use 7zip
+2010-07-21T20:04:00.000Z	tdn	erUSUL	how to use 7zip then?
+2010-07-21T20:05:00.000Z	erUSUL	tdn	install p7zip-full ; right click on the file you want to compress/split choose add to archive/compress
+2010-07-21T20:06:00.000Z	erUSUL	tdn	in the resulting dialog choose .7z as extension. click the plus to show options set volume size
+2010-07-21T20:07:00.000Z	tdn	erUSUL	I use Ark, but I cannot see where to set file size.
+2010-07-21T20:10:00.000Z	erUSUL	tdn	ok; commna line « 7z a -v4000m  file.7z file_to_compress »
+2010-07-21T20:10:00.000Z	erUSUL	tdn	that creates 4000 MiB volumes
+2010-07-21T20:11:00.000Z	tdn	erUSUL	thanks. And how to extract/join in Windows?
+2010-07-21T20:12:00.000Z	erUSUL	tdn	double click on the first volume ? ( if you have a half decent compression program ( 7-zip for windows is free and very good) all should work automatically
+2010-07-21T20:12:00.000Z	tdn	erUSUL	ok. Thanks.
+2010-07-21T20:13:00.000Z	erUSUL	tdn	or create a sfx archive?
+2010-07-21T20:17:00.000Z	tdn	erUSUL	sfx?
+2010-07-21T20:17:00.000Z	erUSUL	tdn	self extracting archives;
+2010-07-21T20:17:00.000Z	erUSUL	tdn	dunno if multivolume is compatible with sfx
+2010-07-21T20:18:00.000Z	tdn	erUSUL	oh.
+2010-07-21T20:19:00.000Z	tdn	erUSUL	I am using your proposed command right now, but it is very slow. The files that I am compressing cannot be compressed any futher, so I think that it is a waste to actually try to compress it. Does 7z have a 'fast' mode or something like that, that does not compress (much)?
+2010-07-21T20:21:00.000Z	erUSUL	tdn	-mx=0 ?
+2010-07-21T20:22:00.000Z	tdn	erUSUL	thanks.
+2011-01-22T00:08:00.000Z	erUSUL	tdn	it depends on what you want to do
+2011-01-22T00:09:00.000Z	tdn	erUSUL	for some reason the Vista menu item no longer boots Vista. Instead it boots the wrong partition  --  The IBM rescue partition.

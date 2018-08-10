@@ -1,0 +1,61 @@
+2006-08-22T08:14:00.000Z	natural20		so why does ubuntu have a GUI if you can't move stuff to folders using it
+2006-08-22T08:15:00.000Z	bruenig	natural20	you can if you want. But generally they try to make it a bit more difficult than drag and drop in order to help compensate for user error. natrual20, do gksudo nautilus and you can use the gui to move stuff to folders
+2006-08-22T08:45:00.000Z	bruenig	natural20	why no update to dapper?
+2006-08-22T08:46:00.000Z	bruenig	natural20	you should be able to just download whatever they have on the firefox website. Extract it to /opt and run it from there. I believe firefox distributes frozen binaries. Not sure though. Been a long time since I haven't gotten firefox from apt-get
+2006-08-22T09:01:00.000Z	bruenig	natural20	ok open up a terminal and do cd /opt
+2006-08-22T09:02:00.000Z	bruenig	natural20	open up a terminal and cd to where ever you want to install it
+2006-08-22T09:05:00.000Z	bruenig	natural20	if you are doing it in /opt, which is the purpose of that directory. For just this reason, then you would do sudo. But others seem to think the /opt directory is bad. I defer to them I guess
+2006-08-22T09:08:00.000Z	bruenig	natural20	do you still want to install ff 1.5?
+2006-08-22T09:08:00.000Z	natural20	bruenig	please
+2006-08-22T09:09:00.000Z	bruenig	natural20	ok it is going to have to be in your home directory because they seem to not like it being in /opt and also that helps a lot with permission issues
+2006-08-22T09:09:00.000Z	natural20	bruenig	so replace /opt with /home?
+2006-08-22T09:09:00.000Z	bruenig	natural20	natural20, just open up a fresh terminal, you will be in the right directory
+2006-08-22T09:10:00.000Z	bruenig	natural20	do "wget http://www.mozilla.com/products/download.html?product=firefox-1.5.0.6&os=linux&lang=en-US"
+2006-08-22T09:12:00.000Z	bruenig	natural20	tell me when that finishes
+2006-08-22T09:13:00.000Z	natural20	bruenig	finished
+2006-08-22T09:13:00.000Z	bruenig	natural20	do "tar xf firefox-1.5.0.6.tar.gz" this will extract the file
+2006-08-22T09:14:00.000Z	bruenig	natural20	ok now. How do you want to launch this. An icon on the desktop or in the menus or panel or what?
+2006-08-22T09:15:00.000Z	natural20	bruenig	tar: firefox-1.5.0.6.tar.gz: Cannot open: No such file or directory
+2006-08-22T09:15:00.000Z	bruenig	natural20	do ls
+2006-08-22T09:17:00.000Z	bruenig	natural20	go to here http://www.mozilla.com/products/download.html?product=firefox-1.5.0.6&os=linux&lang=en-US in a web browser and download firefox. Save it to your username directory if you can
+2006-08-22T09:18:00.000Z	natural20	bruenig	is my username directory home?
+2006-08-22T09:19:00.000Z	bruenig	natural20	it will be /home/username
+2006-08-22T09:19:00.000Z	bruenig	natural20	it should say your username in the download dialog of firefox when you choose to download it
+2006-08-22T09:21:00.000Z	natural20	bruenig	my downloads go to my desktop, home does not have a username folder.
+2006-08-22T09:22:00.000Z	bruenig	natural20	just put it in your desktop that is fine. We will move it later
+2006-08-22T09:22:00.000Z	natural20	bruenig	i lied, home does have a username folder.  the file is there
+2006-08-22T09:22:00.000Z	bruenig	natural20	ok, open up a terminal and do cd
+2006-08-22T09:23:00.000Z	bruenig	natural20	then do tar xf firefox-1.5.0.6.tar.gz
+2006-08-22T09:24:00.000Z	bruenig	natural20	was that successful or what
+2006-08-22T09:24:00.000Z	natural20	bruenig	the terminal just gave a new command line, that's it
+2006-08-22T09:24:00.000Z	bruenig	natural20	perfect
+2006-08-22T09:25:00.000Z	bruenig	natural20	how do you want to run it. An icon on the desktop. A menu entry or what
+2006-08-22T09:25:00.000Z	natural20	bruenig	icon on the taskbar would be ideal, but i'll take anything.  desktop is fine
+2006-08-22T09:26:00.000Z	natural20	bruenig	to me taskbar = applications, places, system, etc
+2006-08-22T09:26:00.000Z	bruenig	natural20	ok, go to applications>accessories>alacarte menu editor
+2006-08-22T09:27:00.000Z	natural20	bruenig	i have no alacarte menu editor :( sorry
+2006-08-22T09:27:00.000Z	bruenig	natural20	when you get in there click on internet and then do file>new entry
+2006-08-22T09:27:00.000Z	bruenig	natural20	oh yeah breezy
+2006-08-22T09:29:00.000Z	bruenig	natural20	if you want to icon, click on icon and the path should be /home/username/firefox/icons, of course replace username with your username
+2006-08-22T09:30:00.000Z	natural20	bruenig	i click on the icon, but i get this error: Failed to execute child process "~firefox/firefox" (no such filre or directory)
+2006-08-22T09:31:00.000Z	bruenig	natural20	you have to use ~/firefox/firefox, the / is important after the `
+2006-08-22T09:32:00.000Z	natural20	bruenig	my command is this:  ~/firefox/firefox
+2006-08-22T09:32:00.000Z	natural20	bruenig	error still
+2006-08-22T09:34:00.000Z	natural20	bruenig	nothing happens with new command line
+2006-08-22T09:35:00.000Z	bruenig	natural20	put that in the command part of the launcher not in the command line
+2006-08-22T09:36:00.000Z	bruenig	natural20	put that command in the command line now and see if it works
+2006-08-22T09:39:00.000Z	natural20	bruenig	./firefox-bin: error while loading shared libraries: libstdc++.so.5: cannot open shared object file: No such file or directory
+2006-08-22T09:43:00.000Z	bruenig	natural20	are you still there
+2006-08-22T09:44:00.000Z	natural20	bruenig	yes, it is doing stuff
+2006-08-22T09:45:00.000Z	natural20	bruenig	YES!
+2006-08-22T09:45:00.000Z	bruenig	natural20	redo that launcher thing and put that command in it
+2006-08-22T09:46:00.000Z	bruenig	natural20	you mean you just clicked the launcher and it worked?
+2006-08-22T09:46:00.000Z	natural20	bruenig	correct
+2006-08-22T09:46:00.000Z	bruenig	natural20	ok well it should have worked originally but the library got in the way
+2006-08-22T09:47:00.000Z	natural20	bruenig	thank you so much
+2006-08-23T06:40:00.000Z	bruenig	natural20	give me a link to one such page
+2006-08-23T06:40:00.000Z	natural20	bruenig	they are pages you need to be logged in or a member of, such as MyEbay or Yahoo Groups message boards.
+2006-08-23T06:42:00.000Z	bruenig	natural20	can you give me a link. Because those pages might not display for a variety of reasons. The fact that you have to be logged into or a member of them would not affect thier ability to be displayed
+2006-08-23T06:42:00.000Z	natural20	bruenig	http://games.groups.yahoo.com/group/epicduels/messages
+2006-08-23T06:43:00.000Z	bruenig	natural20	what is not displaying on that, The top part (I ask because there is a flash animation there) or the entire page just won't load?
+2006-08-23T06:45:00.000Z	natural20	bruenig	without fail i can get to that page, but once i start to navigate portions not available to the public, the page fails to load.

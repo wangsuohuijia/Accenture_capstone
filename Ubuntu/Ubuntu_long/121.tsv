@@ -1,0 +1,72 @@
+2005-05-10T16:34:00.000Z	cirkit_		when i try installing a metacity theme in gnome...i extract it to /usr/share/themes but its not in my theme details
+2005-05-10T16:35:00.000Z	cirkit_		no
+2005-05-10T16:36:00.000Z	cirkit_		apt-get libglib2.0-dev
+2005-05-10T16:36:00.000Z	cirkit_		E: Invalid operation libglib2.0-dev
+2005-05-10T16:36:00.000Z	thoreauputic	cirkit_	umm.. sudo apt-get install
+2005-05-10T16:38:00.000Z	thoreauputic	cirkit_	they do - you got something wrong
+2005-05-10T16:38:00.000Z	thoreauputic	cirkit_	try dragging the tarball on to your themes dialogue
+2005-05-10T16:39:00.000Z	thoreauputic	cirkit_	bring up the theme chage window and drag/drop onto it
+2005-05-10T05:27:00.000Z	thoreauputic	cirkit_	you don't need to uninstall if it's an upgrade
+2005-05-20T16:19:00.000Z	thoreauputic	cirkit_	easy way is to uninstall gdm
+2005-05-20T16:19:00.000Z	thoreauputic	cirkit_	?
+2005-05-20T16:19:00.000Z	thoreauputic	cirkit_	just uninstall gdm with synaptic or apt-get
+2005-05-20T16:20:00.000Z	thoreauputic	cirkit_	or run  ` sudo chmod -x /etc/init.d/gdm
+2005-05-20T16:28:00.000Z	thoreauputic	cirkit_	for example, run ` startx /usr/bin/fluxbox `
+2005-05-20T16:29:00.000Z	thoreauputic	cirkit_	you don't
+2005-05-20T16:29:00.000Z	thoreauputic	cirkit_	unless there's a package for xtart in the repos
+2005-05-20T16:30:00.000Z	thoreauputic	cirkit_	I just told you hoe you ccan run any window manager above
+2005-05-20T16:30:00.000Z	thoreauputic	cirkit_	just specify the one you want
+2005-05-20T16:31:00.000Z	thoreauputic	cirkit_	like this is easier:  startx `which gnome-session`  or startx $(gnome-session)
+2005-05-20T16:32:00.000Z	thoreauputic	cirkit_	startkde - but that syntax won't work - see above
+2005-05-20T16:32:00.000Z	thoreauputic	cirkit_	startx $(startkde)  should work
+2005-05-20T16:33:00.000Z	thoreauputic	cirkit_	was there a good reason for uninstalling gdm?
+2005-05-20T16:34:00.000Z	thoreauputic	cirkit_	I don't understand why you want a cli login when you don't know the commands you need
+2005-05-20T16:34:00.000Z	cirkit_	thoreauputic	so that I could use .xinitrc or startup file since gdm wont allow me too
+2005-05-20T16:34:00.000Z	thoreauputic	cirkit_	yes it will
+2005-05-20T16:34:00.000Z	thoreauputic	cirkit_	use ~/.xsession and choose the default option
+2005-05-20T16:35:00.000Z	thoreauputic	cirkit_	.xsession is the file to writ
+2005-05-20T16:35:00.000Z	thoreauputic	cirkit_	this is an example of asking the wrong question ...
+2005-05-20T16:39:00.000Z	cirkit_	thoreauputic	Im using gdm instead to make things easier....but for example the .xinitrc file I have does not startup apps
+2005-05-20T16:40:00.000Z	thoreauputic	cirkit_	don't use .xinitrc - use .xsession in debisn based distros for this
+2005-05-20T16:40:00.000Z	cirkit_	thoreauputic	can i see an example of your xsession please?
+2005-05-20T16:41:00.000Z	thoreauputic	cirkit_	and make sure you have an & after each app , and make the last line your window manager
+2005-05-20T16:41:00.000Z	thoreauputic	cirkit_	which apps do you want to start?
+2005-05-20T16:42:00.000Z	cirkit_	thoreauputic	xset m 5 & xchat
+2005-05-20T16:42:00.000Z	thoreauputic	cirkit_	post your .xsession in #flood
+2005-05-20T16:43:00.000Z	cirkit_	thoreauputic	how about pastebin??
+2005-05-20T16:43:00.000Z	thoreauputic	cirkit_	OK fine
+2005-05-20T16:43:00.000Z	cirkit_	thoreauputic	i dont have an .xsession
+2005-05-20T16:43:00.000Z	thoreauputic	cirkit_	*sigh* you need one
+2005-05-20T16:43:00.000Z	thoreauputic	cirkit_	you create the file
+2005-05-20T16:44:00.000Z	thoreauputic	cirkit_	or just do  cp .xinitrc .xsession
+2005-05-20T16:44:00.000Z	thoreauputic	cirkit_	yes you can
+2005-05-20T16:45:00.000Z	thoreauputic	cirkit_	they do roughly the same thing - I won't go into the details
+2005-05-20T16:46:00.000Z	cirkit_	thoreauputic	ok good i have copied the .xinitrc file over to ~/.xsession and renamed it to that
+2005-05-20T16:46:00.000Z	thoreauputic	cirkit_	when you log in with gdm just choose the default session in the sessions list
+2005-05-20T16:47:00.000Z	cirkit_	thoreauputic	i can leave that file with the way it is already set right?
+2005-05-20T16:47:00.000Z	thoreauputic	cirkit_	only if it does what you want
+2005-05-20T16:47:00.000Z	cirkit_	thoreauputic	but in that xsession file down at the bottom i have a line "exec /usr/X11R6/bin/startfluxbox"
+2005-05-20T16:48:00.000Z	thoreauputic	cirkit_	that isn't where startfluxbox lives in Ubuntu
+2005-05-20T16:48:00.000Z	thoreauputic	cirkit_	type  ` which startfluxbox ` to see the path
+2005-05-20T16:49:00.000Z	thoreauputic	cirkit_	or just use ` startfluxbox` (it should be inthe path)
+2005-05-20T16:49:00.000Z	cirkit_	thoreauputic	/usr/bin/startfluxbox
+2005-05-20T16:49:00.000Z	cirkit_	thoreauputic	do i need to add any other of the window managers paths in that xsession file or just the fluxbox one?
+2005-05-20T16:49:00.000Z	thoreauputic	cirkit_	sounds like you copied an .xinitrc from another distro
+2005-05-20T16:49:00.000Z	cirkit_	thoreauputic	i copied it from the slack box
+2005-05-20T16:50:00.000Z	thoreauputic	cirkit_	umm.... .xsession just starts one at a time
+2005-05-20T16:50:00.000Z	thoreauputic	cirkit_	slack does it differently
+2005-05-20T16:51:00.000Z	thoreauputic	cirkit_	I suggest you use the package manager to install things: it takes care of all this for you
+2005-05-20T16:51:00.000Z	thoreauputic	cirkit_	if you have gdm you just chooose the one you want
+2005-05-20T16:53:00.000Z	cirkit_	thoreauputic	can you paste your xsession file in pastebin please?
+2005-05-20T16:54:00.000Z	thoreauputic	cirkit_	I don't currently use .xsession, but I can probably find an example if you wait a minute
+2005-05-20T16:57:00.000Z	thoreauputic	cirkit_	just join #flood and I'll post a simple example for you
+2005-05-20T05:56:00.000Z	thoreauputic	cirkit_	it isn't ubuntu that's broken :)
+2005-05-20T05:57:00.000Z	thoreauputic	cirkit_	the problem is you didn't know to look for the -dev packages :)
+2005-05-20T05:58:00.000Z	thoreauputic	cirkit_	did you read what bob2  and I said?
+2005-05-20T05:59:00.000Z	cirkit_	thoreauputic	yes I read what you both said.
+2005-05-20T05:59:00.000Z	thoreauputic	cirkit_	OK :)
+2005-05-20T05:59:00.000Z	cirkit_	thoreauputic	I already have build essentials which I thought was weird getting a no GTK error
+2005-05-20T06:00:00.000Z	cirkit_	thoreauputic	would you happen to have a link of certain apt-get things we might need with ubuntu?
+2005-05-20T06:00:00.000Z	thoreauputic	cirkit_	99% of the time when you get a message compiling that something is missing, it means the *development* package
+2005-05-20T06:01:00.000Z	thoreauputic	cirkit_	when you need to find something in apt, try apt-cache search <keyword>
+2005-05-20T06:02:00.000Z	thoreauputic	cirkit_	you can't expect a stable distribution to update everything all the time

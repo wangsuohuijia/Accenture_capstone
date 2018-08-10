@@ -1,0 +1,74 @@
+2004-11-11T06:52:00.000Z	daniels		you will get full 3D acceleration (modulo S3TC, which you can patch in externally if you're adventurous) for all ATI cards up to 9200 (i.e. all r1xx/r2xx chipsets) with the free drivers
+2004-11-11T06:52:00.000Z	daniels		in terms of quality and ease of use, fglrx is crap, so you should steer clear of it unless you really, really need it.
+2004-11-11T06:53:00.000Z	daniels		even then, start from the point of view of 'i do not need this driver'.
+2004-11-11T06:53:00.000Z	daniels		every 2D card on the market is supported by the free drivers
+2004-11-11T06:54:00.000Z	ogra	daniels	is there a page for widescreen laptop configs, i had a weird support today
+2004-11-11T06:55:00.000Z	daniels	ogra	not really; what problem did you have?
+2004-11-11T06:57:00.000Z	daniels	ogra	'Unknown post id, it may have been deleted'; do you still have the details?
+2004-11-11T06:58:00.000Z	daniels	ogra	cheers, that'd be great -- daniel.stone@canonical.com
+2004-11-11T06:58:00.000Z	ogra	daniels	i know ;) (who doesnt *g*)
+2004-11-11T06:59:00.000Z	daniels	ogra	heh
+2004-11-11T07:03:00.000Z	ogra	daniels	mail sent ;)
+2004-11-11T07:03:00.000Z	daniels	ogra	thanks dude
+2004-11-11T07:05:00.000Z	daniels	ogra	if you could tell him to remove HorizSync/VertRefresh from his config file next time you see him, that would be great, thanks
+2004-11-12T12:09:00.000Z	ogra	daniels	should....you never know ;)
+2004-11-16T13:04:00.000Z	ogra	daniels	but you must admit that it would be better if the apps were actually programmed to use it 100% internally ;)
+2004-11-16T13:04:00.000Z	daniels	ogra	... what?
+2004-11-16T13:05:00.000Z	ogra	daniels	oh, i was talking about x.org.... *g*
+2004-11-16T13:05:00.000Z	ogra	daniels	thought you meant that....
+2004-11-16T13:06:00.000Z	ogra	daniels	while i was astonished bout '99 :)
+2004-11-24T11:23:00.000Z	ogra	daniels	he was looking for the client settings, they are in the xchat settings....
+2004-11-24T16:36:00.000Z	daniels	ogra	only if he enables and uses composite
+2004-11-24T16:37:00.000Z	ogra	daniels	is there _any_ card where xcompmgr isnt slow ?
+2004-11-24T16:38:00.000Z	daniels	ogra	not really
+2004-11-24T16:38:00.000Z	daniels	ogra	for two reasons -- one, the acceleration architecture wasn't designed for that sort of thing, so it needs reworking; two, the current xcompmgr code could do with some serious optimisation
+2004-11-24T16:40:00.000Z	ogra	daniels	it was very fast when i used it with kdrive last year at this time *g*
+2004-11-24T16:40:00.000Z	daniels	ogra	kdrive has a totally different acceleration architecture
+2004-11-24T16:40:00.000Z	daniels	ogra	one that was basically designed around composite :)
+2004-11-24T16:40:00.000Z	daniels	ogra	xaa, on the other hand, was designed pre-xfree86 4.0
+2004-11-24T16:40:00.000Z	ogra	daniels	i know, thus the *g*
+2004-11-29T14:12:00.000Z	daniels	ogra	sup
+2004-12-02T07:08:00.000Z	ogra	daniels	<---- X-Man
+2004-12-02T07:23:00.000Z	ogra	daniels	but quite a "faster" name
+2004-12-06T13:32:00.000Z	ogra	daniels	great !!
+2004-12-06T13:34:00.000Z	ogra	daniels	ppc ?
+2004-12-06T13:34:00.000Z	daniels	ogra	nope, it's just nvidia/ati/madwifi/acx100 binary drivers; nvidia is i386/amd64, the other three are i386-only
+2004-12-06T13:35:00.000Z	ogra	daniels	ah, ok....
+2004-12-06T13:35:00.000Z	daniels	ogra	l-r-m is just the binary modules, but if you want to test the open source nvidia/radeon drivers for powerpc, that'd be much apprecaited
+2004-12-06T13:35:00.000Z	ogra	daniels	i wil switch my card on the weekend in my hoary box for you :)
+2004-12-06T13:36:00.000Z	daniels	ogra	cool, thakns :)
+2004-12-06T14:19:00.000Z	daniels	ogra	close
+2004-12-07T07:07:00.000Z	ogra	daniels	i meant
+2004-12-09T06:28:00.000Z	ogra	daniels	trains your skills :)
+2004-12-15T14:19:00.000Z	ogra	daniels	because nowadays the answer on wlan probs seems to be ndiswrapper....last week i saw someone trying it with a orinoco silver....
+2004-12-15T14:20:00.000Z	ogra	daniels	weird eh ?
+2004-12-31T13:23:00.000Z	ogra	daniels	http://www.grawert.net/xss_shot_1.png
+2004-12-31T13:26:00.000Z	daniels	ogra	nice :)
+2004-12-31T13:26:00.000Z	daniels	ogra	what did you end up doing about the fonts?
+2004-12-31T13:27:00.000Z	ogra	daniels	i just ripped out all the X fonst drawing stuff and replaced it with the corresponding xft code
+2004-12-31T13:28:00.000Z	daniels	ogra	awesome, looks really good
+2004-12-31T13:28:00.000Z	ogra	daniels	quite easy if you once understood it *g* and i dont think i introduce any security probs this way
+2004-12-31T13:28:00.000Z	ogra	daniels	netx step : utf-8 support (i want dots, no stars *g* )
+2004-12-31T13:30:00.000Z	ogra	daniels	i am still impressed that nobody touched this ugly piece of crap since ages and all other solutions leave you insecure
+2004-12-31T13:31:00.000Z	daniels	ogra	oooer, utf-8 would be cool
+2004-12-31T13:32:00.000Z	ogra	daniels	what about fade to trans (easy made with the saved under pixmap fading in above the win me thinks)
+2004-12-31T13:33:00.000Z	daniels	ogra	i think it already fades in and out :)
+2004-12-31T13:33:00.000Z	ogra	daniels	nope .... this win just POPS UP in front of your eyes... like a baseball bat :)
+2004-12-31T13:34:00.000Z	daniels	ogra	oh right, for the password dialog
+2004-12-31T13:34:00.000Z	daniels	ogra	yeah, should be fairly easy
+2004-12-31T13:35:00.000Z	ogra	daniels	i will try it...learning xft basics took me one week.... lets see for utf8....
+2004-12-31T13:35:00.000Z	ogra	daniels	and X lib is really fun i found out....
+2004-12-31T13:37:00.000Z	ogra	daniels	so make lib-xorg a better piece of crap then :) i rely on you ;)
+2004-12-31T13:38:00.000Z	daniels	ogra	heh, can't change xlib, sadly
+2005-01-09T16:50:00.000Z	daniels	ogra	so, what's up?
+2005-01-09T16:50:00.000Z	ogra	daniels	upgraded my flowerpower imac yesterday xorg doesnt work but gdm starts fine with a black screen....any hints ? no errors so far....
+2005-01-09T16:51:00.000Z	ogra	daniels	i.e. i hear the drums....
+2005-01-09T16:51:00.000Z	daniels	ogra	(see #u-d)
+2005-01-09T16:51:00.000Z	ogra	daniels	yep
+2005-01-16T08:25:00.000Z	ogra	daniels	how about my little imac bug....if i understood you correctly its not fixed yet ?
+2005-01-16T08:26:00.000Z	daniels	ogra	not yet; it's, um, difficult to solve
+2005-01-16T08:26:00.000Z	ogra	daniels	keep in mid that this is a special edition...
+2005-01-16T08:26:00.000Z	daniels	ogra	yeah, it's typical apple breakage though
+2005-01-16T08:26:00.000Z	ogra	daniels	afaik the first imac that could do 1024x768.....
+2005-01-16T08:39:00.000Z	ogra	daniels	wget does this too....if there is already ubuntu25 it assingns a .1 to the second one if you download manually....
+2005-01-16T08:40:00.000Z	daniels	ogra	but yeah, there was a 25.1

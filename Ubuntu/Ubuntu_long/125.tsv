@@ -1,0 +1,36 @@
+2010-10-10T09:33:00.000Z	Furi		textboxes are no longer allowing input; how can i change the settings without input?
+2010-10-10T09:35:00.000Z	Furi		it's X dependant
+2010-10-10T09:35:00.000Z	Furi		is there a way to open a terminal window without a panel?
+2010-10-10T09:37:00.000Z	Furi		terminal doesn't accept input, either
+2010-10-10T09:39:00.000Z	Furi		is there a way to start a window manager without using the terminal, because nothing is taking keyboard input except for the fallback terminal?
+2010-10-10T09:40:00.000Z	Furi		an X-dependant window manager
+2010-10-10T09:40:00.000Z	coz_	Furi	 you can us  alt+F2  the run dialog  oh
+2010-10-10T09:40:00.000Z	coz_	Furi	 didnt keep up with your post
+2010-10-10T09:40:00.000Z	Furi	coz_	i said nothing is accepting keyboard input
+2010-10-10T09:46:00.000Z	Furi	coz_	just to make sure you read this, i'm going to say it again, because i really need the help: start up the computer, and kill compiz because it kept looping compiz --replace and killing itself because of a pixcreate and pixdestroy error
+2010-10-10T09:47:00.000Z	Furi	coz_	it was in reply to you asking what i did before the keyboard input stopped working
+2010-10-10T09:47:00.000Z	coz_	Furi	 ah ok
+2010-10-10T09:48:00.000Z	Furi	coz_	had to use fallback terminal, by the way, because the screen elements aside from the desktop background kept disappearing and reappearing repeatedly
+2010-10-10T09:49:00.000Z	coz_	Furi	 ooo  mm
+2010-10-10T09:58:00.000Z	Furi	coz_	i just want to revert to metacity
+2010-10-10T09:51:00.000Z	Furi	coz_	is there any way to fix this?
+2010-10-10T09:52:00.000Z	coz_	Furi	 not sure  ,.. I apologize for not having paid close enough attention to your posts  to get a clear image of what is happening.... doing testing and bug fingding so my attention was severely  thinned out
+2010-10-10T09:53:00.000Z	Furi	coz_	if you'd like some details, i'd gladly give you some. i really need the help.
+2010-10-10T09:53:00.000Z	coz_	Furi	 well I think the more details posted here the more some one can get a better idea of the issue  ...I cant gurantee that will be me but posting detials is important
+2010-10-10T09:58:00.000Z	coz_	Furi	 well emerald is a window decorator and compiz a window manager  what you want to use is either  gtk-window-decorator  if on gnome  or kde4-window-deorator if on kde
+2010-10-10T09:58:00.000Z	coz_	Furi	 compiz will not decorate the windows
+2010-10-10T09:58:00.000Z	Furi	coz_	i know
+2010-10-10T09:58:00.000Z	Furi	coz_	without keyboard input
+2010-10-10T09:58:00.000Z	coz_	Furi	 and no compiz?  metacity --replace & disown in terminal  or  alt+F2  metacity --replace
+2010-10-10T09:59:00.000Z	Furi	coz_	how can i do that without keyboard?
+2010-10-10T09:59:00.000Z	Furi	coz_	i can only use the fallback terminal
+2010-10-10T09:59:00.000Z	coz_	Furi	 oh !!!!
+2010-10-10T09:59:00.000Z	coz_	Furi	 mm
+2010-10-10T10:00:00.000Z	coz_	Furi	 not sure  ...how are you typing here?
+2010-10-10T10:00:00.000Z	coz_	Furi	 oh ok
+2010-10-10T10:01:00.000Z	coz_	Furi	 ok this one is a little odd... i cant off hand thing of any troubleshooting , if no one here can solve this right now you could try the ##linux channel as well
+2010-10-10T10:01:00.000Z	Furi	coz_	oh, after logging back in because of the screensaver locking it, the keyboard input is back
+2010-10-10T10:01:00.000Z	Furi	coz_	so i started metacity
+2010-10-10T10:01:00.000Z	coz_	Furi	 ah ha :)
+2010-10-10T10:01:00.000Z	Furi	coz_	i'm fine now; thanks for the help
+2010-10-10T10:02:00.000Z	coz_	Furi	 no  problem...sometimes  logging off and on or just rebooting can solve issues :)

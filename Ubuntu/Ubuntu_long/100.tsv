@@ -1,0 +1,61 @@
+2008-02-01T13:44:00.000Z	cwillu		<super> is the windows key right?
+2008-02-01T13:44:00.000Z	cwillu		I'm having difficulty getting any key bound to it
+2008-02-01T13:44:00.000Z	cwillu		I keep getting super+L, regardless of what key I press
+2008-02-01T13:44:00.000Z	cwillu		on three different machines :/
+2008-02-01T13:45:00.000Z	Carbonflux	cwillu	heh, I don't have a clue, something must be overriding later in the chain I guess
+2008-02-01T13:57:00.000Z	cwillu	Carbonflux	snorkel, Works fine, but the gconf setting for tab is case sensitive (despite what the description of the key says):  it must be "Tab"
+2008-02-01T14:10:00.000Z	cwillu	Carbonflux	he's trying to get more than 2 displays though
+2008-02-01T14:11:00.000Z	Carbonflux	cwillu	ya thats what I mean, seems like more then a few people want to do it
+2008-02-01T14:11:00.000Z	Carbonflux	cwillu	I know I have 2 on all my machines
+2008-02-01T14:12:00.000Z	Carbonflux	cwillu	heh, well I just don't have enough monitors, i do have one machine with a 6150 on the mb and a 8600 in a pci express slot, I did research it and found a lot of threads about 3+ monitor issues
+2008-02-01T14:29:00.000Z	Carbonflux	cwillu	so you don't think twinview is a good idea for a 3 monitor setup ?
+2008-02-01T14:29:00.000Z	cwillu	Carbonflux	twinview won't work for a three monitor iirc
+2008-02-01T14:29:00.000Z	Carbonflux	cwillu	thanks I was curious
+2008-02-01T14:29:00.000Z	cwillu	Carbonflux	it works by sharing the framebuffer of a single card
+2008-02-01T14:30:00.000Z	Carbonflux	cwillu	with two xscreens you only get accel on the main one ?
+2008-02-01T14:31:00.000Z	cwillu	Carbonflux	xinerama is generally unaccelerated
+2008-02-01T14:32:00.000Z	cwillu	Carbonflux	there's a couple libs that can multiplex opengl (aka, provide glx) across multiple heads (even across the network)
+2008-04-29T13:14:00.000Z	cwillu	Carbonflux	I'm looking at you :p
+2008-04-29T13:15:00.000Z	Carbonflux	cwillu	it looks bad when the ? mark it right up against the last char in some typefaces
+2008-04-29T13:16:00.000Z	Carbonflux	cwillu	not every uses the same font ;)
+2008-04-29T13:16:00.000Z	cwillu	Carbonflux	fix your typeface
+2008-04-29T13:16:00.000Z	Carbonflux	cwillu	fix your brain
+2008-04-29T13:16:00.000Z	Carbonflux	cwillu	thats a really sophomoric view, are you trolling or something ?
+2008-04-29T13:53:00.000Z	cwillu	Carbonflux	in what way, from nautilus?
+2008-04-29T13:54:00.000Z	Carbonflux	cwillu	well, when I installed sambafs last time it said it was depreciated and I should use something else.
+2008-04-29T13:55:00.000Z	cwillu	Carbonflux	afaik, samba is still supported;  smbfs is deprecated, but cifs is supported in the kernel.  From within gnome, smb:// url's have far better support than cifs or smbfs mounts however (and there's a gvfs plugin to allow non-gnome apps to directly use gnome stuff as a fuse mountpoint)
+2008-04-29T13:55:00.000Z	cwillu	Carbonflux	you're just referring to smbfs package?
+2008-04-29T13:56:00.000Z	Carbonflux	cwillu	is the smbfs require to use the smbmount command ? that is really my main issue.
+2008-04-29T13:56:00.000Z	cwillu	Carbonflux	yes, that's deprecated.  If at all possible, use cifs mounts instead (they're largely the same)
+2008-04-29T13:56:00.000Z	cwillu	Carbonflux	are you mainly running from command line?
+2008-04-29T13:57:00.000Z	Carbonflux	cwillu	so I should install samba and cifs but not smbfs right ? yes mostly from the command line not fstab
+2008-04-29T13:57:00.000Z	cwillu	Carbonflux	sorry, I meant vs a gnome session
+2008-04-29T13:58:00.000Z	Carbonflux	cwillu	I use gnome a lot yes, is there a way to do all of this thru gui ?
+2008-04-29T13:58:00.000Z	cwillu	Carbonflux	one sec, but yes :)
+2008-04-29T13:59:00.000Z	cwillu	Carbonflux	gvfs is the new replacement for gnome-vfs (big stability improvements, etc)
+2008-04-29T13:59:00.000Z	cwillu	Carbonflux	and as an added bonus, if you install gvfs-fuse, then you'll get a .gvfs folder in your home directory, which will have a folder for each gnome mount
+2008-04-29T14:00:00.000Z	cwillu	Carbonflux	you should be able to enter a url in nautilus as smb://<host>/<share>
+2008-04-29T14:00:00.000Z	Carbonflux	cwillu	just sudo apt-get install gvfs ?
+2008-04-29T14:01:00.000Z	cwillu	Carbonflux	you already have gvfs (for within nautilus and any other gnome app), so smb:// urls should work
+2008-04-29T14:01:00.000Z	Carbonflux	cwillu	ah you mean in the default install ? nice I will try it on a network share right now
+2008-04-29T14:01:00.000Z	cwillu	Carbonflux	if you need support for other apps (command line, non-gnome compliant apps), then you can install gvfs-fuse, which will let them access those mounts via /home/carbonflux/.gvfs/<share name>
+2008-04-29T14:02:00.000Z	cwillu	Carbonflux	if you've got other linux boxes, then sftp:// works too :)
+2008-04-29T14:02:00.000Z	cwillu	Carbonflux	well, sftp works if you have openssh-server installed o[n the target I should say
+2008-04-29T14:20:00.000Z	Carbonflux	cwillu	do I need samba to expose shares
+2008-04-29T14:21:00.000Z	cwillu	Carbonflux	I think so (if you open the 'shares' control panel, it should prompt to install the right packages)
+2008-04-29T14:22:00.000Z	Carbonflux	cwillu	I don't even see a shares panel in the admin menu
+2008-04-29T14:23:00.000Z	cwillu	Carbonflux	one sec
+2008-04-29T14:24:00.000Z	cwillu	Carbonflux	if you open nautilus and right click on a folder, do you see 'sharing options'?
+2008-04-29T14:24:00.000Z	Carbonflux	cwillu	yes I do
+2008-04-29T14:28:00.000Z	Carbonflux	cwillu	I don't see anyway to actually use cifs
+2008-04-29T14:28:00.000Z	Carbonflux	cwillu	other then as a protocol
+2008-04-29T14:28:00.000Z	cwillu	Carbonflux	that dialog should set up a samba share, I don't know whether it requires samba to be installed first though;  try setting up a guest share and see if you can connect via smb://localhost/share-name
+2008-04-29T14:30:00.000Z	cwillu	Carbonflux	cifs is mounted via the normal mount command
+2008-04-29T14:31:00.000Z	Carbonflux	cwillu	thanks :)
+2008-04-29T14:31:00.000Z	cwillu	Carbonflux	now, what font are you using?  I need to go yell at somebody :p
+2008-04-29T14:32:00.000Z	Carbonflux	cwillu	heh, default xchat font, heh I understand the "condition" that requires precision in language, lots of new brain research about it, so its not your fault :)
+2008-04-29T14:36:00.000Z	Carbonflux	cwillu	the brain can't handle the phase problems when decoding some words or structures, its different for different people, mostly "spelling nazi's" have this problem, its a form of autism in terms of the brain, I have never seen a? one before tho, its a natural defense to hide disability behind intelligence which I respect, I will try to watch the use of? because I know you can't control it.
+2008-04-29T14:37:00.000Z	cwillu	Carbonflux	who's trolling now?  :p
+2008-04-29T14:38:00.000Z	Carbonflux	cwillu	serious modern brain research, I did not want to say anything but you forced my hand, I am more then will to call it being "smart" which you clearly are, but in reality its a disability, we all have them in one form or another after all.
+2008-04-29T14:38:00.000Z	cwillu	Carbonflux	comes from staring at resumes written by those with a less than excellent command of the english language, despite having been born in canada
+2008-04-29T14:38:00.000Z	cwillu	Carbonflux	don't worry, I'm well aware of my autistic tendencies (might note that this conversation would be better suited for #ubuntu-offtopic though :p)

@@ -1,0 +1,56 @@
+2011-04-22T14:12:00.000Z	Rehan		if i have a terminal shortcut that loads a gui how can i make the terminal window close after starting up the gui rather than hanging around until I close the gui?
+2011-04-22T14:14:00.000Z	cybrhuman	Rehan	you mean to close the terminal emulator after launching the application?
+2011-04-22T14:15:00.000Z	Rehan	cybrhuman	yes i think so, i'm total noob though
+2011-04-22T14:16:00.000Z	cybrhuman	Rehan	"nohup <program name> & sleep 1 ; exit"
+2011-04-22T14:19:00.000Z	cybrhuman	Rehan	did it work?
+2011-04-22T14:20:00.000Z	Rehan	cybrhuman	yes it sure did
+2011-04-22T14:20:00.000Z	cybrhuman	Rehan	^^
+2011-04-22T14:21:00.000Z	Rehan	cybrhuman	now can i put that file somewhere where i can access it from anywhere?
+2011-04-22T14:21:00.000Z	cybrhuman	Rehan	what do you mean by anywhere? from any directory on your pc?
+2011-04-22T14:21:00.000Z	Rehan	cybrhuman	yes
+2011-04-22T14:22:00.000Z	cybrhuman	Rehan	are you familiar with the $PATH variable?
+2011-04-22T14:22:00.000Z	Rehan	cybrhuman	also will it create a nohup.out file every time or is that just once?
+2011-04-22T14:22:00.000Z	cybrhuman	Rehan	every time I think.
+2011-04-22T14:22:00.000Z	Rehan	cybrhuman	kind of, in windows, i mean i understand the basic concept
+2011-04-22T14:24:00.000Z	Rehan	cybrhuman	if i copy it to /usr/bin then i can access it from anywhere?
+2011-04-22T14:24:00.000Z	cybrhuman	Rehan	yes, bbut you shouldn't do taht
+2011-04-22T14:24:00.000Z	Rehan	cybrhuman	oh ok, sorry. What should I do instead?
+2011-04-22T14:25:00.000Z	cybrhuman	Rehan	you want to create a directory ~/.bin or ~/bin and move the file there and add that to your path
+2011-04-22T14:26:00.000Z	cybrhuman	Rehan	"nohup <program name> > /dev/null & sleep 1 ; exit" that removes the writing to nohup.out
+2011-04-22T14:26:00.000Z	Rehan	cybrhuman	wow you are awesome
+2011-04-22T14:26:00.000Z	cybrhuman	Rehan	I just need to remember which file is suited to add your path to
+2011-04-22T14:28:00.000Z	Rehan	cybrhuman	ok i created ~/.bin/ and moved the script you came up with to the directory
+2011-04-22T14:28:00.000Z	cybrhuman	Rehan	do you have a .profile file in you ~/
+2011-04-22T14:29:00.000Z	Rehan	cybrhuman	nope
+2011-04-22T14:29:00.000Z	cybrhuman	Rehan	nvm the last thing I said. it is already taken care of, yes log in and out :)
+2011-04-22T14:30:00.000Z	Rehan	cybrhuman	Dr_Willis: do i need to make sure its in ~/bin instead of ~/.bin or does it not matter?
+2011-04-22T14:31:00.000Z	cybrhuman	Rehan	when you log back in do "echo $PATH" and see which dir is there
+2011-04-22T14:31:00.000Z	cybrhuman	Rehan	nvm me, Dr_Willis got the answer :P
+2011-04-22T14:32:00.000Z	Rehan	cybrhuman	these are my current path output: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+2011-04-22T14:33:00.000Z	cybrhuman	Rehan	have you logged in and out?
+2011-04-22T14:33:00.000Z	Rehan	cybrhuman	not yet, i havent created ~/bin yet either tho
+2011-04-22T14:33:00.000Z	cybrhuman	Rehan	the $PATH is updated on login.
+2011-04-22T14:34:00.000Z	Rehan	cybrhuman	ok but should i create the directory first before logging out?
+2011-04-22T14:34:00.000Z	cybrhuman	Rehan	yes,
+2011-04-22T14:34:00.000Z	Rehan	cybrhuman	ok, gonna log out, brb
+2011-04-22T14:37:00.000Z	Rehan	cybrhuman	it worked, but in the terminal it says "nohup: redirecting stderr to stdout" for a while before it closes.
+2011-04-22T14:39:00.000Z	cybrhuman	Rehan	it shows up for 1 second I guess, since it sleeps for 1 second.
+2011-04-22T14:39:00.000Z	Rehan	cybrhuman	thats really cool how you just came up with a solution to my problem on the spot
+2011-04-22T14:40:00.000Z	Rehan	cybrhuman	just out of curiosity, if i was to put in something like echo off would it kill that message from showing?
+2011-04-22T14:40:00.000Z	cybrhuman	Rehan	you want to do an extra "2>&1" to remove it
+2011-04-22T14:42:00.000Z	Rehan	cybrhuman	where would i put the 2>&1 in that bit of code?
+2011-04-22T14:42:00.000Z	cybrhuman	Rehan	before the "&"
+2011-04-22T14:42:00.000Z	cybrhuman	Rehan	sec, need to check it
+2011-04-22T14:45:00.000Z	cybrhuman	Rehan	hmm, I can't get that trick to work.... strange
+2011-04-22T14:45:00.000Z	Rehan	cybrhuman	no worries, its already an awesome solution, i was just trying to learn more about it
+2011-04-22T14:46:00.000Z	cybrhuman	Rehan	"man nohup" can tell you what that command does :)
+2011-04-22T14:48:00.000Z	Rehan	cybrhuman	cool just read it. so if i keep letting it output to that nohup output file instead will that file just keep growing in length or will the # of files increase?
+2011-04-22T14:48:00.000Z	cybrhuman	Rehan	the file grows
+2011-04-22T14:49:00.000Z	Rehan	cybrhuman	oh ok
+2011-04-22T14:50:00.000Z	cybrhuman	Rehan	I just remembered something. if you got the executable in your $PATH you should be able to run it directly from the "run program" dialog window
+2011-04-22T14:51:00.000Z	Rehan	cybrhuman	yea i created a menu shortcut with basically the name of the executable in it
+2011-04-22T14:52:00.000Z	cybrhuman	Rehan	does it work? I don't actually know how to create menu items :P
+2011-04-22T14:52:00.000Z	Rehan	cybrhuman	yep it does. System -> Preferences -> Main Menu
+2011-04-22T14:53:00.000Z	cybrhuman	Rehan	interesting :D
+2011-04-22T14:53:00.000Z	Rehan	cybrhuman	can't believe i knew something you didn't lol
+2011-04-22T14:54:00.000Z	cybrhuman	Rehan	:P that's the way it works

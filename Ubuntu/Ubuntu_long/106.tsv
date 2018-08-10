@@ -1,0 +1,49 @@
+2009-07-16T19:49:00.000Z	mazda01		what does  afk mean?
+2009-07-16T19:49:00.000Z	grawity	mazda01	AFK = "Away from keyboard".
+2009-07-16T19:50:00.000Z	mazda01	grawity	ah. i see.
+2009-07-23T20:02:00.000Z	grawity	mazda01	find /path -name '*firefox*'
+2009-07-23T20:03:00.000Z	grawity	mazda01	yes, you need
+2009-07-23T20:05:00.000Z	grawity	mazda01	-exec rm -rf {} \;
+2009-07-23T20:12:00.000Z	grawity	mazda01	sessionstore.js
+2009-12-24T19:01:00.000Z	grawity	mazda01	The ssh client cannot know if the server requires a key.
+2009-12-24T19:01:00.000Z	mazda01	grawity	is there a work around?
+2009-12-24T19:01:00.000Z	grawity	mazda01	When you connect, the server sends a list of _allowed_ authentication methods - 'pubkey,password' for example - and the client tries pubkeys first.
+2009-12-24T19:01:00.000Z	grawity	mazda01	The best way would be to set up pubkeys :)
+2009-12-24T19:01:00.000Z	grawity	mazda01	The not so good one - edit ~/.ssh/config
+2009-12-24T19:02:00.000Z	grawity	mazda01	http://dpaste.com/hold/137388/
+2009-12-24T19:11:00.000Z	mazda01	grawity	is there a way once gedit is opened with gksudo, to show hidden files? it happens to me, then I remember, so I enter the filename within the gksudo gedit command all at once but I am still curious. like say, when I want to edit 2 files back to back with the gksudo privilages. i know I don't need root privilages this time but I am still curious
+2009-12-24T19:12:00.000Z	grawity	mazda01	Hidden files? In the "browse" window, Ctrl-H should work. If not, try right-clicking on the filelist, should be an option to show them.
+2009-12-24T19:12:00.000Z	mazda01	grawity	now, i don't have a file named config within my user's home dir .ssh. do i just create it?
+2009-12-24T19:13:00.000Z	grawity	mazda01	yes, just create it.
+2009-12-24T19:13:00.000Z	mazda01	grawity	ctrl-h was it. awesome, thanks. learning so much this christmas eve morning! :-)
+2009-12-24T19:15:00.000Z	mazda01	grawity	i knew that but I didn't realize you could envoke it within an "open file" dialog box is all
+2009-12-26T19:55:00.000Z	grawity	mazda01	Is '.conkylaunch' executable?
+2009-12-26T19:57:00.000Z	mazda01	grawity	yes.
+2009-12-26T19:59:00.000Z	mazda01	grawity	apparently you can;t run a script that runs more than 1 command from the run prompt.
+2009-12-26T19:59:00.000Z	grawity	mazda01	the 'run' prompt does not care at all; it just executes what it's told to.
+2009-12-26T20:00:00.000Z	grawity	mazda01	The rest is handled by the kernel.
+2009-12-26T20:00:00.000Z	grawity	mazda01	Btw, pastebin that script, or sometihng
+2009-12-26T20:00:00.000Z	mazda01	grawity	here it is: http://pastebin.com/f473a1ded
+2009-12-26T20:04:00.000Z	grawity	mazda01	And how exactly are you starting it when you use the terminal?
+2009-12-26T20:05:00.000Z	mazda01	grawity	sh .conkylaunch
+2009-12-26T20:05:00.000Z	grawity	mazda01	Try ./.conkylaunch
+2009-12-26T20:06:00.000Z	mazda01	grawity	from the run prompt?
+2009-12-26T20:06:00.000Z	grawity	mazda01	No, from the terminal.
+2009-12-26T20:06:00.000Z	mazda01	grawity	ok
+2009-12-26T20:07:00.000Z	mazda01	grawity	that works just liek sh .conkylaunch. BOTH my main conky as well as the conky calander start up just fine
+2009-12-26T20:11:00.000Z	mazda01	grawity	any thoughts. very weird. what does the run prompt run the .conkylaunch command with? Also, what's the difference from running bash script with the sh thing or without it because if I run sh .conkylaunch from termminal, it does what I want. if I run .conkylaunch  (without the sh), it doesn't do what I want.
+2009-12-26T20:12:00.000Z	mazda01	grawity	is it my terminal setting somewhere that tell it to run command with a certain interpretor or something liek that
+2009-12-26T20:13:00.000Z	grawity	mazda01	When you type "./.conkylaunch", the shell takes "./.conkylaunch" as the command, and tells Linux to start it. Its contents start with #!/bin/bash, so Linux runs 'bash' and tells to execute that script.
+2009-12-26T20:14:00.000Z	grawity	mazda01	When you type "sh .conkylaunch", the shell takes "sh" as the command, and Linux runs 'sh' -- which is _not_ the same as 'bash'.
+2009-12-26T20:15:00.000Z	mazda01	grawity	ok, i think sh stands for shell but which shell does it use to run the command?
+2009-12-26T20:16:00.000Z	mazda01	grawity	so you're saying that bash is not the default shell for running command otherwise .conkylaunch would work just like ./.conkylaunch right? im confussed why this isn't working
+2009-12-26T20:16:00.000Z	grawity	mazda01	'sh' doesn't just stand for any shell; it is the "Bourne Shell", a very basic one.
+2009-12-26T20:16:00.000Z	grawity	mazda01	'bash' is "Bourne Again Shell", a very improved one. You start 'bash' every time when you open a terminal.
+2009-12-26T20:19:00.000Z	grawity	mazda01	Yes. But when you type 'sh conkylaunch' that line is ignored
+2009-12-26T20:19:00.000Z	grawity	mazda01	So try changing to #!/bin/sh, maybe it'll start working.
+2009-12-26T20:19:00.000Z	mazda01	grawity	how come the command works when I run either "./" or "sh" before my command ".conkylaunch" but not when I run merely ".conkylaunch" by itself if the script tells it to use bash?
+2009-12-26T20:20:00.000Z	grawity	mazda01	ah, I thought you always use at least the ./ part?
+2009-12-26T20:20:00.000Z	mazda01	grawity	no
+2009-12-26T20:22:00.000Z	mazda01	grawity	 well, the bottom line is that i am going to want to add the bash script ".conkylaunch" to my startup list of programs that get run when I start the computer. so i am hoping that I can merely put ".conkylaunch" in that list and it will start botht the calander and the main conky.
+2009-12-26T20:22:00.000Z	grawity	mazda01	it's a different thing then... When you don't specify any path at all, just run "conkylaunch", Linux searches all directories in $PATH. And when you specify "./", Linux only checks . (current directory)...
+2009-12-26T20:36:00.000Z	mazda01	grawity	 ok, here is the weird part. i logged out. the command in the start apps screen is this  /home/daniel/.conkylaunch   and both conky's start but when I was entering that same command in a terminal window, the calander would NOT start. WEIRD!
