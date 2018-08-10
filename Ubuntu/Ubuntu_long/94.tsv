@@ -1,0 +1,49 @@
+2010-12-18T17:53:00.000Z	soreau	kubanc	Twinview is specific to the proprietary nvidia driver so no.
+2010-12-18T17:53:00.000Z	soreau	kubanc	Instead, the 1400 would use the open radeon driver which has much better support using xrandr 1.2 which the nvidia driver still does not support
+2010-12-18T17:54:00.000Z	kubanc	soreau	let's say enabling dual monitors, or enabling s-video... I know that twinview comes from nvidia, so i agree with you, that it won't work with ATI
+2010-12-18T17:55:00.000Z	soreau	kubanc	I use S-video and dual monitors with no problems
+2010-12-18T17:55:00.000Z	kubanc	soreau	what graphic card do you have?
+2010-12-18T17:57:00.000Z	soreau	kubanc	rv350 (Radeon 8600)
+2010-12-18T17:57:00.000Z	soreau	kubanc	rv350 (Radeon 9600)*
+2010-12-18T17:57:00.000Z	soreau	kubanc	The only thing is, S-video is currently hard coded to 800x600 though Im trying to change that
+2010-12-18T17:59:00.000Z	kubanc	soreau	it is working, if i wen't to system/monitors, but the only thing that i can enable is same image on LCD and TV
+2010-12-18T18:00:00.000Z	soreau	kubanc	Pastebin the output of xrandr
+2010-12-18T18:03:00.000Z	kubanc	soreau	xrandr for settings when i would like same image on monitor and LCD, or when i would like to extend my screen to TV?
+2010-12-18T18:03:00.000Z	soreau	kubanc	Pastebin the output of xrandr
+2010-12-18T18:04:00.000Z	kubanc	soreau	http://paste.ubuntu.com/545237/
+2010-12-18T18:05:00.000Z	soreau	kubanc	xrandr --output S-video --auto --right-of LVDS
+2010-12-18T18:06:00.000Z	kubanc	soreau	not working, and now the picture is jumping
+2010-12-18T18:06:00.000Z	soreau	kubanc	xrandr --output S-video --off
+2010-12-18T18:07:00.000Z	kubanc	soreau	still, my picture is jumping, should i restart X server?
+2010-12-18T18:08:00.000Z	soreau	kubanc	Try xrandr --output LVDS --mode 1280x1024; xrandr --output LVDS --mode 1680x1050
+2010-12-18T18:09:00.000Z	kubanc	soreau	still not working, i'll restart X server now...
+2010-12-18T18:13:00.000Z	kubanc	soreau	now it's working
+2010-12-18T18:13:00.000Z	soreau	kubanc	Cool
+2010-12-18T18:14:00.000Z	kubanc	soreau	afkors it's cool, now i'll try hard restart to see if the settings are permanent...
+2010-12-18T18:14:00.000Z	soreau	kubanc	To make the settings permanent, use sys>prefs>monitors applet
+2010-12-18T18:17:00.000Z	kubanc	soreau	the only thing that's bothering me is, that from time to time, picture get's flashy on TV
+2010-12-18T18:18:00.000Z	soreau	kubanc	Its always clear here. Are you using a good svideo cable?
+2010-12-18T18:18:00.000Z	kubanc	soreau	yes, on windows XP, this isn't happening...
+2010-12-18T18:19:00.000Z	soreau	kubanc	What does glxinfo|grep renderer say and which kernel are you using? (uname -r)
+2011-04-02T15:51:00.000Z	soreau	kubanc	No, that is what compiz widget layer is for
+2011-04-02T15:51:00.000Z	kubanc	soreau	compiz widget is in compiz setting manager?
+2011-04-02T15:52:00.000Z	soreau	kubanc	Its widget layer plugin in ccsm
+2011-04-02T15:54:00.000Z	kubanc	soreau	so i need to install Compiz Config Configuration Settings Manager ?
+2011-04-02T15:54:00.000Z	soreau	kubanc	yes
+2011-04-02T15:55:00.000Z	kubanc	soreau	i already have it, but i cannot find widget layer...
+2011-04-02T15:55:00.000Z	soreau	kubanc	install compiz-fusion-plugins-extra
+2011-04-02T15:56:00.000Z	soreau	kubanc	and run compiz --replace from Alt+F2 run dialog after its finished installing to restart compiz
+2011-04-02T15:58:00.000Z	kubanc	soreau	i'll restart gdm, so i'm sure...
+2011-04-02T16:02:00.000Z	kubanc	soreau	i have the widget layer, but my screenlets are still dissapearing
+2011-04-02T16:03:00.000Z	soreau	kubanc	You have to add screenlets to the widget layer and use the keybinding to invoke it. More help in #compiz
+2011-04-02T16:16:00.000Z	kubanc	soreau	i disabled hide skip taskbar windows in general options, and now screenelts won't hide
+2011-04-02T16:16:00.000Z	soreau	kubanc	#compiz
+2011-04-07T18:06:00.000Z	soreau	kubanc	lsusb
+2011-04-07T18:07:00.000Z	soreau	kubanc	What makes you think the driver isnt already installed and working?
+2011-04-07T18:08:00.000Z	kubanc	soreau	because i cannot see USB key in nautilus and also on virtual machine in Windows XP system...
+2011-04-07T18:09:00.000Z	soreau	kubanc	After plugging in the usb key, what does dmesg have to say about it?
+2011-04-07T18:09:00.000Z	kubanc	soreau	[43349.825135] usb 3-1: USB disconnect, address 4
+2011-04-07T18:10:00.000Z	soreau	kubanc	Does it tell you a node name such as /dev/sdc1 ?
+2011-04-07T18:10:00.000Z	kubanc	soreau	NO
+2011-04-07T18:16:00.000Z	kubanc	soreau	i'll try to install libccid package, which holds drivers for smart card readers...
+2011-04-07T18:17:00.000Z	soreau	kubanc	Is it a newer card reader?

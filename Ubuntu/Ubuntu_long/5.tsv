@@ -1,0 +1,176 @@
+2009-02-04T00:33:00.000Z	racecar56		hi
+2009-02-04T00:33:00.000Z	racecar56		i need to install ubuntu server on a server with no CD drive
+2009-02-04T00:33:00.000Z	racecar56		what do i do?
+2009-02-04T00:33:00.000Z	racecar56		it has USB
+2009-02-04T00:34:00.000Z	racecar56		i need to install ubuntu server on a server with no CD drive, what do i do? it has USB though
+2009-02-04T00:35:00.000Z	racecar56		lol
+2009-02-04T00:35:00.000Z	racecar56		i need to install ubuntu server on a server with no CD drive, what do i do? it has USB though
+2009-02-04T00:35:00.000Z	Slart	racecar56	you might be able to do it over a network too.. don't ask me how though as I've only heard of people doing it
+2009-02-04T00:56:00.000Z	Slart	racecar56	didn't you read the factoid ubottu sent you?
+2009-02-04T01:09:00.000Z	Slart	racecar56	don't paste here
+2009-02-04T01:10:00.000Z	Slart	racecar56	oh.. phew.. thought you were going to paste it all to the channel.. nevermind =)
+2009-02-04T01:24:00.000Z	Slart	racecar56	please.. keep the enter spam to a minimum
+2009-02-04T01:34:00.000Z	Slart	racecar56	lsmod might give you some info
+2009-05-18T01:36:00.000Z	racecar56	Slart	yay it supports XP ntfs :D (it is really old data from the days i used windows, 40G hard drive)
+2009-05-18T01:37:00.000Z	Slart	racecar56	yes it does.. and a whole bunch of other formats..
+2009-05-18T01:38:00.000Z	racecar56	Slart	intel/pc partition table means msdos, right?
+2009-05-18T01:39:00.000Z	racecar56	Slart	according to gparted the partition table was a msdos
+2009-05-18T01:39:00.000Z	Slart	racecar56	not sure.. it's a good guess though
+2009-05-18T01:39:00.000Z	racecar56	Slart	that is what i chose, im pretty shure thats it
+2009-05-18T01:39:00.000Z	racecar56	Slart	it didnt find the data yeat
+2009-05-18T01:39:00.000Z	racecar56	Slart	*yet
+2009-05-18T01:40:00.000Z	racecar56	Slart	73%
+2009-05-18T01:40:00.000Z	racecar56	Slart	it will need to get to 38165 at finish
+2009-05-18T01:41:00.000Z	Slart	racecar56	just let it run..
+2009-05-18T01:42:00.000Z	racecar56	Slart	my username was ubuntu_ because im on a live cd, as my main hdd is going nuts too
+2009-05-18T01:42:00.000Z	racecar56	Slart	still works, though, btw im using a laptop
+2009-05-18T01:46:00.000Z	racecar56	Slart	it didsnt find it D:
+2009-05-18T01:46:00.000Z	racecar56	Slart	*didnt
+2009-05-18T01:47:00.000Z	Slart	racecar56	hmm.. then I don't really know what to try..
+2009-05-18T01:47:00.000Z	Slart	racecar56	any special files you needed to retrieve off that partition?
+2009-05-18T01:47:00.000Z	racecar56	Slart	*didnt
+2009-05-18T01:48:00.000Z	racecar56	Slart	doing a deeper search now
+2009-05-18T02:02:00.000Z	racecar56	Slart	im seeing if ddrescue will help
+2009-05-18T02:02:00.000Z	Slart	racecar56	no luck with the deeper search?
+2009-05-18T02:03:00.000Z	racecar56	Slart	not yet
+2009-05-18T02:03:00.000Z	racecar56	Slart	86%
+2009-05-18T02:05:00.000Z	racecar56	Slart	95#
+2009-05-18T02:05:00.000Z	racecar56	Slart	95%
+2009-05-18T02:06:00.000Z	racecar56	Slart	nope
+2009-05-18T02:09:00.000Z	racecar56	Slart	hey..... its saying stuff about ntfs... O_O
+2009-05-18T02:09:00.000Z	racecar56	Slart	maybe there is hope! :D
+2009-05-18T02:09:00.000Z	Slart	racecar56	that's a good sign
+2009-05-18T02:23:00.000Z	racecar56	Slart	OMG it says ntfs!
+2009-05-18T02:23:00.000Z	racecar56	Slart	in fdisk
+2009-05-18T02:24:00.000Z	racecar56	Slart	ummm...................... it isnt my data i lost though
+2009-05-18T02:27:00.000Z	racecar56	Slart	hey, there is 2 ntfs's!
+2009-06-01T00:36:00.000Z	Slart	racecar56	just a rough number will do
+2009-06-01T00:26:00.000Z	Slart	racecar56	tried sudo apt-get remove rc.* ?
+2009-06-01T00:26:00.000Z	racecar56	Slart	no, trying now
+2009-06-01T00:26:00.000Z	Slart	racecar56	there is a switch to only simulate
+2009-06-01T00:26:00.000Z	Slart	racecar56	don't just run it !
+2009-06-01T00:27:00.000Z	racecar56	Slart	no that dosent work
+2009-06-01T00:27:00.000Z	Slart	racecar56	did you install the packages using apt?
+2009-06-01T00:28:00.000Z	racecar56	Slart	i did a purge of libgtk2.0-0 (no, im not crazy, i have a reason to do this) and it still leaving a ton of dependencies of it as 'rc' under dpkg -l
+2009-06-01T00:28:00.000Z	racecar56	Slart	im making my own distribution
+2009-06-01T00:29:00.000Z	Slart	racecar56	hmm.. those rc thingies.. are those packages? or something else?
+2009-06-01T00:29:00.000Z	racecar56	Slart	'rc' at the begining of dpkg -l
+2009-06-01T00:29:00.000Z	Slart	racecar56	hang on.. let me check
+2009-06-01T00:30:00.000Z	racecar56	Slart	e.g. "rc  package version description"
+2009-06-01T00:32:00.000Z	Slart	racecar56	can't really find any information on what "rc" means...
+2009-06-01T00:32:00.000Z	racecar56	Slart	if you want ill give you a line of what i see which i want to remove
+2009-06-01T00:33:00.000Z	racecar56	Slart	i think it means there are still conf files, which is weird as i did a purge (i used aptitiude purge libgtk2.0-0)
+2009-06-01T00:35:00.000Z	Slart	racecar56	true.. rc means there are residual configuration files.. I think when you do apt-get purge <package>.. it will only purge the package specified.. dependencies will be removed normally
+2009-06-01T00:35:00.000Z	Slart	racecar56	I guess aptitude works the same way
+2009-06-01T00:35:00.000Z	Slart	racecar56	how many packages do you have with the 'rc' status?
+2009-06-01T00:46:00.000Z	racecar56	Slart	i have no idea
+2009-06-01T00:46:00.000Z	racecar56	Slart	i guess i'll just say my estimate... a ton
+2009-06-01T00:46:00.000Z	racecar56	Slart	:P
+2009-06-01T00:46:00.000Z	Slart	racecar56	=)
+2009-06-01T00:50:00.000Z	Slart	racecar56	here's a oneline that will get you the names of the rc packages   dpkg -l | grep '^rc' | sed  's/^rc[ ]*\([^ ]*\).*/\1/'
+2009-06-01T00:51:00.000Z	Slart	racecar56	perhaps you can feed that to sudo apt-get purge
+2009-06-01T01:01:00.000Z	racecar56	Slart	sed: option requires an argument -- 'l'
+2009-06-01T01:01:00.000Z	Slart	racecar56	huh? it worked on my computer ... dpkg -l | grep '^rc' | sed  's/^rc[ ]*\([^ ]*\).*/\1/'
+2009-06-01T01:02:00.000Z	racecar56	Slart	for some reason that worked
+2009-06-01T01:02:00.000Z	racecar56	Slart	actually not
+2009-06-01T01:02:00.000Z	racecar56	Slart	it only prints what has rc in front
+2009-06-01T01:03:00.000Z	racecar56	Slart	and YES i passed it to apt-get
+2009-06-01T01:03:00.000Z	racecar56	Slart	apt-get purge | dpkg -l | grep '^rc' | sed  's/^rc[ ]*\([^ ]*\).*/\1/'
+2009-06-01T01:03:00.000Z	Slart	racecar56	wrong way around..
+2009-06-01T01:03:00.000Z	Slart	racecar56	put apt-get purge on the end
+2009-06-01T01:04:00.000Z	racecar56	Slart	oh i tried it with apt-get purge $(blah) and it got better
+2009-06-01T01:05:00.000Z	racecar56	Slart	problem solved
+2009-06-01T01:05:00.000Z	Slart	racecar56	nice.. no rc packages left?
+2009-06-01T01:05:00.000Z	racecar56	Slart	sudo aptitude purge $(dpkg -l | awk '/^rc/{print $2}')
+2009-06-01T01:06:00.000Z	racecar56	Slart	its removing them now
+2009-06-01T01:06:00.000Z	racecar56	Slart	i have an old comp
+2009-06-01T01:06:00.000Z	racecar56	Slart	compaq presario sr1020nx
+2009-06-01T01:06:00.000Z	racecar56	Slart	this thing is a peice of history, i remember it like it was yesterday
+2009-06-01T01:06:00.000Z	Slart	racecar56	oh.. the museum didn't want it ?  ;)
+2009-06-01T01:06:00.000Z	racecar56	Slart	heh
+2009-06-01T01:06:00.000Z	racecar56	Slart	it's probably from 2005
+2009-06-01T01:07:00.000Z	Slart	racecar56	wow.. I was guessing more like.. 1998 or so
+2009-06-01T01:07:00.000Z	racecar56	Slart	in *PROBABLY* january 2008 they broke, i fixed them
+2009-06-01T01:07:00.000Z	racecar56	Slart	false
+2009-06-01T01:07:00.000Z	racecar56	Slart	oh
+2009-06-01T01:07:00.000Z	racecar56	Slart	saw u message wrong
+2009-06-01T01:07:00.000Z	racecar56	Slart	it's got a floppy drive :P
+2009-06-01T01:08:00.000Z	Slart	racecar56	2005 is almost modern..
+2009-06-01T01:08:00.000Z	racecar56	Slart	btw i never used comps until ~2003
+2009-06-01T01:08:00.000Z	racecar56	Slart	umm....... it dosent have a 3D card, it has 2 cd drives, it has an intel celeron socket 478, ubuntu 8.10 dosen't work on it (9.04 does)
+2009-06-01T01:09:00.000Z	racecar56	Slart	anyways i don't think that was the manufacturing year
+2009-06-01T01:09:00.000Z	racecar56	Slart	~2004 sounds about right
+2009-06-01T01:09:00.000Z	Slart	racecar56	oh.. they improved hardware compatibility in 9.04.. good job canonical
+2009-06-01T01:09:00.000Z	racecar56	Slart	i have a similar one which however worked better (compaq presario sr1010z #pu166av)
+2009-06-01T01:10:00.000Z	racecar56	Slart	yeps and im glad they wore off the 'new-releases-need-new-stuff' syndrome
+2009-06-01T01:10:00.000Z	racecar56	Slart	btw this 1020 im on now is the oldest comp in the house
+2009-06-01T01:11:00.000Z	racecar56	Slart	odd fact: it has the fastest clock speed in the hosue
+2009-06-01T01:11:00.000Z	racecar56	Slart	*house
+2009-06-01T01:11:00.000Z	Slart	racecar56	clockspeed and size.. neither matter =)
+2009-06-01T01:11:00.000Z	racecar56	Slart	2.80 ghz
+2009-06-01T01:12:00.000Z	racecar56	Slart	vid card is the worst nightmare
+2009-06-01T01:12:00.000Z	racecar56	Slart	intel 82845g
+2009-06-01T01:12:00.000Z	racecar56	Slart	horrible thing, it's like VGA all over again
+2009-06-01T01:12:00.000Z	racecar56	Slart	it can do a teeny bit of 3D things from 1998 but 1999+ don't work
+2009-06-01T01:13:00.000Z	Slart	racecar56	=)
+2009-06-01T01:13:00.000Z	racecar56	Slart	and i have a laptop that is so bad a pentium 3 could work better
+2009-06-01T01:13:00.000Z	racecar56	Slart	:P
+2009-06-01T01:14:00.000Z	racecar56	Slart	when that laptop gets fixed, pigs will fly
+2009-06-01T01:17:00.000Z	racecar56	Slart	my laptop will run better when pigs fly
+2009-06-17T21:52:00.000Z	Slart	racecar56	are we talking about firefox?
+2009-06-17T21:52:00.000Z	racecar56	Slart	i guess, but it isn't 100% firefox
+2009-06-17T21:52:00.000Z	Slart	racecar56	it might be a hung process.. try running pkill firefox in a terminal.. or pkill -9 firefox.. then try again
+2009-06-17T21:53:00.000Z	racecar56	Slart	didnt work
+2009-06-17T21:53:00.000Z	racecar56	Slart	tried with -9 and not
+2009-06-17T21:53:00.000Z	Slart	racecar56	are there any firefox processes running?
+2009-06-17T21:53:00.000Z	racecar56	Slart	no
+2009-06-17T21:53:00.000Z	Slart	racecar56	hmm.. but firefox still thinks there are?
+2009-06-17T21:53:00.000Z	racecar56	Slart	yup
+2009-06-17T21:53:00.000Z	racecar56	Slart	this is a old computer
+2009-06-17T21:54:00.000Z	Slart	racecar56	that's no excuse.. don't encourage it when it does bad things =)
+2009-06-17T21:54:00.000Z	racecar56	Slart	"firefox: no process killed"
+2009-06-17T21:54:00.000Z	Slart	racecar56	"ps aux | grep -i firefox" ?
+2009-06-17T21:55:00.000Z	racecar56	Slart	1000     32408  0.0  0.0   7524   968 pts/0    S+   11:54   0:00 grep -i firefox
+2009-06-17T21:55:00.000Z	Slart	racecar56	hmm.. I wonder why firefox is being stubborn.. is this an updated jaunty?
+2009-06-17T21:55:00.000Z	racecar56	Slart	no, pure
+2009-06-17T21:55:00.000Z	racecar56	Slart	installed from today
+2009-06-17T21:55:00.000Z	racecar56	Slart	off of a unetbootin usb stick
+2009-06-17T21:56:00.000Z	Slart	racecar56	is there an npviewer.bin process?
+2009-06-17T21:57:00.000Z	racecar56	Slart	no
+2009-06-17T21:58:00.000Z	Slart	racecar56	you could try "firefox -no-remote" too.. I think that will ignore running instances
+2009-06-17T21:58:00.000Z	racecar56	Slart	k
+2009-06-17T21:59:00.000Z	racecar56	Slart	what the heck it still dosent work
+2009-06-17T21:59:00.000Z	racecar56	Slart	going to log out and in
+2009-06-17T22:00:00.000Z	racecar56	Slart	faaaaaaaaaaaaaaaaaaaaaaaaail
+2009-06-17T22:00:00.000Z	Slart	racecar56	can't log out?
+2009-06-17T22:00:00.000Z	racecar56	Slart	no
+2009-06-17T22:00:00.000Z	racecar56	Slart	i was able to
+2009-06-17T22:00:00.000Z	racecar56	Slart	firefox STILL dosent work
+2009-06-17T22:01:00.000Z	Slart	racecar56	your computer is possessed... the only explanation I can think of
+2009-06-17T22:02:00.000Z	racecar56	Slart	:< maybe abrowser is just a dialog box that says that stuff
+2009-06-17T22:03:00.000Z	racecar56	Slart	my computer IS possessed
+2009-06-17T22:03:00.000Z	Slart	racecar56	can you pastebin the output from "ps aux" ? not sure if there might be some sensitive information or not in there though
+2009-06-17T22:03:00.000Z	racecar56	Slart	yay for pastebinit
+2009-06-17T22:04:00.000Z	Slart	racecar56	=)
+2009-06-17T22:05:00.000Z	racecar56	Slart	http://racecar56.pastebin.com/f74c4c539
+2009-06-17T22:07:00.000Z	Slart	racecar56	hmm.. I can't find anything strange in that output.. sorry
+2009-06-17T22:08:00.000Z	racecar56	Slart	reinstall AGAIN?
+2009-06-17T22:12:00.000Z	racecar56	Slart	i guess i should reinstall for the 100th time
+2009-06-17T22:12:00.000Z	racecar56	Slart	noone knows how many reinstalls of ubuntu i make a month
+2009-06-17T22:13:00.000Z	racecar56	Slart	my guess: A LOT
+2009-06-17T22:13:00.000Z	racecar56	Slart	:P
+2009-06-17T22:16:00.000Z	Slart	racecar56	annoying to reinstall without knowing what the problem was...
+2009-06-17T23:41:00.000Z	racecar56	Slart	the abrowser/firefox issue is solved
+2009-06-17T23:42:00.000Z	Slart	racecar56	ah... what was the solution?
+2009-06-17T23:42:00.000Z	racecar56	Slart	reinstall :P
+2009-06-17T23:42:00.000Z	Slart	racecar56	bah... =)
+2009-06-17T23:42:00.000Z	racecar56	Slart	my comp was temporarily possessed :P
+2009-06-21T19:06:00.000Z	Slart	racecar56	I don't quite understand.. a power button isn't supposed to turn the computer off?
+2009-06-21T19:07:00.000Z	Slart	racecar56	or you want it to do a controlled shutdown?
+2009-06-21T19:07:00.000Z	racecar56	Slart	you know if you press the power button a menu thingy popped up
+2009-06-21T19:07:00.000Z	racecar56	Slart	but it dosen't happen on ther
+2009-06-21T19:07:00.000Z	racecar56	Slart	it just boom off like i unplug it
+2009-06-21T19:08:00.000Z	racecar56	Slart	what, is acpi unsupported on that type?
+2009-06-21T19:08:00.000Z	Slart	racecar56	I thought that was done in the BIOS.. I don't really feel like trying it on my desktop right now and I don't think I've actually had to use my power button for a very long time
+2009-06-21T19:08:00.000Z	Slart	racecar56	might be an acpi thing.. did you install using noacpi?
+2009-06-21T19:09:00.000Z	racecar56	Slart	i don't know i had a fresh install of 9.04 and anyway 8.10 dosen't work (it IS an ancient computer)

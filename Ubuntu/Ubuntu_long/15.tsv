@@ -1,0 +1,140 @@
+2006-05-22T16:25:00.000Z	Kyoske		hey guys i gots a question
+2006-05-22T16:25:00.000Z	Kyoske		where can i find a system rescue cd download
+2006-05-22T16:26:00.000Z	amphi	Kyoske	sysresccd.org is a nice one IMHO
+2006-05-22T05:45:00.000Z	amphi	Kyoske	WAYTTD?
+2006-05-22T05:48:00.000Z	amphi	Kyoske	what are you trying to do?
+2006-05-22T05:49:00.000Z	Kyoske	amphi	im trying to install ubuntu
+2006-05-22T05:51:00.000Z	amphi	Kyoske	I don't recall ;)
+2006-05-22T05:55:00.000Z	amphi	Kyoske	you booted in rescue mode to install? can you be more clear?
+2006-05-22T05:57:00.000Z	amphi	Kyoske	you are trying to install the boot loader, grub?
+2006-05-22T05:58:00.000Z	amphi	Kyoske	ok, what is your problem, exactly?
+2006-05-22T05:59:00.000Z	amphi	Kyoske	and...
+2006-05-22T05:59:00.000Z	amphi	Kyoske	is ubuntu all that's on this machine?
+2006-05-22T06:00:00.000Z	amphi	Kyoske	and you now can't boot windows either?
+2006-05-22T06:01:00.000Z	amphi	Kyoske	won't do any harm
+2006-05-22T06:01:00.000Z	amphi	Kyoske	it may well not work
+2006-05-22T06:01:00.000Z	amphi	Kyoske	do you remember where you installed the ubuntu bootloader?
+2006-05-22T06:04:00.000Z	amphi	Kyoske	don't worry, there are things to try ;)
+2006-05-22T06:04:00.000Z	Kyoske	amphi	what do i do ><
+2006-05-22T06:04:00.000Z	amphi	Kyoske	can you boot off the cd and get to a shell (text prompt)
+2006-05-22T06:06:00.000Z	Kyoske	amphi	so i can get to a shell
+2006-05-22T06:06:00.000Z	amphi	Kyoske	rejoice! ;)
+2006-05-22T06:06:00.000Z	amphi	Kyoske	type whoami and tell me what it says
+2006-05-22T06:07:00.000Z	amphi	Kyoske	just hit enter and hope for the best ;)
+2006-05-22T06:08:00.000Z	amphi	Kyoske	you're not in a shell yet
+2006-05-22T06:09:00.000Z	amphi	Kyoske	do you get a shell when you do alt-f2?
+2006-05-22T06:15:00.000Z	amphi	Kyoske	you need to reinstall the bootloader
+2006-05-22T06:15:00.000Z	amphi	Kyoske	do what wims said, type rescue at the boot: prompt
+2006-05-22T06:16:00.000Z	amphi	Kyoske	no, your stuff should all be still there
+2006-05-22T06:17:00.000Z	amphi	Kyoske	when you boot off a cd, you get a little prompt 'boot:', right?
+2006-05-22T06:17:00.000Z	amphi	Kyoske	so, when you get that, try typing rescue and hit enter
+2006-05-22T06:18:00.000Z	amphi	Kyoske	what does echo #SHELL say?
+2006-05-22T06:18:00.000Z	amphi	Kyoske	sorry, echo $SHELL
+2006-05-22T06:19:00.000Z	amphi	Kyoske	cool
+2006-05-22T06:19:00.000Z	amphi	Kyoske	you really are in a shell now ;)
+2006-05-22T06:19:00.000Z	amphi	Kyoske	what partition did you install ubuntu on?
+2006-05-22T06:19:00.000Z	amphi	Kyoske	?
+2006-05-22T06:20:00.000Z	amphi	Kyoske	how many harddisks do you have?
+2006-05-22T06:20:00.000Z	amphi	Kyoske	ok; do fdisk -l /dev/hda and pastebin it
+2006-05-22T06:21:00.000Z	amphi	Kyoske	no
+2006-05-22T06:23:00.000Z	amphi	Kyoske	do 'mkdir mnt' without quotes
+2006-05-22T06:24:00.000Z	amphi	Kyoske	it should be a lowercase L
+2006-05-22T06:24:00.000Z	amphi	Kyoske	not 1
+2006-05-22T06:25:00.000Z	amphi	Kyoske	you'll probably see three partitions, one windows, one linux, and one linux swap - what is the linux one called? hda?
+2006-05-22T06:25:00.000Z	amphi	Kyoske	the windows one should hda1
+2006-05-22T06:26:00.000Z	amphi	Kyoske	which is the linux one?
+2006-05-22T06:27:00.000Z	amphi	Kyoske	what is hda3 then?
+2006-05-22T06:27:00.000Z	amphi	Kyoske	ok - did you do 'mkdir mnt'? if not, do it
+2006-05-22T06:28:00.000Z	amphi	Kyoske	done?
+2006-05-22T06:28:00.000Z	amphi	Kyoske	so cd mnt
+2006-05-22T06:29:00.000Z	amphi	Kyoske	type 'cd mnt' without quotes, and hit enter
+2006-05-22T06:29:00.000Z	amphi	Kyoske	we're nearly there ;)
+2006-05-22T06:29:00.000Z	amphi	Kyoske	what does pwd say?
+2006-05-22T06:30:00.000Z	amphi	Kyoske	yup, just making sure you're were I think you are ;)
+2006-05-22T06:31:00.000Z	amphi	Kyoske	now's the fun bit :) type 'chroot . /bin/bash' without quotes and hit enter
+2006-05-22T06:32:00.000Z	amphi	Kyoske	exactly as I typed it
+2006-05-22T06:33:00.000Z	amphi	Kyoske	it will change the root of your filesystem to the root of your ubuntu install, and run the shell (I hope)
+2006-05-22T06:33:00.000Z	amphi	Kyoske	pfft; try just 'chroot .'
+2006-05-22T06:35:00.000Z	amphi	Kyoske	what do you get if you type chroot alone?
+2006-05-22T06:35:00.000Z	amphi	Kyoske	the universe is a consoiracy to annoy you
+2006-05-22T06:35:00.000Z	amphi	Kyoske	please do ;)
+2006-05-22T06:36:00.000Z	amphi	Kyoske	just the error message
+2006-05-22T06:37:00.000Z	amphi	Kyoske	and what happens if you do 'chroot .' ?
+2006-05-22T06:38:00.000Z	amphi	Kyoske	try 'cd ..' and then 'chroot mnt'
+2006-05-22T06:39:00.000Z	amphi	Kyoske	yup
+2006-05-22T06:39:00.000Z	amphi	Kyoske	cd .. [enter]  then chroot mnt [enter] 
+2006-05-22T06:40:00.000Z	amphi	Kyoske	that's the exact error?
+2006-05-22T06:40:00.000Z	amphi	Kyoske	what was the _exact_ error message?
+2006-05-22T06:41:00.000Z	Kyoske	amphi	it says
+2006-05-22T06:41:00.000Z	amphi	Kyoske	just the message, no preamble ;)
+2006-05-22T06:42:00.000Z	amphi	Kyoske	ok; now try 'chroot mnt /bin/bash' and press enter
+2006-05-22T06:43:00.000Z	amphi	Kyoske	what indeed?
+2006-05-22T06:44:00.000Z	amphi	Kyoske	does mount show /dev/hda2 mounted on /mnt? just type 'mount' and hit enter
+2006-05-22T06:45:00.000Z	amphi	Kyoske	please use nicks so we know what/who you're answering
+2006-05-22T06:45:00.000Z	Kyoske	amphi	ok
+2006-05-22T06:46:00.000Z	amphi	Kyoske	does mount show /dev/hda2 mounted?
+2006-05-22T06:46:00.000Z	amphi	Kyoske	type 'mount' and press enter, I beseech you ;)
+2006-05-22T06:46:00.000Z	Kyoske	amphi	it said nothing about /dev/hda2
+2006-05-22T06:47:00.000Z	amphi	Kyoske	ok, do 'mount /dev/hda2 mnt'
+2006-05-22T06:47:00.000Z	Kyoske	amphi	kbrooks has a / on the mnt
+2006-05-22T06:47:00.000Z	amphi	Kyoske	and then try 'chroot mnt /bin/bash' again
+2006-05-22T06:48:00.000Z	Kyoske	amphi	hold the phone here
+2006-05-22T06:49:00.000Z	Kyoske	amphi	i did your way without the "/" and nothing happened, then i did kbrooks way, and some text popped up
+2006-05-22T06:49:00.000Z	amphi	Kyoske	if things work, they say nothing
+2006-05-22T06:50:00.000Z	Kyoske	amphi	nothing is working well
+2006-05-22T06:50:00.000Z	amphi	Kyoske	now 'ls mnt' should show you files and directories
+2006-05-22T06:50:00.000Z	Kyoske	amphi	should i add some "/"?
+2006-05-22T06:51:00.000Z	Kyoske	amphi	text appeared
+2006-05-22T06:52:00.000Z	Kyoske	amphi	what is to be done now?
+2006-05-22T06:53:00.000Z	Kyoske	amphi	hello =\
+2006-05-22T06:55:00.000Z	Kyoske	amphi	it working
+2006-05-22T06:56:00.000Z	amphi	Kyoske	now to install the bootloader; try 'grub-install /dev/hda'
+2006-05-22T06:56:00.000Z	Kyoske	amphi	i will try that!!
+2006-05-22T06:57:00.000Z	Kyoske	amphi	 0.0
+2006-05-22T06:57:00.000Z	Kyoske	amphi	 Q.Q
+2006-05-22T06:57:00.000Z	amphi	Kyoske	parser failure
+2006-05-22T06:57:00.000Z	Kyoske	amphi	 it doesnt recocgnize grub-install
+2006-05-22T06:58:00.000Z	Kyoske	amphi	 it didnt work, was there a typo or somthing?
+2006-05-22T07:00:00.000Z	amphi	Kyoske	try '/sbin/grub-install /dev/hda' perhaps
+2006-05-22T07:01:00.000Z	Kyoske	amphi	no its not working
+2006-05-22T07:04:00.000Z	Kyoske	amphi	ok
+2006-05-22T07:04:00.000Z	Kyoske	amphi	do i try to do /sbin/grub-install again?
+2006-05-22T07:05:00.000Z	amphi	Kyoske	what happened the last time you tried it?
+2006-05-22T07:05:00.000Z	Kyoske	amphi	and there is still no directory
+2006-05-22T07:06:00.000Z	amphi	Kyoske	your situation is somewhat opaque - did the original install finish ok?
+2006-05-22T07:06:00.000Z	Kyoske	amphi	i dont know (crys)
+2006-05-22T07:07:00.000Z	Kyoske	amphi	=(
+2006-05-22T07:07:00.000Z	Kyoske	amphi	i feel like im lost from my computer now...
+2006-05-22T07:07:00.000Z	amphi	Kyoske	if you do 'ls /'do you see sbin?
+2006-05-22T07:07:00.000Z	Kyoske	amphi	yes yes i do
+2006-05-22T07:08:00.000Z	Kyoske	amphi	i see sbin
+2006-05-22T07:08:00.000Z	amphi	Kyoske	and 'ls /sbin/grub-install' gives what?
+2006-05-22T07:09:00.000Z	Kyoske	amphi	it dent do anyhting
+2006-05-22T07:10:00.000Z	amphi	Kyoske	what do you mean it showed nothing? it must have given an error, or output 'grub-install'
+2006-05-22T07:10:00.000Z	Kyoske	amphi	well yes thats what i mean
+2006-05-22T07:10:00.000Z	amphi	Kyoske	arrgggg
+2006-05-22T07:11:00.000Z	amphi	Kyoske	so do '/sbin/grub-install /dev/hda'
+2006-05-22T07:11:00.000Z	amphi	Kyoske	or do it richiefrich's way, the result is the same
+2006-05-22T07:13:00.000Z	amphi	Kyoske	try /sbin/grub
+2006-05-22T07:15:00.000Z	Kyoske	amphi	im not in resue
+2006-05-22T07:25:00.000Z	amphi	Kyoske	did you try '/sbin/grub-install /dev/hda' ?
+2006-05-22T07:26:00.000Z	Kyoske	amphi	yes
+2006-05-22T07:26:00.000Z	Kyoske	amphi	it did not work one bit
+2006-05-22T07:27:00.000Z	amphi	Kyoske	that is not a useful error report
+2006-05-22T07:27:00.000Z	Kyoske	amphi	let me get it for u
+2006-05-22T07:29:00.000Z	Kyoske	amphi	bash: /sbin/grub-install: no sourse or directory found
+2006-05-22T07:30:00.000Z	Kyoske	amphi	bash: /sbin/grub-install: no such file or directory
+2006-05-22T07:30:00.000Z	amphi	Kyoske	ah... does 'ls /boot/grub' show various files with 'stage' in their names?
+2006-05-22T07:30:00.000Z	amphi	Kyoske	bah, just read your corrected message
+2006-05-22T07:31:00.000Z	amphi	Kyoske	same with /sbin/grub ?
+2006-05-22T07:32:00.000Z	Kyoske	amphi	nothing is working
+2006-05-22T07:41:00.000Z	amphi	Kyoske	are you at a loss?
+2006-05-22T08:30:00.000Z	amphi	Kyoske	you might be better off just to reinstall ubuntu altogether
+2006-05-22T08:30:00.000Z	Kyoske	amphi	how do i do that!?!
+2006-05-22T09:26:00.000Z	amphi	Kyoske	oh joy! o frabjous day! ;)
+2006-05-22T09:28:00.000Z	amphi	Kyoske	so you now have both windows and ubuntu working?
+2006-05-22T09:29:00.000Z	amphi	Kyoske	should be ok
+2006-05-22T09:32:00.000Z	amphi	Kyoske	bu o/~ singing o/~ ;)
+2006-05-22T09:33:00.000Z	Kyoske	amphi	how?
+2006-05-22T09:40:00.000Z	amphi	Kyoske	some problem with capslock? ;)
+2006-05-22T09:41:00.000Z	amphi	Kyoske	congratulations

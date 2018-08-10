@@ -1,0 +1,87 @@
+2005-09-25T05:40:00.000Z	dooglus		running 'lilo' in breezy gives me a warning.  is it important?  :
+2005-09-25T05:40:00.000Z	dooglus		Warning: '/proc/partitions' does not match '/dev' directory structure.
+2005-09-25T05:40:00.000Z	dooglus		    Name change: '/dev/dm-0' -> '/dev/evms/hda1'
+2005-09-25T05:41:00.000Z	cafuego_	dooglus	As long as it doesn't actually fail, but only prints a warning, you're fine.
+2005-09-25T05:41:00.000Z	dooglus	cafuego_	well, I won't know until I reboot - and then it'll be too late I guess.
+2005-09-25T05:41:00.000Z	dooglus	cafuego_	maybe I should just report it as a breezy bug, so it can get fixed before release/
+2005-09-25T05:42:00.000Z	cafuego_	dooglus	No, if it fails to install, it will tell you at run-time. run 'sudo lilo -v'
+2005-09-27T05:52:00.000Z	cafuego_	dooglus	There is no such package.
+2005-09-27T05:52:00.000Z	dooglus	cafuego_	?
+2005-09-27T05:53:00.000Z	cafuego_	dooglus	There is as far as I can tell no package named 'linux'.
+2005-09-27T05:54:00.000Z	cafuego_	dooglus	Ah, in breezy there is. Virtual package that provides a kernel. Nah, you cna wipe it if you have a non-generic kernel.
+2005-09-27T05:54:00.000Z	dooglus	cafuego_	I think the 'linux' package is new for breezy.
+2005-09-27T06:05:00.000Z	cafuego_	dooglus	debfoster will list installed apckages (with their depends) and ask if you wantto keep them. Hit 'y' to keep, hit 'p' to purge the package AND the depends. Hit 'x' to process them when yiou get bored.
+2005-09-27T06:05:00.000Z	dooglus	cafuego_	why is it asking my about 'dia-common'?
+2005-09-27T06:06:00.000Z	cafuego_	dooglus	It's installed, it'll ask about it. Just hit 'n' if you think you need to keep it.
+2005-09-27T06:06:00.000Z	dooglus	cafuego_	it only asks about 'orphans', right?
+2005-09-27T06:06:00.000Z	cafuego_	dooglus	No, that's deborphan.
+2005-09-27T06:07:00.000Z	dooglus	cafuego_	debfoster doesn't ask me about anything that came pre-installed - because none of that stuff is orphaned.  it just asks if I want to keep 'ubuntu-base' and 'ubuntu-desktop' - if I say yes to those, it knows it has to keep the rest.
+2005-09-27T06:08:00.000Z	cafuego_	dooglus	Indeed. So you could remove those (they're just meta-packages) and then pick the rest out by re-running it.
+2005-09-27T06:08:00.000Z	dooglus	cafuego_	from the debfoster man page: "if debfoster notices that a package that used to be a dependency is now an orphan, it will ask you what to do with it" - note, "orphan"
+2005-09-27T06:09:00.000Z	cafuego_	dooglus	Yes, it ALSO processes non-orphioned packages, though. Whereas 'deborphan' does not. (it only lists orphans)
+2005-09-27T06:09:00.000Z	dooglus	cafuego_	but shouldn't ask about them.
+2005-09-27T07:49:00.000Z	dooglus	cafuego_	it does not!
+2005-09-28T08:18:00.000Z	cafuego_	dooglus	What video card you got? I use 792 on mine (I think).
+2005-09-28T08:19:00.000Z	dooglus	cafuego_	it's a crappy SIS thing built into the laptop motherboard
+2005-09-28T08:19:00.000Z	cafuego_	dooglus	aiyee
+2005-10-02T07:01:00.000Z	dooglus	cafuego_	I've had that gam_server bug with the 386 kernel too
+2005-10-02T07:04:00.000Z	dooglus	cafuego_	I was running the SLS distro before slackware was announced
+2005-10-02T07:04:00.000Z	cafuego_	dooglus	We didn't have PCs at that point, only 68020 macs :-(
+2005-10-02T07:05:00.000Z	dooglus	cafuego_	I was running SLS on a 486-33.
+2005-10-02T07:06:00.000Z	cafuego_	dooglus	At uni we had labs full of Macs, not intel boxen. We ran a BSD variety called MachTen concurrently under MacOS
+2005-10-02T07:07:00.000Z	cafuego_	dooglus	By the time they got PCs, they were DX2/66-es, which we plonked SLack on, to run a distributed NFS farm as warez server :-)
+2005-10-02T07:07:00.000Z	cafuego_	dooglus	yep
+2005-10-02T10:36:00.000Z	cafuego_	dooglus	Yes, it sues 'z' where it should be using 's' - that sort of error. makes the people who used it to spell-check look a bit simple.
+2005-10-02T10:36:00.000Z	dooglus	cafuego_	not simple, just american
+2005-10-02T10:36:00.000Z	cafuego_	dooglus	That's what I said.
+2005-10-02T10:37:00.000Z	cafuego_	dooglus	other zuch ztuff?
+2005-10-04T12:35:00.000Z	cafuego_	dooglus	I get a 1-pixel shaded border
+2005-10-04T12:35:00.000Z	cafuego_	dooglus	Like the gksu password dialog does too, now.
+2005-10-04T12:35:00.000Z	dooglus	cafuego_	cafuego_ I'm talking about around the window you're about to switch to, not the icons in the middle of the screen.  you too?
+2005-10-04T12:36:00.000Z	cafuego_	dooglus	No, that behaves normally.
+2005-10-04T12:37:00.000Z	dooglus	cafuego_	what's normal?
+2005-10-04T12:37:00.000Z	cafuego_	dooglus	the windows border being drawn?
+2005-10-04T12:38:00.000Z	dooglus	cafuego_	oh.  wonder what I've done wrong then.  I see the border drawn for 1 frame, then it gets undrawn.  it just flickers into existance for 1/50th of a second
+2005-10-04T12:39:00.000Z	cafuego_	dooglus	Oh, the highlight around the actual window border, yes. That flashes in&out of exsitence.
+2005-10-04T12:39:00.000Z	dooglus	cafuego_	it shouldn't, should it?
+2005-10-09T16:11:00.000Z	dooglus	cafuego_	/etc/magic I guess
+2005-10-09T16:12:00.000Z	dooglus	cafuego_	it's even stronger magic than you thought - /etc/magic is empty!
+2005-10-11T05:26:00.000Z	cafuego_	dooglus	just scroll up in irssi, that makes it stop scrolling.
+2005-10-11T05:27:00.000Z	dooglus	cafuego_	ok, good point.  but in general, I'd like not to have to hit the complicated key sequence I've mapped 'copy' to
+2005-10-11T05:28:00.000Z	dooglus	cafuego_	I just thought of a problem with your suggestion...  if I scroll up, then the text I want to copy disappears off the bottom!!
+2005-10-11T05:29:00.000Z	cafuego_	dooglus	Wait for a moment until you scroll up? ;-)
+2005-10-11T05:29:00.000Z	dooglus	cafuego_	what if the room isn't scrolling very often - only (in a 'sod's law' kind of way) just when you're about to hit 'copy'?
+2005-10-11T05:30:00.000Z	cafuego_	dooglus	I run irssi in screen; that way you just hit ^a-esc to make it stop at any point
+2005-10-11T05:30:00.000Z	dooglus	cafuego_	I run irssi in screen too.  hmmm
+2005-10-11T05:30:00.000Z	cafuego_	dooglus	well then
+2005-10-19T14:21:00.000Z	cafuego_	dooglus	Yes, install the patched libc6 from my local repository!
+2005-10-19T14:22:00.000Z	dooglus	cafuego_	why?
+2005-10-19T14:22:00.000Z	cafuego_	dooglus	That's the issue with p2p repositories.
+2005-10-19T14:22:00.000Z	dooglus	cafuego_	what do you mean?  you mean you could hax0r my box?
+2005-10-19T14:23:00.000Z	cafuego_	dooglus	What's to stop me from subverting any of the archives my node is hosting?
+2005-10-19T14:23:00.000Z	dooglus	cafuego_	I still get Release.gpg from the official repos.
+2005-10-19T14:23:00.000Z	dooglus	cafuego_	then if you modify anything, it won't install
+2005-10-19T14:26:00.000Z	dooglus	cafuego_	someone called sanxiyn was telling me about it yesterday...  Release.gpg is the signature for Release, which has the md5sums for Packages, which have the md5sums for individual packages - so unless you can sign packages using the ubuntu key, you can't get a tainted package installed.
+2005-10-19T14:27:00.000Z	cafuego_	dooglus	Well, when not using md5 but something more secure (like brentdax suggests) it would work.
+2005-10-19T14:27:00.000Z	dooglus	cafuego_	if you don't trust md5 then you're already vulnerable - the mirror you use could have been attacked
+2005-10-24T05:25:00.000Z	dooglus	cafuego_	what's the difference between that and linux-headers?
+2005-10-24T05:25:00.000Z	cafuego_	dooglus	linux-headers are the set of headers for yer current kernel, I thyink. (as opposed to the full source)
+2005-10-24T05:25:00.000Z	cafuego_	dooglus	Mind you, I may have switched the package names.
+2005-10-24T05:26:00.000Z	dooglus	cafuego_	and kernel-headers are old it seems.
+2005-10-24T05:28:00.000Z	dooglus	cafuego_	just to make it more confusing still, there's also a package called linux-kernel-headers !
+2005-10-24T05:34:00.000Z	cafuego_	dooglus	When your box is actively using 512Mb swap, you have issues ;-)
+2005-10-24T05:34:00.000Z	dooglus	cafuego_	it's not actively using it - it's swapped out...
+2005-10-24T05:35:00.000Z	cafuego_	dooglus	Yes, in favour of cache. With less cache, you can also use less swap.
+2005-10-24T05:35:00.000Z	cafuego_	dooglus	Mine has 725 MB of shite swapped out; but the moment I want to sue that, it takles *ages* for it to become responsive.
+2005-10-24T05:35:00.000Z	cafuego_	dooglus	Besides, you can always add swap.
+2005-10-24T05:35:00.000Z	dooglus	cafuego_	I'm running azureus - that's using over 400Mb of space on its own
+2005-10-24T05:36:00.000Z	dooglus	cafuego_	it's not easy to add a new swap partition if you've already divided your disk into 39.5 (ext3) and 0.5 (swap)
+2005-10-24T05:36:00.000Z	dooglus	cafuego_	he's in a state now where he can easily add an extra 0.5Gb swap.  it won't be this easy again once he's partitioned
+2005-10-24T05:39:00.000Z	cafuego_	dooglus	Adding a swap *file* is trivial at any stage.
+2005-10-24T05:39:00.000Z	cafuego_	dooglus	No partitoning involved.
+2005-10-28T09:37:00.000Z	cafuego_	dooglus	Why not just dump a script file in /etc/cron.daily ?
+2005-10-28T09:37:00.000Z	dooglus	cafuego_	'cos it's not writable.
+2005-10-28T09:37:00.000Z	dooglus	cafuego_	this is a user script, not a root one.
+2005-10-28T09:37:00.000Z	cafuego_	dooglus	Oh, for your user? 'crontab -e'; add a line 'minute hour * * * /path/to/script
+2007-02-13T13:41:00.000Z	cafuego_	dooglus	giveintopython is preinstalled, is it not?
+2007-02-13T13:41:00.000Z	dooglus	cafuego_	I've never heard of it

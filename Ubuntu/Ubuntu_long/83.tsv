@@ -1,0 +1,57 @@
+2010-09-18T01:59:00.000Z	Jesdisciple		if you feel comfortable using sudo to change system thingies
+2010-09-18T01:59:00.000Z	Jesdisciple		sudo gedit /etc/apt/sources.list
+2010-09-18T02:00:00.000Z	Jesdisciple		how's it better to type your password in a GUI than the command-line?
+2010-09-18T02:01:00.000Z	Jesdisciple		I'm very curious how it matters...
+2010-09-18T02:02:00.000Z	jrib	Jesdisciple	gksudo does nice things for gui apps.  In the past, some apps would end up with config files owned by root if you ran them with sudo
+2010-09-19T14:53:00.000Z	jrib	Jesdisciple	too vague
+2010-09-19T14:53:00.000Z	Jesdisciple	jrib	old issue
+2010-09-19T14:53:00.000Z	jrib	Jesdisciple	ok, but if you want help now... you need to give details
+2010-09-19T14:53:00.000Z	Jesdisciple	jrib	desktop shortcut has command "bash ~/talk.sh"
+2010-09-19T14:54:00.000Z	jrib	Jesdisciple	still too vague.  Imagine you are me
+2010-09-19T14:54:00.000Z	Jesdisciple	jrib	it works if I use "/home/user/talk.desktop"
+2010-09-19T14:54:00.000Z	Jesdisciple	jrib	just trying to understand why bash and the ~ don't work on click
+2010-09-19T14:55:00.000Z	jrib	Jesdisciple	are you trying to create a .desktop file?
+2010-09-19T14:55:00.000Z	Jesdisciple	jrib	but they do if the shortcut (not the shell script) is excuted in terminal
+2010-09-19T14:55:00.000Z	Jesdisciple	jrib	yes, icarus-c: you lost me
+2010-09-19T14:56:00.000Z	jrib	Jesdisciple	take two minutes organize your thoughts and write a one line explanation of what you are trying to accomplish.  Put relevant details in a pastebin so we can understand what you have attempted so far
+2010-09-19T15:15:00.000Z	jrib	Jesdisciple	take two minutes organize your thoughts and write a one line explanation of what you are trying to accomplish.  Put relevant details in a pastebin so we can understand what you have attempted so far
+2010-09-19T15:16:00.000Z	jrib	Jesdisciple	yes, that's what you need to do
+2010-09-19T15:17:00.000Z	jrib	Jesdisciple	~ won't be translated by whatever gnome uses to execute Exec
+2010-09-19T15:18:00.000Z	Jesdisciple	jrib	do you know why bash isn't recognized?
+2010-09-19T15:18:00.000Z	jrib	Jesdisciple	what do you mean "isn't recognized"?
+2010-09-19T15:18:00.000Z	Jesdisciple	jrib	the command does absolutely nothing when clicked
+2010-09-19T15:18:00.000Z	jrib	Jesdisciple	yes.
+2010-09-19T15:19:00.000Z	Jesdisciple	jrib	if I take bash off and leave the ~, I get an error
+2010-09-19T15:19:00.000Z	Jesdisciple	jrib	running ./talk.desktop in terminal works just fine regardless
+2010-09-19T15:19:00.000Z	jrib	Jesdisciple	because you have no such file that is literally "~talk.sh".  The Exec line is not the same as your interactive terminal.  ~ is not special there
+2010-09-19T15:20:00.000Z	Jesdisciple	jrib	yes, I get that - I don't wonder about the error so much as why bash doesn't do anything
+2010-09-19T15:20:00.000Z	Jesdisciple	jrib	when it's clicked that is
+2010-09-19T15:20:00.000Z	jrib	Jesdisciple	do you agree that "bash arocehurcaoheuraoedhucgaoeudcaogeudc" as the Exec should not do anything?
+2010-09-19T15:21:00.000Z	Jesdisciple	jrib	it should pass gibberish to bash...
+2010-09-19T15:21:00.000Z	Jesdisciple	jrib	bash doesn't seem to be called at all
+2010-09-19T15:21:00.000Z	jrib	Jesdisciple	did you see my last question?
+2010-09-19T15:22:00.000Z	Jesdisciple	jrib	yes, and I thot of a test...
+2010-09-19T15:23:00.000Z	jrib	Jesdisciple	so what's your answer to my question?
+2010-09-19T15:23:00.000Z	Jesdisciple	jrib	clicking a shortcut with that command (yours) should pass gibberish to bash for execution
+2010-09-19T15:24:00.000Z	Jesdisciple	jrib	I modified the clickable command to &> output
+2010-09-19T15:24:00.000Z	Jesdisciple	jrib	the output file is not created, so apparently the command is not being run at all
+2010-09-19T15:25:00.000Z	Jesdisciple	jrib	course I might be forgetting redirection syntax
+2010-09-19T15:25:00.000Z	Jesdisciple	jrib	checking now
+2010-09-19T15:25:00.000Z	jrib	Jesdisciple	run "bash raocheurcaoherchaorchaoercuh" in your terminal
+2010-09-19T15:26:00.000Z	Jesdisciple	jrib	bash: raocheurcaoherchaorchaoercuh: No such file or directory
+2010-09-19T15:26:00.000Z	Jesdisciple	jrib	yes, I expect that to be output...
+2010-09-19T15:26:00.000Z	jrib	Jesdisciple	where exactly?
+2010-09-19T15:27:00.000Z	Jesdisciple	jrib	pardon?
+2010-09-19T15:27:00.000Z	jrib	Jesdisciple	where exactly do you expect to see the output?
+2010-09-19T15:27:00.000Z	Jesdisciple	jrib	in the redirected file, once I'm sure I have my redirection syntax correct
+2010-09-19T15:28:00.000Z	jrib	Jesdisciple	as I said Exec is not bash
+2010-09-19T15:29:00.000Z	Jesdisciple	jrib	well, when I did it without bash - that is, ~/talk.sh
+2010-09-19T15:29:00.000Z	jrib	Jesdisciple	yes?
+2010-09-19T15:29:00.000Z	Jesdisciple	jrib	it popped up an error dialog
+2010-09-19T15:29:00.000Z	Jesdisciple	jrib	with bash, I don't even see that
+2010-09-19T15:30:00.000Z	jrib	Jesdisciple	because it couldn't find the command "~/talk.sh".  On the other hand, the bash command runs fine.  You can check if the output goes to ~/.xsession-errors, but I'm not sure if it does.  The output will just be bash telling you there's no such file as "~/talk.sh", taking the ~ literally
+2010-09-19T15:33:00.000Z	jrib	Jesdisciple	you can try running in a terminal: bash '~/talk.sh'  .  That's what is happening.
+2010-12-23T06:25:00.000Z	jrib	Jesdisciple	www-data is the default user and group that apache runs as on ubuntu
+2010-12-23T06:25:00.000Z	jrib	Jesdisciple	is that a trick question?
+2010-12-23T06:25:00.000Z	Jesdisciple	jrib	not afaik
+2010-12-23T06:26:00.000Z	Jesdisciple	jrib	ah, so they have the same name - thanks

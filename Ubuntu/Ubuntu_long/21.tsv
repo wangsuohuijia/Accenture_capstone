@@ -1,0 +1,149 @@
+2008-07-25T20:22:00.000Z	Drk_Guy		*this
+2008-07-25T20:22:00.000Z	Drk_Guy		!apple
+2008-07-25T20:23:00.000Z	Drk_Guy		O.o
+2008-07-25T20:24:00.000Z	Drk_Guy		lol, sorry xirov
+2008-07-25T20:25:00.000Z	Drk_Guy		*7300 LE, P3lo
+2008-07-25T20:26:00.000Z	Drk_Guy		!envyng | P3lo That fixed my problems for good
+2008-07-25T20:26:00.000Z	xirov	Drk_Guy	Whats "pastebin"? /:
+2008-07-25T20:14:00.000Z	Drk_Guy	xirov	broadcomm?
+2008-07-25T20:14:00.000Z	xirov	Drk_Guy	?
+2008-07-25T20:15:00.000Z	Drk_Guy	xirov	is your chipset broadcom?
+2008-07-25T20:16:00.000Z	Drk_Guy	xirov	WMWare WorkStation? lol
+2008-07-25T20:16:00.000Z	xirov	Drk_Guy	 as i told, im a noob :) .. i just know its a Atheros
+2008-07-25T20:16:00.000Z	Drk_Guy	xirov	Do you have the windows drivers?
+2008-07-25T20:16:00.000Z	Drk_Guy	xirov	I mean, linux can use WiFi windows drivers
+2008-07-25T20:17:00.000Z	xirov	Drk_Guy	well.. i dont know.. dont think so :)
+2008-07-25T20:17:00.000Z	Drk_Guy	xirov	lol, maybe this can help you...
+2008-07-25T20:18:00.000Z	xirov	Drk_Guy	im i true first timer xD need to learn everything from scratch xD
+2008-07-25T20:26:00.000Z	Drk_Guy	xirov	:)
+2008-07-25T20:19:00.000Z	Drk_Guy	xirov	Don't worry, i'm a ubuntu-only user, and i have the whole morning
+2008-07-25T20:19:00.000Z	xirov	Drk_Guy	nice! :D even thou its not morning in Dk xD
+2008-07-25T20:19:00.000Z	Drk_Guy	xirov	lol, i'm colombian
+2008-07-25T20:21:00.000Z	xirov	Drk_Guy	nice :) just had somekind of lesson about some "Colombian Students Watch" or something, last week :)
+2008-07-25T20:21:00.000Z	Drk_Guy	xirov	XD
+2008-07-25T20:21:00.000Z	xirov	Drk_Guy	its true x'D
+2008-07-25T20:22:00.000Z	Drk_Guy	xirov	lol, anyways, pastebin what thsi command outputs: lspci
+2008-07-25T20:23:00.000Z	xirov	Drk_Guy	I can tell you 1 thing... my "Networks"-thingy, miss the "Wireless"-thingy, that is on this picture https://help.ubuntu.com/community/WifiDocs/WirelessNetworking?action=AttachFile&do=get&target=NetworkAdmin1.png
+2008-07-25T20:23:00.000Z	xirov	Drk_Guy	sorry xD im a pretty slow thinking guy sometimes xD
+2008-07-25T20:23:00.000Z	Drk_Guy	xirov	Is that yours?
+2008-07-25T20:24:00.000Z	xirov	Drk_Guy	no.. thats a picture from that link u sent me O.o
+2008-07-25T20:24:00.000Z	xirov	Drk_Guy	i want the "Wireless Connection" too ._.
+2008-07-25T20:24:00.000Z	Drk_Guy	xirov	you need the driver enabled to make it work
+2008-07-25T20:24:00.000Z	Drk_Guy	xirov	The thing is... you don't have it, right?
+2008-07-25T20:25:00.000Z	xirov	Drk_Guy	I know.. but ive searched for it for hours.. and i have no idea how to install, or anything
+2008-07-25T20:25:00.000Z	xirov	Drk_Guy	Yea, i need the driver, and i need to know how to install it
+2008-07-25T20:26:00.000Z	Drk_Guy	xirov	pastebin what lspci spits
+2008-07-25T20:28:00.000Z	xirov	Drk_Guy	:)
+2008-07-25T20:29:00.000Z	Drk_Guy	xirov	You got it now, pastebin output
+2008-07-25T20:30:00.000Z	xirov	Drk_Guy	http://pastebin.org/pastebin.php?dl=57025
+2008-07-25T20:30:00.000Z	xirov	Drk_Guy	good enough? O.o
+2008-07-25T20:30:00.000Z	Drk_Guy	xirov	lol, you have my same chipset, but i'm on desktop, so i won't have WiFi
+2008-07-25T20:31:00.000Z	xirov	Drk_Guy	lawl xD okay
+2008-07-25T20:31:00.000Z	xirov	Drk_Guy	so... can you help? :)
+2008-07-25T20:32:00.000Z	Drk_Guy	xirov	ok, got your exact wifi chipset
+2008-07-25T20:33:00.000Z	Drk_Guy	xirov	flightgear needs that much? | BTW, try typing drk and hitting tab ;)
+2008-07-25T20:34:00.000Z	xirov	Drk_Guy	I now the tab thing :p
+2008-07-25T20:34:00.000Z	Drk_Guy	xirov	I'm getting some info of your card in spanish, gonna alert you if something new happens
+2008-07-25T20:34:00.000Z	xirov	Drk_Guy	Okay.. well.. but can you help me find a driver or something?? O.o or..
+2008-07-25T20:35:00.000Z	Drk_Guy	xirov	Ok, ill tell you anything
+2008-07-25T20:37:00.000Z	Drk_Guy	xirov	madwifi (linux's wifi module) can't run it, but it is reported to be ran correctly with ndiswrapper
+2008-07-25T20:39:00.000Z	Drk_Guy	xirov	I got it, your card MIGHT be supported natively in some moths
+2008-07-25T20:40:00.000Z	xirov	Drk_Guy	well :) ill stay here, just tell me when your ready xD
+2008-07-25T20:40:00.000Z	Drk_Guy	xirov	I need you to download the windows drivers from your laptop maker site
+2008-07-25T20:41:00.000Z	xirov	Drk_Guy	okay i dc'ed xP
+2008-07-25T20:42:00.000Z	Drk_Guy	xirov	got the drivers?
+2008-07-25T20:42:00.000Z	xirov	Drk_Guy	no?
+2008-07-25T20:43:00.000Z	Drk_Guy	xirov	Download it, as if you were downloading a winbugs driver, from you laptop's manufacturer site
+2008-07-25T20:43:00.000Z	xirov	Drk_Guy	That was what i was requesting in the first place x'D
+2008-07-25T20:43:00.000Z	Drk_Guy	xirov	You don't know your laptop's maker?
+2008-07-25T20:44:00.000Z	xirov	Drk_Guy	its a Acer? O.o but i dont know what u mean
+2008-07-25T20:44:00.000Z	Drk_Guy	xirov	hold on
+2008-07-25T20:44:00.000Z	xirov	Drk_Guy	2 sec.. i will reconn
+2008-07-25T20:45:00.000Z	xirov	Drk_Guy	now im here :)
+2008-07-25T20:46:00.000Z	Drk_Guy	xirov	lol?
+2008-07-25T20:48:00.000Z	xirov	Drk_Guy	got a solution? :D
+2008-07-25T20:48:00.000Z	Drk_Guy	xirov	nice...
+2008-07-25T20:49:00.000Z	Drk_Guy	xirov	tell me
+2008-07-25T20:49:00.000Z	xirov	Drk_Guy	did'nt you notice the "?" ? xD
+2008-07-25T20:49:00.000Z	Drk_Guy	xirov	lolwut?
+2008-07-25T20:50:00.000Z	xirov	Drk_Guy	it was a question :)
+2008-07-25T20:50:00.000Z	Drk_Guy	xirov	lol
+2008-07-25T20:51:00.000Z	Drk_Guy	xirov	you need the windows drivers
+2008-07-25T20:51:00.000Z	Drk_Guy	xirov	do you have your laptop's drivers disk?
+2008-07-25T20:52:00.000Z	xirov	Drk_Guy	no, but i think i got the drivers on my external hd
+2008-07-25T20:52:00.000Z	Drk_Guy	xirov	ok...., grab the file(s) for it
+2008-07-25T20:53:00.000Z	xirov	Drk_Guy	and my external harddisk cant connect to ubuntu.. i dont know why.. i might need a driver or something
+2008-07-25T20:53:00.000Z	Drk_Guy	xirov	rats...
+2008-07-25T20:53:00.000Z	Drk_Guy	xirov	wait, i think i got a solution
+2008-07-25T20:54:00.000Z	Drk_Guy	xirov	someone reported that using a special madwifi helped
+2008-07-25T20:55:00.000Z	xirov	Drk_Guy	ive heard about the madwifi too.. but i could'nt make it work
+2008-07-25T20:55:00.000Z	Drk_Guy	xirov	do this: sudo apt-get install build-essential checkinstall linux-headers-'uname -r'
+2008-07-25T20:55:00.000Z	Drk_Guy	xirov	you compiled it?
+2008-07-25T20:56:00.000Z	xirov	Drk_Guy	compiled what?
+2008-07-25T20:56:00.000Z	Drk_Guy	xirov	madwifi-ng
+2008-07-25T20:57:00.000Z	Drk_Guy	xirov	i mean, the guy said he got it working, maybe we can try
+2008-07-25T20:58:00.000Z	xirov	Drk_Guy	Sure
+2008-07-25T20:58:00.000Z	xirov	Drk_Guy	i just wrote the line in the terminal
+2008-07-25T20:59:00.000Z	Drk_Guy	xirov	let's give it another try
+2008-07-25T20:59:00.000Z	xirov	Drk_Guy	"E: Couldn't find package build
+2008-07-25T20:59:00.000Z	Drk_Guy	xirov	you sure you did copy and paste?
+2008-07-25T21:11:00.000Z	Drk_Guy	xirov	huh?
+2008-07-25T20:59:00.000Z	xirov	Drk_Guy	okay, as long as you tell me exactly what to do x'D
+2008-07-25T21:00:00.000Z	xirov	Drk_Guy	i'll give it another try
+2008-07-25T21:01:00.000Z	xirov	Drk_Guy	"Reading package lists... Done
+2008-07-25T21:02:00.000Z	Drk_Guy	xirov	just do uname -r and replace that line's uname -r with what it spits out
+2008-07-25T21:03:00.000Z	xirov	Drk_Guy	Okay, it did it
+2008-07-25T21:03:00.000Z	Drk_Guy	xirov	now what?
+2008-07-25T21:03:00.000Z	xirov	Drk_Guy	you tell me xD
+2008-07-25T21:04:00.000Z	Drk_Guy	xirov	it installed fine?
+2008-07-25T21:04:00.000Z	xirov	Drk_Guy	yea.. its installed something called "checkinstall" or something like that
+2008-07-25T21:05:00.000Z	Drk_Guy	xirov	then we can proceed
+2008-07-25T21:05:00.000Z	xirov	Drk_Guy	good ^
+2008-07-25T21:05:00.000Z	Drk_Guy	xirov	wget http://snapshots.madwifi.org/special/madwifi-nr-r3366+ar5007.tar.gz
+2008-07-25T21:06:00.000Z	Drk_Guy	xirov	you got it?
+2008-07-25T21:07:00.000Z	xirov	Drk_Guy	Yea, and its done
+2008-07-25T21:07:00.000Z	Drk_Guy	xirov	tar xzf http://snapshots.madwifi.org/special/madwifi-nr-r3366+ar5007.tar.gz
+2008-07-25T21:09:00.000Z	Drk_Guy	xirov	ready?
+2008-07-25T21:10:00.000Z	xirov	Drk_Guy	"rsh: http: Name or service not known"
+2008-07-25T21:11:00.000Z	xirov	Drk_Guy	it stopped, because of some error x'D or something
+2008-07-25T21:12:00.000Z	Drk_Guy	xirov	Rats xirov, i gave you a wrong command
+2008-07-25T21:12:00.000Z	xirov	Drk_Guy	okay :)
+2008-07-25T21:13:00.000Z	Drk_Guy	xirov	tar xzf madwifi-nr-r3366+ar5007.tar.gz
+2008-07-25T21:13:00.000Z	xirov	Drk_Guy	done :)
+2008-07-25T21:14:00.000Z	Drk_Guy	xirov	cd to the new dir
+2008-07-25T21:15:00.000Z	xirov	Drk_Guy	ehm.. what dir is that?
+2008-07-25T21:16:00.000Z	Drk_Guy	xirov	just do: ls | grep madwifi
+2008-07-25T21:17:00.000Z	Drk_Guy	xirov	you got it?
+2008-07-25T21:17:00.000Z	xirov	Drk_Guy	This dir? "madwifi-ng-r3366+ar5007"
+2008-07-25T21:18:00.000Z	xirov	Drk_Guy	done
+2008-07-25T21:21:00.000Z	Drk_Guy	xirov	done?
+2008-07-25T21:21:00.000Z	Drk_Guy	xirov	...
+2008-07-25T21:21:00.000Z	xirov	Drk_Guy	yea :)
+2008-07-25T21:21:00.000Z	Drk_Guy	xirov	ok, so now do this: ./configure
+2008-07-25T21:23:00.000Z	xirov	Drk_Guy	"bash: ./configure: No such file or directory"
+2008-07-25T21:23:00.000Z	Drk_Guy	xirov	you have to cd to the dir it extracted
+2008-07-25T21:23:00.000Z	xirov	Drk_Guy	wha?
+2008-07-25T21:24:00.000Z	xirov	Drk_Guy	do i have to cd to the "configure" ?
+2008-07-25T21:24:00.000Z	Drk_Guy	xirov	:/, ls | grep madwifi
+2008-07-25T21:24:00.000Z	Drk_Guy	xirov	no xirov, to the madwifi's dir
+2008-07-25T21:25:00.000Z	xirov	Drk_Guy	i already did that
+2008-07-25T21:25:00.000Z	Drk_Guy	xirov	rats, sorry, it won't configure, just: make
+2008-07-25T21:26:00.000Z	xirov	Drk_Guy	Done
+2008-07-25T21:26:00.000Z	Drk_Guy	xirov	sudo make install
+2008-07-25T21:27:00.000Z	xirov	Drk_Guy	Done
+2008-07-25T21:28:00.000Z	Drk_Guy	xirov	really?
+2008-07-25T21:29:00.000Z	xirov	Drk_Guy	ye?
+2008-07-25T21:29:00.000Z	xirov	Drk_Guy	why?
+2008-07-25T21:29:00.000Z	Drk_Guy	xirov	too fast, anyway, reboot to see
+2008-07-25T21:30:00.000Z	xirov	Drk_Guy	okay :) .. brb
+2008-07-25T21:30:00.000Z	Drk_Guy	xirov	;)
+2008-07-25T21:36:00.000Z	xirov	Drk_Guy	D*mn YES!!! :D
+2008-07-25T21:36:00.000Z	xirov	Drk_Guy	Thanks a lot mate!!! :D
+2008-07-25T21:37:00.000Z	Drk_Guy	xirov	:DDD
+2008-07-25T21:37:00.000Z	Drk_Guy	xirov	it's great for me to have helped you
+2008-07-25T21:37:00.000Z	xirov	Drk_Guy	Its great for me too ;)
+2008-07-25T21:39:00.000Z	xirov	Drk_Guy	Well, thanks a lot :D
+2008-07-25T21:40:00.000Z	xirov	Drk_Guy	Well, you know Katapult?? .. Ive heard you can have something similar in ubuntu.. you know the name of that?
+2008-07-25T21:41:00.000Z	Drk_Guy	xirov	gnome-do works fine
+2008-07-25T21:41:00.000Z	xirov	Drk_Guy	okay :D thanks
+2008-07-25T21:41:00.000Z	Drk_Guy	xirov	:)

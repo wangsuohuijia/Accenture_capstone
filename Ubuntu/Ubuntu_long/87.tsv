@@ -1,0 +1,62 @@
+2006-11-30T06:38:00.000Z	livingdaylight	Jordan_U	it is realplay i did sudo apt-get install realplay but it didn't work
+2007-06-03T11:04:00.000Z	Jordan_U	livingdaylight	uname -a
+2007-07-17T15:05:00.000Z	Jordan_U	livingdaylight	No
+2007-07-17T15:05:00.000Z	Jordan_U	livingdaylight	From what I can tell it's kind of like automatix
+2007-07-17T15:05:00.000Z	livingdaylight	Jordan_U	huh? why not? i just burnt it to cd
+2007-07-17T15:06:00.000Z	livingdaylight	Jordan_U	whats wrong with automatix?
+2007-09-09T16:27:00.000Z	Jordan_U	livingdaylight	Have you tried Gparted?
+2007-09-09T16:27:00.000Z	livingdaylight	Jordan_U	no
+2007-09-09T16:28:00.000Z	livingdaylight	Jordan_U	gparted can format an external hd i got attached via usb?
+2007-09-09T16:29:00.000Z	Jordan_U	livingdaylight	Yes
+2007-09-09T16:37:00.000Z	livingdaylight	Jordan_U	ok, i managed to delete most of /media/disk using gparted as you suggested, but there is still a portion i can't get to... its got a picture of a lock on it... suggesting i don't have writing permission?
+2007-09-09T16:37:00.000Z	Jordan_U	livingdaylight	It probably just needs to be unmounted
+2007-09-09T16:38:00.000Z	livingdaylight	Jordan_U	i don't follow. If i unmount it then i won't be able to 'see' it to format it?
+2007-09-09T16:39:00.000Z	livingdaylight	Jordan_U	cool, i right clicked on it and now the lock is gone and it is saying i can do stuff...
+2007-09-09T16:39:00.000Z	livingdaylight	Jordan_U	when i right click and > format> to ext3?
+2007-09-09T16:42:00.000Z	livingdaylight	Jordan_U	ok, i've got 149gb unallocated as i've deleted all... but i can't click format to ext3 or anything anymore...
+2007-09-09T16:42:00.000Z	Jordan_U	livingdaylight	Create new partition
+2007-09-09T16:43:00.000Z	Jordan_U	livingdaylight	np
+2007-09-09T16:44:00.000Z	livingdaylight	Jordan_U	do i just call it all /home?
+2007-09-09T16:45:00.000Z	Jordan_U	livingdaylight	Are you doing a fresh install of Ubuntu?
+2007-09-09T16:46:00.000Z	livingdaylight	Jordan_U	i will be so i need to copy my /home folder pretty much
+2007-09-09T16:46:00.000Z	livingdaylight	Jordan_U	documents, music, movies etc
+2007-09-09T16:48:00.000Z	Jordan_U	livingdaylight	Adapt the instructions here http://www.psychocats.net/ubuntu/separatehome
+2007-09-09T16:49:00.000Z	livingdaylight	Jordan_U	i'll check it out... thx for the link
+2007-09-09T05:31:00.000Z	livingdaylight	Jordan_U	i don't see how to apply the link you showed me to my situation
+2007-09-09T05:32:00.000Z	livingdaylight	Jordan_U	still can't finish this... when i name it and assign ext3 and primary and click apply there is always an error dialog pop up
+2007-09-09T05:32:00.000Z	Jordan_U	livingdaylight	What error?
+2007-09-09T05:33:00.000Z	livingdaylight	Jordan_U	says operation couldn't be done... and...
+2007-09-09T05:34:00.000Z	livingdaylight	Jordan_U	i end up where is was with the lock on the 149gb and having to unmount it again..
+2007-09-09T05:36:00.000Z	Jordan_U	livingdaylight	"sudo umount -a" should unmount all partitions that aren't needed
+2007-09-09T05:37:00.000Z	livingdaylight	Jordan_U	from the link you gave me it said one had to use a live cd to unmount and make changes coz one couldn't be inside it 'live' and make changes so to speak... but that doens' tapply here does it?
+2007-09-09T05:38:00.000Z	livingdaylight	Jordan_U	see right now it is there as disk [/media/disk]  but i can't create any folders in it or drop anything it it
+2007-09-09T05:39:00.000Z	livingdaylight	Jordan_U	sudo umount -a gives back /dev: device is busy
+2007-09-09T05:39:00.000Z	livingdaylight	Jordan_U	/proc/bus/usb: device is busy
+2007-09-09T05:40:00.000Z	livingdaylight	Jordan_U	umount: /var/run: device is busy .... and acouple more like that
+2007-09-09T05:42:00.000Z	livingdaylight	Jordan_U	/dev/sdb1 is ext3 but i can't do anything with it... i can delete it and i end up with just /dev/sdb again and i've going round like this for a while
+2007-09-09T05:44:00.000Z	livingdaylight	Jordan_U	?
+2007-09-09T05:46:00.000Z	livingdaylight	Jordan_U	do i need gparted live cd? or install gparted from Ubuntu live cd?
+2007-09-09T06:35:00.000Z	Jordan_U	livingdaylight	Where is it mounted?
+2007-09-09T06:36:00.000Z	livingdaylight	Jordan_U	i'm sorry but that psychocat link is beyond me.... if that is the best you can do to help, i'm sorry, but i can't fly with that
+2007-09-09T06:37:00.000Z	livingdaylight	Jordan_U	since you ask it is /dev/sdb1
+2007-09-09T06:37:00.000Z	Jordan_U	livingdaylight	Where is it mounted, and again, that link is only if you need to use it as your /home and you aren't doing  a fresh install, it is already mounted fine right now
+2007-09-09T06:38:00.000Z	livingdaylight	Jordan_U	i did sudo chown <user>:<user> /dev/sdb1 or something like that  but that hasn't helped create write permisssions
+2007-09-09T06:38:00.000Z	Jordan_U	livingdaylight	I mean the mountpoint, it would be /media/something ( likely sdb1 but could be whatever you choose )
+2007-09-09T06:38:00.000Z	Jordan_U	livingdaylight	And it shouldn't
+2007-09-09T06:38:00.000Z	livingdaylight	Jordan_U	i believe it is /dev/sdb1
+2007-09-09T06:39:00.000Z	Jordan_U	livingdaylight	That is not the mountpoint, where did you navigate to to see the files? Wherever that is is the mountpoint.
+2007-09-09T06:40:00.000Z	livingdaylight	Jordan_U	/media/disk?
+2007-09-09T06:40:00.000Z	livingdaylight	Jordan_U	its called disk and yes /media
+2007-09-09T06:42:00.000Z	livingdaylight	Jordan_U	?
+2007-09-09T06:46:00.000Z	Jordan_U	livingdaylight	Run "sudo mkdir /media/disk/test"
+2007-09-09T06:47:00.000Z	Jordan_U	livingdaylight	When you see that that works boot into a LiveCD and follow the linked instructions, they will work from the LiveCD
+2007-09-09T06:47:00.000Z	livingdaylight	Jordan_U	i've done sudo chown <username>:<username> /media/disk and now i can copy things over from Ubuntu
+2007-09-09T06:47:00.000Z	Jordan_U	livingdaylight	Boot into a LiveCD and follow the instructions to transfer your /home
+2007-09-09T06:48:00.000Z	livingdaylight	Jordan_U	i don't want to tranfer all of /home I want to be able to drag and drop what i like
+2007-09-09T06:56:00.000Z	Jordan_U	livingdaylight	oandrew I am actually leaving now for a plane, sorry
+2007-09-09T06:56:00.000Z	livingdaylight	Jordan_U	lol
+2007-09-09T06:58:00.000Z	livingdaylight	Jordan_U	actually, i'm not attached to calling it /home partition... i was rather saying i have stuff in my Ubuntu /home partition i want to be able to store in my external hard drive
+2007-10-20T03:44:00.000Z	Jordan_U	livingdaylight	Yes, it degrades gracefully
+2007-10-20T03:45:00.000Z	livingdaylight	Jordan_U	so pop in live cd and it'll realize my pc is not up to it and adapt? cool
+2012-07-12T21:53:00.000Z	Jordan_U	livingdaylight	The one wearing a cape.
+2012-07-12T21:53:00.000Z	livingdaylight	Jordan_U	LoL

@@ -1,0 +1,74 @@
+2006-02-24T13:53:00.000Z	roostishaw		what is the gnome apt-get gui called?
+2006-02-24T13:54:00.000Z	unperson	roostishaw	Are you talking about Synaptic or something else?
+2006-02-24T13:54:00.000Z	unperson	roostishaw	I don't know which (if any) are the "official" gnome GUIs.
+2006-02-24T13:54:00.000Z	roostishaw	unperson	yep, thats what i meant, thx
+2006-02-24T13:55:00.000Z	unperson	roostishaw	I *thought* that if you go to the repositories dialog they're already in there and all you have to do is check them.
+2006-02-24T13:56:00.000Z	roostishaw	unperson	i did but i get an error message
+2006-02-24T13:56:00.000Z	unperson	roostishaw	What's the jist of it?
+2006-02-24T13:56:00.000Z	unperson	roostishaw	Is it something about bad keys?
+2006-02-24T13:57:00.000Z	roostishaw	unperson	wait, its trying... ill tell you the error when its done and it says it.
+2006-02-24T13:58:00.000Z	unperson	roostishaw	Ok.
+2006-02-24T13:58:00.000Z	roostishaw	unperson	its almost done
+2006-02-24T13:58:00.000Z	roostishaw	unperson	The repository might be no longer available or could not be contacted because of network problems. If available an older version of the failed index will be used. Otherwise the repository will be ignored. Check your network connection and the correct writing of the repository address in the preferences.
+2006-02-24T13:59:00.000Z	unperson	roostishaw	Ah.  But the other repositories work?
+2006-02-24T14:00:00.000Z	roostishaw	unperson	yes (official and copyright)
+2006-02-24T14:00:00.000Z	unperson	roostishaw	Remind me, what's the URL for the repository in question?  (just to make sure it's not temporarily down)
+2006-02-24T14:01:00.000Z	roostishaw	unperson	sorry, total noob... how do i get the url?
+2006-02-24T14:02:00.000Z	unperson	roostishaw	Eh, hold on, I can get it my self.  What release are you using, btw?
+2006-02-24T14:02:00.000Z	roostishaw	unperson	breezy badger
+2006-02-24T14:05:00.000Z	unperson	roostishaw	Ok, let me find some info.  One sec.
+2006-02-24T14:05:00.000Z	roostishaw	unperson	ok
+2006-02-24T14:07:00.000Z	unperson	roostishaw	Ok, the server seems to be up.
+2006-02-24T14:09:00.000Z	roostishaw	unperson	i just go to settings>repos   the hit 'add' then when i try either of the bottom two... i get that error message
+2006-02-24T14:10:00.000Z	unperson	roostishaw	Well, i don't think you want to hit add, I think you just want to check the checkbox next to the one you want to use.
+2006-02-24T14:10:00.000Z	unperson	roostishaw	Or is the one you want to use not in the list already?
+2006-02-24T14:10:00.000Z	roostishaw	unperson	exactly
+2006-02-24T14:12:00.000Z	roostishaw	unperson	 but when i hit 'add' there are four little boxes, and only the top two are selected...
+2006-02-24T14:12:00.000Z	unperson	roostishaw	So, sorry, let me make sure I have it straight.  You want to add the universe and multiverse repositories.  These are not currently listed in the list of repositories in Synaptic, correct?
+2006-02-24T14:13:00.000Z	roostishaw	unperson	yes, iwant to add  the universe and multiverse repositories. but when i go to select them from the list, then hit ok... it gives me that error message
+2006-02-24T14:13:00.000Z	unperson	roostishaw	Ok, but before you hit add, there should be several things in the list in the repository window.  Normally, I think Universe and Multiverse are already there, but they're labeled a little funny.
+2006-02-24T14:14:00.000Z	unperson	roostishaw	There should be an entry labeled "Ubuntu 5.10 'Breezy Badger'"
+2006-02-24T14:15:00.000Z	unperson	roostishaw	What does it say under that title?  There should be a list of things in smaller type.
+2006-02-24T14:15:00.000Z	unperson	roostishaw	Specifically we're interested in "Ubuntu 5.10 'Breezy Badger' (Binary)"
+2006-02-24T14:16:00.000Z	roostishaw	unperson	it says: Officially supported & under that , resticted copyright
+2006-02-24T14:16:00.000Z	unperson	roostishaw	That's it?
+2006-02-24T14:16:00.000Z	roostishaw	unperson	thats it...
+2006-02-24T14:16:00.000Z	unperson	roostishaw	Select that one, and hit "edit"
+2006-02-24T14:16:00.000Z	roostishaw	unperson	ok...
+2006-02-24T14:17:00.000Z	roostishaw	unperson	the binary, right?
+2006-02-24T14:18:00.000Z	unperson	roostishaw	Yes.  In the "sections" box it should say "main restricted".  Add "universe multiverse" to that.
+2006-02-24T14:18:00.000Z	unperson	roostishaw	All of those should be separated by spaces.
+2006-02-24T14:18:00.000Z	roostishaw	unperson	ok...
+2006-02-24T14:18:00.000Z	roostishaw	unperson	ok. wait one sec
+2006-02-24T14:19:00.000Z	roostishaw	unperson	then just hit ok?
+2006-02-24T14:19:00.000Z	unperson	roostishaw	When you're done, click ok and try updating.
+2006-02-24T14:19:00.000Z	unperson	roostishaw	Sorry, I'm slow.  :-)
+2006-02-24T14:20:00.000Z	unperson	roostishaw	Actually, after you hit ok, is should now say something about Universe and Multiverse in that entry in the repositories list.
+2006-02-24T14:24:00.000Z	unperson	roostishaw	Any luck?
+2006-02-24T14:25:00.000Z	roostishaw	unperson	k... one sec
+2006-02-24T14:25:00.000Z	roostishaw	unperson	np, thanks for ur help... wait one sec, ill try it
+2006-02-24T14:25:00.000Z	roostishaw	unperson	here is waht it says: The repository information has changes. A backup copy of your sources.list is stored in /etc/apt/sources.list.save.
+2006-02-24T14:25:00.000Z	roostishaw	unperson	ya, it did
+2006-02-24T14:25:00.000Z	roostishaw	unperson	then i hit ok
+2006-02-24T14:25:00.000Z	roostishaw	unperson	now do i hit yes or no?
+2006-02-24T14:25:00.000Z	roostishaw	unperson	The repository information has changes. A backup copy of your sources.list is stored in /etc/apt/sources.list.save.
+2006-02-24T14:25:00.000Z	roostishaw	unperson	You need to reload the package list from the servers for your changes to take effect. Do you want to do this now?
+2006-02-24T14:25:00.000Z	roostishaw	unperson	yes or no?
+2006-02-24T14:26:00.000Z	roostishaw	unperson	ya, it say if i want to update 'sources.list' ... yes or no?
+2006-02-24T14:26:00.000Z	roostishaw	unperson	now it says, "Downloading package info."
+2006-02-24T14:26:00.000Z	unperson	roostishaw	Yes, you'll have to.
+2006-02-24T14:27:00.000Z	roostishaw	unperson	ok... its downloading
+2006-02-24T14:27:00.000Z	unperson	roostishaw	The "sources.list" is a text file (/etc/apt/sources.list) that stores all your repository settings.
+2006-02-24T14:27:00.000Z	roostishaw	unperson	oh, ok
+2006-02-24T14:27:00.000Z	roostishaw	unperson	 will i have to do this to the source one too?
+2006-02-24T14:28:00.000Z	unperson	roostishaw	Well...only if you want to apt-get sources.  But yeah, it's probably not a bad idea.
+2006-02-24T14:29:00.000Z	roostishaw	unperson	some of the downloads are failing... i hit "show individual downloads"
+2006-02-24T14:29:00.000Z	unperson	roostishaw	Anyway, I think the error you were getting was because you were essentially trying to add the same repository all over again, when yuo really just needed to edit the existing ones to get different sections of it.
+2006-02-24T14:30:00.000Z	unperson	roostishaw	I see.  Which ones are failing?
+2006-02-24T14:30:00.000Z	roostishaw	unperson	here is what i got... "The repository might be no longer available or could not be contacted because of network problems. If available an older version of the failed index will be used. Otherwise the repository will be ignored. Check your network connection and the correct writing of the repository address in the preferences."
+2006-02-24T14:30:00.000Z	roostishaw	unperson	"ftp://ftp.free.fr/pub/Distributions_Linux/plf/ubuntu/plf/dists/breezy/Release.gpg: Could not connect to ftp.free.fr:21 (213.228.0.141), connection timed out"
+2006-02-24T14:32:00.000Z	unperson	roostishaw	I see.  Let me check something.
+2006-02-24T14:34:00.000Z	unperson	roostishaw	it looks like those errors are for a PLF repository, not the Universe or Muliverse.
+2006-02-24T14:34:00.000Z	unperson	roostishaw	I don't use the PLF repository right now, so I don't know much about it.
+2006-02-24T14:44:00.000Z	unperson	roostishaw	So the universe/multiverse issue is sorted out anyway?
+2006-02-24T15:18:00.000Z	roostishaw	unperson	are you there?

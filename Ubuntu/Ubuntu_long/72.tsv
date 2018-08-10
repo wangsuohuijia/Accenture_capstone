@@ -1,0 +1,45 @@
+2009-05-13T00:06:00.000Z	eggy_		Hello, using kubuntu, I want to connect to the wireless network on the campus. From windows vista (in which it was fairly easy to connect), I gathered that I need to set the settings to use WEP encryption with PEAP and EAP-MSCHAP v2. When I, in the kde network manager set it to web, I can't choose PEAP tho, then I can choose MSCHAPv2, and fill in username and password
+2009-05-13T00:07:00.000Z	eggy_		But when I do this, it just doesn't connect and the dialog pops up again. So how can I connect to the wireless network?
+2009-05-13T00:08:00.000Z	eggy_		I mean, with WPA-EAP I can choose MSCHAP.
+2009-05-13T00:08:00.000Z	eggy_		I have no idea what it all means, just that it doesn't work :((
+2009-05-13T00:10:00.000Z	eggy_		It keeps saying "Connection failed". And I have less luck with the gtk network settings manager
+2009-05-13T00:11:00.000Z	eggy_		So how do you guys connect to wireless networks with username and password?
+2009-05-13T00:11:00.000Z	eggy_		Why can't the settings manager detect the settings of the network?
+2009-05-13T00:12:00.000Z	eggy_		Seems like everyone has trouble with wireless networks
+2009-05-13T00:13:00.000Z	superdug2	eggy_	are you using NetworkManager ?
+2009-05-13T00:13:00.000Z	eggy_	superdug2	yes
+2009-05-13T00:14:00.000Z	eggy_	superdug2	and the Network Management applet
+2009-05-13T00:14:00.000Z	superdug2	eggy_	is the access point you're wanting to connect to showing up as an SSID in your pulldown ?
+2009-05-13T00:15:00.000Z	eggy_	superdug2	the SSID field doesn't have a pulldown, but it autodetected WLAN (which is the name of the access point)
+2009-05-13T00:16:00.000Z	superdug2	eggy_	some routers are "weird" about how they cache credentials ... you may need to delete any settings you've made and try again
+2009-05-13T00:16:00.000Z	eggy_	superdug2	ah, I see
+2009-05-13T00:20:00.000Z	eggy_	superdug2	what do I fill in for 'Anonymous identify'?
+2009-05-13T00:20:00.000Z	superdug2	eggy_	does your accesspoint use encryption? IE WPA?
+2009-05-13T00:21:00.000Z	eggy_	superdug2	WPA-EAP
+2009-05-13T00:21:00.000Z	eggy_	superdug2	or at least, it uses PEAP and MSCHAPv2, which I can only choose when selecting WPA-EAP
+2009-05-13T00:21:00.000Z	eggy_	superdug2	vista said the network used WEP, tho
+2009-05-13T00:21:00.000Z	superdug2	eggy_	can you set it to WPA(1 or 2) home + TKIP ?
+2009-05-13T00:22:00.000Z	eggy_	superdug2	I can only choose WPA-PSK and WPA-EAP in the dropdown box
+2009-05-13T00:23:00.000Z	eggy_	superdug2	also, do I need 'Infrastructure' or 'ad hoc' for Mode?
+2009-05-13T00:23:00.000Z	superdug2	eggy_	right, you want infrastructure, but on the router itself can you set it to use WPA Personal TKIP ?
+2009-05-13T00:24:00.000Z	superdug2	eggy_	in my experience the encryption is "good enough" and it configures across the board for all wifi devices
+2009-05-13T00:24:00.000Z	eggy_	superdug2	ah, the router itself. I have no control over the router, unfortunately. It's provided by the campus
+2009-05-13T00:24:00.000Z	superdug2	eggy_	do you have some kind of academic computer services a try?
+2009-05-13T00:25:00.000Z	eggy_	superdug2	well, I got it to work on the same laptop on windows vista
+2009-05-13T00:25:00.000Z	eggy_	superdug2	(I think that was your question, I didn't fully understand it)
+2009-05-13T00:25:00.000Z	superdug2	eggy_	no doubt, but there may be some kind of secondary verification layer.  Many higher education wifi networks have some sort of scanning tool that may just automatically run in Vista
+2009-05-13T00:25:00.000Z	eggy_	superdug2	I see, so what can I do?
+2009-05-13T00:26:00.000Z	superdug2	eggy_	contact your campus technical support would be the best step
+2009-05-13T00:26:00.000Z	eggy_	superdug2	oh I see. I'll try that then, thanks a lot for the help
+2009-05-13T00:26:00.000Z	superdug2	eggy_	I don't think the problem is your wireless card or ubuntu
+2009-05-13T00:28:00.000Z	eggy_	superdug2	I guess, but it's so weird, in vista you only have to provide username and password, in linux you have to fill in everything manually and it just refuses to work
+2009-05-13T00:28:00.000Z	superdug2	eggy_	I know ... your tech support should have alternative configuration settings for both Mac and Linux
+2009-05-13T00:29:00.000Z	eggy_	superdug2	sometimes I just get annoyed with all this. For instance, I have an intel graphics card, and the drivers don't support screens bigger than 2048x2048, so you can say goodbye to dual screen
+2009-05-13T00:29:00.000Z	eggy_	superdug2	and then there's the fact that kaffeine, xine, mplayer, and any video player except vlc segfault *the whole X server* sometimes
+2009-05-13T00:30:00.000Z	superdug2	eggy_	I run my netbook with one monitor at 1200x600 and the other at 1920x1080 and it has an intel graphics chipset
+2009-05-13T00:31:00.000Z	eggy_	superdug2	all on one intel card?
+2009-05-13T00:31:00.000Z	superdug2	eggy_	yup, with an atom processor none-the-less
+2009-05-13T00:31:00.000Z	eggy_	superdug2	there are many intel cards with different drivers I believe, but mine isn't supported for that
+2009-05-13T00:31:00.000Z	eggy_	superdug2	it's a "known bug" that just doesn't get fixed
+2009-05-13T00:31:00.000Z	superdug2	eggy_	I'm using a pretty old 945 set
+2009-05-13T00:32:00.000Z	eggy_	superdug2	ah. I wish I had an nvidia, the closed drivers just always worked for me :)

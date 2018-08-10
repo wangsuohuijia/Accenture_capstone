@@ -1,0 +1,38 @@
+2011-09-28T05:32:00.000Z	g0rs		usb disc creator is installed with ubuntu
+2011-09-28T05:32:00.000Z	g0rs		unetboot is a great software for creating installation disk or full OS installations.
+2011-09-28T05:34:00.000Z	qin	g0rs	apt-get install unetbootin ?
+2011-09-28T05:34:00.000Z	g0rs	qin	probably yes , please check
+2011-10-04T08:03:00.000Z	qin	g0rs	For hour long movie (lets say 60Gbyte), you need 17Mbyte/s transfer.
+2011-10-04T08:06:00.000Z	g0rs	qin	does any wlan router support data transfer upto 17 megabyte per second? i'm not sure if a computer can do that which runs linux. It should have raid or sata for that capability.
+2011-10-04T08:09:00.000Z	qin	g0rs	17Mbyte is theoretical, since there is much overhead on wlan.
+2011-10-13T02:10:00.000Z	g0rs	qin	do you use compiz?
+2011-10-13T02:11:00.000Z	qin	g0rs	Yes.
+2011-10-13T02:11:00.000Z	g0rs	qin	are animations working for you? i've enabled them in ccsm but there doesn't seem to any effects.
+2011-10-13T02:12:00.000Z	qin	g0rs	No idea, no x atm.
+2011-10-13T02:13:00.000Z	qin	g0rs	Did you edit setting per window?
+2011-10-13T02:13:00.000Z	g0rs	qin	yes, settings such as open,close,minimize
+2011-10-13T02:16:00.000Z	qin	g0rs	Is there any "!" in rules?
+2011-10-13T02:16:00.000Z	g0rs	qin	where the ! rules?
+2011-10-13T02:17:00.000Z	qin	g0rs	Recal that animation was set by window class, title, etc... Have you edit those?
+2011-10-13T02:17:00.000Z	g0rs	qin	there are logical oerations on windnows and they contain & and ! , so yes.
+2011-10-13T02:18:00.000Z	g0rs	qin	here is an example: ((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver)
+2011-10-13T02:19:00.000Z	qin	g0rs	Above missing )
+2011-10-13T02:20:00.000Z	qin	g0rs	No, my bad
+2011-10-13T02:20:00.000Z	g0rs	qin	is it at the end?  i think it misses ( and )
+2011-10-13T02:20:00.000Z	g0rs	qin	is it at the end?  i think it misses ( and )  in the second expresssion after &!
+2011-10-13T02:21:00.000Z	g0rs	qin	does it miss a ) at the end?
+2011-10-13T02:23:00.000Z	g0rs	qin	any ideas ?!
+2011-10-13T02:25:00.000Z	qin	g0rs	No, not really. Let me start x
+2011-10-13T02:26:00.000Z	g0rs	qin	thanks
+2011-10-13T02:28:00.000Z	g0rs	qin	please yell after you're back :0)
+2011-10-13T02:32:00.000Z	qin	g0rs	Dunno, can you try to use simple-ccsm in meanwhile.
+2011-10-13T02:32:00.000Z	g0rs	qin	okay i'll try simple-ccsm
+2011-10-13T02:34:00.000Z	g0rs	qin	there are dependencies issues with simple-ccsm . it doesn't list any of them.
+2011-10-13T02:36:00.000Z	g0rs	qin	a package needs upgradation. I 'll take a look at it later for now.
+2011-10-13T02:37:00.000Z	qin	g0rs	To get animation working you need to have proper rules, try to put as most top rule (type=Normal)  with effect of your like.
+2011-10-13T02:38:00.000Z	g0rs	qin	it's usually normal | unknown or normal | dialog
+2011-10-13T02:41:00.000Z	qin	g0rs	(type=Normal | Dialog | ModalDialog | Unknown) looks ok, but position of rule apparently do matter.
+2011-10-13T02:41:00.000Z	g0rs	qin	i got them working. It was to change otions in a drop down box for each window operation such as  open,close , minimize
+2011-10-13T02:42:00.000Z	qin	g0rs	drop down box? Where?
+2011-10-13T02:43:00.000Z	g0rs	qin	i had to select a type of animation in each window operation . For example in minimize operation, there was an entry , zoom, I changed it to something else .After that that particular animation was working for minimize window operation.
+2011-10-13T02:44:00.000Z	qin	g0rs	Well, good news.

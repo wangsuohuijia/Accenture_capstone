@@ -1,0 +1,56 @@
+2009-05-29T16:28:00.000Z	nmvictor		how do i write the copyright character in open office?
+2009-05-29T16:30:00.000Z	nmvictor		whats the channel name for open office ?
+2009-05-29T16:30:00.000Z	jrib	nmvictor	read ubottu's message at the end...
+2009-05-29T16:31:00.000Z	nmvictor	jrib	and coz_, thanks
+2009-05-29T16:33:00.000Z	jrib	nmvictor	I can tell you *a* way: use gnome character map
+2009-05-29T16:35:00.000Z	nmvictor	jrib	i tried character map and no help,im really short of ideas
+2009-05-29T16:35:00.000Z	jrib	nmvictor	it's there
+2009-05-29T16:35:00.000Z	jrib	nmvictor	under common
+2009-05-29T16:36:00.000Z	jrib	nmvictor	under "common"
+2009-05-29T16:36:00.000Z	jrib	nmvictor	ctrl-shift-u 00A9 ©
+2009-05-29T16:37:00.000Z	jrib	nmvictor	scroll... or just use the key combination I've just given you
+2009-05-29T16:38:00.000Z	jrib	nmvictor	press:  ctrl-shift-u 00A9
+2009-05-29T16:40:00.000Z	jrib	nmvictor	hit ctrl-shift-u, release, hit 0, release, hit 0, release, hit a, release, hit 9, release, space
+2009-05-29T16:41:00.000Z	nmvictor	jrib	that produces x13;
+2009-05-29T16:42:00.000Z	jrib	nmvictor	try again (pressing the correct keys this time)
+2009-05-29T16:42:00.000Z	jrib	nmvictor	you need to be in some gtk window iirc
+2009-05-29T16:44:00.000Z	jrib	nmvictor	should work in pidgin
+2010-02-21T01:05:00.000Z	jrib	nmvictor	read « man apt-get » about the "clean" and "autoclean" options
+2010-02-21T01:10:00.000Z	nmvictor	jrib	man ap-get dint have much usefull info,
+2010-02-21T01:10:00.000Z	jrib	nmvictor	no, you want « man apt-get » with a t
+2010-02-21T01:11:00.000Z	jrib	nmvictor	the "clean" and "autoclean" sections are what you want to read about in there
+2010-03-18T02:01:00.000Z	jrib	nmvictor	why aren't you just using the package in the repositories?
+2010-03-18T02:03:00.000Z	nmvictor	jrib	i would if i could but i cant for some reasons, i just want to work with my own compiled version for one, opting for repos is quite lazy and refusin to think, my opinion
+2010-03-18T02:04:00.000Z	jrib	nmvictor	erm, using repository packages has several advantages...
+2010-03-18T02:05:00.000Z	nmvictor	jrib	the updates
+2010-03-18T02:06:00.000Z	jrib	nmvictor	that's one, yes
+2010-03-18T02:06:00.000Z	nmvictor	jrib	what else?
+2010-03-18T02:07:00.000Z	jrib	nmvictor	it's easier, it allows for easier debugging, it's been tested to work with the other versions of software in the repositories
+2010-03-18T02:07:00.000Z	jrib	nmvictor	automatic dependencies and suggests installed...
+2010-03-18T02:14:00.000Z	nmvictor	jrib	so now that the compiled version is temporarly installed, wont intslling the repos version result in a mixup?
+2010-03-18T02:14:00.000Z	jrib	nmvictor	no, but depnding on where you installed your compiled version, you should remove it
+2010-03-18T02:18:00.000Z	jrib	nmvictor	it's usually /usr/local/, yes.  So when you type 'moc', it's probably calling /usr/local/bin/moc and not the repository's version
+2010-03-18T02:18:00.000Z	nmvictor	jrib	so whats should i do?
+2010-03-18T02:19:00.000Z	jrib	nmvictor	uninstall the version you compiled
+2010-03-18T02:21:00.000Z	nmvictor	jrib	thanks, it worked, now here comes another problem
+2010-04-29T19:14:00.000Z	jrib	nmvictor	gdm was rewritten, that feature doesn't exist yet afaik
+2010-04-29T19:16:00.000Z	nmvictor	jrib	meaning ubuntu users will have to do with what ubuntu developers decide to put in place, which make ubuntu a less Free as in Freedom software, right?
+2010-05-31T17:45:00.000Z	jrib	nmvictor	/etc/init
+2010-05-31T17:47:00.000Z	jrib	nmvictor	there should be tty[1-6].conf
+2010-05-31T17:48:00.000Z	nmvictor	jrib	yea, their are. My question was arent those config files to the consoles or the real consoles? just a query
+2010-05-31T17:49:00.000Z	jrib	nmvictor	well those are files for upstart jobs, they should be the same as just the tty1 files you referred to earlier
+2010-05-31T17:49:00.000Z	nmvictor	jrib	thanks
+2010-05-31T17:49:00.000Z	jrib	nmvictor	files without the .conf extension are ignored, so you can just rename the files if you want
+2010-06-05T02:27:00.000Z	jrib	nmvictor	"all appropriate steps" is vague.  What did you try?
+2010-06-05T02:29:00.000Z	nmvictor	jrib	i placed [ export TERM=xterm-256colors ] in my ~/.profile file and even in my /etc/environment.
+2010-06-07T01:05:00.000Z	jrib	nmvictor	just the panels, or more?
+2010-06-07T01:06:00.000Z	nmvictor	jrib	panels plus the theme, look and feel that is
+2010-06-07T01:06:00.000Z	jrib	nmvictor	and choose Human in Appearance
+2010-06-07T01:10:00.000Z	nmvictor	jrib	thanks :)
+2010-06-07T01:11:00.000Z	nmvictor	jrib	ooh, their aint human in the themes  appearance dialog
+2010-06-07T01:12:00.000Z	jrib	nmvictor	the name may have changed, pick the one that looks purple :P
+2010-06-07T01:12:00.000Z	nmvictor	jrib	ok, i appreciate
+2011-10-06T14:43:00.000Z	jrib	nmvictor	there are a few things wrong with your question.  The answer is "yes, use sysv-rc-conf", but ubuntu now uses upstart so you should stop thinking in terms of runlevels.  Also, ubuntu always boots to runlevel 2 by default
+2011-10-06T14:51:00.000Z	nmvictor	jrib	Sorry abt what you find wrong in my question, I'll come again in detail. I have Acer Aspire 5734z. It has issues with the backligh upon start up but using the 'setpci' command, I am able to write to the correct hardware address and get the backlight on.So I place the command in a script, shoved it under init.d and did update-rc.d on the script. However, seems like the bightness comes in later almost around when the login screen, so I want to sort of pr
+2011-10-06T14:54:00.000Z	jrib	nmvictor	in that case, you need to change the 2 digit sequence you passed to update-rc.d (referred to as "NN" in the man page).  That determines the order in which scripts are executed
+2011-10-06T14:58:00.000Z	nmvictor	jrib	thanks

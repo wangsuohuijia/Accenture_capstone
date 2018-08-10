@@ -1,0 +1,42 @@
+2011-06-02T21:57:00.000Z	nabi		hello
+2011-06-02T21:57:00.000Z	nabi		how can i upgrade my firefox in ubunut
+2011-06-02T21:58:00.000Z	nabi		yes
+2011-06-02T21:58:00.000Z	nabi		i have problem
+2011-06-02T21:58:00.000Z	nabi		with bookmark
+2011-06-02T22:00:00.000Z	nabi		please help
+2011-06-02T22:00:00.000Z	nabi		my firefox parse error when i want to bookmark a page
+2011-06-02T22:01:00.000Z	nabi		heloooooooo
+2011-06-02T22:01:00.000Z	GTRsdk	nabi	which firefox?
+2011-06-02T22:02:00.000Z	nabi		i cannot say
+2011-06-02T22:02:00.000Z	GTRsdk	nabi	Click on help -> ABout Firefox
+2011-06-02T22:02:00.000Z	nabi		because when i want to see about firefox
+2011-06-02T22:02:00.000Z	nabi		it parse an error
+2011-06-02T22:03:00.000Z	nabi		XML Parsing Error: error in processing external entity reference
+2011-06-02T22:03:00.000Z	nabi		Location: chrome://browser/content/aboutDialog.xul
+2011-06-02T22:03:00.000Z	nabi		Line Number 9, Column 1:%brandDTD;
+2011-06-02T22:03:00.000Z	nabi		^
+2011-06-02T22:03:00.000Z	GTRsdk	nabi	so it gives you an error when you click on About Firefox?
+2011-06-02T22:03:00.000Z	nabi		yes and something like that when i click on bookmark
+2011-06-02T22:04:00.000Z	GTRsdk	nabi	which Ubuntu version?
+2011-06-02T22:04:00.000Z	nabi		how can i say firefox version when it parse error
+2011-06-02T22:05:00.000Z	GTRsdk	nabi	check the Ubuntu version
+2011-06-02T22:05:00.000Z	nabi	GTRsdk	i cannot do that because error
+2011-06-02T22:05:00.000Z	nabi		oh
+2011-06-02T22:05:00.000Z	nabi		ok
+2011-06-02T22:05:00.000Z	nabi		<GTRsdk
+2011-06-02T22:05:00.000Z	nabi	GTRsdk	wiat please
+2011-06-02T22:06:00.000Z	nabi	GTRsdk	Linux LinuxU 2.6.15-23-386 #1 PREEMPT Tue May 23 13:49:40 UTC 2006 i686 GNU/Linux
+2011-06-02T22:06:00.000Z	GTRsdk	nabi	Ubuntu 10.04?
+2011-06-02T22:07:00.000Z	nabi		<wols_> ,No LSB modules are available.
+2011-06-02T22:07:00.000Z	nabi		Distributor ID: Ubuntu
+2011-06-02T22:07:00.000Z	nabi		Description:    Ubuntu 6.06.2 LTS
+2011-06-02T22:07:00.000Z	nabi		Release:        6.06
+2011-06-02T22:07:00.000Z	nabi		Codename:       dapper
+2011-06-02T22:07:00.000Z	GTRsdk	nabi	you might want to consider upgrading to 8.04
+2011-06-02T22:08:00.000Z	GTRsdk		then upgrade to 10.04
+2011-06-02T22:08:00.000Z	nabi		it is desktop
+2011-06-02T22:09:00.000Z	nabi		ok
+2011-06-02T22:09:00.000Z	GTRsdk	nabi	so go to upgrade manager and upgrade to 8.04 then to 10.04
+2011-06-02T22:09:00.000Z	nabi	GTRsdk	where is upgrade manager
+2011-06-02T22:09:00.000Z	nabi		?
+2011-06-02T22:09:00.000Z	GTRsdk	nabi	is it under System -> Administration -> Update Manager?

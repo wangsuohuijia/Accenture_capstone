@@ -1,0 +1,82 @@
+2007-09-27T16:33:00.000Z	darkangel_		hello is my other irc client woking
+2007-09-27T16:34:00.000Z	darkangel_		i have the kernal package and everything but dose it stay in the archive or do i extract it
+2007-09-27T16:36:00.000Z	peabody	darkangel_	Try not to forget to prefix your messages, I missed your last message.
+2007-09-27T16:37:00.000Z	darkangel_	peabody	oh opps um dose my source staty in its archive or do i extract it
+2007-09-27T16:37:00.000Z	darkangel_	peabody	i changed irc clients in darkangel_ now
+2007-09-27T16:38:00.000Z	peabody	darkangel_	My guess is you would extract it, but again, I advise you install the actual source package from synaptic for the particular ubuntu install.  You want to use a kernel source for your exact version, patches and all.
+2007-09-27T16:39:00.000Z	peabody	darkangel_	try to prefix, are you sure you have your exact kernel WITH the patches ubuntu uses?
+2007-09-27T16:39:00.000Z	peabody	darkangel_	If not, you can chance it, but I wouldn't advise it.
+2007-09-27T16:40:00.000Z	darkangel_	peabody	yes oh and ur name in xchat is yellow when you prefix me how do i change that
+2007-09-27T16:40:00.000Z	peabody	darkangel_	I believe it's under edit>preferences>colors.
+2007-09-27T16:42:00.000Z	darkangel_	peabody	kool i fixed it yell was almost invisable
+2007-09-27T16:42:00.000Z	peabody	darkangel_	Tab also autocompletes a partially typed name, makes prefixing faster
+2007-09-27T16:43:00.000Z	darkangel_	peabody	oh cool
+2007-09-27T16:44:00.000Z	peabody	darkangel_	scriptable via either perl or python as well
+2007-09-27T16:45:00.000Z	darkangel_	peabody	???
+2007-09-27T16:45:00.000Z	peabody	darkangel_	if you don't know what either of those things are don't worry about it :)
+2007-09-27T16:45:00.000Z	peabody	darkangel_	They're programming languages.
+2007-09-27T16:46:00.000Z	darkangel_	peabody	 i know that i use basic and a little C++ hey whats ubuntu
+2007-09-27T16:46:00.000Z	darkangel_	peabody	 but why were u telling me that
+2007-09-27T16:46:00.000Z	peabody	darkangel_	No reason :)
+2007-09-27T16:48:00.000Z	darkangel_	peabody	 oh lol hey the other day when in the terminal (the 100% no graphics one cause ubuntu wouldnt boot)  and i hit ctrl+D to reboot and it said cannot reboot will reboot in 5 seconds
+2007-09-27T16:48:00.000Z	peabody	darkangel_	That's classic :)
+2007-09-27T16:49:00.000Z	peabody	darkangel_	I don't think it does :).  I believe xchat is coded in C
+2007-09-27T16:49:00.000Z	peabody	darkangel_	you can write plugins for it either perl or python
+2007-09-27T16:50:00.000Z	darkangel_	peabody	i mean the ubuntu os
+2007-09-27T16:50:00.000Z	peabody	darkangel_	Many things.  The core of the Os is the linux kernel and the GNU programs which are all written in C
+2007-09-27T16:52:00.000Z	darkangel_	peabody	how do i move a folder on y desktop linux-source-2.6.20 to /usr/src/ w/p login back in as root
+2007-09-27T16:52:00.000Z	peabody	darkangel_	easier to do that from a terminal
+2007-09-27T16:53:00.000Z	darkangel_	peabody	 thats what i mean but im used to msdos i just converted to ubuntu 3 days ago
+2007-09-27T16:54:00.000Z	peabody	darkangel_	you can use 'sudo mv /path/to/file/or/folder /path/to/destination'
+2007-09-27T16:54:00.000Z	peabody	darkangel_	in a terminal that is.
+2007-09-27T16:54:00.000Z	peabody	darkangel_	mv is sort for move
+2007-09-27T16:54:00.000Z	peabody	darkangel_	it's used for renaming as well
+2007-09-27T16:58:00.000Z	darkangel_	peabody	 i keep getting errors how would i move /home/darkangel/Desktop/linux to /usr/src
+2007-09-27T16:59:00.000Z	peabody	darkangel_	first make sure something called linux isn't already there at your destination
+2007-09-27T16:59:00.000Z	darkangel_	peabody	ok there isnt
+2007-09-27T16:59:00.000Z	peabody	darkangel_	then run 'sudo mv /home/darkangel/Desktop/linux /usr/src
+2007-09-27T16:59:00.000Z	peabody	darkangel_	minus that quote character, sorry about that
+2007-09-27T05:00:00.000Z	darkangel_	peabody	thanks
+2007-09-27T05:02:00.000Z	darkangel_	peabody	 whats a good unraring program sides winrar
+2007-09-27T05:03:00.000Z	peabody	darkangel_	On Ubuntu?  you can install the unrar package and then fileroller can extract rars
+2007-09-27T05:04:00.000Z	darkangel_	peabody	i keep trying but it says unknown filetype do i need and update for fileroller (yes ubuntu)
+2007-09-27T05:04:00.000Z	peabody	darkangel_	did you install unrar?
+2007-09-27T05:06:00.000Z	darkangel_	peabody	 can i get that with tha symtemaptic packager thing
+2007-09-27T05:07:00.000Z	peabody	darkangel_	Yes, but I believe you have to enable the multiverse repository in the software sources control panel under administartion.
+2007-09-27T05:08:00.000Z	darkangel_	peabody	 can i sudo that
+2007-09-27T05:08:00.000Z	peabody	darkangel_	by editing the source.list file directly under /etc/apt
+2007-09-27T05:08:00.000Z	darkangel_	peabody	 if so whats the terminal
+2007-09-27T05:08:00.000Z	peabody	darkangel_	uncomment the sections where multiverse is.
+2007-09-27T05:10:00.000Z	darkangel_	peabody	 the restricted thing
+2007-09-27T05:11:00.000Z	peabody	darkangel_	restricted thing??
+2007-09-27T05:11:00.000Z	peabody	darkangel_	The multiverse is where non-free software resides.
+2007-09-27T05:11:00.000Z	darkangel_	peabody	 software restricted by copyright
+2007-09-27T05:11:00.000Z	peabody	darkangel_	unrar is free as in beer, but not as in freedom, so it's in multiverse.
+2007-09-27T05:13:00.000Z	darkangel_	peabody	lokk a few lines
+2007-09-27T05:15:00.000Z	peabody	darkangel_	so you uncommented the lines with multiverse?  Then try sudo apt-get update sudo apt-get install unrar
+2007-09-27T05:16:00.000Z	darkangel_	peabody	wait just found with package manager threr is unrar and unrar-free which one
+2007-09-27T05:17:00.000Z	darkangel_	peabody	 ahh il get em both
+2007-09-27T05:25:00.000Z	darkangel_	peabody	 thank 4 unrar
+2007-09-27T05:25:00.000Z	peabody	darkangel_	no problem
+2007-09-27T05:29:00.000Z	darkangel_	peabody	 i unrar a rar (duh) like this unrar e google earth and sky.rar (e means in current dir right) and i cant find the 3 exe files
+2007-09-27T05:30:00.000Z	peabody	darkangel_	You're trying to install google earth?  There's a native linux version, why aren't you using that?
+2007-09-27T05:31:00.000Z	peabody	darkangel_	crack?  To do what?
+2007-09-27T05:31:00.000Z	darkangel_	peabody	google earth linux ne way where can i get that
+2007-09-27T05:34:00.000Z	darkangel_	peabody	ive never used a *.bin file do i just dubble click it
+2007-09-27T05:35:00.000Z	peabody	darkangel_	I run those from the terminal using 'sh filename'
+2007-09-27T05:35:00.000Z	peabody	darkangel_	Remember, there's filename completion in a terminal with tab.  Just type part of a filename and hit tab
+2007-09-27T05:35:00.000Z	darkangel_	peabody	oh ok so sh file.bin
+2007-09-27T05:37:00.000Z	darkangel_	peabody	koll installing
+2007-09-27T05:37:00.000Z	darkangel_	peabody	Uncompressing Google Earth for GNU/Linux 4.2.198.2451
+2007-09-27T05:39:00.000Z	darkangel_	peabody	dose google earth need internet
+2007-09-27T05:39:00.000Z	peabody	darkangel_	yeah
+2007-09-27T05:40:00.000Z	peabody	darkangel_	Sorry, gotta take a break, be back in 15
+2007-09-27T05:52:00.000Z	darkangel_	peabody	dose google earth require a internetconnectionm
+2007-09-27T05:52:00.000Z	peabody	darkangel_	Yeah, it does
+2007-09-27T06:01:00.000Z	darkangel_	peabody	ok my grapick card sucks can i make google earth stop rendering till i can change some settings
+2007-09-27T06:02:00.000Z	peabody	darkangel_	Just try closing it.  You should see a dialog box asking if it's okay to force quit it after a feww seconds.
+2007-09-27T06:02:00.000Z	darkangel_	peabody	no i can get it to quit but can i get it to like stop moving the earth
+2007-09-27T06:03:00.000Z	peabody	darkangel_	and your graphics card doesn't necessarily suck, you might have to do something to get hardware acceleration.
+2007-09-27T06:03:00.000Z	darkangel_	peabody	hmm a 4mb graphics dosent suck lol
+2007-09-27T06:03:00.000Z	peabody	darkangel_	try killall googleearth from a terminal
+2007-09-27T06:03:00.000Z	peabody	darkangel_	heh, well, yeah, that's pretty low by today's standards.

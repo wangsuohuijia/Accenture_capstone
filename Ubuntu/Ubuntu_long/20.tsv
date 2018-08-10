@@ -1,0 +1,69 @@
+2005-09-18T07:52:00.000Z	fluffybunny_		i seem to have lost automount for my usb flash disk. also, the names displayed on the flashdisk are truncated to 8.3 format... how do I dix this
+2005-09-18T07:54:00.000Z	fluffybunny_		!usb
+2005-09-18T07:54:00.000Z	fluffybunny_		!mount
+2005-09-18T07:54:00.000Z	reiki_work	fluffybunny_	can you unmount the flash drive and remount it?
+2005-09-18T07:54:00.000Z	fluffybunny_	reiki_work	I have to manually mount and unmount it, but it used to do it as soon as I plugged it in?
+2005-09-18T07:55:00.000Z	reiki_work	fluffybunny_	I had the same problem with a flash drive that was formatted on a windows box and then used in Ubuntu. Is it being detected as /dev/sda1 ?
+2005-09-18T07:56:00.000Z	fluffybunny_	reiki_work	how do I check that? i mount it as "mount /dev/sda1 /media/usb" which works fine, so I think /dev/sda1 is being detected?
+2005-09-18T07:56:00.000Z	fluffybunny_	reiki_work	this was a disk last used on windows (similar problem last night with a disk used on a Mac)
+2005-09-18T07:58:00.000Z	reiki_work	fluffybunny_	that sounds right ... I had to make an entry in my /etc/fstab file to get mine to automount AND I reformatted it on the ubuntu box. So first get your needed file off the flash drive and THEN I formatted using mkdosfs /dev/sda1 so that it could also be read on windows machines
+2005-09-18T07:58:00.000Z	fluffybunny_	reiki_work	can't format it - its not my disk :)
+2005-09-18T07:59:00.000Z	reiki_work	fluffybunny_	if you JUST type    mount   i a terminal window ... what does it tell you about the file system on /dev/sda1 ?
+2005-09-18T08:00:00.000Z	fluffybunny_	reiki_work	um... there is nothing about dev/sda1 ...
+2005-09-18T08:00:00.000Z	reiki_work	fluffybunny_	you MIGHT need to type    sudo mount    ... to see all entries
+2005-09-18T08:00:00.000Z	fluffybunny_	reiki_work	was already in a root terminal - no sda1 in mount
+2005-09-18T08:00:00.000Z	reiki_work	fluffybunny_	 well that makes me believe it's no longer mounted if mount isn't seeing it
+2005-09-18T08:01:00.000Z	fluffybunny_	reiki_work	hang on - just checking if amd has been disable
+2005-09-18T08:02:00.000Z	reiki_work	fluffybunny_	try mounting it again using mount -t vfat uid=<yourusername> /dev/sda1 /media/usb
+2005-09-18T08:05:00.000Z	fluffybunny_	reiki_work	aside from a missing comma, that worked, and now I can see my long file names nicely :)
+2005-09-18T08:06:00.000Z	reiki_work	fluffybunny_	ok... cool... did you check your fstab file to see if there's an entry to automount that?
+2005-09-18T08:08:00.000Z	fluffybunny_	reiki_work	is ok - i got fstab open in gedit
+2005-09-18T08:08:00.000Z	reiki_work	fluffybunny_	 I believe it's  /etc/fstab  should be a line telling it to mount  vfat  /dev/dsa1 as /media/usb  noauto,user (no space between "noauto" and "user"  0  0  ... PLEASE check this against your current file as I may not quite have it all in here... I'm not at my Ubuntu box.
+2005-09-18T08:09:00.000Z	reiki_work	fluffybunny_	look at the way that file is and I'm sure you can get this right
+2005-09-18T08:14:00.000Z	reiki_work	fluffybunny_	how's it coming?
+2005-09-18T08:15:00.000Z	fluffybunny_	reiki_work	some gentoo guy sitting next to me told me not to mess with my fstab... he said that won't provide automounting?
+2005-09-18T08:15:00.000Z	reiki_work	fluffybunny_	he's wrong...  I just did this night before last
+2005-09-18T08:16:00.000Z	reiki_work	fluffybunny_	and mine works
+2005-09-18T08:17:00.000Z	reiki_work	fluffybunny_	what I'm telling you to do is what *I* was instructed to do here on this channel for all to see and believe me it works now. And before it was doing exactly what happened to you... mount once, then problems
+2005-09-18T08:18:00.000Z	reiki_work	fluffybunny_	mine didn't work "out of the box" either
+2005-09-18T08:18:00.000Z	fluffybunny_	reiki_work	thanks, will try it now - will I have to reboot first?\
+2005-09-18T08:18:00.000Z	reiki_work	fluffybunny_	 try just running mount -a
+2005-09-18T08:23:00.000Z	reiki_work	fluffybunny_	you all set? I have to get some quotes done. :) (I'm at work)
+2005-09-18T08:24:00.000Z	fluffybunny_	reiki_work	hmm, either mount -a didn't work, or the line I added to fstab doesn't work... /dev/sda1 /mnt/temp vfat noauto,user  0  0
+2005-09-18T08:26:00.000Z	reiki_work	fluffybunny_	ok... well... mine worked after a reboot, but I was told that mount -a would do what's in fstab. Hopefully I've given you the correct syntax, but if it matches up with the other similar lines in there it should work
+2005-09-18T08:27:00.000Z	reiki_work	fluffybunny_	I had that same question.... no... that's why the noauto is in there
+2005-09-18T08:28:00.000Z	reiki_work	fluffybunny_	before you reboot... can you paste your fstab file into the pastebin?
+2005-09-18T08:30:00.000Z	fluffybunny_	reiki_work	http://paste.ubuntulinux.nl/2156
+2005-09-18T08:32:00.000Z	reiki_work	fluffybunny_	if you mount it as /mnt/temp it won't show up on your desktop as far as I know. I mounted mine as /media/usbdisk and I had to create the /media/usbdisk directory for this to work.
+2005-09-18T08:32:00.000Z	fluffybunny_	reiki_work	/mnt/data and /mnt/windows appear on my desktop?
+2005-09-18T08:33:00.000Z	reiki_work	fluffybunny_	there MUST be another way to do this because teh automount system was dynamically creating and removing the mount point. The methos I just told you requires the mount point to be there apparently
+2005-09-18T08:33:00.000Z	reiki_work	fluffybunny_	ok... then looks fine
+2005-09-18T08:35:00.000Z	fluffybunny_	reiki_work	I am going to look around on google to see if I can't fix the HAL error first --> apparently, hal controls the mounting of cdroms and other removable media (or so I understand), so maybe if I fix that, it will come back?
+2005-09-18T08:35:00.000Z	reiki_work	fluffybunny_	if you find anything I'd like to know cause mine was busted too..... well not my HAL... at least not that I know of.
+2005-09-18T09:46:00.000Z	reiki_work	fluffybunny_	just curious... are you a member of the plugdev group on your machine?
+2005-09-18T09:46:00.000Z	fluffybunny_	reiki_work	plugdev? whats that?
+2005-09-18T09:46:00.000Z	fluffybunny_	reiki_work	i'm a n00b to linux - switched from windows a few months ago
+2005-09-18T09:47:00.000Z	reiki_work	fluffybunny_	I've been googling all over the place about the flash drive and one thing that came up in a couple places is that the user has to be in the plugdev group. Not sure how that pertains to the cdrom problem
+2005-09-18T09:47:00.000Z	reiki_work	fluffybunny_	I switched from xp to ubuntu about 3 and a half weeks ago
+2005-09-18T09:48:00.000Z	fluffybunny_	reiki_work	hmmm... I've been googling and its seems that the hal error that pops up on boot/login is related (apparently hal controls removable storage devices, like cds and usb disks)
+2005-09-18T09:48:00.000Z	reiki_work	fluffybunny_	if you're having HAL issues, I would think that needs to be fixed before anything else and I really don't have the abilty to help you with that one
+2005-09-18T09:48:00.000Z	fluffybunny_	reiki_work	i'm feeling like I am going to have to reinstall, which really sucks, like windows sucks
+2005-09-18T09:48:00.000Z	reiki_work	fluffybunny_	what's the error and where do you see it?
+2005-09-18T09:49:00.000Z	fluffybunny_	reiki_work	thanks - i figured as much, unfortunately, most of the stuff coming up in google is either (a) really hard core or (b) more people saying "hey, I have that problem too"
+2005-09-18T09:50:00.000Z	fluffybunny_	reiki_work	its a dialog box that pops up, saying failed to initialise HAL!
+2005-09-18T09:50:00.000Z	reiki_work	fluffybunny_	in Gnome, teh automounter is gnome-volume-manager and it uses udev and hald and probably more... to handle automounting. I'm just not finding a lot of info on HOW it does this :)
+2005-09-18T09:52:00.000Z	fluffybunny_	reiki_work	the hal message comes up just before this error: http://paste.ubuntulinux.nl/i2018
+2005-09-18T09:53:00.000Z	fluffybunny_	reiki_work	by the way, do you do reiki?
+2005-09-18T09:55:00.000Z	reiki_work	fluffybunny_	yes, I am a Master/Teacher in Usui Shiki Ryoho Reiki
+2005-09-18T09:56:00.000Z	fluffybunny_	reiki_work	cool - i did a few courses years ago (level 2), but I have fallen behind and forgotten how to do everything :|
+2005-09-18T09:56:00.000Z	reiki_work	fluffybunny_	... this is maybe a bit odd... but have you tried starting your machine with an audio CD in teh cd drive?
+2005-09-18T09:57:00.000Z	reiki_work	fluffybunny_	you never forget... it's like riding a bike :)
+2005-09-18T09:57:00.000Z	fluffybunny_	reiki_work	not an audio cd - data cd... hang on, i will put one in when I reboot in a minute
+2005-09-18T09:57:00.000Z	fluffybunny_	reiki_work	i've forgotten all the symbols, and my am surrounded by disbelievers anyway :)
+2005-09-18T09:58:00.000Z	reiki_work	fluffybunny_	the symbols are only needed when you are beginning... to keep you focused. Once you feel teh flow you don't need them any more
+2005-09-18T09:59:00.000Z	fluffybunny_	reiki_work	its a little odd, finding a reiki master on a linux channel --> usually, people who are into that kind of thing are completely anti-technology (I know, huge generalisation, but thats whats its been for the people i have met so far_
+2005-09-18T09:59:00.000Z	fluffybunny_	reiki_work	i don't count myself, of course ;)
+2005-09-18T10:01:00.000Z	fluffybunny_	reiki_work	rebooting now - back later
+2005-09-19T08:28:00.000Z	fluffybunny_	reiki_work	hey, how are you?
+2005-09-19T08:29:00.000Z	fluffybunny_	reiki_work	I've switched to KDE - no HAL or acpi errors
+2005-09-19T08:32:00.000Z	reiki_work	fluffybunny_	how do you like KDE desktop as opposed to Gnome desktop?

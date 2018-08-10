@@ -1,0 +1,86 @@
+2007-08-11T06:50:00.000Z	kauer	davetarmac	You can use both. Use the route command (or various other possibilities to achieve the same end) to use one interface for some destinations and the other interface for other destinations. For example "route -add host xbox.address.goes.here dev eth0" will send everything for the xbox over eth0. This is off the top of my head, you may need to do "man route" for the right syntax.
+2007-08-11T06:51:00.000Z	davetarmac	kauer	thanks for that - I'll try that if the subnet trick doesn't work
+2007-08-11T06:53:00.000Z	kauer	davetarmac	Falstius is right in that putting one interface in one subnet and the other interface in another subnet should bring both interfaces up without you having to do anything else. However, you lose the simplicity of one subnet and the usefulness of DHCP, as you probably don't have a second DHCP server in the XBox subnet and will have to set static addresses both on the local interface and on the XBox. If you are already using all
+2007-08-11T06:59:00.000Z	davetarmac	kauer	could you take a look at my route -n please?
+2007-08-11T06:59:00.000Z	kauer	davetarmac	I'll look at the "route -n" output for you...
+2007-08-11T06:59:00.000Z	davetarmac	kauer	http://pastebin.com/d7e54357d
+2007-08-11T07:01:00.000Z	kauer	davetarmac	How does wlan0 get an address - DHCP, or have you given it one yourself?
+2007-08-11T07:03:00.000Z	davetarmac	kauer	any ideas?
+2007-08-11T07:03:00.000Z	kauer	davetarmac	OK. I'm not familiar with nm-applet, but choose System->Administration->Network, and set up a static IP address (same subnet) on eth0. Obviously you should use an address that is not in use elsewhere in that subnet. Does the XBox already have an address configured, and can you normally ping it over the wireless interface (when the wired interface is not configured, i.e., right now?)
+2007-08-11T07:04:00.000Z	kauer	davetarmac	Actually, you might as well set eth0 up as DHCP too...
+2007-08-11T07:05:00.000Z	kauer	davetarmac	sorry, no scratch that. Am I right that the xbox/pc network is just a single cable? The xbox isn't "in" your network? If it *is* you can use DHCPon that interfae, otherwise...
+2007-08-11T07:19:00.000Z	kauer	davetarmac	No, this works. I do similar things all the time.
+2007-08-11T07:11:00.000Z	kauer	davetarmac	How does it look?
+2007-08-11T07:11:00.000Z	davetarmac	kauer	bear with me 2 seconds whilst I change the xbox IP
+2007-08-11T07:11:00.000Z	davetarmac	kauer	at th emoment, the Xbox connects to my computer through a ethernet cable
+2007-08-11T07:12:00.000Z	davetarmac	kauer	the IP of eth0 is now 192.168.1.14 and the IP of xbox is now 192.168.1.15
+2007-08-11T07:12:00.000Z	davetarmac	kauer	I can ping the the xbox with no trouble
+2007-08-11T07:12:00.000Z	kauer	davetarmac	Is this WITOUT the wire, or only WITH the wired interface configured?
+2007-08-11T07:13:00.000Z	kauer	davetarmac	That is, is the xbox attached directly to your computer, or via (say) a switch in your router.
+2007-08-11T07:17:00.000Z	kauer	davetarmac	Welcome back.
+2007-08-11T07:17:00.000Z	davetarmac	kauer	yeah, there was a little bit of a loss of all network access
+2007-08-11T07:18:00.000Z	kauer	davetarmac	Ah, sawed off the branch you were sitting on, eh?
+2007-08-11T07:18:00.000Z	davetarmac	kauer	nevermind - do you happen to know anywhere I can get a cheap wireless bridge from?
+2007-08-11T07:18:00.000Z	davetarmac	kauer	I htink that is the only way I can think of doing it
+2007-08-11T07:19:00.000Z	davetarmac	kauer	single cable between xbox and computer
+2007-08-11T07:19:00.000Z	davetarmac	kauer	it doesn't touch the network
+2007-08-11T07:20:00.000Z	kauer	davetarmac	With the xbox connected, and after having given eth0 a static IP address, please paste the output from "route -n" to the pastebin...
+2007-08-11T07:20:00.000Z	davetarmac	kauer	might lose internet again - which will mean me rebooting
+2007-08-11T07:21:00.000Z	kauer	davetarmac	If wlan0 drops when you configure eth0, then you are doing something wrong. Don't use nm-applet if this happens.
+2007-08-11T07:25:00.000Z	davetarmac	kauer	I have the route table, but cannot get to any pastebin to add it
+2007-08-11T07:25:00.000Z	davetarmac	kauer	all my http seems to be down
+2007-08-11T07:25:00.000Z	kauer	davetarmac	?!?! You can talk to me but not a website?
+2007-08-11T07:26:00.000Z	davetarmac	kauer	indeed
+2007-08-11T07:26:00.000Z	kauer	davetarmac	OK, that's weird. Well, lets try a private conversation, and you can paste the lines to me. I'm a GAIM newbie, so be gentle with me...
+2007-08-11T07:27:00.000Z	davetarmac	kauer	I've tried a PM - did that work?
+2007-08-11T07:28:00.000Z	kauer	davetarmac	Yes, I saw "can you see this". Clearly you did not see my replies :-(
+2007-08-11T07:28:00.000Z	davetarmac	kauer	no, i didn't
+2007-08-11T07:28:00.000Z	kauer	davetarmac	repeat the exercse with the route output.
+2007-08-11T07:29:00.000Z	kauer	davetarmac	Go it, wait a sec...
+2007-08-11T07:31:00.000Z	davetarmac	kauer	it's my DNS that is screwed up
+2007-08-11T07:31:00.000Z	davetarmac	kauer	I just visited the IP for google and I got straight through
+2007-08-11T07:32:00.000Z	kauer	davetarmac	OK, this takes two steps. First, we delete the default route over eth0, then we add a specific route over that interface just to your xbox. I'm a bit rusty on the syntax, so this may be a bit trial and error. Worst case, just shut down networking and restart it (you don't need to reboot, just do "sudo /etc/init.d/networking restart"). Ready to go?
+2007-08-11T07:32:00.000Z	davetarmac	kauer	ok, lets do this
+2007-08-11T07:32:00.000Z	kauer	davetarmac	You currently have two default routes, not good. We'll fix that though.
+2007-08-11T07:33:00.000Z	kauer	davetarmac	First we try deleting the default route completely: "sudo route del default". This may remove both, in which case do the net restart thing and tell me :-)
+2007-08-11T07:42:00.000Z	kauer	davetarmac	What happened? BTW I am an idiot, I wanted to delete the net route, not the default route! Why didn't someone stop me!?! :-)
+2007-08-11T07:42:00.000Z	kauer	davetarmac	Lets try that again, this time with feeling.
+2007-08-11T07:42:00.000Z	kauer	davetarmac	First, do you have the same route output as before? That is, with TWO entries for 192.168.1.0?
+2007-08-11T07:43:00.000Z	kauer	davetarmac	no, I just need to know that the eth0 interface is setup as before.
+2007-08-11T07:43:00.000Z	kauer	davetarmac	But by all means pm the output if you want.
+2007-08-11T07:45:00.000Z	davetarmac	kauer	you get my pm?
+2007-08-11T07:45:00.000Z	kauer	davetarmac	Yes, just cogitatin'. First we delete the net route over eth0: "sudo route del -net 192.168.1.0 dev eth0"
+2007-08-11T07:46:00.000Z	kauer	davetarmac	Then we set up a specific route to your xbox: "sudo route add -host 192.168.1.15 dev eth0"
+2007-08-11T07:46:00.000Z	kauer	davetarmac	Then we ping your xbox :-)
+2007-08-11T07:48:00.000Z	davetarmac	kauer	invalid argument when i try to do the sudo route del
+2007-08-11T07:48:00.000Z	kauer	davetarmac	Sorry, syntax error: "sudo route del -net 192.168.1.0/24 dev eth0"
+2007-08-11T07:49:00.000Z	davetarmac	kauer	excellent - that seems to work very well
+2007-08-11T07:50:00.000Z	davetarmac	kauer	even if we did get off to a sticky start ;)
+2007-08-11T07:50:00.000Z	kauer	davetarmac	Have you done the route add as well, and can you ping yr xboxx?
+2007-08-11T07:50:00.000Z	davetarmac	kauer	indeed.
+2007-08-11T07:50:00.000Z	kauer	davetarmac	Well, that config will disappear each time you restart networking (or boot). You need to make it permanent.
+2007-08-11T07:51:00.000Z	davetarmac	kauer	and how do i do that?
+2007-08-11T07:51:00.000Z	kauer	davetarmac	You could put the two route commands ina script an executethem on boot... there are other ways, you you want to know them?
+2007-08-11T07:51:00.000Z	davetarmac	kauer	sure
+2007-08-11T07:52:00.000Z	kauer	davetarmac	Darn, I hoped you'd say "no", 'cos I'm not sure I know them :-) Wait a sec...
+2007-08-11T07:57:00.000Z	kauer	davetarmac	The simplest way to do it is to create a script that does those two commands, and run it when you need it. Alternatively adda  script to /etc/init.d and name it so it runs after "networking" at runlevels 3, 4 and 5. There used to be a way of telling ifup about special routes, but I may be confusing Ubuntu with SuSE.
+2007-08-11T07:58:00.000Z	kauer	davetarmac	Anyway, now you know how, write it down for next time :-)
+2007-08-11T07:58:00.000Z	davetarmac	kauer	ok, we'll do the script thing and have it run on startup
+2007-08-11T07:58:00.000Z	kauer	davetarmac	Have fun.
+2007-08-11T07:58:00.000Z	davetarmac	kauer	silly question - how do i create a script?
+2007-08-11T07:58:00.000Z	kauer	davetarmac	Argh! :-)
+2007-08-11T08:01:00.000Z	kauer	davetarmac	Create a text file with the text editor. Put "!/bin/sh" as the first line. Put the two route lines as the second and third lines. Save it as (say) "xbox_routes.sh". Then "chmod u+x xbox_routes.sh". Then run it like this: "sudo /path/to/where/script/is/xbox_routes.sh". If you want a snazzy dialogue, set up a launcher on your taskbar and set the command to "gksudo /path/to/where/script/is/xbox_routes.sh"
+2007-08-11T08:02:00.000Z	davetarmac	kauer	cheers
+2007-08-11T08:02:00.000Z	kauer	davetarmac	Sorry first line is "#!/bin/sh"
+2007-08-11T08:03:00.000Z	davetarmac	kauer	ok
+2007-08-11T08:04:00.000Z	davetarmac	kauer	does it need the sudo's for each line?
+2007-08-11T08:04:00.000Z	kauer	davetarmac	No. The whole script will be run as root, so either "sudo script_name" or "gksudo script_name".
+2007-08-11T08:07:00.000Z	davetarmac	kauer	thanks for the help
+2007-08-12T15:20:00.000Z	davetarmac	kauer	hey man - having a spot of bother with that script we did yesterday. it didn't seem to want to play on startup. I've added it to the sessions with the command sudo /home/username/xbox_routes.sh but it didn't load on startup
+2007-08-12T15:26:00.000Z	kauer	davetarmac	Dave, my man! Still hacking on, I see!
+2007-08-12T15:26:00.000Z	davetarmac	kauer	you knows it. just need to find a way to run the script on boot
+2007-08-12T15:28:00.000Z	kauer	davetarmac	First make sure your script executes successfully in a terminal: "sudo scriptname". For safety's sake, it is wise to use fully qualified paths to all binaries in the script. Then execute "gksudo scriptname" in the session. At least I think that should work.
+2007-08-12T15:28:00.000Z	davetarmac	kauer	gksudo?
+2007-08-12T15:29:00.000Z	kauer	davetarmac	Pops up a dialog in X asking for your password.
+2007-08-12T15:29:00.000Z	davetarmac	kauer	I had to run the script manually this morning as I could only get to Google if I used the IP
+2007-08-12T15:29:00.000Z	davetarmac	kauer	fair enough. I'll find out tomorrow if it works - for now it ain't broke so I won't touch it ;)

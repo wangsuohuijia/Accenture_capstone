@@ -1,0 +1,74 @@
+2009-04-02T01:10:00.000Z	abstrakt		openssl and friends
+2009-04-02T01:10:00.000Z	abstrakt		Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl0.9.8_0.9.8g-4ubuntu3.4_amd64.deb  404 Not Found
+2009-04-02T01:11:00.000Z	abstrakt		what gives?
+2009-04-02T01:11:00.000Z	ActionParsnip	abstrakt	can you ping security.ubuntu.com
+2009-04-02T01:13:00.000Z	ActionParsnip	abstrakt	if you apt-get update before all installs you'll get fewer issues
+2009-04-02T01:13:00.000Z	abstrakt	ActionParsnip	k, good to know
+2010-03-31T00:30:00.000Z	abstrakt	ActionParsnip	i'm not gonna use gftp
+2010-03-31T00:30:00.000Z	abstrakt	ActionParsnip	i have no idea, i hate gftp
+2010-03-31T00:31:00.000Z	abstrakt	ActionParsnip	well it happens for any server i connect to
+2010-03-31T00:32:00.000Z	abstrakt	ActionParsnip	it's probably a bug then
+2010-03-31T00:32:00.000Z	abstrakt	ActionParsnip	i haven't messed around with other clients
+2010-03-31T00:32:00.000Z	abstrakt	ActionParsnip	though i'm fairly certain that filezilla does not have this problem
+2010-03-31T00:33:00.000Z	abstrakt	ActionParsnip	hahahahah, you're an idiot but thanks, peace out
+2010-05-11T22:02:00.000Z	ActionParsnip	abstrakt	run one in a terminal, you will get an output which will hopefully give an output
+2010-05-11T22:02:00.000Z	abstrakt	ActionParsnip	and output that will give an output lol
+2010-05-11T22:02:00.000Z	abstrakt	ActionParsnip	what does that mean?
+2010-05-11T22:03:00.000Z	ActionParsnip	abstrakt	the command ran in terminal will not hide kernel messages. very useful
+2010-05-11T22:04:00.000Z	abstrakt	ActionParsnip	yeah that didn't help at all
+2010-05-11T22:05:00.000Z	ActionParsnip	abstrakt	can you pastebin the text unless it only says "segfault"
+2010-05-11T22:06:00.000Z	abstrakt	ActionParsnip	it doesn't say segfault
+2010-05-11T22:06:00.000Z	abstrakt	ActionParsnip	the ubuntu forums said to add my user to the audio group
+2010-05-11T22:07:00.000Z	ActionParsnip	abstrakt	sweet, please use: http://pastebin.com to give the output
+2010-05-30T00:42:00.000Z	ActionParsnip	abstrakt	+1 for transmission dude :)
+2010-05-30T00:43:00.000Z	ActionParsnip	abstrakt	utorrent maxed out my system whenever the web interface was used on my old pc
+2010-06-14T00:46:00.000Z	ActionParsnip	abstrakt	sudo add-apt-repository ppa:sevenmachines/flash && sudo apt-get update && sudo apt-get install flashplugin64-installer
+2010-06-30T01:17:00.000Z	ActionParsnip	abstrakt	apt-cache search something
+2010-06-30T01:18:00.000Z	ActionParsnip	abstrakt	you can grep the output to reduce the output and make it more intelligent. Aptitude also has a terminal based gui
+2010-06-30T01:18:00.000Z	abstrakt	ActionParsnip	except i can't, since i'm on OSX right now
+2010-06-30T01:46:00.000Z	ActionParsnip	abstrakt	just use: sudo apt-get clean
+2010-09-28T23:16:00.000Z	ActionParsnip	abstrakt	write a script to wget the main page then sleep for 5 seconds
+2010-09-28T23:16:00.000Z	abstrakt	ActionParsnip	no that's a request every five seconds, I want five requests every second
+2010-11-01T04:59:00.000Z	ActionParsnip	abstrakt	recordmydesktop
+2010-11-01T04:59:00.000Z	abstrakt	ActionParsnip	so is that your preferred screen casting software on *nix?
+2010-11-01T05:00:00.000Z	ActionParsnip	abstrakt	i dont use one, its one I know about. why do you want one that#s "preferred" by a total stranger? Why not try a few and see which you preffer?
+2011-01-27T00:17:00.000Z	ActionParsnip	abstrakt	the settings are stored on a per-user basis, so storing it in $HOME makes sense, plus it makes backups clearer
+2011-01-27T00:17:00.000Z	ActionParsnip	abstrakt	swap for 4Gb RAM is 4Gb is you need suspend/hibernate
+2011-01-27T00:17:00.000Z	abstrakt	ActionParsnip	ohhh, right gotcha
+2011-01-27T00:18:00.000Z	ActionParsnip	abstrakt	if you don't then 4Gb is plenty unless you start going into large image manipulation / video editting / graphical design etc, but you should be fine
+2011-02-01T06:31:00.000Z	ActionParsnip	abstrakt	do it overnight, easy. Makes it better if you use firewire instead of slowass USB
+2011-02-01T06:33:00.000Z	ActionParsnip	abstrakt	use rsync and just backup what changes
+2011-02-01T06:33:00.000Z	abstrakt	ActionParsnip	hrm, yeah I suppose... I've been thinking about doing something similar with git or so to sync my files between the windows and *nix halves of this dual boot
+2011-02-20T06:29:00.000Z	ActionParsnip	abstrakt	if you run: free -m   what is output, use a pastebin to give the output
+2011-02-20T06:31:00.000Z	ActionParsnip	abstrakt	if you give the output, we can advise
+2011-02-20T06:32:00.000Z	abstrakt	ActionParsnip	^
+2011-02-20T06:32:00.000Z	abstrakt	ActionParsnip	let me run free -m, one sec
+2011-03-03T06:44:00.000Z	ActionParsnip	abstrakt	yes, it's called 'admin'
+2011-03-03T06:45:00.000Z	abstrakt	ActionParsnip	ok cool, so I just need to: adduser meself admin
+2011-03-03T06:45:00.000Z	ActionParsnip	abstrakt	that will need sudo, so do it as a user whom can use sudo or in a root recovery console
+2011-03-26T04:58:00.000Z	ActionParsnip	abstrakt	it is based on GTK though ;)
+2011-07-13T22:26:00.000Z	ActionParsnip	abstrakt	yes. You can even install an ssh server on Windows to use it
+2011-07-28T08:09:00.000Z	ActionParsnip	abstrakt	unity isn't a WM
+2011-07-28T08:10:00.000Z	ActionParsnip	abstrakt	unity is a shell, unity (not unity-2D) needs Compiz to be the WM. unity is nothing more than a shell
+2011-08-23T14:54:00.000Z	ActionParsnip	abstrakt	i suggest you set an hour to run at and use that in the cron
+2011-08-23T14:55:00.000Z	ActionParsnip	abstrakt	if you have a desktop system, you can install gnome-schedule and use that to configure jobs. run it with gksudo if you want to cron as root
+2011-12-05T05:07:00.000Z	ActionParsnip	abstrakt	is the service running?
+2011-12-12T00:21:00.000Z	ActionParsnip	abstrakt	runs perfectly here
+2011-12-12T00:22:00.000Z	ActionParsnip	abstrakt	Got precise here too, runs well even if compiz etc is a bit flakey
+2011-12-12T00:22:00.000Z	ActionParsnip	abstrakt	you can move them by holding ALT
+2011-12-12T00:22:00.000Z	ActionParsnip	abstrakt	it allows you to drag from anywhere
+2011-12-12T00:22:00.000Z	abstrakt	ActionParsnip	nope, that doesn't work
+2011-12-12T00:22:00.000Z	ActionParsnip	abstrakt	its ALL DEs, so it will work in XFCE
+2011-12-12T00:23:00.000Z	abstrakt	ActionParsnip	something is very broken
+2011-12-12T00:23:00.000Z	abstrakt	ActionParsnip	it's not just a matter of not knowing how to move a window
+2011-12-12T00:23:00.000Z	ActionParsnip	abstrakt	if you press ALT+F2 does it bring up a run dialogue?
+2011-12-12T00:23:00.000Z	ActionParsnip	abstrakt	fine, we get it
+2011-12-12T00:23:00.000Z	ActionParsnip	abstrakt	does ALT+F2 work
+2011-12-12T00:24:00.000Z	ActionParsnip	abstrakt	then run: xfwm4 --replace
+2011-12-12T00:25:00.000Z	ActionParsnip	abstrakt	or press CTRL+ALT+T and run it in terminal#
+2011-12-12T00:25:00.000Z	ActionParsnip	abstrakt	alt+tab
+2011-12-12T00:25:00.000Z	ActionParsnip	abstrakt	if the command works, you can add it to your startup items
+2011-12-12T00:25:00.000Z	abstrakt	ActionParsnip	alt-tab doesn't work either
+2011-12-12T00:26:00.000Z	ActionParsnip	abstrakt	obviously if you use compiz then run:  compiz --replace
+2011-12-12T00:28:00.000Z	abstrakt	ActionParsnip	you still there? that worked, thanks
+2011-12-12T00:28:00.000Z	abstrakt	ActionParsnip	how did you know to do that?

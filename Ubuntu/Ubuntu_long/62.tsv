@@ -1,0 +1,58 @@
+2009-12-18T08:17:00.000Z	lazydragoon		someone know how to go in system config in ubuntu ?
+2009-12-18T08:17:00.000Z	lazydragoon		set up pulaudio to delete
+2009-12-18T08:17:00.000Z	lazydragoon		for sky
+2009-12-18T08:17:00.000Z	lazydragoon		skype &*
+2009-12-18T08:18:00.000Z	lazydragoon		because in skype i can't set up my headset only pulaudio is the iption
+2009-12-18T08:18:00.000Z	lazydragoon		option *
+2009-12-18T08:18:00.000Z	Drknzz	lazydragoon	pulseaudio is just a wrapper around alsa, so if selecting pulseaudio wont work, try with another microfone or sth
+2009-12-18T08:19:00.000Z	lazydragoon		o
+2009-12-18T08:19:00.000Z	lazydragoon		well my microphone is usb
+2009-12-18T08:21:00.000Z	Drknzz	lazydragoon	hmmm, i think something is need for usb audio stuff
+2009-12-18T08:21:00.000Z	lazydragoon	Drknzz	o really
+2009-12-18T08:21:00.000Z	lazydragoon	Drknzz	 do you know what it is because in amsn all work great
+2009-12-18T08:21:00.000Z	Drknzz	lazydragoon	gimme a minute :)
+2009-12-18T08:21:00.000Z	lazydragoon	Drknzz	 thanks very apreciate
+2009-12-18T08:27:00.000Z	Drknzz	lazydragoon	i think i found some stuff, but i need to keep on reading a bit more
+2009-12-18T08:27:00.000Z	lazydragoon	Drknzz	ok thanks
+2009-12-18T08:27:00.000Z	Drknzz	lazydragoon	try checking your veolume levels, just in case ;)
+2009-12-18T08:29:00.000Z	lazydragoon	Drknzz	ok i found someonthing about in the volume i have mic 1 mic 2 and line in but all not have any sound when i tlk in my mic
+2009-12-18T08:30:00.000Z	Drknzz	lazydragoon	is there any option to set each of them as default? (ignore line-in)
+2009-12-18T08:30:00.000Z	lazydragoon	Drknzz	umm let me take a look
+2009-12-18T08:31:00.000Z	lazydragoon	Drknzz	only choose what i want to be use like mic 1 or mic 2 i can set what i want be use
+2009-12-18T08:32:00.000Z	Drknzz	lazydragoon	try recording a sound with each of those 2 and identify which one is the usb one
+2009-12-18T08:32:00.000Z	lazydragoon		ok
+2009-12-18T08:33:00.000Z	lazydragoon		ok
+2009-12-18T08:35:00.000Z	lazydragoon	Drknzz	none of those work
+2009-12-18T08:36:00.000Z	Drknzz	lazydragoon	weird, try desconecting the usb mic and see if any devices are listed
+2009-12-18T08:37:00.000Z	lazydragoon	Drknzz	i can select the mic 1 and mic 2
+2009-12-18T08:37:00.000Z	lazydragoon		again
+2009-12-18T08:37:00.000Z	Drknzz	lazydragoon	re-open the dialog so it re-scans ;)
+2009-12-18T08:37:00.000Z	lazydragoon	Drknzz	o i plug it back and now i got my usb name
+2009-12-18T08:38:00.000Z	Drknzz	lazydragoon	Somehow, thats a n advancement
+2009-12-18T08:38:00.000Z	Drknzz	lazydragoon	xD
+2009-12-18T08:38:00.000Z	lazydragoon	Drknzz	 reopen the dialog ?
+2009-12-18T08:39:00.000Z	Drknzz	lazydragoon	just close the program and go to system prefrences sound agin ;)
+2009-12-18T08:39:00.000Z	lazydragoon	Drknzz	ok can i set the sound of the voice in my headphone ?
+2009-12-18T08:40:00.000Z	Drknzz	lazydragoon	reformulate that, couldnt understand :p
+2009-12-18T08:40:00.000Z	lazydragoon	Drknzz	sorry my english suck sometime
+2009-12-18T08:41:00.000Z	Drknzz	lazydragoon	XD, mine too, so dont worry at all
+2009-12-18T08:41:00.000Z	lazydragoon	Drknzz	ok i want the sound of the voice of skype to be in my headphone
+2009-12-18T08:42:00.000Z	Drknzz	lazydragoon	you'll have to set-up your headset as the default output any time you want that to happen
+2009-12-18T08:43:00.000Z	lazydragoon	Drknzz	ok but only the voice in the headphone and the rest in my speaker
+2009-12-18T08:44:00.000Z	Drknzz	lazydragoon	idk, maybe we can look into that afer this/
+2009-12-18T08:44:00.000Z	lazydragoon	Drknzz	ok
+2009-12-18T08:44:00.000Z	Drknzz	lazydragoon	check this out; http://www.blog.arun-prabha.com/2008/05/23/skype-microphone-problem-and-complete-pulse-audio-setup-in-ubuntu/
+2009-12-18T08:44:00.000Z	Drknzz	lazydragoon	it aint for karmic, but it might work
+2009-12-18T08:52:00.000Z	lazydragoon	Drknzz	umm the page you send me is not for 9.10 can you look for a 9.10 look like it plz ?
+2009-12-18T08:53:00.000Z	Drknzz	lazydragoon	follow the instructions, the package names should be thesame
+2009-12-18T08:54:00.000Z	lazydragoon	Drknzz	 no at the first install said the package are old and replace by liboa2 and was already install but in the image on the web page look like very better than mine
+2009-12-18T08:54:00.000Z	lazydragoon	Drknzz	 with more option than mine
+2009-12-18T08:56:00.000Z	Drknzz		install the versions on the repos man
+2009-12-18T08:59:00.000Z	lazydragoon	Drknzz	i found something http://ubuntuguide.org/wiki/Ubuntu:Karmic#Pulse_Audio
+2009-12-18T09:01:00.000Z	lazydragoon	Drknzz	ok with it i have set my headphone and anythign if you get this again you will be able to answer hope i help you :)
+2009-12-18T09:05:00.000Z	lazydragoon	Drknzz	thanks for your help without you i never be abble to done that
+2009-12-18T09:10:00.000Z	Drknzz	lazydragoon	so you made it/
+2009-12-18T09:10:00.000Z	Drknzz		?
+2009-12-18T09:10:00.000Z	Drknzz	lazydragoon	i wasnt here, sorry
+2009-12-18T09:10:00.000Z	lazydragoon	Drknzz	yep i made it with pulseaudio applet
+2009-12-18T09:11:00.000Z	Drknzz	lazydragoon	Great :D

@@ -1,0 +1,91 @@
+2006-04-10T13:34:00.000Z	PwcrLinux		Hello, I have a question about updates notification, should I ticked all of them or I choose some of them?
+2006-04-10T13:34:00.000Z	_jason	PwcrLinux	choose the ones you want.  If bandwidth is not an issue, I would just choose all
+2006-04-10T13:35:00.000Z	PwcrLinux	_jason	i am on cable connection, and should I choose all of them?
+2006-04-10T13:36:00.000Z	_jason	PwcrLinux	which dialog are you referring to exactly?
+2006-04-10T13:36:00.000Z	PwcrLinux	_jason	next to my battery icon
+2006-04-10T13:38:00.000Z	_jason	PwcrLinux	as long as you haven't added outside repos, you should be ok
+2006-04-10T13:39:00.000Z	PwcrLinux	_jason	okay, should I take it all of them to update it or some of them? I am on the lappy
+2006-04-10T13:39:00.000Z	_jason	PwcrLinux	all are fine
+2006-04-10T13:40:00.000Z	_jason	PwcrLinux	maybe that will help you
+2006-04-10T13:40:00.000Z	PwcrLinux	_jason	okay great and thanks I'm gonna updating now..
+2006-04-10T13:57:00.000Z	PwcrLinux	_jason	it's works great in the updates and rebooted the box :)
+2006-04-11T07:23:00.000Z	PwcrLinux	_jason	polpak left a channel, and I needed up with a DVD movie play.. and I already installed the ccs and others, and the DVD cannot play, menus overlapped other menus, had to eject the DVD out by the mouse..
+2006-04-11T07:23:00.000Z	_jason	PwcrLinux	you mean libdvdcss?
+2006-04-11T07:24:00.000Z	PwcrLinux	_jason	no, it's in the restricted wiki site..
+2006-04-11T07:26:00.000Z	_jason	PwcrLinux	did you ever run /usr/share/doc/libdvdread3/examples/install-css.sh to install libdvdcss?
+2006-04-11T07:28:00.000Z	_jason	PwcrLinux	what player are you using?  and is the problem only that the dvd loads but the menus are screwed up?
+2006-04-11T07:28:00.000Z	PwcrLinux	_jason	Totem
+2006-04-11T07:28:00.000Z	_jason	PwcrLinux	totem with xine or gstreamer backend?
+2006-04-11T07:29:00.000Z	PwcrLinux	_jason	non theme players, just plain totem
+2006-04-11T07:29:00.000Z	_jason	PwcrLinux	for dvd's I like xine, try installing gxine or xine-ui (or totem-xine if you want)
+2006-04-11T07:30:00.000Z	PwcrLinux	_jason	Okay, how I get the xine? I looked at other site looks good, does they have CC and stubtitles?
+2006-04-11T07:31:00.000Z	_jason	PwcrLinux	what is CC?
+2006-04-11T07:31:00.000Z	PwcrLinux	_jason	closed caption
+2006-04-11T07:31:00.000Z	_jason	PwcrLinux	I'll check them for you, I have never used it
+2006-04-11T07:32:00.000Z	PwcrLinux	_jason	okay
+2006-04-11T07:32:00.000Z	_jason	PwcrLinux	yes, I checked xine-ui and gxine and both have subtitle preferences.  I think gxine looks nicer in gnome, you should try that one imo
+2006-04-11T07:34:00.000Z	PwcrLinux	_jason	my DVD movies either CC and stubtitles. single player should have both CC or Stubtitle. just make sure it's both there..
+2006-04-11T07:35:00.000Z	_jason	PwcrLinux	just install gxine and try it :)  you can always remove it with one click if you don't like it
+2006-04-11T07:35:00.000Z	PwcrLinux	_jason	the totem only have stubtitles, no CC in other options..
+2006-04-11T07:35:00.000Z	PwcrLinux	_jason	okay how I get the gxine?
+2006-04-11T07:36:00.000Z	_jason	PwcrLinux	enable the universe repository and use synaptic
+2006-04-11T07:37:00.000Z	PwcrLinux	_jason	how to enable it, which program to be enabled it?
+2006-04-11T07:48:00.000Z	PwcrLinux	_jason	Aha! I got it, and then the screen warns me, should I back the the source.lst up or just cancelled not able to view it..
+2006-04-11T07:48:00.000Z	_jason	PwcrLinux	huh?
+2006-04-11T07:51:00.000Z	_jason	PwcrLinux	were you able to add universe?
+2006-04-11T07:53:00.000Z	PwcrLinux	_jason	I got multimedia universal showed up and not seen the xgine program
+2006-04-11T07:53:00.000Z	_jason	PwcrLinux	it's gxine
+2006-04-11T07:54:00.000Z	PwcrLinux	_jason	not in there
+2006-04-11T07:54:00.000Z	_jason	PwcrLinux	put the contents of /etc/apt/sources.list on http://paste.ubuntu-nl.org/ please
+2006-04-11T07:55:00.000Z	PwcrLinux	_jason	how copy and paste the list file?
+2006-04-11T07:55:00.000Z	_jason	PwcrLinux	gedit /etc/apt/sources.list
+2006-04-11T08:01:00.000Z	PwcrLinux	_jason	it's appeared text file about sources.list readonly
+2006-04-11T08:01:00.000Z	_jason	PwcrLinux	I just need you to copy what you see, paste it at http://paste.ubuntu-nl.org/ and then give me a link
+2006-04-11T08:03:00.000Z	PwcrLinux	_jason	done
+2006-04-11T08:04:00.000Z	_jason	PwcrLinux	link?
+2006-04-11T08:04:00.000Z	PwcrLinux	_jason	http://paste.ubuntu-nl.org/11556
+2006-04-11T08:05:00.000Z	_jason	PwcrLinux	you have universe, you should be able to see gxine in synaptic.  If that is giving you trouble, you can just do: sudo aptitude install gxine
+2006-04-11T08:08:00.000Z	PwcrLinux	_jason	E: Could not get lock /var/lib/dpkg/lock - open (11 Resource temporarily unavailable)
+2006-04-11T08:08:00.000Z	_jason	PwcrLinux	close synaptic
+2006-04-11T08:10:00.000Z	PwcrLinux	_jason	aha, looks good now :)
+2006-04-11T08:10:00.000Z	PwcrLinux	_jason	now which one I can open it?
+2006-04-11T08:11:00.000Z	_jason	PwcrLinux	sound and video > gxine
+2006-04-11T08:15:00.000Z	PwcrLinux	_jason	Kernel version-OK, MTRR-OK, CDROM-Failed, DVD-OK, DMA mode-Failed, X11-OK and Mit xv-OK
+2006-04-11T08:15:00.000Z	_jason	PwcrLinux	ok?
+2006-04-11T08:15:00.000Z	PwcrLinux	_jason	setup wizards
+2006-04-11T08:16:00.000Z	_jason	PwcrLinux	and does your media play?
+2006-04-11T08:19:00.000Z	PwcrLinux	_jason	it's works!
+2006-04-11T08:19:00.000Z	_jason	PwcrLinux	great
+2006-04-11T08:20:00.000Z	PwcrLinux	_jason	How I set the default to gxine?
+2006-04-11T08:21:00.000Z	_jason	PwcrLinux	you mean when you pop in a dvd?
+2006-04-11T08:21:00.000Z	PwcrLinux	_jason	yes
+2006-04-11T08:21:00.000Z	_jason	PwcrLinux	system > prefernces > removable drives and media
+2006-04-11T08:22:00.000Z	PwcrLinux	_jason	okay let me look at it
+2006-04-11T08:23:00.000Z	PwcrLinux	_jason	I found DVD command box, which the filename need to be in?
+2006-04-11T08:23:00.000Z	_jason	PwcrLinux	change totem to gxine
+2006-04-11T08:24:00.000Z	PwcrLinux	_jason	done
+2006-04-11T08:24:00.000Z	_jason	PwcrLinux	yep
+2006-04-11T08:25:00.000Z	PwcrLinux	_jason	Hmm I press the eject button doesn't comes out and I must use a mouse to eject it out..
+2006-04-11T08:25:00.000Z	_jason	PwcrLinux	yes
+2006-04-11T08:26:00.000Z	PwcrLinux	_jason	seem work prefectly :)
+2006-04-11T08:27:00.000Z	PwcrLinux	_jason	I popped the DVD in and it's auto opening gxine
+2006-04-11T08:32:00.000Z	PwcrLinux	_jason	Hmmm my dvd seem little paused every seconds, Should i need to turn on the DMA?
+2006-04-11T08:32:00.000Z	_jason	PwcrLinux	yeah
+2006-04-11T08:52:00.000Z	PwcrLinux	_jason	how I can find my CD param line like as hdc or what?
+2006-04-11T08:52:00.000Z	_jason	PwcrLinux	check /etc/fstab to see where it is getting mounted
+2006-04-11T08:53:00.000Z	PwcrLinux	_jason	fstab in the terminal box?
+2006-04-11T08:54:00.000Z	_jason	PwcrLinux	gedit /etc/fstab
+2006-04-11T08:56:00.000Z	PwcrLinux	_jason	/dev/hdc        /media/cdrom0   udf,iso9660 user,noauto     0       0
+2006-04-11T09:34:00.000Z	PwcrLinux	_jason	I'm back
+2006-04-11T09:35:00.000Z	PwcrLinux	_jason	u there?
+2006-04-11T10:01:00.000Z	PwcrLinux	_jason	DMA look better now, no more little pausing in my DVD movies :)
+2006-04-13T07:18:00.000Z	PwcrLinux	_jason	Did you enable the DMA for the CDRW/DVD drive?
+2006-04-13T07:18:00.000Z	_jason	PwcrLinux	yep
+2006-04-13T07:19:00.000Z	PwcrLinux	_jason	how old on your CD drive?
+2006-04-13T07:21:00.000Z	_jason	PwcrLinux	4 years, it's a toshiba sd-c2612 .  It's known to have problems from what I have gathered, but since it works sometimes I was hoping there could be something I could do to make it work more often
+2006-04-13T07:21:00.000Z	PwcrLinux	_jason	Hmm 4 years old need to replace it, since the laser going bad..
+2006-04-13T07:22:00.000Z	_jason	PwcrLinux	hrmm I see
+2006-04-13T07:24:00.000Z	PwcrLinux	_jason	vibration or laser bad, then replace new one. I've experinced with my CD drive vibrations goes bad, and I replaced the slim drive for my lappy, it's works good,  better get a sony or LG, not cheapie CD drive which is have no caches on it..
+2006-04-13T07:25:00.000Z	_jason	PwcrLinux	alright cool, what's an approximate price on what it cost you for the laptop one?
+2006-04-13T07:26:00.000Z	PwcrLinux	_jason	it's $69.99 at local puter shop I bought it..
+2006-04-25T15:28:00.000Z	PwcrLinux	_jason	did you get 4 updates? just all 4 installed and small terminal box show error or warning does it's affects on yours?

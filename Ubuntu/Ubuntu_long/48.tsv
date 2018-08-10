@@ -1,0 +1,84 @@
+2007-10-25T08:09:00.000Z	hwilde		Why is every application that I open linked to the top panel and I cannot move them?  Where is the menu bar and the X button to close the app??
+2007-10-25T08:09:00.000Z	Jordan_U	hwilde	Your window manager has crashed
+2007-10-25T08:09:00.000Z	hwilde	Jordan_U	waaah ?
+2007-10-25T08:09:00.000Z	Jordan_U	hwilde	try running "metacity --replace"
+2007-10-25T08:10:00.000Z	hwilde	Jordan_U	you have got to be kidding me this is included by defualt now?
+2007-10-25T08:11:00.000Z	Jordan_U	hwilde	Not my choice ;)
+2007-10-25T08:11:00.000Z	hwilde	Jordan_U	ok so I did that then exited the terminal now it is really crashed and I cannot type anything
+2007-10-25T08:12:00.000Z	Jordan_U	hwilde	Why did you close the terminal?
+2007-10-25T08:12:00.000Z	hwilde	Jordan_U	umm the real question is why do I have to keep my window manager alive in a temrinal
+2007-10-25T08:12:00.000Z	Jordan_U	hwilde	alt+F2 and run "metacity --replace"
+2007-10-25T08:13:00.000Z	hwilde	Jordan_U	yeah i did that... Window manager error: Unable to open X display
+2007-10-25T08:13:00.000Z	Jordan_U	hwilde	Not ctrl+alt+F2 :)
+2007-10-25T08:14:00.000Z	Jordan_U	hwilde	alt+f2 in gnome brings up a run dialog
+2007-10-25T08:14:00.000Z	hwilde	Jordan_U	alt+f2 does nothing for me
+2007-10-25T08:15:00.000Z	hwilde	Jordan_U	no wonder this channel is so busy....  I guess i'll go install xfce now
+2007-10-25T08:16:00.000Z	Jordan_U	hwilde	Ok, then in a console (ctrl+alt+F1-6 ) run "DISPLAY=":0" metacity --replace
+2007-10-25T08:16:00.000Z	Jordan_U	hwilde	You could also just restart X
+2007-10-25T08:17:00.000Z	hwilde	Jordan_U	are u sure about those quotes
+2007-10-25T08:17:00.000Z	Jordan_U	hwilde	Yes
+2007-10-25T08:18:00.000Z	hwilde	Jordan_U	if I type it in like you said the quotes do not match up
+2007-10-25T08:18:00.000Z	Jordan_U	hwilde	Well, don't actually type the first one ;) My bad
+2007-10-25T08:18:00.000Z	hwilde	Jordan_U	but anyways I get the idea...   Window manager error: Unable to open X display :0
+2007-10-25T08:19:00.000Z	hwilde	Jordan_U	this is not worth debugging.  I have to go install a more reliable wm now :/
+2007-10-25T08:19:00.000Z	Jordan_U	hwilde	Just disable compiz
+2007-10-25T08:19:00.000Z	hwilde	Jordan_U	yeah that how
+2007-10-25T08:19:00.000Z	Jordan_U	hwilde	System -> Preferences -> Appearance
+2007-10-25T08:20:00.000Z	hwilde	Jordan_U	the menu is not responding... how do i restart X nowadays
+2007-10-25T08:20:00.000Z	Jordan_U	hwilde	ctrl+alt+backspace
+2007-10-25T08:28:00.000Z	hwilde	Jordan_U	is there any way I can permanently have sudo access?  I am freaking tired of typing in my password everytime I want to run synaptic
+2007-10-25T08:29:00.000Z	Jordan_U	hwilde	sudo -s
+2007-10-25T08:30:00.000Z	Jordan_U	hwilde	Or if you are going to be running GUI applications it's probably better to do "gksudo gnome-terminal"
+2007-10-25T08:39:00.000Z	hwilde	Jordan_U	if this pos locks up one more time i'm reformatting the drive and reinstalling feisty
+2007-10-25T08:39:00.000Z	Jordan_U	hwilde	Just disable compiz
+2007-10-25T08:39:00.000Z	hwilde	Jordan_U	I can't I have to reboot again
+2007-10-25T08:40:00.000Z	Jordan_U	hwilde	What do you mean?
+2007-10-25T08:40:00.000Z	hwilde	Jordan_U	I was in the middle of synaptic install and it locked up again so now I have to reboot and fix the packages
+2007-10-25T08:41:00.000Z	hwilde	Jordan_U	i'm emailing shuttlesworth.  this is so not worth it for fancy effects
+2007-10-25T08:45:00.000Z	hwilde	Jordan_U	I ran sudo -s   but it still asks me for the password for everything
+2007-10-25T08:46:00.000Z	Jordan_U	hwilde	You need to run programs from that terminal for them to run as root
+2007-10-25T08:47:00.000Z	hwilde	Jordan_U	but what if I click on the menu, like for Synaptic.  nobody else touches this computer so why do I have to type in my password if I want to change the clock settings
+2007-10-25T08:47:00.000Z	Jordan_U	hwilde	same reason you need to in OSx and Vista, security
+2007-10-25T08:48:00.000Z	hwilde	Jordan_U	but doesn't it just touch a .password file somewhere?
+2007-10-25T08:48:00.000Z	Jordan_U	hwilde	What do you mean?
+2007-10-25T08:48:00.000Z	hwilde	Jordan_U	I mean like how can I fake it out so it does not ask me anymore
+2007-10-25T08:49:00.000Z	Jordan_U	hwilde	That is not a good idea
+2007-10-25T08:49:00.000Z	Jordan_U	hwilde	You would basically have all the security of windows XP if you did that
+2007-10-25T08:49:00.000Z	hwilde	Jordan_U	so it is possible then how do I do it
+2007-10-25T08:51:00.000Z	Jordan_U	hwilde	Basically just set the timeout for sudo to be ~ 1 hour or something
+2007-10-25T08:52:00.000Z	Jordan_U	hwilde	Because that also lets any exploit in FF take control of your entire system
+2007-10-25T09:06:00.000Z	hwilde	Jordan_U	now that I disabled the appearance settings, it boots to the login screen then shuts off the monitors
+2007-10-25T09:55:00.000Z	Jordan_U	hwilde	You are using a 32 bit kernel, you need the server or x86 kernel to see all 4 GIG
+2007-10-25T09:55:00.000Z	hwilde	Jordan_U	where is this documented ??
+2007-10-25T09:55:00.000Z	Jordan_U	hwilde	I meant 64 bit, not x86
+2007-10-25T09:55:00.000Z	hwilde	Jordan_U	I really do not believe that is true where does it say that
+2007-10-25T09:55:00.000Z	Jordan_U	hwilde	It's true of all operating systems :)
+2007-10-25T09:55:00.000Z	hwilde	Jordan_U	no!  32bit architecture can have 4G of ram!
+2007-10-25T09:56:00.000Z	Jordan_U	hwilde	Yes, but not with a standard kernel, that is why 32 bit XP cannot see >3GIG either
+2007-10-25T09:59:00.000Z	Jordan_U	hwilde	Install 64 bit Ubuntu or install the "linux-server" package, I don't know if the proprietary GFX drivers work with the server version though
+2007-10-25T09:59:00.000Z	hwilde	Jordan_U	my cpu and motherboard are not 64bit
+2007-10-25T10:16:00.000Z	Jordan_U	hwilde	Don't know if someone has already answered you yet, but to see all 4 GIG run "sudo apt-get install linux-server"
+2007-10-25T11:51:00.000Z	Jordan_U	hwilde	Did you ever disable compiz?
+2007-10-25T12:04:00.000Z	hwilde	Jordan_U	how can I get pure gnome without metacity or compiz ?
+2007-10-25T12:05:00.000Z	Jordan_U	hwilde	You can't have gnome without a window manager, simplest thing to do would be to have "yourWMofchoice --replace" as a session startup
+2007-10-25T12:05:00.000Z	hwilde	Jordan_U	how do I make it gnome and not metacity by default
+2007-10-25T12:11:00.000Z	hwilde	Jordan_U	I missed your problem what started all of this
+2007-10-25T12:13:00.000Z	hwilde	Jordan_U	what is wrong with the dpkg
+2007-10-25T12:14:00.000Z	Jordan_U	hwilde	Nothing, it's just apt that's borkd
+2007-10-25T12:15:00.000Z	hwilde	Jordan_U	I'm going to try to get back into gnome...
+2007-10-25T12:19:00.000Z	hwilde	Jordan_U	Tem,  if you kill metacity from the command and replace it, you will see error messages.  Maybe this is why it is freezing:     "$ metacity --replace
+2007-10-25T12:33:00.000Z	hwilde	Jordan_U	Tem, my machine survived for an hour in icewm, and I can play full screen graphics on dual monitors and the graphics card is fine.  but the default metacity... it doesn't survive at all
+2007-10-25T13:09:00.000Z	hwilde	Jordan_U	opening firefox with metacity freezes almost immediately.
+2008-09-13T22:51:00.000Z	hwilde	Jordan_U	he is romanian.  He wants to ssh from one computer to the other.  He has openssh server installed, but he has no IP.  he needs to get that machine an IP from his router
+2008-09-13T22:52:00.000Z	Jordan_U	hwilde	"That machine" being the one he is trying to ssh into ?
+2008-09-13T22:52:00.000Z	hwilde	Jordan_U	yeah he's in ubuntu server but he has no IP
+2008-09-13T22:52:00.000Z	hwilde	Jordan_U	then he needs to ping that ip from the other machine, and ssh to it
+2008-09-13T22:52:00.000Z	Jordan_U	hwilde	Has he tried "sudo ifconfig eth0 && sudo dhclient eth0" ?
+2008-09-13T22:53:00.000Z	hwilde	Jordan_U	it took me this long to figure out what he is asking.  gotta go eat lunch
+2008-09-13T22:53:00.000Z	hwilde	Jordan_U	he just needs to get that computer online then he will be able to ssh  to it
+2008-09-13T22:53:00.000Z	hwilde	Jordan_U	ifconfig eth0 up u mean
+2008-09-13T22:54:00.000Z	Jordan_U	hwilde	Yes, thank you
+2009-10-22T00:50:00.000Z	Jordan_U	hwilde	Has it always done this?
+2009-10-22T00:51:00.000Z	hwilde	Jordan_U	why doesn't it give an error or something?  I reinstalled grub from the livecd, I fixed the UUID, all the tricks I know
+2009-10-22T00:52:00.000Z	Jordan_U	hwilde	I don't know, you might try grub2
+2009-11-15T04:25:00.000Z	Jordan_U	hwilde	9.10 has pcspkr blacklisted by default

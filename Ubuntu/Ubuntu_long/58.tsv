@@ -1,0 +1,87 @@
+2006-02-20T11:22:00.000Z	wastrel		i'm using fglrx
+2006-02-20T11:23:00.000Z	wastrel		don't seem to have
+2006-02-20T11:24:00.000Z	wastrel		radeon
+2006-02-20T11:24:00.000Z	tonyyarusso	wastrel	Mine was specifically if I tried to start two X sessions with System>New Login, and then get back to the first display.
+2006-02-20T11:24:00.000Z	wastrel	tonyyarusso	 heh ok i'll try that
+2006-02-20T11:25:00.000Z	wastrel	tonyyarusso	 er, i don't have a System>New Login ....  :]   pardon my ignorance
+2006-02-20T11:26:00.000Z	tonyyarusso	wastrel	Applications > System > New Login, actually.
+2006-02-20T11:27:00.000Z	wastrel	tonyyarusso	 mmm yes that is indeed not working
+2006-02-20T11:27:00.000Z	tonyyarusso	wastrel	But yet you have not had to reboot yet.
+2006-02-20T11:28:00.000Z	wastrel	tonyyarusso	 no i did ctrl-alt-f1, dropped to console & then ctrl-alt-f7, brought me back to this session
+2006-02-20T11:28:00.000Z	wastrel	tonyyarusso	 figured i'd try that before killing X
+2006-02-20T11:29:00.000Z	tonyyarusso	wastrel	Heh.  I could go from F8 to F1, but as soon as I touch F7 again it's all over.
+2006-02-20T11:29:00.000Z	wastrel	tonyyarusso	 what about ctrl-alt-backspace to kill X?
+2006-02-20T11:30:00.000Z	tonyyarusso	wastrel	I'm not sure.  I think that might cause problems sometimes.
+2006-02-20T11:30:00.000Z	tonyyarusso	wastrel	If you mean when it's locked up, it does nothing.
+2006-02-20T11:30:00.000Z	wastrel	tonyyarusso	 i was lucky i guess, didn't lock up just scrambled the display...
+2006-02-20T11:31:00.000Z	tonyyarusso	wastrel	Okay.
+2006-02-20T11:52:00.000Z	wastrel	tonyyarusso	 what did you do?
+2006-02-20T12:07:00.000Z	wastrel	tonyyarusso	 did you backup your xorg.cong ?  :] 
+2006-02-20T12:07:00.000Z	tonyyarusso	wastrel	I did.  Restoring it doesn't seem to help.
+2006-02-20T12:08:00.000Z	tonyyarusso	wastrel	I have a couple of different backups that I can try and see what happens, but it's a bit annoying to reboot between each so better wisdom would be appreciated.
+2006-02-20T12:08:00.000Z	wastrel	tonyyarusso	 hmmm using fglrx?
+2006-02-20T12:09:00.000Z	tonyyarusso	wastrel	I'm actually not even sure at the moment.  I'm attempting to get rid of it and go back, and that's where my problem comes in.
+2006-02-20T12:10:00.000Z	tonyyarusso	wastrel	Looks like xorg.conf still has fglrx in it.
+2006-02-20T12:10:00.000Z	wastrel	tonyyarusso	 try changing that to radeon or ati ?  which one are you using?
+2006-02-20T12:10:00.000Z	wastrel	tonyyarusso	 also /etc/modules
+2006-02-20T12:10:00.000Z	tonyyarusso	wastrel	Which should I be using?  At this point I don't even know.
+2006-02-20T12:10:00.000Z	tonyyarusso	wastrel	What about /etc/modules?
+2006-02-20T12:11:00.000Z	wastrel	tonyyarusso	 loads your kernel modules... make sure your video module is in there...
+2006-02-20T12:11:00.000Z	wastrel	tonyyarusso	 try modprobe radeon   or modprobe ati
+2006-02-20T12:12:00.000Z	tonyyarusso	wastrel	Okay.
+2006-02-20T12:12:00.000Z	wastrel	tonyyarusso	 if they both work, pick one and change fglrx in your xorg.conf to it... :] 
+2006-02-20T12:13:00.000Z	tonyyarusso	wastrel	ownerx: modprobe radeon: FATAL: Error inserting radeon (/lib/modules/2.6.12-10-686/kernel/drivers/char/drm/radeon.ko): Unknown symbol in module, or unknown parameter (see dmesg)
+2006-02-20T12:13:00.000Z	tonyyarusso	wastrel	With the other option, FATAL: Module ati not found.
+2006-02-20T12:15:00.000Z	wastrel	tonyyarusso	 are you in X when you try to load the radeon module?
+2006-02-20T12:15:00.000Z	wastrel	tonyyarusso	 is the fglrx module running when you try to load radeon?
+2006-02-20T12:16:00.000Z	tonyyarusso	wastrel	No to the first, not sure to the second; probably.
+2006-02-20T12:17:00.000Z	tonyyarusso	wastrel	Okay, removed the fglrx module, trying some more.
+2006-02-20T12:18:00.000Z	tonyyarusso	wastrel	ownerx: No errors with the modprobe step now.
+2006-02-20T12:18:00.000Z	tonyyarusso	wastrel	ownerx: sigh, still weird X display.
+2006-02-20T12:19:00.000Z	wastrel	tonyyarusso	 what's weird about it?
+2006-02-20T12:19:00.000Z	tonyyarusso	wastrel	Bizarre hashed line look.  I can sort of see where things would be, but not really.  Vertical lines.
+2006-02-20T12:20:00.000Z	wastrel	tonyyarusso	 hmmm...  what about a sudo dpkg-reconfigure xserver-xorg   ?
+2006-02-20T12:20:00.000Z	tonyyarusso	wastrel	That's what broke it in the first place.
+2006-02-20T12:20:00.000Z	wastrel	tonyyarusso	 are you rebooting in between tries?
+2006-02-20T12:21:00.000Z	tonyyarusso	wastrel	Sometimes.  When I'm forced to.
+2006-02-20T12:21:00.000Z	wastrel	tonyyarusso	 have you rebooted with this radeon change?
+2006-02-20T12:21:00.000Z	tonyyarusso	wastrel	No.
+2006-02-20T12:22:00.000Z	tonyyarusso	wastrel	Okay, and yes.
+2006-02-20T12:29:00.000Z	tonyyarusso	wastrel	I think I might be in business...
+2006-02-20T12:30:00.000Z	wastrel	tonyyarusso	 ideally...
+2006-02-20T12:30:00.000Z	wastrel	tonyyarusso	 it's getting more complicated - i bet you could have avoided it, but you start getting into dimishing returns
+2006-02-20T12:31:00.000Z	wastrel	tonyyarusso	 it's just easier to reboot unless you really really can't ;] 
+2006-02-20T12:31:00.000Z	tonyyarusso	wastrel	I suppose.
+2006-02-20T12:32:00.000Z	wastrel	tonyyarusso	 i bet there were other video modules that needed unloading/reloading... just didn't know which ones to mess with
+2006-02-20T12:33:00.000Z	tonyyarusso	wastrel	Okay, I'll remember that sort of thing then.
+2006-02-25T12:25:00.000Z	wastrel	tonyyarusso	 easy with vim
+2006-02-25T12:26:00.000Z	tonyyarusso	wastrel	Yeah?  How?  (Never used vim, btw.)
+2006-02-25T12:27:00.000Z	wastrel	tonyyarusso	 there's a bit of a learning curve.... heh.   what specifically do you want to do.  and are you familiar with unixy regular expressions ?
+2006-02-25T12:28:00.000Z	tonyyarusso	wastrel	Some familiarity.  I'm trying to take a Gaim log that was logged as plain text and get to match the html ones.
+2006-02-25T12:29:00.000Z	wastrel	tonyyarusso	 well in vim   :1,$s/foo/bar/g
+2006-02-25T12:30:00.000Z	wastrel	tonyyarusso	 that will call up the command line (:)  and starting at the first line (1), through to the end ($)  substitute "foo" for "bar"  through the whole line
+2006-02-25T12:30:00.000Z	tonyyarusso	wastrel	Is that an L or a one? Also, isn't there a cli thing to do this sans vim?
+2006-02-25T12:31:00.000Z	wastrel	tonyyarusso	 yes you can use sed as redblade said.  and it's a numeral 1
+2006-02-25T12:33:00.000Z	tonyyarusso	wastrel	redblade: Ah.  I thought that was it, and got this: "sed: -e expression #1, char 43: unknown option to `s' "
+2006-02-25T12:34:00.000Z	tonyyarusso	wastrel	redblade: No g on the end when I did that though.
+2006-02-25T12:39:00.000Z	tonyyarusso	wastrel	redblade: Where can I find a list of what needs escaping?
+2006-02-25T12:41:00.000Z	wastrel	tonyyarusso	 shell special characters   http://www.pegasus.rutgers.edu/~elflord/unix/grep.html#details
+2006-02-25T12:42:00.000Z	tonyyarusso	wastrel	Beautiful.
+2006-03-05T12:48:00.000Z	tonyyarusso	wastrel	Should I be submitting it as an Ubuntu bug though, or a Gaim one?
+2006-03-15T16:36:00.000Z	wastrel	tonyyarusso	 dns = domain name system  :] 
+2006-03-15T16:36:00.000Z	tonyyarusso	wastrel	'k.  I stand corrected.
+2006-03-16T13:21:00.000Z	tonyyarusso	wastrel	Do you have some further input?
+2006-03-16T13:22:00.000Z	tonyyarusso	wastrel	What features does it need to manage large amounts do you think?
+2006-03-24T10:21:00.000Z	wastrel	tonyyarusso	 yes you can add arbitrary mappings into /etc/hosts    people also do this to block banner ads and unwanted spammy sites.
+2006-03-24T10:24:00.000Z	wastrel	tonyyarusso	 man hosts
+2006-03-24T10:24:00.000Z	tonyyarusso	wastrel	Ah thanks.
+2006-06-21T12:50:00.000Z	tonyyarusso	wastrel	Mine's called "Access IBM"
+2006-06-21T12:50:00.000Z	tonyyarusso	wastrel	Mine opens the system documentation.
+2006-09-20T08:48:00.000Z	wastrel	tonyyarusso	 put them in 3 diff layers on the same image and save as gif
+2006-09-20T08:49:00.000Z	tonyyarusso	wastrel	How exactly should I go about creating those layers and putting them in / in what order?  I tried mucking with some add layer and paste stuff last night, but it never turned out quite right (only had two of the three images in the end, or a white layer separately).  Also, where do I specify the timing between them?  On save?
+2006-09-20T08:51:00.000Z	wastrel	tonyyarusso	 timing is when you save it i think.  as for layers, play with the layers dialog.  you can raise and lower layers and delete them
+2006-09-20T08:52:00.000Z	tonyyarusso	wastrel	Is there an expanded view so I can see all of the layers that exist at once?
+2006-09-20T08:52:00.000Z	wastrel	tonyyarusso	 the layers dialog lets you see what you've got yes
+2006-09-20T08:53:00.000Z	tonyyarusso	wastrel	Okay, that will help alleviate some confusion.
+2007-01-15T16:14:00.000Z	tonyyarusso	wastrel	?
+2007-01-15T16:14:00.000Z	tonyyarusso	wastrel	Thanks.

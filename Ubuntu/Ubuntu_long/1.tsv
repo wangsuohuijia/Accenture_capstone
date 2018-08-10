@@ -1,0 +1,69 @@
+2005-12-08T14:53:00.000Z	B7su4		why does my browser close on me sometimes?
+2005-12-08T14:53:00.000Z	soundray	B7su4	is it Firefox?
+2005-12-08T14:54:00.000Z	soundray	B7su4	I had that. It was a plugin that crashed on trying to load swf data.
+2005-12-08T14:54:00.000Z	B7su4	soundray	how do i fix it?
+2005-12-08T14:54:00.000Z	soundray	B7su4	surf to about:plugins and see if there are any suspects.
+2005-12-08T14:55:00.000Z	soundray	B7su4	do you have a particular page that crashes your browser?
+2005-12-08T14:55:00.000Z	B7su4	soundray	 myspace
+2005-12-08T14:56:00.000Z	soundray	B7su4	loads okay here.
+2005-12-08T14:57:00.000Z	B7su4	soundray	 it when i want to put a comment...but it is also on different pages
+2005-12-08T14:57:00.000Z	B7su4	soundray	 aslo totem player never works
+2005-12-08T14:57:00.000Z	soundray	B7su4	anything in about:plugins?
+2005-12-08T14:58:00.000Z	B7su4	soundray	everything is enabled
+2005-12-08T14:59:00.000Z	soundray	B7su4	in the header of each stanza, you can see the name of the plugin file, ending in .so
+2005-12-08T15:00:00.000Z	soundray	B7su4	with slocate, you can find out where the plugin is loaded from.
+2005-12-08T15:01:00.000Z	soundray	B7su4	then you can disable them one by one, by moving them to a directory that firefox doesn't see, eg. /home/B7su4/plugins-backup/
+2005-12-08T15:01:00.000Z	soundray	B7su4	chances are you'll find the culprit that way.
+2005-12-08T15:03:00.000Z	soundray	B7su4	okay?
+2005-12-08T15:04:00.000Z	B7su4	soundray	what do you mean the header?
+2005-12-08T15:05:00.000Z	soundray	B7su4	load the page about:plugins . Got that?
+2005-12-08T15:05:00.000Z	B7su4	soundray	okay it is loded
+2005-12-08T15:06:00.000Z	soundray	B7su4	now the page has a structure, like stanzas or sections.
+2005-12-08T15:06:00.000Z	soundray	B7su4	right?
+2005-12-08T15:06:00.000Z	B7su4	soundray	yes
+2005-12-08T15:06:00.000Z	soundray	B7su4	each section has a header that names the plugin file. It ends in .so
+2005-12-08T15:07:00.000Z	B7su4	soundray	none of them end in .so
+2005-12-08T15:07:00.000Z	soundray	B7su4	okay, do you still see what I mean, though?
+2005-12-08T15:08:00.000Z	B7su4	soundray	yes
+2005-12-08T15:08:00.000Z	soundray	B7su4	to disable a plugin, you need to move it somewhere where firefox won't load it on startup.
+2005-12-08T15:09:00.000Z	soundray	B7su4	so you need to find the plugin file and move it to such a place.
+2005-12-08T15:09:00.000Z	B7su4	soundray	why do i want to disable it?
+2005-12-08T15:09:00.000Z	soundray	B7su4	because your firefox is crashing, and it's likely a plugin or an extension that's causing it.
+2005-12-08T15:10:00.000Z	B7su4	soundray	okay
+2005-12-08T15:10:00.000Z	B7su4	soundray	thankyou for your help
+2005-12-08T15:10:00.000Z	soundray	B7su4	so I'm suggesting you disable all plugins, and see if you still get crashes.
+2005-12-08T15:11:00.000Z	B7su4	soundray	okay thanks
+2005-12-08T15:11:00.000Z	soundray	B7su4	you could also disable them one by one, until it doesn't crash anymore.
+2005-12-08T15:11:00.000Z	soundray	B7su4	matter of taste.
+2005-12-08T15:11:00.000Z	soundray	B7su4	hope you get it fixed. I did, it was a plugin called swf-player that was at fault.
+2005-12-08T15:14:00.000Z	soundray	B7su4	apt-get install edubuntu-desktop
+2005-12-08T15:15:00.000Z	soundray	B7su4	zorba64, oops, too slow :)
+2005-12-08T15:17:00.000Z	B7su4	soundray	gave me this error E: Could not get lock /var/cache/apt/archives/lock - open (11 Resource temporarily unavailable)
+2005-12-08T15:18:00.000Z	soundray	B7su4	you should have listened to zorba64. My version was missing the sudo in front.
+2005-12-08T15:18:00.000Z	B7su4	soundray	i know...i put sudo in front of it
+2005-12-08T15:19:00.000Z	B7su4	soundray	 and it still gave me that erroe
+2005-12-08T15:19:00.000Z	soundray	B7su4	then you have synaptic or similar still running somewhere.
+2005-12-08T15:19:00.000Z	B7su4	soundray	?
+2005-12-08T15:19:00.000Z	soundray	B7su4	then you have synaptic or similar still running somewhere.
+2005-12-08T15:19:00.000Z	B7su4	soundray	how do i disable it ??
+2005-12-08T15:20:00.000Z	soundray	B7su4	can you bring up the window?
+2005-12-08T15:20:00.000Z	B7su4	soundray	no
+2005-12-08T15:21:00.000Z	soundray	B7su4	give me sec pls
+2005-12-08T15:21:00.000Z	B7su4	soundray	okay
+2005-12-08T15:23:00.000Z	soundray	B7su4	can you enter 'sudo lsof | grep /var/lib/dpkg/lock' on a terminal command line pls (without the quotes)
+2005-12-08T15:24:00.000Z	soundray	B7su4	and paste the output, but only if it's not more than one line.
+2005-12-08T15:25:00.000Z	B7su4	soundray	nothing happened
+2005-12-08T15:25:00.000Z	soundray	B7su4	okay, will synaptic run from System-Administration?
+2005-12-08T15:26:00.000Z	B7su4	soundray	^
+2005-12-08T15:26:00.000Z	soundray	B7su4	best to install edubuntu-desktop from synaptic, then.
+2005-12-08T15:27:00.000Z	B7su4	soundray	^
+2005-12-08T15:28:00.000Z	soundray	B7su4	can you install edubuntu-desktop from synaptic?
+2005-12-08T15:28:00.000Z	soundray	B7su4	good. Problem solved?
+2005-12-08T15:29:00.000Z	B7su4	soundray	no..because how do i do it?
+2005-12-08T15:29:00.000Z	soundray	B7su4	how do you do what?
+2005-12-08T15:30:00.000Z	B7su4	soundray	 install it from synaptic
+2005-12-08T15:31:00.000Z	soundray	B7su4	click on search. Enter edubuntu in the dialog. Hit return. Click on the little square left of the line that says edubuntu-desktop... Click Apply.
+2005-12-08T15:33:00.000Z	B7su4	soundray	thank you very much for your help...but also when i go to sudo a command it alsways says that permission denied
+2005-12-08T15:34:00.000Z	soundray	B7su4	that can happen if you are logged in under a username other than the first one you created during install.
+2005-12-08T15:35:00.000Z	soundray	B7su4	the first user is entered in /etc/sudoers and has admin rights.
+2005-12-08T15:35:00.000Z	soundray	B7su4	for everyone else, you have to enable it explicitly.

@@ -1,0 +1,40 @@
+2012-08-21T00:30:00.000Z	Moonlightning		I did use `zless`…
+2012-08-21T00:30:00.000Z	Moonlightning		< zless /usr/share/doc/lightdm/lightdm.conf.gz
+2012-08-21T00:30:00.000Z	Moonlightning		> sh: 0: Illegal option -/
+2012-08-21T00:30:00.000Z	Moonlightning		> "/usr/share/doc/lightdm/lightdm.conf.gz" may be a binary file.  See it anyway?
+2012-08-21T00:31:00.000Z	Moonlightning		Anyway.
+2012-08-21T00:31:00.000Z	Moonlightning		Besides the login screen, is there any way someone that's not logged in might be able to get a (partial or complete) list of accounts on the system?
+2012-08-21T00:33:00.000Z	Moonlightning		And how do I set a firmware password on a PowerBook G4? The instructions on Apple's site are only for OS X and I've installed Ubuntu instead.
+2012-08-21T00:35:00.000Z	Moonlightning		I think that would be a way to prevent evil-maid attacks.
+2012-08-21T00:35:00.000Z	Moonlightning		…probably,
+2012-08-21T00:36:00.000Z	Moonlightning		This is a fresh install…
+2012-08-21T00:38:00.000Z	W4sp	Moonlightning	No, not by design. Also, can you boot Tiger and set the password.
+2012-08-21T00:38:00.000Z	Moonlightning	W4sp	can't boot something that's not installed. :V
+2012-08-21T00:38:00.000Z	Moonlightning	W4sp	yeah, I'm using it.
+2012-08-21T00:38:00.000Z	W4sp	Moonlightning	...from CD?
+2012-08-21T00:39:00.000Z	Moonlightning	W4sp	don't have a Tiger disc…
+2012-08-21T00:39:00.000Z	W4sp	Moonlightning	See, I have been under the impression only home folder can be encrypted.
+2012-08-21T00:40:00.000Z	W4sp	Moonlightning	Latest you can use is Tiger as it was the last of the mohicans to have PPC, AFAIK.
+2012-08-21T00:40:00.000Z	Moonlightning	W4sp	machine had Leopard when I got it…
+2012-08-21T00:41:00.000Z	W4sp	Moonlightning	I see. Leopard is the latest then, I suppose.
+2012-08-21T00:42:00.000Z	W4sp	Moonlightning	No, not my design. But as you have already guessed you can boot from CD and mount the hard drive to browse /mointpoint/etc/passwd
+2012-08-21T00:43:00.000Z	Moonlightning	W4sp	that's another reason to have a firmware password…
+2012-08-21T00:45:00.000Z	W4sp	Moonlightning	evil-maid
+2012-08-21T00:46:00.000Z	W4sp	Moonlightning	Can you not introduce to have the encryption key on a USB?
+2012-08-21T00:47:00.000Z	Moonlightning	W4sp	wha?
+2012-08-21T00:47:00.000Z	W4sp	Moonlightning	Can you have the key on a USB drive. That would be a two factor authendification.
+2012-08-21T00:48:00.000Z	Moonlightning	W4sp	that's one way, but I don't have a USB stick at the moment.
+2012-08-21T00:48:00.000Z	W4sp	Moonlightning	There's a risk, of course, that someone copies it from USB though.
+2012-08-21T01:02:00.000Z	W4sp	Moonlightning	Why do they not accept bug reports?
+2012-08-21T01:02:00.000Z	Moonlightning	W4sp	hang on, I'll see if I can trigger one again…
+2012-08-21T01:03:00.000Z	W4sp	Moonlightning	It should be accepted but it it's reported already you may not be able to submit it agian.
+2012-08-21T01:08:00.000Z	Moonlightning	W4sp	huh?
+2012-08-21T01:10:00.000Z	W4sp	Moonlightning	I see, that's disappointing. You're right, that's the way they do. Admittingly I don't like it.
+2012-08-21T01:10:00.000Z	Moonlightning	W4sp	there's no way to just have bug reports be submitted automatically without me having to do anything?
+2012-08-21T01:11:00.000Z	W4sp	Moonlightning	Not that I'm aware of. There's the exclamation mark and then all that can be done is to follow the GUI instructions.
+2012-08-21T01:12:00.000Z	W4sp	Moonlightning	Is there an alternative one, such as using web?
+2012-08-21T01:13:00.000Z	Moonlightning	W4sp	no…
+2012-08-21T01:14:00.000Z	Moonlightning	W4sp	there's five options here…
+2012-08-21T01:17:00.000Z	W4sp	Moonlightning	You can do that in Launchpad though.
+2012-08-21T01:18:00.000Z	W4sp	Moonlightning	https://login.launchpad.net to log in and report a bug.
+2012-08-21T01:18:00.000Z	Moonlightning	W4sp	I don't even know what the bug /is…/

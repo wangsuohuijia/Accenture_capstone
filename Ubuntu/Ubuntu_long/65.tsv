@@ -1,0 +1,65 @@
+2008-08-30T05:16:00.000Z	woli		lol
+2008-08-30T05:16:00.000Z	woli		what is fluxbuntu?
+2008-08-30T05:16:00.000Z	woli		wow, ubuntu has many children
+2008-08-30T05:16:00.000Z	woli		like bob marley
+2008-08-30T05:17:00.000Z	prince_jammys	woli	they're really mostly the same distro with different desktop environments. confusingly, they give them different names.
+2008-08-30T05:18:00.000Z	woli	prince_jammys	whats fluxbuntu's de ?
+2008-08-30T05:18:00.000Z	prince_jammys	woli	fluxbox
+2008-08-30T05:19:00.000Z	prince_jammys	woli	most would say no. it's the one i use.
+2008-08-30T05:20:00.000Z	prince_jammys	woli	once you've installed ubuntu, you can try them all without having to uninstall anything.
+2008-08-30T05:21:00.000Z	prince_jammys	woli	yep
+2008-08-30T05:21:00.000Z	prince_jammys	woli	it will.
+2008-08-31T05:55:00.000Z	prince_jammys	woli	there's a PATH variable, if that's what you mean.
+2008-08-31T05:55:00.000Z	woli	prince_jammys	how can i add a directory to it?
+2008-08-31T05:55:00.000Z	prince_jammys	woli	for your personal scripts?
+2008-08-31T05:56:00.000Z	prince_jammys	woli	the traditional way is to put them in a 'bin' directory in your home. look at the file '.profile' in your home to see how another path can be added
+2008-08-31T05:57:00.000Z	prince_jammys	woli	if you create a /home/woli/bin , scripts in there will be in your path once you log back in.
+2008-08-31T06:01:00.000Z	woli	prince_jammys	does that method (.profile) require reboot ?
+2008-08-31T06:01:00.000Z	prince_jammys	woli	no, just re-login
+2008-08-31T06:07:00.000Z	woli	prince_jammys	i have no success
+2008-08-31T06:07:00.000Z	prince_jammys	woli	can you show the line you used?
+2008-08-31T06:08:00.000Z	woli	prince_jammys	the file name appears in the Alt-F2 dialog, but with a .desktop next to it, and it doesn;t run
+2008-08-31T06:08:00.000Z	woli	prince_jammys	where?
+2008-08-31T06:08:00.000Z	prince_jammys	woli	wait, what file name?
+2008-08-31T06:08:00.000Z	woli	prince_jammys	a launcher
+2008-08-31T06:08:00.000Z	prince_jammys	woli	so why do you want to change your PATH?
+2008-08-31T06:09:00.000Z	woli	prince_jammys	i just want a way to launch my app from the alt-f2
+2008-08-31T06:09:00.000Z	prince_jammys	woli	does it launch when you type filename.desktop ?
+2008-08-31T06:09:00.000Z	prince_jammys	woli	wait, desktop files aren't executable
+2008-08-31T06:10:00.000Z	woli	prince_jammys	which are desktop files?
+2008-08-31T06:10:00.000Z	woli	prince_jammys	and no.. it doesn't launch
+2008-08-31T06:11:00.000Z	prince_jammys	woli	what does the Exec=blahblah line of the that file look like?
+2008-08-31T06:12:00.000Z	woli	prince_jammys	this is the thing: I have a launcher--which i suppose is included in PATH--that launches (perfectly) a bash script, that will run an executable with a certain directory as workpath
+2008-08-31T06:13:00.000Z	woli	prince_jammys	note that the launcher achieves what i want when double-clicke
+2008-08-31T06:13:00.000Z	prince_jammys	woli	the GUI is opening it
+2008-08-31T06:13:00.000Z	woli	prince_jammys	what do you mean?
+2008-08-31T06:13:00.000Z	prince_jammys	woli	open the launcher with a text editor and find the line that says 'exec='
+2008-08-31T06:14:00.000Z	woli	prince_jammys	ok
+2008-08-31T06:14:00.000Z	prince_jammys	woli	the launcher has information that your desktop environment uses, such as the icon file, and where to find the executable file.
+2008-08-31T06:15:00.000Z	woli	prince_jammys	gnome-terminal -e "/home/wolter/.Password\\ Manager/launcher.sh"
+2008-08-31T06:17:00.000Z	prince_jammys	woli	great. here's the easy way: create a directory called 'bin' in your home. then create a file that has that has two lines: #!/bin/sh  and the second line is the command you just pasted. put that file in the bin directory.
+2008-08-31T06:19:00.000Z	prince_jammys	woli	none
+2008-08-31T06:19:00.000Z	woli	prince_jammys	i don't want the directory to be seen...
+2008-08-31T06:19:00.000Z	woli	prince_jammys	the "bin"
+2008-08-31T06:19:00.000Z	prince_jammys	woli	heh. ok, you have to put it somewhere in your path.
+2008-08-31T06:20:00.000Z	woli	prince_jammys	ok ok done
+2008-08-31T06:20:00.000Z	woli	prince_jammys	let me try it, and i tell you
+2008-08-31T06:21:00.000Z	prince_jammys	woli	try it first from a terminal, by typing whatever you called the file
+2008-08-31T06:22:00.000Z	woli	prince_jammys	from terminal works awesome
+2008-08-31T06:22:00.000Z	prince_jammys	woli	cool. try with alt-f2
+2008-08-31T06:24:00.000Z	woli	prince_jammys	i did the PATH=~/Repository:"${PATH}" line in the console, and then it ran as i wrote the appname on the console... i closed the console, and stopped working
+2008-08-31T06:25:00.000Z	woli	prince_jammys	not exactly lol... it still works.. but not from altF2
+2008-08-31T06:26:00.000Z	prince_jammys	woli	ok, the first thing you said is normal. it was attached to the terminal. to make it so that you can close the terminal, do 'progname & disown'
+2008-08-31T06:26:00.000Z	woli	prince_jammys	done
+2008-08-31T06:28:00.000Z	woli	prince_jammys	KRF, gkffjcs_ , why will my program run from terminal, but not from the Alt-F2 Dialog ?
+2008-08-31T06:28:00.000Z	prince_jammys	woli	because X isn't seeing the addition to your PATH, apparently
+2008-08-31T06:29:00.000Z	woli	prince_jammys	because of the disown, i asume..
+2008-08-31T06:29:00.000Z	prince_jammys	woli	huh?
+2008-08-31T06:29:00.000Z	woli	prince_jammys	i have not appended it
+2008-08-31T06:31:00.000Z	woli	prince_jammys	where, or... how?
+2008-08-31T06:31:00.000Z	prince_jammys	woli	forget about disown. it was in response to "how can i run an app from a terminal and be able to close the terminal and not have the app close?"
+2008-08-31T06:32:00.000Z	prince_jammys	woli	add the directory to the PATH in .profile
+2008-08-31T06:32:00.000Z	woli	prince_jammys	well, but how are we sure that the next time i login i can use Password\ Manager again from the terminal?
+2008-08-31T06:32:00.000Z	woli	prince_jammys	i did....
+2008-08-31T06:32:00.000Z	woli	prince_jammys	ok...
+2008-08-31T06:33:00.000Z	woli	prince_jammys	now, how do i introduce it to the run dialog environment?

@@ -1,0 +1,49 @@
+2009-06-28T20:17:00.000Z	humbolt		My system seems awfully slow!
+2009-06-28T20:18:00.000Z	humbolt		What can I do?
+2009-06-28T20:18:00.000Z	Incarus	humbolt	paste "ps -u root"
+2009-06-28T20:19:00.000Z	humbolt	Incarus	I'll paste in a second. First have to wait for firefox to start up
+2009-06-28T20:20:00.000Z	Incarus	humbolt	ok
+2009-06-28T20:20:00.000Z	humbolt	Incarus	http://pastie.org/527165
+2009-06-28T20:20:00.000Z	humbolt	Incarus	I just reformatted /home with ext4 to improve things.
+2009-06-28T20:20:00.000Z	Incarus	humbolt	i am in opera with integrated irc client ;-)
+2009-06-28T20:20:00.000Z	Incarus	humbolt	k
+2009-06-28T20:21:00.000Z	humbolt	Incarus	while / is still ext3
+2009-06-28T20:21:00.000Z	Incarus	humbolt	did you try to eject your usb devices?
+2009-06-28T20:22:00.000Z	humbolt	Incarus	why should that help?
+2009-06-28T20:22:00.000Z	Incarus	humbolt	dont know
+2009-06-28T20:22:00.000Z	Incarus	humbolt	"sudo kill 3080"
+2009-06-28T20:24:00.000Z	humbolt	Incarus	wow, stopping that service does generate quite some IO wail!
+2009-06-28T20:24:00.000Z	Incarus	humbolt	did it speed up your system?
+2009-06-28T20:24:00.000Z	humbolt	Incarus	yes
+2009-06-28T20:24:00.000Z	Incarus	humbolt	ok, thats the mysql server demon, you can remove it from system
+2009-06-28T20:25:00.000Z	humbolt	Incarus	so what is happening there with my mysql daemon? running out of disk space?
+2009-06-28T20:25:00.000Z	humbolt	Incarus	need it for dev
+2009-06-28T20:25:00.000Z	Incarus	humbolt	i dont know
+2009-06-28T20:25:00.000Z	Incarus	humbolt	mysql is a server, and server apps slow down your computer
+2009-06-28T20:27:00.000Z	Incarus	humbolt	have you got a pluged external harddisk?
+2009-06-28T20:28:00.000Z	humbolt	Incarus	yes
+2009-06-28T20:28:00.000Z	humbolt	Incarus	mounting encrypted disks does not work quite well
+2009-06-28T20:28:00.000Z	Incarus	humbolt	is your system much faster the before?
+2009-06-28T20:29:00.000Z	humbolt	Incarus	by fat
+2009-06-28T20:29:00.000Z	Incarus	humbolt	by fat? XD
+2009-06-28T20:30:00.000Z	humbolt	Incarus	by far
+2009-06-28T20:30:00.000Z	Incarus	humbolt	ok
+2009-06-28T20:30:00.000Z	Incarus	humbolt	do you really need mysql?
+2009-06-28T20:31:00.000Z	humbolt	Incarus	For web app dev, yes
+2009-06-28T20:31:00.000Z	Incarus	humbolt	i think its not "strange" if your system is slow when you run a server
+2009-06-28T20:32:00.000Z	humbolt	Incarus	I believe it has something to do with storage
+2009-06-28T20:32:00.000Z	Incarus	humbolt	yeah, a lot of storage processes are running
+2009-06-28T20:33:00.000Z	humbolt	Incarus	mdm: but mysql is laying idle 99.99% of the time!
+2009-06-28T20:34:00.000Z	Incarus	humbolt	and whats about dos attacks?
+2009-06-28T20:34:00.000Z	humbolt	Incarus	still stopping mysql helped, so it must be related to that!
+2009-06-28T20:35:00.000Z	Incarus	humbolt	mysql is a server app, maybe its slow because somebody send you a lot of requests, i dont know XD
+2009-06-28T20:35:00.000Z	humbolt	Incarus	no this is just my private dev instance
+2009-06-28T20:35:00.000Z	humbolt	Incarus	no traffic at all
+2009-06-28T20:57:00.000Z	Incarus	humbolt	did you check mount?
+2009-06-28T20:59:00.000Z	humbolt	Incarus	wow, you are incredible. Yes I had mounted the luksdev by hand on /mnt, as it did not mount automatically after unlocking it.
+2009-06-28T20:59:00.000Z	humbolt	Incarus	but it still does not come up now
+2009-06-28T20:59:00.000Z	humbolt	Incarus	not even with the pwd dialog
+2009-06-28T21:00:00.000Z	Incarus	humbolt	k
+2009-06-28T21:00:00.000Z	humbolt	Incarus	dmesg tells me the drive has been attached on sdf
+2009-06-28T21:00:00.000Z	humbolt	Incarus	but nothing happens from there
+2009-06-28T21:00:00.000Z	Incarus	humbolt	i dont know XD

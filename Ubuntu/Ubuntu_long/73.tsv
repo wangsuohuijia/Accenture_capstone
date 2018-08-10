@@ -1,0 +1,55 @@
+2009-08-05T23:44:00.000Z	Brazz		I just used sudo dpkg-reconfigure xserver-xorg and a screen came up with this description:
+2009-08-05T23:44:00.000Z	Brazz		Rather than communicating directly with the video hardware, the X server  │
+2009-08-05T23:44:00.000Z	Brazz		 │ may be configured to perform some operations, such as video mode          │
+2009-08-05T23:44:00.000Z	Brazz		 │ switching, via the kernel's framebuffer driver.                           │
+2009-08-05T23:44:00.000Z	Brazz		 │                                                                           │
+2009-08-05T23:44:00.000Z	Brazz		 │ In theory, either approach should work, but in practice, sometimes one    │
+2009-08-05T23:46:00.000Z	Brazz		I just used sudo dpkg-reconfigure xserver-xorg and I need someone to discuss i if I should take the next step or not, since I'm following a guide
+2009-08-05T23:47:00.000Z	lstarnes	Brazz	ubottu doesn't understand questions
+2009-08-05T23:48:00.000Z	lstarnes	Brazz	that command reconfigures the package for the X server
+2009-08-05T23:49:00.000Z	lstarnes	Brazz	it will reconfigure the settings for the package
+2009-08-05T23:50:00.000Z	lstarnes	Brazz	no, but I will
+2009-08-05T23:51:00.000Z	lstarnes	Brazz	where do you see 'sudo dpkg-reconfigure xserver-xorg' ?
+2009-08-05T23:53:00.000Z	lstarnes	Brazz	I think I see where it is
+2009-08-05T23:54:00.000Z	lstarnes	Brazz	I see
+2009-08-05T23:55:00.000Z	lstarnes	Brazz	sudo dpkg-reconfigure xserver-xorg will likely open up a console dialog asking you for input for configuring xorg
+2009-08-05T23:55:00.000Z	lstarnes	Brazz	it likely may be
+2009-08-05T23:56:00.000Z	lstarnes	Brazz	you're welcome.  Also, that I is actually a lowercase L
+2009-08-05T23:56:00.000Z	Brazz	lstarnes	o I see
+2009-08-05T23:57:00.000Z	Brazz	lstarnes	no wonder why I couldn't "tab" your name
+2009-08-05T23:57:00.000Z	Brazz	lstarnes	I appologize. now I'll run the command and follow the rest of the guide.
+2009-08-05T23:58:00.000Z	Brazz	lstarnes	before I reboot my computer again I'll come back here to tell you how it all went and after reboot (if I get through the loggin) I'll tell you the result
+2009-08-06T00:00:00.000Z	Brazz	lstarnes	are you still there?
+2009-08-06T00:01:00.000Z	lstarnes	Brazz	yes
+2009-08-06T00:01:00.000Z	Brazz	lstarnes	anyway I have gone throughout that process and now I am supposed to reboot
+2009-08-06T00:02:00.000Z	Brazz	lstarnes	I'm quite excited about this now, so far its the only guide that made my computer work when attempting to install the driver
+2009-08-06T00:02:00.000Z	Brazz	lstarnes	if I dont come back then you know I'm reinstalling Ubuntu, Thank you anyway pal I really appreciate you being so helpful
+2009-08-06T00:08:00.000Z	Brazz	lstarnes	hehe surprise surprise, I'm online again
+2009-08-06T00:11:00.000Z	Brazz	lstarnes	are you busy atm?
+2009-08-06T00:11:00.000Z	lstarnes	Brazz	not really
+2009-08-06T00:12:00.000Z	Brazz	lstarnes	 I'm at "configuring x.org" atm now I use sudo nano /etc/x11/xorg.conf and some sort of editor have opened
+2009-08-06T00:13:00.000Z	Brazz	lstarnes	but it is blank...
+2009-08-06T00:13:00.000Z	lstarnes	Brazz	it's case-sensitive
+2009-08-06T00:13:00.000Z	lstarnes	Brazz	try sudo nano /etc/X11/xorg.conf
+2009-08-06T00:13:00.000Z	Brazz	lstarnes	i understand... thank you
+2009-08-06T00:15:00.000Z	Brazz	lstarnes	it says I'm supposed to edit it using the superuser commands... I understand that he means using the terminal to get to edit, but then again... what am I supposed to edit there? the guide doesn't say what to edit
+2009-08-06T00:15:00.000Z	lstarnes	Brazz	I'm not sure exactly
+2009-08-06T00:16:00.000Z	Brazz	lstarnes	Would you mind taking a look at the steps just before I got there? if its not to be bothering you a lot, because I know its not your problem, but its unfortunate that not so many people are willing to be so helpful as you have been to me.
+2009-08-06T00:17:00.000Z	Brazz	lstarnes	feel free to say no if you wanna do something else
+2009-08-06T00:17:00.000Z	lstarnes	Brazz	which steps?
+2009-08-06T00:17:00.000Z	Brazz	lstarnes	https://help.ubuntu.com/community/RadeonDriver
+2009-08-06T00:17:00.000Z	Brazz	lstarnes	configuring x.org
+2009-08-06T00:18:00.000Z	lstarnes	Brazz	look in the "device" section, if there is one
+2009-08-06T00:19:00.000Z	Brazz	lstarnes	Section "Device"
+2009-08-06T00:19:00.000Z	lstarnes	Brazz	it should look something like what is in the guide
+2009-08-06T00:20:00.000Z	Brazz	lstarnes	I can't believe it... I think I'm taking you for granted and not reading the guide properly
+2009-08-06T00:20:00.000Z	Brazz	lstarnes	sorry to have wasted your time mate
+2009-08-06T00:20:00.000Z	Brazz	lstarnes	I'll only call you in case I dont really get what they're talking about now. Thank you so much for everything
+2009-08-06T00:20:00.000Z	lstarnes	Brazz	you might need to change the BusID
+2009-08-06T00:25:00.000Z	Brazz	lstarnes	may I send you a pm just so you wash out a question I have?
+2009-08-06T00:26:00.000Z	lstarnes	Brazz	go ahead
+2009-08-06T01:49:00.000Z	lstarnes	Brazz	it should tell you if you have direct rendering enabled
+2009-08-06T01:49:00.000Z	Brazz	lstarnes	 Thank you
+2009-08-06T01:57:00.000Z	Brazz	lstarnes	hehe I just checked my xorg.conf and nothing was changed...
+2009-08-06T01:57:00.000Z	Brazz	lstarnes	at least the ctrl+alt+backspace command worked this time
+2009-08-06T01:57:00.000Z	Brazz	lstarnes	I guess I'll have to do it all over again

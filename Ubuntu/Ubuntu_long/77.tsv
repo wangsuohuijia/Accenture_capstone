@@ -1,0 +1,53 @@
+2009-08-18T16:56:00.000Z	swapy		ethtool is already the newest version.       its already installed
+2009-08-18T16:56:00.000Z	swapy		where is it
+2009-08-18T16:56:00.000Z	Dr_Willis	swapy	 its a command line tool.
+2009-08-18T16:57:00.000Z	swapy	Dr_Willis	in windows i had 1 software that would  repiar my connection every 10 seconds is there any software for linux ubuntu
+2009-08-18T16:57:00.000Z	Dr_Willis	swapy	 what in the world would be going on that a connection would NEED to be 'repaired' every 10 seconds?
+2009-08-18T16:58:00.000Z	Dr_Willis	swapy	 your dns servers shouldent be changing that fast.   or your gateway
+2009-08-19T06:46:00.000Z	Dr_Willis	swapy	 debian? go ask in #debian or read the debian docs/homepage
+2009-08-19T06:47:00.000Z	Dr_Willis	swapy	 and yes the full repo set of debian is several dvd worth of stuff you dont need.
+2009-08-19T07:01:00.000Z	Dr_Willis	swapy	 it can
+2009-08-22T07:00:00.000Z	Dr_Willis	swapy	 themes are composed of 'parts'  window decorator, widgits, icons. and so on. you can pick and choose the parts from the theme manager/appearance settings. (system-> preferances -> appearance -> customize)
+2010-01-30T10:52:00.000Z	Dr_Willis	swapy	 backup /var/cache/apt    if you wanted to
+2010-01-30T10:55:00.000Z	Dr_Willis	swapy	  try the 'which PROGRAMNAME' command to see where its at.. or perhaps set teh default app for .torrent files in teh gnome file manager
+2010-01-30T10:55:00.000Z	Dr_Willis	swapy	 ive been testing out qTorrent lately. :)
+2010-01-30T10:56:00.000Z	Dr_Willis	swapy	 use 'which transmission'
+2010-01-30T10:56:00.000Z	Dr_Willis	swapy	 yes.
+2010-01-30T10:57:00.000Z	Dr_Willis	swapy	 that will show the path to point the browser at.
+2010-01-30T10:57:00.000Z	Dr_Willis	swapy	 i justy set the default file type for .torrents to be whatever torrent app i want. and i think thats what firefox defaults to
+2010-01-30T10:58:00.000Z	Dr_Willis	swapy	 many torrent apps have a setting to 'auto load from' specific directroies also. You can set that up where you just save the .torrent files to thazt location and they will auto start them
+2010-01-30T10:59:00.000Z	Dr_Willis	swapy	 linux binaries can be in different locations.   they dont all get tossed in a 'program files' place.
+2010-01-30T11:00:00.000Z	swapy	Dr_Willis	ya i have that idea that ubuntu dosent have program files
+2010-01-30T11:00:00.000Z	Dr_Willis	swapy	 windows dosent actually keep everything in 'program files' either. :)
+2010-01-30T11:01:00.000Z	Dr_Willis	swapy	 its best to do things like that with windows tools from windows
+2010-01-30T11:03:00.000Z	Dr_Willis	swapy	 Under firefox here.. it has a list of all my torrent clients in the open with ... pull down item on the downloads dialog. :)
+2010-01-30T11:05:00.000Z	swapy	Dr_Willis	 is there any more view in ubuntu   only 3 views available          compact list and tree       not much impressive :(
+2010-01-30T11:06:00.000Z	Dr_Willis	swapy	 i dont klnwo what you are refering to..    if you mean file manager stuff,,theres dozens of other file managers you can use.
+2010-01-30T11:07:00.000Z	swapy	Dr_Willis	yes your are right
+2010-01-30T11:07:00.000Z	Dr_Willis	swapy	 more views do not make a more 'powerfull' file manager
+2010-01-30T11:07:00.000Z	Dr_Willis	swapy	 it scans windows files
+2010-01-30T11:08:00.000Z	Dr_Willis	swapy	 think about it.....
+2010-01-30T11:08:00.000Z	swapy	Dr_Willis	i mean with more views the 3 views werent so good so i asked
+2010-01-30T11:08:00.000Z	Dr_Willis	swapy	 i always use list view.. so its not really somtjing i care about.
+2010-01-30T11:09:00.000Z	Dr_Willis	swapy	theres work in the next gnome to add more purty previews and stuff..
+2010-01-30T11:11:00.000Z	Dr_Willis	swapy	 i rarely need to search my desktop. I know where i put thingws.
+2010-01-30T11:11:00.000Z	swapy	Dr_Willis	i am not used to linux so require to search for files often
+2010-01-30T11:12:00.000Z	Dr_Willis	swapy	  it pays to get organized. :)
+2010-01-30T11:44:00.000Z	Dr_Willis	swapy	 ntop is more for business;s and powar users.
+2010-01-30T11:44:00.000Z	Dr_Willis	swapy	 thers simple monitors to show kb up/down
+2010-01-30T11:46:00.000Z	Dr_Willis	swapy	 check out conky
+2010-01-30T11:49:00.000Z	Dr_Willis	swapy	 sudo apt-get install conky
+2010-01-30T11:49:00.000Z	Dr_Willis	swapy	 conky -C > .conkyrc
+2010-01-30T11:50:00.000Z	Dr_Willis	swapy	 then run 'conky'  - edit .conkyrc as you want..  :)
+2010-01-30T11:54:00.000Z	Dr_Willis	swapy	 make a script that waits 20 sec.. then launches conky.. and make gnome auto start that script. (is the easiest way i find)
+2010-05-02T21:07:00.000Z	Dr_Willis	swapy	 care to summarize the problem?
+2010-05-02T21:10:00.000Z	Dr_Willis	swapy	 you may want to chat in here instead of privte - i may have to  leave at any time
+2010-05-02T21:19:00.000Z	swapy	Dr_Willis	see if i add my mac id in network manager it saves mac id but auto etho isnt listed in connections eventough its in my networkmanager edit list          new auto ethernet gets set
+2010-05-02T21:21:00.000Z	Dr_Willis	swapy	 'wicd' is one
+2010-05-02T21:22:00.000Z	swapy	Dr_Willis	it dosent install wicd it says network manager is in use
+2010-05-02T21:23:00.000Z	swapy	Dr_Willis	it dosent install wicd it says network manager is in use
+2010-05-02T21:23:00.000Z	Dr_Willis	swapy	 i dont use it.. i just know it exists.
+2010-05-02T21:50:00.000Z	Dr_Willis	swapy	 there ya go.. bot says its not even on this server.
+2010-05-13T20:00:00.000Z	Dr_Willis	swapy	 bootup? or user login?
+2010-05-13T20:06:00.000Z	swapy	Dr_Willis	user login
+2010-05-13T20:34:00.000Z	Dr_Willis	swapy	 su dosent work by default on ubuntu

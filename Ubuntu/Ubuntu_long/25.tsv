@@ -1,0 +1,81 @@
+2007-11-16T12:42:00.000Z	greencookie		This is wierd.
+2007-11-16T12:42:00.000Z	greencookie		My gnome xchat doesnt have any minimize or maximize buttons
+2007-11-16T12:42:00.000Z	greencookie		I have compiz enabled and this happened.
+2007-11-16T12:43:00.000Z	greencookie		Has anyone gotten a similar problem?
+2007-11-16T12:44:00.000Z	greencookie		Hi can someone tell me how to get my minimize and maximize and close buttons back in gnome xchat?
+2007-11-16T12:45:00.000Z	greencookie		its eating the entire desktop.. kinda like eclipsed the whole things.
+2007-11-16T12:46:00.000Z	nickrud	greencookie	maybe the window is just bigger than the screen, try alt-click the window and dragging it down to the left
+2007-11-16T12:47:00.000Z	greencookie	nickrud	nopes there is no you know the thing at top of all windows. the horzontal bar which contain the max min and close buttons? that is not there.
+2007-11-16T12:47:00.000Z	nickrud	greencookie	try alt-f2 emerald --replace
+2007-11-16T12:50:00.000Z	nickrud	greencookie	emerald is the app that draws the window borders (and title bar)
+2007-11-16T12:50:00.000Z	greencookie	nickrud	Ah ok. I sense emerald is being lazy and not doing its job on poor gnome xchat. how do I fix him?
+2007-11-16T12:50:00.000Z	nickrud	greencookie	hit alt-f2, you should get a dialog box. type emerald --replace in it
+2007-11-16T12:51:00.000Z	nickrud	greencookie	hm, you have bigger problems then. No panel at all
+2007-11-16T13:01:00.000Z	greencookie	nickrud	why isnt ctrl alt f7 not working while alt f9 is??:(
+2007-11-16T13:02:00.000Z	nickrud	greencookie	because your X is running on vc9, not vc7 like it should be. Happened to me a couple of times on gutsy, I went to vc1 and restarted gdm (sudo invoke-rc.d gdm stop , sudo invoke-rc.d gdm start)
+2007-11-16T13:04:00.000Z	nickrud	greencookie	ah, yes, that's what I meant :) And it cleared up other problems at the same time.
+2007-11-16T13:06:00.000Z	greencookie	nickrud	I run it in vc1. quick question what does vc stand for? virtual console.
+2007-11-16T13:06:00.000Z	greencookie	nickrud	how well do you know irssi?:)
+2007-11-16T13:06:00.000Z	nickrud	greencookie	virtual console
+2007-11-16T13:06:00.000Z	nickrud	greencookie	I use xchat :)
+2007-11-16T13:07:00.000Z	greencookie	nickrud	brb
+2007-11-16T13:12:00.000Z	greencookie	nickrud	How do I shut down vc7? its still on:)
+2007-11-16T13:12:00.000Z	nickrud	greencookie	close xchat, and try rm -r ~/.xchat2
+2007-11-16T13:12:00.000Z	greencookie	nickrud	i've already deleted the .xchat2 folder in my home directory. no use.
+2007-11-16T13:13:00.000Z	nickrud	greencookie	did you install xchat-gnome or xchat?
+2007-11-16T13:13:00.000Z	greencookie	nickrud	gnome
+2007-11-16T13:13:00.000Z	greencookie	nickrud	xchat-gnome.
+2007-11-16T13:14:00.000Z	nickrud	greencookie	close xchat, and try gconftool --recursive-unset /apps/xchat-gnome , and removing the .xchat2 dir again
+2007-11-16T13:14:00.000Z	greencookie	nickrud	wow hold up..how do u copy paste in irssi?:)
+2007-11-16T13:15:00.000Z	nickrud	greencookie	if you're running it in a terminal in X , just high light the text, move to another terminal, and press the middle button
+2007-11-16T13:15:00.000Z	greencookie	nickrud	unfortunately im running it in vc1:(
+2007-11-16T13:15:00.000Z	nickrud	greencookie	if you're doing this in two vc's, install gpm and do the highlight and paste
+2007-11-16T13:16:00.000Z	greencookie	nickrud	quick question how do i exit out of 'vi' editor on my vc2?:)
+2007-11-16T13:16:00.000Z	nickrud	greencookie	<esc>:q
+2007-11-16T13:17:00.000Z	greencookie	nickrud	thnx..phew..vi sucks.. well for now:) i couldnt type anything lol:)
+2007-11-16T13:17:00.000Z	greencookie	nickrud	I'm gonna restart my xserver hold on.
+2007-11-16T13:18:00.000Z	nickrud	greencookie	nano is a decent editor for the console, simple stuff
+2007-11-16T13:18:00.000Z	nickrud	greencookie	and emacs is great, but overkill for this :)
+2007-11-16T13:18:00.000Z	greencookie	nickrud	mind giving me command to restart gdm?
+2007-11-16T13:19:00.000Z	nickrud	greencookie	sudo invoke-rc.d gdm stop && sudo invoke-rc.d gdm start
+2007-11-16T13:19:00.000Z	greencookie	nickrud	you know, I think I like vcs:) I might go x-less for a couple of days.
+2007-11-16T13:19:00.000Z	nickrud	greencookie	great learning experience. You might enjoy linux from scratch. I learned a lot from it
+2007-11-16T13:24:00.000Z	greencookie	nickrud	yeah I'm loving this brute feel of the tty. I might just use irssi, lynx and nano:)
+2007-11-16T13:24:00.000Z	nickrud	greencookie	yeah, try elinks, links, links2, and then you have mutt for mail
+2007-11-16T13:25:00.000Z	greencookie	nickrud	you think its possible to give up the worldy comforts of the Ubuntu gui and live the life of a VC monk for a month?
+2007-11-16T13:25:00.000Z	nickrud	greencookie	I did for months on end, while I was compiling linux from scratch. Ate my own dogfood while I was learning
+2007-11-16T13:26:00.000Z	greencookie	nickrud	haha! I will try to do this for a week, since i've only had ubuntu for about a month and I'm new to the entire "linux" thingie.
+2007-11-16T13:27:00.000Z	greencookie	nickrud	is there anything the GUI can do that the terminal cant? apart from obvious things like games.
+2007-11-16T13:28:00.000Z	nickrud	greencookie	graphics in general, although you can get an app zgv to view them
+2007-11-16T13:30:00.000Z	nickrud	greencookie	emacs
+2007-11-16T13:31:00.000Z	greencookie	nickrud	thnx I was typing 'emac' not 'emacs'
+2007-11-16T13:39:00.000Z	greencookie	nickrud	do you think lynx would be a good browser for a beginner like me?
+2007-11-16T13:39:00.000Z	nickrud	greencookie	sure, and try links, and elinks, and links2
+2007-11-16T13:40:00.000Z	greencookie	nickrud	umm wow so many options. I plan to use eclipse eventually:)
+2007-11-16T13:42:00.000Z	nickrud	greencookie	you can use emacs for mail and web browsing as well. Some people never leave emacs except for graphics
+2007-11-16T13:42:00.000Z	greencookie	nickrud	ok im getting
+2007-11-16T13:51:00.000Z	greencookie	nickrud	hehe. How do I exit emacs:)
+2007-11-16T13:51:00.000Z	nickrud	greencookie	ctl-f c
+2007-11-16T13:51:00.000Z	greencookie	nickrud	nvm ctrl+c
+2007-11-16T13:52:00.000Z	greencookie	nickrud	got it.
+2007-11-16T13:53:00.000Z	greencookie	nickrud	are you a professor in Caltech?:)
+2007-11-16T13:53:00.000Z	nickrud	greencookie	lol, no, I'm just a putz who's been playing around for a while
+2007-11-16T13:53:00.000Z	nickrud	greencookie	and on the scale of skill here, I maybe rate a 6
+2007-11-16T13:54:00.000Z	greencookie	nickrud	6/10? wow. I must be a -15000e579 out of 10 lol
+2007-11-16T13:55:00.000Z	nickrud	greencookie	I was feeling kinda big when I wrote that, it's probably less. One always sees oneself from the wrong side of the telescope
+2007-11-16T13:55:00.000Z	greencookie	nickrud	wise words, wisely spoken:)
+2007-11-17T07:28:00.000Z	nickrud	greencookie	hi ;)
+2007-11-17T11:59:00.000Z	greencookie	nickrud	you're a businessman?:)
+2007-11-17T12:00:00.000Z	nickrud	greencookie	no, I work in a non-profit. No grubby business for me ;)
+2007-11-17T12:00:00.000Z	greencookie	nickrud	nonprofit? hmm hopefully some fringe benefits up that road:)
+2007-11-17T12:22:00.000Z	nickrud	greencookie	mutt, you need mutt to live on a console
+2007-11-17T12:22:00.000Z	greencookie	nickrud	ok getting mutt.
+2007-11-17T12:23:00.000Z	greencookie	nickrud	quick question : I hear screen is l33t for console users. how do I use it:
+2007-11-17T12:24:00.000Z	nickrud	greencookie	I've only toyed with it a couple of times, man screen will have all the gritty stuff. try google linux screen for some tutorials
+2007-11-17T12:24:00.000Z	nickrud	greencookie	oooh, yes aptitude will give you hours of pleasure
+2007-11-17T22:39:00.000Z	greencookie	nickrud	its on alt+ctrl+f7
+2007-11-17T22:39:00.000Z	nickrud	greencookie	should be, but isn't always
+2007-11-17T22:40:00.000Z	greencookie	nickrud	ah ok.
+2007-11-17T22:40:00.000Z	nickrud	greencookie	for example, you can have an X running gnome on f7 , and another running kde on f8, and switch back and forth
+2007-11-18T10:30:00.000Z	nickrud	greencookie	never too soon to try compiling a kernel
+2007-11-18T10:31:00.000Z	greencookie	nickrud	I'm excited. Evanlec: sounds like a good idea. hehe

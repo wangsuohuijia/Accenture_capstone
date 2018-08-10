@@ -1,0 +1,60 @@
+2010-01-07T09:42:00.000Z	y6i		is there ANY way at all, in the world, possibly, to get your root password from a box you cant log into?
+2010-01-07T09:43:00.000Z	y6i		from someone who's not Flare-Laptop
+2010-01-07T09:45:00.000Z	y6i		is there ANY way at all, in the world, possibly, to get your root password from a box you cant log into?
+2010-01-07T09:46:00.000Z	tritium	y6i	are you sure you unlocked the root account on that machine, or are you referring to your user account?
+2010-01-07T09:46:00.000Z	y6i	tritium	all i know is i cant log into my machine
+2010-01-07T09:47:00.000Z	tritium	y6i	that machine is running Ubuntu?  Which account are you trying to login with?  A user account?
+2010-01-07T09:47:00.000Z	y6i	tritium	yes ubuntu and yes a user account
+2010-01-07T09:48:00.000Z	tritium	y6i	you can boot the machine into single-user mode, and then change the user's password
+2010-01-07T09:48:00.000Z	y6i	tritium	how do you do that?
+2010-01-07T09:49:00.000Z	tritium	y6i	hit Esc when you first boot, and select the recovery mode (single-user mode) from the grub menu
+2010-01-07T09:49:00.000Z	y6i	tritium	then what?
+2010-01-07T09:50:00.000Z	tritium	y6i	use the "passwd" command, in combination with the username, to change the user's password
+2010-01-07T09:50:00.000Z	y6i	tritium	how?
+2010-01-07T09:51:00.000Z	tritium	y6i	"passwd <username>"
+2010-01-07T09:51:00.000Z	y6i	tritium	let me boot up the machine, it'll be 3 minutes. will you be here?
+2010-01-07T09:51:00.000Z	tritium	y6i	yes, for a bit longer
+2010-01-07T09:54:00.000Z	tritium	y6i	what do you mean it won't let you?
+2010-01-07T09:54:00.000Z	y6i	tritium	nothing happens
+2010-01-07T09:54:00.000Z	tritium	y6i	are you using the arrow keys to move down the list?  Hit enter to select the one you want.
+2010-01-07T09:55:00.000Z	y6i	tritium	select recovery mode?
+2010-01-07T09:55:00.000Z	tritium	y6i	yes
+2010-01-07T09:57:00.000Z	y6i	tritium	select grub right? then what?
+2010-01-07T09:57:00.000Z	tritium	y6i	you select recovery mode (single-user mode)
+2010-01-07T09:58:00.000Z	y6i	tritium	im in the recovery menu
+2010-01-07T09:58:00.000Z	tritium	y6i	you mean the grub menu?
+2010-01-07T10:00:00.000Z	tritium	y6i	move the arrow key down to the recovery mode of the most recent kernel version, and hit the Enter key, and it will boot into single-user mode.
+2010-01-07T10:02:00.000Z	tritium	y6i	make the selection, and boot it, please.  Let me know when you're at the prompt once it boots.
+2010-01-07T10:02:00.000Z	y6i	tritium	what ptompt?
+2010-01-07T10:03:00.000Z	tritium	y6i	the shell prompt
+2010-01-07T10:03:00.000Z	y6i	tritium	it says "resume, clean, dpkg, fsck, grub, netroot, root, xfix"
+2010-01-07T10:05:00.000Z	tritium	y6i	what distribution and release are you running?
+2010-01-07T10:08:00.000Z	tritium	y6i	from that menu, choose the root shell
+2010-01-07T10:08:00.000Z	y6i	tritium	ok what now
+2010-01-07T10:09:00.000Z	tritium	y6i	are you at a root prompt?
+2010-01-07T10:09:00.000Z	y6i	tritium	yes
+2010-01-07T10:09:00.000Z	tritium	y6i	sudo password <username>, where <username> is the userame of the user you're trying to reset the password for
+2010-01-07T10:10:00.000Z	tritium	y6i	actually, sudo is not needed in this case, since you're in single-user mode
+2010-01-07T10:11:00.000Z	y6i	tritium	"bash: password: command not found"
+2010-01-07T10:11:00.000Z	tritium	y6i	sorry, passwd
+2010-01-07T10:13:00.000Z	y6i	tritium	seems I cant remember my username either :(
+2010-01-07T10:14:00.000Z	tritium	y6i	it'll be listed in /etc/hosts
+2010-01-07T10:15:00.000Z	y6i	tritium	how do I access that
+2010-01-07T10:16:00.000Z	tritium	y6i	cat /etc/passwd
+2010-01-07T10:17:00.000Z	y6i	tritium	cat: /etc/passwd/: Not a directory
+2010-01-07T10:18:00.000Z	tritium	y6i	if this user was the first one you created during install, it would be the user with ID 1000
+2010-01-07T10:18:00.000Z	y6i	tritium	cat: /etc/passwd/: Not a directory
+2010-01-07T10:18:00.000Z	tritium	y6i	you added an incorrect / at the end of what I told you to do
+2010-01-07T10:20:00.000Z	y6i	tritium	ok, I just changed my "UNIX" password. I hope that's the same as my login password. if it is, just out of curiosity, whats the command for ubuntu?
+2010-01-07T10:21:00.000Z	tritium	y6i	the command for what?
+2010-01-07T10:21:00.000Z	y6i	tritium	for starting ubuntu
+2010-01-07T10:22:00.000Z	y6i	tritium	the gui
+2010-01-07T10:22:00.000Z	tritium	y6i	from single-user mode, telinit 2
+2010-01-07T10:25:00.000Z	y6i	tritium	was telinit 2 really the right command or was that malicious code because that logged into a screen with my mouse cursor and a totally blank screen
+2010-01-07T10:26:00.000Z	tritium	y6i	it's correct.  It tells the system to switch from runlevel 1 (single-user) to runlevel 2 (multi-user, X, networking, etc.)
+2010-01-07T10:28:00.000Z	tritium	y6i	an alternative, but unnecessary approach, is to reboot the machine.
+2010-01-07T10:29:00.000Z	y6i	tritium	i tried that
+2010-01-07T10:30:00.000Z	tritium	y6i	well, you should be all set
+2010-01-07T10:30:00.000Z	y6i	tritium	this time i ran my hand accross the computer and it brought up a verbose dialogue of what the computer was doing
+2010-01-07T10:31:00.000Z	y6i	tritium	i mean i ran my hand accross the keyboard
+2010-01-07T10:32:00.000Z	y6i	tritium	it froze at "setting Advanced Power Management level to 0xfe (254) [ OK ]

@@ -1,0 +1,49 @@
+2010-05-03T23:12:00.000Z	Shapeshifter		this, ladies and gentlemen, is crap.
+2010-05-03T23:13:00.000Z	Shapeshifter		meh it seems like this thing still has problems. gnome doesn't like this machine. when I log in, it takes 1 minute to show the panel. when I want to add a widget to the panel, it takes a minute to load the window. ctrl-alt-del takes a minute to show the dialog.
+2010-05-03T23:15:00.000Z	Shapeshifter		I use archlinux on my laptop and desktop, custom setup, everything's brilliant but on this machine, family living room HTPC, I thought something like ubuntu might work.
+2010-05-03T23:16:00.000Z	flansuse	Shapeshifter	what do you think the cause is?
+2010-05-03T23:17:00.000Z	flansuse	Shapeshifter	what video card?
+2010-05-03T23:17:00.000Z	Shapeshifter	flansuse	nvidia. but that doesn't matter as it was the same when nouveau was still in use. now I'm using nvidia.
+2010-05-03T23:17:00.000Z	flansuse	Shapeshifter	what do you think the cause may be, though?
+2010-05-03T23:17:00.000Z	Shapeshifter	flansuse	and everything is snappy. It must be a gnome/glib g-anything problem
+2010-05-03T23:18:00.000Z	flansuse	Shapeshifter	so the interface runs smooth, but it takes forever to load new dialogues and windows?
+2010-05-03T23:18:00.000Z	Shapeshifter	flansuse	no idea
+2010-05-03T23:18:00.000Z	Shapeshifter	flansuse	yes, some. e.g. the panel the first time, ctrl-alt-delete-dialog, add to panel...
+2010-05-03T23:19:00.000Z	flansuse	Shapeshifter	on Arch, did you use the GNOME desktop?
+2010-05-03T23:19:00.000Z	Shapeshifter	flansuse	no, on this machine I used KDE, on my own machines I use a custom setup (xinitrc and stuff)
+2010-05-03T23:20:00.000Z	flansuse	Shapeshifter	one way to narrow down the culprit is to true a LiveCD of a GNOME desktop on the family PC.
+2010-05-03T23:20:00.000Z	flansuse	Shapeshifter	something like Foresight perhaps, since it showcases the latest GNOME.
+2010-05-03T23:21:00.000Z	flansuse	Shapeshifter	gnome-session-save  --shutdown-dialog
+2010-05-03T23:22:00.000Z	Shapeshifter	flansuse	thanks
+2010-05-03T23:23:00.000Z	Shapeshifter	flansuse	(gnome-session-save:1620): WARNING **: Failed to call shutdown: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+2010-05-03T23:23:00.000Z	Shapeshifter	flansuse	that appears after about 20 seconds. after another 20, the dialog shows up
+2010-05-03T23:23:00.000Z	flansuse	Shapeshifter	that sounds not good.
+2010-05-03T23:24:00.000Z	Shapeshifter	flansuse	sounds like a dbus error to me
+2010-05-03T23:24:00.000Z	flansuse	Shapeshifter	I know it's obvious, but y ou have fully updated packages?
+2010-05-03T23:24:00.000Z	Shapeshifter	flansuse	mhh, doesn't ubuntu take the latest packages from the net upon installing?
+2010-05-03T23:25:00.000Z	flansuse	Shapeshifter	after install the update manager might give you a notice about new packages.
+2010-05-03T23:25:00.000Z	Shapeshifter	flansuse	it did not. and this is also taking ages to load
+2010-05-03T23:26:00.000Z	flansuse	Shapeshifter	does the same thing happen if you try this: gnome-control-center
+2010-05-03T23:26:00.000Z	Shapeshifter	flansuse	nope that comes up instantly
+2010-05-03T23:26:00.000Z	Shapeshifter	flansuse	my system is up to date apparently.
+2010-05-03T23:27:00.000Z	flansuse	Shapeshifter	well, one option is to file a bug report, and also to try with another Live CD that uses GNOME.
+2010-05-03T23:27:00.000Z	flansuse	Shapeshifter	at least it will reveal if it's a GNOME or Ubuntu issue.
+2010-05-03T23:27:00.000Z	Shapeshifter	flansuse	I'm pretty sure it's a gnome thing as I had the same problem like half a year ago when I ran gnome on Arch on this machine. Something essential is broken
+2010-05-03T23:29:00.000Z	flansuse	Shapeshifter	well, maybe it's changed since then? Maybe another Live CD distro using GNOME will not have this problem? You can always safely test out that theory.
+2010-05-03T23:29:00.000Z	flansuse	Shapeshifter	there's the openSUSE 11.2 GNOME and Fedora 12 GNOME Live CDs that you can try.
+2010-05-03T23:30:00.000Z	flansuse	Shapeshifter	I believe both are GNOME 2.28, not 2.30 like Lucid ships with.
+2010-05-03T23:31:00.000Z	flansuse	Shapeshifter	sorry, wrong button. Did I miss anything?
+2010-05-03T23:32:00.000Z	Shapeshifter	flansuse	nah. I'm googling the error. trying something else is not an option, I'd just reinstall arch and kde and let the machine rot instead
+2010-05-03T23:33:00.000Z	flansuse	Shapeshifter	it wasn't to try something else, but to reveal if it's a GNOME or Ubuntu problem.
+2010-05-03T23:33:00.000Z	Shapeshifter	flansuse	I still think it's a gnome problem
+2010-05-03T23:33:00.000Z	Shapeshifter	flansuse	non gnome apps runs smoothly all the way
+2010-05-03T23:35:00.000Z	flansuse	Shapeshifter	I believe in /var/log as well?
+2010-05-03T23:36:00.000Z	Shapeshifter	flansuse	messages is there, but everything and errors are not
+2010-05-03T23:36:00.000Z	flansuse	Shapeshifter	not at an Ubuntu computer right now, sorry.
+2010-05-03T23:39:00.000Z	flansuse	Shapeshifter	dbus?
+2010-05-03T23:40:00.000Z	Shapeshifter	flansuse	my guess is that dbus or some gnome device abstraction layer doesn't like one of my hardware components and hangs, then fails everytime
+2010-05-03T23:43:00.000Z	Shapeshifter	flansuse	https://bugs.launchpad.net/ubuntu/+source/gnome-panel/+bug/417824 basically this and others
+2010-05-03T23:46:00.000Z	Shapeshifter	flansuse	lots of people having the same problem, bugs getting put to "low" and then closed because no dev wants to pick it up
+2010-05-03T23:49:00.000Z	Shapeshifter	flansuse	the culprit is devkit-power-daemon, I'm pretty certain
+2010-05-03T23:50:00.000Z	flansuse	Shapeshifter	you use Arch, so you are 1,000,000X more knowledgeable than me, believe me.
+2010-05-03T23:50:00.000Z	Shapeshifter	flansuse	well that might be exaggerated but thank you ;)

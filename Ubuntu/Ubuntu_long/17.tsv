@@ -1,0 +1,140 @@
+2006-04-11T08:31:00.000Z	arrick		what is a good ftp server in ubuntu?
+2006-04-11T08:31:00.000Z	arrick		good noght mwe
+2006-04-11T08:31:00.000Z	arrick		get some sleep
+2006-04-11T08:31:00.000Z	arrick		night
+2006-04-11T08:31:00.000Z	kingspawn	arrick	proftpd is nice
+2006-04-11T08:31:00.000Z	kingspawn	arrick	if you were thinking of servers
+2006-04-11T08:32:00.000Z	arrick	kingspawn	I already have a ubuntu/apache server setup, I want to add ftp to it now
+2006-04-11T08:32:00.000Z	kingspawn	arrick	yes, then proftpd should be for you...
+2006-04-11T08:33:00.000Z	arrick	kingspawn	can you help me get it and install it?
+2006-04-11T08:34:00.000Z	kingspawn	arrick	first, try "sudo apt-get install proftpd"
+2006-04-11T08:34:00.000Z	kingspawn	arrick	the "d" at the end means "daemon", meaning it will run all the time
+2006-04-11T08:39:00.000Z	arrick	kingspawn	what is the next step, I read man proftpd, and it is really falling short
+2006-04-11T08:39:00.000Z	kingspawn	arrick	its not falling short in any way. can you "ftp localhost"?
+2006-04-11T09:04:00.000Z	kingspawn	arrick	have you set up samba correctly?
+2006-04-11T09:04:00.000Z	arrick	kingspawn	I dont ave samba
+2006-04-11T09:05:00.000Z	kingspawn	arrick	and you are wondering why windows cant connect?
+2006-04-11T09:05:00.000Z	arrick	kingspawn	yeah
+2006-04-11T09:06:00.000Z	kingspawn	arrick	well, you need to install samba. windows cant interact with linux except samba.. (mostly)
+2006-04-12T15:05:00.000Z	kingspawn	arrick	evening. it is for ext3 to keep tabs of files gone awry
+2006-04-12T15:05:00.000Z	kingspawn	arrick	more or less :)
+2006-04-12T15:06:00.000Z	kingspawn	arrick	yes, if they are ext3
+2006-04-12T15:14:00.000Z	kingspawn	arrick	sudo apt-get install gedit?
+2006-04-12T15:26:00.000Z	kingspawn	arrick	shutdown.. :)
+2006-04-12T15:27:00.000Z	kingspawn	arrick	shutdown -h now halts your computer. shutdown -r now reboots it
+2006-04-12T15:27:00.000Z	kingspawn	arrick	and man shutdown tells lots
+2006-04-13T05:35:00.000Z	kingspawn	arrick	you can do that, but i dont remember how right now
+2006-04-13T05:36:00.000Z	kingspawn	arrick	there are guides, you have to modify the thingy that usually plugs into the mb
+2006-04-13T05:36:00.000Z	arrick	kingspawn	i know, but i cant remember how either
+2006-04-13T05:37:00.000Z	kingspawn	arrick	http://www.procooling.com/index.php?func=articles&disp=52&pg=1
+2006-04-13T05:37:00.000Z	kingspawn	arrick	might help. google is always helpful
+2006-04-13T06:29:00.000Z	kingspawn	arrick	its a dangerous game :)
+2006-04-13T06:30:00.000Z	kingspawn	arrick	yeah, i remember having two psu's going for a while, cant remember what for, though.. :)
+2006-04-13T06:31:00.000Z	kingspawn	arrick	seems easier to just upgrade to a more powerful one ;)
+2006-04-13T06:34:00.000Z	kingspawn	arrick	hehe, whatcha doin?
+2006-04-13T06:34:00.000Z	kingspawn	arrick	jobwise, that is
+2006-04-13T06:36:00.000Z	arrick	kingspawn	oh you mean jobwise, running a large linux network of 7000 computers at a school district
+2006-04-13T06:36:00.000Z	kingspawn	arrick	heck, that aint bad :)
+2006-04-13T06:37:00.000Z	kingspawn	arrick	id shy away from that like i would the plague
+2006-04-15T10:07:00.000Z	arrick	kingspawn	remember my hd problems from yesterday?
+2006-04-15T10:07:00.000Z	kingspawn	arrick	short recap if you please
+2006-04-15T10:09:00.000Z	kingspawn	arrick	hm, well, have you added them to your /etc/fstab?
+2006-04-15T10:09:00.000Z	kingspawn	arrick	well, is the disk detected?
+2006-04-15T10:15:00.000Z	kingspawn	arrick	what does sudo mount -a do?
+2006-04-15T10:16:00.000Z	arrick	kingspawn	says those 3 drives do not exist
+2006-04-15T10:16:00.000Z	kingspawn	arrick	pastebin your fstab
+2006-04-15T10:18:00.000Z	arrick	kingspawn	http://paste.ubuntu-nl.org/11970
+2006-04-15T10:19:00.000Z	kingspawn	arrick	how many disks are in there, man? :)
+2006-04-15T10:20:00.000Z	arrick	kingspawn	i am running a ftp server eventually, that will hold anything I have.
+2006-04-15T10:20:00.000Z	arrick	kingspawn	8 of them
+2006-04-15T10:20:00.000Z	kingspawn	arrick	what a nightmare ;) but okay, what's fdisk -l /dev/hde tell you? pm me the results
+2006-04-15T10:21:00.000Z	arrick	kingspawn	   Device Boot      Start         End      Blocks   Id  System /dev/hde1               1         989      415352   83  Linux
+2006-04-15T10:23:00.000Z	kingspawn	arrick	but hde1 wont mount?
+2006-04-15T10:23:00.000Z	kingspawn	arrick	well, whats fdisk -l /dev/hdg say then?
+2006-04-15T10:24:00.000Z	kingspawn	arrick	have you actually made filesystems on them, or just fdisked them to be ext3?
+2006-04-15T10:24:00.000Z	arrick	kingspawn	I made filesystems on them
+2006-04-15T10:25:00.000Z	arrick	kingspawn	http://paste.ubuntu-nl.org/11972
+2006-04-15T10:26:00.000Z	kingspawn	arrick	well, either it's shot to sh*, or you could try formatting it and making a new filesystem on it
+2006-04-15T10:26:00.000Z	kingspawn	arrick	checked dmesg for errors?
+2006-04-15T10:27:00.000Z	kingspawn	arrick	i'd be much obliged if you would prefix the lines you write to me with my nickname, so that they light up
+2006-04-15T10:28:00.000Z	kingspawn	arrick	well, you do fdisk /dev/hdg, erase the partition table, make a new one, exit fdisk, do mkfs.ext3 /dev/hdg
+2006-04-15T10:28:00.000Z	kingspawn	arrick	or rather, /dev/hdg1 if you choose to make one partition, etc
+2006-04-15T10:30:00.000Z	arrick	kingspawn	I did all that yesterday, but I was wanting to check for the errors you were talking about
+2006-04-15T10:31:00.000Z	kingspawn	arrick	just type dmesg
+2006-04-15T10:31:00.000Z	kingspawn	arrick	and look for hd-related messages
+2006-04-15T10:31:00.000Z	kingspawn	arrick	dmesg | grep hdg, for instance
+2006-04-15T10:31:00.000Z	arrick	kingspawn	ok
+2006-04-15T10:35:00.000Z	arrick	kingspawn	http://paste.ubuntu-nl.org/11973
+2006-04-15T10:37:00.000Z	kingspawn	arrick	those are the first signs that your hdg is going on a long vacation
+2006-04-15T10:37:00.000Z	kingspawn	arrick	you can always try to reformat it, but i wouldnt put my valuables on there
+2006-04-15T10:42:00.000Z	arrick	kingspawn	nooooooo, they are only 270mg drives anyways
+2006-04-15T10:44:00.000Z	kingspawn	arrick	haha, well, they have done their service over the last 20 years.. ;)
+2006-04-15T10:45:00.000Z	arrick	kingspawn	^^
+2006-04-15T10:45:00.000Z	kingspawn	arrick	without logon
+2006-04-15T10:45:00.000Z	arrick	kingspawn	yes
+2006-04-15T10:45:00.000Z	kingspawn	arrick	think about the worlds large servers having to be logged into locally to be operational
+2006-04-15T10:46:00.000Z	arrick	kingspawn	I wasnt sure so I wanted to ask
+2006-04-15T10:46:00.000Z	kingspawn	arrick	yeah. now you now. i have a box under my table with no screen and no keyboards or anything, it runs like a charm
+2006-04-15T10:46:00.000Z	arrick	kingspawn	mine takes up a drawer in the filng cabinet
+2006-04-15T10:47:00.000Z	kingspawn	arrick	hehe
+2006-04-15T10:47:00.000Z	arrick	kingspawn	thanks for you help
+2006-04-15T10:47:00.000Z	kingspawn	arrick	cya
+2006-04-20T10:12:00.000Z	kingspawn	arrick	passwd webmaster
+2006-04-20T10:12:00.000Z	kingspawn	arrick	prolly with sudo in front
+2006-04-20T11:28:00.000Z	kingspawn	arrick	yo
+2006-04-20T11:29:00.000Z	arrick	kingspawn	, can you check out this site and let me know if it works? It is only partially done, just want to make sure the thing opens. http://arrick.no-ip.com
+2006-04-20T11:30:00.000Z	kingspawn	arrick	doesnt seem to accept connections
+2006-04-20T11:32:00.000Z	arrick	kingspawn	try http://71.115.179.219
+2006-04-20T11:33:00.000Z	kingspawn	arrick	that works
+2006-04-20T11:33:00.000Z	kingspawn	arrick	looking good
+2006-04-20T11:33:00.000Z	kingspawn	arrick	almost :)
+2006-04-20T11:33:00.000Z	arrick	kingspawn	thanks
+2006-04-20T11:34:00.000Z	kingspawn	arrick	i did not know that. you starting up your own business?
+2006-04-20T12:19:00.000Z	kingspawn	arrick	now aint that special
+2006-04-20T12:20:00.000Z	kingspawn	arrick	haha, what exactly is it saying that it is removing?
+2006-04-20T12:20:00.000Z	kingspawn	arrick	and why not just apt-get?
+2006-04-20T12:20:00.000Z	kingspawn	arrick	score :)
+2006-04-20T12:20:00.000Z	arrick	kingspawn	easier to remove packages if you install with aptitude
+2006-04-20T12:21:00.000Z	kingspawn	arrick	hm, well, i've no idea, never used aptitude
+2006-04-20T12:23:00.000Z	arrick	kingspawn	and now th stupid pastebin is messing up, wont send, just resets
+2006-04-20T12:23:00.000Z	kingspawn	arrick	calm the panic, it'll all be good :)
+2006-04-20T12:28:00.000Z	arrick	kingspawn	I am trying to use the 'sudo make' command, and it wont let me why?
+2006-04-20T12:34:00.000Z	kingspawn	arrick	just type make
+2006-04-20T12:34:00.000Z	kingspawn	arrick	to check that make exists at all
+2006-04-20T12:37:00.000Z	arrick	kingspawn	ok, I need help getting the ()$#$ sources list setup correct, its corrupted somehow, please help
+2006-04-20T12:40:00.000Z	kingspawn	arrick	i have to take care of something, i can help in a little while
+2006-04-20T13:06:00.000Z	kingspawn	arrick	ping www.google.com
+2006-04-20T13:07:00.000Z	arrick	kingspawn	ping: unknown host www.google.com
+2006-04-20T13:07:00.000Z	kingspawn	arrick	whats the problem? i just got back
+2006-04-20T13:09:00.000Z	kingspawn	arrick	has the comp still got an ip? does your /etc/resolv.conf look right?
+2006-04-20T13:10:00.000Z	arrick	kingspawn	mac, what next
+2006-04-20T13:10:00.000Z	kingspawn	arrick	whats this resolvconf and glibc resolver? never used it
+2006-04-20T13:18:00.000Z	arrick	kingspawn	Im back
+2006-04-20T13:18:00.000Z	kingspawn	arrick	okay
+2006-04-20T13:18:00.000Z	kingspawn	arrick	well, eh, what was the problem? no dns? do you know your dns servers? can you have it get a dhcp-ip?
+2006-04-20T13:19:00.000Z	arrick	kingspawn	I have it set to static ip cause its a webserver
+2006-04-20T13:19:00.000Z	kingspawn	arrick	well, then you have to set the dns static in resolv.conf too
+2006-04-20T13:20:00.000Z	kingspawn	arrick	well, if you have your dns server you just add "nameserver <ip>" to resolv.conf
+2006-04-20T13:21:00.000Z	arrick	kingspawn	why does it tell me my changes will be over written
+2006-04-20T13:22:00.000Z	kingspawn	arrick	well, i have no idea never, seen that stuff before. just add it and see what happens
+2006-04-20T13:22:00.000Z	kingspawn	arrick	is that warning all there is in your resolv.conf?
+2006-04-20T13:22:00.000Z	arrick	kingspawn	yse
+2006-04-20T13:22:00.000Z	kingspawn	arrick	then just delete it and add your nameserver-line(s)
+2006-04-20T13:23:00.000Z	kingspawn	arrick	now thats the question. are you in an ubuntu box with working networking now? if so, just check /etc/resolv.conf
+2006-04-20T13:29:00.000Z	kingspawn	arrick	well, try rebooting the box and check if its changed it
+2006-04-20T13:32:00.000Z	kingspawn	arrick	nice
+2006-04-20T13:33:00.000Z	arrick	kingspawn	now that I know about that, on the rare ocassions that the server needs rebooted i will keep a text file to set it with
+2006-04-20T13:34:00.000Z	kingspawn	arrick	i'd reboot it a couple of times now during setup to check if it gets changed
+2006-04-20T13:35:00.000Z	kingspawn	arrick	lets hope you wont regret it later.
+2006-04-20T13:42:00.000Z	arrick	kingspawn	yeah, I dont think i will, might reboot after the installs though
+2006-04-20T13:49:00.000Z	kingspawn	arrick	working now
+2006-04-28T13:49:00.000Z	arrick	kingspawn	how are you today?
+2006-04-28T13:50:00.000Z	kingspawn	arrick	Fine thank you :) Yourself?
+2006-04-28T13:53:00.000Z	arrick	kingspawn	not good, trying to get a pastebot woking, and have been working on it for 4 days now
+2006-04-28T14:10:00.000Z	kingspawn	arrick	tar xvf file.tar
+2006-04-29T07:52:00.000Z	kingspawn	arrick	Just get into windows and remove if from there
+2006-04-30T16:17:00.000Z	kingspawn	arrick	hey there
+2006-05-25T16:46:00.000Z	arrick	kingspawn	how you ben doing?
+2006-05-25T16:47:00.000Z	kingspawn	arrick	good, good :)
+2006-05-25T16:47:00.000Z	kingspawn	arrick	and yourself?
+2006-05-25T16:48:00.000Z	arrick	kingspawn	doing pretty good, installing another ubuntu server right at the moment

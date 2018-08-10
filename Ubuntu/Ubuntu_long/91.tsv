@@ -1,0 +1,71 @@
+2006-03-06T14:45:00.000Z	mikebot		how do i access an ntfs drive in terminal?
+2006-03-06T14:45:00.000Z	mikebot		cd ~/hda1 ?
+2006-03-06T14:46:00.000Z	mikebot		what is fstab/
+2006-03-06T14:46:00.000Z	mikebot		i just need to get into an ntfs drive
+2006-03-06T14:47:00.000Z	mikebot		via terminal
+2006-03-06T14:47:00.000Z	fangorious	mikebot	mount -t ntfs /dev/hda1 /mnt
+2006-03-06T14:47:00.000Z	fangorious	mikebot	substitute the actual device node for hda1
+2006-03-06T14:48:00.000Z	mikebot	fangorious	mount: only root can do that
+2006-03-06T14:48:00.000Z	mikebot	fangorious	mount: /dev/hda1 already mounted or /mnt busy
+2006-03-06T14:49:00.000Z	fangorious	mikebot	is hda1 the right partition?
+2006-03-06T14:49:00.000Z	mikebot	fangorious	on my desktoip it says hda1
+2006-03-06T14:49:00.000Z	fangorious	mikebot	if you browse into it, is that the right partition?
+2006-03-06T14:50:00.000Z	mikebot	fangorious	yeah, i couldn't browse it beofre
+2006-03-07T11:10:00.000Z	fangorious	mikebot	look in /usr/lib/firefox/searchplugins
+2006-03-07T11:11:00.000Z	fangorious	mikebot	also ~/.mozilla/firefox/*.default/searchplugins for ones you've installed yourself
+2006-03-07T11:11:00.000Z	mikebot	fangorious	i deleted them from there
+2006-03-07T11:11:00.000Z	mikebot	fangorious	i deleted them from: home/opt/firefox/searchplugins
+2006-03-07T11:11:00.000Z	mikebot	fangorious	i don't know where those other folders are
+2006-03-07T11:12:00.000Z	fangorious	mikebot	~ means your home directory
+2006-03-07T11:13:00.000Z	mikebot	fangorious	okay, so in my home i don't have mozilla, it is opt
+2006-03-07T11:13:00.000Z	mikebot	fangorious	and then firefox, and i deleted themf rom there
+2006-03-07T11:13:00.000Z	mikebot	fangorious	where is that other folder you mentioned
+2006-03-07T11:13:00.000Z	fangorious	mikebot	in your home directory there will be a .mozilla folder with your firefox profile. the '.' at the start is important
+2006-03-07T11:14:00.000Z	mikebot	fangorious	in my home, there is only
+2006-03-07T11:14:00.000Z	mikebot	fangorious	Desktop, linuxdcpp, opt, websites
+2006-03-07T11:14:00.000Z	fangorious	mikebot	anything starting with a '.' is hidden. do ls -A to see it, or just trust me and 'cd ~/.mozilla'
+2006-03-07T11:15:00.000Z	mikebot	fangorious	okay
+2006-03-07T11:16:00.000Z	mikebot	fangorious	ah, okay
+2006-03-07T11:16:00.000Z	mikebot	fangorious	but in .mozilla..
+2006-03-07T11:17:00.000Z	fangorious	mikebot	there should be a firefox folder, and in that, a randomly names kj324ij34kl.default folder
+2006-03-07T11:17:00.000Z	fangorious	mikebot	the part before ".default" is random so just do an ls to see what it is
+2006-03-07T11:17:00.000Z	mikebot	fangorious	okay, so in. ~/home/.mozilla/fireox/ff1.5/lejxsznc.default/searchplugins
+2006-03-07T11:17:00.000Z	mikebot	fangorious	are only the ones i've installed
+2006-03-07T11:18:00.000Z	fangorious	mikebot	you can also look in /usr/lib/firefox/searchplugins, /usr/lib/mozilla-firefox/searchplugins, /usr/lib/mozilla/searchplugins
+2006-03-07T11:18:00.000Z	mikebot	fangorious	where is usr?
+2006-03-07T11:19:00.000Z	fangorious	mikebot	in /
+2006-03-07T11:20:00.000Z	fangorious	mikebot	anything that starts with a '/' is at the root of your filesystem, anything that doesn't start with '/' is relative to your current directory
+2006-03-07T11:20:00.000Z	mikebot	fangorious	in home there is no usr folder
+2006-03-07T11:20:00.000Z	mikebot	fangorious	and i am showing hidden folders
+2006-03-07T11:21:00.000Z	fangorious	mikebot	it's not in your home folder, it's in /. type in 'cd /' and then do an ls
+2006-03-07T11:21:00.000Z	mikebot	fangorious	ah, i'm not trying in terminal, i was navigating in folders
+2006-03-07T11:22:00.000Z	fangorious	mikebot	ah, if you're in nautilus with the side panel, look under filesystem
+2006-03-07T11:22:00.000Z	mikebot	fangorious	ah okay, here we go
+2006-03-07T11:24:00.000Z	mikebot	fangorious	how come i cannot delete the files from this folder?
+2006-03-07T11:24:00.000Z	fangorious	mikebot	because they are owned by root
+2006-03-07T11:24:00.000Z	mikebot	fangorious	aren't i root?
+2006-03-07T11:24:00.000Z	mikebot	fangorious	i haev to do sudo?
+2006-03-07T11:24:00.000Z	fangorious	mikebot	use sudo at the command line
+2006-03-07T11:24:00.000Z	fangorious	mikebot	i hope you're not logged in as root, that's bad form
+2006-03-07T11:24:00.000Z	mikebot	fangorious	i don't know what that means
+2006-03-07T11:25:00.000Z	mikebot	fangorious	sudo del <filename>?
+2006-03-07T11:25:00.000Z	fangorious	mikebot	sudo rm <filename>
+2006-03-07T11:25:00.000Z	mikebot	fangorious	okay, thanks
+2006-03-07T11:26:00.000Z	fangorious	mikebot	you can also do alt-f2 to get a "Run..." dialog and type 'gksudo nautilus --no-dekstop' to get a file browser window with admin privilege (the --no-desktop is important to avoid loading roots desktop over yours)
+2006-03-07T11:27:00.000Z	mikebot	fangorious	what is nautilus?
+2006-03-07T11:27:00.000Z	mikebot	fangorious	fuck, theya re still there
+2006-03-07T11:27:00.000Z	fangorious	mikebot	did you restart firefox?
+2006-03-07T11:27:00.000Z	mikebot	fangorious	yeah
+2006-03-07T11:28:00.000Z	mikebot	fangorious	is there a way i can serach my partition for any file with creative in its name?
+2006-03-07T11:29:00.000Z	fangorious	mikebot	find / -iname "*creative*"
+2006-03-07T11:29:00.000Z	mikebot	fangorious	ah, another place... opt/firefox/searchplugins
+2006-03-07T11:29:00.000Z	fangorious	mikebot	the '-iname' makes it case insensitive. '-name' is case sensitive
+2006-03-07T11:30:00.000Z	mikebot	fangorious	ah, got it
+2006-03-07T11:30:00.000Z	mikebot	fangorious	thanks for all the help
+2006-03-07T11:30:00.000Z	fangorious	mikebot	np
+2006-03-07T11:31:00.000Z	mikebot	fangorious	do i need to download a codec or soemtihng for divx to work, or is it pre-installed?
+2006-03-07T11:31:00.000Z	mikebot	fangorious	that was to anyone, sorry
+2006-03-07T11:32:00.000Z	fangorious	mikebot	are you running breezy or dapper?
+2006-03-07T11:32:00.000Z	mikebot	fangorious	breezy
+2006-03-07T11:33:00.000Z	fangorious	mikebot	'sudo apt-get install gstreamer0.8-plugins gstreamer0.8-plugins-multiverse' should cover you for a large variety of codecs
+2006-03-07T11:33:00.000Z	mikebot	fangorious	okay, thanks

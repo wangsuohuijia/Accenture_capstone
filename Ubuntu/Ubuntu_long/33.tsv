@@ -1,0 +1,64 @@
+2012-05-10T07:54:00.000Z	lifelike		Hey guys, I have a question and I think it can be solved really quickly
+2012-05-10T07:55:00.000Z	lifelike		!patience
+2012-05-10T07:55:00.000Z	lifelike		!ask
+2012-05-10T07:56:00.000Z	DarwinSurvivor	lifelike	what was your question?
+2012-05-10T07:57:00.000Z	lifelike	DarwinSurvivor	I was trying to put everything in one line and make it short :)
+2012-05-10T08:03:00.000Z	lifelike	DarwinSurvivor	Any idea what could cause my problem?
+2012-05-10T08:04:00.000Z	DarwinSurvivor	lifelike	where did you get the software from?
+2012-05-10T08:04:00.000Z	DarwinSurvivor	lifelike	and what changes (if any) did you make in ubuntu to set it up?
+2012-05-10T08:05:00.000Z	lifelike	DarwinSurvivor	I had setup shrewsoft vpn (through the Software Center) with a config file from my vpn provider
+2012-05-10T08:05:00.000Z	lifelike	DarwinSurvivor	After that I upgraded to 12.04 and then later tried the vpn
+2012-05-10T08:05:00.000Z	lifelike	DarwinSurvivor	No changes besides the upgrade
+2012-05-10T08:05:00.000Z	DarwinSurvivor	lifelike	can you post a link to your vpn's instructions?
+2012-05-10T08:06:00.000Z	lifelike	DarwinSurvivor	It was just a shrewsoft vpn config file really.
+2012-05-10T08:07:00.000Z	DarwinSurvivor	lifelike	can you open ubuntu's proxy configuration dialog?
+2012-05-10T08:08:00.000Z	lifelike	DarwinSurvivor	Yes, I checked that too. I made sure it's blank. The connections for my wireless network haven't been modified either.
+2012-05-10T08:08:00.000Z	DarwinSurvivor	lifelike	and you can't get online with wireless *or* wired?
+2012-05-10T08:08:00.000Z	lifelike	DarwinSurvivor	Basically, I can connect to any wireless network just fine. But I don't have internet access. I can't even ping a website.
+2012-05-10T08:08:00.000Z	lifelike	DarwinSurvivor	wireless _and_ wired.
+2012-05-10T08:10:00.000Z	DarwinSurvivor	lifelike	ok, can you please pastebin the output of "ifconfig; route; traceroute google.com"?
+2012-05-10T08:11:00.000Z	DarwinSurvivor	lifelike	do that with the vpn disabled (no internet), then again with it enable (with internet)
+2012-05-10T08:11:00.000Z	lifelike	DarwinSurvivor	One problem, I removed shrewsoft hoping it would fix the problem >.<
+2012-05-10T08:12:00.000Z	lifelike	DarwinSurvivor	Alright I can do that, but you'll have to give me a few minutes. I only have this one machine and I'm on a windows partition right now
+2012-05-10T08:12:00.000Z	DarwinSurvivor	lifelike	ok, then just try it without the vpn
+2012-05-10T08:12:00.000Z	DarwinSurvivor	lifelike	ok
+2012-05-10T08:12:00.000Z	lifelike	DarwinSurvivor	I'll be back!
+2012-05-10T08:12:00.000Z	DarwinSurvivor	lifelike	alright
+2012-05-10T08:20:00.000Z	lifelike	DarwinSurvivor	could you repeat the previous message you told me to try. I closed my browser to soon.
+2012-05-10T08:38:00.000Z	DarwinSurvivor	lifelike	ok, I'm guessing you can't install traceroute (with no internet), can you run "ping -c 5 192.168.2.1; ping -c 5 173.194.79.94; ping -c 5 google.ca"?
+2012-05-10T08:26:00.000Z	DarwinSurvivor	lifelike	ok, can you please pastebin the output of "ifconfig; route; traceroute google.com"?
+2012-05-10T08:26:00.000Z	DarwinSurvivor	lifelike	i think that's the only important one
+2012-05-10T08:27:00.000Z	DarwinSurvivor	lifelike	rest should show up at http://irclogs.ubuntu.com/2012/05/10/%23ubuntu.html in about 4 minutes (half-hour lagg I believe)
+2012-05-10T08:30:00.000Z	DarwinSurvivor	lifelike	you still there?
+2012-05-10T08:31:00.000Z	lifelike	DarwinSurvivor	Yes, I'm using irc through my phone right now. Please give me a minute.
+2012-05-10T08:32:00.000Z	DarwinSurvivor	lifelike	alright
+2012-05-10T08:35:00.000Z	lifelike	DarwinSurvivor	here is the paste bin link http://pastebin.com/PhHjpHrN
+2012-05-10T08:39:00.000Z	lifelike	DarwinSurvivor	a quick answer is that I can ping my router and access anything locally, again but no internet access
+2012-05-10T08:39:00.000Z	DarwinSurvivor	lifelike	ok, that helps
+2012-05-10T08:39:00.000Z	DarwinSurvivor	lifelike	can you ping your routers *external* ip?
+2012-05-10T08:40:00.000Z	DarwinSurvivor	lifelike	and you get an "unreacheable" error when pinging outside the network right?
+2012-05-10T08:42:00.000Z	lifelike	DarwinSurvivor	I can ping the 173 IP address, even goggles DNS server 8.8.8.8 but no domain name
+2012-05-10T08:42:00.000Z	DarwinSurvivor	lifelike	ok, then it's not a routing issue, it's a DNS issue!
+2012-05-10T08:43:00.000Z	DarwinSurvivor	lifelike	please pastebin the contents of /etc/resolve.conf
+2012-05-10T08:43:00.000Z	lifelike	DarwinSurvivor	it says resolve.Conf doesn't exist!
+2012-05-10T08:44:00.000Z	DarwinSurvivor	lifelike	now THAT is a problem!
+2012-05-10T08:44:00.000Z	lifelike	DarwinSurvivor	Haha
+2012-05-10T08:44:00.000Z	DarwinSurvivor	lifelike	as a test, can you open network manager and set your DNS to 8.8.8.8?
+2012-05-10T08:45:00.000Z	DarwinSurvivor	lifelike	lol. just try the manual DNS address and see if that fixes it
+2012-05-10T08:46:00.000Z	DarwinSurvivor	lifelike	if it does, then it's definitely some kind of DNS misconfiguration
+2012-05-10T08:46:00.000Z	DarwinSurvivor	lifelike	it may be trying to use a DNS server that's only available on the on VPN
+2012-05-10T08:48:00.000Z	lifelike	DarwinSurvivor	Setting the DNS to googles doesn't work
+2012-05-10T08:48:00.000Z	lifelike	DarwinSurvivor	I'm paying the contents of resolv.conf
+2012-05-10T08:48:00.000Z	DarwinSurvivor	lifelike	what error do you get when trying to ping google.com
+2012-05-10T08:50:00.000Z	DarwinSurvivor	lifelike	without a capital right? (i assume you have autocorrect on your phone)
+2012-05-10T08:51:00.000Z	DarwinSurvivor	lifelike	cool
+2012-05-10T08:53:00.000Z	DarwinSurvivor	lifelike	ah, that may cause issues
+2012-05-10T08:55:00.000Z	DarwinSurvivor	lifelike	you shouldn't have to mess with resolv.conf, what-ever connection you are using (network manager in your case) will deal with that for you. any changes you make will get overwritten on reconnect anyways
+2012-05-10T08:56:00.000Z	lifelike	DarwinSurvivor	 Do you know why it isn't being overwritten now then?
+2012-05-10T08:57:00.000Z	DarwinSurvivor	lifelike	not sure, maybe a change to network manager. zykotic10 mentioned network manager using a slightly different system now
+2012-05-10T08:59:00.000Z	lifelike	DarwinSurvivor	Fixed it! I just had to comment out the nameserver and domain!
+2012-05-10T08:59:00.000Z	lifelike	DarwinSurvivor	WOOOOH!
+2012-05-10T09:00:00.000Z	DarwinSurvivor	lifelike	now do a reboot and make sure it *stays* fixed :)
+2012-05-10T09:00:00.000Z	lifelike	DarwinSurvivor	Thanks a lot!
+2012-05-10T09:01:00.000Z	lifelike	DarwinSurvivor	Will do.
+2012-05-10T09:01:00.000Z	lifelike	DarwinSurvivor	:)

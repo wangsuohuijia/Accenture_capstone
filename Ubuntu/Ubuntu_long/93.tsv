@@ -1,0 +1,56 @@
+2012-10-22T00:07:00.000Z	mdg2	yourfriendisaaac	kodac?  Need to check open printing.org to see if they have support
+2012-10-22T00:11:00.000Z	mdg2	yourfriendisaaac	what happens when you try to print a test page?
+2012-10-22T00:12:00.000Z	mdg2	yourfriendisaaac	do you have permissions for lpadmin?
+2012-10-22T00:13:00.000Z	mdg2	yourfriendisaaac	check your group settings via terminal, i.e. type "groups" and post them
+2012-10-22T00:16:00.000Z	mdg2	yourfriendisaaac	those are good.  Open up the printer properties and click on Policies
+2012-10-22T00:17:00.000Z	mdg2	yourfriendisaaac	let me know when you have policies dialog open
+2012-10-22T00:20:00.000Z	mdg2	yourfriendisaaac	tell me what you see
+2012-10-22T00:22:00.000Z	mdg2	yourfriendisaaac	do you see an icon representing your printer?
+2012-10-22T00:24:00.000Z	mdg2	yourfriendisaaac	right click the icon for the printer
+2012-10-22T00:25:00.000Z	mdg2	yourfriendisaaac	by chance is this a wireless printer?
+2012-10-22T00:26:00.000Z	mdg2	yourfriendisaaac	which configuration do you want to use?  USB or wifi?
+2012-10-22T00:28:00.000Z	mdg2	yourfriendisaaac	will they both be using wifi?
+2012-10-22T00:29:00.000Z	mdg2	yourfriendisaaac	cool
+2012-10-22T00:29:00.000Z	mdg2	yourfriendisaaac	these are desktop computers of laptops?
+2012-10-22T00:30:00.000Z	mdg2	yourfriendisaaac	before going on, what's the name of the print driver it is using?
+2012-10-22T00:32:00.000Z	mdg2	yourfriendisaaac	can you get to "preferences" "printers".. oh wait, you are running regular ubuntu?
+2012-10-22T00:33:00.000Z	mdg2	yourfriendisaaac	I'm running a cousin of Ubuntu, so I may be looking at something different
+2012-10-22T00:34:00.000Z	mdg2	yourfriendisaaac	can you get to the add printers dialog?
+2012-10-22T00:34:00.000Z	mdg2	yourfriendisaaac	what do you see in Device URI?
+2012-10-22T00:35:00.000Z	mdg2	yourfriendisaaac	what do you see for make and model?
+2012-10-22T00:36:00.000Z	mdg2	yourfriendisaaac	I think that is the problem
+2012-10-22T00:37:00.000Z	mdg2	yourfriendisaaac	the openprinting.org website shows drives for ESP 3, ESP 3250 ESP 5250 ESP 5500 ESP 6150 ESP 7 and ESP7250 ESP9
+2012-10-22T00:39:00.000Z	mdg2	yourfriendisaaac	are any of those close to your version printer?
+2012-10-22T00:42:00.000Z	mdg2	yourfriendisaaac	weird
+2012-10-22T00:43:00.000Z	mdg2	yourfriendisaaac	you have its wifi turned on and a USB plugged in at the same time?
+2012-10-22T00:44:00.000Z	mdg2	yourfriendisaaac	is the USB hooked to the computer you want to use via wifi?
+2012-10-22T00:45:00.000Z	mdg2	yourfriendisaaac	its better to try one config at a time
+2012-10-22T00:46:00.000Z	mdg2	yourfriendisaaac	now from the wifi computer you see in printer properties the IP address
+2012-10-22T00:48:00.000Z	mdg2	yourfriendisaaac	what's it show for make and model?
+2012-10-22T00:49:00.000Z	mdg2	yourfriendisaaac	do you have cups in installed?
+2012-10-22T00:50:00.000Z	mdg2	yourfriendisaaac	you could try setting up the printer via webbrowser and use cups
+2012-10-22T00:51:00.000Z	mdg2	yourfriendisaaac	basically you open your browser and in the address type "localhost" and it should bring up the cups webpage
+2012-10-22T00:52:00.000Z	mdg2	yourfriendisaaac	from there you can add the printer
+2012-10-22T00:53:00.000Z	mdg2	yourfriendisaaac	does the printer even make any sounds?
+2012-10-22T00:54:00.000Z	mdg2	yourfriendisaaac	can you see the print que?  Sometimes they need to be cleaned out of failed jobs
+2012-10-22T00:56:00.000Z	mdg2	yourfriendisaaac	that is really weird
+2012-10-22T00:56:00.000Z	mdg2	yourfriendisaaac	how about turning it off for 5 seconds and then back on
+2012-10-22T00:56:00.000Z	mdg2	yourfriendisaaac	no error lights or messages shown on the printer?
+2012-10-22T00:56:00.000Z	mdg2	yourfriendisaaac	yes
+2012-10-22T00:59:00.000Z	mdg2	yourfriendisaaac	weird.  You don't have a neighbor with the same printer do you?
+2012-10-22T01:01:00.000Z	mdg2	yourfriendisaaac	lol that would be funny
+2012-10-22T01:02:00.000Z	mdg2	yourfriendisaaac	did you use this driver?  c2espinstaller.sh
+2012-10-22T01:04:00.000Z	mdg2	yourfriendisaaac	try installing with a C310 driver
+2012-10-22T01:05:00.000Z	mdg2	yourfriendisaaac	c2espinstaller.sh is more automatic, just choose C310
+2012-10-22T01:07:00.000Z	mdg2	yourfriendisaaac	you will want to delete the printer from your previous attempts on each computer
+2012-10-22T01:07:00.000Z	mdg2	yourfriendisaaac	then try the linked one
+2012-10-22T01:09:00.000Z	mdg2	yourfriendisaaac	if you download c2espinstaller.sh, right click it, then properties and make it executible
+2012-10-22T01:10:00.000Z	mdg2	yourfriendisaaac	are you finding the driver?
+2012-10-22T01:20:00.000Z	mdg2	yourfriendisaaac	still updating?
+2012-10-22T01:22:00.000Z	mdg2	yourfriendisaaac	I gotta go for a while, but will check back in about an hour and a half
+2012-10-22T01:28:00.000Z	mdg2	yourfriendisaaac	you could not use the 2cespinstaller.sh ?
+2012-10-22T01:30:00.000Z	mdg2	yourfriendisaaac	you have to make the .sh file executible
+2012-10-22T01:30:00.000Z	mdg2	yourfriendisaaac	find it via your file manager, right click on it and choose properties, make executible
+2012-10-22T01:32:00.000Z	mdg2	yourfriendisaaac	its right click, properties, permissions
+2012-10-22T01:34:00.000Z	mdg2	yourfriendisaaac	find the c2espinstalle.sh file via your file manager, right click, choose Properties, then Permissions and make executible, then you can double click its name and it will run
+2012-10-22T01:36:00.000Z	mdg2	yourfriendisaaac	I really gotta go, please try  my last post before this one.  Be back later.

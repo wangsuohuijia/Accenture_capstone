@@ -1,0 +1,65 @@
+2009-05-21T09:59:00.000Z	racecar56	phoenixz	by the way it's when you attempt to install, but you say don't format it
+2009-05-21T09:59:00.000Z	phoenixz	racecar56	oh if ubuntu only had native lvm support....  I don't suppose you have another partition  or space left?
+2009-05-21T09:59:00.000Z	phoenixz	racecar56	could be, but I'm not sure thats a good idea
+2009-05-21T10:00:00.000Z	racecar56	phoenixz	i DO have a seperate windows install, as this is a old machine I use for old games and stuff
+2009-05-21T10:00:00.000Z	phoenixz	racecar56	then the solution is simple, ditch the windows partition ;)
+2009-05-21T10:00:00.000Z	racecar56	phoenixz	-_-
+2009-05-21T10:00:00.000Z	racecar56	phoenixz	should i move my home THERE?
+2009-05-21T10:01:00.000Z	racecar56	phoenixz	like put /home's stuff in there
+2009-05-21T10:09:00.000Z	phoenixz	racecar56	ah, that one.. simple solution: find . * -exec chown user:user {} \;
+2009-05-21T10:01:00.000Z	racecar56	phoenixz	btw i wish i didnt have to use windows, all my stuff is windows only
+2009-05-21T10:01:00.000Z	racecar56	phoenixz	jk not all
+2009-05-21T10:01:00.000Z	racecar56	phoenixz	i guess thats all i can do.......
+2009-05-21T10:01:00.000Z	phoenixz	racecar56	your stuff? like what? the only stuff not really working on linux are games, still.. and even there its changing
+2009-05-21T10:02:00.000Z	racecar56	phoenixz	yeah
+2009-05-21T10:02:00.000Z	racecar56	phoenixz	they are _OLD_ games though
+2009-05-21T10:02:00.000Z	phoenixz	racecar56	Im not really sure what you could do.. you could try to manually remove everything but /home, then rename home to /mydata.. then install WITHOUT FORMAT... but Im not sure if that works.. I'd be sure to have a backup ! :)
+2009-05-21T10:03:00.000Z	racecar56	phoenixz	should i move my /home to my windows partition temporarily?
+2009-05-21T10:03:00.000Z	phoenixz	racecar56	that could be a solution yeah
+2009-05-21T10:03:00.000Z	racecar56	phoenixz	btw i am attempting a reinstall without format right now, but im wondering will it or will it not overwrite home
+2009-05-21T10:03:00.000Z	racecar56	phoenixz	ill pastebin the dialog if u want
+2009-05-21T10:04:00.000Z	phoenixz	racecar56	well, only one way to find out but if you dont have a backup, Id stop right now if I were you
+2009-05-21T10:04:00.000Z	racecar56	phoenixz	i don't, probably all i can do is move my stuff to windows partition....
+2009-05-21T10:05:00.000Z	phoenixz	racecar56	that would be the best option yeah
+2009-05-21T10:06:00.000Z	racecar56	phoenixz	idea: go to gparted and resize my main partition, make new partition in that space and move /home there. sound good?
+2009-05-21T10:06:00.000Z	racecar56	phoenixz	btw the main partition is ext4
+2009-05-21T10:06:00.000Z	phoenixz	racecar56	I think its eassier to start live CD,mount windows and your partition with /home, move /home to your windows and then start installation...
+2009-05-21T10:07:00.000Z	racecar56	phoenixz	although there is one problem
+2009-05-21T10:07:00.000Z	racecar56	phoenixz	if i move my stuff off of windows when install is done, then i will have to do it as root, then it will lose my ownership...
+2009-05-21T10:07:00.000Z	racecar56	phoenixz	then ill have an install as bad as my laptop
+2009-05-21T10:08:00.000Z	phoenixz	racecar56	no, you just chown it back to your desktop user.. simple and easy
+2009-05-21T10:08:00.000Z	racecar56	phoenixz	UMMMMM
+2009-05-21T10:08:00.000Z	racecar56	phoenixz	*oops*
+2009-05-21T10:08:00.000Z	racecar56	phoenixz	caps
+2009-05-21T10:08:00.000Z	racecar56	phoenixz	then it will say too many arguments
+2009-05-21T10:08:00.000Z	phoenixz	racecar56	go to a command console and type "man chown" and "man chmod"
+2009-05-21T10:09:00.000Z	racecar56	phoenixz	then i will have to get a new keyboard
+2009-05-21T10:09:00.000Z	racecar56	phoenixz	:P
+2009-05-21T10:09:00.000Z	racecar56	phoenixz	im in a term now...
+2009-05-21T10:09:00.000Z	racecar56	phoenixz	im using irssi
+2009-05-21T10:10:00.000Z	phoenixz	racecar56	or better
+2009-05-21T10:10:00.000Z	racecar56	phoenixz	does find include . files like .dmrc?
+2009-05-21T10:10:00.000Z	racecar56	phoenixz	does find include . files like .dmrc?
+2009-05-21T10:10:00.000Z	phoenixz	racecar56	it should.. if not, try man find, to see how to include hidden files
+2009-05-21T10:10:00.000Z	racecar56	phoenixz	and obviously i replace user with racecar56, right?
+2009-05-21T10:11:00.000Z	phoenixz	racecar56	yeah, I put user there because I dunno your user name :)
+2009-05-21T10:11:00.000Z	racecar56	phoenixz	k
+2009-05-21T10:12:00.000Z	phoenixz	racecar56	and about the . files, the hidden files, I'm not sure, pleases do check that in the man find, or in the #linux channel
+2009-05-21T10:13:00.000Z	racecar56	phoenixz	moving my home to windows
+2009-05-21T10:13:00.000Z	racecar56	phoenixz	=D that i had a really nice IDE hard drive hanging around to stick in this old computer...
+2009-05-21T10:14:00.000Z	phoenixz	racecar56	you checked first if your windows partition is big enough for your /home, to avoid a mess?
+2009-05-21T10:14:00.000Z	racecar56	phoenixz	it supports sata but i dont have hardly any of those
+2009-05-21T10:14:00.000Z	racecar56	phoenixz	no, oops
+2009-05-21T10:14:00.000Z	racecar56	phoenixz	darn in
+2009-05-21T10:14:00.000Z	racecar56	phoenixz	darn it
+2009-05-21T10:14:00.000Z	racecar56	phoenixz	nvm its done
+2009-05-21T10:16:00.000Z	racecar56	phoenixz	but there is one weird thing that i am wondering
+2009-05-21T10:16:00.000Z	racecar56	phoenixz	why does it say my hard drive is /dev/sda yet gparted live says it is /dev/hda?
+2009-05-21T10:16:00.000Z	racecar56	phoenixz	it as in ubuntu
+2009-05-21T10:17:00.000Z	phoenixz	racecar56	check in a text console what you have in /dev
+2009-05-21T10:17:00.000Z	phoenixz	racecar56	sorry, gotta go now, its pas 1 here alredy
+2009-05-21T10:17:00.000Z	racecar56	phoenixz	only a bunch of sdaX's
+2009-05-21T10:17:00.000Z	phoenixz	racecar56	Im sure other people here can assist you with the rest
+2009-05-21T10:18:00.000Z	racecar56	phoenixz	obye
+2009-05-21T10:18:00.000Z	racecar56	phoenixz	bye
+2009-05-21T10:18:00.000Z	phoenixz	racecar56	no hda? in that case, I suppose gparted is borking up

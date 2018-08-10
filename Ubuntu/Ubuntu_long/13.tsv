@@ -1,0 +1,59 @@
+2007-08-07T16:35:00.000Z	wers		what packages do i install to enable mp3 burning in K3b?
+2007-08-07T05:36:00.000Z	wers		what's the kget alternative for gnome?
+2007-08-07T05:36:00.000Z	wers		by kget, i mean, the file downloader
+2007-08-07T05:37:00.000Z	soundray	wers	gwget perhaps
+2007-11-23T05:01:00.000Z	soundray	wers	I don't think it's possible to open psw files in any native Linux program
+2007-11-23T05:02:00.000Z	wers	soundray	you mean, I need windows? :((
+2007-11-23T05:02:00.000Z	soundray	wers	either that, or wine
+2007-11-23T05:03:00.000Z	soundray	wers	don't know, MS Works possibly
+2007-11-23T05:10:00.000Z	soundray	wers	I have a PocketPC too. I've given up on trying to import psw.
+2007-11-23T05:12:00.000Z	soundray	wers	it claims it can save in that format. It doesn't mention anything about opening files.
+2007-11-23T05:13:00.000Z	wers	soundray	:( I really need an app that will run on wine
+2007-11-23T05:13:00.000Z	wers	soundray	can a pocket pc save using another file type?
+2007-11-23T05:14:00.000Z	soundray	wers	install an editor that can save as .txt (there are free programs around). Then you can copy and paste your notes and save them as plain text.
+2007-11-30T04:43:00.000Z	soundray	wers	'sudo apt-get clean' does it for you
+2007-11-30T04:43:00.000Z	soundray	wers	'sudo apt-get autoclean' removes all outdated debs from that directory
+2008-03-15T06:17:00.000Z	soundray	wers	you can do it on the commandline with imagemagick
+2008-03-15T06:18:00.000Z	soundray	wers	what do you find difficult about the crop tool in gimp?
+2008-04-04T17:52:00.000Z	soundray	wers	Format-Character-Position-Subscript
+2008-04-04T17:54:00.000Z	wers	soundray	thank you so much. is there any shortcut? :)
+2008-04-04T17:56:00.000Z	soundray	wers	you can go through Tools-Customize-Toolbars and add a button to the Formatting toolbar
+2008-04-04T17:58:00.000Z	soundray	wers	you have to highlight text you've typed already, then click the button
+2008-04-04T17:59:00.000Z	soundray	wers	I'm sure you can also bind a shortcut key to a macro, but it's probably better to join an OpenOffice channel and ask there for help with that
+2008-04-06T22:21:00.000Z	soundray	wers	some source packages offer a 'make uninstall' command. Run it with sudo. Failing that, go through the Makefile and undo all the changes that are listed under "install:" by hand
+2008-05-22T15:48:00.000Z	soundray	wers	it creates an entry in System-Preferences
+2008-06-06T03:13:00.000Z	soundray	wers	it's hard to know, not having seen the dialog box...
+2008-06-06T03:14:00.000Z	wers	soundray	i'm quite confident that it's the modules. do modules usually have deb confs like that?
+2008-06-06T03:14:00.000Z	soundray	wers	no
+2008-06-06T03:15:00.000Z	soundray	wers	yes, you'd have to know what you want to reconfigure, though
+2008-06-06T03:16:00.000Z	soundray	wers	what's the output from 'grep ^title /boot/grub/menu.lst | head -n 1'?
+2008-06-06T03:20:00.000Z	soundray	wers	try 'sudo update-grub' then, and if that fails, 'sudo dpkg-reconfigure linux-image-2.6.24-18-generic' (assuming that this is the kernel you want)
+2008-06-06T03:26:00.000Z	wers	soundray	this is weird. sudo update-grub detected the latest kernel but it didnt show the kernel in my menu.lst. ran dpkg-reconfigure for the latest kernel but it still doesnt show in my menu.lst
+2008-06-06T03:27:00.000Z	soundray	wers	yes, you can
+2008-06-06T03:28:00.000Z	soundray	wers	add a title section before the line "DEBIAN AUTOMAGIC KERNEL LIST"
+2008-06-06T03:28:00.000Z	soundray	wers	but here's another thing to try before you do:
+2008-06-06T03:28:00.000Z	soundray	wers	'sudo apt-get --reinstall install linux-image-2.6.24-18-generic'
+2008-06-06T03:30:00.000Z	wers	soundray	that sounds good to me for me to see if it will show the deb conf
+2008-06-06T03:32:00.000Z	wers	soundray	didnt show the debconf. i'm going to check my menu.lst now
+2008-06-06T03:32:00.000Z	wers	soundray	still didnt appear
+2008-06-06T03:34:00.000Z	wers	soundray	http://paste.ubuntu.com/17335/
+2008-06-21T04:37:00.000Z	soundray	wers	'apt-get autoclean' as a first step
+2008-06-21T04:37:00.000Z	soundray	wers	 then run 'du -x / | sort -n' to find out what's taking up space. Removing old kernel packages is a good idea.
+2008-06-21T04:38:00.000Z	wers	soundray	what does autoclean do? remove my apt archives?
+2008-06-21T04:39:00.000Z	soundray	wers	only those of outdated versions
+2008-06-21T04:44:00.000Z	wers	soundray	autocleane did not free some space according to my file manager though i saw that it deleted some files
+2008-06-21T04:45:00.000Z	soundray	wers	you've run into the reserve. Ubuntu will show 100% as long as your disk usage is above (real) 95%.
+2008-06-21T04:45:00.000Z	soundray	wers	have you got lots of old kernels?
+2008-06-21T04:45:00.000Z	wers	soundray	niice. I have those old kernels. how do I delete 'em? :D
+2008-06-21T04:46:00.000Z	soundray	wers	'sudo apt-get --purge remove linux-image-2.6.24-16' (as an example)
+2008-06-21T04:46:00.000Z	soundray	wers	when you're done, run 'sudo apt-get autoremove' as well
+2008-06-21T04:47:00.000Z	wers	soundray	is there a code that will show me the installed kernels?
+2008-06-21T04:47:00.000Z	soundray	wers	dpkg -l linux-image-2*
+2008-06-21T04:48:00.000Z	soundray	wers	the -l is for list
+2008-06-21T04:49:00.000Z	wers	soundray	coooool :)
+2008-06-21T05:33:00.000Z	wers	soundray	what do I run again after purging the old kernels?
+2008-06-21T05:33:00.000Z	soundray	wers	apt-get autoremove
+2008-06-21T05:34:00.000Z	wers	soundray	it didnt remove anything. oh well. i guess, it's finee
+2008-06-21T05:35:00.000Z	soundray	wers	it doesn't on every system
+2008-06-21T05:35:00.000Z	wers	soundray	thanks
+2008-09-06T21:54:00.000Z	soundray	wers	'scp file user@destination:/target/directory/'

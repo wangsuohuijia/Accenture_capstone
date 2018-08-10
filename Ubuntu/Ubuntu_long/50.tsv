@@ -1,0 +1,75 @@
+2007-03-11T06:12:00.000Z	whonicca		hey guys, i just installed ubuntu edgy and have a problem, it seems the livecd performed better than the actual thing installed on my hard drive
+2007-03-11T06:13:00.000Z	whonicca		and it seems like everything lags
+2007-03-11T06:13:00.000Z	whonicca		can someone please help me =)
+2007-03-11T06:14:00.000Z	cables	whonicca	faster comp :)
+2007-03-11T06:14:00.000Z	cables	whonicca	anything more specific? have you rebooted?
+2007-03-11T06:15:00.000Z	cables	whonicca	alt-f2, then gnome-system-monitor. Sort by cpu and see if anything's using that too much, then try sorting by used RAM.
+2007-03-11T06:15:00.000Z	whonicca	cables	will do
+2007-03-11T06:15:00.000Z	cables	whonicca	brb, so pm me with the answer so i don't miss it
+2007-03-11T06:16:00.000Z	cables	whonicca	don't pm me then :)
+2007-03-11T06:18:00.000Z	cables	whonicca	did you find anything?
+2007-03-11T06:19:00.000Z	whonicca	cables	lookin now
+2007-03-11T06:22:00.000Z	whonicca	cables	gnome-system-monitor 11%, memory firefox is taking the most with 50mb
+2007-03-11T06:23:00.000Z	cables	whonicca	that's weird... i don't have any idea why it would be acting slow then.
+2007-03-25T09:42:00.000Z	cables	whonicca	do you have NVidia drivers installed?
+2007-03-25T09:42:00.000Z	whonicca	cables	yes
+2007-03-25T09:42:00.000Z	cables	whonicca	they break suspend... I'll help you with a workaround.
+2007-03-25T09:43:00.000Z	whonicca	cables	ok =)
+2007-03-25T09:43:00.000Z	cables	whonicca	I noticed that my comp ran hot after resuming, I don't think it's because of this fix though... and its easily reversible.
+2007-03-25T09:43:00.000Z	whonicca	cables	how can i check for my computer running hot after resuming
+2007-03-25T09:44:00.000Z	cables	whonicca	I've got a P4 in a laptop, so the fan noise makes it pretty obvious
+2007-03-25T09:44:00.000Z	cables	whonicca	you can install a package that gives you a gnome panel applet that shows you your cpu temp
+2007-03-25T09:44:00.000Z	whonicca	cables	ok thatll work
+2007-03-25T09:44:00.000Z	cables	whonicca	do alt-f2, then gksudo gedit /etc/X11/xorg.conf
+2007-03-25T09:45:00.000Z	whonicca	cables	done
+2007-03-25T09:45:00.000Z	cables	whonicca	find Section "Device" (ctrl-f is your friend)
+2007-03-25T09:46:00.000Z	whonicca	cables	done
+2007-03-25T09:46:00.000Z	cables	whonicca	can you open a terminal? I just want to make a backup of that file
+2007-03-25T09:47:00.000Z	cables	whonicca	run this: sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.old
+2007-03-25T09:47:00.000Z	whonicca	cables	done
+2007-03-25T09:47:00.000Z	cables	whonicca	now go back to your text editor. Add this line in Section "Device":
+2007-03-25T09:47:00.000Z	cables	whonicca	        Option          "NvAGP"       "1"
+2007-03-25T09:48:00.000Z	whonicca	cables	done
+2007-03-25T09:48:00.000Z	cables	whonicca	save and close
+2007-03-25T09:49:00.000Z	cables	whonicca	terminal, sudo cp /etc/default/acpi-support /etc/default/acpi-support.old
+2007-03-25T09:49:00.000Z	cables	whonicca	then alt-f2, gksudo gedit /etc/default/acpi-support
+2007-03-25T09:50:00.000Z	whonicca	cables	done
+2007-03-25T09:50:00.000Z	cables	whonicca	find the POST_VIDEO variable in the file, and put "false" after the equals sign (no quotes)
+2007-03-25T09:51:00.000Z	cables	whonicca	alt-f2, gksudo gedit /boot/grub/menu.lst
+2007-03-25T09:52:00.000Z	cables	whonicca	are you there?
+2007-03-25T09:52:00.000Z	cables	whonicca	hold on, I've gotta find something
+2007-03-25T09:52:00.000Z	whonicca	cables	awaiting your next command =) thanks for helping by the way
+2007-03-25T09:53:00.000Z	cables	whonicca	find "#defoptions"
+2007-03-25T09:53:00.000Z	cables	whonicca	it should look like this: # defoptions=quiet splash
+2007-03-25T09:54:00.000Z	cables	whonicca	add agp=off so it looks like # defoptions=quiet splash agp=off
+2007-03-25T09:54:00.000Z	cables	whonicca	then save the file and open a terminal
+2007-03-25T09:55:00.000Z	cables	whonicca	are you at a terminal?
+2007-03-25T09:55:00.000Z	whonicca	cables	yup
+2007-03-25T09:55:00.000Z	cables	whonicca	sudo update-grub
+2007-03-25T09:57:00.000Z	cables	whonicca	if anything goes wrong, do you know how to restore from the backups we made in the terminal?
+2007-03-25T09:57:00.000Z	cables	whonicca	alright, reboot and see if this works
+2007-03-25T09:58:00.000Z	whonicca	cables	question about the menu.lst file, # arent commens?
+2007-03-25T09:58:00.000Z	cables	whonicca	they are comments
+2007-03-25T09:58:00.000Z	cables	whonicca	grub only cares about the uncommented bit
+2007-03-25T09:58:00.000Z	cables	whonicca	grub-update reads the comments and transfers those settings to the uncommented kernel lines that grub reads
+2007-03-25T09:58:00.000Z	cables	whonicca	I mean update-grub
+2007-03-25T10:25:00.000Z	cables	whonicca	are you here?
+2007-03-25T10:25:00.000Z	whonicca	cables	yeah
+2007-03-25T10:25:00.000Z	cables	whonicca	how'd it work out?
+2007-03-25T10:26:00.000Z	whonicca	cables	it worked when i suspended and resumed from the gdm screen, but while im in gnome, the screen just stayed black with the mouse pointer only displaying
+2007-03-25T10:27:00.000Z	cables	whonicca	it didn't pop up a password dialog?
+2007-03-25T10:27:00.000Z	whonicca	cables	no
+2007-03-25T10:28:00.000Z	cables	whonicca	that's weird, but I think it's unrelated to the nVidia thing... you might want to try temporarily replacing the "nvidia" driver with the "nv" driver in xorg.conf to see if the problem persists when you're not using the nvidia driver
+2007-03-25T10:30:00.000Z	whonicca	cables	http://www.zshare.net/image/shot0002-png.html
+2007-03-25T10:31:00.000Z	cables	whonicca	i don't know why that would happen
+2007-03-25T10:32:00.000Z	whonicca	cables	thats when i did it via gdm and it resumed ok, within gnome i got this -> http://www.zshare.net/image/screenshot-png-139.html
+2007-03-25T10:33:00.000Z	cables	whonicca	whonicca yeah, I'm not sure...
+2007-03-25T10:33:00.000Z	cables	whonicca	you know how to revert to your previous setup, right?
+2007-03-25T10:33:00.000Z	cables	whonicca	which ones?
+2007-03-25T10:34:00.000Z	cables	whonicca	yep, unless you notice any other problems.
+2007-03-25T10:34:00.000Z	cables	whonicca	sorry it didn't work out for you
+2007-03-25T10:35:00.000Z	whonicca	cables	another issue, maybe uve noticed it, 1st time i click on System -> Quit, http://www.zshare.net/image/img_0172-jpg-n39.html, 2nd time i click on System -> Quit, http://www.zshare.net/image/img_0174-jpg.html
+2007-03-25T10:35:00.000Z	cables	whonicca	i've never seen that, sorry
+2007-05-31T06:53:00.000Z	cables	whonicca	I use Amarok, but that's just until Exaile gets their issues sorted out
+2007-05-31T06:53:00.000Z	whonicca	cables	with an ipod shuffle?
+2007-05-31T06:54:00.000Z	cables	whonicca	I believe all iPods look pretty much the same to the computer

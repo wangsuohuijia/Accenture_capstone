@@ -1,0 +1,33 @@
+2011-11-28T11:26:00.000Z	pppurple		is there any one that would be will to help answer some basic questions for a begginer getting into ubuntu?
+2011-11-28T11:26:00.000Z	dr_willis	pppurple	just ask and see
+2011-11-29T17:19:00.000Z	dr_willis	pppurple	 get virtualbox and try it out in there... thats the 'safest' way to experiment
+2011-11-29T17:57:00.000Z	dr_willis	pppurple	 the website has a manual yes...
+2011-11-29T17:57:00.000Z	dr_willis	pppurple	 get the ubuntu iso, install virtualbox, run it.. follow its wizard dialogs I belive is  the core of it.
+2011-12-09T18:00:00.000Z	dr_willis	pppurple	 differnt desktop. KDE vs Gnome
+2011-12-09T18:09:00.000Z	dr_willis	pppurple	 the login screen has a menu under the 'gear' next to the login box.
+2011-12-09T18:09:00.000Z	dr_willis	pppurple	 and yes. Ubuntu uses gnome. unity is a shell on top of gnome-3
+2011-12-09T18:11:00.000Z	dr_willis	pppurple	 ubuntu.com perhaps.. askubuntu.com   various blog sites have guides.
+2011-12-09T18:12:00.000Z	dr_willis	pppurple	 its for everything from embeded controllers/watches/phones to high end servers :) and toasters..
+2011-12-09T18:13:00.000Z	pppurple	dr_willis	haha yeah i am seeing that...thats why im learning about it and what i can do with it. seems a little bit useful.
+2011-12-09T18:22:00.000Z	dr_willis	pppurple	 keep an eye on this new hardware for a cool portable linux system -> http://www.omgubuntu.co.uk/2011/11/cotton-candy-the-usb-sized-arm-pc-that-runs-ubuntu/
+2011-12-09T18:23:00.000Z	pppurple	dr_willis	hmmm, looking at that right now.
+2011-12-09T18:28:00.000Z	dr_willis	pppurple	 with unity, you can use win+a # (1through 9) to go to that app.. the # appears in the unity panel icons.
+2011-12-09T18:29:00.000Z	dr_willis	pppurple	 if using unity - must read links --> http://askubuntu.com/questions/36274/tips-and-tricks-for-unity
+2011-12-09T18:31:00.000Z	pppurple	dr_willis	thank you. reading. i thought i saw a welcome to ubuntu that gave some tips built in but i cant find it now =(
+2011-12-09T18:43:00.000Z	pppurple	dr_willis	that mini computer that you linked, the cotton candy usb thing, looks pretty sweet!
+2011-12-09T18:44:00.000Z	dr_willis	pppurple	 that rasberypi one is a similer idea. but cheaper. :)
+2011-12-09T18:44:00.000Z	pppurple	dr_willis	haha i asked to many questions and got to many links. havent got to that one yet
+2011-12-10T18:15:00.000Z	dr_willis	pppurple	 depends on what windowmanager/desktop you are using
+2011-12-10T18:56:00.000Z	dr_willis	pppurple	 you would set up one to handle the grub. and   it should work.  - i dont see the point in having 2 differnt ubuntu versions on teh same flash.
+2011-12-10T18:58:00.000Z	dr_willis	pppurple	 so a live install? or a full install? you can set grub2 up to boot differnt ISO files - if you wanted also..
+2011-12-10T18:58:00.000Z	dr_willis	pppurple	 whats so unstable abouyt 11.10 for you?
+2011-12-10T18:58:00.000Z	pppurple	dr_willis	i wanted it to hold 2 different ISO...so i can have 2 different live versions
+2011-12-10T18:59:00.000Z	dr_willis	pppurple	 you would have to reparton the thing and make a new ext4 partion to isntallto. then start up the installer  and install.
+2011-12-10T18:59:00.000Z	pppurple	dr_willis	no its just my first time with linux and wanted to see if there was a differnce or get a copy with out unity to see how it works
+2011-12-10T18:59:00.000Z	dr_willis	pppurple	 for iso's theres guides on pendrivelinux, and tools that can help with that.
+2011-12-10T19:00:00.000Z	dr_willis	pppurple	 you could even set up your current install to just boot an ISO file as one of its grub entries..
+2011-12-10T19:01:00.000Z	pppurple	dr_willis	that seems like it would be the easiest thing to do with the grub file. have any links supporting that?
+2011-12-10T19:02:00.000Z	dr_willis	pppurple	 delicious.com/dr_willis
+2011-12-10T19:20:00.000Z	pppurple	dr_willis	that site http://delicious.com/dr_willis isnt loading anything....?
+2011-12-10T19:21:00.000Z	dr_willis	pppurple	 not my fault.. thats a rather big site.. its working here
+2011-12-10T19:21:00.000Z	pppurple	dr_willis	hmmm, yeah bad internet over here. ill keep trying. thanks

@@ -1,0 +1,25 @@
+2012-06-04T06:24:00.000Z	sambagirl		i've been trying to install some packages i need via the ubuntu software center however I have been getting this Requires installation of untrusted packages.  The action would require the installation of packages from not authenticated sources.
+2012-06-04T06:25:00.000Z	cpet	sambagirl	choose yes and continue
+2012-06-04T06:26:00.000Z	sambagirl	cpet	I dont have an option for yes, just a details dropdown and there isnt anything there but the application name
+2012-06-04T06:26:00.000Z	cpet	sambagirl	are you using the gui or cli?
+2012-06-04T06:27:00.000Z	sambagirl	cpet	the gui
+2012-06-04T06:28:00.000Z	sambagirl	cpet	does that mean commodore pet computer btw? yes it shows a dialog box and ok. oh am i supposed to highlight the thing and then select ok?
+2012-06-04T06:29:00.000Z	cpet	sambagirl	yeap
+2012-06-04T06:29:00.000Z	sambagirl	cpet	is that yeap for both?
+2012-06-04T06:30:00.000Z	cpet	sambagirl	yes some repos dont have any gpg keys but they are safe to use
+2012-06-04T06:30:00.000Z	sambagirl	cpet	it just doesnt do anything at all
+2012-06-04T06:31:00.000Z	sambagirl	cpet	i cant even download abiword!
+2012-06-04T06:32:00.000Z	cpet	sambagirl	any errors ?
+2012-06-04T06:35:00.000Z	sambagirl	cpet	just a sec,  i am looking on the website to see how to do it from the shell. they have steps there.
+2012-06-04T06:35:00.000Z	sambagirl	cpet	i meant install abiword not downlaod it :D
+2012-06-04T06:36:00.000Z	cpet	sambagirl	i need errors or something
+2012-06-04T06:40:00.000Z	sambagirl	cpet	i dont have any errors. i tried the steps in the shell on this place http://abisource.com/wiki/Install_on_Ubuntu  however i noticed in the bottom that it says that it looks like it has stopped being supported by ubuntu or for ubuntu?
+2012-06-04T06:41:00.000Z	cpet	sambagirl	open up a terminal and type sudo apt-get install abiword
+2012-06-04T06:41:00.000Z	cpet	sambagirl	see if it gives you an error
+2012-06-04T06:42:00.000Z	sambagirl	cpet	haha that's funny
+2012-06-04T06:44:00.000Z	cpet	sambagirl	ok
+2012-06-04T06:44:00.000Z	sambagirl	cpet	it is working now
+2012-06-04T06:44:00.000Z	sambagirl	cpet	thanks a bunch
+2012-06-04T06:45:00.000Z	sambagirl	cpet	yep it is building
+2012-06-04T06:48:00.000Z	sambagirl	cpet	it must be not working cause i did a paste and it just crashed but  i will just try openoffice and atlantis
+2012-06-04T06:49:00.000Z	cpet	sambagirl	sounds more of a fucked install to me

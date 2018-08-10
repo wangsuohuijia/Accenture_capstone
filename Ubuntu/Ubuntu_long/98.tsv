@@ -1,0 +1,64 @@
+2009-04-02T06:44:00.000Z	abstrakt		where how do i check iptables?
+2009-04-02T06:45:00.000Z	abstrakt		to be sure that port 80 is open?
+2009-04-02T06:45:00.000Z	Cpudan80	abstrakt	sudo iptables -L
+2009-04-02T06:47:00.000Z	Cpudan80	abstrakt	then you have no firewall
+2009-04-02T06:48:00.000Z	abstrakt	Cpudan80	yeah i didn't think so
+2009-04-02T06:48:00.000Z	Cpudan80	abstrakt	then port 80 is open
+2009-04-02T06:48:00.000Z	abstrakt	Cpudan80	yeah thought so
+2009-04-02T06:48:00.000Z	Cpudan80	abstrakt	many ISPs block inbound traffic to port 80
+2009-04-02T06:48:00.000Z	abstrakt	Cpudan80	this freakin server doesn't freakin work!
+2009-04-02T06:49:00.000Z	abstrakt	Cpudan80	i'm quite well aware of that this isn't a residential server
+2009-04-02T06:49:00.000Z	abstrakt	Cpudan80	or connection, it's a dedicated from slicehost
+2009-04-02T06:49:00.000Z	Cpudan80	abstrakt	oh ... well that's a different story
+2009-04-02T06:50:00.000Z	Cpudan80	abstrakt	so even if you go to http://yourIPHere - it fails?
+2009-04-02T06:50:00.000Z	abstrakt	Cpudan80	completely correct
+2009-04-02T06:50:00.000Z	Cpudan80	abstrakt	and you're using a LAMP I assume?
+2009-04-02T06:50:00.000Z	abstrakt	Cpudan80	yup, Ubuntu 8.04 Apache 2.2
+2009-04-02T06:50:00.000Z	Cpudan80	abstrakt	and is Apache running?
+2009-04-02T06:50:00.000Z	abstrakt	Cpudan80	yes
+2009-04-02T06:51:00.000Z	Cpudan80	abstrakt	ok ... if you do telnet localhost 80 from your SSH to the box, what happens?
+2009-04-02T06:51:00.000Z	abstrakt	Cpudan80	lemme find out
+2009-04-02T06:51:00.000Z	Cpudan80	abstrakt	or from your terminal or whatever
+2009-04-02T06:53:00.000Z	abstrakt	Cpudan80	well when i use PuTTY to Telnet to port 80 on the host, i get a completely black/blank screen and then a dialog box saying "Connection closed by remote host"
+2009-04-02T06:53:00.000Z	Cpudan80	abstrakt	then it worked
+2009-04-02T06:53:00.000Z	Cpudan80	abstrakt	pm me
+2009-04-02T06:54:00.000Z	Cpudan80	abstrakt	so basically, apache gave you a tunnel long enough to send some formed HTML requests, you didnt send it after the default timeout of a few seconds, so it killed your pipe
+2009-04-02T06:57:00.000Z	Cpudan80	abstrakt	OK so
+2009-04-02T06:57:00.000Z	Cpudan80	abstrakt	when I do telnet [yourIP] 80 - I get connection refused
+2009-04-02T06:58:00.000Z	abstrakt	Cpudan80	yeah i got that too
+2009-04-02T06:58:00.000Z	Cpudan80	abstrakt	that tells me that your apache is not accepting connections from outside IPs
+2009-04-02T06:58:00.000Z	Cpudan80	abstrakt	but telnet localhost 80 --- that worked?
+2009-04-02T06:58:00.000Z	abstrakt	Cpudan80	no
+2009-04-02T06:58:00.000Z	Cpudan80	abstrakt	you just said it did ...
+2009-04-02T06:59:00.000Z	Cpudan80	abstrakt	^ That mean it worked
+2009-04-02T06:59:00.000Z	abstrakt	Cpudan80	right, well i get two dialog boxes sorry
+2009-04-02T07:00:00.000Z	Cpudan80	abstrakt	at your terminal for your server - type telnet localhost 80 at the prompt - see what happens
+2009-04-02T07:01:00.000Z	abstrakt	Cpudan80	k
+2009-04-02T07:01:00.000Z	abstrakt	Cpudan80	blah, telnet command not found... is that easily remedied with apt-get install telnet
+2009-04-02T07:02:00.000Z	abstrakt	Cpudan80	"telnet: Unable to connect to remote host: Connection refused"
+2009-04-02T07:02:00.000Z	Cpudan80	abstrakt	are you sure apache is running ?
+2009-04-02T07:03:00.000Z	abstrakt	Cpudan80	yup
+2009-04-02T07:03:00.000Z	Cpudan80	abstrakt	thats very odd .... try ps ax | grep apache
+2009-04-02T07:03:00.000Z	Cpudan80	abstrakt	sudo /etc/init.d/apache2 restart
+2009-04-02T07:04:00.000Z	abstrakt	Cpudan80	did that... still no apache processes
+2009-04-02T07:04:00.000Z	Cpudan80	abstrakt	well did it restart ?
+2009-04-02T07:04:00.000Z	abstrakt	Cpudan80	it says it did, yes
+2009-04-02T07:04:00.000Z	Cpudan80	abstrakt	hmmmm
+2009-04-02T07:05:00.000Z	Cpudan80	abstrakt	see whats in the log /var/log/apache2.log
+2009-04-02T07:06:00.000Z	abstrakt	Cpudan80	hmm... i've got some PHP fatal errors in there
+2009-04-02T07:06:00.000Z	Cpudan80	abstrakt	err sorry - the apache logs are /var/log/apache2/...
+2009-04-02T07:06:00.000Z	Cpudan80	abstrakt	PDO ?
+2009-04-02T07:07:00.000Z	abstrakt	Cpudan80	yup... it's a PHP database abstraction layer
+2009-04-02T07:07:00.000Z	Cpudan80	abstrakt	ok well - if its failing to start because of some mod - remove that mod
+2009-04-02T07:09:00.000Z	Cpudan80	abstrakt	but that thing might be loading a module into apache directl
+2009-04-02T07:09:00.000Z	Cpudan80	abstrakt	see /etc/apache2/mods-enabled
+2009-04-02T07:10:00.000Z	abstrakt	Cpudan80	nah it's a PHP module, not an apache module
+2009-04-02T07:10:00.000Z	Cpudan80	abstrakt	you could disable all of PHP for testing
+2009-04-02T07:10:00.000Z	Cpudan80	abstrakt	a2dismod php5 (to reenable use a2enmod)
+2009-04-02T07:12:00.000Z	abstrakt	Cpudan80	ok cool it works now
+2009-04-02T07:13:00.000Z	Cpudan80	abstrakt	ok - glad it works, at least you have a jumping off point
+2009-04-02T07:13:00.000Z	abstrakt	Cpudan80	how do i find out what package a given file belongs to?
+2009-04-02T07:13:00.000Z	Cpudan80	abstrakt	ehhhhh
+2009-04-02T07:13:00.000Z	Cpudan80	abstrakt	dunno
+2009-04-02T07:13:00.000Z	abstrakt	Cpudan80	e.g. there is a file /etc/php5/conf.d/pdo.ini
+2009-04-02T07:15:00.000Z	Cpudan80	abstrakt	dpkg -S filePathhere

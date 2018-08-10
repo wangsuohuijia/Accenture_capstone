@@ -1,0 +1,49 @@
+2009-03-08T23:37:00.000Z	acerone		HELP I just instaleld Ubuntu 8.10 on an Acer One netbook. I got wireless drivers running fine (madwifi), but when I ran the update manager one of the updates must have broken my wireless driver and I dont know what to do now. Help??
+2009-03-08T23:38:00.000Z	hollywoodb	acerone	try booting the previous kernel at the initial kernel selection screen and let us know if that works
+2009-03-08T23:39:00.000Z	acerone	hollywoodb	 it didnt update the kernel
+2009-03-08T23:39:00.000Z	hollywoodb	acerone	what did it update?
+2009-03-08T23:39:00.000Z	acerone	hollywoodb	i dont know. it was a fresh isntall so there were like 300 package updates.
+2009-03-08T23:40:00.000Z	hollywoodb	acerone	you can have a look at /var/log/apt/term.log (you'll likely need to use sudo to view it)
+2009-03-08T23:41:00.000Z	acerone	hollywoodb	ok
+2009-03-08T23:42:00.000Z	acerone	hollywoodb	what am I looking for?
+2009-03-08T23:43:00.000Z	hollywoodb	acerone	I would look to see if there were any updates to madwifi/atheros stuff, the kernel, things like that.  also, do you see the wifi device with `iwconfig` or `ifconfig -a` ?
+2009-03-08T23:43:00.000Z	acerone	hollywoodb	I do see ath0 in iwconfig
+2009-03-08T23:44:00.000Z	hollywoodb	acerone	well, then your card appears to be detected, so maybe something went wrong with the configuration and the updates aren't that important.
+2009-03-08T23:44:00.000Z	acerone	hollywoodb	it is there, but somethings not right. I found one update (hardware driver manager) and disabled that. and i can connect to wireless, but somethign still is screwing it up
+2009-03-08T23:44:00.000Z	hollywoodb	acerone	what do you mean "screwing it up" ?
+2009-03-08T23:44:00.000Z	acerone	hollywoodb	everything was setup fine untill i updated
+2009-03-08T23:45:00.000Z	acerone	hollywoodb	I think the problem was the update that added "Hardware Drivers" to my Admin Menu. And in that dialog, there is support for Atheros driver (which I disabled, cuz I want the madwifi driver)
+2009-03-08T23:45:00.000Z	acerone	hollywoodb	when I disabled that my card was recognized again. . .
+2009-03-08T23:46:00.000Z	acerone	hollywoodb	no
+2009-03-08T23:46:00.000Z	acerone	hollywoodb	so how do I uninstall the madwifi drivers?
+2009-03-08T23:46:00.000Z	acerone	hollywoodb	i followed this: https://help.ubuntu.com/community/AspireOne
+2009-03-08T23:46:00.000Z	hollywoodb	acerone	I have no idea, I haven't dealt with the new atheros drivers... Stupendoussteve was the one that asked you if you had tried them
+2009-03-08T23:47:00.000Z	acerone	hollywoodb	do you know if they are compatable with the aircrack-ng suite? Cuz thats one thing that didnt work after the update. airmon-ng would give an error about a ath0 "no such device"
+2009-03-08T23:49:00.000Z	hollywoodb	acerone	if your card is functioning properly with any driver aircrack should work.  aircrack doesn't care what specific driver you use as long as the driver+card are working properly
+2009-03-08T23:49:00.000Z	acerone	hollywoodb	and thats the problem, during the update something screweed up my driver, I recompiled and isntalled madwifi but something still isnt right
+2009-03-08T23:56:00.000Z	acerone	hollywoodb	another thing. running 'sudo /etc/init.d/networking stop" outputs: "Ignoring unknown interface ath0=ath0."  ???
+2009-03-08T23:57:00.000Z	acerone	hollywoodb	which points out something isnt right, but I dont know waht
+2009-03-08T23:57:00.000Z	hollywoodb	acerone	what's in /etc/network/interfaces ?
+2009-03-08T23:57:00.000Z	acerone	hollywoodb	auto lo ; iface lo inet loopback  . thats all
+2009-03-08T23:58:00.000Z	acerone	hollywoodb	nothing for eth0 or ath0
+2009-03-08T23:58:00.000Z	acerone	hollywoodb	is that why its unknown?
+2009-03-08T23:58:00.000Z	hollywoodb	acerone	no, that's correct.  are you using networkmanager?
+2009-03-08T23:59:00.000Z	acerone	hollywoodb	yes
+2009-03-09T00:00:00.000Z	hollywoodb	acerone	OK, you don't want interfaces managed by networkmanager to be listed in /etc/network/interfaces, so that file is OK
+2009-03-09T00:00:00.000Z	acerone	hollywoodb	I just cant figure out why airmon-ng wont work now
+2009-03-09T00:01:00.000Z	acerone	hollywoodb	in my job its important that i have access to tools lke aircrack and kismet. And they were working fine, until I ran the update manager
+2009-03-09T00:04:00.000Z	hollywoodb	acerone	are you sure there wasn't a kernel update?  maybe have a look at this thread, specifically posts 5,6,7 http://ubuntuforums.org/showthread.php?t=943189
+2009-03-09T00:04:00.000Z	acerone	hollywoodb	yeah, on second glance there was a kernel update, so I booted the old kernel up, but still the same problem
+2009-03-09T00:07:00.000Z	hollywoodb	acerone	if you followed https://help.ubuntu.com/community/AspireOne you'll need to do the make; sudo make install; sudo modprobe ath_pci every time you do a kernel update
+2009-03-09T00:08:00.000Z	acerone	hollywoodb	ok, Ill try that, and see if that fixes my problem
+2009-03-09T00:15:00.000Z	acerone	hollywoodb	dang, it. it still doesnt work right
+2009-03-09T00:16:00.000Z	hollywoodb	acerone	can you `modprobe ath_pci` without any errors?
+2009-03-09T00:16:00.000Z	acerone	hollywoodb	yes,
+2009-03-09T00:16:00.000Z	acerone	hollywoodb	and thats why Im so confused, it seems to working, but its nto
+2009-03-09T00:17:00.000Z	acerone	hollywoodb	ath_rate_sample;ath_pci;wlan;ath_hal
+2009-03-09T00:17:00.000Z	hollywoodb	acerone	OK, the new drivers are ath5k, so it looks fine to me. guess I'm stumped, i think it should be working
+2009-03-09T00:18:00.000Z	acerone	hollywoodb	should, and did. but idk
+2009-03-09T00:18:00.000Z	acerone	hollywoodb	which update is responsible for the ath5k driver? i may just reinstall and then blacklist that update
+2009-03-09T00:18:00.000Z	acerone	hollywoodb	or else just carefully go through every update
+2009-03-09T00:19:00.000Z	hollywoodb	acerone	I believe ath5k is included in the kernel, i.e. not a separate package, but I don't really know a lot about ath5k
+2009-03-09T00:20:00.000Z	acerone	hollywoodb	oh well, im stumped. so im going to reinstall and then when it comes time to update, I will read through each one and try to spot which one was the issue

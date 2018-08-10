@@ -1,0 +1,89 @@
+2005-10-21T12:19:00.000Z	Tolstoy		why would sound work in every possible way except the basic sound events? (yes, enabled, yes, polypaudio is running)
+2005-10-21T12:19:00.000Z	Tolstoy		even backspace in terminal window plays a sound, and so does mistyping in firefox.
+2005-10-21T12:19:00.000Z	schizoid	Tolstoy	gnome?
+2005-10-21T12:19:00.000Z	Tolstoy	schizoid	yeap.
+2005-10-21T12:19:00.000Z	Tolstoy	schizoid	it's the weirdest thing.
+2005-10-21T12:20:00.000Z	schizoid	Tolstoy	tweak system->preferences->sound... if not that then...
+2005-10-21T12:20:00.000Z	schizoid	Tolstoy	System prefrences -> Multimedia selector
+2005-10-21T12:20:00.000Z	Tolstoy	schizoid	and, interestingly, the multimedia choose: tests won't work for esd, the default.  yet paplay, or aplay works fine.
+2005-10-21T12:21:00.000Z	schizoid	Tolstoy	did you select alsa?
+2005-10-21T12:21:00.000Z	Tolstoy	schizoid	yeah, i've tried that.  the test works, alhtough the default source test hangs the applet.
+2005-10-21T12:22:00.000Z	schizoid	Tolstoy	hmm odd because my install boomed events right of the bat.
+2005-10-21T12:23:00.000Z	Tolstoy	schizoid	yeah, and it worked fine under Hoary, too.
+2005-10-21T12:23:00.000Z	schizoid	Tolstoy	 you have eneable sound server and sound for events checked?
+2005-10-21T12:24:00.000Z	Tolstoy	schizoid	yeap.  that's what I mean by "weird".
+2005-10-21T12:25:00.000Z	Tolstoy	schizoid	i even unclicked those, "saved" for session, re-logged in, re-enabled, etc, etc, etc.  google is not being my friend, here.
+2005-10-21T12:25:00.000Z	schizoid	Tolstoy	have you logged out and back in ? and also tried restarting gdm?
+2005-10-21T12:25:00.000Z	schizoid	Tolstoy	how about restart gdm?
+2005-10-21T12:25:00.000Z	Tolstoy	schizoid	yeah.  I'll go through it again, just to try again.  (I restarted gdm by rebooting, thinking it was a driver issue.)
+2005-10-21T12:25:00.000Z	schizoid	Tolstoy	sudo /etc/init.d/gdm but that will log you out remember
+2005-10-21T12:25:00.000Z	schizoid	Tolstoy	sorry its sudo /etc/init.d/gdm restart
+2005-10-21T12:26:00.000Z	Tolstoy	schizoid	hm. gdm is not restarting.
+2005-10-21T12:28:00.000Z	schizoid	Tolstoy	hmm try alt 7, did you make and changes to your X config?
+2005-10-21T12:29:00.000Z	Tolstoy	schizoid	with sound server and events enabled, I can hit "backspace" in a terminal window and get one of the sounds in /usr/share/sounds.
+2005-10-21T12:30:00.000Z	schizoid	Tolstoy	hmm ok so it sounds like its working?
+2005-10-21T12:31:00.000Z	Tolstoy	schizoid	yes, in every other way, sound works great.  totem.  rhythm box.  via command line (paplay, aplay), and even some beeps, such as in gnome-terminal.
+2005-10-21T12:31:00.000Z	Tolstoy	schizoid	I'm wondering if the sound preferences has messed up the paths to sounds, somehow.
+2005-10-21T12:31:00.000Z	schizoid	Tolstoy	dabaR thats not much of a reason, runlevel dependacies should be checked bu the script its self sounds like the scripte you are talking about is a unified wrapper fo init 5 level
+2005-10-21T12:32:00.000Z	schizoid	Tolstoy	Tolstoy check the events themselves
+2005-10-21T12:32:00.000Z	Tolstoy	schizoid	you mean play the event sounds?  that works.
+2005-10-21T12:33:00.000Z	Tolstoy	schizoid	in sound preferences, when I hit the play button: nothing.
+2005-10-21T12:34:00.000Z	schizoid	Tolstoy	that and check that there is a sound bound to an event ie choose menu item
+2005-10-21T12:34:00.000Z	Tolstoy	schizoid	yeah, that's what I've been doing.  are these preferences stored somewhere, say, gconf?
+2005-10-21T12:34:00.000Z	schizoid	Tolstoy	maybe your just missing the sound events package
+2005-10-21T12:35:00.000Z	schizoid	Tolstoy	there in there right? but when you play no sound?
+2005-10-21T12:35:00.000Z	Tolstoy	schizoid	right.  if I do something like, "paplay /usr/share/sounds/info.wav" I _do_ get the sound
+2005-10-21T12:35:00.000Z	schizoid	Tolstoy	 ls /usr/share/sounds/gtk-events/activate.wav see what you get
+2005-10-21T12:36:00.000Z	Tolstoy	schizoid	I get a symbolic link to clicked.wav
+2005-10-21T12:37:00.000Z	Tolstoy	schizoid	it's as if gnome itself is ignoring gstreamer, or whatever's underneath all that.  very odd.
+2005-10-21T12:37:00.000Z	schizoid	Tolstoy	thas wierd but you have that for choose menu item?
+2005-10-21T12:38:00.000Z	schizoid	Tolstoy	select Choose Menu Item and but this in for the sound file gtk-events/activate.wav then play it
+2005-10-21T12:38:00.000Z	Tolstoy	schizoid	ok
+2005-10-21T12:40:00.000Z	Tolstoy	schizoid	no sound
+2005-10-21T12:41:00.000Z	schizoid	Tolstoy	what do you have for default soundcard in general tab?
+2005-10-21T12:42:00.000Z	Tolstoy	schizoid	NVidia nForce2  (which worked in hoary before I apt-getted myself to breezy)
+2005-10-21T12:43:00.000Z	schizoid	Tolstoy	thats the only sound device listed?
+2005-10-21T12:43:00.000Z	Tolstoy	schizoid	yes.
+2005-10-21T12:43:00.000Z	schizoid	Tolstoy	do you migrate your gnome settings?
+2005-10-21T12:43:00.000Z	Tolstoy	schizoid	ummmm nope.  do you mean just erase .gnome2?
+2005-10-21T12:44:00.000Z	schizoid	Tolstoy	I wouldnt say to do that, that would be a fast way to reset gnome settings, but you can try to create a new user up to you.
+2005-10-21T12:44:00.000Z	Tolstoy	schizoid	yeah, I'll try that.
+2005-10-21T12:50:00.000Z	schizoid	Tolstoy	try makeing a new user see how that goes, mean time I'll find what package this pertains too, possibly reinstalling the package will register an gconf issues
+2005-10-21T12:50:00.000Z	Tolstoy	schizoid	okay, new user.  multimedia defaults to esd for sink, oss for source.  neither of them pass the test.  I get "failure to construct test pipleline"
+2005-10-21T12:50:00.000Z	Tolstoy	schizoid	I wonder if it's that extra gstreamer-plugin package I installed?
+2005-10-21T12:50:00.000Z	schizoid	Tolstoy	humm are you using enlightenment?
+2005-10-21T12:57:00.000Z	schizoid	Tolstoy	what happens whe you test the osd sind?
+2005-10-21T12:57:00.000Z	schizoid	Tolstoy	sink?
+2005-10-21T12:57:00.000Z	schizoid	Tolstoy	sorry esd?
+2005-10-21T12:58:00.000Z	Tolstoy	schizoid	I get that "failure to construct a test pipeline" message.
+2005-10-21T12:58:00.000Z	Tolstoy	schizoid	with my new user, I can aplay info.wav, but NOT paplay info.wav
+2005-10-21T12:59:00.000Z	schizoid	Tolstoy	in your volume control goto what does it have in the title for mixer?
+2005-10-21T12:59:00.000Z	Tolstoy	schizoid	and there's no polypaudio, even if I toggle enable sound server a bunch of times
+2005-10-21T13:00:00.000Z	Tolstoy	schizoid	title of the "Volume Control"?  NVidia nForce2 (Alsa Mixer)
+2005-10-21T13:01:00.000Z	schizoid	Tolstoy	ok that looks right, ok one sec
+2005-10-21T13:03:00.000Z	schizoid	Tolstoy	search for esd in synamapitc, and see if you have gstreamer0.8-esd installed
+2005-10-21T13:04:00.000Z	schizoid	Tolstoy	also gnome-media
+2005-10-21T13:04:00.000Z	Tolstoy	schizoid	oh, that was hours ago I did that!  Can't remember the result, though. ;)  and, yeah, gnome-media is installed.
+2005-10-21T13:04:00.000Z	schizoid	Tolstoy	and gstreamer?
+2005-10-21T13:04:00.000Z	Tolstoy	schizoid	yeap. installed.
+2005-10-21T13:07:00.000Z	Tolstoy	schizoid	what is it that plays sounds in the sound preferences dialog that's different than, say, nautilus, or even gdm, which plays a drumbeat when I log out, or what it repaints itself with a login screen?
+2005-10-21T13:08:00.000Z	schizoid	Tolstoy	gdm, so gnome
+2005-10-21T13:08:00.000Z	schizoid	Tolstoy	do you have polypaudio installed?
+2005-10-21T13:08:00.000Z	schizoid	Tolstoy	humm take that out
+2005-10-21T13:09:00.000Z	Tolstoy	schizoid	uninstall polypaudio?
+2005-10-21T13:09:00.000Z	schizoid	Tolstoy	yes that conflicts, you only need one sound server
+2005-10-21T13:09:00.000Z	Tolstoy	schizoid	removing polypaudio also removes ubuntu-desktop
+2005-10-21T13:10:00.000Z	schizoid	Tolstoy	libpoyp0 or polypaudio ?
+2005-10-21T13:10:00.000Z	schizoid	Tolstoy	no leave libpoyp0
+2005-10-21T13:11:00.000Z	schizoid	Tolstoy	but polypaudio is universe I believe
+2005-10-21T13:11:00.000Z	schizoid	Tolstoy	ya polypaudio is universe so it shouldnt remove ubuntu-desktop
+2005-10-21T13:12:00.000Z	Tolstoy	schizoid	well, sometimes things are weird.  I can remove polyp, which removes ubuntu-desktop, then I can isntall ubuntu-desktop, and polyp won't come along with it.
+2005-10-21T13:12:00.000Z	schizoid	Tolstoy	ah revdep stuff... thats fine
+2005-10-21T13:12:00.000Z	schizoid	Tolstoy	 just note the packages for removal just to be safe
+2005-10-21T13:12:00.000Z	Tolstoy	schizoid	now it wants to install esound instead.  interesting.
+2005-10-21T13:13:00.000Z	schizoid	Tolstoy	ok let it do the esound bit
+2005-10-21T13:13:00.000Z	schizoid	Tolstoy	looks like you been playing to much in Universe :P
+2005-10-21T13:14:00.000Z	Tolstoy	schizoid	yeah, and this isn't a fresh breezy install, so there's some mixup with a dist-upgrade, looks like.  praps.
+2005-10-21T13:14:00.000Z	schizoid	Tolstoy	ah that makes more sense then
+2005-10-21T13:15:00.000Z	Tolstoy	schizoid	okay, now it works.  phew!  sheesh. what a slog!
+2005-10-21T13:16:00.000Z	schizoid	Tolstoy	;)

@@ -1,0 +1,66 @@
+2008-05-06T16:41:00.000Z	psnel		Please help: Automatic updates not happening - PC switched off daily (missing 'update cycle'? if so, when is it?)
+2008-05-06T16:43:00.000Z	DistroJockey	psnel	You wont miss updates. There hasn't been many for Hardy if that's what you are running.
+2008-05-06T16:44:00.000Z	psnel	DistroJockey	hardy, yes. Just ran Update mgr... got alot of updates... I have to do manual updates, since before I upgraded
+2008-05-06T16:44:00.000Z	DistroJockey	psnel	ahh
+2008-05-06T16:45:00.000Z	DistroJockey	psnel	you can change that in System - Administration - Software Sources
+2008-05-06T16:46:00.000Z	psnel	DistroJockey	yes.. it says "daily"... but what time does it happen? Am Imissing it because I switch off my pc?
+2008-05-06T16:47:00.000Z	DistroJockey	psnel	should check when you connect I assume
+2008-05-06T16:49:00.000Z	psnel	DistroJockey	what do you mean "check when I connect"?
+2008-05-06T16:50:00.000Z	DistroJockey	psnel	when your system gets a connection to the net, it should check
+2008-05-06T16:51:00.000Z	DistroJockey	psnel	not sure what runs to do that though
+2008-05-06T16:51:00.000Z	psnel	DistroJockey	my ubuntu system IS my ADSL router... static routes to 2 ISP's from my LAN
+2008-05-06T16:52:00.000Z	psnel	DistroJockey	i.e. when it boots it connects (unless I switch off my adsl 'router' - now merely a adsl bridge that switches my LAN)
+2008-05-06T16:53:00.000Z	DistroJockey	psnel	you can update fine with apt-get update/upgrade ?
+2008-05-06T16:54:00.000Z	psnel	DistroJockey	yes. I just did an update through "Update Manager" (UI)
+2008-05-06T16:55:00.000Z	psnel	DistroJockey	it said, 35 or so updates, and "update information was last updated 4 days ago" ...
+2008-05-06T16:55:00.000Z	psnel	DistroJockey	"install updates" worked fine
+2008-05-06T16:55:00.000Z	DistroJockey	psnel	k, that's odd and I don't know the cause :(
+2008-05-06T16:56:00.000Z	psnel	DistroJockey	k. thanks for responding tough :)
+2008-05-06T16:56:00.000Z	DistroJockey	psnel	no problem, I'm looking further :)
+2008-05-06T17:00:00.000Z	DistroJockey	psnel	maybe the following?:   apt-get --reinstall update-manager
+2008-05-06T17:03:00.000Z	DistroJockey	psnel	that would be the following rather:    sudo apt-get --reinstall install update-manager
+2008-05-06T17:10:00.000Z	psnel	DistroJockey	worth a try...
+2008-05-06T17:10:00.000Z	DistroJockey	psnel	not done it myself, but it's all I can think of atm
+2008-05-06T17:11:00.000Z	psnel	DistroJockey	guess I'd have to wait to know if it worked
+2008-05-06T17:12:00.000Z	DistroJockey	psnel	I had 2 updates for an install I did on Hardy release day. But I had 30 odd for a clean install I did today
+2008-05-06T17:13:00.000Z	psnel	DistroJockey	what does that imply? (btw this was happening with gutsy too)
+2008-05-06T17:14:00.000Z	DistroJockey	psnel	not too sure there. Firewall ?
+2008-05-06T17:15:00.000Z	psnel	DistroJockey	manually configured shorewall.. but that should've blocked manual Update "manager too, no?
+2008-05-06T17:17:00.000Z	DistroJockey	psnel	yeah, doubt it's a firewall issue
+2008-05-06T17:17:00.000Z	psnel	DistroJockey	i'm trying to figure out the behavior of auto-updates.. like what time, whether it checks on boot/login, and so on
+2008-05-06T17:18:00.000Z	DistroJockey	psnel	yeah, I'm not sure sorry, but would be interested in knowing
+2008-05-06T17:19:00.000Z	psnel	DistroJockey	i'll let you know if I find out.. and you're still here. tx
+2008-05-06T17:20:00.000Z	DistroJockey	psnel	cheers, I'll see what I can find also
+2008-05-06T17:37:00.000Z	DistroJockey	psnel	maybe this link will help:  http://ubuntu-tutorials.com/2006/10/07/automatic-updates-ubuntu-all-versions/
+2008-05-06T17:37:00.000Z	psnel	DistroJockey	appreciate it
+2008-05-06T17:38:00.000Z	psnel	DistroJockey	actually.. i've read that page just now... prefer not to use cron
+2008-05-06T17:39:00.000Z	psnel	DistroJockey	it's dirty, and will overwrite my custom config files
+2008-05-06T17:39:00.000Z	DistroJockey	psnel	never looked into it myself. Just sounded appropriate
+2008-05-06T17:40:00.000Z	psnel	DistroJockey	I just want my system to work right, like it should
+2008-05-06T17:40:00.000Z	DistroJockey	psnel	did you do a clean install or an upgrade?
+2008-05-06T17:41:00.000Z	DistroJockey	psnel	from what I have seen a clean is better
+2008-05-06T17:41:00.000Z	psnel	DistroJockey	don't ask me to do that dude!
+2008-05-06T17:42:00.000Z	DistroJockey	psnel	sorry, but it works best :)
+2008-05-06T17:43:00.000Z	DistroJockey	psnel	I even did a clean instal with /home on a separate partition today and it didn't like that much either
+2008-05-06T17:44:00.000Z	psnel	DistroJockey	my /home is also on a separate partition - i should learn how to do proper volume management
+2008-05-06T17:45:00.000Z	psnel	DistroJockey	... keep running out of space, though there are enough space on other partitions
+2008-05-06T17:45:00.000Z	psnel	DistroJockey	sorry are->is
+2008-05-06T17:46:00.000Z	DistroJockey	psnel	I ended up with 3 root folders and 2 of the same name user folders in home :(
+2008-05-06T17:46:00.000Z	DistroJockey	psnel	name and install method was the same, so the ID should have been right
+2008-05-06T17:51:00.000Z	psnel	DistroJockey	how's it possible to have more than 1 same-name dirs in the same parent dir?
+2008-05-06T17:51:00.000Z	DistroJockey	psnel	not sure, it's broken though :)
+2008-05-06T17:52:00.000Z	psnel	DistroJockey	sounds broken :) - and you said fresh install is always better.
+2008-05-06T17:53:00.000Z	DistroJockey	psnel	I was incorrect with that statement about the multiples (sorry)
+2008-05-06T17:54:00.000Z	DistroJockey	psnel	it just didn't like me using the same username at install to talk to that username on my /home
+2008-05-06T17:55:00.000Z	psnel	DistroJockey	like windows, "/mysameuser.00001" ?
+2008-05-06T17:55:00.000Z	DistroJockey	psnel	yes, that was a fresh with a separate /home that I didn't format (and it still failed)
+2008-05-06T17:57:00.000Z	DistroJockey	psnel	not sure what you mean there
+2008-05-06T17:59:00.000Z	psnel	DistroJockey	you mean, you don't get the windows comment?
+2008-05-06T18:00:00.000Z	DistroJockey	psnel	yes, I don't really know whjat you mean there
+2008-05-06T18:03:00.000Z	psnel	DistroJockey	I thought that you meant with "multiples" (considering that it may be the only way to actually have multiple same-username dir in /home), that (like when you re-install windows) the dicovery of your previous user (e.g. /home/myuser/) caused it to create a duplicate (e.g. /home/myuser.0001/) like windows does
+2008-05-06T18:04:00.000Z	DistroJockey	psnel	ahh, yes. That's what I assumed happened but I was mistaken. Sorry
+2008-05-06T18:24:00.000Z	psnel	DistroJockey	I forgot to mention that I'm using XFCE, and not Gnome... http://ubuntuforums.org/showthread.php?t=237030 (xfce "Sessions & Startup" doesn't actually show startup apps, but does have a tab to enable/disable "Launch Gnome Services on startup" & "...KDE Services.." - Gnome services disabled (heavier than XFCE))
+2008-05-06T18:25:00.000Z	DistroJockey	psnel	ahh. Well sysvconfig should still do the job :)
+2008-05-06T18:26:00.000Z	DistroJockey	psnel	services wise that is
+2008-05-06T18:28:00.000Z	DistroJockey	psnel	That's about all I have atm. Off to sleep now. Good luck.
+2008-05-06T18:29:00.000Z	psnel	DistroJockey	one Q.. how is sysvconfig diff from Admn->Services dialog?

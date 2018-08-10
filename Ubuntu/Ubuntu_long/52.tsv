@@ -1,0 +1,91 @@
+2005-04-02T12:51:00.000Z	marcin_ant		come on guys I reallllly need to configure printer sharing on ubuntu
+2005-04-02T12:51:00.000Z	marcin_ant		please help me
+2005-04-02T12:51:00.000Z	topyli	marcin_ant	share it with what?
+2005-04-02T12:52:00.000Z	marcin_ant	topyli	linux with... linux
+2005-04-02T12:52:00.000Z	marcin_ant	topyli	I got linux on desktop
+2005-04-02T12:52:00.000Z	marcin_ant	topyli	and on laptop
+2005-04-02T12:53:00.000Z	topyli	marcin_ant	never done that. i only have samba shares here :(
+2005-04-02T12:53:00.000Z	topyli	marcin_ant	anyway, cups is networking by nature
+2005-04-02T12:53:00.000Z	marcin_ant	topyli	you know - this is crazy because this printer works with windows beautifully
+2005-04-02T12:53:00.000Z	marcin_ant	topyli	laptop is dualboot
+2005-04-02T12:54:00.000Z	marcin_ant	topyli	printer is shared with samba
+2005-04-02T12:54:00.000Z	marcin_ant	topyli	and works great from xp on laptop
+2005-04-02T12:54:00.000Z	topyli	marcin_ant	probably cups is just listening to localhost only and you have to make it listen to your network interface too
+2005-04-02T12:54:00.000Z	marcin_ant	topyli	and doesn't at all from linux
+2005-04-02T12:56:00.000Z	topyli	marcin_ant	it's not so crazy. ubuntu makes services not listen to network so you don't need a firewall. you need to enable cups to listen to other interfaces besides lo
+2005-04-02T12:56:00.000Z	topyli	marcin_ant	just be careful you won't make it accessible over the whole internet :)
+2005-04-02T13:05:00.000Z	marcin_ant	topyli	because now I'm at home and I got "experimental" environment
+2005-04-02T13:06:00.000Z	marcin_ant	topyli	and I'll go to my customer in about an hour
+2005-04-02T13:06:00.000Z	marcin_ant	topyli	and he has ubuntu on "server"
+2005-04-02T13:06:00.000Z	marcin_ant	topyli	and two laptops with ubuntu as clients
+2005-04-02T13:06:00.000Z	topyli	marcin_ant	you just have to see how to enable cups for a little wider audience than localhost :)
+2005-04-02T13:07:00.000Z	marcin_ant	topyli	and how to check if this is enabled to lan?
+2005-04-02T13:08:00.000Z	marcin_ant	topyli	./enable-browsing ?
+2005-04-02T13:08:00.000Z	topyli	marcin_ant	i honestly have no idea!
+2005-04-02T13:08:00.000Z	topyli	marcin_ant	doesn't cups have this famous web interface for configuring it?
+2005-04-02T13:08:00.000Z	marcin_ant	topyli	this is hp 5740 - pretty cheap but works great
+2005-04-02T13:09:00.000Z	marcin_ant	topyli	yes there is something like web interface
+2005-04-02T13:09:00.000Z	marcin_ant	topyli	but on top of this screen there is an info
+2005-04-02T13:09:00.000Z	marcin_ant	topyli	that admin tasks are disabled for security reasons
+2005-04-02T13:10:00.000Z	topyli	marcin_ant	arrrrr. it's ubuntu disabling stuff :(
+2005-04-02T13:11:00.000Z	topyli	marcin_ant	install lpr and use lprtool to set it up if you're in a hurry
+2005-04-02T13:11:00.000Z	topyli	marcin_ant	not lprtool, what i mean is printtool
+2005-04-02T13:12:00.000Z	marcin_ant	topyli	well the problem is that now I just would like this to "just work"
+2005-04-02T13:12:00.000Z	topyli	marcin_ant	well, that's what we like all right
+2005-04-02T13:12:00.000Z	marcin_ant	topyli	but it is possible that I'll go to my customer and take this server and printer
+2005-04-02T13:12:00.000Z	marcin_ant	topyli	and I'll have all night to configure this
+2005-04-02T13:13:00.000Z	topyli	marcin_ant	sounds better
+2005-04-02T13:13:00.000Z	marcin_ant	topyli	no... it sounds like a "waste of time" :)
+2005-04-02T13:13:00.000Z	topyli	marcin_ant	put debian on that server, on servers that's the one that "just works"
+2005-04-02T13:14:00.000Z	marcin_ant	topyli	and I really don't want to do what Nat wants to here http://www.nat.org/camera/img_4584-800x533-border.jpg
+2005-04-02T13:14:00.000Z	marcin_ant	topyli	well it's not Server - just "server"
+2005-04-02T13:14:00.000Z	topyli	marcin_ant	nat knows when it's time to give up :)
+2005-04-02T13:15:00.000Z	marcin_ant	topyli	ok I'll try do to something but another question
+2005-04-02T13:16:00.000Z	marcin_ant	topyli	maybe my problem is that there is something wrong with cups on server
+2005-04-02T13:16:00.000Z	topyli	marcin_ant	i seriously have no idea how to configure cups without the web interface
+2005-04-02T13:16:00.000Z	marcin_ant	topyli	but maybe I do something wrong on client
+2005-04-02T13:16:00.000Z	marcin_ant	topyli	than question
+2005-04-02T13:16:00.000Z	marcin_ant	topyli	in gnome printer configuration dialog
+2005-04-02T13:16:00.000Z	topyli	marcin_ant	if the cups server works, the client will see it. if it won't it's the server's fault. that simple with print servers
+2005-04-02T13:17:00.000Z	marcin_ant	topyli	I need to add URI
+2005-04-02T13:17:00.000Z	marcin_ant	topyli	maybe my uri is wrong?
+2005-04-02T13:17:00.000Z	marcin_ant	topyli	what is an uri that is known to work :) ?
+2005-04-02T13:17:00.000Z	topyli	marcin_ant	yeah. which port does cups listen to?
+2005-04-02T13:17:00.000Z	marcin_ant	topyli	propably 631
+2005-04-02T13:17:00.000Z	marcin_ant	topyli	but how to check this?
+2005-04-02T13:18:00.000Z	topyli	marcin_ant	telnet from localhost
+2005-04-02T13:22:00.000Z	marcin_ant	topyli	yes I got cups on 631
+2005-04-02T13:23:00.000Z	marcin_ant	topyli	so then... ipp://192.168.0.1:631/printers/BJC-6000 should work?
+2005-04-02T13:23:00.000Z	topyli	marcin_ant	cups work on tcp, so you can just put the IP and port on the client
+2005-04-02T13:23:00.000Z	topyli	marcin_ant	or is it ipp?
+2005-04-02T13:23:00.000Z	marcin_ant	topyli	I really don't know :)
+2005-04-02T13:23:00.000Z	topyli	marcin_ant	try telnet
+2005-04-02T13:24:00.000Z	marcin_ant	topyli	just when I got mouse over URI box
+2005-04-02T13:24:00.000Z	marcin_ant	topyli	then I got "hint"
+2005-04-02T13:25:00.000Z	marcin_ant	topyli	I can telnet to 631 on localhost but not from laptop
+2005-04-02T13:26:00.000Z	topyli	marcin_ant	aren't you happy to have professional support such as myself? ;)
+2005-04-02T13:26:00.000Z	topyli	marcin_ant	cups is only listening to localhost
+2005-04-02T13:27:00.000Z	marcin_ant	topyli	ok - then I need to make this available on lan - not only on localhost - right?
+2005-04-02T13:27:00.000Z	marcin_ant	topyli	then a question is how
+2005-04-02T13:30:00.000Z	topyli	marcin_ant	yeah, might be a tcp_wrappers setup on ubuntu so nothing listens to nobody by default
+2005-04-02T13:40:00.000Z	topyli	marcin_ant	yeah, and you can't really set up a server from there :(
+2005-04-02T13:41:00.000Z	marcin_ant	topyli	so... the only "easy" way is gnome-cups-manager
+2005-04-02T13:41:00.000Z	marcin_ant	topyli	but there is no way to configure anything related with server
+2005-04-02T13:42:00.000Z	topyli	marcin_ant	yeah, but that's client stuff
+2005-04-02T13:42:00.000Z	marcin_ant	topyli	so... I need to configure everyting by hand with /etc/cups/*
+2005-04-02T13:43:00.000Z	topyli	marcin_ant	sure you can configure cups, but you need to 1) configure cups, 2) perhaps configure tcp_wrappers, 3) perhaps something else, all from the config files
+2005-04-02T13:43:00.000Z	topyli	marcin_ant	i still say install debian on that server :)
+2005-04-02T13:44:00.000Z	marcin_ant	topyli	I did a lot of work to configure this server... gprs stuff etc.
+2005-04-02T13:44:00.000Z	topyli	marcin_ant	nis, we need access to that web tool first though
+2005-04-02T13:48:00.000Z	topyli	marcin_ant	and put yourself to group lp
+2005-04-02T13:48:00.000Z	marcin_ant	topyli	ooooo
+2005-04-02T13:49:00.000Z	marcin_ant	topyli	ok - group uncommented
+2005-04-02T13:49:00.000Z	marcin_ant	topyli	I'm already member of this group
+2005-04-02T13:50:00.000Z	topyli	marcin_ant	or perhaps you should leave it to lpadmin since you already are in the group
+2005-04-02T13:50:00.000Z	topyli	marcin_ant	then restart cupsd
+2005-04-02T13:56:00.000Z	topyli	marcin_ant	install lpd, it has worked for ever :)
+2005-04-02T14:01:00.000Z	marcin_ant	topyli	last question
+2005-04-02T14:01:00.000Z	marcin_ant	topyli	before I go
+2005-04-02T14:01:00.000Z	marcin_ant	topyli	when cupsys is configured properly
+2005-04-02T14:01:00.000Z	marcin_ant	topyli	printers should appear in gnome-cups-manager automatically - right?
+2005-04-02T14:03:00.000Z	topyli	marcin_ant	it should find them on the network, yes

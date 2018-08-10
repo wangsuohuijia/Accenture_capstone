@@ -1,0 +1,64 @@
+2011-06-29T12:22:00.000Z	Firefishe		I use kdm, but I get ya
+2011-06-29T12:23:00.000Z	Firefishe		Also, I just logged in to my wife's side.  It works normally, so this is my own desktop-specific bug.
+2011-06-29T12:25:00.000Z	hdon	Firefishe	wait
+2011-06-29T12:09:00.000Z	hdon	Firefishe	do you want to keep your old setup?
+2011-06-29T12:10:00.000Z	Firefishe	hdon	 no, it's not that important.
+2011-06-29T12:10:00.000Z	hdon	Firefishe	easy thing to do then is blow away config files in your home dir. with .gnome though there might be more in there than just desktop setup stuff
+2011-06-29T12:12:00.000Z	Firefishe	hdon	 this is on the kde desktop, just to let you know.
+2011-06-29T12:13:00.000Z	Firefishe	hdon	I just checked .gnome, and it's got something I want to keep, although that's not the chief configuration file for this box.  It's actually .gnome2/
+2011-06-29T12:15:00.000Z	hdon	Firefishe	i recommend not removing them, but just renaming them to something else in case you decide you want something in them later
+2011-06-29T12:15:00.000Z	hdon	Firefishe	sorry, said Fireblasto meant Firefishe
+2011-06-29T12:17:00.000Z	Firefishe	hdon	I used the gui hardware installer.  It just started doing this tonight.  Everything's been working without a hitch.
+2011-06-29T12:17:00.000Z	Firefishe	hdon	 it's just that one thing, all other dialogs are fine.  gtk-sudo, etc.
+2011-06-29T12:18:00.000Z	hdon	Firefishe	sorry, what is this dialogue you're having a problem with?
+2011-06-29T12:19:00.000Z	Firefishe	hdon	 When I use the kde desktop lock-screen system, it locks it okay.  It displays a black screen, and when you move the mouse or touch the trackpad, a login dialog box usually appears, with a text-input box in it.  All I'm getting is a blank rectangle with nothing in it.
+2011-06-29T12:19:00.000Z	Firefishe	hdon	some type of visual artifacting
+2011-06-29T12:20:00.000Z	hdon	Firefishe	what a horrible bug :(
+2011-06-29T12:20:00.000Z	Firefishe	hdon	 Well, it's probably something particular to my setup, and not a bug, per se.  I think it's a compiz/kwin rendering issue.
+2011-06-29T12:22:00.000Z	hdon	Firefishe	still a bug ;) but i understand your methodology. are you able to access other vts? i recommend renaming all everything matching ~/.* and then putting them back until you encounter the bug again. you can use sudo /etc/init.d/gdm restart if you are unable to utilize the broken/badly-rendered unlock dialog
+2011-06-29T12:23:00.000Z	Firefishe	hdon	So, ideally, I just need to start with a tabula rasa.  So how do I completely set up my kde desktop to default parameters?
+2011-06-29T12:24:00.000Z	hdon	Firefishe	easy way is probably to mv ~/.kde ~/.kde-backup or something like that
+2011-06-29T12:25:00.000Z	Firefishe	hdon	bronaugh, I need to reboot....brb.
+2011-06-29T12:25:00.000Z	hdon	Firefishe	are you sure you don't need to just /etc/init.d/gdm restart ?
+2011-06-29T12:46:00.000Z	Firefishe	hdon	flux is a great wm. :)
+2011-06-29T12:46:00.000Z	hdon	Firefishe	i wrote a bunch of patches for it but never submitted them :(
+2011-06-29T12:46:00.000Z	Firefishe	hdon	 Well, is the project still going?
+2011-06-29T12:46:00.000Z	hdon	Firefishe	dunno
+2011-06-29T12:46:00.000Z	Firefishe	hdon	Do they work on your system?
+2011-06-29T12:46:00.000Z	hdon	Firefishe	fluxbox?
+2011-06-29T12:47:00.000Z	Firefishe	hdon	heh
+2011-06-29T12:48:00.000Z	hdon	Firefishe	that was a dark time in my life, when i had my machines taken away and had to work on a 100mhz pentium 1 D:
+2011-06-29T12:48:00.000Z	hdon	Firefishe	but i learned way more about Linux APIs in that period than any other period in my life
+2011-06-29T12:49:00.000Z	Firefishe	hdon	I see.  Quite the 'nix fellow, eh? :)
+2011-06-29T12:50:00.000Z	hdon	Firefishe	well these days i work on solaris as much as linux, though anywhere i go i expect the modern conveniences of GNU extensions
+2011-06-29T12:50:00.000Z	Firefishe	hdon	I'm not really much of a *doze person, anymore, save for eve online ;)...can't get away from it for that, but I digress.  I want to learn more about gnu/linux-in-general, to the point of wanting to set up comps for desktop linux.
+2011-06-29T12:50:00.000Z	Firefishe	hdon	I've played with Solaris 6/06 and OpenSolaris
+2011-06-29T12:51:00.000Z	hdon	Firefishe	for linux experience... as a desktop experience, i think i have learned less than as a server experience. try renting a shell server someplace cheap and use linux that way :)
+2011-06-29T12:52:00.000Z	Firefishe	hdon	 I remember shell accounts. ;-)  I started my UNIX experience on an old freenet using telnet.  I remember using ircii as my very first irc experience, and pine as my email client.
+2011-06-29T12:53:00.000Z	hdon	Firefishe	heheh
+2011-06-29T12:53:00.000Z	Firefishe	hdon	 Well, perhaps it was BSD, I don't remember.
+2011-06-29T12:54:00.000Z	Firefishe	hdon	All I know is I'm not 45, enamored with linux--and want to make a living using it somehow.
+2011-06-29T12:54:00.000Z	hdon	Firefishe	you're new world order 45!
+2011-06-29T12:55:00.000Z	hdon	Firefishe	:P
+2011-06-29T12:55:00.000Z	Firefishe	hdon	 I stopped aging when I turned 18 ;
+2011-06-29T12:55:00.000Z	hdon	Firefishe	i was very intensely dedicated to cross-platform development circa 2000, but then Apple stabbed the community in the back several times, and i just got tired of trying to unify the computer community
+2011-06-29T12:56:00.000Z	Firefishe	hdon	 Are you someone of note, hdon?  You seem very well structured in 'nix-in-general.
+2011-06-29T12:56:00.000Z	hdon	Firefishe	not really
+2011-06-29T12:56:00.000Z	Firefishe	hdon	I'm also a former os-x user.
+2011-06-29T12:57:00.000Z	Firefishe	hdon	 hell, I'm a former Mac SE/30 user ;) hee
+2011-06-29T12:57:00.000Z	hdon	Firefishe	i owned an Apple IIc+ growing up
+2011-06-29T12:57:00.000Z	Firefishe	hdon	 I used an Apple IIc, and IIe in high school my senior year.  That was 1984. ;)
+2011-06-29T12:58:00.000Z	hdon	Firefishe	(nobody remembers the IIc+ so i'd be understanding if you told me you didn't think it exists!)
+2011-06-29T12:58:00.000Z	Firefishe	hdon	 Right alongside the C64s and the one TRS-80
+2011-06-29T12:58:00.000Z	Firefishe	hdon	Oh, I believe you.  Just like people might not remember the Commodore 128 (C128)
+2011-06-29T13:00:00.000Z	Firefishe	hdon	 I prefer apt-get to most anything.  Easy to use, nice and simple.
+2011-06-29T13:00:00.000Z	hdon	Firefishe	some people prefer to use aptitude, even without its TUI, because it has better dependency resolution or something.
+2011-06-29T13:02:00.000Z	Firefishe	hdon	I've used aptitude on occasion.  I usually use synaptic to find things if I need to read the descriptions a bit easier, but mostly I do updates/upgrades/installs using apt-get.
+2011-06-29T13:03:00.000Z	Firefishe	hdon	it does offer a lot of useful scenarios to get your system at least working; I do like that feature.
+2011-06-29T14:06:00.000Z	Firefishe	hdon	Hello again :)
+2011-06-29T14:06:00.000Z	hdon	Firefishe	hola
+2011-06-29T14:07:00.000Z	Firefishe	hdon	Well, I finally got my desktop back... *phew*
+2011-06-29T14:08:00.000Z	hdon	Firefishe	awesome :) any collateral damage?
+2011-06-29T14:08:00.000Z	Firefishe	hdon	not that I can see.  Tabula Rasas are nice like that :)
+2011-06-29T14:48:00.000Z	Firefishe	hdon	bronaugh:  'night.  Thanks for your help, earlier.  Be Well.
+2011-06-29T14:48:00.000Z	hdon	Firefishe	goodnight!

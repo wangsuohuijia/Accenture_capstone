@@ -1,0 +1,48 @@
+2009-04-07T06:06:00.000Z	Martyr2k6		can anyone help me?
+2009-04-07T06:07:00.000Z	Martyr2k6		I am trying to dual boot with two hard drives
+2009-04-07T06:07:00.000Z	Martyr2k6		I just installed vista on the main drive, and I wish to install ubuntu on the secondary drive
+2009-04-07T06:08:00.000Z	vikrant	Martyr2k6	whats holding you back?//
+2009-04-07T06:08:00.000Z	Martyr2k6	vikrant	lack of knowledge as to what I am doing?
+2009-04-07T06:09:00.000Z	Martyr2k6	vikrant	from within windows, or reboot and boot from disc
+2009-04-07T06:10:00.000Z	Martyr2k6	vikrant	 when installing from the cd it gives me three options, do I choose the manual option?
+2009-04-07T06:10:00.000Z	vikrant	Martyr2k6	yes
+2009-04-07T06:11:00.000Z	Martyr2k6	vikrant	ok, disc booted, chose install from cd rather than try ubuntu
+2009-04-07T06:12:00.000Z	Martyr2k6	vikrant	 good so far right?
+2009-04-07T06:12:00.000Z	Martyr2k6	vikrant	 sorry I am teh uber noob
+2009-04-07T06:14:00.000Z	Martyr2k6	vikrant	, ok I am met with three choices... "guided resize" guided use entire, or manual... choos manual right?
+2009-04-07T06:15:00.000Z	Martyr2k6	vikrant	ok now I have some options here, I see both drives, one I know to have vista installed n it
+2009-04-07T06:17:00.000Z	Martyr2k6	vikrant	both of my drives are showing up as ntfs
+2009-04-07T06:18:00.000Z	Martyr2k6	vikrant	it gives me two checkboxes for option to format one or the other
+2009-04-07T06:18:00.000Z	vikrant	Martyr2k6	on the drive u want to install ubuntu , go ahead and delete all partitions (i am assuming you have nthing imp on it)
+2009-04-07T06:18:00.000Z	Martyr2k6	vikrant	nope its all on the external drive
+2009-04-07T06:19:00.000Z	Martyr2k6	vikrant	ok I checked the soon to be linux drive and deleted the partition, am I good so far?
+2009-04-07T06:19:00.000Z	vikrant	Martyr2k6	yes
+2009-04-07T06:20:00.000Z	Martyr2k6	vikrant	so do I hit new partition or choose to go forward
+2009-04-07T06:20:00.000Z	vikrant	Martyr2k6	 new part
+2009-04-07T06:20:00.000Z	Martyr2k6	vikrant	thanks for holding my hand through this, it was killing me
+2009-04-07T06:21:00.000Z	Martyr2k6	vikrant	 ok new dialogue window popped up, anything in here I should change
+2009-04-07T06:22:00.000Z	Martyr2k6	vikrant	 type of partion is currently primary, new part size is 122942, location is beginning, use as is ext3 journaling file system and mount point is blank
+2009-04-07T06:24:00.000Z	Martyr2k6	vikrant	im a bit froggy right now on file to numbers, 150 mb is what in bytes
+2009-04-07T06:24:00.000Z	Martyr2k6	vikrant	 keep in mind I am wanting to use this whole drive for linux
+2009-04-07T06:25:00.000Z	vikrant	Martyr2k6	 1024x150 = 153600bytes
+2009-04-07T06:27:00.000Z	Martyr2k6	vikrant	so far this is what I have - type of new part is primary, new part size 15786400, location is beginning, use as ext3 journaling, mount point is /boot
+2009-04-07T06:27:00.000Z	Martyr2k6	vikrant	 good sofar, do I hit ok then hit forward?
+2009-04-07T06:28:00.000Z	vikrant	Martyr2k6	 how big is ur drive?
+2009-04-07T06:28:00.000Z	Martyr2k6	vikrant	120 gb
+2009-04-07T06:29:00.000Z	Martyr2k6	vikrant	well I am wanting to real limitations
+2009-04-07T06:30:00.000Z	Martyr2k6	vikrant	to = no, no real limitations
+2009-04-07T06:30:00.000Z	Martyr2k6	vikrant	and now you lost me
+2009-04-07T06:32:00.000Z	Martyr2k6	vikrant	 so am I good sofar with that number we mentioned
+2009-04-07T06:32:00.000Z	Martyr2k6	vikrant	 it says new part size in megabytes, so should I just type 150
+2009-04-07T06:33:00.000Z	Martyr2k6	vikrant	 ok set to 150, here we go forward
+2009-04-07T06:34:00.000Z	Martyr2k6	vikrant	 looks like it was good, it says 148 mb and its checked now, yeah it was primary
+2009-04-07T06:35:00.000Z	vikrant	Martyr2k6	 how much ram do u have
+2009-04-07T06:35:00.000Z	Martyr2k6	vikrant	I have 2 gigs
+2009-04-07T06:35:00.000Z	Martyr2k6	vikrant	quadcore system with geforce 8800 gt oc
+2009-04-07T06:36:00.000Z	Martyr2k6	vikrant	 how or where do I do that
+2009-04-07T06:37:00.000Z	Martyr2k6	vikrant	ok its default is set to logical, part size is 122786, location is beginning, use as ext3 journaling, and mount point empty
+2009-04-07T06:38:00.000Z	vikrant	Martyr2k6	holdon
+2009-04-07T06:39:00.000Z	Martyr2k6	vikrant	ok
+2009-04-07T06:43:00.000Z	vikrant	Martyr2k6	 i have to go :(
+2009-04-07T06:43:00.000Z	Martyr2k6	vikrant	crap
+2009-04-07T06:44:00.000Z	Martyr2k6	vikrant	thanks man

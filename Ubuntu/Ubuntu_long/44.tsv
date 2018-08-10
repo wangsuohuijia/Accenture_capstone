@@ -1,0 +1,46 @@
+2012-05-31T05:34:00.000Z	roasted		Question - anybody use Motion here? I'm having some trouble understanding it. There seems to be two locations to set the startup daemon... One is for automatic startup, the other is for background startup (so it releases the terminal from needing to be present to run). I can't seem to have both running at once, which... I want... I want it to auto start + I want it to have the capability to shut off and manually start background
+2012-05-31T05:34:00.000Z	roasted		ed. But it's not working. Any insight?
+2012-05-31T05:35:00.000Z	Dr_Willis	roasted	 use the service command to stop it when you waant to stop it?
+2012-05-31T05:36:00.000Z	roasted	Dr_Willis	speaking of which, is /etc/init.d services still supported? I don't think motion uses sudo service...
+2012-05-31T05:36:00.000Z	Dr_Willis	roasted	 if you look - the init.d scripts are most likely links to upstart scripts. :) i dont mess with services much.
+2012-05-31T05:37:00.000Z	roasted	Dr_Willis	ahh I forgot. The reason I don't use /etc/init.d/motion start is because the second it detects motion, the entire service shuts itself off....
+2012-05-31T05:45:00.000Z	roasted	Dr_Willis	nadda.
+2012-05-31T05:46:00.000Z	roasted	Dr_Willis	been through forums, their IRC, etc. Time to find other users and discuss. :P
+2012-05-31T05:46:00.000Z	roasted	Dr_Willis	that's what I thought, but it kind of surprised me.
+2012-05-31T05:46:00.000Z	roasted	Dr_Willis	it's kind of like zoneminder, except in a lot of ways its simpler and works better.
+2012-05-31T05:47:00.000Z	Dr_Willis	roasted	 its not real clear on what you are doing either.
+2012-05-31T05:47:00.000Z	roasted	Dr_Willis	well, I'm limited on space I can type in 1 shot too. I'd have to elaborate quite a bit for it to make sense.
+2012-05-31T05:47:00.000Z	Dr_Willis	roasted	 theres always pastebin. :OO)
+2012-05-31T05:47:00.000Z	roasted	Dr_Willis	basically in /etc/default/motion there's an entry to enable the auto start daemon. If I enable this, and in startup apps add "motion", it runs fine. BUT, once I enable the background daemon in /etc/motion/motion.conf, it WILL NOT auto start.
+2012-05-31T05:48:00.000Z	roasted	Dr_Willis	the background daemon allows me to kill it (killall motion) and then type motion again in terminal... it'll begin running and release the terminal so I can close the terminal window and it runs as a daemon in the background.
+2012-05-31T05:48:00.000Z	roasted	Dr_Willis	I want both... but it doesn't seem to work. If I enable the convenience of starting/stopping it via background mode, it refuses to auto start.
+2012-05-31T05:49:00.000Z	roasted	Dr_Willis	but, I want auto start so if I reboot the server it starts.. but then it almost forces me to reboot each time I make a motion change.
+2012-05-31T05:52:00.000Z	roasted	Dr_Willis	am I speaking spanglish or does that at least make sense?
+2012-06-01T08:17:00.000Z	Dr_Willis	roasted	 perhaps one f the vm's grabbed it andlocked it
+2012-06-01T08:18:00.000Z	roasted	Dr_Willis	I wasnt in a VM when it locked in the first place, but the release key isn't working either.
+2012-07-27T16:42:00.000Z	Dr_Willis	roasted	 i think thats on hold like ThinkT510  mentioned.. to allow more 'testing' of the upgrade path.
+2012-07-27T16:42:00.000Z	Dr_Willis	roasted	 its doable.. but i always do clean installs..
+2012-07-27T16:43:00.000Z	roasted	Dr_Willis	same here, but I'd rather TRY an upgrade and see what happens. It's an LTSP server. LTSP devs confirmed the upgrade works great.
+2012-07-27T16:43:00.000Z	Dr_Willis	roasted	 that means its sure to fail. ;P
+2012-07-27T16:43:00.000Z	roasted	Dr_Willis	doubt it. Smart group of guys over there.
+2012-07-27T16:43:00.000Z	roasted	Dr_Willis	would bet my car they're correct, easily.
+2012-07-27T16:45:00.000Z	Dr_Willis	roasted	 but it has Icons and a menu! just like OS-X ! :0
+2012-07-27T16:45:00.000Z	roasted	Dr_Willis	oh, silly me! I forgot EVERYTHING is OSX like. *facepalm*
+2012-07-27T16:46:00.000Z	Dr_Willis	roasted	 even my Geos-64 stole ideas from OS-X ;
+2012-07-27T18:27:00.000Z	roasted	Dr_Willis	I didn't reboot. I was actively in the OS logged in as my administrator user when this happened.
+2012-07-27T18:28:00.000Z	roasted	Dr_Willis	I have tow onder if GDM was part of the obsolete packages (or gnome 2 for that matter) and it nuked them when I said "go"
+2012-07-27T18:28:00.000Z	roasted	Dr_Willis	I can SSH in, but what I'm afraid of is rebooting it via SSH if the upgrade is still happening.
+2012-07-27T18:32:00.000Z	roasted	Dr_Willis	I wonder if I should just reboot it and hope for the best? I'm SSH'd in and tailing syslog and seeing nothing.
+2012-07-27T18:33:00.000Z	Dr_Willis	roasted	 dident you bet your car this would be no problem? ;)   I have no idea honestly. I tend to do clean installs.
+2012-07-27T18:33:00.000Z	roasted	Dr_Willis	yeah, but I have two cars, one being on its last leg. Guess I left out some info in that car bet. :P
+2012-07-27T18:37:00.000Z	Dr_Willis	roasted	 id check the htop/ps  output . and see whats running.   its possible the upgrade tool is showing some dialog/yes/no thing you are somehow not seeing.
+2012-07-27T18:38:00.000Z	roasted	Dr_Willis	only PS output is tail, ps, bash. That's it.
+2012-07-27T18:38:00.000Z	roasted	Dr_Willis	htop is not installed, installing quick.
+2012-07-27T18:39:00.000Z	roasted	Dr_Willis	htop reveals a lot of "/usr/bin/console-kit-daemon --no-daemon" entries.
+2012-07-27T18:42:00.000Z	Dr_Willis	roasted	 no mention of 'dialog' in ps output eh?  how brave do you feel? ;)
+2012-07-27T18:42:00.000Z	roasted	Dr_Willis	nope, now I just see htop, htop, tail, bash, ps.
+2012-07-27T18:43:00.000Z	roasted	Dr_Willis	it'd be nice if there was a gentle shutdown, meaning... if it's in a dialog box waiting for user interaction, or in the middle of something it can't interrupt, then it cancels the shutdown/reboot..............
+2012-07-27T18:43:00.000Z	roasted	Dr_Willis	bingo. the server is back to login screen, CLI styule.
+2012-07-27T18:44:00.000Z	roasted	Dr_Willis	just going to reboot, says reboot required...
+2012-07-27T18:47:00.000Z	roasted	Dr_Willis	boot screen looks like it'll enduce a seizure - constant flashing, no movement. Nice :D
+2012-07-27T18:51:00.000Z	roasted	Dr_Willis	took forever to start up, but I have a GUI :D

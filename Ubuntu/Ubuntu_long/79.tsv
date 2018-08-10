@@ -1,0 +1,68 @@
+2007-07-08T16:21:00.000Z	nickrud	PurpZeY	you need to tell your server to accept tcp connections
+2007-07-08T16:23:00.000Z	nickrud	PurpZeY	do you have X on the server, and do you have gdm installed there?
+2007-07-08T16:25:00.000Z	PurpZeY	nickrud	So, in short, both machines are running standard feisty.
+2007-07-08T16:25:00.000Z	nickrud	PurpZeY	ok, go to system-admin-login window: under the security tab there should be something about tcp connections; I'm doing this from memory because I'm running kdm at the moment
+2007-07-08T16:27:00.000Z	PurpZeY	nickrud	Ok, I did that now...Here's the second thing...When I was able to access the files via term, I couldnt' get to the files I wanted to access...Namely my two NTFS drives, that are mounted using NTFS read, how can I setup SSH so that I can access these?
+2007-07-08T16:28:00.000Z	nickrud	PurpZeY	I don't see where ssh would see properly mounted ntfs drives as different from any other drive; ssh doesn't look that low
+2007-07-08T16:29:00.000Z	PurpZeY	nickrud	Right, but it drops me in the home dir, how I do actually get to them?
+2007-07-08T16:29:00.000Z	nickrud	PurpZeY	ah, probably cd /media will show them, cd /path/to/ntfsdrives in general
+2007-07-08T16:30:00.000Z	PurpZeY	nickrud	Ok, as soon as I finish this cigarette I will go in the other room and see if I can get it going
+2007-07-08T16:30:00.000Z	nickrud	PurpZeY	smoke your heart out ;)
+2007-07-08T16:31:00.000Z	nickrud	PurpZeY	get real
+2007-07-08T16:32:00.000Z	nickrud	PurpZeY	I'm just passing the kick I got a while back :)
+2007-07-08T16:54:00.000Z	nickrud	PurpZeY	yes
+2007-07-08T16:38:00.000Z	nickrud	PurpZeY	ssh you@othermachine , and cd /media ?
+2007-07-08T16:39:00.000Z	nickrud	PurpZeY	and if you're using ssh -X you don't need to alter gdm; I understood you wanted to use an X login on the remote machine
+2007-07-08T16:44:00.000Z	PurpZeY	nickrud	Do I need to restart xserv after making those tcp security changes? before I can connect via ssh?
+2007-07-08T16:45:00.000Z	nickrud	PurpZeY	you must have missed my last: if you're using ssh -X you don't need to change the tcp settings in gdm; I understood you as wanting to log into X remotely. That's what I gave instructions for, sorry
+2007-07-08T16:45:00.000Z	PurpZeY	nickrud	ssh -x ?? I was trying to do it by File --> Connect to server
+2007-07-08T16:46:00.000Z	nickrud	PurpZeY	yeehaa, ssh -X is a way to run a graphical app remotely; you don't need to touch gdm when you're doing ssh. I'm confusing you more, I know :) forget gdm I misunderstood you earlier
+2007-07-08T16:47:00.000Z	nickrud	PurpZeY	gdm == Login Window
+2007-07-08T16:47:00.000Z	PurpZeY	nickrud	Ohhhhhhh...Got it. So, how do I make work now?
+2007-07-08T16:49:00.000Z	nickrud	PurpZeY	give the ip address of the machine you want to connect to, give it your username & password.
+2007-07-08T16:50:00.000Z	PurpZeY	nickrud	I give the IP, and I've tried with and without giving username and it just says "connecting to" and never connects
+2007-07-08T16:50:00.000Z	nickrud	PurpZeY	odd. I just did a quicky here to refresh myself, worked fine.
+2007-07-08T16:51:00.000Z	PurpZeY	nickrud	In the window for connect to server I have options for dir, user, port...Not matter how I set it, I can never connect via gui.
+2007-07-08T16:52:00.000Z	nickrud	PurpZeY	set nothing but ip, then see if you get a user & password request dialog window
+2007-07-08T16:52:00.000Z	PurpZeY	nickrud	Ok, will try right now.
+2007-07-08T16:55:00.000Z	nickrud	PurpZeY	you should get a folder open on your desk
+2007-07-08T16:55:00.000Z	nickrud	PurpZeY	then there you are
+2007-07-08T16:57:00.000Z	nickrud	PurpZeY	but you can connect with ssh in a terminal, right? (if you say yes, and you're sure you're using the same ip, I don't know what's happening)
+2007-07-08T16:58:00.000Z	nickrud	PurpZeY	no offence meant, just covering bases ;)
+2007-10-08T14:19:00.000Z	nickrud	PurpZeY	change the file name of the first one in ~/.local/share/applications
+2007-10-27T11:24:00.000Z	nickrud	PurpZeY	not really, if you have a system you're happy with
+2007-10-27T11:25:00.000Z	nickrud	PurpZeY	if you have issues with NetworkManager, upgrade. That's the only real difference for me
+2008-01-02T08:46:00.000Z	PurpZeY	nickrud	If it ain't broke...:)
+2008-01-02T10:02:00.000Z	nickrud	PurpZeY	more like an arrogant certainty that I can teach anyone ;P
+2008-01-02T10:12:00.000Z	nickrud	PurpZeY	learn the freaking name :)
+2008-01-02T10:12:00.000Z	PurpZeY	nickrud	How shall I refer to it?
+2008-01-02T10:13:00.000Z	nickrud	PurpZeY	compizconfig-settings-manager
+2008-01-02T11:31:00.000Z	PurpZeY	nickrud	You don't believe in compiling from source?
+2008-01-02T11:32:00.000Z	nickrud	PurpZeY	see scguy318 . I've done plenty of it, but prefer well built debs. The reason I'm here, actually
+2008-01-02T11:33:00.000Z	nickrud	PurpZeY	you have a point there. But if they want to learn that part, they should toy with linux from scratch. They'll learn much more much faster than blindly ./configure make make install on random software
+2008-01-02T11:34:00.000Z	PurpZeY	nickrud	I can buy that....I just learned by getting source and following readmes, and when I hit a dependcy issue I download it...and if I got caught I googled...or forumed...etc...etc...You get the idea, but i see your point
+2008-01-02T11:45:00.000Z	PurpZeY	nickrud	I love that there are so many options...It's great.
+2008-01-02T11:46:00.000Z	PurpZeY	nickrud	Oh....I played with that, that's nice.
+2008-01-03T10:44:00.000Z	PurpZeY	nickrud	knows a lot more than me
+2008-01-03T10:45:00.000Z	nickrud	PurpZeY	heh. you also know more than I :)
+2008-01-03T10:45:00.000Z	PurpZeY	nickrud	Maybe about law...
+2008-01-03T10:45:00.000Z	nickrud	PurpZeY	other stuff here as well. We all have our strengths
+2008-01-03T10:45:00.000Z	PurpZeY	nickrud	Fair enough...;)
+2008-01-04T11:01:00.000Z	nickrud	PurpZeY	you stole my line ;(
+2008-01-06T03:08:00.000Z	PurpZeY	nickrud	How do check if someone is running xgl x-server ?
+2008-01-06T03:09:00.000Z	nickrud	PurpZeY	  ps -A | grep - xgl
+2008-01-06T03:09:00.000Z	nickrud	PurpZeY	erm, grep -i xgl that is
+2008-01-06T03:12:00.000Z	PurpZeY	nickrud	So, restricted drivers is telling him the card is working as Nvidia restricted, but he is low graphics mode and no xgl....What's the next step?
+2008-01-06T03:13:00.000Z	nickrud	PurpZeY	oh, nvidia.  I do know he doesn't need xserver-xgl for nvidia to run compiz. And if he has one of the 8xxx series, the ubuntu nvidia isn't new enough
+2008-01-06T03:13:00.000Z	nickrud	PurpZeY	but that's about all I know about nvidia
+2008-01-06T03:14:00.000Z	PurpZeY	nickrud	If the Ubuntu drivers aren't new enough, the nvidia drivers are appropriate
+2008-01-06T03:14:00.000Z	nickrud	PurpZeY	unless he wants to run vesa without any acceleration at all ..
+2008-01-06T07:10:00.000Z	nickrud	PurpZeY	wanna trade?
+2008-01-06T07:10:00.000Z	PurpZeY	nickrud	Too many places to go. . .hehehe
+2008-01-09T09:29:00.000Z	PurpZeY	nickrud	Any interest in taking a crack at this NFS issue I'm having?
+2008-01-09T09:30:00.000Z	nickrud	PurpZeY	never used nfs for even a second
+2008-01-09T09:30:00.000Z	PurpZeY	nickrud	touche`
+2008-01-10T08:31:00.000Z	PurpZeY	nickrud	Is there any juice to the fact that "laptop mode" destroys hard-drives?
+2008-01-10T08:32:00.000Z	nickrud	PurpZeY	no clue, I don't use it. But, I will be very cautious about it myself. Someone saying something will crap out my harddrive I'll beleive until I confirm for myself
+2008-01-10T10:24:00.000Z	nickrud	PurpZeY	you learn quick
+2008-01-10T10:24:00.000Z	PurpZeY	nickrud	I see it coming...:)

@@ -1,0 +1,42 @@
+2010-04-11T14:23:00.000Z	today		help me plzz,Do you know using APTonCD how?
+2010-04-11T14:24:00.000Z	coz_	today	 well it should be fairly self explanatory...hold on let me install it
+2010-04-11T14:24:00.000Z	coz_	today	I have used it in the past  hold on
+2010-04-11T14:25:00.000Z	coz_	today	 ok you already installed it?
+2010-04-11T14:25:00.000Z	coz_	today	 ok did you open it?
+2010-04-11T14:26:00.000Z	coz_	today	 ok you already have the dvd burned?
+2010-04-11T14:26:00.000Z	coz_	today	  open synaptic package manager with that dvd inserted
+2010-04-11T14:26:00.000Z	today	coz_	when i try again to mount that DVD, has error
+2010-04-11T14:27:00.000Z	coz_	today	 ok  then you may have to reburn the dvd
+2010-04-11T14:27:00.000Z	coz_	today	  but dont mount it
+2010-04-11T14:27:00.000Z	today	coz_	 not yet error burn CD
+2010-04-11T14:27:00.000Z	coz_	today	  open synaptic package manager with the dvd
+2010-04-11T14:27:00.000Z	coz_	today	 oh you are getting an error while burning it?
+2010-04-11T14:28:00.000Z	coz_	today	 are you running Gnome?
+2010-04-11T14:29:00.000Z	coz_	today	 ok is the dvd in the dvd player?
+2010-04-11T14:29:00.000Z	coz_	today	  open system/administration/synaptic package manager
+2010-04-11T14:29:00.000Z	coz_	today	 open synaptic first please
+2010-04-11T14:30:00.000Z	coz_	today	 ok in synaptic   click "Settings"   then  "repositories"
+2010-04-11T14:30:00.000Z	coz_	today	 a dialog opens and at the bottom....the dvd should be listed
+2010-04-11T14:31:00.000Z	coz_	today	 ok  then tick the box  next to that cd
+2010-04-11T14:31:00.000Z	coz_	today	 oh wait
+2010-04-11T14:31:00.000Z	coz_	today	 you only have one cd listed there?
+2010-04-11T14:31:00.000Z	coz_	today	 click the  "Other Software"  tab
+2010-04-11T14:32:00.000Z	coz_	today	 then click the  "Sdd CD-ROM" button
+2010-04-11T14:32:00.000Z	coz_	today	   right click the "Add  CD-ROM" button
+2010-04-11T14:33:00.000Z	coz_	today	 and your disc is already in the drive???
+2010-04-11T14:34:00.000Z	coz_	today	 well then several things could be wrong....the disc did not burn correctly....or your burner is faulty...
+2010-04-11T14:36:00.000Z	coz_	today	 not sure then
+2010-04-11T14:36:00.000Z	today	coz_	E: Faild to moint the cdrom coz_
+2010-04-11T14:40:00.000Z	today	coz_	are you here?
+2010-04-11T14:40:00.000Z	coz_	today	yeah but I am not sure what the problem is
+2010-04-11T14:41:00.000Z	today	coz_	i restart pc, and insert APTonCD again, it ok
+2010-04-11T14:41:00.000Z	coz_	today	 ok cool
+2010-04-11T14:42:00.000Z	coz_	today	 well all that I told you is all you need to do :)
+2010-04-11T14:44:00.000Z	today	coz_	now Could you set a APTonCD mount to cdrom , or cdroomXX?
+2010-04-11T14:44:00.000Z	coz_	today	 not sure guy..... if it is not automounting  I dont know what the problem is
+2010-04-12T21:13:00.000Z	today	coz_	can you help me to config samba.conf ( now i installed Samba, nautilus-share, config-samba-system but only share not see other PC at LAN)
+2010-04-12T21:14:00.000Z	coz_	today	 actually I am the wrong person for that  sorry...my skills are even close to good with samba
+2010-04-12T21:15:00.000Z	coz_	today	 i meant "not even close to skilled enough for samba"
+2010-04-12T21:16:00.000Z	today	coz_	 i see, i cant fix this, has many doccument in worldwideweb,
+2010-04-12T21:16:00.000Z	coz_	today	 sometimes when you cant find someone here  try the ##linux channel
+2010-04-12T21:17:00.000Z	coz_	today	 let me know if that channel pans out for you

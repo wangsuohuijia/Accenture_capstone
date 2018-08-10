@@ -1,0 +1,72 @@
+2006-06-04T14:22:00.000Z	speyer		nope
+2006-06-04T14:23:00.000Z	troy_s	speyer	 i promise :)
+2006-06-04T14:14:00.000Z	troy_s	speyer	 should work out of box.
+2006-06-04T14:15:00.000Z	troy_s	speyer	 try using naut and if it fails, it could be a minor bug issue.
+2006-06-04T14:15:00.000Z	speyer	troy_s	but it doenst ... it wants a dvd+r or dvdrw
+2006-06-04T14:15:00.000Z	troy_s	speyer	 same drive?  same computer?
+2006-06-04T14:15:00.000Z	troy_s	speyer	 does your drive support -r?
+2006-06-04T14:15:00.000Z	speyer	troy_s	thats what i just did
+2006-06-04T14:15:00.000Z	speyer	troy_s	yes it does same pc same dvd device
+2006-06-04T14:15:00.000Z	troy_s	speyer	and when you use the cd / dvd creator what comes up?
+2006-06-04T14:16:00.000Z	speyer	troy_s	on the dvd drive says double layer so it does support both
+2006-06-04T14:16:00.000Z	troy_s	speyer	 it should literally be a copy and click scenario -- although you get in strange dialog loops if you have a couple of the naut windows open simul.
+2006-06-04T14:16:00.000Z	troy_s	speyer	 double layer doesn't necessarily mean -r and +r
+2006-06-04T14:16:00.000Z	troy_s	speyer	 only dvd9 support :)
+2006-06-04T14:17:00.000Z	troy_s	speyer	 but if you had it working before with -r, then it will work in linux using -r.
+2006-06-04T14:17:00.000Z	speyer	troy_s	it shows on the driver -+ bla bla i did burn a lot of dvd -r in windows with nero same machine same drive
+2006-06-04T14:17:00.000Z	speyer	troy_s	hold on i try again
+2006-06-04T14:17:00.000Z	troy_s	speyer	 yah... i sometimes got into a weird dialog loop cuz i had two dialog cd creator windows open.
+2006-06-04T14:17:00.000Z	speyer	troy_s	i insert the blank dvd and it says if i want to make dvd so i just click on it
+2006-06-04T14:17:00.000Z	troy_s	speyer	 pretty certain it will work.
+2006-06-04T14:18:00.000Z	troy_s	speyer	 yep.
+2006-06-04T14:18:00.000Z	speyer	troy_s	drag the files into the window
+2006-06-04T14:18:00.000Z	troy_s	speyer	 then a window should open and just drag some sample data onto it.
+2006-06-04T14:18:00.000Z	speyer	troy_s	just did
+2006-06-04T14:18:00.000Z	troy_s	speyer	 yah... keep it below the 4.7 gig min
+2006-06-04T14:18:00.000Z	speyer	troy_s	yes its 4.1 Gb so 4 gb and 100 mb am i right ?
+2006-06-04T14:18:00.000Z	troy_s	speyer	 the error status isn't totally clear -- if you exceed the 4.7 gig single layer limit it will give you a rather generic error.
+2006-06-04T14:19:00.000Z	troy_s	speyer	 if you try to bang on the exact numbers, you can get into issues... try something like 3 gigs.
+2006-06-04T14:19:00.000Z	troy_s	speyer	 then you know for certain that the size is the issue if it burns -- with me?
+2006-06-04T14:19:00.000Z	speyer	troy_s	i dont but i alwasy burn on one data dvd 6 movies :))
+2006-06-04T14:20:00.000Z	speyer	troy_s	yeah ok i will try it then
+2006-06-04T14:20:00.000Z	troy_s	speyer	 you iwll need to remultiplex the stream then.
+2006-06-04T14:20:00.000Z	troy_s	speyer	 it will not duplicate dvd9 to 5 on the fly.  you will need to do that yourself.
+2006-06-04T14:20:00.000Z	troy_s	speyer	 the wiki has a few howtos on that.
+2006-06-04T14:21:00.000Z	troy_s	speyer	 mplayer can do it pretty easily  with transcode.  just dump the primary stream and remult the vid.
+2006-06-04T14:21:00.000Z	speyer	troy_s	i dont get you now ?
+2006-06-04T14:21:00.000Z	troy_s	speyer	 just try putting 3 gigs on that -r and see if it works.
+2006-06-04T14:21:00.000Z	speyer	troy_s	why would i need mplayer for this ?
+2006-06-04T14:21:00.000Z	speyer	troy_s	ok i have now 3.4 gb
+2006-06-04T14:21:00.000Z	troy_s	speyer	 burn it now
+2006-06-04T14:22:00.000Z	troy_s	speyer	 if it works, your error previous was becasue you were trying to stick too much data on a 4.7 dvd5.
+2006-06-04T14:22:00.000Z	speyer	troy_s	it says "File image creation failed "
+2006-06-04T14:22:00.000Z	troy_s	speyer	is your hard disk full?
+2006-06-04T14:22:00.000Z	troy_s	speyer	 you aren't using a live cd i hope.
+2006-06-04T14:22:00.000Z	speyer	troy_s	no im not :)
+2006-06-04T14:22:00.000Z	speyer	troy_s	i have a lot of disk space free
+2006-06-04T14:23:00.000Z	troy_s	speyer	 ok you have an issue with what looks like some disk space perhaps or something akin.  track down the error from that 'failure'
+2006-06-04T14:23:00.000Z	troy_s	speyer	 if you sort that out, it will work with a click
+2006-06-04T14:23:00.000Z	speyer	troy_s	Unknown error File image creation failed  its all i can see
+2006-06-04T14:23:00.000Z	troy_s	speyer	 ok, so try burning using the cli
+2006-06-04T14:23:00.000Z	troy_s	speyer	and use verbose mode.
+2006-06-04T14:23:00.000Z	speyer	troy_s	so you cannot help me anymore ?
+2006-06-04T14:24:00.000Z	speyer	troy_s	 cli ?
+2006-06-04T14:24:00.000Z	troy_s	speyer	 command line interface
+2006-06-04T14:24:00.000Z	speyer	troy_s	no clue about command line :(
+2006-06-04T14:24:00.000Z	speyer	troy_s	it should work . it did in breezy :(
+2006-06-04T14:25:00.000Z	troy_s	speyer	 yep,  so you can help others by tracking down the little problem that naut is having with image creation.
+2006-06-04T14:25:00.000Z	speyer	troy_s	how would i help them ? staying here untill someone shout at me ? ;))
+2006-06-04T14:26:00.000Z	troy_s	speyer	 no, you simply resolve your issue and locate how you did it at the wiki or something akin to that :)
+2006-06-04T14:26:00.000Z	speyer	troy_s	i will try with k3b now hoppe works ... it failed today ,,, so i just fresh installed dapper
+2006-06-04T14:26:00.000Z	troy_s	speyer	 it's a community effort.  your help is appreciated by others who follow behind you.
+2006-06-04T14:26:00.000Z	speyer	troy_s	well i wouldnt ask for help if i knew how to solve this problem
+2006-06-04T14:27:00.000Z	speyer	troy_s	aint got no clue how to do this on my own :D
+2006-06-04T14:27:00.000Z	troy_s	speyer	 you will need to track down why it can't create that image -- someone else here will probably be able to help you step through it.  maybe skippy.
+2006-06-04T14:27:00.000Z	troy_s	speyer	 bear with this channel, and you will learn.
+2006-06-04T14:27:00.000Z	troy_s	speyer	 skippy is one of the many knowledgable folks here.  i am needing a break from this keyboard.
+2006-06-04T14:27:00.000Z	speyer	troy_s	so bassicly i need to find out why it can't create that image
+2006-06-04T14:28:00.000Z	troy_s	speyer	 yes.  start with that.
+2006-06-04T14:28:00.000Z	speyer	troy_s	aight cheers
+2006-06-04T14:28:00.000Z	troy_s	speyer	 if you do, and you come to the conclusion that it is a bug, you will need to check malone for other posts.
+2006-06-04T14:28:00.000Z	troy_s	speyer	 it might very well have already been solved.
+2006-06-04T14:50:00.000Z	speyer	troy_s	still here ? even k3b gives me an error " Could Not Determine Size of Resulting Image File"

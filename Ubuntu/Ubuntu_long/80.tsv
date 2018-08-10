@@ -1,0 +1,53 @@
+2009-11-19T23:21:00.000Z	innomen		i started in 95-96, my first use was xdcc downloading heheh
+2009-11-19T23:21:00.000Z	innomen		anywho
+2009-11-19T23:21:00.000Z	innomen		Hey guys, i'm using launchy, and instead of launching some applications it opens a text file which says... "#!/bin/sh exec python /usr/lib/exaile/exaile.py  --datadir=/usr/share/exaile/data --startgui "$@"" Is this a launchy problem or my machine problem?
+2009-11-19T23:21:00.000Z	innomen		(was that too soon to repeat my question?)
+2009-11-19T23:21:00.000Z	janisozaur	innomen	is it always the same file?
+2009-11-19T23:22:00.000Z	innomen	janisozaur	it happens when i try to launch exhaile, let me see if i can make it do it with a diffrent app
+2009-11-19T23:23:00.000Z	innomen	janisozaur	trying to lauch gftp produces a diffrent set of text, i think what happened is i change the default behavior for text files and its displaying what it should eb executing
+2009-11-19T23:23:00.000Z	innomen	janisozaur	how would i change the behavior of text files form doubleclick display to double click execute?
+2009-11-19T23:24:00.000Z	janisozaur	innomen	i don't know about default, if it was the same file though, you could chmod it to executable, not readable
+2009-11-19T23:25:00.000Z	innomen	janisozaur	no, when i paste the contents of the text files into terminal, the apps launch
+2009-11-19T23:25:00.000Z	innomen	janisozaur	so its totally a text file handleing issue
+2009-11-19T23:25:00.000Z	innomen	janisozaur	i'll tinker, thanks
+2009-11-19T23:29:00.000Z	janisozaur	innomen	the dialog is shown only for files that are both readable and execatuble simultanously
+2009-11-19T23:30:00.000Z	janisozaur	innomen	oh, trism already said that
+2009-11-19T23:30:00.000Z	janisozaur	innomen	umask
+2009-11-19T23:30:00.000Z	innomen	janisozaur	oky
+2009-11-19T23:31:00.000Z	innomen	janisozaur	"cant find umask"
+2009-11-19T23:31:00.000Z	janisozaur	innomen	err.. i believe it's environment variable or a config file
+2009-11-19T23:31:00.000Z	innomen	janisozaur	when yuo're sure can you get back to me?
+2009-11-19T23:31:00.000Z	janisozaur	innomen	try "apropos umask"
+2009-11-19T23:33:00.000Z	janisozaur	innomen	there is no way to run non-executable files by default... you could make them open with bash though, or your other preferred shell
+2009-11-19T23:34:00.000Z	innomen	janisozaur	it would be a huge PITA to have a terminal window sitting open for every running process launched by launchy :P
+2009-11-19T23:34:00.000Z	janisozaur	innomen	you'd use bash, not a terminal. there's a difference
+2009-11-19T23:35:00.000Z	innomen	janisozaur	so it would simply run and not have a terminal window? like when you launch soemthing with alt f2? if so, how do i associate a file with that?
+2009-11-19T23:35:00.000Z	janisozaur	innomen	try alt-f2, "bash"
+2009-11-19T23:36:00.000Z	janisozaur	innomen	for the second part of your question... i think when you right click any file there is a tab somewhere in the properties. i'm not sure though
+2009-11-19T23:36:00.000Z	innomen	janisozaur	you fixed it
+2009-11-19T23:36:00.000Z	janisozaur	innomen	oh, nice :)
+2009-11-19T23:40:00.000Z	janisozaur	innomen	you can use kill
+2009-11-19T23:40:00.000Z	janisozaur	innomen	be sure to read man section about signals
+2009-11-19T23:40:00.000Z	innomen	janisozaur	i want to launch the gui
+2009-11-19T23:40:00.000Z	innomen	janisozaur	not type which app, kill assumes i know the name of the app in question
+2009-11-19T23:41:00.000Z	janisozaur	innomen	wrong. it wants pid. for app name you'd use killall
+2009-11-19T23:41:00.000Z	innomen	janisozaur	so there is no way to mimic the clicking of this panel button via terminal? there are only alternative ways to kill?
+2009-11-19T23:42:00.000Z	janisozaur	innomen	i don't get what are you trying to achieve
+2009-11-19T23:42:00.000Z	innomen	janisozaur	right click on your panel, hit add, go find froce quit application
+2009-11-19T23:42:00.000Z	innomen	janisozaur	click that button
+2009-11-19T23:43:00.000Z	janisozaur	innomen	and what about it?
+2009-11-19T23:44:00.000Z	innomen	janisozaur	wghat doy uo mean what about it, how do i launch it with the terminal insetad of clicking that button?
+2009-11-19T23:44:00.000Z	innomen	janisozaur	kostkon says its impossible, he's probably right
+2009-11-19T23:44:00.000Z	janisozaur	innomen	oh, i see. so you want the crosshair to pick the app you want to kill?
+2009-11-19T23:44:00.000Z	innomen	janisozaur	yesir
+2009-11-19T23:45:00.000Z	janisozaur	innomen	no idea. i'd use kill/killall/htop
+2009-11-19T23:45:00.000Z	janisozaur	innomen	or just click "x" on the window frame...
+2009-11-19T23:46:00.000Z	innomen	janisozaur	>.>, clikc x..... yea, never thought of that... >.> :P :)
+2009-11-19T23:47:00.000Z	janisozaur	innomen	that's what i'd use :P if the app wasn't responding eventually it become greyed-out and would be killed...
+2009-11-19T23:47:00.000Z	innomen	janisozaur	sometimes that does not work :)
+2009-11-19T23:47:00.000Z	innomen	janisozaur	plus sometimes i know its dead and dont want to wait for it to time out
+2009-11-19T23:48:00.000Z	janisozaur	innomen	in such cases i just use kill and the usual stuff, i alwas have at least one terminal window opened ;)
+2009-11-19T23:48:00.000Z	innomen	janisozaur	well yur justa  big nerd :P :)
+2009-11-19T23:48:00.000Z	janisozaur	innomen	what app do you want to kill often anyway?
+2009-11-19T23:48:00.000Z	innomen	janisozaur	wine stuff ususally
+2009-11-19T23:49:00.000Z	janisozaur	innomen	haha

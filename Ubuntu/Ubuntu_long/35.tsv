@@ -1,0 +1,48 @@
+2011-08-23T15:44:00.000Z	Daghdha		I made a script that i start from an icon on the desktop but the terminal that is opened doesn't show any output. The program is running though.
+2011-08-23T15:44:00.000Z	Daghdha		Is there a switch i can add to the commandline or something?
+2011-08-23T15:45:00.000Z	ActionParsnip	Daghdha	does xterm run ok?
+2011-09-22T13:54:00.000Z	ActionParsnip	Daghdha	read /var/log/dpkg.log
+2011-09-22T14:11:00.000Z	ActionParsnip	Daghdha	is it doing something right now?
+2011-09-22T14:13:00.000Z	Daghdha	ActionParsnip	I don't know what you mean. It has 4 bashes ran, wich have launched processes that run under python or mono.
+2011-09-22T14:15:00.000Z	ActionParsnip	Daghdha	if you close the terminal, the child processes will die
+2011-09-22T14:16:00.000Z	Daghdha	ActionParsnip	This is bad because all opened terminals will die
+2011-09-22T14:16:00.000Z	Daghdha	ActionParsnip	If i do a shutdown, will it do it gracefully you think?
+2011-09-22T14:19:00.000Z	ActionParsnip	Daghdha	should do, yes
+2011-09-22T14:19:00.000Z	ActionParsnip	Daghdha	I'd do it manually, just to be sure
+2011-09-22T14:19:00.000Z	ActionParsnip	Daghdha	could try it from xterm, see if it is a bug
+2011-09-22T14:20:00.000Z	ActionParsnip	Daghdha	close down the apps etc
+2011-09-22T14:21:00.000Z	Daghdha	ActionParsnip	i see 'end process' in the system monitor, is that what you mean?
+2011-09-22T14:46:00.000Z	ActionParsnip	Daghdha	kill the process is all I can suggest
+2011-09-22T14:48:00.000Z	Daghdha	ActionParsnip	It already all died when the term i closed brought up a kill dialog that was for the gnome-terminal and not for itself. And presto.. all terminals gone in one foul swoop. All processes dead. Problem solved, patient dead.
+2011-09-22T14:48:00.000Z	ActionParsnip	Daghdha	as good as can be expected
+2011-09-22T14:49:00.000Z	Daghdha	ActionParsnip	True. Doesn't mean i'm happy about it though :)
+2011-09-22T14:53:00.000Z	Daghdha	ActionParsnip	One final question. If i had been running all processes under screen, would after this kill the screen and processes udner screen survived or would they too have been taken down by killing of Gnome-terminal?
+2012-06-18T02:35:00.000Z	ActionParsnip	Daghdha	i'd ask in #vbox too
+2012-08-25T13:05:00.000Z	ActionParsnip	Daghdha	if you set it in compiz shortcuts to run something pointless, it should do it, not sure about terminal etc
+2012-09-01T01:31:00.000Z	ActionParsnip	Daghdha	is the samba package installed?
+2012-09-01T01:32:00.000Z	ActionParsnip	Daghdha	apt-cache policy samba    will show you
+2012-09-01T01:33:00.000Z	Daghdha	ActionParsnip	yes it is installed
+2012-09-01T01:34:00.000Z	ActionParsnip	Daghdha	and you cannot unshare the folder now, is that right?
+2012-09-01T01:34:00.000Z	Daghdha	ActionParsnip	Yes. If i go to sharing options i can choose to share it again. It is already shared, i want to unshare it.
+2012-09-01T01:35:00.000Z	ActionParsnip	Daghdha	tried sharing it again then unsharing it?
+2012-09-01T01:35:00.000Z	Daghdha	ActionParsnip	NO, i will try that
+2012-09-01T01:37:00.000Z	ActionParsnip	Daghdha	all ok now?
+2012-09-01T01:38:00.000Z	ActionParsnip	Daghdha	yay, nice guess
+2012-09-01T01:39:00.000Z	ActionParsnip	Daghdha	I use smb.conf for samba. Its super easy
+2012-09-01T01:40:00.000Z	ActionParsnip	Daghdha	I manage my fileserver via ssh, so config files are the way, its not a complex file :)
+2012-09-01T01:41:00.000Z	Daghdha	ActionParsnip	should just work tbh
+2012-09-01T01:41:00.000Z	ActionParsnip	Daghdha	depends
+2012-09-04T02:10:00.000Z	ActionParsnip	Daghdha	there should be an icon the the bottom left
+2012-09-04T02:10:00.000Z	ActionParsnip	Daghdha	its not going to, if the video hardware isn't up to 3D, it will use the CPU
+2012-09-04T02:10:00.000Z	Daghdha	ActionParsnip	Yes the icon is there, But i want more than 4
+2012-09-04T02:11:00.000Z	ActionParsnip	Daghdha	you can set it in ccsm, i believe 2d obeys that setting
+2012-09-04T02:11:00.000Z	Daghdha	ActionParsnip	Pretend i am a moron. ccsp?
+2012-09-04T02:12:00.000Z	ActionParsnip	Daghdha	ccsm    compiz settings manager
+2012-09-04T02:12:00.000Z	ActionParsnip	Daghdha	what do you do once you connect via vnc anyway?
+2012-09-04T02:13:00.000Z	ActionParsnip	Daghdha	graphical apps like what?
+2012-09-04T02:14:00.000Z	ActionParsnip	Daghdha	try a lighter desktop, like LXDE or XFCE
+2012-09-04T02:15:00.000Z	Daghdha	ActionParsnip	i prefer vanilla in case of updates and migrations
+2012-09-04T02:15:00.000Z	ActionParsnip	Daghdha	you can use a web browser via SSH X forwarding
+2012-09-04T02:16:00.000Z	ActionParsnip	Daghdha	blocked by whom?
+2012-09-04T02:18:00.000Z	ActionParsnip	Daghdha	who is blocking ssh?
+2012-09-04T02:21:00.000Z	ActionParsnip	Daghdha	are you connecting to vnc over www?

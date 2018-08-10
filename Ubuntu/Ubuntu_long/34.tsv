@@ -1,0 +1,91 @@
+2006-06-29T09:49:00.000Z	Paladine		it is for any disk you want to format
+2006-06-29T09:50:00.000Z	Paladine		!dvb
+2006-06-29T09:50:00.000Z	Paladine		!info dvb
+2006-06-29T09:52:00.000Z	Paladine		ok nowI have a question :)
+2006-06-29T09:52:00.000Z	Paladine		but it is a tricky one
+2006-06-29T09:54:00.000Z	Paladine		my gtk is hosed
+2006-06-29T09:54:00.000Z	Paladine		I have to use VMWARE_USE_SHIPPED_GTK=force vmware to make vmware work
+2006-06-29T09:54:00.000Z	Paladine		andI have issues in openoffice and several other apps too with gtk
+2006-06-29T09:54:00.000Z	Paladine		how the hell do i fix it?
+2006-06-29T09:55:00.000Z	mcphail	Paladine	the vmware bug seems to have been fixed. have you apt-get update'd?
+2006-06-29T09:56:00.000Z	Paladine	mcphail	Ionly installed vmware yesterday, has this bug been fixed in the last 12 hours?
+2006-06-29T09:56:00.000Z	mcphail	Paladine	not with vmware - with libglitz (i think is was). When did you last update dapper?
+2006-06-29T09:56:00.000Z	Paladine	mcphail	I don't think my problem is related to the bug, I think my gtk is hosed
+2006-06-29T09:57:00.000Z	Paladine	mcphail	I have it set to autoupdate
+2006-06-29T09:57:00.000Z	mcphail	Paladine	actually, i think my libglitz comes from a different repo... might explain why it works now?
+2006-06-29T09:57:00.000Z	Paladine	mcphail	I get a bunch of there is no colour "Black" in other aps too and my save as dialog window in openoffice has a hosed font (all squares)
+2006-06-29T09:59:00.000Z	mcphail	Paladine	are you running Xgl/compiz or standard setup?
+2006-06-29T09:59:00.000Z	Paladine	mcphail	standard setup with glx
+2006-06-29T10:00:00.000Z	Paladine	mcphail	let me paste you a quick example from the terminal I forced vmware to start from
+2006-06-29T10:00:00.000Z	Paladine	mcphail	(vmware:24699): GdkPixbuf-CRITICAL **: file ../../gtk+-2.4.14/gdk-pixbuf/gdk-pixbuf.c: line 662 (gdk_pixbuf_set_option): assertion `key != NULL' failed
+2006-06-29T10:02:00.000Z	mcphail	Paladine	your error message was scarier than mine! i think it is going to be a problem with vmware for a while.
+2006-06-29T10:03:00.000Z	Paladine	mcphail	yeah but it is not just vmware I am getting gtk errors in, check out my openoffice save as dialog > http://www.paladine.org.uk/funky-saveas-dialog.jpg
+2006-06-29T10:04:00.000Z	mcphail	Paladine	one moment - slow connection
+2006-06-29T10:04:00.000Z	Paladine	mcphail	np mate
+2006-06-29T10:06:00.000Z	mcphail	Paladine	i'm getting a gateway timeout
+2006-06-29T10:07:00.000Z	Paladine	mcphail	oh weird sec
+2006-06-29T10:08:00.000Z	Paladine	mcphail	my apache seems to not be working hehehe sec
+2006-06-29T10:10:00.000Z	Paladine	mcphail	it is probably because vmware is using IP aliasing on the NIC, I will have to look into that, but basically instead of a real font in the saveas dialog (so I can actually use it) I have nothing but squares
+2006-06-29T10:11:00.000Z	Paladine	mcphail	unfortunately, there is no HOWTO for fixing a broken gtk
+2006-06-29T10:12:00.000Z	mcphail	Paladine	what error messages do you get if you start openoffice from the command line and select the SaveAs dialogue?
+2006-06-29T10:13:00.000Z	Paladine	mcphail	I get these errors just from launching openoffice - (soffice.bin:31133): Gdk-WARNING **: Error converting from UTF-8 to STRING: Conversion from character set 'UTF-8' to 'ISO-8859-1' is not supported
+2006-06-29T10:13:00.000Z	Paladine	mcphail	andI get a whole bunch of these when I go to save as - (soffice.bin:31133): Pango-CRITICAL **: _pango_cairo_font_map_get_renderer: assertion `PANGO_IS_CAIRO_FONT_MAP (fontmap)' failed
+2006-06-29T10:14:00.000Z	mcphail	Paladine	hmm - is it a locales problem?
+2006-06-29T10:14:00.000Z	Paladine	mcphail	I think it might be a locales problem, but so ar I have been unable to fix it or get help fixing it
+2006-06-29T10:15:00.000Z	mcphail	Paladine	this sort of thing usually stumps me, but does a simple "sudo dpkg-reconfigure locales" work?
+2006-06-29T10:16:00.000Z	Paladine	mcphail	nope I just tried all that the reconfigure went through fine, but it made no difference
+2006-06-29T10:17:00.000Z	mcphail	Paladine	I'm sure there is a (relatively) easy solution to this, but would suggest asking the channel again as it is beyond me!
+2006-06-29T10:17:00.000Z	Paladine	mcphail	I been trying to get help with this for about a week, not even any response in the forums
+2006-06-29T10:18:00.000Z	Paladine	mcphail	http://ubuntuforums.org/showthread.php?t=204415 <- my forum thread on the issue
+2006-06-29T10:18:00.000Z	mcphail	Paladine	well, i think we're a bit further forward wrt locales. But I haven't ever had to fiddle with such things in the past. Give me a mo to do some reading...
+2006-06-29T10:19:00.000Z	Paladine	mcphail	thanks man
+2006-06-29T10:21:00.000Z	Paladine	mcphail	I believe both issues I haveraised in the forum post are related
+2006-06-29T10:22:00.000Z	mcphail	Paladine	what is the output from typing "locale"? are they all utf-8?
+2006-06-29T10:23:00.000Z	Paladine	mcphail	I also posted the output from locale -a
+2006-06-29T10:24:00.000Z	Paladine	mcphail	here is the forum post in case you missed it http://ubuntuforums.org/showthread.php?t=204415 <- lots of info in there
+2006-06-29T10:29:00.000Z	mcphail	Paladine	you're on amd64?
+2006-06-29T10:29:00.000Z	Paladine	mcphail	yeah
+2006-06-29T10:30:00.000Z	mcphail	Paladine	I'm not sure that openoffice works particularly well in any circumstances on amd64...
+2006-06-29T10:31:00.000Z	mcphail	Paladine	have you tried running pango-querymodules as suggested in the errors?
+2006-06-29T10:31:00.000Z	Paladine	mcphail	just seems a lot of errors I get are directly related to gtk which appears to be hosed due to a locale issue
+2006-06-29T10:32:00.000Z	Paladine	mcphail	yeah it didn't fix it
+2006-06-29T10:33:00.000Z	mcphail	Paladine	was this a fresh dapper install or a dist-upgrade from breezy?
+2006-06-29T10:33:00.000Z	Paladine	mcphail	fresh install
+2006-06-29T10:41:00.000Z	mcphail	Paladine	is the "openoffice.org-gnome" package installed?
+2006-06-29T10:41:00.000Z	Paladine	mcphail	yup
+2006-06-29T10:54:00.000Z	mcphail	Paladine	is "libglib2.0-data" installed?
+2006-06-29T10:54:00.000Z	Paladine	mcphail	checking now
+2006-06-29T10:54:00.000Z	Paladine	mcphail	yup installed
+2006-06-29T11:03:00.000Z	mcphail	Paladine	is there a chance to set locale when doing a dpkg-reconfigure xserver-xorg?
+2006-06-29T11:03:00.000Z	Paladine	mcphail	I can try, that won't screw up my xorg.conf though right?
+2006-06-29T11:04:00.000Z	mcphail	Paladine	that's why I'm asking you - don't want to hose my own!
+2006-06-29T11:05:00.000Z	Paladine	mcphail	I ama bit dubious about reconfiguring xorg server hehehe I have a bunch of custom settings in my xorg.conf
+2006-06-29T11:05:00.000Z	mcphail	Paladine	i guessed that from the current threads!
+2006-06-29T11:12:00.000Z	mcphail	Paladine	the only thing google is coming up with are references to hacking /usr/X11R6/lib/X11/locale/locale.alias
+2006-06-29T11:13:00.000Z	mcphail	Paladine	http://lists.debian.org/debian-user/2004/08/msg05995.html
+2006-06-29T11:13:00.000Z	mcphail	Paladine	http://archives.mandrivalinux.com/cooker-i18n/2002-03/msg00003.php
+2006-06-29T11:14:00.000Z	Paladine	mcphail	I will check those out
+2006-06-29T11:14:00.000Z	Paladine	mcphail	just checking the output from the xserver reconfigure now
+2006-06-29T11:15:00.000Z	Paladine	mcphail	it added a bunch of lines that don't exist in my current xorg.conf sec I will pastebin them
+2006-06-29T11:16:00.000Z	mcphail	Paladine	I can pastebin my /usr/X11R6/lib/X11/locale/locale.alias if it helps, but I'm on i686
+2006-06-29T11:17:00.000Z	Paladine	mcphail	http://paste.ubuntu-nl.org/16769  <- that section doesn't exist inmy current xorg.conf
+2006-06-29T11:19:00.000Z	mcphail	Paladine	I can't see it hurting to add them and restart X...
+2006-06-29T11:19:00.000Z	mcphail	Paladine	X guesses its own locales
+2006-06-29T11:20:00.000Z	mcphail	Paladine	because that would be easy...
+2006-06-29T11:22:00.000Z	mcphail	Paladine	do you want a copy of my /usr/X11R6/lib/X11/locale/locale.alias ?
+2006-06-29T11:22:00.000Z	Paladine	mcphail	sure I will take a look at it
+2006-06-29T11:23:00.000Z	mcphail	Paladine	give me a mo to paste it (awkward from my screen session...)
+2006-06-29T11:23:00.000Z	Paladine	mcphail	you might not be able to use pastebin, it is a huge file
+2006-06-29T11:25:00.000Z	mcphail	Paladine	you can pm me your email if you like
+2006-06-29T11:25:00.000Z	Paladine	mcphail	Ineed to be registered to send pms
+2006-06-29T11:26:00.000Z	mcphail	Paladine	ok
+2006-06-29T11:27:00.000Z	Paladine	mcphail	am in #xorg too see if they canfigure it out
+2006-06-29T11:29:00.000Z	mcphail	Paladine	sent - do a diff to see how it compares to yours
+2006-06-29T11:29:00.000Z	Paladine	mcphail	I will do, thanks for all your time on this mate, it is a tricky one
+2006-06-29T11:29:00.000Z	mcphail	Paladine	np. Hope it helps. Xorg is dark water...
+2006-06-29T11:31:00.000Z	Paladine	mcphail	#xorg is fullof 123 mutes by the looks of it ;)
+2006-06-29T11:31:00.000Z	mcphail	Paladine	i think the openoffice problem is different from the vmware one
+2006-06-29T11:39:00.000Z	mcphail	Paladine	any joy? need to go soon...
+2006-06-29T11:41:00.000Z	Paladine	mcphail	I just hd a guest arrive so i will have to check it later, sorry I never realised you were waiting on me mate
+2006-06-29T11:41:00.000Z	mcphail	Paladine	np. Good luck - i'm off home
+2006-06-29T11:41:00.000Z	Paladine	mcphail	thanks for thehelp mate have a good evening

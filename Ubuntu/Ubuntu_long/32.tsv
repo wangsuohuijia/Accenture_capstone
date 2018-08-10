@@ -1,0 +1,91 @@
+2006-08-31T07:07:00.000Z	NET||abuse		hmm, can i set windows to roll up on gnome ?
+2006-08-31T07:07:00.000Z	jrib	NET||abuse	what does that mean?
+2006-08-31T07:08:00.000Z	NET||abuse	jrib	the way you can just roll up a window into it's own header bar, just hte bar left and a button to unroll it.
+2006-08-31T07:09:00.000Z	jrib	NET||abuse	Linuturk_code: it's actually called "roll up" in the dialog, but I've always known it as shade too
+2006-09-25T06:11:00.000Z	jrib	NET||abuse	install build-essential
+2006-09-25T06:12:00.000Z	NET||abuse	jrib	thanks
+2007-01-13T06:25:00.000Z	jrib	NET||abuse	search for "bcm43xx" on the page he gave you
+2007-01-13T06:26:00.000Z	NET||abuse	jrib	yeh, i found that right after my previous statement,,, duh.. sorry
+2007-01-13T06:26:00.000Z	jrib	NET||abuse	ok, apologize to ubotu :)
+2007-02-24T16:52:00.000Z	jrib	NET||abuse	umm what is EP2?
+2007-02-24T16:52:00.000Z	NET||abuse	jrib	www.editplus.com
+2007-02-24T16:53:00.000Z	jrib	NET||abuse	gedit?
+2007-02-24T16:54:00.000Z	jrib	NET||abuse	do you like vim?
+2007-05-28T13:04:00.000Z	jrib	NET||abuse	use a 32bit chroot or use http://www.janvitus.netsons.org/2007/01/15/nspluginwrapper-adobe-flash-player/ (you can compile nspluginwrapper yourself if you want)
+2007-06-29T06:12:00.000Z	jrib	NET||abuse	be nice please
+2007-06-29T06:12:00.000Z	NET||abuse	jrib	:) ok,, will do, i just want to welcome in a these newbs rather than give them an icy reception
+2007-06-29T06:13:00.000Z	NET||abuse	jrib	see this user1_ fellah giving ubuntu grief!!
+2007-08-13T05:53:00.000Z	jrib	NET||abuse	it should be a .desktop file in the users ~/.config/autostart/
+2007-08-13T05:53:00.000Z	NET||abuse	jrib	hmm, ok, i'll have a poke at that.. thanks :)
+2007-08-13T05:56:00.000Z	NET||abuse	jrib	perfect, bloody weird though, the startup script was called "LIBGL_ALWAYS_INDIRECT=1.desktop"
+2007-08-13T05:56:00.000Z	NET||abuse	jrib	thanks for that, i think you just recued by gnome desktop :)
+2007-08-13T05:58:00.000Z	NET||abuse	jrib	turns out that wasn't the only problem, something in the gnome startup is still killing my session :(
+2007-08-13T05:59:00.000Z	jrib	NET||abuse	what happens exactly? Try renaming ~/.gnome2/session too if nothing is left in ~/.config/autostart/
+2007-08-13T06:00:00.000Z	NET||abuse	jrib	basically the gdm login comes up, i can switch the session to kde, fine, but if i leave it on gnome, i put in password, hit enter, the screen goes to the brown background colour for a moment, then X crashes,, pretty much withing 2 seconds
+2007-08-13T06:01:00.000Z	NET||abuse	jrib	X then immediately restarts to the gdm login
+2007-08-13T06:01:00.000Z	NET||abuse	jrib	someone else also thought what i was thinking, the window manager is crashing and X is restarting
+2007-08-13T06:02:00.000Z	NET||abuse	jrib	the only other thing i can think of is if i just get my direct rendering and things setup on this new laptop properly (switched from  radeon laptop to intel graphics laptop) then the program that's causing the crash won't be an issue anymore :)
+2007-08-13T06:02:00.000Z	NET||abuse	jrib	but i've heard all sorts of weirdness about the intel graphics and 3d setup,, it's just not good
+2007-08-13T06:03:00.000Z	jrib	NET||abuse	heh, I'd try renaming ~/.gnome2/session first then
+2007-08-13T06:04:00.000Z	NET||abuse	jrib	no such file ./.gnome2/session
+2007-08-13T06:04:00.000Z	NET||abuse	jrib	directory ./.gnome2/ exists, but no file session in there
+2007-08-13T06:06:00.000Z	jrib	NET||abuse	does GNOME fail to start if you create a new user account?
+2007-08-13T06:07:00.000Z	NET||abuse	jrib	actually i better leave it for now :) i have some thiing to get done in the next hour,, but a good place to go next,, cheers :)
+2007-09-18T16:50:00.000Z	NET||abuse	jrib	basically it seems to run on a simple text queue of urls with cookie options and things,, and so we could just build a gui in php or something?
+2007-09-18T16:43:00.000Z	jrib	NET||abuse	heh, I was looking for something similar once and could never find it.  I've been meaning to write one when I found the time.  What you can do is just use ssh user@host wget foo
+2007-09-18T16:49:00.000Z	NET||abuse	jrib	do you fancy starting a gui project for such an app? i think i found a java based download queue daemon
+2007-09-18T16:49:00.000Z	jrib	NET||abuse	not really interested in a gui, so that would wait
+2007-09-18T16:50:00.000Z	NET||abuse	jrib	oh, but are you still interested in a queue'ing system?
+2007-09-18T16:51:00.000Z	jrib	NET||abuse	yes
+2007-09-18T16:51:00.000Z	NET||abuse	jrib	hmm, it's a little inactive though, http://sourceforge.net/projects/dmachine/
+2007-09-18T16:52:00.000Z	NET||abuse	jrib	something like this only having activity within the last year would be nicer.. :(
+2007-09-18T16:53:00.000Z	NET||abuse	jrib	what do you reakon?
+2007-09-18T16:53:00.000Z	jrib	NET||abuse	might be worth a try, at least you can see what you like about it and what you would change
+2007-09-18T16:54:00.000Z	NET||abuse	jrib	would you try it? or use something more recent?
+2007-09-18T16:54:00.000Z	jrib	NET||abuse	I can't find anything more recent
+2007-09-18T16:55:00.000Z	NET||abuse	jrib	me either, supprising really isn't it?
+2008-11-12T17:41:00.000Z	jrib	NET||abuse	try mplayer -dumpaudio
+2008-11-12T18:37:00.000Z	jrib	NET||abuse	did you try my suggestion?
+2008-11-12T18:37:00.000Z	NET||abuse	jrib	sorry,which was yours?
+2008-11-12T18:37:00.000Z	jrib	NET||abuse	mplayer -dumpaudio
+2008-11-12T18:38:00.000Z	NET||abuse	jrib	i put a file name after it didn't like it.
+2008-11-12T18:38:00.000Z	jrib	NET||abuse	then you have a file in your current directory of the audio...
+2008-11-12T18:39:00.000Z	NET||abuse	jrib	it's not doing it, just hangs there ror a second.. then it's stopped
+2008-11-12T18:39:00.000Z	NET||abuse	jrib	has 2 errors, could not connect to socket could , no such file.
+2008-11-12T18:40:00.000Z	jrib	NET||abuse	pastebin exactly what you are typing and the output as it works fine here
+2008-11-12T18:41:00.000Z	NET||abuse	jrib	http://dpaste.com/90207/
+2008-11-12T18:42:00.000Z	jrib	NET||abuse	surround your url in single quotes as Dr_willis suggested
+2008-11-12T18:43:00.000Z	NET||abuse	jrib	Dr_willis: thanks,, wow
+2008-11-12T18:43:00.000Z	jrib	NET||abuse	maybe you just want dumpfile by the way (looking at the man page)
+2008-11-12T18:44:00.000Z	jrib	NET||abuse	dumpstream I mean
+2008-11-12T18:45:00.000Z	jrib	NET||abuse	anyway, sounds boring :)
+2008-11-12T18:46:00.000Z	NET||abuse	jrib	Dr_willis: so thiss stream.dump file, what can i do with it to make it into a mp3?
+2008-11-12T18:46:00.000Z	jrib	NET||abuse	try using ffmpeg I guess
+2008-11-12T18:47:00.000Z	NET||abuse	jrib	hmm, ok
+2008-11-12T18:47:00.000Z	jrib	NET||abuse	ffmpeg -i stream.dump boring.mp3   seems to work
+2008-11-12T20:07:00.000Z	jrib	NET||abuse	install ffmpeg from medibuntu
+2008-11-19T20:12:00.000Z	jrib	NET||abuse	umm.  Does such a package exist?  Just build it yourself (set DEB_BUILD_OPTIONS=externalcodecs when building)
+2008-11-19T20:13:00.000Z	NET||abuse	jrib	grrr, i suppose i have to build it,,,, yeh the package is there on medibuntu, just the libav[codec|format]1d  packages seem to be unavailable.
+2008-11-19T20:13:00.000Z	jrib	NET||abuse	not here: http://packages.medibuntu.org/intrepid/index.html
+2008-11-19T20:13:00.000Z	NET||abuse	jrib	the other issue is the medibuntu package version is older than the official ubuntu ffmpeg, though official is stripped of good codecs :(
+2008-11-19T20:14:00.000Z	jrib	NET||abuse	it's a two or three line procedure, just takes forever to compile
+2008-11-19T20:16:00.000Z	NET||abuse	jrib	ok,,,, one sec.. just lookingup what it gives me when i'm forcing medibuntu version on intrepid..
+2008-11-19T20:16:00.000Z	jrib	NET||abuse	at least on amd64 medibuntu provides no ffmpeg
+2008-11-19T20:17:00.000Z	NET||abuse	jrib	i'm on 64bit, this is what comes up under available versions.. maybe it's backing off to the hardy version automatically?? see if this matches the 64bit hardy medibuntu version   cvs20070307-5ubuntu7.1+medibuntu1
+2008-11-19T20:18:00.000Z	jrib	NET||abuse	probably, as ffmpeg uses svn now too
+2008-11-19T20:18:00.000Z	NET||abuse	jrib	yup,, hmm
+2008-11-19T20:18:00.000Z	NET||abuse	jrib	is there a stable src tag or something i can use, or is ther ffmpeg-src package available for ubuntu to compile from safely?
+2008-11-19T20:20:00.000Z	jrib	NET||abuse	just set DEB_BUILD_OPTIONS as I said before on the same line as dpkg-buildpackage.  You'll need some more packages than what you get with apt-get install build-essential and apt-get build-dep ffmpeg, but the error will list them
+2008-11-19T20:20:00.000Z	jrib	NET||abuse	you'll probably also want to run dch -i and append ~netabuse
+2008-11-19T20:20:00.000Z	jrib	NET||abuse	you'll probably also want to run dch -i and append ~netabuse1 to the package version
+2008-11-19T20:21:00.000Z	NET||abuse	jrib	hmm, ok,
+2008-11-19T20:21:00.000Z	jrib	NET||abuse	feel free to ask if you aren't sure about a step
+2009-01-08T18:06:00.000Z	jrib	NET||abuse	just create /storage and use it.  It doesn't really matter what you call it
+2010-06-03T20:42:00.000Z	jrib	NET||abuse	both ubuntu?
+2010-06-03T20:43:00.000Z	NET||abuse	jrib	yeh, he's running in a virtualbox vm on windows host, but it's ubuntu karmic vm on his machine.
+2010-06-03T20:44:00.000Z	jrib	NET||abuse	I haven't used remote desktop in a while but there's a simple way to do it through the menus.  Also see: /msg ubottu vnc
+2011-01-24T00:15:00.000Z	jrib	NET||abuse	you need to login again after creating ~/ibn
+2011-01-24T00:15:00.000Z	jrib	NET||abuse	you need to login again after creating ~/bin
+2011-01-24T00:16:00.000Z	NET||abuse	jrib	i restart gnome-terminal, that's not enough?
+2011-01-24T00:16:00.000Z	jrib	NET||abuse	no
+2011-01-24T00:16:00.000Z	NET||abuse	jrib	that's a pain.

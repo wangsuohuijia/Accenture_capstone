@@ -1,0 +1,171 @@
+2009-08-04T08:20:00.000Z	gogeta	mdg	wifi is unstable in the defult ubuntu kernel
+2009-08-04T08:20:00.000Z	gogeta	mdg	the 29 serise fixes wifi
+2009-08-04T08:21:00.000Z	mdg	gogeta	we are finding that out - deexannihilate is using UNR 9.04 on an acer aspir one D250
+2009-08-04T08:22:00.000Z	gogeta	mdg	yea the arrray org netbook kernel 2.6.29 the defult geenrc .28 serise has wifi issues
+2009-08-04T08:23:00.000Z	gogeta	mdg	mine would randomly disconnect untill i upgraded
+2009-08-04T08:24:00.000Z	mdg	gogeta	that's the problem deexannihilate  is having
+2009-08-04T08:24:00.000Z	mdg	gogeta	you mean in 9.04?
+2009-08-04T08:24:00.000Z	gogeta	mdg	yes
+2009-08-04T08:25:00.000Z	mdg	gogeta	deexannihilate just reinstalled and we are trying to get the updates so we can fix ethernet, eventually
+2009-08-04T08:26:00.000Z	gogeta	mdg	eeebuntu has the newer kernel by defult and they support most netbooks just just eee
+2009-08-04T08:29:00.000Z	gogeta	mdg	he needs a newer kernel to fix wifi
+2009-08-04T08:29:00.000Z	gogeta	mdg	it effects most cards
+2009-08-04T08:30:00.000Z	gogeta	mdg	the ubuntu devs seem to have a problem with relsing with majer bugs anymore
+2009-08-04T08:30:00.000Z	mdg	gogeta	you had ethernet problem too?
+2009-08-04T08:30:00.000Z	gogeta	mdg	wifi random disconnect
+2009-08-04T08:31:00.000Z	mdg	gogeta	plus so many different wifi cards - its mid boggling
+2009-08-04T08:32:00.000Z	gogeta	mdg	no its ipv6 its buggy but they decided to compile it inside the kernel insteed of having as a module like its always been
+2009-08-04T08:46:00.000Z	gogeta	mdg	only eebuntu has everything
+2009-08-04T08:32:00.000Z	mdg	gogeta	did you revert to IPV4?
+2009-08-04T08:32:00.000Z	gogeta	mdg	you cant
+2009-08-04T08:33:00.000Z	mdg	gogeta	oh, you would have to stick with 8.04 right?
+2009-08-04T08:37:00.000Z	gogeta	mdg	you cant blacklist ipv6 anymore
+2009-08-04T08:37:00.000Z	gogeta	mdg	you have to eyther upgrade to 2.6.29 where they fixed it so you can blacklist again or recompile 28 without it
+2009-08-04T08:39:00.000Z	mdg	gogeta	which chipset is best supported?
+2009-08-04T08:39:00.000Z	gogeta	mdg	well when u upgrade to 2.6.29 all my issue whent away
+2009-08-04T08:39:00.000Z	gogeta	mdg	wifi nice and stable
+2009-08-04T08:40:00.000Z	mdg	gogeta	do you have backports for jaunty as well - is it recommended?
+2009-08-04T08:40:00.000Z	gogeta	mdg	and i knoe ubuntu ran across this in testing love how they didnt fix it
+2009-08-04T08:40:00.000Z	gogeta	mdg	and still havent
+2009-08-04T08:41:00.000Z	gogeta	mdg	not even adding 2.6.29 in the repos as a bug fix
+2009-08-04T08:41:00.000Z	mdg	gogeta	it has to be compiled? 2.6.29?
+2009-08-04T08:42:00.000Z	gogeta	mdg	array.org is relsing it soon its in the rc stage i have it eeebuntu has it as well
+2009-08-04T08:42:00.000Z	mdg	gogeta	thats good to know
+2009-08-04T08:43:00.000Z	gogeta	mdg	ppa launchpad has it as well
+2009-08-04T08:44:00.000Z	mdg	gogeta	let me write that down so I don't forget
+2009-08-04T08:46:00.000Z	mdg	gogeta	have you posted that to ubuntu forums?
+2009-08-04T08:46:00.000Z	gogeta	mdg	problem is you lose restreted
+2009-08-04T08:47:00.000Z	mdg	gogeta	eee's are splashtops too right?
+2009-08-04T08:48:00.000Z	gogeta	mdg	netbooks yes eeebuntu also support acer one
+2009-08-04T08:49:00.000Z	gogeta	mdg	atm there the only ubuntu with the fixed kernel with everything
+2009-08-04T08:49:00.000Z	mdg	gogeta	so if acer aspire one is supported my friend could upgrade to the 2.6.26 kernal wihtout problem?
+2009-08-04T08:49:00.000Z	mdg	gogeta	oh...
+2009-08-04T08:50:00.000Z	gogeta	mdg	yea 2.6.29
+2009-08-04T08:50:00.000Z	mdg	gogeta	so if she gets all the updates tonigth and I have her upgrade tomorrow - she should be set?
+2009-08-04T08:50:00.000Z	gogeta	mdg	its a diffrent distro
+2009-08-04T08:51:00.000Z	mdg	gogeta	 LOL now Im confused...
+2009-08-04T08:51:00.000Z	gogeta	mdg	http://www.eeebuntu.org/
+2009-08-04T08:52:00.000Z	gogeta	mdg	eebuntu is ment for eees but aspire ones use the same hardware
+2009-08-04T08:52:00.000Z	mdg	gogeta	could my friend run it on her acer aspire instead of regular NBR?
+2009-08-04T08:52:00.000Z	gogeta	mdg	yes
+2009-08-04T08:52:00.000Z	gogeta	mdg	its ubuntu for the most part
+2009-08-04T08:53:00.000Z	mdg	gogeta	I don't know if thats good new or bad - she reinstaslled twice today :)
+2009-08-04T08:53:00.000Z	gogeta	mdg	just with all those nasty stock ugs fixed
+2009-08-04T08:53:00.000Z	mdg	gogeta	you had no ethernet problem?
+2009-08-04T08:53:00.000Z	gogeta	mdg	i had maer wifi issues with nbr stock
+2009-08-04T08:54:00.000Z	gogeta	mdg	with that not a one
+2009-08-04T08:54:00.000Z	mdg	gogeta	she lost her ability to use her ethernet - plus wireless issues
+2009-08-04T08:54:00.000Z	gogeta	mdg	that should fix them all
+2009-08-04T08:55:00.000Z	gogeta	mdg	both there standerd and nbr edtions are ment for small screens to standerd has smaller icons and fonts then normal ubuntu
+2009-08-04T08:56:00.000Z	mdg	gogeta	you are a wealth of information!
+2009-08-04T08:56:00.000Z	mdg	gogeta	thanks for your enlightenment :)
+2009-08-04T08:58:00.000Z	gogeta	mdg	heh i have relesed many fixes for netbooks myself
+2009-08-05T04:30:00.000Z	gogeta	mdg	hi
+2009-08-05T04:31:00.000Z	gogeta	mdg	you didnt brake it again did you
+2009-08-05T04:31:00.000Z	mdg	gogeta	can you give any extra advice on installing eeebuntu on acer aspire?
+2009-08-05T04:31:00.000Z	gogeta	mdg	use unetbooting to put it on a usb stick or sd card and boot off that easy as that
+2009-08-05T04:32:00.000Z	gogeta	mdg	unless you have a usb cdrom you can use
+2009-08-05T04:32:00.000Z	mdg	gogeta	any advice on size of flash drive/kind?
+2009-08-05T04:32:00.000Z	gogeta	mdg	1gb is plenty for a installer
+2009-08-05T04:32:00.000Z	mdg	gogeta	can I ask - how well does eeebunut work on Dell netbooks?
+2009-08-05T04:33:00.000Z	gogeta	mdg	donno abought dells
+2009-08-05T04:33:00.000Z	gogeta	mdg	but most netbooks use the  same hardware
+2009-08-05T04:33:00.000Z	mdg	gogeta	okay.  thanks for the great advice - will tell my friend when she comes here
+2009-08-05T04:34:00.000Z	gogeta	mdg	thee array.org kernel eeebuntu uses covers most netbooks
+2009-08-05T04:35:00.000Z	gogeta	mdg	nearly all netbooks use atoms and intel gma hardware
+2009-08-05T04:35:00.000Z	mdg	gogeta	there was a guy here last night who was having trouble with his Dell Mini 9, who I was trying to help
+2009-08-05T04:35:00.000Z	gogeta	mdg	lemmie guess wifi bugs
+2009-08-05T04:35:00.000Z	mdg	gogeta	part of his issue was wifi, but he got a 4 gig SSD, which made things tough
+2009-08-05T04:36:00.000Z	gogeta	mdg	eebuntu base edtion is good for small ssds
+2009-08-05T04:36:00.000Z	gogeta	mdg	lets you install what you need
+2009-08-05T04:37:00.000Z	gogeta	mdg	if he gots a spare sd card he can make a lvm setup to expand is storage as well
+2009-08-05T04:38:00.000Z	mdg	gogeta	deexannihilate lost the ability to plug in an ethernet cable - it just would not work, was that ever a problem in eeebuntu?
+2009-08-05T04:38:00.000Z	gogeta	mdg	not on my 900a no
+2009-08-05T04:39:00.000Z	gogeta	mdg	the aspire one is listed as fuy working on eeebuntu as well as the mini 9 and 10
+2009-08-05T04:39:00.000Z	mdg	gogeta	:) you just made me smile
+2009-08-05T04:43:00.000Z	gogeta	mdg	yep
+2009-08-05T04:47:00.000Z	gogeta	mdg	lol
+2009-08-05T04:48:00.000Z	gogeta	mdg	eeebuntu is just ubuntu made for netbooks your frend thought diffrent distro
+2009-08-05T04:54:00.000Z	mdg	gogeta	so if he lvm'd home, he could install more apps?
+2009-08-05T04:55:00.000Z	mdg	gogeta	how big a card will eeebuntu support?
+2009-08-05T04:56:00.000Z	gogeta	mdg	as big as you can buy
+2009-08-05T05:10:00.000Z	mdg	gogeta	I missed part of the convo - rename what?
+2009-08-05T07:27:00.000Z	mdg	gogeta	hey, can you help styol troubleshoot wifi - he updated and wifi stopped working
+2009-08-05T07:39:00.000Z	mdg	gogeta	???
+2009-08-05T07:39:00.000Z	gogeta	mdg	yea
+2009-08-05T07:44:00.000Z	mdg	gogeta	what does eeebuntu use as far as amodule for bcm43 wifi card?
+2009-08-06T07:25:00.000Z	mdg	gogeta	hi gogeta
+2009-08-06T07:26:00.000Z	mdg	gogeta	got a question for you about eeebuntu
+2009-08-06T07:26:00.000Z	gogeta	mdg	hi
+2009-08-06T07:26:00.000Z	gogeta	mdg	yes
+2009-08-06T07:26:00.000Z	mdg	gogeta	I mean she installed standard
+2009-08-06T07:27:00.000Z	gogeta	mdg	just install the netbook launcher
+2009-08-06T07:27:00.000Z	gogeta	mdg	apt-get install netbook-launcher will add it
+2009-08-06T07:27:00.000Z	gogeta	mdg	yes
+2009-08-06T07:28:00.000Z	mdg	gogeta	thanksyouverymuch!
+2009-08-06T07:36:00.000Z	mdg	gogeta	I have another question about eeebuntu?
+2009-08-06T07:36:00.000Z	gogeta	mdg	lol
+2009-08-06T07:37:00.000Z	mdg	gogeta	sorry, but eeebuntu on acer aspire - should networking via ethernet cable work out of the box?
+2009-08-06T07:37:00.000Z	gogeta	mdg	it should yea
+2009-08-06T07:38:00.000Z	gogeta	mdg	heh i had to help your dell mini guy with a manul patch for wifi works now hehe
+2009-08-06T07:38:00.000Z	mdg	gogeta	Yes.  he really appreciated it too!
+2009-08-06T07:40:00.000Z	mdg	gogeta	thanks again! o/
+2009-08-10T05:25:00.000Z	gogeta	mdg	hey
+2009-08-10T05:27:00.000Z	gogeta	mdg	hd videos in flash can be slow if youtube works in normal mode its fine
+2009-08-10T05:27:00.000Z	gogeta	mdg	limits of the  intel gma
+2009-08-10T05:27:00.000Z	mdg	gogeta	is there anything she can do to improve it?
+2009-08-10T05:27:00.000Z	gogeta	mdg	disbale compiz if is on
+2009-08-10T05:28:00.000Z	mdg	gogeta	she is using netbook-launcher - does compize affect that?
+2009-08-10T05:29:00.000Z	gogeta	mdg	no
+2009-08-10T05:30:00.000Z	gogeta	mdg	as i said if youtube wroks in non-hd mode flash is working fine
+2009-08-10T05:30:00.000Z	mdg	gogeta	will deexannihilate need to log out of her session to find out if that improved things?
+2009-08-10T05:31:00.000Z	gogeta	mdg	also going full screen tends to speed thing up
+2009-08-10T05:31:00.000Z	gogeta	mdg	no
+2009-08-10T05:35:00.000Z	gogeta	mdg	yes 9.10
+2009-08-10T05:35:00.000Z	mdg	gogeta	cool!  thats right around the corner.
+2009-08-10T05:44:00.000Z	mdg	gogeta	would an acer aspire one D250 have gma945?
+2009-08-10T05:44:00.000Z	gogeta	mdg	you can type lspci and find out
+2009-08-10T05:45:00.000Z	gogeta	mdg	just look for the gma line
+2009-08-10T05:50:00.000Z	mdg	gogeta	you mean deexannihilate1's acer aspire one D240 has gma 950?
+2009-08-10T05:51:00.000Z	gogeta	mdg	yea strange
+2009-08-10T05:55:00.000Z	mdg	gogeta	deexannihilate1 has trouble with hibernation
+2009-08-10T06:06:00.000Z	mdg	gogeta	deexannihilate1 has a problem with netbook launcher not working right?
+2009-08-10T06:18:00.000Z	mdg	gogeta	deexannihilate1 said eeebuntu UNR
+2009-08-10T06:14:00.000Z	gogeta	mdg	i guess his acrer one just hates linux lol
+2009-08-10T06:14:00.000Z	mdg	gogeta	deexannihilate1 is wondering if she should go back to the UNR she had installed before?
+2009-08-10T06:14:00.000Z	gogeta	mdg	eh
+2009-08-10T06:15:00.000Z	gogeta	mdg	i guess if she does not mid unstable wifi but eeebuntu still has the genrec kernel
+2009-08-10T06:15:00.000Z	gogeta	mdg	be the same
+2009-08-10T06:20:00.000Z	mdg	gogeta	when you close your netbook, does it go into hiberation or suspend automatically?
+2009-08-10T06:34:00.000Z	mdg	gogeta	deexannihilate1 wants to know if you have any tips on using suspend?
+2009-08-10T06:35:00.000Z	gogeta	mdg	nope unless shes asking how to turn it on
+2009-08-10T06:35:00.000Z	mdg	gogeta	yes- how to turn on
+2009-08-10T06:35:00.000Z	gogeta	mdg	go  to logout and slect suspend
+2009-08-18T06:58:00.000Z	gogeta	mdg	i found your wifi fix
+2009-08-18T06:59:00.000Z	gogeta	mdg	so your not alwayas pulling the battery on your compaq to reset wifi
+2009-08-18T07:01:00.000Z	mdg	gogeta	hi!
+2009-08-18T07:01:00.000Z	mdg	gogeta	compaq?
+2009-08-18T07:02:00.000Z	gogeta	mdg	someone had compaq thought it was you
+2009-08-18T07:02:00.000Z	gogeta	mdg	the last update in ubuntu disables wifi in the bios and bugs some pcs like compaqg and mine i found a fix
+2009-08-18T07:02:00.000Z	mdg	gogeta	that's very good to know :)
+2009-08-18T07:03:00.000Z	gogeta	mdg	add  pciehp.pciehp_force=1 pciehp.pciehp_poll_mode=1 ro grub
+2009-08-18T07:03:00.000Z	mdg	gogeta	but that's got to be annoying too
+2009-08-18T07:03:00.000Z	gogeta	mdg	 pciehp.pciehp_force=1 pciehp.pciehp_poll_mode=1      to grub
+2009-08-18T07:03:00.000Z	gogeta	mdg	after thw quite line
+2009-08-18T07:04:00.000Z	gogeta	mdg	overrides the new settings
+2009-08-18T07:04:00.000Z	gogeta	mdg	and setting ro makes it so ubuntu cant change it
+2009-08-18T07:04:00.000Z	mdg	gogeta	that happens to eeepc and acer netbooks?
+2009-08-18T07:04:00.000Z	gogeta	mdg	yea
+2009-08-18T07:05:00.000Z	gogeta	mdg	but in eee you can turn it back on compaqs you cant
+2009-08-18T07:05:00.000Z	gogeta	mdg	there dumbed down bios
+2009-08-18T07:06:00.000Z	gogeta	mdg	i think it happons to many laptops i had a compaq user hear with the same issue and we had to pull his battery to reset the bios
+2009-08-18T07:07:00.000Z	mdg	gogeta	oh
+2009-08-18T07:07:00.000Z	mdg	gogeta	the backup battery or the regular battery?
+2009-08-18T07:07:00.000Z	gogeta	mdg	so when people come hear with issues of my wifi died after update give them that grub line
+2009-08-18T07:08:00.000Z	gogeta	mdg	fixes it so your not always in the bios to tuen wifi back on
+2009-08-19T05:27:00.000Z	gogeta	mdg	did my guide help anyone today :)
+2009-08-19T05:27:00.000Z	mdg	gogeta	hey !
+2009-08-19T05:27:00.000Z	mdg	gogeta	I just got here - so no not yet :)
+2009-08-19T05:53:00.000Z	gogeta	mdg	i tested my fix btw even with wifi off in bios ubuntu still powers up wifi gotta love overrides
+2009-08-19T05:53:00.000Z	mdg	gogeta	that's great to know!
+2009-08-19T05:54:00.000Z	gogeta	mdg	yea great for compaq users who cant go in bios and fix it

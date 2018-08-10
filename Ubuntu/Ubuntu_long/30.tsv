@@ -1,0 +1,82 @@
+2007-08-26T08:48:00.000Z	rafaelscj		How do I to disable click on touch (touchpad)?
+2007-08-26T08:48:00.000Z	Pelo	rafaelscj	is there a touchpad dialog in admin or prefs maybe ?
+2007-08-26T08:49:00.000Z	rafaelscj	Pelo	what do you mean?
+2007-08-28T07:35:00.000Z	rafaelscj	Pelo	It's disabled
+2007-08-28T07:23:00.000Z	Pelo	rafaelscj	 why do you need to do that ?
+2007-08-28T07:24:00.000Z	rafaelscj	Pelo	I don't want to use sudo every time I want to write on /dev/sda3
+2007-08-28T07:25:00.000Z	Pelo	rafaelscj	 don'T give write acces to fstab , give it to the /dev/sda3 mountpoint
+2007-08-28T07:26:00.000Z	rafaelscj	Pelo	can you tell me the chmod's parameters?
+2007-08-28T07:26:00.000Z	Pelo	rafaelscj	 what is the mount point for /dev/sda3 ?
+2007-08-28T07:27:00.000Z	rafaelscj	Pelo	/media/sda3
+2007-08-28T07:27:00.000Z	Pelo	rafaelscj	 what FS is it ?
+2007-08-28T07:27:00.000Z	rafaelscj	Pelo	reiserFS
+2007-08-28T07:29:00.000Z	Pelo	rafaelscj	  in the terminal  type  sudo gedit /etc/fstab   ,  copy and save this line  /dev/sda3 /media/sda3 reiserfs defaults 0 2        save and restart
+2007-08-28T07:30:00.000Z	rafaelscj	Pelo	wait a moment
+2007-08-28T07:33:00.000Z	rafaelscj	Pelo	this is my fstab -> :UUID=8b6a5cae-46e3-41a7-a5ec-50e26524fd2a /media/sda3     reiserfs defaults        0       2
+2007-08-28T07:34:00.000Z	Pelo	rafaelscj	 this is how it is now ? and you can't write to it ?
+2007-08-28T07:35:00.000Z	rafaelscj	Pelo	there is no -> File > New folder
+2007-08-28T07:35:00.000Z	Pelo	rafaelscj	   look into  /media , so you see a  /sda3 in there ?
+2007-08-28T07:38:00.000Z	rafaelscj	Pelo	yes, there is. I think that the device is /dev/hda3 instead of /dev/sda3 but it was the auto-detection (/dev/sda3)
+2007-08-28T07:38:00.000Z	rafaelscj	Pelo	I'm not sure
+2007-08-28T07:39:00.000Z	Pelo	rafaelscj	  terminal    blkid   see what is it listed as   /hda or sda ,
+2007-08-28T07:41:00.000Z	rafaelscj	Pelo	sda, there was a advanced option (during installation) that sad "install grub on hda"
+2007-08-28T07:41:00.000Z	Pelo	rafaelscj	 not hda   grub idenfifies it,s hdd diffrently,  don'T worry about that
+2007-08-28T07:42:00.000Z	Pelo	rafaelscj	are you the one that made the entry for your /dev/sda3 manualy in fstab or was it made automaticaly when you instaled ?
+2007-08-28T07:43:00.000Z	rafaelscj	Pelo	I created 3 partitions during installastion
+2007-08-28T07:44:00.000Z	Pelo	rafaelscj	 ok,  rafaelscj , just to review here ,  your problem is that you can't make folders and files in /media/sda3 ?
+2007-08-28T07:44:00.000Z	rafaelscj	Pelo	/ , swap, /media/sda3
+2007-08-28T07:44:00.000Z	rafaelscj	Pelo	yes
+2007-08-28T07:44:00.000Z	Pelo	rafaelscj	  goto  /media   right click on /sda3   and check the permissions
+2007-08-28T07:46:00.000Z	rafaelscj	Pelo	ower: root, group: root
+2007-08-28T07:47:00.000Z	rafaelscj	Pelo	so, I can't read/write
+2007-08-28T07:47:00.000Z	Pelo	rafaelscj	 try this , gsku nautilus  /media   ,   then check the permissions again and change the group to your nick
+2007-08-28T07:48:00.000Z	Pelo	rafaelscj	 forget that
+2007-08-28T07:48:00.000Z	rafaelscj	Pelo	...
+2007-08-28T07:48:00.000Z	Pelo	rafaelscj	 I thnk you'll need to change the group but I don't know how you would do it
+2007-08-28T07:48:00.000Z	rafaelscj	Pelo	chmod?
+2007-08-28T07:48:00.000Z	Pelo	rafaelscj	 what are the group permission ?
+2007-08-28T07:49:00.000Z	Pelo	rafaelscj	 you can try    sudo chmod 777 /media/sda3
+2007-08-28T07:50:00.000Z	rafaelscj	Pelo	I will try it now
+2007-08-28T07:53:00.000Z	rafaelscj	Pelo	Do chmod work with directories?
+2007-08-28T07:54:00.000Z	Pelo	rafaelscj	 just  chmod to /media/sda3
+2007-08-28T07:54:00.000Z	Pelo	rafaelscj	 the line I gave you , should take care of it
+2007-08-28T07:58:00.000Z	rafaelscj	Pelo	should I change the directorie's group?
+2007-08-28T07:59:00.000Z	Pelo	rafaelscj	 does it work now ?
+2007-08-28T08:15:00.000Z	rafaelscj	Pelo	I'm not using windows so...
+2007-08-28T08:12:00.000Z	rafaelscj	Pelo	It didn't work, must I restart?
+2007-08-28T08:12:00.000Z	Pelo	rafaelscj	can'T hurt
+2007-08-28T08:13:00.000Z	rafaelscj	Pelo	drwxrwxrwxrwx
+2007-08-28T08:13:00.000Z	Pelo	rafaelscj	 ???
+2007-08-28T08:13:00.000Z	rafaelscj	Pelo	directory's permission is 777
+2007-08-28T08:14:00.000Z	rafaelscj	Pelo	I wll try mkdir
+2007-08-28T08:14:00.000Z	Pelo	rafaelscj	 don'T think it's gonna help but try it anyway
+2007-08-28T08:14:00.000Z	rafaelscj	Pelo	It worked on terminal but not on gnome
+2007-08-28T08:15:00.000Z	Pelo	rafaelscj	 do you have a real need to have it  reisterfs ?
+2007-08-28T08:16:00.000Z	Pelo	rafaelscj	so just make if ext3 , it's ubuntu's prefered FS
+2007-08-28T08:17:00.000Z	rafaelscj	Pelo	mkdir worked in terminal
+2007-08-28T08:17:00.000Z	Pelo	rafaelscj	 hmm,
+2007-08-28T08:17:00.000Z	rafaelscj	Pelo	"gnome file manager" -> not
+2007-08-28T08:17:00.000Z	Pelo	rafaelscj	I'm stumped
+2007-08-29T11:07:00.000Z	Pelo	rafaelscj	 i thinks it's enlightenment or gnome
+2007-08-29T11:08:00.000Z	rafaelscj	Pelo	here there is a option to run both together
+2007-08-29T11:08:00.000Z	rafaelscj	Pelo	and it works
+2007-09-03T08:26:00.000Z	Pelo	rafaelscj	I know there is a reason for it you can probably find it in the forum
+2007-09-03T08:44:00.000Z	rafaelscj	Pelo	the newer Kernel's have migrated to using the SCSI device naming layer (hda > sda)
+2007-09-03T08:44:00.000Z	rafaelscj	Pelo	thanks
+2007-09-03T09:09:00.000Z	Pelo	rafaelscj	I use LG  and they last me about a year but I'm a smoker and I don'T like to vaccum
+2007-09-03T09:09:00.000Z	Pelo	rafaelscj	 or did you mean an app ?
+2007-09-03T09:10:00.000Z	rafaelscj	Pelo	yes, an app
+2007-09-03T09:10:00.000Z	Pelo	rafaelscj	gnomebaker
+2007-09-03T09:10:00.000Z	rafaelscj	Pelo	tnks
+2007-09-03T09:11:00.000Z	rafaelscj	Pelo	is gnomebaker opensource?
+2007-09-03T09:12:00.000Z	Pelo	rafaelscj	 it's in the repos    sudo apt-get install gnomebaker
+2007-09-07T07:53:00.000Z	rafaelscj	Pelo	do you use slackware?
+2007-09-07T07:54:00.000Z	Pelo	rafaelscj	no I tired to install it when i started with linux last year but I wasn'T up to the challenge yet,  way to noob,  I haven't realy given it a try since
+2007-09-07T07:56:00.000Z	rafaelscj	Pelo	I use zipslack, do you know how to install lilo in a "filename.img"?
+2007-09-07T07:56:00.000Z	Pelo	rafaelscj	I don'T sorry
+2007-09-07T07:56:00.000Z	Pelo	rafaelscj	 there is a #lilo
+2007-09-07T07:57:00.000Z	Pelo	rafaelscj	nvm , it gets redirected to #freenode
+2007-09-07T07:58:00.000Z	rafaelscj	Pelo	I used "dd if=/dev/hda ..." and I got a image of my mbr.
+2007-09-07T07:59:00.000Z	Pelo	rafaelscj	 stop telling me about this ,  it's over my head
+2007-09-15T06:48:00.000Z	Pelo	rafaelscj	check the faq on the xmms website
+2007-09-15T06:48:00.000Z	rafaelscj	Pelo	okay

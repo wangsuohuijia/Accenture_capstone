@@ -1,0 +1,68 @@
+2009-05-03T05:19:00.000Z	fyn_		:(
+2009-05-03T05:19:00.000Z	Uuu	fyn_	this file can be repaired by hand
+2009-05-03T05:19:00.000Z	fyn_	Uuu	So I can just nix that line and it'll be happy?
+2009-05-03T05:19:00.000Z	fyn_	Uuu	Or will it get confused that there's a package there without a status for it?
+2009-05-03T05:19:00.000Z	Uuu	fyn_	provided you'll not mess it up more ;]
+2009-05-03T05:20:00.000Z	Uuu	fyn_	so it won't see that package
+2009-05-03T05:20:00.000Z	fyn_	Uuu	and then just reinstall that package and tell it to overwrite itself?
+2009-05-03T05:20:00.000Z	Uuu	fyn_	so later you can maybe reinstall that package, but it could be possible not to remove the package entry, but fix it somewhat
+2009-05-03T05:21:00.000Z	Uuu	fyn_	wait... what is the package?
+2009-05-03T05:23:00.000Z	fyn_	Uuu	libftgl2
+2009-05-03T05:24:00.000Z	fyn_	Uuu	so it was in the depends line ... some binary noise wound up around libgcc.  killed the depends line entirely and tiried reinstalling.  now it's pissed at me :(   apt-get --reinstall install libftgl2
+2009-05-03T05:24:00.000Z	Uuu	fyn_	i think that apt/dpkg can complain that there is no package (as it thought) but files are present, so you'll have to delete them manually in that case, if there is not an important system package (i'll check if it is)
+2009-05-03T05:25:00.000Z	fyn_	Uuu	now what?
+2009-05-03T05:26:00.000Z	Uuu	fyn_	so apt dies... strange. i
+2009-05-03T05:27:00.000Z	Uuu	fyn_	i'm checking something right now and maybe i'll find something.
+2009-05-03T05:28:00.000Z	fyn_	Uuu	I was able to dpkg -i that packaage again from the package cache but apt-get upgrade is still telling me 'sementation faulty tree"
+2009-05-03T05:28:00.000Z	fyn_	Uuu	Is that a tree I can rebuild somehow?
+2009-05-03T05:29:00.000Z	fyn_	Uuu	tried apt-get update which worked fine, but upgrade is still whining about a faulty tree
+2009-05-03T05:30:00.000Z	Uuu	fyn_	co it said before: libgcc1': version contains ` ', yes?
+2009-05-03T05:30:00.000Z	Uuu	fyn_	so maybe recover that file from backup (hope you made one) and just fix the line
+2009-05-03T05:30:00.000Z	fyn_	Uuu	yup, but it wasn't a null, it was several high asciii characters ... i tried fixing that line, that's how i got this far :)
+2009-05-03T05:31:00.000Z	fyn_	Uuu	bah ... even killing the package cache I'm still getting a faulty tree
+2009-05-03T05:31:00.000Z	Uuu	fyn_	how did you "fixed" it?
+2009-05-03T05:31:00.000Z	Uuu	fyn_	deleted that line?
+2009-05-03T05:31:00.000Z	fyn_	Uuu	What does apt mean when it says tree?
+2009-05-03T05:32:00.000Z	Uuu	fyn_	i think it is 'segmentation fault' with 'tree' from 'reading tree' or so
+2009-05-03T05:32:00.000Z	fyn_	Uuu	yes, i deleted the depends line and I reinstalled that package from the deb I had in the package cache.
+2009-05-03T05:33:00.000Z	Uuu	fyn_	so maybe recover that file and line Depends: and write in that place a fake dependency, something like "libglib"
+2009-05-03T05:33:00.000Z	Uuu	fyn_	what a play on system files ;]
+2009-05-03T05:34:00.000Z	Uuu	fyn_	i'm interesting, however this info is not valuable for me fpr this problem: you upgraded Ubuntu? From what version?
+2009-05-03T05:34:00.000Z	fyn_	Uuu	intrepid to jaunty
+2009-05-03T05:35:00.000Z	Uuu	fyn_	tried with my advice of fixing depends entry/
+2009-05-03T05:36:00.000Z	fyn_	Uuu	yes, that problem is solved and dpkg is happy, but now my apt is screwed with this 'segmentation faulty tree'
+2009-05-03T05:36:00.000Z	Uuu	fyn_	that fault was AFTER I wrote that
+2009-05-03T05:36:00.000Z	Uuu	fyn_	so: did you add a fake dependency?
+2009-05-03T05:37:00.000Z	Uuu	fyn_	(maybe you missed my text)
+2009-05-03T05:37:00.000Z	fyn_	Uuu	no, i killed the depends line entirely and then reinstalled the package
+2009-05-03T05:37:00.000Z	Uuu	fyn_	so you missed my text ;]
+2009-05-03T05:37:00.000Z	Uuu	fyn_	so maybe recover that file and line Depends: and write in that place a fake dependency, something like "libglib"
+2009-05-03T05:38:00.000Z	fyn_	Uuu	the status file is fine, but apt keeps getting a faulty pkgcache from update somehow
+2009-05-03T05:39:00.000Z	Uuu	fyn_	It is not connected with that file? (just asking, i don't know0
+2009-05-03T05:39:00.000Z	Uuu	fyn_	sudo apt-get clean    ?
+2009-05-03T05:39:00.000Z	fyn_	Uuu	wow ... i deleted it for like a fourth time but this time update worked.  maybe someone goofed on the other end?
+2009-05-03T05:40:00.000Z	Uuu	fyn_	deleted "it" - the file?
+2009-05-03T05:41:00.000Z	Uuu	fyn_	gr33ts from Poland ;] glad I could help.
+2009-05-03T05:41:00.000Z	fyn_	Uuu	it was the pkgcache.bin and its friend, which were making apt segfault
+2009-05-03T05:41:00.000Z	Uuu	fyn_	please get assured everything works to make me happy ;)
+2009-05-03T05:41:00.000Z	fyn_	Uuu	Much apreciation from Canada.  I've several Polish friends and always admire a country that has a holiday for water fights ;)
+2009-05-03T05:42:00.000Z	Uuu	fyn_	you're ale welcome here ;]
+2009-05-03T05:44:00.000Z	fyn_	Uuu	I think it's where apt stores the list of apckages that it can get from its sources
+2009-05-03T05:49:00.000Z	Uuu	fyn_	it happens in X or virtual terminal?
+2009-05-03T05:50:00.000Z	Uuu	fyn_	maybe after reboot it will be fine.
+2009-05-03T05:50:00.000Z	fyn_	Uuu	in stupid kdm ... i can't get to a virt term since ctrl-alt-f1 seems unhappy
+2009-05-03T05:50:00.000Z	fyn_	Uuu	and this is a fresh boot
+2009-05-03T05:53:00.000Z	Uuu	fyn_	but if you boot into VT, there's the same error?
+2009-05-03T05:54:00.000Z	fyn_	Uuu	Trying to ..
+2009-05-03T05:54:00.000Z	fyn_	Uuu	gonna type as it's booting to see what i see
+2009-05-03T05:54:00.000Z	Uuu	fyn_	OK
+2009-05-03T05:54:00.000Z	fyn_	Uuu	so typing over the dmesg as it boots works normall
+2009-05-03T05:55:00.000Z	fyn_	Uuu	And now that it's in kdm ... everything is trippled ... no aAa anymore, just aaa for one a keystroke
+2009-05-03T05:56:00.000Z	fyn_	Uuu	this could be kdm, usb kernel stuffs, hotplug, random other things?
+2009-05-03T05:57:00.000Z	fyn_	Uuu	I meant that when I typed as it was loading the system in text mode it was typing normally over the init messages but once X loaded and kdm's dialog popped up I see tripling of every character making it hard to login as my password is not pppaaassswwwooorrrddd
+2009-05-03T05:57:00.000Z	fyn_	Uuu	you would at least be able to type your username ;)
+2009-05-03T05:57:00.000Z	Uuu	fyn_	haha ;]
+2009-05-03T05:58:00.000Z	Uuu	fyn_	No idea.
+2009-05-03T05:59:00.000Z	fyn_	Uuu	last time it had somehow froze the menus, this time i could at least click on console login with my thankfully working mouse and that seems to work fine... looks like kde or x is messed
+2009-05-03T06:00:00.000Z	Uuu	fyn_	or something with the driver
+2009-05-03T06:01:00.000Z	fyn_	Uuu	So from console if I type startx it goes into X fine and is extramore fucked in the keyboard once I'm in ... not just three characters but randomly adding ctrl and other fun stuff

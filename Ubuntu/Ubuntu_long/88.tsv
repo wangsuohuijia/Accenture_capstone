@@ -1,0 +1,63 @@
+2007-09-02T10:07:00.000Z	nickrud	jimmygoon	you could pull down debian source and compile it, probably safer. The only changelog entry that seems to matter is explicitly setting the compiler
+2007-09-02T10:08:00.000Z	jimmygoon	nickrud	yeah. I think I'm going to try the debian packages, and if it doesn't work, I'm actually going to grab the svn of boost because it has some other things that 1.34 doesn't even have yet....
+2007-09-02T10:09:00.000Z	nickrud	jimmygoon	just be sure to use the source ;)
+2007-09-03T07:23:00.000Z	nickrud	jimmygoon	/usr/include
+2007-09-03T07:23:00.000Z	jimmygoon	nickrud	thanks
+2007-09-03T07:24:00.000Z	nickrud	jimmygoon	/usr/local theoretically should never be touched by the distribution, exept maybe to create some directory hierarchies
+2007-09-03T07:24:00.000Z	jimmygoon	nickrud	oh, so if I'm install boost should I do it in /usr/local/include and just point that out to my compiler?
+2007-09-03T07:25:00.000Z	nickrud	jimmygoon	exactly, that's what it's for. A lot of poeple keep /usr/local on a separate partition so a reinstall won't affect their compiled stuff
+2007-09-03T07:26:00.000Z	jimmygoon	nickrud	okay, well then I will do that
+2007-09-03T07:26:00.000Z	jimmygoon	nickrud	thanks
+2007-09-03T07:26:00.000Z	jimmygoon	nickrud	same priciple for /usr/lib and /usr/local/lib?
+2007-09-03T07:26:00.000Z	nickrud	jimmygoon	yes
+2007-09-03T07:26:00.000Z	nickrud	jimmygoon	most configure scripts will automatically put stuff in /usr/local, unless you override
+2007-09-03T07:27:00.000Z	jimmygoon	nickrud	yeah, I was about to override it though :)
+2007-09-03T07:43:00.000Z	nickrud	jimmygoon	here's a tip:  install apt-file , then run apt-file update. Then you can run apt-file search <filename> While you're doing that, I'll do an apt-file run here for you
+2007-09-03T07:43:00.000Z	jimmygoon	nickrud	no way!. thats awesome
+2007-09-03T07:43:00.000Z	nickrud	jimmygoon	libbz2-dev
+2007-09-03T07:44:00.000Z	jimmygoon	nickrud	yuppers! thanks, you too Flannel
+2007-09-03T07:45:00.000Z	nickrud	jimmygoon	a while, it downloads a pretty big database. Not terribly long, though
+2007-09-03T08:47:00.000Z	jimmygoon	nickrud	I installed boost libraries into /usr/local/lib but now my executables cna't find them there, neither can my link... any tips?
+2007-09-03T08:50:00.000Z	nickrud	jimmygoon	run sudo ldconfig ; /etc/ld.so.conf.d/libc.conf should have included those
+2007-09-03T09:03:00.000Z	jimmygoon	nickrud	so should I hvae to edit that file because ldconfig isn't enough
+2007-09-03T09:04:00.000Z	jimmygoon	nickrud	actually that file is empty
+2007-09-03T09:04:00.000Z	nickrud	jimmygoon	ah!  add the line /usr/local/lib to it, and then rerun ldconfig ; here on gutsy it has that line already
+2007-10-21T09:43:00.000Z	nickrud	jimmygoon	on an external automount
+2007-10-21T09:43:00.000Z	nickrud	jimmygoon	I would hope so, but don't know. Don't have one to check
+2007-10-21T09:44:00.000Z	jimmygoon	nickrud	well, mine all do... something is messed up probably
+2007-10-21T09:44:00.000Z	nickrud	jimmygoon	kyleBAKED 's talking about allowing all users, not just the live X session
+2007-10-21T09:45:00.000Z	jimmygoon	nickrud	ah, well, maybe this can still help. this is what I use w/ truecrypt so that my users can edit a mounted partition that is encrypted file: -o gid=100,uid=1000,umask=000
+2007-10-21T09:46:00.000Z	nickrud	jimmygoon	good for the terminal or fstab ;) kyleBAKED you might try adding that to the mount options of the volume tab when you right click the icon on the desktop (look for the triagle near the bottom)
+2007-10-25T06:41:00.000Z	nickrud	jimmygoon	I do alt-f2 emerald --replace (or did, before I gave up on ati again)
+2007-10-25T07:01:00.000Z	nickrud	jimmygoon	it might not have been recognized, try killall gnome-panel to regenerate menus
+2007-12-03T09:53:00.000Z	nickrud	jimmygoon	that gives you your personal home as $HOME , -i uses /root
+2007-12-03T09:54:00.000Z	nickrud	jimmygoon	-s can make your dotfiles root owned if you're not careful
+2007-12-03T09:54:00.000Z	jimmygoon	nickrud	:O
+2007-12-03T09:54:00.000Z	jimmygoon	nickrud	that would actually explain some things :/
+2007-12-03T09:54:00.000Z	nickrud	jimmygoon	it's why people say 'use gksudo' with gnome
+2007-12-15T06:29:00.000Z	nickrud	jimmygoon	I downloaded them a while ago from backports, didn't work (didn't try hard either)
+2007-12-15T06:30:00.000Z	jimmygoon	nickrud	hum, maybe I'll see if someone else has a more "reliable" repo up
+2007-12-15T06:31:00.000Z	nickrud	jimmygoon	could be better now, there were conflicts with multiple packages having the same file in them
+2007-12-15T06:45:00.000Z	nickrud	jimmygoon	for the ability to disown the app from the terminal
+2007-12-15T06:46:00.000Z	jimmygoon	nickrud	is that really required? why not just do "gedit &" (I really don't know any different)
+2007-12-15T06:46:00.000Z	nickrud	jimmygoon	try that, then exit the terminal. You could also do disown <tab> after running that, though
+2007-12-15T06:48:00.000Z	jimmygoon	nickrud	hm, I see. thanks for the infos, I will get out of the way now :O
+2007-12-27T07:27:00.000Z	jimmygoon	nickrud	except for when ubuntu goes all screwy on me, won't launch new apps and won't bring up the dialog to let me log out, or if I ctrl+alt+backspace it just goes to a black screen :(
+2007-12-27T07:28:00.000Z	nickrud	jimmygoon	that's one reason I put the nearly in. You must be using one of the proprietary drivers :)
+2007-12-27T07:28:00.000Z	jimmygoon	nickrud	not for graphics
+2007-12-27T07:28:00.000Z	jimmygoon	nickrud	unfortunately for wirless :/
+2007-12-27T07:38:00.000Z	jimmygoon	nickrud	is there a factoid for compizconfig-settings-manager ?
+2007-12-27T08:05:00.000Z	jimmygoon	nickrud	:) I love gion
+2007-12-27T08:06:00.000Z	nickrud	jimmygoon	yeah, I changed the tango folders to a light brown (get the manila look) but gion beats it hands down
+2007-12-27T08:30:00.000Z	jimmygoon	nickrud	ubuntu blag is down ??? :(
+2007-12-27T08:31:00.000Z	jimmygoon	nickrud	http://packages.ubuntu.com/gutsy/admin/apt-zip
+2007-12-27T08:31:00.000Z	nickrud	jimmygoon	looking for a howto, the main one is down
+2007-12-27T11:01:00.000Z	nickrud	jimmygoon	md5sum <file>
+2007-12-27T11:01:00.000Z	nickrud	jimmygoon	hit ctl-d
+2007-12-27T11:01:00.000Z	jimmygoon	nickrud	thanks
+2007-12-28T09:02:00.000Z	jimmygoon	nickrud	no kidding
+2008-02-17T10:17:00.000Z	nickrud	jimmygoon	a micro deb, used during installation
+2008-02-17T10:17:00.000Z	jimmygoon	nickrud	interesting.......
+2008-03-15T09:10:00.000Z	jimmygoon	nickrud	can you use quotations instead for that essid?
+2008-03-15T09:10:00.000Z	nickrud	jimmygoon	probably
+2009-03-05T09:46:00.000Z	nickrud	jimmygoon	id <user>

@@ -1,0 +1,185 @@
+2007-09-11T12:04:00.000Z	Ninesvnsicks		got a quick question
+2007-09-11T12:04:00.000Z	Ninesvnsicks		is there a way to run a program and if it crashes have it reopen?
+2007-09-11T12:04:00.000Z	Ninesvnsicks		I have a server i run from wine
+2007-09-11T12:04:00.000Z	Ninesvnsicks		id like it to reopen if it scrashes
+2007-09-11T12:06:00.000Z	Ninesvnsicks		I'm running a server from thru wine and I would like it to reopen if it crashes is there a way to do that?
+2007-09-11T12:06:00.000Z	dfletcher	Ninesvnsicks	well you could make yourself a script that does: while /bin/true; do wine server.exe; done so it just launches forever if it exits :)
+2007-09-11T12:06:00.000Z	Ninesvnsicks		i have a start script to start it
+2007-09-11T12:06:00.000Z	Ninesvnsicks		not sure what u mean
+2007-09-11T12:06:00.000Z	dfletcher	Ninesvnsicks	great. so put my `whiel` loop in there
+2007-09-11T12:07:00.000Z	Ninesvnsicks		will it keep opening new ones?
+2007-09-11T12:07:00.000Z	dfletcher	Ninesvnsicks	not unless you put a & after the wine launch cmd
+2007-09-11T12:07:00.000Z	Ninesvnsicks		oh ok where should I put that line?
+2007-09-11T12:07:00.000Z	dfletcher	Ninesvnsicks	well since you've already got a script launching it, try replacing the part that launches wine with that
+2007-09-11T12:08:00.000Z	Ninesvnsicks		so jsut replace wine server.exe with while /bin/true; do wine server.exe; ?
+2007-09-11T12:09:00.000Z	Ninesvnsicks	dfletcher	so just replace wine server.exe with while /bin/true; do wine server.exe; ?
+2007-09-11T12:11:00.000Z	Ninesvnsicks	dfletcher	so just replace wine server.exe with while /bin/true; do wine server.exe; ?
+2007-09-11T12:12:00.000Z	Ninesvnsicks		ouch
+2007-09-11T12:19:00.000Z	Ninesvnsicks	dfletcher	you still with us?
+2007-09-11T12:21:00.000Z	Ninesvnsicks		I'm running a server from thru wine and I would like it to reopen if it crashes is there a way to do that?
+2007-09-11T12:24:00.000Z	dfletcher	Ninesvnsicks	yeah except after wine server.exe put "; done" so: while /bin/true; do wine server.exe; done .. but I'm just guessing ;)
+2007-09-11T12:24:00.000Z	dfletcher		(sorry @ work, got called away)
+2007-09-11T12:25:00.000Z	Ninesvnsicks		so actually put done
+2007-09-11T12:25:00.000Z	dfletcher	Ninesvnsicks	that's what ends a "while ... do" loop, yeah
+2007-09-11T12:25:00.000Z	Ninesvnsicks		cuz i tried while /bin/true; do wine server.exe; and nothing opens
+2007-09-11T12:26:00.000Z	Ninesvnsicks		so i have to write ; done
+2007-09-11T12:26:00.000Z	dfletcher		yes Ninesvnsicks
+2007-09-11T12:26:00.000Z	Ninesvnsicks		ok
+2007-09-11T12:27:00.000Z	Ninesvnsicks		well it opened
+2007-09-11T12:27:00.000Z	Ninesvnsicks		so if i jsut right click and close
+2007-09-11T12:27:00.000Z	Ninesvnsicks		it should reopen right?
+2007-09-11T12:27:00.000Z	dfletcher		yes
+2007-09-11T12:27:00.000Z	Ninesvnsicks		what if i actually want to close it lol
+2007-09-11T12:27:00.000Z	dfletcher		the real wtf here is that you're running a windows server on linux ;P
+2007-09-11T12:27:00.000Z	Ninesvnsicks		lol yeah
+2007-09-11T12:27:00.000Z	Ninesvnsicks		isnt it great
+2007-09-11T12:27:00.000Z	Ninesvnsicks		btw it reopend your a genius
+2007-09-11T12:27:00.000Z	dfletcher		lol
+2007-09-11T12:28:00.000Z	dfletcher	Ninesvnsicks	you might be able to kill -SIGKILL the script to stop it
+2007-09-11T12:28:00.000Z	Ninesvnsicks		man when the unreal community hears i have a userver for linux
+2007-09-11T12:28:00.000Z	Ninesvnsicks		hmm
+2007-09-11T12:29:00.000Z	Ninesvnsicks		i've recently installed linux again so im a little rusty not sure how to do that
+2007-09-11T12:29:00.000Z	dfletcher	Ninesvnsicks	well try `ps -A | grep [nameofscript] ` and see if something comes out
+2007-09-11T12:31:00.000Z	Ninesvnsicks	dfletcher	um the name of the script is userver(copy) cuz I was testing it
+2007-09-11T12:31:00.000Z	Ninesvnsicks	dfletcher	it doesent liek the ()
+2007-09-11T12:31:00.000Z	dfletcher	Ninesvnsicks	well ps -A | grep userver should be enough
+2007-09-11T12:31:00.000Z	Ninesvnsicks		oh
+2007-09-11T12:31:00.000Z	Ninesvnsicks		nope still reopens
+2007-09-11T12:32:00.000Z	dfletcher	Ninesvnsicks	well that won't kill it
+2007-09-11T12:32:00.000Z	dfletcher		does it give you a process ID thought Ninesvnsicks ?
+2007-09-11T12:32:00.000Z	Ninesvnsicks		no
+2007-09-11T12:32:00.000Z	Ninesvnsicks		jsut nothing
+2007-09-11T12:32:00.000Z	dfletcher		hmm
+2007-09-11T12:32:00.000Z	Ninesvnsicks		hmm
+2007-09-11T12:32:00.000Z	Ninesvnsicks		what about
+2007-09-11T12:33:00.000Z	Ninesvnsicks	dfletcher	making it open a terminal and if u close the terminal it kills the script?
+2007-09-11T12:33:00.000Z	dfletcher		maybe ubuntu has some kind of task manager thing. hmm yeah that may work Ninesvnsicks
+2007-09-11T12:33:00.000Z	Ninesvnsicks		theres system monitor
+2007-09-11T12:33:00.000Z	dfletcher		can you kill processes from there? try it
+2007-09-11T12:34:00.000Z	Ninesvnsicks		i can
+2007-09-11T12:34:00.000Z	Ninesvnsicks		and did
+2007-09-11T12:34:00.000Z	Ninesvnsicks		id like to make this for the public
+2007-09-11T12:35:00.000Z	Ninesvnsicks	dfletcher	would there be a way to open it in the terminal with a msg saying server started and if u close the terminal it kills the script?
+2007-09-11T12:35:00.000Z	dfletcher	Ninesvnsicks	you haven't been launching it in a terminal already? so how? double click?
+2007-09-11T12:35:00.000Z	Ninesvnsicks		oh
+2007-09-11T12:36:00.000Z	Ninesvnsicks		yeah i clicked and opened
+2007-09-11T12:36:00.000Z	Ninesvnsicks		same thing right?
+2007-09-11T12:36:00.000Z	dfletcher		but Ninesvnsicks yeah that should work... just cd to the directory holding the script and then ./userver\(copy\) or ./userver if you name it back
+2007-09-11T12:36:00.000Z	Ninesvnsicks		oh and then if i close the terminal it kills it?
+2007-09-11T12:37:00.000Z	dfletcher	Ninesvnsicks	should do. or even ctrl-c
+2007-09-11T12:37:00.000Z	Ninesvnsicks		hmm let me try running it from terminal
+2007-09-11T12:38:00.000Z	Ninesvnsicks		hmm
+2007-09-11T12:38:00.000Z	Ninesvnsicks	dfletcher	never noticed this before it says: fixme:process:getprocessworkingsize (bunch of numbers): stub
+2007-09-11T12:39:00.000Z	dfletcher	Ninesvnsicks	sounds like a wine warning. I just ignore them :)
+2007-09-11T12:39:00.000Z	Ninesvnsicks	dfletcher	fixme:winsock:ntstatustowsaerror status code c0000024 converted to dos error code 6
+2007-09-11T12:39:00.000Z	Ninesvnsicks		oh
+2007-09-11T12:40:00.000Z	dfletcher		wine seems to have verbal diarrhea :P
+2007-09-11T12:40:00.000Z	Ninesvnsicks	dfletcher	i don't liek warnings lol
+2007-09-11T12:41:00.000Z	dfletcher	Ninesvnsicks	I believe they do that so they can easily see what parts of windows they still need to build ;)
+2007-09-11T12:41:00.000Z	Ninesvnsicks		oh
+2007-09-11T12:41:00.000Z	Ninesvnsicks		well yeah if i run it from terminal
+2007-09-11T12:41:00.000Z	Ninesvnsicks		all i have to do is close terminal :)
+2007-09-11T12:41:00.000Z	Ninesvnsicks		now the userver for windows has a prgram called namedate.exe
+2007-09-11T12:41:00.000Z	dfletcher	Ninesvnsicks	nice... if you make a taskbar item, check the "run in terminal" button
+2007-09-11T12:42:00.000Z	dfletcher		and you'll get the same thing, but with a button :)
+2007-09-11T12:42:00.000Z	Ninesvnsicks		nice
+2007-09-11T12:42:00.000Z	Ninesvnsicks		i wonder if this is possible
+2007-09-11T12:43:00.000Z	Ninesvnsicks		the userver for windows has a program called namedate.exe which if the server crashes it adds a name and date to the specified files (server logs) and copies them to a folder
+2007-09-11T12:43:00.000Z	Ninesvnsicks		do u think that woudl be possible in this script?
+2007-09-11T12:45:00.000Z	Ninesvnsicks	dfletcher	do you know how I would tell the script to do something if the server crashes?
+2007-09-11T12:45:00.000Z	dfletcher	Ninesvnsicks	so you just want to launch that program after the server exits? just add another statement between "do" and "done", separated by a semi colon... so like:    ... do; wine userver.exe; wine namedate.exe; done  ... now it does 2 things in the loop
+2007-09-11T12:46:00.000Z	Ninesvnsicks		hmm
+2007-09-11T12:46:00.000Z	Ninesvnsicks		so that would run whatever after it exits and then reopen server?
+2007-09-11T12:46:00.000Z	dfletcher	Ninesvnsicks	yeah
+2007-09-11T12:46:00.000Z	Ninesvnsicks		wow
+2007-09-11T12:46:00.000Z	dfletcher	Ninesvnsicks	you're too easily impressed ;P
+2007-09-11T12:47:00.000Z	Ninesvnsicks		yeah i know
+2007-09-11T12:47:00.000Z	dfletcher	Ninesvnsicks	it's pretty basic bash scripting
+2007-09-11T12:47:00.000Z	Ninesvnsicks		im noobish at linux still but on and off user
+2007-09-11T12:47:00.000Z	dfletcher	Ninesvnsicks	well you've picked a good distribution ;D
+2007-09-11T12:47:00.000Z	Ninesvnsicks		so just add what i want it to do under what i have in the while loop?
+2007-09-11T12:47:00.000Z	Ninesvnsicks		the same way?
+2007-09-11T12:48:00.000Z	dfletcher	Ninesvnsicks	I wrote out what you need to do. read it again
+2007-09-11T12:48:00.000Z	Ninesvnsicks		lol ok
+2007-09-11T13:07:00.000Z	Ninesvnsicks		ok if i cd to the directory in a script first will it stay in the directory for all following commands?
+2007-09-11T13:09:00.000Z	Ninesvnsicks	dfletcher	do i need a ; at the end of every command line?
+2007-09-11T13:10:00.000Z	dfletcher	Ninesvnsicks	nope, just when you put multiple statements on one line
+2007-09-11T13:12:00.000Z	Ninesvnsicks	dfletcher	oh ok i have each thing on a seperate line so i shoudl be ok
+2007-09-11T13:12:00.000Z	Ninesvnsicks	dfletcher	how would I print text to the terminal window?
+2007-09-11T13:12:00.000Z	dfletcher	Ninesvnsicks	echo "something to print"
+2007-09-11T13:12:00.000Z	Ninesvnsicks		hah same as dos
+2007-09-11T13:12:00.000Z	Ninesvnsicks		with quotes too?
+2007-09-11T13:13:00.000Z	dfletcher	Ninesvnsicks	also, I can tell you how to get those wine commands to be quiet if you want ;)
+2007-09-11T13:13:00.000Z	Ninesvnsicks		oh yeah
+2007-09-11T13:13:00.000Z	Ninesvnsicks	dfletcher	yes please
+2007-09-11T13:13:00.000Z	dfletcher	Ninesvnsicks	onesec
+2007-09-11T13:13:00.000Z	Ninesvnsicks		k
+2007-09-11T13:15:00.000Z	dfletcher	Ninesvnsicks	something like this (crap I forgot the names of your 2 exes. guessing them):   while /bin/true; do wine server.exe >> /dev/null 2>&1; wine nametest.exe >>/dev/null 2>&1; done
+2007-09-11T13:16:00.000Z	dfletcher	Ninesvnsicks	sticking " >> /dev/null 2>&1" after some command will send all the output to nowhere :)
+2007-09-11T13:16:00.000Z	Ninesvnsicks		so just add >> /dev/null 2>&1 to the end of the wine commands?
+2007-09-11T13:16:00.000Z	dfletcher	Ninesvnsicks	yeah
+2007-09-11T13:16:00.000Z	Ninesvnsicks		kewl
+2007-09-11T13:18:00.000Z	Ninesvnsicks	dfletcher	so for echo does it need the quotes also?
+2007-09-11T13:19:00.000Z	Ninesvnsicks	dfletcher	jsut wanna double check
+2007-09-11T13:19:00.000Z	dfletcher	Ninesvnsicks	it's good practice but not really necessary. your words become arguments to echo, but if you quote it you only send 1 arg. also, sometimes wierd chars can cause trouble. best quote it
+2007-09-11T13:19:00.000Z	Ninesvnsicks	dfletcher	oh ok
+2007-09-11T13:20:00.000Z	Ninesvnsicks	dfletcher	well I copied the windows script and substituded linux commands basically
+2007-09-11T13:20:00.000Z	Ninesvnsicks	dfletcher	so hopefully it should work
+2007-09-11T13:24:00.000Z	Ninesvnsicks	dfletcher	whats unterminated quoted string mean?
+2007-09-11T13:25:00.000Z	dfletcher	Ninesvnsicks	that probably means you forgot an ending quote or tried to put quote chars in your quoted string :P
+2007-09-11T13:25:00.000Z	Ninesvnsicks		I PUT %DATE%
+2007-09-11T13:25:00.000Z	Ninesvnsicks		oops
+2007-09-11T13:26:00.000Z	Ninesvnsicks	dfletcher	hwo do i echo the date and time
+2007-09-11T13:26:00.000Z	Ninesvnsicks	dfletcher	if you know
+2007-09-11T13:26:00.000Z	dfletcher	Ninesvnsicks	just `date` by itself will do that
+2007-09-11T13:26:00.000Z	Ninesvnsicks	dfletcher	 oh ok kewl
+2007-09-11T13:27:00.000Z	Ninesvnsicks	dfletcher	hmm i got the same thing weird
+2007-09-11T13:28:00.000Z	Ninesvnsicks	dfletcher	just echo "words" ?
+2007-09-11T13:28:00.000Z	Ninesvnsicks		Oh
+2007-09-11T13:28:00.000Z	dfletcher	Ninesvnsicks	should be. that's weird
+2007-09-11T13:28:00.000Z	Ninesvnsicks		i bet its the arguments i have for namedate
+2007-09-11T13:29:00.000Z	Ninesvnsicks	dfletcher	wine ./namedate.exe /Z:"Y-m-d H-M-S" "old.log"
+2007-09-11T13:29:00.000Z	Ninesvnsicks		oh i found it
+2007-09-11T13:30:00.000Z	Ninesvnsicks		ok server started
+2007-09-11T13:30:00.000Z	Ninesvnsicks		thats a good sign
+2007-09-11T13:32:00.000Z	Ninesvnsicks	dfletcher	omg i think everything works lol
+2007-09-11T13:32:00.000Z	Ninesvnsicks	dfletcher	except date and time
+2007-09-11T13:32:00.000Z	Ninesvnsicks	dfletcher	for echo
+2007-09-11T13:32:00.000Z	dfletcher	Ninesvnsicks	awesome :)
+2007-09-11T13:32:00.000Z	dfletcher	Ninesvnsicks	well if you want a date in a echo statement, put it in backticks: echo "this is the current date: `date`"  .. that will sub the date in the string
+2007-09-11T13:33:00.000Z	Ninesvnsicks	dfletcher	oh so echo "the server was started at 'date' 'time'" ?
+2007-09-11T13:34:00.000Z	dfletcher	Ninesvnsicks	time doesn't do that :P
+2007-09-11T13:34:00.000Z	dfletcher		but for date, you almost have it --- BACK ticks
+2007-09-11T13:34:00.000Z	Ninesvnsicks	dfletcher	aww u cant do time?
+2007-09-11T13:34:00.000Z	dfletcher	Ninesvnsicks	backticks are under the tilde char - `
+2007-09-11T13:34:00.000Z	dfletcher	Ninesvnsicks	date will output the time
+2007-09-11T13:34:00.000Z	Ninesvnsicks		oh
+2007-09-11T13:34:00.000Z	Ninesvnsicks		the tild
+2007-09-11T13:34:00.000Z	dfletcher	Ninesvnsicks	and you can call it twice with formatting to get a separate date and time
+2007-09-11T13:35:00.000Z	dfletcher	Ninesvnsicks	try `man date` to see how to format, but it's like: date +%Y-%m-%d or something like that
+2007-09-11T13:35:00.000Z	Ninesvnsicks	dfletcher	i jsut want it to say  server started at date and time
+2007-09-11T13:35:00.000Z	dfletcher		lol man date
+2007-09-11T13:35:00.000Z	Ninesvnsicks		oh
+2007-09-11T13:35:00.000Z	Ninesvnsicks	dfletcher	ok so echo "server started `date whatever format`" ?
+2007-09-11T13:35:00.000Z	dfletcher		yes
+2007-09-11T13:35:00.000Z	Ninesvnsicks	dfletcher	kewl
+2007-09-11T13:37:00.000Z	Ninesvnsicks	dfletcher	oh date has time already sweet
+2007-09-11T13:37:00.000Z	dfletcher	Ninesvnsicks	that's what I was saying :P so use a format string to make it say what you want
+2007-09-11T13:38:00.000Z	dfletcher	Ninesvnsicks	or if you're happy with the default then good enough ;)
+2007-09-11T13:40:00.000Z	Ninesvnsicks	dfletcher	how do i rem lines in the script
+2007-09-11T13:40:00.000Z	Ninesvnsicks	dfletcher	for description?
+2007-09-11T13:40:00.000Z	dfletcher	Ninesvnsicks	you mean comments? start the line with # sym
+2007-09-11T13:40:00.000Z	Ninesvnsicks		yea
+2007-09-11T13:40:00.000Z	Ninesvnsicks		ok
+2007-09-11T14:03:00.000Z	Ninesvnsicks	dfletcher	ok this might sound lame but I want to be able to release this to others how should I zip the files?
+2007-09-11T14:05:00.000Z	dfletcher	Ninesvnsicks	cd to the directory above the one you want to archive, then do: tar czvf archivename.tar.gz directory-with-files/
+2007-09-11T14:06:00.000Z	Ninesvnsicks	dfletcher	oh i got it lol
+2007-09-11T14:06:00.000Z	Ninesvnsicks	dfletcher	i jsut right clicked
+2007-09-11T14:06:00.000Z	Ninesvnsicks	dfletcher	i made it tar.gz
+2007-09-11T14:06:00.000Z	dfletcher		hehe thought there might be a right click action Ninesvnsicks ;)
+2007-09-11T14:06:00.000Z	dfletcher		but wasn't positive
+2007-09-11T14:06:00.000Z	Ninesvnsicks	dfletcher	heh
+2007-09-11T14:06:00.000Z	Ninesvnsicks	dfletcher	well thansk for all the help
+2007-09-11T14:07:00.000Z	dfletcher	Ninesvnsicks	noprob. glad it's working for you :)
+2007-09-11T14:07:00.000Z	Ninesvnsicks	dfletcher	is there a buddy list somewhere on here?
+2007-09-11T14:07:00.000Z	dfletcher	Ninesvnsicks	not really you just need to keep track yourself I believe

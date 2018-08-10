@@ -1,0 +1,122 @@
+2010-12-23T12:24:00.000Z	bfri		is there anyone out there that can help me with pinning packages
+2010-12-23T12:24:00.000Z	rs0832	bfri	what kind of help?
+2010-12-23T12:29:00.000Z	rs0832	bfri	keep network manager as it is?
+2010-12-23T12:30:00.000Z	rs0832	bfri	oh
+2010-12-23T22:07:00.000Z	rs0832	bfri	you dont compile tar.gz's
+2010-12-23T22:07:00.000Z	bfri	rs0832	so what do i do to install it
+2010-12-23T22:08:00.000Z	rs0832	bfri	you have to extract it first
+2010-12-23T22:09:00.000Z	rs0832	bfri	it is a compressed archive of source code. But before you attempt to compile, make sure if the program is in the repos
+2010-12-23T22:10:00.000Z	bfri	rs0832	its the program anomos
+2010-12-23T22:11:00.000Z	rs0832	bfri	so its not in the repos?
+2010-12-23T22:12:00.000Z	bfri	rs0832	i dont know how to check that
+2010-12-23T22:12:00.000Z	rs0832	bfri	i cant seem to find it... ok first you need to extract it
+2010-12-23T22:12:00.000Z	bfri	rs0832	did that
+2010-12-23T22:13:00.000Z	rs0832	bfri	in a terminal, cd to the directory
+2010-12-23T22:13:00.000Z	bfri	rs0832	im there
+2010-12-23T22:14:00.000Z	rs0832	bfri	run ./configure
+2010-12-23T22:14:00.000Z	bfri	rs0832	no such file directory
+2010-12-23T22:15:00.000Z	bfri	rs0832	i dont see a .config file
+2010-12-23T22:15:00.000Z	bfri	rs0832	just a 'default_config'
+2010-12-23T22:16:00.000Z	rs0832	bfri	is there a readme or INSTALL file?
+2010-12-23T22:16:00.000Z	bfri	rs0832	yes read me
+2010-12-23T22:17:00.000Z	rs0832	bfri	can you pastebin it?
+2010-12-23T22:22:00.000Z	bfri	rs0832	http://pastebin.com/9rnQcPNE
+2010-12-23T22:24:00.000Z	rs0832	bfri	hold on i m checking
+2010-12-23T22:25:00.000Z	rs0832	bfri	ok.. you dont need to compile
+2010-12-23T22:25:00.000Z	rs0832	bfri	is your terminal still open?
+2010-12-23T22:26:00.000Z	bfri	rs0832	yes
+2010-12-23T22:26:00.000Z	rs0832	bfri	type this - python anondownloadgui.py
+2010-12-23T22:28:00.000Z	bfri	rs0832	name error with anondownloadgui.py
+2010-12-23T22:30:00.000Z	rs0832	bfri	can you pastebin?
+2010-12-23T22:30:00.000Z	rs0832	bfri	i have to go now so will have to be quick
+2010-12-23T22:31:00.000Z	rs0832	bfri	ok wait
+2010-12-23T22:31:00.000Z	rs0832	bfri	in terminal, sudo apt-get install openssl
+2010-12-23T22:31:00.000Z	bfri	rs0832	its coming
+2010-12-23T22:31:00.000Z	rs0832	bfri	and then sudo apt-get install python-m2crypto
+2010-12-23T22:32:00.000Z	rs0832	bfri	then type python anondownloadgui
+2010-12-23T22:32:00.000Z	rs0832	bfri	then type python anondownloadgui.py
+2010-12-23T22:33:00.000Z	bfri	rs0832	http://pastebin.com/kNPbyebm
+2010-12-23T22:34:00.000Z	rs0832	bfri	type python anondownload.py  at once in the terminal and press enter
+2010-12-23T22:34:00.000Z	bfri	rs0832	no such file
+2010-12-23T22:35:00.000Z	rs0832	bfri	are you still in the terminal? in the directory?
+2010-12-23T22:35:00.000Z	rs0832	bfri	yes?
+2010-12-23T22:35:00.000Z	bfri	rs0832	yes i type python
+2010-12-23T22:35:00.000Z	bfri	rs0832	then i have this >>>
+2010-12-23T22:36:00.000Z	rs0832	bfri	no type 'python anondownloadgui.py'
+2010-12-23T22:36:00.000Z	rs0832	bfri	all at the same time. then press enter
+2010-12-23T22:36:00.000Z	bfri	rs0832	invalid syntax
+2010-12-23T22:37:00.000Z	rs0832	bfri	close the terminal
+2010-12-23T22:38:00.000Z	rs0832	bfri	did you close the terminal?
+2010-12-23T22:38:00.000Z	bfri	rs0832	done
+2010-12-23T22:38:00.000Z	rs0832	bfri	now open a new terminal
+2010-12-23T22:38:00.000Z	bfri	rs0832	ok
+2010-12-23T22:39:00.000Z	rs0832	bfri	now right click desktop and select 'create launcher'
+2010-12-23T22:39:00.000Z	bfri	rs0832	ok
+2010-12-23T22:40:00.000Z	rs0832	bfri	now in 'name', type anomos
+2010-12-23T22:40:00.000Z	bfri	rs0832	done
+2010-12-23T22:40:00.000Z	rs0832	bfri	in
+2010-12-23T22:40:00.000Z	bfri	rs0832	?
+2010-12-23T22:41:00.000Z	rs0832	bfri	in 'command' type  this : python ~/Desktop/anomos/anomos/anondownloadgui.py
+2010-12-23T22:41:00.000Z	bfri	rs0832	done
+2010-12-23T22:42:00.000Z	rs0832	bfri	copy and paste exactly as i gave you
+2010-12-23T22:42:00.000Z	bfri	rs0832	done
+2010-12-23T22:42:00.000Z	rs0832	bfri	press 'ok'
+2010-12-23T22:42:00.000Z	bfri	rs0832	done
+2010-12-23T22:43:00.000Z	rs0832	bfri	now double click on the launcher you just created
+2010-12-23T22:43:00.000Z	bfri	rs0832	nothing
+2010-12-23T22:44:00.000Z	rs0832	bfri	in terminal, copy and paste this then : python ~/Desktop/anomos/anomos/anondownloadgui.py
+2010-12-23T22:44:00.000Z	rs0832	bfri	done?
+2010-12-23T22:45:00.000Z	bfri	rs0832	 ImportError: No module named M2Crypto
+2010-12-23T22:45:00.000Z	rs0832	bfri	now in same terminal, type sudo apt-get install python-m2crypto
+2010-12-23T22:46:00.000Z	rs0832	bfri	copy and paste exactly as i have given you
+2010-12-23T22:46:00.000Z	bfri	rs0832	done
+2010-12-23T22:46:00.000Z	rs0832	bfri	press enter.. is it installing?
+2010-12-23T22:46:00.000Z	bfri	rs0832	done
+2010-12-23T22:46:00.000Z	rs0832	bfri	is it installing?
+2010-12-23T22:47:00.000Z	bfri	rs0832	yes its done
+2010-12-23T22:47:00.000Z	rs0832	bfri	now type sudo apt-get install openssl
+2010-12-23T22:48:00.000Z	bfri	rs0832	done
+2010-12-23T22:48:00.000Z	rs0832	bfri	press enter
+2010-12-23T22:48:00.000Z	rs0832	bfri	is it installing?
+2010-12-23T22:48:00.000Z	bfri	rs0832	its installed
+2010-12-23T22:49:00.000Z	rs0832	bfri	now copy paste this in terminal and press enter : python ~/Desktop/anomos/anomos/anondownloadgui.py
+2010-12-23T22:50:00.000Z	bfri	rs0832	ok the program opened
+2010-12-23T22:50:00.000Z	rs0832	bfri	:)
+2010-12-23T22:50:00.000Z	bfri	rs0832	the link still doesnt work
+2010-12-23T22:50:00.000Z	rs0832	bfri	ok.. now NEVER delete the folder 'anomos' from the desktop, ok?
+2010-12-23T22:50:00.000Z	bfri	rs0832	it should right
+2010-12-23T22:51:00.000Z	bfri	rs0832	...ok
+2010-12-23T22:51:00.000Z	rs0832	bfri	hmm type
+2010-12-23T22:51:00.000Z	rs0832	bfri	create a new text file
+2010-12-23T22:51:00.000Z	rs0832	bfri	on a desktop
+2010-12-23T22:52:00.000Z	bfri	rs0832	ok
+2010-12-23T22:53:00.000Z	rs0832	bfri	name it 'anomos.sh'
+2010-12-23T22:54:00.000Z	rs0832	bfri	done?
+2010-12-23T22:54:00.000Z	bfri	rs0832	ok
+2010-12-23T22:55:00.000Z	rs0832	bfri	ok now double click to open it
+2010-12-23T22:55:00.000Z	bfri	rs0832	ok
+2010-12-23T22:56:00.000Z	rs0832	bfri	now copy paste the text from here - http://pastebin.com/4LptRukV
+2010-12-23T22:56:00.000Z	rs0832	bfri	in the opened file
+2010-12-23T22:56:00.000Z	bfri	rs0832	ok
+2010-12-23T22:56:00.000Z	rs0832	bfri	save it
+2010-12-23T22:57:00.000Z	bfri	rs0832	ok
+2010-12-23T22:57:00.000Z	rs0832	bfri	close the file
+2010-12-23T22:57:00.000Z	bfri	rs0832	ok
+2010-12-23T22:57:00.000Z	rs0832	bfri	now right click on the file and click 'properties' then click the 'permissions' tab
+2010-12-23T22:58:00.000Z	bfri	rs0832	ok
+2010-12-23T22:58:00.000Z	rs0832	bfri	an put a check in 'allow executing file as program'
+2010-12-23T22:58:00.000Z	bfri	rs0832	ok
+2010-12-23T22:58:00.000Z	rs0832	bfri	click the close
+2010-12-23T22:59:00.000Z	bfri	rs0832	ok
+2010-12-23T22:59:00.000Z	rs0832	bfri	now double click on the file
+2010-12-23T22:59:00.000Z	bfri	rs0832	amazing
+2010-12-23T23:00:00.000Z	bfri	rs0832	now i have to study this to understand what we did
+2010-12-23T23:00:00.000Z	rs0832	bfri	did it work?
+2010-12-23T23:00:00.000Z	bfri	rs0832	like a charm
+2010-12-23T23:00:00.000Z	rs0832	bfri	great:)
+2010-12-23T23:00:00.000Z	bfri	rs0832	B FREE
+2010-12-23T23:00:00.000Z	bfri	rs0832	B Well
+2010-12-23T23:02:00.000Z	rs0832	bfri	the program is made using python. to run it, we need to use python.. i just automated it using bash :)
+2010-12-23T23:03:00.000Z	bfri	rs0832	thanks
+2010-12-23T23:03:00.000Z	rs0832	bfri	if you need any more help ill be online tomorrow... around 9 hours from now :)
+2010-12-23T23:04:00.000Z	rs0832	bfri	np :)

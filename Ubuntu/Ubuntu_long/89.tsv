@@ -1,0 +1,51 @@
+2009-08-27T03:05:00.000Z	cmp		hello,  i want to know now - this Xchat its about ubuntu ..... who is th supplier and how you work on here - and how people can join your team - and is it free or paid work?
+2009-08-27T03:06:00.000Z	cmp		guys ,  i want to know now - this Xchat its about ubuntu ..... who is th supplier and how you work on here - and how people can join your team - and is it free or paid work?
+2009-08-27T03:07:00.000Z	guntbert	cmp	its not "work" -its service to fellow people - and its unpaid
+2009-08-27T03:15:00.000Z	guntbert	cmp	please keep to the topic of this channel, ask clear questions, tell us what problem you have
+2009-09-02T22:24:00.000Z	guntbert	cmp	have you seen http://ubuntuforums.org/showthread.php?t=1244135 ?
+2009-09-02T22:32:00.000Z	guntbert	cmp	have you seen http://ubuntuforums.org/showthread.php?t=1244135 ? Did it not help?
+2009-09-02T22:34:00.000Z	cmp	guntbert	iam checking it now
+2009-09-02T22:39:00.000Z	cmp	guntbert	every time iam trying to do what i read , while iam reaching the point of add my connection, i recive a window of password to unlock the keyring  - what is keyring ..i want to cancel it
+2009-09-02T22:41:00.000Z	cmp	guntbert	every time iam trying to do what i read , while iam reaching the point of add my connection, i recive a window of password to unlock the keyring  - what is keyring ..i want to cancel it
+2009-09-02T22:42:00.000Z	guntbert	cmp	the key ring keeps your passwords for you, it opens automatically when you log in, but not if you have "auto login" set, you could try just prssing <enter> in that dialog though
+2009-09-02T22:47:00.000Z	cmp	guntbert	iam sorry i lost my connection
+2009-09-02T22:48:00.000Z	guntbert	cmp	the key ring keeps your passwords for you, it opens automatically when you log in, but not if you have "auto login" set, you could try just prssing <enter> in that dialog though
+2009-09-02T22:49:00.000Z	cmp	guntbert	when i press inter - it comes back again
+2009-09-02T22:49:00.000Z	cmp	guntbert	i want to cancel this keyring
+2009-09-02T22:49:00.000Z	guntbert	cmp	do you have autologin set?
+2009-09-02T22:50:00.000Z	cmp	guntbert	yes
+2009-09-02T22:51:00.000Z	guntbert	cmp	ok, try to log out and immediately log in again but with your name and password - that could open the key ring
+2009-09-02T22:52:00.000Z	cmp	guntbert	i dont know how to open the keyring - iam very new in linux - but i can follow you step by step
+2009-09-02T22:53:00.000Z	guntbert	cmp	so log out - log in (but *not* automatically)
+2009-09-02T22:54:00.000Z	cmp	guntbert	when i log out i recive window ( inter your username - and password )
+2009-09-02T22:54:00.000Z	guntbert	cmp	yes, do that please
+2009-09-02T22:55:00.000Z	guntbert	cmp	are you back in your session?
+2009-09-02T22:55:00.000Z	cmp	guntbert	- yes  iam doing it
+2009-09-02T22:58:00.000Z	cmp	guntbert	, i did and iam back
+2009-09-02T22:59:00.000Z	guntbert	cmp	and now go to system/preferences/encryption and... - does it show any keys?
+2009-09-02T23:03:00.000Z	guntbert	cmp	sorry, I have to leave for some time,
+2009-09-02T23:07:00.000Z	cmp	guntbert	ok i opened it
+2009-09-02T23:07:00.000Z	cmp	guntbert	just tell me what to do after i opened it
+2009-09-02T23:27:00.000Z	guntbert	cmp	I'm back - did you get your problem sorted?
+2009-09-02T23:27:00.000Z	cmp	guntbert	not yet
+2009-09-02T23:27:00.000Z	guntbert	cmp	ok, did you open the key ring manager?
+2009-09-02T23:27:00.000Z	cmp	guntbert	mind if PM ?
+2009-09-02T23:28:00.000Z	guntbert	cmp	please keep it in the channel
+2009-09-02T23:28:00.000Z	guntbert	cmp	especially the first sentence from ubottu is important
+2009-09-02T23:30:00.000Z	guntbert	cmp	yes, thats what we are trying to do, so did you open the key ring manager?
+2009-09-02T23:31:00.000Z	guntbert	cmp	good. now look at the tab passwords
+2009-09-02T23:31:00.000Z	guntbert	cmp	there is a line passwords:login
+2009-09-02T23:32:00.000Z	guntbert	cmp	right click on that line, select "change password"
+2009-09-02T23:36:00.000Z	guntbert	cmp	in that dialog type your user password in the first line and leave the other two lines empty - so the keyring has no password from now on (its a security risk, but if you only store your password for mobile...)
+2009-09-02T23:40:00.000Z	guntbert	cmp	did you set "no password" for the key ring?
+2009-09-02T23:42:00.000Z	guntbert	cmp	strange, but now you should be able to just press <enter> and get along
+2009-09-02T23:49:00.000Z	cmp	guntbert	- here is the link - and you will see the window which appears to me http://imagebin.org/62196
+2009-09-02T23:51:00.000Z	guntbert	cmp	ah *that* is the password/PIN you have to give so that vodafone accepts you - you should have got that that from vodafone
+2009-09-02T23:52:00.000Z	guntbert	cmp	and probably the key ring will store that for you, so yo will have to enter it only once
+2009-09-02T23:53:00.000Z	cmp	guntbert	- have you got the pic?
+2009-09-02T23:54:00.000Z	guntbert	cmp	yes, and I answered already some minutes ago :-)
+2009-09-02T23:57:00.000Z	cmp	guntbert	i called Vodafone already and they answered me - NO PASS WORD needed  :(
+2009-09-02T23:58:00.000Z	guntbert	cmp	what happens when you just press <enter>?
+2009-09-02T23:59:00.000Z	guntbert	cmp	sorry, the I don't know - please ask the channel again
+2010-02-17T17:50:00.000Z	guntbert	cmp	cool down please
+2010-02-17T17:50:00.000Z	cmp	guntbert	iam really cool

@@ -1,0 +1,63 @@
+2009-04-30T06:48:00.000Z	XtReMePoIsOn		Hey last night i upgraded my ubuntu theme etc, restarted and it was all working fine right... today after it being off overnight i turn it on and it loads up fine but once u type username and pass to login it only loads the background image and then nothing else.... what could i do to try get it working again? im new to linux so havn't tried any cmd base options
+2009-04-30T06:50:00.000Z	vilemaxim	XtReMePoIsOn	I'm guessing that it a problem with your user configuration files.  to test this you can create another user and try logging in with that
+2009-04-30T06:50:00.000Z	vilemaxim	XtReMePoIsOn	deleteing home will delete call you files
+2009-04-30T06:52:00.000Z	vilemaxim	XtReMePoIsOn	I would create a new dir under you home dir... call it backup.  then mv all dot file... i.e. mkdir ~/backup; mv ~/.* backup
+2009-04-30T06:52:00.000Z	XtReMePoIsOn	vilemaxim	How do i create another user/pass in terminal? Cause obviously with my current setup i cant do much :/
+2009-04-30T06:58:00.000Z	vilemaxim	XtReMePoIsOn	or creating a new user?
+2009-04-30T06:53:00.000Z	vilemaxim	XtReMePoIsOn	control + alt + F1   try login in that way.  sudo adduser
+2009-04-30T06:53:00.000Z	vilemaxim	XtReMePoIsOn	or just mv your . files
+2009-04-30T06:54:00.000Z	vilemaxim	XtReMePoIsOn	if you can login through the the terminal, it's more than likly your dot files
+2009-04-30T06:57:00.000Z	XtReMePoIsOn	vilemaxim	when its starting up it says invalid PGBK link or something similar... it doesn't say it for long but does this help explaining my prob?
+2009-04-30T06:58:00.000Z	vilemaxim	XtReMePoIsOn	never heard of that... is that after moving the dot files?
+2009-04-30T06:58:00.000Z	XtReMePoIsOn	vilemaxim	no ever since i woke up and started it up today
+2009-04-30T06:58:00.000Z	XtReMePoIsOn	vilemaxim	it says that and then something after but i cant see it cos it doesnt stay on the screen for more than a seccond
+2009-04-30T06:59:00.000Z	vilemaxim	XtReMePoIsOn	*Shrug*
+2009-04-30T06:59:00.000Z	XtReMePoIsOn	vilemaxim	even moving the homedir hasn't changed it... i login and theres just nothing on the screen at all
+2009-04-30T07:00:00.000Z	vilemaxim	XtReMePoIsOn	I think you would need to create a new home dir if you moved it.
+2009-04-30T07:00:00.000Z	XtReMePoIsOn	vilemaxim	ok ill try that but im sure that its something more ae :/
+2009-04-30T07:01:00.000Z	vilemaxim	XtReMePoIsOn	could be, but if you are getting a different result after moving the home dir, we don't know how far we can go with a clean user
+2009-04-30T07:05:00.000Z	vilemaxim	XtReMePoIsOn	Asus motherboards?
+2009-04-30T07:05:00.000Z	XtReMePoIsOn	vilemaxim	ok, ive moved my /home/glenn dir and then done a mkdir glenn in the homedir, restarted and logged in but it just loads a blank screen after a login and nothing on it and nothing happening. I cannot understand what would have caused this as all i have done out of the ordinary is install a new theme and then shutdown for the night, booted up today and got this issue...
+2009-04-30T07:06:00.000Z	vilemaxim	XtReMePoIsOn	does glenn own the new home dir?
+2009-04-30T07:06:00.000Z	XtReMePoIsOn	vilemaxim	i havnt done anything other than a mkdir if that answers ur ?
+2009-04-30T07:07:00.000Z	vilemaxim	XtReMePoIsOn	 ls -l /home
+2009-04-30T07:07:00.000Z	vilemaxim	XtReMePoIsOn	who owns  /home/glenn
+2009-04-30T07:07:00.000Z	XtReMePoIsOn	vilemaxim	same as root dir
+2009-04-30T07:07:00.000Z	XtReMePoIsOn	vilemaxim	so i imagine thats owner.
+2009-04-30T07:08:00.000Z	vilemaxim	XtReMePoIsOn	sudo chown -R glenn /home/glenn   then retry logging into the gui
+2009-04-30T07:09:00.000Z	XtReMePoIsOn	vilemaxim	CHOWN invalid user /R
+2009-04-30T07:10:00.000Z	vilemaxim	XtReMePoIsOn	glenn is your user right?
+2009-04-30T07:11:00.000Z	vilemaxim	XtReMePoIsOn	the -R means recursive
+2009-04-30T07:12:00.000Z	vilemaxim	XtReMePoIsOn	if it is not the users dot files we should get the same error that you got before.
+2009-04-30T07:12:00.000Z	XtReMePoIsOn	vilemaxim	ok it logged in this time, with a new background image and sound on login.... although it loads no top/bottom bars or anything it just loads the background image and nothing more.
+2009-04-30T07:13:00.000Z	vilemaxim	XtReMePoIsOn	any error messages?
+2009-04-30T07:14:00.000Z	vilemaxim	XtReMePoIsOn	in the gui hit Atl + F2  if you get a prompt  type in nautilus
+2009-04-30T07:15:00.000Z	XtReMePoIsOn	vilemaxim	as the login?
+2009-04-30T07:15:00.000Z	vilemaxim	XtReMePoIsOn	did it log you out?
+2009-04-30T07:16:00.000Z	vilemaxim	XtReMePoIsOn	in the gui   alt + f2 (no ctrl)
+2009-04-30T07:16:00.000Z	vilemaxim	XtReMePoIsOn	if gnome is running at all, you should get a run dialog
+2009-04-30T07:18:00.000Z	vilemaxim	XtReMePoIsOn	hmmm... drop down to the command line again. sudo aptitude install gnome-desktop-environment
+2009-04-30T07:18:00.000Z	vilemaxim	XtReMePoIsOn	seems like your missing stuff
+2009-04-30T07:20:00.000Z	XtReMePoIsOn	vilemaxim	am i doing anything after this install?
+2009-04-30T07:20:00.000Z	XtReMePoIsOn	vilemaxim	or just a reboot
+2009-04-30T07:25:00.000Z	XtReMePoIsOn	vilemaxim	hmm, i did uninstall quite a bit of 'evolution' things from synaptic last night maybe somehow that deleted the gnome files
+2009-04-30T07:21:00.000Z	vilemaxim	XtReMePoIsOn	I missed something   "or just reboot"
+2009-04-30T07:24:00.000Z	vilemaxim	XtReMePoIsOn	what happened?
+2009-04-30T07:26:00.000Z	XtReMePoIsOn	vilemaxim	should i rm the homedir i made and replace the /home/glenn with the one i moved before if this gnome-desktopp
+2009-04-30T07:26:00.000Z	vilemaxim	XtReMePoIsOn	shouldn't of, but I'm not sure
+2009-04-30T07:27:00.000Z	vilemaxim	XtReMePoIsOn	not yet.... this is cleaner... we can move it back once you are back to normal
+2009-04-30T07:27:00.000Z	vilemaxim	XtReMePoIsOn	oh... then yeah
+2009-04-30T07:27:00.000Z	vilemaxim	XtReMePoIsOn	logout first
+2009-04-30T07:28:00.000Z	XtReMePoIsOn	vilemaxim	just in the command? cause i cant login/logout of the gnome as theres no buttons :/
+2009-04-30T07:29:00.000Z	vilemaxim	XtReMePoIsOn	I think I got confused where you were.  cotrol + alt + backspace
+2009-04-30T07:29:00.000Z	vilemaxim	XtReMePoIsOn	in the gui
+2009-04-30T07:29:00.000Z	vilemaxim	XtReMePoIsOn	that will force X to reload
+2009-04-30T07:30:00.000Z	vilemaxim	XtReMePoIsOn	wait to move home
+2009-04-30T07:30:00.000Z	XtReMePoIsOn	vilemaxim	ok... im getting ahead of where im at sorry, im still 50% on the aptitude install
+2009-04-30T07:30:00.000Z	vilemaxim	XtReMePoIsOn	k
+2009-04-30T07:30:00.000Z	XtReMePoIsOn	vilemaxim	ok i will :)
+2009-04-30T07:44:00.000Z	XtReMePoIsOn	vilemaxim	ok, I done a ctrl+alt+backspace but nothing happend so I done a ctrl+alt+del and restarted.... It seems that repaired my issies :)
+2009-04-30T07:44:00.000Z	vilemaxim	XtReMePoIsOn	great!
+2009-04-30T07:46:00.000Z	XtReMePoIsOn	vilemaxim	how do i swap the /home/glenn folder to be the /home/backup folder? im having a real blank moment
+2009-04-30T07:46:00.000Z	XtReMePoIsOn	vilemaxim	and vice verser on that one
+2009-04-30T07:48:00.000Z	vilemaxim	XtReMePoIsOn	logout of the gui and log in on the terminal.  use mv /home/glenn /home/glenn-fresh; mv /home/backup /home/glenn

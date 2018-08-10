@@ -1,0 +1,76 @@
+2007-04-25T06:21:00.000Z	haru		how do i run two commands in a single statement
+2007-04-25T06:21:00.000Z	jrib	haru	seperate them with a semicolon
+2007-04-25T06:22:00.000Z	jrib	haru	command1 && command2  executes command2 only if command1 is successful.  command1; command2  executes both commands.  It depends on which behavior you want
+2007-04-25T06:24:00.000Z	jrib	haru	why are you running the first one through /bin/sh?
+2007-04-25T06:24:00.000Z	haru	jrib	well its for linpopup.. to recieve messages .. thats whats tehre by default
+2007-04-25T06:25:00.000Z	haru	jrib	this is whats there by default .. message command = /bin/sh -c '/usr/bin/linpopup "%f" "%m" %s; rm %s' &
+2007-04-25T06:25:00.000Z	jrib	haru	you can try it I suppose, but where is this going?  In a launcher?
+2007-04-25T06:26:00.000Z	haru	jrib	samba passes the arguments to linpopup on recieving a winpopup netsend.. which then shows me the message
+2007-04-25T06:26:00.000Z	jrib	haru	I would try:  message command = /bin/sh -c '/usr/bin/linpopup "%f" "%m" %s; rm %s; play /path/to/chimes.wav' &
+2007-04-25T06:26:00.000Z	haru	jrib	will try :)
+2007-04-25T06:32:00.000Z	haru	jrib	for some reason message command = /bin/sh -c 'sox_play /media/System/WINDOWS/Media/chimes.wav' &
+2007-04-25T06:32:00.000Z	haru	jrib	while sox_play /media/System/WINDOWS/Media/chimes.wav does
+2007-04-25T06:32:00.000Z	jrib	haru	give the full path to sox_play
+2007-04-25T06:34:00.000Z	haru	jrib	 message command = /bin/sh -c '/usr/local/bin/sox_play /media/System/WINDOWS/Media/chimes.wav' & doesnt work either
+2007-04-25T06:34:00.000Z	jrib	haru	redirect the output to some file and see if anything interesting happens
+2007-04-25T06:38:00.000Z	haru	jrib	 i'll work on that one.. btw is it possible to configure super + R to bring up panel run application
+2007-04-25T06:42:00.000Z	haru	jrib	thanks.. just what i was looking for
+2007-04-25T06:42:00.000Z	jrib	haru	I don't know the command for the dialog though
+2007-04-25T06:42:00.000Z	haru	jrib	np.. will find that out
+2007-04-25T06:44:00.000Z	jrib	haru	ah, you don't need the command, just edit the write gconf key for the gnome run dialog (http://gnomesupport.org/forums/viewtopic.php?t=44&sid=7cfee39c5671f26bdc90b13a00510fa8 )
+2007-04-25T06:46:00.000Z	haru	jrib	i tried that
+2007-04-25T06:46:00.000Z	haru	jrib	except keyboard shortcuts can be assigned in combination to super key
+2007-04-25T06:46:00.000Z	jrib	haru	didn't work?
+2007-04-25T06:46:00.000Z	haru	jrib	so while super can be used to bring up the menu.. super + R cannot be used
+2007-04-25T06:47:00.000Z	jrib	haru	it can if you use <mod4>r
+2007-04-25T06:48:00.000Z	jrib	haru	/apps/panel/global/run_key
+2007-04-25T06:50:00.000Z	jrib	haru	hmm, the key says it is deprecated though.  I wonder where the setting went...
+2007-04-25T06:50:00.000Z	haru	jrib	i am confused :(
+2007-04-25T06:50:00.000Z	jrib	haru	ah ha: /apps/metacity/global_keybindings/panel_run_dialog
+2007-04-25T06:51:00.000Z	jrib	haru	run gconf-editor in a terminal
+2007-04-25T06:51:00.000Z	haru	jrib	(Y)
+2007-04-25T06:56:00.000Z	jrib	haru	oh, what did you change?
+2007-04-25T06:56:00.000Z	haru	jrib	i cant fiure
+2007-04-25T06:56:00.000Z	jrib	haru	is it actually xterm or gnome-terminal?
+2007-04-25T06:57:00.000Z	jrib	haru	check system > preferences > keyboard shortcuts
+2007-04-25T06:57:00.000Z	haru	jrib	disabled all
+2007-04-25T06:59:00.000Z	haru	jrib	why are there so many places to configure shortcuts :'(
+2007-04-25T07:00:00.000Z	jrib	haru	no one has written a better frontend than "keyboard shortcuts" yet
+2007-04-25T07:07:00.000Z	jrib	haru	so it was always like this and you never noticed? :P
+2007-04-25T07:07:00.000Z	haru	jrib	me nub :'(
+2007-04-25T07:08:00.000Z	haru	jrib	naw.. just installed xbind keys from ubotus link now.. and it screwed things up
+2007-04-25T07:08:00.000Z	jrib	haru	ubotu told you not to do that though :/
+2007-04-25T07:08:00.000Z	haru	jrib	too late :P
+2007-04-25T07:08:00.000Z	haru	jrib	now i need to get my default shortcuts back ... even alt tab doesnt work :P
+2007-04-25T07:12:00.000Z	haru	jrib	ahhh.. gnome didnt think super key would last... hence it cant be made a modifier :@
+2007-04-25T07:13:00.000Z	jrib	haru	I setup windows+r to open the run dialog
+2007-04-25T07:13:00.000Z	haru	jrib	how O_O
+2007-04-25T07:13:00.000Z	jrib	haru	yes, they last key I have you
+2007-04-25T07:14:00.000Z	haru	jrib	<mod4>r ?.. in apps>panels?
+2007-04-25T07:14:00.000Z	jrib	haru	nah, enter 'gconf-editor' in a terminal, then go to /apps/metacity/global_keybindings/panel_run_dialog and set it to <mod4>r .  Assuming that's what xmodmap said your super key was
+2007-04-25T07:14:00.000Z	haru	jrib	or the one in metacity?
+2007-04-25T07:15:00.000Z	haru	jrib	eyye wtg .. it works
+2007-04-25T07:17:00.000Z	jrib	haru	oh i just figured out you can just use <Super> too
+2007-04-25T07:17:00.000Z	haru	jrib	O_O
+2007-04-25T07:17:00.000Z	haru	jrib	is it possible to get all the old shortcuts back?
+2007-04-25T07:18:00.000Z	jrib	haru	idk, you would have to delete the right files I guess
+2007-04-25T07:25:00.000Z	haru	jrib	gconftool-2 --recursive-unset /apps/gnome_settings_daemon/keybindings
+2007-04-25T07:25:00.000Z	haru	jrib	this does it
+2007-04-28T12:09:00.000Z	haru	jrib	how do i disable the network tray icon
+2007-04-28T12:09:00.000Z	jrib	haru	I don't know
+2007-05-20T07:26:00.000Z	jrib	haru	you set permissions using chmod/chgrp just like any other part of /
+2007-05-20T07:27:00.000Z	haru	jrib	i used chmod 777 but it still dint make the mount writable
+2007-05-20T07:27:00.000Z	jrib	haru	you did that after it was mounted?
+2007-05-20T07:28:00.000Z	jrib	haru	ls -ld /path/to/the/mounted/partition      what is the output?
+2007-05-20T07:28:00.000Z	jrib	haru	touch /media/StoraG3/some_random_file_name_that_does_not_exist_there
+2007-05-20T07:29:00.000Z	haru	jrib	this is weird.. i can make files using console.. however the paste option wont turn up in nautilus
+2007-05-20T07:30:00.000Z	jrib	haru	press "reload"
+2007-05-20T07:30:00.000Z	haru	jrib	thanks.. i feel stupid
+2007-05-20T07:30:00.000Z	jrib	haru	well I consider that a bug...
+2007-10-19T02:37:00.000Z	haru	jrib	finally u are here.. i tried compiling the fglrx drivers for x2300 on gutsy, but it gives me a fatal error (no screens found) on running x
+2007-10-19T02:37:00.000Z	haru	jrib	any ideas?
+2007-10-19T02:38:00.000Z	jrib	haru	I've never used ati drivers, were the wiki instructions not helpful?
+2007-10-19T02:39:00.000Z	haru	jrib	i tried installing it from one of the how tos on forum , could u refer me the wiki link?
+2007-10-19T02:39:00.000Z	haru	jrib	thanks a lot
+2007-10-19T10:01:00.000Z	haru	jrib	someone help me fix my gutsy, when it loads instead of that progress bar thingy [usplash] , my screen blinks till it comes to GDM .. how to i change resolutio for usplash??
+2007-10-19T10:02:00.000Z	jrib	haru	/etc/usplash.conf

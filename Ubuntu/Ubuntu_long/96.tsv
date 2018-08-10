@@ -1,0 +1,77 @@
+2004-11-23T11:31:00.000Z	neighborlee		sigh...okay this is weird..trying to run ( just installed latest firefox 1.0 ) firefox and its bringing up a 2x4 window saying: title="&mainWindow.title;"_________________________^ < ??? ;-))sigh
+2004-11-23T11:31:00.000Z	neighborlee		tried with no effect
+2004-11-23T11:31:00.000Z	neighborlee		only way it works is as root
+2004-11-23T11:31:00.000Z	neighborlee		which is kinda bad LOL
+2004-11-23T11:32:00.000Z	neighborlee		not sure other than root
+2004-11-23T11:32:00.000Z	neighborlee		no other users here than root atm anyway
+2004-11-23T11:32:00.000Z	neighborlee		7yes
+2004-11-23T11:33:00.000Z	thoreauputic	neighborlee	did you install it as root? you don't need to you know ( I assume you used the mozilla.org installer)
+2004-11-23T11:33:00.000Z	neighborlee	thoreauputic	I hope I didn't LOL...yeah I used the installer
+2004-11-23T11:35:00.000Z	neighborlee	thoreauputic	to be safe i'll reinstall
+2004-11-23T13:02:00.000Z	thoreauputic	neighborlee	stable= not changing
+2004-12-04T10:26:00.000Z	neighborlee	thoreauputic	lol
+2004-12-29T10:42:00.000Z	thoreauputic	neighborlee	too late - but you weren't condescending at all, as far as I can see
+2004-12-29T10:43:00.000Z	neighborlee	thoreauputic	btw I might seeem hypersensitive myself but I was a bit surprised that ubuntu doesn't install setserial and wvdial as default ;-))
+2004-12-29T10:44:00.000Z	neighborlee	thoreauputic	LOL that my take yes..sad but true prob.
+2004-12-29T10:45:00.000Z	thoreauputic	neighborlee	get your friend to run pppconfig as root
+2004-12-29T10:45:00.000Z	neighborlee	thoreauputic	ok
+2004-12-29T10:46:00.000Z	neighborlee	thoreauputic	its internal
+2004-12-29T10:46:00.000Z	thoreauputic	neighborlee	ah - a winmodem?
+2004-12-29T10:46:00.000Z	neighborlee	thoreauputic	he has three..one is winmodem which I told him to  totally disregard fo rnow LOL..the other is blaster modem with rockwell chipset and other is intel with hayes chipset
+2004-12-29T10:47:00.000Z	thoreauputic	neighborlee	easiest to run pppconfig first and see which one works then (if any)
+2004-12-29T10:48:00.000Z	neighborlee	thoreauputic	ok sounds good
+2005-03-06T12:48:00.000Z	thoreauputic	neighborlee	yes, I see the same thing on gftp when attempting dist-upgrade : something is broken
+2005-03-06T12:48:00.000Z	neighborlee	thoreauputic	oh ok thx ;l-)
+2005-03-06T12:49:00.000Z	neighborlee	thoreauputic	also yeah..I was searching through forum and found someone else with the issue...thx for verification as well
+2005-03-06T12:49:00.000Z	neighborlee	thoreauputic	I think its a plot to get us to use the feature in nautilius LOL
+2005-03-06T12:50:00.000Z	thoreauputic	neighborlee	which feature is that?
+2005-03-07T13:27:00.000Z	thoreauputic	neighborlee	yes, and a dist-upgrade in warty wants to remove gftp
+2005-03-07T13:28:00.000Z	thoreauputic	neighborlee	only the ubuntu supported ones show up, I think
+2005-03-07T13:28:00.000Z	neighborlee	thoreauputic	odd
+2005-03-07T13:28:00.000Z	neighborlee	thoreauputic	ahhh
+2005-03-07T13:28:00.000Z	thoreauputic	neighborlee	stuff from universe etc seems not to in general
+2005-03-07T13:29:00.000Z	neighborlee	thoreauputic	even before I upgraded gftp wouldn't install right
+2005-03-07T13:30:00.000Z	thoreauputic	neighborlee	I think someone has messed with the deps in some od way - only noticed it yesterday
+2005-03-07T13:30:00.000Z	neighborlee	thoreauputic	I think so too yes
+2005-03-07T14:18:00.000Z	thoreauputic	neighborlee	just dragging an image onto the dialogue should work
+2005-03-07T14:19:00.000Z	neighborlee	thoreauputic	nope
+2005-03-07T14:19:00.000Z	thoreauputic	neighborlee	:(
+2005-03-07T14:20:00.000Z	neighborlee	thoreauputic	very odd.its always worked before in warty..hmmmmmm
+2005-03-07T14:20:00.000Z	thoreauputic	neighborlee	the background is part of nauilus (desktop)
+2005-03-07T14:20:00.000Z	neighborlee	thoreauputic	not sure why that would cause it not to work as usual but...
+2005-03-07T14:21:00.000Z	thoreauputic	neighborlee	hmm - maybe try killall nautilus && nautilus to see if it regenerates?
+2005-03-07T14:22:00.000Z	neighborlee	thoreauputic	very odd..k thx that worked...weirdddd
+2005-03-07T14:22:00.000Z	neighborlee	thoreauputic	first time i've seen the background act like that
+2005-03-07T14:22:00.000Z	thoreauputic	neighborlee	bug in nautilus I'd say
+2005-03-07T14:23:00.000Z	thoreauputic	neighborlee	very configurable, has thumbnails, quite quick
+2005-03-07T14:24:00.000Z	neighborlee	thoreauputic	hmm thumbnails huh
+2005-03-07T14:24:00.000Z	neighborlee	thoreauputic	I def. must try it LOL
+2005-03-07T14:25:00.000Z	thoreauputic	neighborlee	it also doesn't pollute my desktop with unwanted windows ;)
+2005-03-07T14:25:00.000Z	neighborlee	thoreauputic	LOL yeah
+2005-04-22T10:24:00.000Z	thoreauputic	neighborlee	use  init=/bin/bash
+2005-04-22T10:25:00.000Z	neighborlee	thoreauputic	?
+2005-04-22T10:27:00.000Z	thoreauputic	neighborlee	sounds obvious I know but - caps lock ?
+2005-04-22T10:27:00.000Z	neighborlee	thoreauputic	nope
+2005-04-22T10:27:00.000Z	neighborlee	thoreauputic	good idea though
+2005-04-22T10:33:00.000Z	thoreauputic	neighborlee	fact is, anyone with access to the machine can do this anyway
+2005-04-22T10:45:00.000Z	neighborlee	thoreauputic	can do what
+2005-04-22T10:46:00.000Z	neighborlee	thoreauputic	you can't just hacjk into a linux machine without a password..and trust me mine is NOT going to be easy to crack..I used 'alpha/numeric' so forget it ;-)\
+2005-04-22T10:46:00.000Z	neighborlee	thoreauputic	not unless the machine isn't 'up2date' ;-))..and mine is baby <G>
+2005-04-22T10:47:00.000Z	thoreauputic	neighborlee	whatever you say - I told a guy on this chan the other day to start in single mode and reset his root pass and he did it  - your mileage may vary
+2005-05-14T09:19:00.000Z	thoreauputic	neighborlee	I'm sure the devs would be happy to look at your apt rewrite ;-)
+2005-05-14T09:19:00.000Z	neighborlee	thoreauputic	LOL
+2005-05-14T09:19:00.000Z	neighborlee	thoreauputic	im sure they would
+2005-06-16T09:25:00.000Z	thoreauputic	neighborlee	google "ubuntu express"
+2005-06-16T09:25:00.000Z	neighborlee	thoreauputic	okay thank you
+2005-06-16T09:26:00.000Z	neighborlee	thoreauputic	so thx
+2005-06-16T09:26:00.000Z	thoreauputic	neighborlee	a live Cd / installer is being worked on
+2005-06-16T09:26:00.000Z	neighborlee	thoreauputic	;-)god bless em
+2005-06-16T09:31:00.000Z	neighborlee	thoreauputic	is there a test for this express yet by chance...
+2005-06-16T09:31:00.000Z	thoreauputic	neighborlee	again, I don't know -n i doubt it
+2005-06-16T09:32:00.000Z	neighborlee	thoreauputic	nice that its being worked on though...very nice and I like the goals
+2005-06-16T09:32:00.000Z	neighborlee	thoreauputic	thx for info
+2005-06-16T09:33:00.000Z	thoreauputic	neighborlee	some early info here (from ubuntu Down Under conference wiki)
+2005-06-16T09:33:00.000Z	neighborlee	thoreauputic	yup first place I went from da google <G>
+2005-06-16T09:33:00.000Z	neighborlee	thoreauputic	thx
+2005-06-16T09:36:00.000Z	neighborlee	thoreauputic	nicely said...ubuntu 'rocks'
+2005-07-03T10:24:00.000Z	thoreauputic	neighborlee	type ` X -version ` to see - I think it's 6.8.2

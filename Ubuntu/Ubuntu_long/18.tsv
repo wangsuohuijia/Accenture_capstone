@@ -1,0 +1,140 @@
+2006-03-09T07:46:00.000Z	biloyp		got disconnected
+2006-03-09T07:47:00.000Z	oskude	biloyp	yup
+2006-03-09T06:51:00.000Z	oskude	biloyp	there are allready floppies for debian... never heard about install floppies for ubuntu...
+2006-03-09T06:52:00.000Z	biloyp	oskude	can I use them install ubuntu
+2006-03-09T06:52:00.000Z	oskude	biloyp	theoretically maybe :)
+2006-03-09T06:53:00.000Z	biloyp	oskude	hmmmm I want to install ubuntu but my pc wont boot from the cd
+2006-03-09T06:53:00.000Z	oskude	biloyp	then you could find a bootlfoppy that boots your cdrom
+2006-03-09T06:54:00.000Z	biloyp	oskude	I am follwoing the instructions off the wiki but am stuck on one point
+2006-03-09T06:54:00.000Z	oskude	biloyp	could you give me the link to that wiki
+2006-03-09T06:55:00.000Z	biloyp	oskude	https://wiki.ubuntu.com/GrubHowto/BootFloppy?highlight=%28BOOT%29
+2006-03-09T06:55:00.000Z	oskude	biloyp	ok, and your stuck where ?
+2006-03-09T06:55:00.000Z	biloyp	oskude	I got to Step 4
+2006-03-09T06:57:00.000Z	oskude	biloyp	hmm
+2006-03-09T06:57:00.000Z	biloyp	oskude	wierd huh
+2006-03-09T06:57:00.000Z	oskude	biloyp	do you get an error message ?
+2006-03-09T06:58:00.000Z	biloyp	oskude	I get this "bash: device: command not found"
+2006-03-09T06:59:00.000Z	oskude	biloyp	and you have "grub >" as your prompt ?
+2006-03-09T06:59:00.000Z	biloyp	oskude	I got "grub#"
+2006-03-09T07:00:00.000Z	oskude	biloyp	funny that you get a bash error under grub... hmm...
+2006-03-09T07:00:00.000Z	oskude	biloyp	wrong
+2006-03-09T07:01:00.000Z	oskude	biloyp	, read the instructions corretcly
+2006-03-09T07:01:00.000Z	biloyp	oskude	now I got it
+2006-03-09T07:01:00.000Z	oskude	biloyp	4. Unmount the floppy (umount /dev/fd0), then start GRUB in interactive mode by typing grub. You will see the GRUB command prompt (grub >), from which you should enter these commands:
+2006-03-09T07:01:00.000Z	biloyp	oskude	ok..ur right
+2006-03-09T07:02:00.000Z	oskude	biloyp	but as its in "list" type (the wiki) they should add that un mount and grub command to the "list"
+2006-03-09T07:02:00.000Z	biloyp	oskude	I missed that gruub
+2006-03-09T07:02:00.000Z	oskude	biloyp	i would have jumnped over that command propably too :=
+2006-03-09T07:02:00.000Z	biloyp	oskude	yeah I was looking for commands in the style like the other. Maybe that should be rewritten
+2006-03-09T07:03:00.000Z	oskude	biloyp	but you get another probmel after this, i dont know howto boot a cdrom from grub :)
+2006-03-09T07:03:00.000Z	biloyp	oskude	yeah I know....another problem to tackle
+2006-03-09T07:05:00.000Z	oskude	biloyp	im googling too as i want to know how its done too :)
+2006-03-09T07:06:00.000Z	biloyp	oskude	ok I am going to the ubuntu forums
+2006-03-09T07:08:00.000Z	oskude	biloyp	found somtehing http://gentoo-wiki.com/TIP_Chainloading_a_bootable_CD-ROM_from_GRUB
+2006-03-09T07:09:00.000Z	biloyp	oskude	ok I am ther
+2006-03-09T07:09:00.000Z	oskude	biloyp	this should be enough http://gentoo-wiki.com/TIP_Chainloading_a_bootable_CD-ROM_from_GRUB#Fast_Method
+2006-03-09T07:10:00.000Z	oskude	biloyp	btw. as it seems so much work, a "pure" grub cant boot cdroms ?!
+2006-03-09T07:11:00.000Z	biloyp	oskude	so I should follow directions from that last link? correct
+2006-03-09T07:12:00.000Z	oskude	biloyp	well, its a little gentoo specific... ill search alittle more
+2006-03-09T07:13:00.000Z	oskude	biloyp	hmmm, http://www.lrz-muenchen.de/~bernhard/grub-chain-cd.html
+2006-03-09T07:14:00.000Z	biloyp	oskude	on my way
+2006-03-09T07:16:00.000Z	oskude	biloyp	if i understand it correctly, you make a boot floppay (as you did), then add that memdisk.bin and sbootmgr.dsk in the floppys /boot/grub/ and add the menu.lst entries
+2006-03-09T07:17:00.000Z	oskude	biloyp	ill go and search for my floppy tray... brb
+2006-03-09T07:18:00.000Z	biloyp	oskude	ok thxs...seems smb is easy to use but never used it
+2006-03-09T07:25:00.000Z	oskude	biloyp	ok, ill go test my boot floppy with my desktop
+2006-03-09T07:26:00.000Z	biloyp	oskude	ok thx
+2006-03-09T07:27:00.000Z	oskude	biloyp	cool, works
+2006-03-09T07:29:00.000Z	oskude	biloyp	just get the memdisk and sbm from http://www.lrz-muenchen.de/~bernhard/grub-chain-cd.html and copy them to floppys /boot/grub and
+2006-03-09T07:29:00.000Z	biloyp	oskude	ok I follw instructs on wiki to make bootable floppy..then follwo ur instructs?
+2006-03-09T07:29:00.000Z	oskude	biloyp	and make a file /boot/grub/menu.lst in the floppy and add the 3lines from http://www.lrz-muenchen.de/~bernhard/grub-chain-cd.html
+2006-03-09T07:30:00.000Z	oskude	biloyp	i made this just before point 4 on the wiki, but do copy normally so i know if it allso works that way
+2006-03-09T07:31:00.000Z	biloyp	oskude	so I should stop at step 4 on wiki?
+2006-03-09T07:31:00.000Z	oskude	biloyp	no do the wiki ready and before unmouning do what i did
+2006-03-09T07:32:00.000Z	biloyp	oskude	ok I will give it a shot
+2006-03-09T07:32:00.000Z	oskude	biloyp	copy the memdisk.bin and sbootmgr.dsk to /media/floppy/boot/grub
+2006-03-09T07:33:00.000Z	biloyp	oskude	ok just to be clear...I follow wiki and stop before step 4?  then follow ur instructs
+2006-03-09T07:33:00.000Z	oskude	biloyp	no, until end of step 4, just before unmounting
+2006-03-09T07:34:00.000Z	oskude	biloyp	i didnt do step 5 and 6
+2006-03-09T07:35:00.000Z	oskude	biloyp	after step 4 "quit" you can star adding the 2 files and menu.lst from http://www.lrz-muenchen.de/~bernhard/grub-chain-cd.html
+2006-03-09T07:36:00.000Z	oskude	biloyp	hups no, you need to unmount before step4, sry
+2006-03-09T07:36:00.000Z	oskude	biloyp	or wait
+2006-03-09T07:36:00.000Z	biloyp	oskude	ok
+2006-03-09T07:36:00.000Z	oskude	biloyp	do it before step 4, i can test it myself later
+2006-03-09T07:37:00.000Z	oskude	biloyp	so we know it should work 100%
+2006-03-09T07:37:00.000Z	biloyp	oskude	ook so I stop at end of step 3 and then follow ur instructions? correct
+2006-03-09T07:37:00.000Z	oskude	biloyp	yup, sec ill write them down for you
+2006-03-09T07:41:00.000Z	oskude	biloyp	here http://pastebin.com/582860
+2006-03-09T07:41:00.000Z	biloyp	oskude	ok thx
+2006-03-09T07:42:00.000Z	oskude	biloyp	step 5 and 6 from wiki you can skip (just dont forget umount after step 4)
+2006-03-09T07:47:00.000Z	biloyp	oskude	ok I followed wiki until end of step 3. Now I follow ur instruction. correct?
+2006-03-09T07:48:00.000Z	biloyp	oskude	ok another dumb question. I am at "/boot/grub# "  can I cut and paste ur commands
+2006-03-09T07:48:00.000Z	oskude	biloyp	i would go to root users home "cd"
+2006-03-09T07:49:00.000Z	biloyp	oskude	ok
+2006-03-09T07:49:00.000Z	oskude	biloyp	i forgot (bookmmark) the wiki, could you post again :)
+2006-03-09T07:54:00.000Z	oskude	biloyp	btw. you dont need to copy the menu.lst and device.map in wiki step 3
+2006-03-09T07:55:00.000Z	biloyp	oskude	i already did it
+2006-03-09T07:55:00.000Z	oskude	biloyp	but i doubt the will "brake" anythings as we overwrite the menu.lst
+2006-03-09T07:55:00.000Z	oskude	biloyp	just make sure you have only the 3 lines in menu.lst
+2006-03-09T07:56:00.000Z	biloyp	oskude	hmmm ok I think
+2006-03-09T07:57:00.000Z	biloyp	oskude	oskude: ook another dumb quesstion. I opened nano. Your instructs say [write] ...do I cut and paste [write]  into nano..or..do I just type iin what u posted under [write] ?
+2006-03-09T07:57:00.000Z	oskude	biloyp	you can paste with shift+insert (gnome terminal)
+2006-03-09T07:58:00.000Z	biloyp	oskude	ok..so I don't actually type in [write] ?  ok stop laughing lol
+2006-03-09T07:58:00.000Z	oskude	biloyp	pasting is allso "writing", the computer writes for you :)
+2006-03-09T08:00:00.000Z	biloyp	oskude	I ctrl/inserted in nano and it is asking me for a file to insert from? damn I feel dumb
+2006-03-09T08:00:00.000Z	oskude	biloyp	shift+insert
+2006-03-09T08:02:00.000Z	biloyp	oskude	"Save modified buffers?"
+2006-03-09T08:03:00.000Z	oskude	biloyp	hmm
+2006-03-09T08:03:00.000Z	oskude	biloyp	then no (n) and write that file again
+2006-03-09T08:05:00.000Z	biloyp	oskude	ok I shift/insert ..now I shift X to exit? or shift O to write out?
+2006-03-09T08:06:00.000Z	oskude	biloyp	ctrl+x for exit, y for yes (writing) and enter
+2006-03-09T08:06:00.000Z	biloyp	oskude	ok cool
+2006-03-09T08:06:00.000Z	oskude	biloyp	your allmost ready :)
+2006-03-09T08:07:00.000Z	biloyp	oskude	yep I will give it a shot and let ya know
+2006-03-09T08:08:00.000Z	oskude	biloyp	i had a "device xxx" error when running the disk, but it worked in the end
+2006-03-09T08:08:00.000Z	biloyp	oskude	ahh ok now I follow step 4 in wiki
+2006-03-09T08:08:00.000Z	oskude	biloyp	yup
+2006-03-09T08:08:00.000Z	oskude	biloyp	dont forget unmount
+2006-03-09T08:08:00.000Z	oskude	biloyp	before step 4
+2006-03-09T08:09:00.000Z	oskude	biloyp	yup
+2006-03-09T08:11:00.000Z	biloyp	oskude	ok i am done..now for the test
+2006-03-09T08:11:00.000Z	oskude	biloyp	good luck :)
+2006-03-09T08:12:00.000Z	oskude	biloyp	and just ignore the device error, you should get a menu with "boot cd" or something like that after the error
+2006-03-09T08:15:00.000Z	biloyp	oskude	the boot floppy worked.but I got a "MEMDISK: Insufficient low memory" msg on the screen.
+2006-03-09T08:15:00.000Z	oskude	biloyp	shit
+2006-03-09T08:17:00.000Z	oskude	biloyp	maybe a newer memdisk file, sec ill search...
+2006-03-09T08:21:00.000Z	oskude	biloyp	hmm, found another "howto" http://puppylinux.org/wikka/BootingFromCD
+2006-03-09T08:21:00.000Z	biloyp	oskude	ok let me check it
+2006-03-09T08:22:00.000Z	oskude	biloyp	this looks easy: if you download the smart boot manager linux binary, sbminst, from http://btmgr.webframe.org/3.6/sbminst, then "sbminst
+2006-03-09T08:23:00.000Z	biloyp	oskude	yeah that does look easy
+2006-03-09T08:23:00.000Z	oskude	biloyp	ill try that sbminst, seec
+2006-03-09T08:28:00.000Z	oskude	biloyp	worked too, but the floppy must have the write "plug" enabled
+2006-03-09T08:35:00.000Z	biloyp	oskude	ook now I got SBMK bad..I am gona throw this pc in the trash
+2006-03-09T08:29:00.000Z	oskude	biloyp	ill do a quick howto :) (if you need)
+2006-03-09T08:29:00.000Z	biloyp	oskude	ok cool
+2006-03-09T08:31:00.000Z	oskude	biloyp	http://pastebin.com/582931
+2006-03-09T08:31:00.000Z	biloyp	oskude	I formatted a new floppy, mke2fs /dev/fd0...then mounted the floppy..I downloaded sbminst and then typed in "sbminst -t us -d /dev/fd0" but got a "sbminst" command not found
+2006-03-09T08:32:00.000Z	oskude	biloyp	you need ./sbmins (as its not in the standard search paths)
+2006-03-09T08:32:00.000Z	oskude	biloyp	./ mean current directory
+2006-03-09T08:32:00.000Z	oskude	biloyp	./ means current directory
+2006-03-09T08:33:00.000Z	biloyp	oskude	ok got it..now to test
+2006-03-09T08:33:00.000Z	oskude	biloyp	with ./sbminst --help you can get info like howto change the "language"
+2006-03-09T08:34:00.000Z	oskude	biloyp	:)
+2006-03-09T08:34:00.000Z	oskude	biloyp	you cant stop the knowledge ;)
+2006-03-09T08:35:00.000Z	oskude	biloyp	and i did that for the first time too :)
+2006-03-09T08:35:00.000Z	oskude	biloyp	hmm
+2006-03-09T08:36:00.000Z	oskude	biloyp	so you dont get any menu where you can select from where to boot ?
+2006-03-09T08:36:00.000Z	biloyp	oskude	this is the specs on my pc..Pentium MMX
+2006-03-09T08:37:00.000Z	oskude	biloyp	please use pastbin for more liners
+2006-03-09T08:37:00.000Z	oskude	biloyp	how big is the hd ?
+2006-03-09T08:38:00.000Z	oskude	biloyp	hmm, in that case i would install debian stable with theis netinstall floppies..
+2006-03-09T08:39:00.000Z	biloyp	oskude	ok I will do that...I will scour deb website for deb install floppies
+2006-03-09T08:39:00.000Z	oskude	biloyp	do you have a network port/card in your laptop ?
+2006-03-09T08:40:00.000Z	oskude	biloyp	you need 5 floppies or so for debians netinstall floppies, got so many =
+2006-03-09T08:40:00.000Z	biloyp	oskude	?
+2006-03-09T08:41:00.000Z	oskude	biloyp	do you have atleast 5 floppies ? (floppies are so rare these days:)
+2006-03-09T08:41:00.000Z	oskude	biloyp	ok, sec ill find you the links
+2006-03-09T08:43:00.000Z	oskude	biloyp	oh its only 4floppies these days: http://http.us.debian.org/debian/dists/sarge/main/installer-i386/current//images/floppy/
+2006-03-09T08:44:00.000Z	oskude	biloyp	heres help howto write those images to floppies: http://www.debian.org/releases/stable/i386/ch04s03.html.en
+2006-03-09T08:44:00.000Z	oskude	biloyp	to debia fund :P
+2006-03-09T08:45:00.000Z	oskude	biloyp	im just helping for free in the excahnge that i get fre help when i need...
+2006-03-09T08:47:00.000Z	oskude	biloyp	ok, so you need the 4 .img and then write them to floppies an boot with the boot.img floppy

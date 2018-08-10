@@ -1,0 +1,46 @@
+2011-01-28T19:01:00.000Z	schnuffle1	Clavin12	open a terminal kill the process doing the upgrade and redo the upgrade from the console
+2011-01-28T19:02:00.000Z	schnuffle1	Clavin12	and use aptitude instaed of apt-get, it deals better with dependecies
+2011-01-28T19:03:00.000Z	schnuffle1	Clavin12	sudo ps aux
+2011-01-28T19:04:00.000Z	schnuffle1	Clavin12	it's important that you continue the upgrade without rebooting to bring your system into a stable configuration
+2011-01-28T19:06:00.000Z	Clavin12	schnuffle1	unfortunately the system is quite slow due to the current upgrade process, and I'm having quite a time getting to the terminal
+2011-01-28T19:30:00.000Z	schnuffle1	Clavin12	 Press Crtl+Alt+F1 to get to the console
+2011-01-28T19:38:00.000Z	schnuffle1	Clavin12	Wait a bit it should show up
+2011-01-28T19:39:00.000Z	schnuffle1	Clavin12	can you reach your pc through ssh?
+2011-01-28T19:40:00.000Z	Clavin12	schnuffle1	I do not know. How might I go about that?
+2011-01-28T19:41:00.000Z	schnuffle1	Clavin12	you need another pc in the same network and try to connect with ssh
+2011-01-28T19:56:00.000Z	Clavin12	schnuffle1	I don't think I'm going to be able to set that up right now
+2011-01-28T19:56:00.000Z	Clavin12	schnuffle1	ssh that is
+2011-01-28T19:56:00.000Z	schnuffle1	Clavin12	still no passwd prompt?
+2011-01-28T19:56:00.000Z	Clavin12	schnuffle1	nope
+2011-01-28T19:57:00.000Z	Clavin12	schnuffle1	btw the computer is free from any documents I might want preserved.
+2011-01-28T19:57:00.000Z	Clavin12	schnuffle1	so I can do possibly destructive things.
+2011-01-28T19:57:00.000Z	schnuffle1	Clavin12	Strange, do Strg+Alt+F2 and try again to login, don't use root as login as it doesn't have a password set
+2011-01-28T19:58:00.000Z	schnuffle1	Clavin12	Ctrl
+2011-01-28T19:58:00.000Z	schnuffle1	Clavin12	On german keyborad it's called Strg :)
+2011-01-28T19:59:00.000Z	Clavin12	schnuffle1	surprisingly responsive, but still no password prompt
+2011-01-28T20:00:00.000Z	Clavin12	schnuffle1	and there is no delay when typing
+2011-01-28T20:00:00.000Z	schnuffle1	Clavin12	Your system seems really broken then
+2011-01-28T20:00:00.000Z	Clavin12	schnuffle1	well the update is still going behind the scenes
+2011-01-28T20:00:00.000Z	Clavin12	schnuffle1	I thinl
+2011-01-28T20:00:00.000Z	schnuffle1	Clavin12	Okay hit Ctrl+Alt+F7 to get back to your graphic session
+2011-01-28T20:05:00.000Z	Clavin12	schnuffle1	ok so now I have nothing, just a black screen
+2011-01-28T20:05:00.000Z	Clavin12	schnuffle1	and now a mouse
+2011-01-28T20:06:00.000Z	Clavin12	schnuffle1	and now the graphical display
+2011-01-28T20:06:00.000Z	Clavin12	schnuffle1	ok I'm back
+2011-01-28T20:06:00.000Z	schnuffle1	Clavin12	if you can't login on the console, I have no idea how to get your system back working, sorry
+2011-01-28T20:09:00.000Z	Clavin12	schnuffle1	what does it mean when an individual window dims?
+2011-01-28T20:15:00.000Z	Clavin12	schnuffle1	well this is interesting.
+2011-01-28T20:16:00.000Z	Clavin12	schnuffle1	I forced it to power down, thinking it would destroy it, but it booted fine.
+2011-01-28T20:16:00.000Z	schnuffle1	Clavin12	Perfect, lucky man
+2011-01-28T20:17:00.000Z	Clavin12	schnuffle1	yup
+2011-01-28T20:18:00.000Z	Clavin12	schnuffle1	so how might I go about updating distros from the command line?
+2011-01-28T20:19:00.000Z	schnuffle1	Clavin12	I prefer doing it on the console, do as you want
+2011-01-28T20:19:00.000Z	schnuffle1	Clavin12	 sudo aptitude dist-upgrade
+2011-01-28T20:19:00.000Z	Clavin12	schnuffle1	thanks!
+2011-01-28T20:20:00.000Z	Clavin12	schnuffle1	this is even more interesting. Under about ubuntu it tells me i'm using 11.04 natty narwhall
+2011-01-28T20:20:00.000Z	schnuffle1	Clavin12	So you didn't upgrade to maverick but to 11.04
+2011-01-28T20:21:00.000Z	Clavin12	schnuffle1	Apparently
+2011-01-28T20:21:00.000Z	Clavin12	schnuffle1	at least the about ubuntu dialogue did
+2011-01-28T20:23:00.000Z	Clavin12	schnuffle1	I am now performing a partial upgrade as recommended by the update manager
+2011-01-28T20:23:00.000Z	Clavin12	schnuffle1	I think I can take it from here now. Thanks!
+2011-01-28T20:23:00.000Z	schnuffle1	Clavin12	 your welcome

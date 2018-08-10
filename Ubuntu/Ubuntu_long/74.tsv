@@ -1,0 +1,80 @@
+2007-04-27T05:49:00.000Z	patrick_	martin	install the Gnome ALSA Mixer and check to see if the "surround" slider is up or down or muted
+2007-04-27T05:49:00.000Z	martin	patrick_	what do you mean by install? Ubuntu doesn't come with it?
+2007-04-27T05:50:00.000Z	patrick_	martin	well it has a cli version
+2007-04-27T05:50:00.000Z	patrick_	martin	type into a terminal "alsamixer" then hit enter
+2007-04-27T05:51:00.000Z	patrick_	martin	nice one :)
+2007-04-27T05:52:00.000Z	martin	patrick_	but I still don't know what to do to get the sound going
+2007-04-27T05:52:00.000Z	patrick_	martin	what is the Surround slider at
+2007-04-27T05:53:00.000Z	patrick_	martin	use the arrow keys to turn that up then test sound
+2007-04-27T05:56:00.000Z	patrick_	martin	did you change the surround value??
+2007-04-27T05:56:00.000Z	martin	patrick_	Yes
+2007-04-27T05:58:00.000Z	martin	patrick_	I have switched every option i can find to ALSA (instead of OSS or whatever) and made sure my volumes are up.
+2007-04-27T05:58:00.000Z	patrick_	martin	try installing the gnome alsa mixer to see if that'll aid you
+2007-04-27T06:00:00.000Z	martin	patrick_	Do you know how I can get my resolution to 1280x800 ?
+2007-04-27T06:01:00.000Z	patrick_	martin	yeah, "gksudo gedit /etc/X11/xorg.conf" then you can add it under the appropriate section
+2007-04-27T06:02:00.000Z	martin	patrick_	I'm just worried that the reason the resolution isn't showing up in the first place is because the proper drivers are installed. This probably isn't the case though, is it?
+2007-04-27T06:03:00.000Z	patrick_	martin	this should be fine
+2007-04-27T06:05:00.000Z	patrick_	martin	how you gettin on?
+2007-04-27T06:05:00.000Z	martin	patrick_	I'm frustrated lol. The correction resolutions seem to already be set. They're just not showing up in the Screen Resolutions dialog
+2007-04-27T06:06:00.000Z	patrick_	martin	what you could do is remove the rest and leave only the one you want
+2007-04-27T06:06:00.000Z	martin	patrick_	actually believe it or not that is already the case
+2007-04-27T06:06:00.000Z	patrick_	martin	???
+2007-04-27T06:07:00.000Z	patrick_	martin	very strange....which laptop are you using
+2007-04-27T06:08:00.000Z	patrick_	martin	could you paste the contents of your xorg.conf
+2007-04-27T06:08:00.000Z	patrick_	martin	use ubuntu pastebin
+2007-04-27T06:12:00.000Z	patrick_	martin	that chipset is normally ready to go right out of the box, have you changed anything that may have effected your display
+2007-04-27T06:16:00.000Z	patrick_	martin	i think I got it
+2007-04-27T06:17:00.000Z	patrick_	martin	ok "sudo aptitude install 915resolution" then follow the X Server part of this guide http://www.math.dartmouth.edu/~sarunas/D620F6.html
+2007-04-27T06:17:00.000Z	patrick_	martin	gimme a shout if you have any trouble
+2007-04-27T06:18:00.000Z	martin	patrick_	I have a questionb
+2007-04-27T06:18:00.000Z	patrick_	martin	shoot
+2007-04-27T06:19:00.000Z	patrick_	martin	you will get used to the command line quicker than you think, its all learning by doing
+2007-04-27T06:19:00.000Z	patrick_	martin	plus you have this channel to help you along the way
+2007-04-27T06:21:00.000Z	patrick_	martin	once your in full working order then the real fun begins
+2007-04-27T06:24:00.000Z	martin	patrick_	JUST the X Server part?
+2007-04-27T06:25:00.000Z	patrick_	martin	yes, I will go through it with you
+2007-04-27T06:26:00.000Z	patrick_	martin	now did you install the 915resolution package?
+2007-04-27T06:27:00.000Z	martin	patrick_	Yes. I'm trying to change the text file but it's read only and I dont have permission to change that
+2007-04-27T06:28:00.000Z	patrick_	martin	then do "gksudo gedit /etc/default/915resolution" and enter the values on that guide but only with your 1280x800
+2007-04-27T06:29:00.000Z	martin	patrick_	gksudo gedit allows you to edit system files I guess?
+2007-04-27T06:30:00.000Z	martin	patrick_	anyway I did what you said.
+2007-04-27T06:30:00.000Z	patrick_	martin	gksudo is to run graphical apps as root user
+2007-04-27T06:31:00.000Z	patrick_	martin	now save that file and restart X using ctrl + alt + backspace
+2007-04-27T06:40:00.000Z	martin	patrick_	!!!!!!!!
+2007-04-27T06:40:00.000Z	patrick_	martin	hey how is things
+2007-04-27T06:40:00.000Z	martin	patrick_	sound and resolution are perfect
+2007-04-27T06:41:00.000Z	patrick_	martin	excellent stuff :)
+2007-04-27T06:42:00.000Z	patrick_	martin	oops sorry, must have come as a shock
+2007-04-27T06:43:00.000Z	patrick_	martin	great to see your functional now.. :)
+2007-04-27T06:44:00.000Z	patrick_	martin	is there anything else I could help with?
+2007-04-27T06:44:00.000Z	martin	patrick_	is there anything like clear type? some of the fonts look bad in certain places
+2007-04-27T06:45:00.000Z	patrick_	martin	yes
+2007-04-27T06:45:00.000Z	patrick_	martin	go to fonts in system > preferences
+2007-04-27T06:46:00.000Z	patrick_	martin	cool
+2007-04-27T06:52:00.000Z	patrick_	martin	did you get help with the touchpad?
+2007-04-27T06:53:00.000Z	patrick_	martin	install touchpad from the add/remove
+2007-04-27T06:55:00.000Z	patrick_	martin	sudo aptitude install touchpad
+2007-04-27T06:56:00.000Z	martin	patrick_	it's done.
+2007-04-27T06:57:00.000Z	patrick_	martin	ok, then go to system > preferences > touchpad
+2007-04-27T06:57:00.000Z	martin	patrick_	I don't see anything like that
+2007-04-27T06:58:00.000Z	patrick_	martin	ok you need to enable the repos
+2007-04-27T06:59:00.000Z	patrick_	martin	so go to System > Administration > Software Sources
+2007-04-27T06:59:00.000Z	patrick_	martin	then enable Multiverse and Universe
+2007-04-27T07:00:00.000Z	martin	patrick_	, they were enabled. main wasn't.
+2007-04-27T07:02:00.000Z	patrick_	martin	whats the progress
+2007-04-27T07:02:00.000Z	martin	patrick_	Well everything is checked now. and still couldn't find package
+2007-04-27T07:03:00.000Z	patrick_	martin	did you reload the repo list, if not then do in terminal "sudo apt-get update"
+2007-04-27T07:03:00.000Z	martin	patrick_	it did reupdate the program list.
+2007-04-27T07:03:00.000Z	patrick_	martin	are you using feisty
+2007-04-27T07:06:00.000Z	patrick_	martin	1 sec
+2007-04-27T07:07:00.000Z	patrick_	martin	sorry my mistake "sudo aptitude install qsynaptics"
+2007-04-27T07:07:00.000Z	martin	patrick_	why q? how did you know
+2007-04-27T07:08:00.000Z	martin	patrick_	, oh btw you were right earlier. It had to do with the surround sound
+2007-04-27T07:09:00.000Z	patrick_	martin	that happened with me too you see :)
+2007-04-27T07:11:00.000Z	martin	patrick_	Looking for the menu
+2007-04-27T07:12:00.000Z	patrick_	martin	System>Preferences>TouchPAd
+2007-04-27T07:12:00.000Z	martin	patrick_	nothing :(
+2007-04-27T07:13:00.000Z	patrick_	martin	press alt+f2 then type "gsynaptics"
+2007-04-27T07:16:00.000Z	martin	patrick_	weird. the software loads but everything is greyed and there is a message to install the touchpad drivers
+2007-04-27T07:17:00.000Z	patrick_	martin	ok, then try following this guide https://help.ubuntu.com/community/SynapticsTouchpad?highlight=%28SynapticsTouchpad%29#head-0e27f0075c9aa03c2cefaf4120e0accd6fadd0d8
+2007-04-27T07:45:00.000Z	patrick_	martin	no probs

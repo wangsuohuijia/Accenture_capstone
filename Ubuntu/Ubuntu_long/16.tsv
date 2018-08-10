@@ -1,0 +1,140 @@
+2006-07-02T09:40:00.000Z	tanlaan		does anyone know if scripts are aloud to be put into sessionstartup?
+2006-07-02T09:41:00.000Z	tanlaan		does anyone know if scripts are aloud to be put into sessionstartup?
+2006-07-02T09:43:00.000Z	tanlaan		does anyone know if scripts are aloud to be put into sessionstartup?
+2006-07-02T09:45:00.000Z	tanlaan		does anyone know if scripts are aloud to be put into sessionstartup?
+2006-07-02T09:46:00.000Z	ic56	tanlaan	in unix systems, scripts can go anywhere binaries go.  So the answer is yes.
+2006-07-02T09:48:00.000Z	ic56	tanlaan	where exactly are you putting the script?
+2006-07-02T09:50:00.000Z	ic56	tanlaan	in terminal, there is no need to cd to the script's location.
+2006-07-02T09:50:00.000Z	ic56	tanlaan	I'm not a GUI person, I cannot answer that part of your question.
+2006-07-02T09:51:00.000Z	ic56	tanlaan	by specifying its location on the command line.
+2006-07-02T09:51:00.000Z	ic56	tanlaan	 Give me the specifics and I'll give you an example.
+2006-07-02T09:52:00.000Z	ic56	tanlaan	 Give me the specifics and I'll give you an example.
+2006-07-02T09:54:00.000Z	ic56	tanlaan	what is your current directory in the Terminal?  Use "pwd" to find out.
+2006-07-02T09:55:00.000Z	ic56	tanlaan	ok.  You can execute the script in the following equivalent alternate ways (pick whichever is least typing):  /home/tanlaan/mux2.4/game/Startmux
+2006-07-02T09:55:00.000Z	ic56	tanlaan	~/mux2.4/game
+2006-07-02T09:56:00.000Z	ic56	tanlaan	oops, that should have been: ~/mux2.4/game/Startmux
+2006-07-02T09:56:00.000Z	ic56	tanlaan	mux2.4/game/Startmux
+2006-07-02T09:56:00.000Z	ic56	tanlaan	bash mux2.4/game/Startmux
+2006-07-02T09:56:00.000Z	ic56	tanlaan	that covers the general possibilities.  You can try permutations thereof too
+2006-07-02T09:57:00.000Z	ic56	tanlaan	define "not working".  What is the error message?
+2006-07-02T09:58:00.000Z	ic56	tanlaan	either you are mistyping the name, or you are incorrect about the names of the script.
+2006-07-02T09:59:00.000Z	ic56	tanlaan	and the name of the script?  Try: "ls mux2.f/game"  Is Startmux in there?
+2006-07-02T09:59:00.000Z	ic56	tanlaan	and the name of the script?  Ooops -->Try: "ls mux2.4/game"  Is Startmux in there?
+2006-07-02T10:02:00.000Z	ic56	tanlaan	try ls -lb  Are there any wierd characters in the filename?
+2006-07-02T10:03:00.000Z	ic56	tanlaan	yes that should work too but not any differently than any of the other methods I gave you.  If they didn't work, this won't either.
+2006-07-02T10:03:00.000Z	ic56	tanlaan	paste the one line of ouptut for that file in channel here for me to see.
+2006-07-02T10:04:00.000Z	ic56	tanlaan	ok
+2006-07-02T10:10:00.000Z	ic56	tanlaan	yes? share!
+2006-07-02T10:12:00.000Z	ic56	tanlaan	that's a different error message from before.  What were you doing wrong before?
+2006-07-02T10:13:00.000Z	ic56	tanlaan	good.  now you understand.
+2006-07-02T10:14:00.000Z	ic56	tanlaan	no it doesn't.  What this error message is saying is that you need to supply a configuration file
+2006-07-02T10:15:00.000Z	ic56	tanlaan	the config file must be called mux.config but it doesn't tell you where to put it or what should be in the file.  This is normal.  It means it's time to read the documentation :-)
+2006-07-02T10:17:00.000Z	ic56	tanlaan	did you install it to that location or did you just unpack it there?  Installing is the process of configuring a piece of software with information about the locations of config files, executables, etc.
+2006-07-02T10:20:00.000Z	ic56	tanlaan	if you don't understand the script, post in pastebin.  I'll take a quick look and venture an opinion as to what you've done wrong.
+2006-07-02T10:26:00.000Z	ic56	tanlaan	there's more problems.  It never defines the variable $PIDFILE .  You need define it before invoking the script
+2006-07-02T10:27:00.000Z	ic56	tanlaan	yeah, you can get by without it.  Oh, wait, it's probably being defined inside mux.config  the latter in fact becomes part of your script.
+2006-07-02T10:28:00.000Z	ic56	tanlaan	ok. so you're cool?  all done?
+2006-07-02T10:29:00.000Z	ic56	tanlaan	eh?  Why?
+2006-07-02T10:30:00.000Z	ic56	tanlaan	oh, you must mean for finding mux.config  ok.  Do you speak Bash or is it foreign to you?
+2006-07-02T10:32:00.000Z	ic56	tanlaan	ok.  can you see the changed script?
+2006-07-02T10:33:00.000Z	ic56	tanlaan	76835
+2006-07-02T10:34:00.000Z	ic56	tanlaan	just do this:  mv <wherever mux.config is currently>  ~/.muxrc
+2006-07-02T10:35:00.000Z	ic56	tanlaan	then hmmm, do you want the script in your PATH?  To save you some typing?  Or are you happy invoking it from where it is?
+2006-07-02T10:43:00.000Z	ic56	tanlaan	are you ok with the changed script in pastebin.ca/76835 ?
+2006-07-02T10:48:00.000Z	ic56	tanlaan	ok.  Whatever feels cleanest to you.
+2006-07-02T10:55:00.000Z	ic56	tanlaan	why didn't your way work?!  it's no better or worse than mine
+2006-07-02T10:56:00.000Z	ic56	tanlaan	what exactly did you do?  Don't fly blind.
+2006-07-02T10:57:00.000Z	ic56	tanlaan	the syntax is correct.  but "mud.config" should be mu *x* .config
+2006-07-02T10:58:00.000Z	ic56	tanlaan	if you can't type right, you should *always* cut and paste.
+2006-07-02T11:00:00.000Z	ic56	tanlaan	no, the space is *required*.  The `.' is a verb, the /home/... is it's argument.
+2006-07-02T11:01:00.000Z	ic56	tanlaan	give me more than just "doesn't work".  Your wasting a lot of time with meaningless short answers.  You need to be giving explicit error messages, if you want to get effective help from people here.
+2006-07-02T11:04:00.000Z	ic56	tanlaan	the script couldn't be found is also "didn't work".  Couldn't find the config file is also "didn't work".  You've given us more information -- that's better.
+2006-07-02T11:04:00.000Z	ic56	tanlaan	is it already running?
+2006-07-02T11:04:00.000Z	ic56	tanlaan	pastebin everything.
+2006-07-02T11:07:00.000Z	ic56	tanlaan	you've modified the script.  How do I know you didn't screw up something else, given that you've already shown yourself a bad typist?  Further, I've never seen the config file.  Put that in the pastebin too.  Also, the invocation -- cut and paste what you typed and what got displayed upto and including the subsequent shell prompt.  If there is any additional info pastebin that too -- like how do you know that "it 
+2006-07-02T11:07:00.000Z	ic56	tanlaan	by being lazy about providing us with information, you've wasted what? half an hour? one hour now?
+2006-07-02T11:08:00.000Z	ic56	tanlaan	looking fwd to it
+2006-07-02T11:33:00.000Z	ic56	tanlaan	fyi, the *right* way is:
+2006-07-02T11:14:00.000Z	ic56	tanlaan	looking
+2006-07-02T11:15:00.000Z	ic56	tanlaan	ah.  the config file is also making stupid assumptions.
+2006-07-02T11:16:00.000Z	ic56	tanlaan	if you're in Terminal, copyng should work indiscriminately.  Perhaps mouse button problems?
+2006-07-02T11:17:00.000Z	ic56	tanlaan	pastebin me a listing (ls -l) of the directory containing the sw too.  I have no idea if the config file is refering to stuff that pre-exists or not.
+2006-07-02T11:17:00.000Z	ic56	tanlaan	yes, I meant the client thing
+2006-07-02T11:18:00.000Z	ic56	tanlaan	not familiar with gnome-mud; cannot comment on what should and shouldn't work inside its window.
+2006-07-02T11:23:00.000Z	tanlaan	ic56	did you check it out?
+2006-07-02T11:24:00.000Z	ic56	tanlaan	sorry, I just noticed the pastebin number now. Looking
+2006-07-02T11:24:00.000Z	ic56	tanlaan	I said "ls -l".  Not "ls".  Please pay attention.
+2006-07-02T11:25:00.000Z	ic56	tanlaan	waiting for new pastebin output
+2006-07-02T11:26:00.000Z	ic56	tanlaan	:-) looking
+2006-07-02T11:27:00.000Z	ic56	tanlaan	yeah, whoever wrote this is *really* accustomed to cd'ing to a place before invoking executables.  I'll fix the config file. Hang on.
+2006-07-02T11:29:00.000Z	ic56	tanlaan	I hate this.  I don't want fix it badly.  but with the way you want to invoke it, I must hardcode everything.  If you move it, you'll have re-edit the config file.  You wanna proceed that way or do you wanna fix it right?
+2006-07-02T11:31:00.000Z	ic56	tanlaan	ok.  You understand what needs to be done?  the config file is saying the bin directory (and all the other dirs are in "." (= the current directory).  This means
+2006-07-02T11:32:00.000Z	ic56	tanlaan	you must either cd to the place where that bin is or you must change change the config file to specify an absolute pathname instaed of ./bin
+2006-07-02T11:33:00.000Z	ic56	tanlaan	cool.  Have fun!  You'll learn more.
+2006-07-02T11:35:00.000Z	ic56	tanlaan	have the config file in your homedir, and hardcode the script to look for it there.  then the config file should refer to all the other places with respect to $HOME.  This way, everything is wrt to a system-provided variable -- which is a stable configuration -- even if you re-install and use a different username, it will still work.
+2006-07-02T11:36:00.000Z	ic56	tanlaan	that's the unix way.
+2006-07-02T11:36:00.000Z	ic56	tanlaan	:-)
+2006-07-02T11:37:00.000Z	ic56	tanlaan	mmm which "."?  Give me a line number.  "cat -n" can report line numbers to help you point me in the right direction
+2006-07-02T11:37:00.000Z	ic56	tanlaan	I meant: cat -n <filename>
+2006-07-02T11:39:00.000Z	ic56	tanlaan	"./bin" is just a fancy way of saying "bin"  (though there is a specific context (i.e. when trying to bypass the $PATH) when that fancy way is essential.
+2006-07-02T11:39:00.000Z	ic56	tanlaan	Yes.  your new BIN= looks right
+2006-07-02T11:43:00.000Z	ic56	tanlaan	one more thing: ".conf" is a naming convention used for config files in .../etc directories.  For config files in /home/ic, the convention is to use .<packagename>rc  Either way works, but people have expectations and it makes life easier if things are as people expect them.
+2006-07-02T11:44:00.000Z	ic56	tanlaan	/home/ic -> $HOME
+2006-07-02T11:44:00.000Z	ic56	tanlaan	cool.  Have fun! ttyl
+2006-07-09T16:27:00.000Z	ic56	tanlaan	thinking...
+2006-07-09T16:44:00.000Z	ic56	tanlaan	ok. makes sense.  This will fix it:
+2006-07-09T16:03:00.000Z	ic56	tanlaan	did you spell that error message right?  Please paste the exact text
+2006-07-09T16:06:00.000Z	tanlaan	ic56	pastebinning right now
+2006-07-09T16:06:00.000Z	tanlaan	ic56	http://pastebin.ca/83096
+2006-07-09T16:09:00.000Z	ic56	tanlaan	hmm.  It reports success too
+2006-07-09T16:09:00.000Z	ic56	tanlaan	pastebin the script for me.
+2006-07-09T16:10:00.000Z	tanlaan	ic56	ok
+2006-07-09T16:11:00.000Z	tanlaan	ic56	http://pastebin.ca/83104
+2006-07-09T16:13:00.000Z	tanlaan	ic56	if you missed it http://pastebin.ca/83104
+2006-07-09T16:15:00.000Z	ic56	tanlaan	do this for me and paste here what it reports:  echo $PATH
+2006-07-09T16:18:00.000Z	ic56	tanlaan	also please pastebin for me the output of "ls -lR" from the directory containing the script.
+2006-07-09T16:21:00.000Z	ic56	tanlaan	looking
+2006-07-09T16:24:00.000Z	ic56	tanlaan	hmmm. I wonder if DreamDaemon runs under a uid other than yours.  Let's fix things so they'll work either way.  Do this: chmod 755 host.dmb  Then re-run the script.  Does the error go away or change?
+2006-07-09T16:28:00.000Z	ic56	tanlaan	it doesn't make sense to both exec *and* put in the background.  Modify the last line in the script by removing the first word ("exec").  What happens when you re-reun the script?
+2006-07-09T16:30:00.000Z	tanlaan	ic56	that gets rid of the success part of the error
+2006-07-09T16:30:00.000Z	tanlaan	ic56	but it keeps the cannot execute binary part
+2006-07-09T16:30:00.000Z	ic56	tanlaan	good.  Now we have a simpler situation
+2006-07-09T16:31:00.000Z	ic56	tanlaan	do this for me and paste the output in channel: ls -l `which DreamDaemon`
+2006-07-09T16:37:00.000Z	ic56	tanlaan	one last check -- paste the one line of output here: file `which DreamDaemon`
+2006-07-09T16:38:00.000Z	ic56	tanlaan	hmmm, how about: file `which ./host.dmb`
+2006-07-09T16:42:00.000Z	ic56	tanlaan	ok, two possibilities are arising.  Let's try the easy one first.  Modify the script so that the last line says "./host.dmb" -- i.e. prepend a dot and slash.  Any change?
+2006-07-09T16:43:00.000Z	tanlaan	ic56	still getting the error :(
+2006-07-09T16:46:00.000Z	ic56	tanlaan	Actually, let me rephrase. *modify* the line, changing the "/usr/local/bin/DreamDaemon" to: "/usr/bin/env DreamDaemon"
+2006-07-09T16:47:00.000Z	tanlaan	ic56	what? i didnt get anything past : on your last post
+2006-07-09T16:47:00.000Z	ic56	tanlaan	Modify the line, changing the "/usr/local/bin/DreamDaemon" to: "/usr/bin/env DreamDaemon"
+2006-07-09T16:48:00.000Z	ic56	tanlaan	there's one space in the modified text
+2006-07-09T16:49:00.000Z	ic56	tanlaan	wow! Wow!  you should be editing a different file.  Edit the *first* line of file host.dmb .  Surely that line doesn't contain an ampersand?!
+2006-07-09T16:51:00.000Z	ic56	tanlaan	what error are you getting when you try to edit the file?!
+2006-07-09T16:54:00.000Z	ic56	tanlaan	hmm. in what app are you double-clicking it.  Oh, never mind.  I don't care about your GUI.  Let's get it over with on the CLI.  Tell me what this outputs:  head -1 host.dmb
+2006-07-09T16:56:00.000Z	ic56	tanlaan	your problems are arising from the fact that installed in an unusual place.  You are having to adjust for that.  Ok, runn the following command... hang on
+2006-07-09T16:57:00.000Z	ic56	tanlaan	sed -i '1s|/usr/local/bin/DreamDaemon|/usr/bin/env DreamDaemon|' host.dmb
+2006-07-09T16:58:00.000Z	tanlaan	ic56	ok now should i try running it again?
+2006-07-09T16:58:00.000Z	ic56	tanlaan	yes.
+2006-07-09T16:59:00.000Z	tanlaan	ic56	again i got the cannot execute binary
+2006-07-09T05:00:00.000Z	ic56	tanlaan	let's remove the dot-slash from the reference to host.dmb in host.start script -- put that back the way it was
+2006-07-09T05:00:00.000Z	tanlaan	ic56	ok
+2006-07-09T05:01:00.000Z	tanlaan	ic56	oo i posted in the forums for this software *byond* and i got a responce, they say chmod 777 all the files in the bin directory so i can execute the file
+2006-07-09T05:01:00.000Z	tanlaan	ic56	im going to try that, then your way
+2006-07-09T05:01:00.000Z	tanlaan	ic56	so one second
+2006-07-09T05:01:00.000Z	ic56	tanlaan	ok
+2006-07-09T05:02:00.000Z	tanlaan	ic56	their way didnt work :(
+2006-07-09T05:03:00.000Z	tanlaan	ic56	your way didnt work either :(
+2006-07-09T05:03:00.000Z	ic56	tanlaan	thinking
+2006-07-09T05:04:00.000Z	ic56	tanlaan	have you invoked the setup script, byondsetup.sh ?  Looks like you're supposed to run it at least the first time you install, if not every time you login...
+2006-07-09T05:06:00.000Z	ic56	tanlaan	thinking
+2006-07-09T05:06:00.000Z	tanlaan	ic56	ok
+2006-07-09T05:08:00.000Z	ic56	tanlaan	how many files in that bin directory?
+2006-07-09T05:09:00.000Z	tanlaan	ic56	7
+2006-07-09T05:09:00.000Z	ic56	tanlaan	ok.  let's see them.  pastebin: cd ..; ls -lR
+2006-07-09T05:12:00.000Z	ic56	tanlaan	let's start by cleaning up.  cd to that bin directory and: chmod 755 *; chmod 644 *.so
+2006-07-09T05:13:00.000Z	ic56	tanlaan	btw, I asked you to paste bin from one directory higher.  You realise you're forcing me to keep umpteen windows open with each new pastebin that doesn't contain all the previous stuff?
+2006-07-09T05:15:00.000Z	ic56	tanlaan	Yes please.  While you're at it, appned the output from this too: file bin/*
+2006-07-09T05:15:00.000Z	ic56	tanlaan	what is this Dream package anyway?
+2006-07-09T05:23:00.000Z	ic56	tanlaan	I recommend you report a bug: DreamDaemon doesn't report the filenames of things it has trouble with.  We've been assuming the problem is with host.dmb but it could be something different.  At this point, I'd have to do a lot more work to figure out where the problem is -- I.e. I'd have to start reading DreamDaemon's source, host.dmb's code, etc
+2006-07-09T05:25:00.000Z	ic56	tanlaan	huh.  the possibility of an incorrect architecture was my first thought.  But I had no easy way to replicate that kind of error on my system and dismissed it as unlikely anway.
+2006-07-09T05:25:00.000Z	ic56	tanlaan	yw.

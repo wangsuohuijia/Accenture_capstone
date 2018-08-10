@@ -1,0 +1,140 @@
+2009-05-14T13:24:00.000Z	vertix		can someone tell me how to install ubuntu from .iso image using the loop driver running off liveCD?
+2009-05-14T13:25:00.000Z	ikonia	vertix	the loop driver ?
+2009-05-14T13:26:00.000Z	ikonia	vertix	just boot the livecd - click the "install" option
+2009-05-14T13:27:00.000Z	vertix	ikonia	yep, the loop driver. it is used to mount the image from file without using CD. cause when you run off liveCD you can't use an image and you can't fry it
+2009-05-14T13:28:00.000Z	ikonia	vertix	you need to boot the live cd to install from it
+2009-05-14T13:30:00.000Z	vertix	ikonia	well, there IS a way of doing it without booting from CD. It is called loop driver and that is what I am asking. i can't find that info. I have it somewhere though
+2009-05-14T13:30:00.000Z	ikonia	vertix	you can mount it with a loop back file system with mount -o loop - however as the livecd runs on squash FS it will be unable to install from it
+2009-05-14T13:32:00.000Z	ikonia	vertix	as I said, you can mouont it with a loop back file system, but the livecd's file systems are stored on compressed "squashfs" so you won't be able to use it to install
+2009-05-14T13:32:00.000Z	vertix	ikonia	oh, really? so you are saying there is no way to install ubuntu off of liveCD?
+2009-05-14T13:32:00.000Z	ikonia	vertix	you need to boot it so squashfs uncompresses and mounts
+2009-05-14T13:34:00.000Z	vertix	ikonia	well, i can not fry cd from liveCD. So what do I do to install ubuntu? The only thing i can boot from right now is livecd or old redhat linux (redhat 4 enterprise). is there any way to install in this case? btw, i don't have flash either :(
+2009-05-14T13:34:00.000Z	ikonia	vertix	boot from the livecd
+2009-05-14T13:35:00.000Z	vertix	ikonia	that's what i did. and what do i do next to install from 9.04 image while running from livecd?
+2009-05-14T13:35:00.000Z	ikonia	vertix	the livecd is the install CD
+2009-05-14T13:36:00.000Z	ikonia	vertix	if you can boot the livecd you can install from it
+2009-05-14T13:38:00.000Z	vertix	ikonia	but my livecd is 8.10 and i did the install from it, but after spending a week on it non stop could not make it boot, no matter what i did. Actually, i'd prefer to fix the 8.10 install rather than jumping into more problems with 9.04 install doing it from livecd
+2009-05-14T16:38:00.000Z	ikonia	vertix	you can't
+2009-05-14T16:38:00.000Z	ikonia	vertix	no
+2009-05-14T16:38:00.000Z	vertix	ikonia	it is mountable and i can see the files
+2009-05-14T16:39:00.000Z	ikonia	vertix	you can see the livecd file - not the insall files as they are on squashFS with absoulte paths
+2009-05-14T16:40:00.000Z	ikonia	vertix	you can see the install files ?
+2009-05-14T16:41:00.000Z	vertix	ikonia	that's the whole point of loop driver - i can see EVERYTHING on that .iso image like it is my driver
+2009-05-14T16:41:00.000Z	ikonia	vertix	no it can't
+2009-05-14T16:41:00.000Z	ikonia	vertix	squashFS files are compressed within the iso
+2009-05-14T16:42:00.000Z	vertix	ikonia	we just tested it
+2009-05-14T16:42:00.000Z	ikonia	vertix	so why are you asking if you CAN do this, if you CAN do this why are you not doing it
+2009-05-14T16:43:00.000Z	ikonia	vertix	so why are you asking if you CAN do this, if you CAN do this why are you not doing it
+2009-05-14T16:43:00.000Z	vertix	ikonia	if you know what you are talking about and can help me out to install 9.04 from livecd, fine, otherwise sorry
+2009-05-14T16:45:00.000Z	ikonia	vertix	you're saying you CAN do something, then asking how to do it
+2009-05-14T16:45:00.000Z	ikonia	vertix	if you CAN do it, just do it and stop asking, and then write a wiki guide for it
+2009-05-14T16:45:00.000Z	vertix	ikonia	you can go talk to someone else if you are interested in guilt trips. I said that .iso image IS mountable and i can see files  on it
+2009-05-14T16:45:00.000Z	ikonia	vertix	and as I've explained you won't be able to see the squashFS file systems
+2009-05-14T16:45:00.000Z	ikonia	vertix	you can mount an ISO image - thats fine, but the installation files are held on a squashFS filesystem that is within the ISO file system you have just mounted
+2009-05-14T16:46:00.000Z	vertix	ikonia	i just need to talk to someone who KNOWS how to do it. that's all. who is saying what and why is not my concern
+2009-05-14T16:46:00.000Z	vertix	ikonia	i need to make it WORK, you understand? not argue about and about and about who is "good" and who is "bad"
+2009-05-14T16:49:00.000Z	ikonia	vertix	is it possible he was wrong ?
+2009-05-14T16:49:00.000Z	vertix	ikonia	I AM running from livecd already
+2009-05-14T16:50:00.000Z	ikonia	vertix	so why not click " install" if you are already running from the livecd ?
+2009-05-14T16:51:00.000Z	ikonia	vertix	if you are running from the livecd why don't you click the "install" icon ?
+2009-05-14T16:52:00.000Z	ikonia	vertix	why don't you click "install" if you are running on the livecd ?
+2009-05-14T16:52:00.000Z	ikonia	vertix	the livecd has the installer on it
+2009-05-14T16:52:00.000Z	vertix	ikonia	i DID reinstall it, but it won't boot. someone said yesterday they have the same exact problem with 8.10. that is why i am trying to install 9.04. but i can only boot from livecd
+2009-05-14T16:53:00.000Z	ikonia	vertix	what happens when you try to boot ?
+2009-05-14T16:54:00.000Z	ikonia	vertix	what is the error you get when it tries to mount
+2009-05-14T16:54:00.000Z	vertix	ikonia	just a sec
+2009-05-14T16:56:00.000Z	ikonia	vertix	is the error "sdb" or "sdB" as you typed ?
+2009-05-14T16:56:00.000Z	vertix	ikonia	sdb digit 8
+2009-05-14T16:59:00.000Z	ikonia	vertix	ooh, sdb8  - when you get a chance can you pastebin your /boot/grub/menu.lst from your install (not the livecd)
+2009-05-14T17:00:00.000Z	vertix	ikonia	just a sec
+2009-05-14T17:04:00.000Z	ikonia	vertix	what have you been doing to your box ???
+2009-05-14T17:04:00.000Z	ikonia	vertix	you've got odd kernels in thre
+2009-05-14T17:04:00.000Z	ikonia	vertix	what kernel version are you trying to boot ?
+2009-05-14T17:05:00.000Z	ikonia	vertix	how can you have a 8.10 kernel of 2.6.9-el ?
+2009-05-14T17:05:00.000Z	vertix	ikonia	i tried to make many different configurations. i also have old redhat on it and it is working, but it can't fry cds for some reason
+2009-05-14T17:05:00.000Z	ikonia	vertix	ahhh I think I know the problem
+2009-05-14T17:05:00.000Z	ikonia	vertix	did you install redhat after ubuntu ?
+2009-05-14T17:06:00.000Z	vertix	ikonia	i am trying to boot 8.10 and someone said yesterday they have the same exact problem
+2009-05-14T17:06:00.000Z	ikonia	vertix	which kernel ?
+2009-05-14T17:06:00.000Z	vertix	ikonia	cool
+2009-05-14T17:07:00.000Z	ikonia	vertix	and did you install redhat before or after ubuntu ?
+2009-05-14T17:07:00.000Z	vertix	ikonia	nope redhat was installed BEFORE ubuntu
+2009-05-14T17:07:00.000Z	ikonia	vertix	has ubuntu 8.10 ever booted ?
+2009-05-14T17:08:00.000Z	vertix	ikonia	i think i was able to boot it once, but i don't remember at this point
+2009-05-14T17:08:00.000Z	vertix	ikonia	i usually always verify installs :)
+2009-05-14T17:09:00.000Z	ikonia	vertix	the theory i have - and it is just a theory is ubuntu did not install grub and you are using the Redhat (enterprise 4 I'm guessing) grub install, I do'nt believe from memeory that grub from RHEL4 has uuid support built in
+2009-05-14T17:09:00.000Z	ikonia	vertix	although that does conflict a little with that you say you can boot RHEL ok
+2009-05-14T17:10:00.000Z	vertix	ikonia	nope, this i wrong theory. i am using grub from 8.10
+2009-05-14T17:10:00.000Z	ikonia	vertix	whichi 8.10 kernel are you trying to boot ?
+2009-05-14T17:10:00.000Z	vertix	ikonia	yes, i CAN boot from redhat
+2009-05-14T17:10:00.000Z	vertix	ikonia	2.7.27-7
+2009-05-14T17:11:00.000Z	vertix	ikonia	and that kernel runs fine. otherwise i would not be able to talk to you :)
+2009-05-14T17:12:00.000Z	ikonia	vertix	so ig 2.6.27 works - which one is faiing ?
+2009-05-14T17:12:00.000Z	ikonia	vertix	I thought you where talking to us off the livecd ?
+2009-05-14T17:12:00.000Z	vertix	ikonia	the kernel works. but when it starts booting, it can't MOUNT the perfectly clean root partition in perfectly correct place
+2009-05-14T17:13:00.000Z	ikonia	vertix	ahh ok, why do you have two entries for 2.6.27 one with inirtd and the other without ?
+2009-05-14T17:13:00.000Z	vertix	ikonia	yes, i am talking to you from livecd 8.10 kernel 2.7.27-7-generic
+2009-05-14T17:14:00.000Z	vertix	ikonia	because i was playing with different configurations for grub and seeing if one of the workds
+2009-05-14T17:14:00.000Z	ikonia	vertix	ok, so thats just you manually trying stuff
+2009-05-14T17:14:00.000Z	vertix	ikonia	exactly. so that i don't have to reboot again and again
+2009-05-14T17:15:00.000Z	vertix	ikonia	(from livecd i mean)
+2009-05-14T17:15:00.000Z	ikonia	vertix	at what point does the mount complain, has it done the ro boot, or is it before that  ?
+2009-05-14T17:16:00.000Z	vertix	ikonia	mount complains at this point: [1.536064] RAMDISK: Compressed image found at block 0.
+2009-05-14T17:17:00.000Z	ikonia	vertix	I can understand the VFS error, do you get the crc error if you boot without the initrd option in grub (you've already got that option)
+2009-05-14T17:17:00.000Z	vertix	ikonia	and that file system is clean and is in correct place. that means the driver does not work
+2009-05-14T17:18:00.000Z	vertix	ikonia	i have it somewhere in the logs
+2009-05-14T17:18:00.000Z	ikonia	vertix	well, it can mean that it can't mount it because the initrd is failing, hence why I want to know if the error is identical if you boot without the initrd option in your boot argumetns
+2009-05-14T17:20:00.000Z	vertix	ikonia	but the original grub did not have initrd in it if i recall correctly, i can take that out, but then the scsi drivers may not get loaded
+2009-05-14T17:20:00.000Z	ikonia	vertix	the original grub should have initrd in it
+2009-05-14T17:21:00.000Z	vertix	ikonia	well, i think it did not have initrd in it
+2009-05-14T17:21:00.000Z	vertix	ikonia	but i could be wrong, but i doubt that
+2009-05-14T17:21:00.000Z	ikonia	vertix	then your install media is wrong
+2009-05-14T17:21:00.000Z	ikonia	vertix	well, then you've installed a bad 8.10 release, as the default 8.10 has initrd enabled
+2009-05-14T17:22:00.000Z	vertix	ikonia	yep, the problem with initrd is that i don't even remember where i found it. but i found it somewhere and added it the same way it was done in my redhat, that is what i think happened (its been a week of struggle trying to boot this thing)
+2009-05-14T17:22:00.000Z	ikonia	vertix	there is the problem then
+2009-05-14T17:22:00.000Z	ikonia	vertix	redhat ships with initrd enabled by default
+2009-05-14T17:23:00.000Z	ikonia	vertix	I suggest you have a problem with your install media if ubuntu and redhat setups do not have initrd setup by default
+2009-05-14T17:23:00.000Z	ikonia	vertix	if you don't know where you got the initrd from - then that could explain the crc error
+2009-05-14T17:23:00.000Z	vertix	ikonia	could be. i've got this disk from some friend and it did install and i think i ran it once, but i might have only 1 ide drive at that time and that could be the reason inird was not added to the grub
+2009-05-14T17:24:00.000Z	ikonia	vertix	that would not be the reason initrd is not added
+2009-05-14T17:24:00.000Z	ikonia	vertix	the number of drives does not effect the install routine
+2009-05-14T17:24:00.000Z	vertix	ikonia	i know about redhat. i am the one who made production gold disks for SGI (silicon graphics) :)
+2009-05-14T17:24:00.000Z	ikonia	vertix	then you should know it installs initrd by default
+2009-05-14T17:24:00.000Z	vertix	ikonia	i am pretty certain the crc error is the key here
+2009-05-14T17:25:00.000Z	ikonia	vertix	possibly because you've got initrd from an unknown source
+2009-05-14T17:25:00.000Z	ikonia	vertix	I'm more concerned about the validity of your install if someone is changing them to the point where initrd is not installed
+2009-05-14T17:26:00.000Z	vertix	ikonia	the number of drives DOES affect things, especially if it is a mix of ide and scsi, plus drive swapping by grub
+2009-05-14T17:26:00.000Z	ikonia	vertix	but it does not effect if initrd is installed
+2009-05-14T17:27:00.000Z	vertix	ikonia	at this point, it is hard to say which was the original grub configuration. unfortunately i am not sure i saved the orignal one
+2009-05-14T17:27:00.000Z	ikonia	vertix	doesn't matter what the original was, you seem very confident ubuntu and redhat installed without initrd
+2009-05-14T17:27:00.000Z	ikonia	vertix	so I suspct your installed media is wrong/damaged in some way
+2009-05-14T17:28:00.000Z	vertix	ikonia	well, as i said, i can't be certain what config was there originally. i COULD try to check it out and see by backups, but that could be another half of a day lost
+2009-05-14T17:29:00.000Z	ikonia	vertix	if you re-install ubuntu 8.10 it should re-write grub and the menu.list (remove your old 8.10 entried) lets see what it adds then
+2009-05-14T17:29:00.000Z	vertix	ikonia	nope. redhad installed WITH its initrd, and i am not sure about ubuntu
+2009-05-14T17:29:00.000Z	ikonia	vertix	so - re-install ubuntu and lets check
+2009-05-14T17:30:00.000Z	ikonia	vertix	you're changing your situation a lot, you where certain you manually added redhat and ubuntu's 5 minutes ago
+2009-05-14T17:30:00.000Z	ikonia	vertix	I know it's easy to get muddled up if you've been working on this a while, so why not re-install ubuntu 8.10 from a clean situation and lets see what menu.lst it generates
+2009-05-14T17:31:00.000Z	vertix	ikonia	i don't know about damaged media. could be. actually, i could get md5 verification of my media i think, except i don't have the .iso image. i only have disk 8.10
+2009-05-14T17:32:00.000Z	ikonia	vertix	the 8.10 disk has a "check disk" function on it
+2009-05-14T17:32:00.000Z	vertix	ikonia	i DID reinstall 8.10 and nothing changed. no luck. I have 2 separate 8.10 insalls and both behave the same way more or less
+2009-05-14T17:34:00.000Z	ikonia	vertix	that's worth running, then re-install 8.10 (clear down the ubuntu entreis in menu.lst first) and lets see what it writes
+2009-05-14T17:34:00.000Z	ikonia	vertix	but you don't know wha tyou did - your changing the situation, hence why I'm saying do a clean insall so we know where you are
+2009-05-14T17:34:00.000Z	ikonia	vertix	if you have 2 installs - how do you know your editing the right menu.lst
+2009-05-14T17:34:00.000Z	vertix	ikonia	i did not MANUALLY added redhat initrd. i manually added the ubuntu initrd the same way it was done for redhat's grub
+2009-05-14T17:34:00.000Z	ikonia	vertix	I suggest cd checking the cd - then re-installing 8.10 and just working with that
+2009-05-14T17:36:00.000Z	vertix	ikonia	i DID reinstall 8.10 already and it did not help
+2009-05-14T17:36:00.000Z	ikonia	vertix	in your menu.lst your redhat entries are called ubuntu 8.10 and they do not have initrd entries, so I don't know how you can say you added them like redhat's if the redhat entries don't have the initrd setup
+2009-05-14T17:36:00.000Z	vertix	ikonia	how do i do check disk?
+2009-05-14T17:36:00.000Z	ikonia	vertix	when yo uboot it there is an option to "check install media" or words to that effect
+2009-05-14T17:36:00.000Z	vertix	ikonia	because i have separate /boot partitions and i put all imaginable boot related files on both /boot partitions, so it does not matter which one grub swaps into which place
+2009-05-14T17:36:00.000Z	ikonia	vertix	your setup sounds a mess, and your comments in the channel keep conflicting, you said you did not add the redhat entreis to grub - yet they do no have initrd
+2009-05-14T17:38:00.000Z	vertix	ikonia	those redhat entries do not matter right now. we don't even try them anyway. i was just copy/pasting things around to get more configurations to try various options
+2009-05-14T17:38:00.000Z	ikonia	vertix	they do matter as the conflict with what you are telling me - so I can't be certain you know the current status of your install
+2009-05-14T17:38:00.000Z	ikonia	vertix	if the redhat stuff doesn't matter - I suggest removing your ubuntu and redhat data - and doing a clean 8.10 install so we have a known sound base to work from
+2009-05-14T17:40:00.000Z	vertix	ikonia	i am not sure why are we talking about REDHAT entries? what do they have to do with all this? I CAN boot redhat. i need to boot 8.10 or do a fresh install on 9.04 from .iso image i have, but running from livecd, cause i can't burn disks and i can't take them out running from livecd.
+2009-05-14T17:40:00.000Z	ikonia	vertix	the redhat entreis where important to me because a.) they conflicted with the sitaution you where explaining to me b.) you used them as a base for your ubuntu install
+2009-05-14T17:40:00.000Z	ikonia	vertix	hence why I'm saying remove it all and put a clean 8.10 install on so we have a known base point to work from
+2009-05-14T17:43:00.000Z	vertix	ikonia	redhat entries do not matter. period. i am not even booting from them and they can not be used by grub unless i chose that configuration to boot from. that is what i understand. simply reinstalling 8.10 does not work. because i already did that once and spent half a day on it repartitioning my drives and creating 2 new partitions with another version of non working 8.10. this is a royal waste of time. this approach won't work
+2009-05-14T17:44:00.000Z	ikonia	vertix	I'm asking you to a.) clean down your menu.lst of ubuntu details, b.) re-install ubuntu onto the existing ubuntu partitions chosing the format option, so we have a known base to work from and move forward
+2009-05-14T17:46:00.000Z	ikonia	vertix	that way we can see what ubuntu adds to the exiting menu.lst at boot time and work forward knowing the situation
+2009-05-14T17:46:00.000Z	vertix	ikonia	thanx for your time

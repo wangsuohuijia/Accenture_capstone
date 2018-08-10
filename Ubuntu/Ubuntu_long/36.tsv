@@ -1,0 +1,57 @@
+2010-06-08T11:20:00.000Z	hotfloppy	indus	how to resize all of my desktop icon size ? other than the stretch option..
+2010-06-08T11:21:00.000Z	hotfloppy	indus	how to resize all of my desktop icon size ? other than the stretch option..
+2010-06-08T11:22:00.000Z	indus	hotfloppy	use smaller icons
+2010-06-08T11:22:00.000Z	indus	hotfloppy	smaller icon set i mean
+2010-06-08T11:23:00.000Z	indus	hotfloppy	but iam not much into customization, you can read some online guides
+2010-06-08T11:23:00.000Z	indus	hotfloppy	but unless someone creates a diff size icon, you wont get it
+2010-06-08T11:25:00.000Z	hotfloppy	indus	thanks. i think i should post this issue on Ubuntu brainstorm..
+2010-06-08T11:25:00.000Z	indus	hotfloppy	brainstorm? i dont think this wil be approvied
+2010-06-08T11:28:00.000Z	hotfloppy	indus	really? i think if they implementing the option to easily change the desktop icon size would be nice.. anyways, thanks..
+2010-06-08T11:30:00.000Z	indus	hotfloppy	well, if you mean , the one click will switch between icons of difff sizes, then its easy but if you want something that auto creates a smaller icon instead of stretch, then quite tough
+2010-06-08T11:31:00.000Z	hotfloppy	indus	yes, i want those one click option :) so, will it get approve ?
+2010-06-08T11:32:00.000Z	indus	hotfloppy	how do i know :D
+2010-06-08T11:32:00.000Z	indus	hotfloppy	i dont own canonical :)
+2010-06-08T11:32:00.000Z	hotfloppy	indus	lol
+2010-06-08T11:33:00.000Z	indus	hotfloppy	good lucken
+2010-06-08T11:34:00.000Z	hotfloppy	indus	thanks buddy
+2010-06-08T11:35:00.000Z	indus	hotfloppy	why dont you create a smaller icon set yourself
+2010-06-08T11:35:00.000Z	indus	hotfloppy	using some tool like inkscape,
+2010-06-08T11:35:00.000Z	indus	hotfloppy	but i think you can resize the icons using any graphic tool really, like gimp
+2010-06-08T11:39:00.000Z	hotfloppy	indus	actually, i want the option to resize the icon like in Kubuntu
+2010-06-08T11:39:00.000Z	hotfloppy	indus	or maybe in Windoze
+2010-06-08T11:42:00.000Z	indus	hotfloppy	how is that option
+2010-06-08T11:42:00.000Z	indus	hotfloppy	what can be done in k ubuntu
+2010-06-08T11:45:00.000Z	hotfloppy	indus	in Kubuntu, you can resize all desktop icon size into smaller size with just one option / dialog box..
+2010-06-08T11:46:00.000Z	indus	hotfloppy	i think in ubuntu gconf editor might have a solution
+2010-06-08T11:49:00.000Z	hotfloppy	indus	checking the gconf-editor..
+2010-06-08T11:49:00.000Z	hotfloppy	indus	i'll be back here later..
+2010-06-08T11:50:00.000Z	indus	hotfloppy	someeone has a brainstrom idea
+2010-06-08T11:50:00.000Z	indus	hotfloppy	googled it
+2010-06-08T11:51:00.000Z	hotfloppy	indus	i already search the brainstorm with "icon size" as a keyword, but has no luck..
+2010-06-08T11:52:00.000Z	indus	hotfloppy	http://brainstorm.ubuntu.com/item/12035/
+2010-06-08T11:56:00.000Z	indus	hotfloppy	ok found something
+2010-06-08T11:56:00.000Z	hotfloppy	indus	where is the other solution? :( by reading the comment, everyone suggesting the Nautilus preferences..
+2010-06-08T11:57:00.000Z	hotfloppy	indus	i'm a slow typist..
+2010-06-08T11:57:00.000Z	indus	hotfloppy	yea gconf editor > apps > nautilus > icon view thumbnail size
+2010-06-08T11:57:00.000Z	hotfloppy	indus	i already get the nautilus preferences, but i want to change only the desktop icon size..
+2010-06-08T11:58:00.000Z	indus	hotfloppy	only desktop, hmm
+2010-06-08T11:58:00.000Z	hotfloppy	indus	thats why i said "like the one in Kubuntu"
+2010-06-08T11:58:00.000Z	hotfloppy	indus	in Kubuntu, they change only desktop icon size..
+2010-06-08T11:58:00.000Z	indus	hotfloppy	oh ok
+2010-06-08T11:59:00.000Z	indus	hotfloppy	i guess only solution is manually cchange it
+2010-06-08T11:59:00.000Z	hotfloppy	indus	but i love gnome :-(
+2010-06-08T11:59:00.000Z	hotfloppy	indus	yeap, i thought so..
+2010-06-08T11:59:00.000Z	hotfloppy	indus	thats why people on brainstorm should implement this idea
+2010-06-08T12:00:00.000Z	indus	hotfloppy	well its cosmetic so who knows when they will approve it
+2010-06-08T12:01:00.000Z	hotfloppy	indus	hope they will approve it.. for now, got to do it the hard way..
+2010-06-08T12:01:00.000Z	hotfloppy	indus	anyways, thanks for your help :)
+2010-06-08T12:02:00.000Z	indus	hotfloppy	have  a nice day :)
+2010-06-08T12:02:00.000Z	hotfloppy	indus	yeah, you too :)
+2010-07-08T18:51:00.000Z	indus	hotfloppy	its installed default and is an essential package i believe
+2010-07-08T19:02:00.000Z	hotfloppy	indus	rww: sory to both of you.. i should state 'gtk+ for development' :P
+2010-07-08T19:02:00.000Z	indus	hotfloppy	eh you are the culprit :D
+2010-07-08T19:03:00.000Z	indus	hotfloppy	ah the dev libs
+2010-07-08T19:03:00.000Z	hotfloppy	indus	lol
+2010-07-08T19:03:00.000Z	indus	hotfloppy	yes package exists to install to lucid i think, one fella called lloeb maintains it
+2010-07-08T19:04:00.000Z	indus	hotfloppy	did you get the package name ?
+2010-07-08T19:05:00.000Z	hotfloppy	indus	yeap.. its exists.. will install it tomorrow at office.. my ISP limiting the bandwidth usage :P yeap.. got the lib name already..

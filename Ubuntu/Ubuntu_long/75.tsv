@@ -1,0 +1,78 @@
+2005-12-13T16:32:00.000Z	Cybercool		hello
+2005-12-13T16:32:00.000Z	Cybercool		is there somebody who can help me with printer paper settings???
+2005-12-13T16:34:00.000Z	Cybercool		is there somebody who can help me with printer paper settings???
+2005-12-13T16:34:00.000Z	Cybercool		please!!
+2005-12-13T16:36:00.000Z	Cybercool		is there somebody who can help me with printer paper settings???
+2005-12-13T16:37:00.000Z	soundray	Cybercool	I'll try. What's the problem?
+2005-12-13T16:37:00.000Z	Cybercool	soundray	i want to print a photo (setting 4x6)
+2005-12-13T16:38:00.000Z	Cybercool	soundray	but when i set this size, i doesn't get good on the paper, it only prints at the end of the 4x6 paper
+2005-12-13T16:38:00.000Z	Cybercool	soundray	i don't know why!
+2005-12-13T16:38:00.000Z	soundray	Cybercool	perhaps your placing the paper in the wrong corner?
+2005-12-13T16:39:00.000Z	soundray	Cybercool	print a draft to an A4 sheet, so you know exactly where it will print.
+2005-12-13T16:39:00.000Z	Cybercool	soundray	but, how is that so, this is the good corner
+2005-12-13T16:40:00.000Z	Cybercool	soundray	but it prints also at the end of the page, when the photo paper is almost out of the printer
+2005-12-13T16:40:00.000Z	soundray	Cybercool	which program do you use for printing?
+2005-12-13T16:40:00.000Z	Cybercool	soundray	standard gnome image viewer
+2005-12-13T16:41:00.000Z	soundray	Cybercool	it may be worth leaving the printer settings on standard A4, then open the image in The Gimp, and print from there.
+2005-12-13T16:42:00.000Z	Cybercool	soundray	what are you suspecting?
+2005-12-13T16:42:00.000Z	soundray	Cybercool	Gimp allows you to place the image precisely.
+2005-12-13T16:42:00.000Z	soundray	Cybercool	I'm not suspecting anything. Just suggesting a workaround.
+2005-12-13T16:42:00.000Z	Cybercool	soundray	ok all have to try that
+2005-12-13T16:42:00.000Z	Cybercool	soundray	but i'm not on the computer where de printer was connected to
+2005-12-13T16:43:00.000Z	Cybercool	soundray	if you have a moment, i'll go to the printer and try
+2005-12-13T16:43:00.000Z	soundray	Cybercool	I'll be here for ~ 15 minutes.
+2005-12-13T16:43:00.000Z	Cybercool	soundray	ok
+2005-12-13T16:44:00.000Z	Cybercool	soundray	i'm at the printer now, you say print an a4 with the 4x6 setting in gimp?
+2005-12-13T16:45:00.000Z	soundray	Cybercool	no, use the A4 setting, size the image appropriately in the print dialog and place it in the box according to how you slot in your paper.
+2005-12-13T16:46:00.000Z	soundray	Cybercool	do a draft print to A4 to be sure.
+2005-12-13T16:46:00.000Z	Cybercool	soundray	draft print?
+2005-12-13T16:46:00.000Z	soundray	Cybercool	test print to cheap A4 paper.
+2005-12-13T16:47:00.000Z	soundray	Cybercool	so you know where to place the image in the print dialog.
+2005-12-13T16:47:00.000Z	soundray	Cybercool	leave the printer settings on normal size, but resize the *image* to 4x6.
+2005-12-13T16:47:00.000Z	soundray	Cybercool	you can do that in the print dialogue.
+2005-12-13T16:48:00.000Z	Cybercool	soundray	i have done it, now ill have to print and see if it comes in the beginning of the page
+2005-12-13T16:49:00.000Z	Cybercool	soundray	it's not doing much at all
+2005-12-13T16:50:00.000Z	soundray	Cybercool	you know that you have to set up your printer in the Gimp print dialog?
+2005-12-13T16:51:00.000Z	Cybercool	soundray	what do i have to setup?
+2005-12-13T16:51:00.000Z	Cybercool	soundray	i didn't know, how to setup?
+2005-12-13T16:51:00.000Z	soundray	Cybercool	go through the dialog from top to bottom, put in settings that make sense to you.
+2005-12-13T16:52:00.000Z	Cybercool	soundray	do i have to select a pdd driver? because the printer is not listed
+2005-12-13T16:54:00.000Z	soundray	Cybercool	what driver have you set up outside of Gimp>
+2005-12-13T16:54:00.000Z	Cybercool	soundray	i installed a driver true a installation script i got from a website
+2005-12-13T16:54:00.000Z	Cybercool	soundray	it for a canon 1500
+2005-12-13T16:54:00.000Z	Cybercool	soundray	i have no pdd file
+2005-12-13T16:54:00.000Z	Cybercool	soundray	or is it putted somewhere, so i can select it
+2005-12-13T16:56:00.000Z	Cybercool	soundray	i have found the ppd file
+2005-12-13T16:56:00.000Z	Cybercool	soundray	i try to print now
+2005-12-13T16:56:00.000Z	soundray	Cybercool	okay...
+2005-12-13T16:57:00.000Z	Cybercool	soundray	it doesn't print
+2005-12-13T16:58:00.000Z	Cybercool	soundray	when i load the ppd file, do i have to select a printer, it's now on postscript
+2005-12-13T16:58:00.000Z	Cybercool	soundray	printer model is on postscript
+2005-12-13T16:59:00.000Z	Cybercool	soundray	??
+2005-12-13T16:59:00.000Z	soundray	Cybercool	is your printer listed under Printer Name in the Gimp printing dialog?
+2005-12-13T16:59:00.000Z	Cybercool	soundray	no
+2005-12-13T17:00:00.000Z	Cybercool	soundray	i have loaded the ppd file, al settings for paper anything is for the printere setted up, but i cannot select printer model
+2005-12-14T17:00:00.000Z	soundray	Cybercool	is there anything in Printer Name?
+2005-12-14T17:01:00.000Z	soundray	Cybercool	well, why did you say it wasn't listed?
+2005-12-14T17:02:00.000Z	soundray	Cybercool	anyway, if you have the PPD file, you should be able to print just fine.
+2005-12-14T17:02:00.000Z	Cybercool	soundray	i can't select printer model: it's on postscript
+2005-12-14T17:02:00.000Z	Cybercool	soundray	what should be in command?
+2005-12-14T17:03:00.000Z	soundray	Cybercool	leave that as it was, just point it to the PPD file.
+2005-12-14T17:03:00.000Z	Cybercool	soundray	i did but it doesn't print
+2005-12-14T17:04:00.000Z	soundray	Cybercool	okay, what is in Command right now?
+2005-12-14T17:04:00.000Z	Cybercool	soundray	this is in the command line: lp -s -dPIXMA-iP1500-Ver.2.50 -oraw
+2005-12-14T17:06:00.000Z	soundray	Cybercool	it's hard to diagnose from here.
+2005-12-14T17:06:00.000Z	Cybercool	soundray	i get a printer at te buttom right and there is an task in there, but it just disapears after a minute or so
+2005-12-14T17:07:00.000Z	soundray	Cybercool	if you have Openoffice, you could try and print from Draw - that allows you to resize a picture and place it on the page.
+2005-12-14T17:07:00.000Z	Cybercool	soundray	ok
+2005-12-14T17:08:00.000Z	Cybercool	soundray	how to print from draw in openoffice
+2005-12-14T17:09:00.000Z	soundray	Cybercool	open the image file in Draw. Place the image on the page, print with File - Print.
+2005-12-14T17:12:00.000Z	soundray	Cybercool	you're saying it's working?
+2005-12-14T17:12:00.000Z	Cybercool	soundray	yes it's printing
+2005-12-14T17:12:00.000Z	Cybercool	soundray	it ready
+2005-12-14T17:12:00.000Z	soundray	Cybercool	looking good?
+2005-12-14T17:13:00.000Z	Cybercool	soundray	it's in the corner, but leaving abount 1cm of space on the buttom and 3mm of space on the side
+2005-12-14T17:15:00.000Z	soundray	Cybercool	it's a matter of trying. You could also ring Canon support and give them hell :)  I've done that to them, for not supporting my IP5200R under Linux...
+2005-12-14T17:15:00.000Z	Cybercool	soundray	thanks for you help
+2005-12-14T17:15:00.000Z	Cybercool	soundray	bye
+2005-12-14T17:15:00.000Z	soundray	Cybercool	see ya.

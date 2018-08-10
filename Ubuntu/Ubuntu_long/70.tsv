@@ -1,0 +1,74 @@
+2006-12-17T08:34:00.000Z	cchristianTPclon		I tried, but I saw the time was wrong, so I tried to change it, then it froze...
+2006-12-17T08:35:00.000Z	cchristianTPclon		phlite_kontrol> battery settings
+2006-12-17T08:35:00.000Z	cchristianTPclon		hmmm
+2006-12-17T08:35:00.000Z	cchristianTPclon		ok
+2006-12-17T08:36:00.000Z	cchristianTPclon		now CTRL ALT DEL isn't working...
+2006-12-17T08:36:00.000Z	cchristianTPclon		I'm running it off the CD
+2006-12-17T08:36:00.000Z	cchristianTPclon		trying to install it
+2006-12-17T08:36:00.000Z	cchristianTPclon		along side my windows
+2006-12-17T08:37:00.000Z	cchristianTPclon		I'm using a differewnt computer
+2006-12-17T08:37:00.000Z	cchristianTPclon		it does not work
+2006-12-17T08:37:00.000Z	islan	cchristianTPclon	are you running a LiveCD, or are you using VMWar?
+2006-12-17T08:37:00.000Z	islan	cchristianTPclon	then of course CTRL ALT DEL wont work
+2006-12-17T08:44:00.000Z	islan	cchristianTPclon	there always are
+2006-12-17T08:44:00.000Z	islan	cchristianTPclon	that's why tells are so helpful
+2006-12-17T08:45:00.000Z	islan	cchristianTPclon	if you right-click on a username you can open a dialog window with them as a private or instant message
+2006-12-17T08:47:00.000Z	islan	cchristianTPclon	well still, just use people's names in your messages
+2006-12-17T08:47:00.000Z	islan	cchristianTPclon	much easier to see
+2006-12-17T08:48:00.000Z	islan	cchristianTPclon	how much RAM do you have?
+2006-12-17T08:48:00.000Z	islan	cchristianTPclon	okay, then, what is the problem you are encountering again?
+2006-12-17T08:50:00.000Z	islan	cchristianTPclon	there should be an icon on the desktop I think for the installation
+2006-12-17T08:50:00.000Z	islan	cchristianTPclon	but again, I personally wouldn't recommend using LiveCD for installation, but that's just me
+2006-12-17T08:51:00.000Z	islan	cchristianTPclon	so, are you encountering a problem?
+2006-12-17T08:54:00.000Z	islan	cchristianTPclon	okay...?
+2006-12-17T08:54:00.000Z	islan	cchristianTPclon	yes, it's called dual-booting
+2006-12-17T08:56:00.000Z	islan	cchristianTPclon	please keep typing my name, you just need to type is and then hit tab
+2006-12-17T08:56:00.000Z	islan	cchristianTPclon	okay
+2006-12-17T08:56:00.000Z	cchristianTPclon	islan	ok
+2006-12-17T08:57:00.000Z	cchristianTPclon	islan	now, Resize IDE1 master, partition#1 (hda1) and use free space
+2006-12-17T08:57:00.000Z	cchristianTPclon	islan	use largest continual free space
+2006-12-17T08:58:00.000Z	islan	cchristianTPclon	does it not inform you what your partition currently looks like?
+2006-12-17T08:59:00.000Z	cchristianTPclon	islan	I don't even know what that IS
+2006-12-17T08:59:00.000Z	islan	cchristianTPclon	does it not tell you how many partitions you have the size of each?
+2006-12-17T09:00:00.000Z	cchristianTPclon	islan	no, I don't know what you are talking about
+2006-12-17T09:00:00.000Z	islan	cchristianTPclon	okay, go to manually edit partition table
+2006-12-17T09:01:00.000Z	islan	cchristianTPclon	that should inform you of your partition table
+2006-12-17T09:01:00.000Z	cchristianTPclon	islan	now what, I'm there
+2006-12-17T09:02:00.000Z	islan	cchristianTPclon	what does it say?
+2006-12-17T09:02:00.000Z	cchristianTPclon	islan	which part?
+2006-12-17T09:03:00.000Z	islan	cchristianTPclon	it should make mention of hda1, etc
+2006-12-17T09:03:00.000Z	islan	cchristianTPclon	how many hda's are ther?
+2006-12-17T09:04:00.000Z	cchristianTPclon	islan	now what
+2006-12-17T09:04:00.000Z	islan	cchristianTPclon	it says the symbol ? under size, or is that just ther?
+2006-12-17T09:05:00.000Z	cchristianTPclon	islan	 no symbol, just   nn.nn GiB
+2006-12-17T09:05:00.000Z	cchristianTPclon	islan	n being a number
+2006-12-17T09:05:00.000Z	islan	cchristianTPclon	oh, okay, how big is hda1 and hda2?
+2006-12-17T09:08:00.000Z	islan	cchristianTPclon	I take it you want Ubuntu to run in the second partition, then?
+2006-12-17T09:08:00.000Z	islan	cchristianTPclon	hda1 should be windows, and should be partitioned as FAT32, while hda2 is unallocated or freespace, yes?
+2006-12-17T09:09:00.000Z	cchristianTPclon	islan	I guess so....  along side windows?  same files?
+2006-12-17T09:09:00.000Z	islan	cchristianTPclon	what is hda1?
+2006-12-17T09:10:00.000Z	cchristianTPclon	islan	hda1 is ntfs
+2006-12-17T09:11:00.000Z	islan	cchristianTPclon	ah, right, I'm sorry:  NTFS is Windows
+2006-12-17T09:11:00.000Z	islan	cchristianTPclon	but you are not using the second partition, right?
+2006-12-17T09:12:00.000Z	islan	cchristianTPclon	ah
+2006-12-17T09:12:00.000Z	islan	cchristianTPclon	I wonder what's in there...
+2006-12-17T09:13:00.000Z	islan	cchristianTPclon	I can't really tell you what the second partition is I'm afraid
+2006-12-17T09:13:00.000Z	cchristianTPclon	islan	fat32
+2006-12-17T09:13:00.000Z	islan	cchristianTPclon	I know what filesystem type it is, but do you know what's on it?
+2006-12-17T09:14:00.000Z	cchristianTPclon	islan	can I make a new ine
+2006-12-17T09:14:00.000Z	islan	cchristianTPclon	as in, might it be a swap partition or might there have been another Linux OS installed prior...
+2006-12-17T09:14:00.000Z	islan	cchristianTPclon	I really can't say, I don't know how to mount filesystems in Windows, only in Linux
+2006-12-17T09:14:00.000Z	cchristianTPclon	islan	never installed linux before
+2006-12-17T09:15:00.000Z	islan	cchristianTPclon	I know, but since you only have windows installed, you can only use windows to check the partition
+2006-12-17T09:16:00.000Z	islan	cchristianTPclon	do you have any unallocated memory (ie, is freespace)
+2006-12-17T09:17:00.000Z	islan	cchristianTPclon	it should tell you on the partition table
+2006-12-17T09:18:00.000Z	islan	cchristianTPclon	just because you have freespace on your windows partition does not mean you have freespace outside of that partition
+2006-12-17T09:18:00.000Z	islan	cchristianTPclon	you will have to resize the windows partition in order to get that space
+2006-12-17T09:18:00.000Z	cchristianTPclon	islan	tell me how
+2006-12-17T09:18:00.000Z	islan	cchristianTPclon	did you run Defrag on your windows partition before trying to do this?
+2006-12-17T09:19:00.000Z	islan	cchristianTPclon	I'd recommend that you do it again
+2006-12-17T09:20:00.000Z	islan	cchristianTPclon	you see, when you resize a partition, it has a chance to delete files from it
+2006-12-17T09:20:00.000Z	islan	cchristianTPclon	defragging helps keep that chance low
+2006-12-17T09:21:00.000Z	cchristianTPclon	islan	I defrag and resize?
+2006-12-17T09:21:00.000Z	islan	cchristianTPclon	yes
+2006-12-17T09:22:00.000Z	islan	cchristianTPclon	yes

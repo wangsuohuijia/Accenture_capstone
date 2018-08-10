@@ -1,0 +1,76 @@
+2012-10-11T00:52:00.000Z	dariushall21		Hey guys, every time I try and install any packages they fail, they all get an error similar to this: http://paste.ubuntu.com/1272000/
+2012-10-11T00:54:00.000Z	crazydip	dariushall21	did you recently upgrade/install compiz-plugins-main-default? and like gordonjcp said, more info will help a lot
+2012-10-11T00:55:00.000Z	dariushall21	crazydip	No I haven't done anything with this computer, it doesn't have any programs installed on it other than Firefox. I've never tried installing things before.
+2012-10-11T00:58:00.000Z	crazydip	dariushall21	try this: sudo apt-get clean
+2012-10-11T00:59:00.000Z	dariushall21	crazydip	after that, run the upgrade again?
+2012-10-11T00:59:00.000Z	crazydip	dariushall21	then try :  sudo apt-get -s install -f
+2012-10-11T00:59:00.000Z	crazydip	dariushall21	and then show us the output
+2012-10-11T01:00:00.000Z	crazydip	dariushall21	no don't run upgrade run what i typed above and show us the output
+2012-10-11T01:00:00.000Z	dariushall21	crazydip	http://paste.ubuntu.com/1272020/
+2012-10-11T01:02:00.000Z	dariushall21	crazydip	should I try what valnour said?
+2012-10-11T01:04:00.000Z	crazydip	dariushall21	first do: "sudo apt-get autoremove" then "sudo apt-get autoclean" then "sudo apt-get -s upgrade" and show the output of that
+2012-10-11T01:04:00.000Z	crazydip	dariushall21	btw the -s flag in apt-get is for simulate which means it will run a simulation
+2012-10-11T01:06:00.000Z	dariushall21	crazydip	a LOT of text http://paste.ubuntu.com/1272033/
+2012-10-11T01:09:00.000Z	crazydip	dariushall21	i would try sudo apt-get upgrade again
+2012-10-11T01:09:00.000Z	dariushall21	crazydip	alright running now.
+2012-10-11T01:10:00.000Z	crazydip	dariushall21	why do you have so many packages to upgrade? is this a fresh install of 12.04 or something?
+2012-10-11T01:11:00.000Z	dariushall21	crazydip	I installed it and let it sit, I've never had the need to use it until today. It's the dev side of my school computer. I'm studying computer science, and I find Ubuntu a LOT easier for Java.
+2012-10-11T01:11:00.000Z	dariushall21	crazydip	failed again.
+2012-10-11T01:13:00.000Z	crazydip	dariushall21	failed at the same place? with package compiz-plugins-main-default?
+2012-10-11T01:13:00.000Z	dariushall21	crazydip	here's a paste of where it started failing http://paste.ubuntu.com/1272048/
+2012-10-11T01:13:00.000Z	dariushall21	crazydip	yes at 70% again.
+2012-10-11T01:15:00.000Z	crazydip	dariushall21	try "sudo dpkg --configure -a"
+2012-10-11T01:16:00.000Z	dariushall21	crazydip	then what?
+2012-10-11T01:16:00.000Z	crazydip	dariushall21	what did you get?
+2012-10-11T01:17:00.000Z	dariushall21	crazydip	nothing it just did the command and is waiting for another.
+2012-10-11T01:17:00.000Z	crazydip	dariushall21	ok that means nothing to do :)
+2012-10-11T01:17:00.000Z	dariushall21	crazydip	but what should I do after that, run upgrade again?
+2012-10-11T01:17:00.000Z	crazydip	dariushall21	nah it will fail just like before
+2012-10-11T01:19:00.000Z	dariushall21	crazydip	so now what is there to do? I'm lost. I need to install Eclipse unfortuneatley.
+2012-10-11T01:19:00.000Z	crazydip	dariushall21	ok well do this except for the file compiz-plugins-main-default : http://ubuntuforums.org/showpost.php?p=10010092&postcount=7
+2012-10-11T01:20:00.000Z	crazydip	dariushall21	whatever you do don't reboot or start any extra programs because you won't have a working unity / compiz until you reinstall that package
+2012-10-11T01:20:00.000Z	crazydip	dariushall21	also make sure after all this to do: sudo apt-get install ubuntu-desktop
+2012-10-11T01:22:00.000Z	dariushall21	crazydip	in the file the person is talking about, I delete compiz because that's whats throwing the error?
+2012-10-11T01:22:00.000Z	crazydip	dariushall21	close... the package compiz-plugins-main-default
+2012-10-11T01:23:00.000Z	dariushall21	crazydip	that's what I meant, I just didn't remember the EXACT name of the package.
+2012-10-11T01:23:00.000Z	crazydip	dariushall21	ok because the package compiz also exists :D
+2012-10-11T01:24:00.000Z	dariushall21	crazydip	since it's read only, how do I save it?
+2012-10-11T01:25:00.000Z	crazydip	dariushall21	what's read only?
+2012-10-11T01:25:00.000Z	crazydip	dariushall21	ahh you mean status file?
+2012-10-11T01:25:00.000Z	dariushall21	crazydip	the Status file. I can't edit it becuause it's in the dpkg file.
+2012-10-11T01:25:00.000Z	crazydip	dariushall21	use sudo
+2012-10-11T01:26:00.000Z	crazydip	dariushall21	you'll probably have to use sudo to copy it over too
+2012-10-11T01:26:00.000Z	crazydip	dariushall21	copy over i meant copy the file (not move it)
+2012-10-11T01:26:00.000Z	dariushall21	crazydip	how would I sudo edit? I don't know a lot of commands yet.
+2012-10-11T01:26:00.000Z	dariushall21	crazydip	I have a copy of the file on my desktop I can edit that, but then I'd have to move it, which you can't normally do.
+2012-10-11T01:27:00.000Z	crazydip	dariushall21	ok make it easier do this: gksudo nautilus
+2012-10-11T01:28:00.000Z	crazydip	dariushall21	that will open up nautilus as root
+2012-10-11T01:30:00.000Z	dariushall21	crazydip	I deleted the package from the list, saved it, and closed the file sesion.
+2012-10-11T01:30:00.000Z	crazydip	dariushall21	also don't copy over that system file, edit it instead you can use gksudo gedit -- if you copy over it, make sure to set permissions the way they were before
+2012-10-11T01:30:00.000Z	dariushall21	crazydip	I just copied it as a backup like it was sugested in the forum post
+2012-10-11T01:31:00.000Z	crazydip	dariushall21	ok
+2012-10-11T01:31:00.000Z	dariushall21	crazydip	now what commands do I run?
+2012-10-11T01:32:00.000Z	crazydip	dariushall21	follow the instructions in the post
+2012-10-11T01:32:00.000Z	crazydip	dariushall21	oh except there is a type... #7 is: dpkg --configure -a
+2012-10-11T01:33:00.000Z	crazydip	dariushall21	it's only one dpkg not two
+2012-10-11T01:35:00.000Z	crazydip	dariushall21	did you by any chance add any extra repositories to that system?
+2012-10-11T01:35:00.000Z	dariushall21	crazydip	okay that all went through and worked, should I now do what it says and manually re-install the package
+2012-10-11T01:35:00.000Z	crazydip	dariushall21	yes, and then also install ubuntu-desktop
+2012-10-11T01:35:00.000Z	dariushall21	crazydip	I haven't done anything with this computer, I installed ubuntu and let it sit until now.
+2012-10-11T01:36:00.000Z	crazydip	dariushall21	man that's some bad luck :( someone made a mistake with that package
+2012-10-11T01:37:00.000Z	dariushall21	crazydip	this is kind of weird http://paste.ubuntu.com/1272096/
+2012-10-11T01:37:00.000Z	crazydip	dariushall21	why is it weird? it just says that it's already installed
+2012-10-11T01:38:00.000Z	dariushall21	crazydip	becuase that's the package I deleted, isn't it supposed to reinstall it?
+2012-10-11T01:39:00.000Z	crazydip	dariushall21	maybe you already reinstalled it with sudo apt-get -f install
+2012-10-11T01:39:00.000Z	dariushall21	crazydip	alright so now should I finally do the upgrade?
+2012-10-11T01:40:00.000Z	crazydip	dariushall21	wait, make sure you really did reinstall that package.. did you?
+2012-10-11T01:40:00.000Z	crazydip	dariushall21	what i mean is, was it previously removed?
+2012-10-11T01:41:00.000Z	dariushall21	crazydip	I deleted it from the status' file as the forum post stated, ran the repair command, that went, ran the install command, and that is what happened. I guess I TECHNICALLY, didn't remove it, I just removed it from the dpkg
+2012-10-11T01:42:00.000Z	crazydip	dariushall21	ok did you sudo apt-get install ubuntu-desktop?
+2012-10-11T01:43:00.000Z	dariushall21	crazydip	yes after the compiz thing, and it says that is the latest version.
+2012-10-11T01:44:00.000Z	crazydip	dariushall21	try "sudo apt-get clean" then "sudo apt-get update" then "sudo apt-get upgrade"
+2012-10-11T01:53:00.000Z	dariushall21	crazydip	everything went through and worked fine.
+2012-10-11T01:53:00.000Z	crazydip	dariushall21	awesome! hopefully you won't have that type of problem again
+2012-10-11T01:53:00.000Z	dariushall21	crazydip	thank you very very much for your time and help. Have a nice day!
+2012-10-11T01:53:00.000Z	crazydip	dariushall21	weird cause i've been on ubuntu since the very first release and never had something like that happen
+2012-10-11T01:54:00.000Z	crazydip	dariushall21	you'r every welcome! enjoy ubuntu!

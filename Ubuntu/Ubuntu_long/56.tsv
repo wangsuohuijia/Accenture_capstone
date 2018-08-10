@@ -1,0 +1,47 @@
+2010-10-13T11:05:00.000Z	Fritzy		help -- can't get passed "Bootloader install failed" dialog in install.. can't even cancel installation.
+2010-10-13T11:06:00.000Z	Fritzy		How do I pull up a shell during install?
+2010-10-13T11:06:00.000Z	Jordan_U	Fritzy	There should be a drop down area for looking at detailed error messages.
+2010-10-13T11:08:00.000Z	Fritzy	Jordan_U	Not that I can see. "How would you like to proceed?" followed by the options of choosing a different device, continuing, or cancelling. Selecting any of these options and hitting ok does not close the dialog and doesn't appear to do anything other than depressing the OK button.
+2010-10-13T11:08:00.000Z	Jordan_U	Fritzy	How comfortable are you with the terminal?
+2010-10-13T11:08:00.000Z	Fritzy	Jordan_U	quite comfortable
+2010-10-13T11:09:00.000Z	Fritzy	Jordan_U	not sure how to open a terminal from this view though.  :)
+2010-10-13T11:09:00.000Z	Fritzy	Jordan_U	else I'd run grub-install myself
+2010-10-13T11:10:00.000Z	Jordan_U	Fritzy	Ok, then press ctrl+alt+F1 to get to a terminal (ctrl+alt+F7 to get back to X) then run "DISPLAY=:0.0 gnome-terminal" to start a terminal within X. From there please use gnome-screenshot to create a screenshot.
+2010-10-13T11:11:00.000Z	Jordan_U	Fritzy	It sounds like you can probably trick the installer into thinking it installed grub successfully by making /usr/bin/grub-install a symlink to /bin/true, but I'd like to see the exact error/dialog first.
+2010-10-13T11:12:00.000Z	Fritzy	Jordan_U	ok, let me get this uploaded somewhere
+2010-10-13T11:15:00.000Z	Fritzy	Jordan_U	http://play.brokt.com/~fritzy/images/ubuntu-install-fail.png
+2010-10-13T11:17:00.000Z	Jordan_U	Fritzy	Can you continue with the "continue without bootloader" option?
+2010-10-13T11:18:00.000Z	Fritzy	Jordan_U	no, regardless of which of the 3 radio options I select, when I click Ok or hit enter or anything else, the button depresses, but the dialog stays up
+2010-10-13T11:20:00.000Z	Fritzy	Jordan_U	I can't get past the dialog. :S  grub-install generally errors out with "grub-probe error: cannot find a device for /boot/grub (is /dev/ mounted?)
+2010-10-13T11:21:00.000Z	Jordan_U	Fritzy	You need to "sudp chroot /target" first.
+2010-10-13T11:22:00.000Z	Fritzy	Jordan_U	/target is empty.... sudo chroot fails with "/bin/bash : No such file ..."
+2010-10-13T11:24:00.000Z	Fritzy	Jordan_U	mounted it... trying now
+2010-10-13T11:26:00.000Z	Fritzy	Jordan_U	now that I did sudo mount /dev/sda1 /target && sudo chroot /target ... my /dev/ seems incomplete.. and grub-install still cannot find a device
+2010-10-13T11:26:00.000Z	Jordan_U	Fritzy	You need to bind mount /dev/ /proc/ and /sys/ into the chroot first.
+2010-10-13T11:27:00.000Z	Jordan_U	Fritzy	sudo mount -o bind /sys/ /target/sys; sudo mount -o bind /dev/ /target/dev/; sudo mount -o /proc /targed/proc
+2010-10-13T11:27:00.000Z	Fritzy	Jordan_U	cool, now I have grub installed on /dev/sda how do I continue past the locked dialog?
+2010-10-13T11:29:00.000Z	Jordan_U	Fritzy	Try adding "echo grub-install has been temporarily disabled, FIX THIS AS SOON AS POSSIBLE; exit 0" as the second line of /usr/sbin/grub-install
+2010-10-13T11:30:00.000Z	Jordan_U	Fritzy	Then hopefully the installer will think grub-install ran successfully, as it will just exit with success.
+2010-10-13T11:32:00.000Z	Fritzy	Jordan_U	no dice.. tried within chroot and outside of it. :S
+2010-10-13T11:32:00.000Z	Jordan_U	Fritzy	And before you reboot, make sure you run "update-grub" within the chroot.
+2010-10-13T11:39:00.000Z	Jordan_U	Fritzy	Tried what exactly? Modifying the script or update-grub?
+2010-10-13T11:40:00.000Z	Fritzy	Jordan_U	modifying grub-install in chroot and outside
+2010-10-13T11:40:00.000Z	Fritzy	Jordan_U	to echo and exit 0 as you said
+2010-10-13T11:40:00.000Z	Fritzy	Jordan_U	doesn't help me get passed the dialog
+2010-10-13T11:41:00.000Z	Jordan_U	Fritzy	Try doing the same with /usr/sbin/update-grub.
+2010-10-13T11:41:00.000Z	Fritzy	Jordan_U	in chroot or out?
+2010-10-13T11:41:00.000Z	Jordan_U	Fritzy	In.
+2010-10-13T11:42:00.000Z	Jordan_U	Fritzy	And confirm that it worked with "grub-install; echo $?" and "update-grub; echo $?" (should print the message then "0" for successfull completion).
+2010-10-13T11:43:00.000Z	Fritzy	Jordan_U	both echo the message and then echo's 0 within chroot /target
+2010-10-13T11:44:00.000Z	Jordan_U	Fritzy	Can you continue now?
+2010-10-13T11:44:00.000Z	Fritzy	Jordan_U	no, the button depresses, but nothing else changes
+2010-10-13T11:47:00.000Z	Fritzy	Jordan_U	confusing me with kevin_? I can't close the window either... no reaction.
+2010-10-13T11:47:00.000Z	Fritzy	Jordan_U	I can go to the right-click menu and close
+2010-10-13T11:47:00.000Z	Fritzy	Jordan_U	but that doesn't do anything either
+2010-10-13T11:49:00.000Z	Fritzy	Jordan_U	sorry to make you juggle.. if I reboot, I imagine it'll boot to an uncompleted install. Is there some way I can finish the install?
+2010-10-13T11:49:00.000Z	Jordan_U	Fritzy	You may just have to use the alternate install CD, or "sudo pkill dpkg" and hope the install then completes in a usefull state ( I doubt it will ).
+2010-10-13T11:49:00.000Z	Fritzy	Jordan_U	ok
+2010-10-13T11:49:00.000Z	Fritzy	Jordan_U	thanks for your help.  :)
+2010-10-13T11:49:00.000Z	Fritzy	Jordan_U	have a good one
+2010-10-13T11:49:00.000Z	Jordan_U	Fritzy	You're welcome.
+2010-10-13T12:02:00.000Z	Fritzy	Jordan_U	my first boot involved manually specifying the kernel (then running fixing and running grub-update after boot) and remarking out the cdrom line in /etc/apt/sources.list ... other than that seems fine so far.  :)

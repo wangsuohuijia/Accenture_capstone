@@ -1,0 +1,66 @@
+2007-08-28T16:39:00.000Z	mjancaitis		I need to find the text version of my startup programs for gdm, who knows where it is?
+2007-08-28T16:40:00.000Z	nickrud	mjancaitis	/etc/gdm/gdm.conf
+2007-08-28T16:56:00.000Z	mjancaitis	nickrud	issues with login: right now my feisty refuses to get to the login screen; it boots and loads correctly, but right before it gets to the login, I get a black screen and the "thinking" spinning cursor; my gdm.conf-custom file's tags are pasted here: http://paste.ubuntu-nl.org/35320/; this happened after I had a lot of trouble with VMware, anybody know what I can do about it?
+2007-08-28T16:59:00.000Z	nickrud	mjancaitis	neither do I ;)
+2007-08-28T05:34:00.000Z	nickrud	mjancaitis	have you tried sudo dpkg-reconfigure gdm yet? (stab in the dark, I know)
+2007-08-28T05:35:00.000Z	mjancaitis	nickrud	says it's reloading config, changes will take effect when x sessions have ended, and then says "invoke-rc.d: initscript gdm, action "reload" failed"
+2007-08-28T05:36:00.000Z	nickrud	mjancaitis	then you might want to consider cd /var/cache/apt/archives && sudo dpkg-i  --force-confnew gdm<tab>  (--force-confnew will force installing the config from the deb)
+2007-08-28T05:37:00.000Z	mjancaitis	nickrud	- just hit tab where you've written <tab>? and then enter?
+2007-08-28T05:37:00.000Z	nickrud	mjancaitis	yes, that's tab completion: it will fill out the rest of the deb name
+2007-08-28T05:38:00.000Z	mjancaitis	nickrud	dpkg-i: command not found and tab completion did nothing but give me a system beep
+2007-08-28T05:38:00.000Z	nickrud	mjancaitis	sorry, space between dpkg & the i
+2007-08-28T05:39:00.000Z	nickrud	mjancaitis	space between dpkg & the -i :)
+2007-08-28T05:40:00.000Z	mjancaitis	nickrud	got it; dpkg: error processing gdm (--install): cannot access archive: No such file or directory. Errors were encountered while processing: gdm"
+2007-08-28T05:41:00.000Z	nickrud	mjancaitis	ls /var/cache/apt/archives/gdm* , is it there?
+2007-08-28T05:42:00.000Z	mjancaitis	nickrud	No such file or directory :(
+2007-08-28T05:44:00.000Z	nickrud	mjancaitis	then sudo aptitude reinstall gdm ; that will download and reinstall it. apt has a setting for how long to hold an archive, and how large the archive space is; it's been lost. Then, do the dpkg -i --forceconfnew gdm<tab>
+2007-08-28T05:44:00.000Z	mjancaitis	nickrud	thanks, will get back to you in a bit
+2007-08-28T05:45:00.000Z	nickrud	mjancaitis	I'll be out of here in about 20 minutes
+2007-08-28T05:45:00.000Z	mjancaitis	nickrud	then perhaps I won't ;) here's hoping it works, else I'll talk to one of your colleagues here
+2007-08-28T05:46:00.000Z	nickrud	mjancaitis	the only other thing I'd recommend is making sure your gdm-custom is gone
+2007-08-28T05:46:00.000Z	mjancaitis	nickrud	how exactly does one delete via cli
+2007-08-28T05:46:00.000Z	nickrud	mjancaitis	rm <--
+2007-08-28T05:46:00.000Z	mjancaitis	nickrud	so rm /etc/gdm/gdm.conf-custom and /etc/X11/gdm/gdm.conf-custom?
+2007-08-28T05:47:00.000Z	mjancaitis	nickrud	cuz there are both of those
+2007-08-28T05:47:00.000Z	nickrud	mjancaitis	yes
+2007-08-28T05:47:00.000Z	mjancaitis	nickrud	ok, thanks
+2007-08-28T05:47:00.000Z	mjancaitis	nickrud	catch you on the flip side
+2007-08-28T05:47:00.000Z	nickrud	mjancaitis	interesting that there's two; I'm gonna look at that
+2007-08-28T05:48:00.000Z	mjancaitis	nickrud	I'll stick around for a couple minutes while you check then
+2007-08-28T05:49:00.000Z	nickrud	mjancaitis	just do the one in /etc/gdm; the other is a symbolic link to /etc/gdm;  ls -l /etc/X11/gdm will show you what I mean
+2007-08-28T05:49:00.000Z	mjancaitis	nickrud	gotcha, thanks again
+2007-08-28T05:52:00.000Z	mjancaitis	nickrud	still around?
+2007-08-28T05:52:00.000Z	nickrud	mjancaitis	yes
+2007-08-28T05:52:00.000Z	mjancaitis	nickrud	how do I enable networking while in recovery mode's root cli? I can't connect to the aptitude servers
+2007-08-28T05:53:00.000Z	mjancaitis	nickrud	should I be using startx and going into a root x session to get it?
+2007-08-28T05:53:00.000Z	nickrud	mjancaitis	good question, I've never had to try that :)  you can try invoke-rc.d networking start
+2007-08-28T05:54:00.000Z	nickrud	mjancaitis	and if that doesn't work, when you start in normal mode, hit ctl-alt-f1, that should get you a terminal
+2007-08-28T05:55:00.000Z	mjancaitis	nickrud	configured network interfaces correctly, still can't resolve apt servers
+2007-08-28T05:55:00.000Z	mjancaitis	nickrud	also no chance to get a terminal under normal boot, it goes to that black screen and everything's unresponsive
+2007-08-28T05:55:00.000Z	mjancaitis	nickrud	is this something I can get off the CD?
+2007-08-28T05:55:00.000Z	nickrud	mjancaitis	yes!
+2007-08-28T05:55:00.000Z	mjancaitis	nickrud	yes to the CD?
+2007-08-28T05:56:00.000Z	nickrud	mjancaitis	yes!!
+2007-08-28T05:56:00.000Z	mjancaitis	nickrud	sweet, back in a bit ;)
+2007-08-28T05:56:00.000Z	nickrud	mjancaitis	good call, I was brain dead
+2007-08-28T05:56:00.000Z	mjancaitis	nickrud	have yourself a good night, thanks for the help
+2007-08-28T05:57:00.000Z	nickrud	mjancaitis	if every thing goes well, congrats. If not, well, I'll be around after 9pm utc
+2007-08-28T05:57:00.000Z	nickrud	mjancaitis	tomorrow, that is
+2007-08-28T05:57:00.000Z	mjancaitis	nickrud	gotcha. Like I said, here's hoping this works, thanks again
+2007-08-28T05:59:00.000Z	mjancaitis	nickrud	real quick, if I have to go into the LiveCD to get back into a networked interface, how do I overwrite all my regular install's GDM files?
+2007-08-30T09:39:00.000Z	mjancaitis	nickrud	any idea why all my windows are opening without focus (opening in the background)?
+2007-08-30T09:40:00.000Z	nickrud	mjancaitis	not a clue (hope I never see that, either ;)
+2007-08-30T09:40:00.000Z	mjancaitis	nickrud	for once, google is utterly useless too
+2007-08-30T09:50:00.000Z	nickrud	mjancaitis	I think I know what you're seeing with your background windows: start one again, but make sure that you don't have a currently opened app focused
+2007-08-30T10:19:00.000Z	nickrud	mjancaitis	did you do that test, the one where you have a focused window when the new one opens?
+2007-08-30T10:20:00.000Z	nickrud	mjancaitis	and the opposite?
+2007-08-30T10:20:00.000Z	mjancaitis	nickrud	if I have, for instance, my IM window open and I click for a terminal
+2007-08-30T10:21:00.000Z	mjancaitis	nickrud	it's really frustrating with firefox, because the download dialog opens behind the page and I have to minimize/maximize to see it
+2007-08-30T10:22:00.000Z	nickrud	mjancaitis	try alt-tab
+2007-08-30T10:22:00.000Z	mjancaitis	nickrud	it's just when it opens
+2007-08-30T10:23:00.000Z	nickrud	mjancaitis	it's a feature :) if you have a focused window, metacity politely doesn't say you *must* look at this new window
+2007-08-30T10:24:00.000Z	nickrud	mjancaitis	did you change any of the window settings? like sloppy focus, or anything? And I prefer this, since if I'm expecting the new window I just move the mouse pointer to the desktop
+2007-08-30T10:25:00.000Z	mjancaitis	nickrud	don't think I screwed with anything big like that, I messed with the cube zoom and whatnot
+2007-08-30T10:26:00.000Z	nickrud	mjancaitis	compiz & emerald? Then I have no comments, haven't used them nearly enough
+2007-08-30T10:26:00.000Z	mjancaitis	nickrud	it's not technically compiz, it's beryl
+2007-08-30T10:27:00.000Z	nickrud	mjancaitis	used that one even less, since my ati card froze whenever I tried to log out to gdm

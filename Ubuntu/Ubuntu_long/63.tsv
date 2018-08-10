@@ -1,0 +1,46 @@
+2009-03-27T02:22:00.000Z	irunongames		I need help
+2009-03-27T02:22:00.000Z	irunongames		i can't add or remove ANY programs
+2009-03-27T02:22:00.000Z	irunongames		it just crashs
+2009-03-27T02:23:00.000Z	irunongames		one sec
+2009-03-27T02:23:00.000Z	irunongames		want the exact error?
+2009-03-27T02:23:00.000Z	irunongames		what jenna?
+2009-03-27T02:24:00.000Z	irunongames		it says i have broken packages
+2009-03-27T02:24:00.000Z	irunongames		yes
+2009-03-27T02:24:00.000Z	irunongames		./ect/apt/sources.list
+2009-03-27T02:25:00.000Z	irunongames		it says i need to check file permissions
+2009-03-27T02:25:00.000Z	jumar_	irunongames	did you try the fix broken packages option
+2009-03-27T02:25:00.000Z	jumar_		???
+2009-03-27T02:26:00.000Z	jumar_		it's in synaptic, edit
+2009-03-27T02:26:00.000Z	irunongames		how do i do that?
+2009-03-27T02:26:00.000Z	jumar_		start: gksudo synaptic in run dialoge, then type you superuser password, and then go to edit
+2009-03-27T02:26:00.000Z	irunongames		nvm
+2009-03-27T02:26:00.000Z	jumar_		fix broken
+2009-03-27T02:26:00.000Z	irunongames		i found how to do it
+2009-03-27T02:26:00.000Z	irunongames		one sec
+2009-03-27T02:30:00.000Z	irunongames		how do i fix broken packages?
+2009-03-27T02:31:00.000Z	jumar_	irunongames	at the Edit there is fix broken packages
+2009-03-27T02:31:00.000Z	irunongames		Jumar: how do i find it
+2009-03-27T02:31:00.000Z	jumar_		irounongames, you got synaptic open?
+2009-03-27T02:32:00.000Z	irunongames	jumar_	package manager
+2009-03-27T02:32:00.000Z	jumar_		yes yes
+2009-03-27T02:33:00.000Z	jumar_		in the menubar there is Edit, and there's an option Fix broken..
+2009-03-27T02:34:00.000Z	irunongames		Errors were encountered while processing:
+2009-03-27T02:34:00.000Z	irunongames		 /var/cache/apt/archives/python-wxgtk2.8_2.8.9.1-0ubuntu4_i386.deb
+2009-03-27T02:34:00.000Z	irunongames		E: Sub-process /usr/bin/dpkg returned an error code (1)
+2009-03-27T02:35:00.000Z	irunongames		he following packages have unmet dependencies:
+2009-03-27T02:35:00.000Z	irunongames		  gnumed-client: Depends: python-wxgtk2.8 but it is not installed
+2009-03-27T02:35:00.000Z	irunongames		what should i do?
+2009-03-27T02:35:00.000Z	jumar_		then install that package
+2009-03-27T02:36:00.000Z	irunongames	jumar_	it won't work
+2009-03-27T02:37:00.000Z	jumar_	irunongames	type in terminal: sudo apt-get install python-wxgtk2.8_2.8.9.1-0ubuntu4_i386.deb
+2009-03-27T02:39:00.000Z	irunongames	jumar_	E: Couldn't find package python-wxgtk2.8_2.8.9.1-0ubuntu4_i386.deb
+2009-03-27T02:39:00.000Z	jumar_	irunongames	you gotta enable the multiverse and universe repositories, maybe then you'll find that package in synaptic, so you dont have to type anything into the terminal
+2009-03-27T02:41:00.000Z	irunongames		hwo do i find a broken file?
+2009-03-27T02:42:00.000Z	jumar_		irunogames, you gotta do that thru a package manager
+2009-03-27T02:42:00.000Z	jumar_		like dan-ubuntu said
+2009-03-27T02:42:00.000Z	irunongames		You might want to run `apt-get -f install' to correct these.
+2009-03-27T02:42:00.000Z	irunongames		The following packages have unmet dependencies:
+2009-03-27T02:42:00.000Z	irunongames		  gnumed-client: Depends: python-wxgtk2.8 but it is not installed
+2009-03-27T02:42:00.000Z	irunongames		E: Unmet dependencies. Try using -f.
+2009-03-27T02:42:00.000Z	irunongames		irunongames@irunongames:~$
+2009-03-27T02:42:00.000Z	irunongames	jumar_	how?

@@ -1,0 +1,67 @@
+2009-03-26T14:22:00.000Z	frybye		http://paste.ubuntu.com/138127/
+2009-03-26T14:23:00.000Z	frybye		seems to confim my suspicion that somehow the usb-camera-microphone - logitech - has taken the place of a soundcard.. or?
+2009-03-26T14:25:00.000Z	frybye		yeah the usb-communicate-stx camera has a mike and that has got detected but the sound card apparenly not or..?
+2009-03-26T14:26:00.000Z	frybye		dies quietly <---
+2009-03-26T14:26:00.000Z	frybye		<--- comes back in far less than 2000 years to bug folks with his audio problem... hehe
+2009-03-26T14:28:00.000Z	frybye		eh can you say that in plain language.. "write the module to??"
+2009-03-26T14:29:00.000Z	frybye		installing alsamixer-gui first right...
+2009-03-26T14:30:00.000Z	frybye		??
+2009-03-26T14:31:00.000Z	frybye		sorry - can some other kind soul take over from DasEi...?
+2009-03-26T14:31:00.000Z	beli	frybye	what do you want to do?
+2009-03-26T14:31:00.000Z	frybye		and thanks so much for your help DasEi
+2009-03-26T14:32:00.000Z	frybye		get an audigy-se sound card working...
+2009-03-26T14:32:00.000Z	frybye		see above for what dasEi wrote after 11:26
+2009-03-26T14:32:00.000Z	beli	frybye	is it internal? or usb?
+2009-03-26T14:32:00.000Z	beli	frybye	i just joined the channel
+2009-03-26T14:32:00.000Z	frybye		internal...
+2009-03-26T14:33:00.000Z	frybye		hang on .. i will past an extract of the dialogue..
+2009-03-26T14:33:00.000Z	beli	frybye	ok....do you know sth. about the chipset it is using?
+2009-03-26T14:33:00.000Z	beli	frybye	use nopaste!
+2009-03-26T14:33:00.000Z	frybye		http://paste.ubuntu.com/138133/
+2009-03-26T14:34:00.000Z	frybye		this is what we were at - but he had to leave - i do NOT have loads of background knowledge and my memory is not too good - war injury..
+2009-03-26T14:35:00.000Z	beli	frybye	let me read ;)
+2009-03-26T14:35:00.000Z	frybye	beli	see also http://paste.ubuntu.com/138127/  please...
+2009-03-26T14:36:00.000Z	beli	frybye	so, you have no sound? are you sure the card isnt detected?
+2009-03-26T14:38:00.000Z	frybye	beli	- see my hwinfo in the 138127 paste pse..?
+2009-03-26T14:39:00.000Z	frybye		i suspect that pulse audio is trying to use the logitech usb webcame-microphone as a the sound device..??
+2009-03-26T14:39:00.000Z	frybye		but pulseaudio-device-chooser doesent start properly like other sound stuff here..
+2009-03-26T14:40:00.000Z	frybye		cant even access |system|settings|sound
+2009-03-26T14:40:00.000Z	beli	frybye	you need to load the module
+2009-03-26T14:41:00.000Z	frybye	beli	right - but i dont know how to do that stuff.. can you pse walk me thru - step by step - i know it is a pain but...?
+2009-03-26T14:41:00.000Z	frybye		do i just do what is on that url???
+2009-03-26T14:43:00.000Z	frybye		so i just use the code shown at - http://alsa-project.org/main/index.php/Matrix:Module-ca0106 right?
+2009-03-26T14:43:00.000Z	beli	frybye	try modprobe snd-ca0106
+2009-03-26T14:44:00.000Z	frybye		returns nothing - does it need sudo??
+2009-03-26T14:45:00.000Z	frybye		beli??
+2009-03-26T14:46:00.000Z	beli	frybye	did you try modprobe snd-ca0106
+2009-03-26T14:46:00.000Z	frybye		yes - eh - it returns nothing and I was asking if i should put sudo in front???
+2009-03-26T14:47:00.000Z	frybye	beli	 yes - eh - it returns nothing and I was asking if i should put sudo in front???
+2009-03-26T14:47:00.000Z	beli	frybye	all commands are done as superuser, yes...you can do "sudo bash" to get a root shell
+2009-03-26T14:48:00.000Z	frybye	beli	still returns nothing but a new prompt
+2009-03-26T14:48:00.000Z	beli	frybye	ok, run "lsmod |grep snd" and see if its loaded
+2009-03-26T14:50:00.000Z	frybye	beli	see http://paste.ubuntu.com/138145/    please...
+2009-03-26T14:50:00.000Z	beli	frybye	ok so its loaded....
+2009-03-26T14:50:00.000Z	beli	frybye	try to play sound :)
+2009-03-26T14:53:00.000Z	frybye		no sound - but two instances of pulse-device-chooser have shown up..
+2009-03-26T14:54:00.000Z	beli	frybye	so check settings...run    alsamixer    and unmute stuff (m key toggles muting)
+2009-03-26T14:55:00.000Z	frybye		capture is at zero...??
+2009-03-26T14:56:00.000Z	beli	frybye	MASTER and PCM have to be on some level and set unmuted....no MM under the indicators
+2009-03-26T14:57:00.000Z	frybye		capture was at zero i upped it to 80% but still no sound at all...#
+2009-03-26T14:57:00.000Z	beli	frybye	capture has nothing todo with sound playback....the level setting is ignored if the channel is MUTED
+2009-03-26T14:58:00.000Z	frybye		IEC958 shows just  00  ??
+2009-03-26T14:58:00.000Z	beli	frybye	2 choices...read the manual or play around...
+2009-03-26T15:01:00.000Z	frybye	beli	well sure - but the manual is not going to tell me what IEC958 is all about or...?
+2009-03-26T15:01:00.000Z	beli	frybye	press F3 to get the PLAYBACK options....
+2009-03-26T15:01:00.000Z	frybye	beli	right I have that all along - and the very first entry is this IEC958 which has just a small square above it with "00"
+2009-03-26T15:01:00.000Z	frybye		then the other entries are IEC958 - c and then next to it -f and then -r etc.. but the one that is just iec958 has no grafic volume indicator above it..
+2009-03-26T15:02:00.000Z	beli	frybye	ok....do you see sth. like master and pcm? increase their volume...and make them unmuted
+2009-03-26T15:03:00.000Z	frybye		the only entry from 9 that has no volume indication is the one with just iec958.. all the others are at about 80% and that one just has the small square with "00" in it..
+2009-03-26T15:03:00.000Z	beli	frybye	what is it telling about card and chipset?
+2009-03-26T15:04:00.000Z	frybye		ok i have it - hitting the "M" made the "00" switch to a "mm" BUT then the sound came on... hehe
+2009-03-26T15:04:00.000Z	frybye		card ca0106
+2009-03-26T15:04:00.000Z	beli		ok....
+2009-03-26T15:05:00.000Z	beli	frybye	after rebooting the sound module isnt loaded anymore...you need to tell the system to load it each startup
+2009-03-26T15:05:00.000Z	frybye		the sound is lausy though - i have a 5.1 system and it seems to be producing a primative poor 2channel..
+2009-03-26T15:05:00.000Z	frybye		beli- how to do that???
+2009-03-26T15:05:00.000Z	beli	frybye	http://www.alsa-project.org/main/index.php/Matrix:Module-ca0106        read the modules.conf section
+2009-03-26T15:07:00.000Z	frybye	beli	- please dont missunderstand me - i am really gratefull for your help and patience - but so far all the guides tell me at some stage to access the system|settings|sound feature and this does NOT load or work or show up at all here- except for a few seconds down at the bottom of the screen in the task bar and then dissapears again...

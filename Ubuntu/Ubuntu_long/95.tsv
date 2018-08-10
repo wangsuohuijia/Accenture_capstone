@@ -1,0 +1,67 @@
+2005-01-01T16:29:00.000Z	gilligan_		hm.noone else experiencing troubles with sound in hoary ?
+2005-01-01T16:30:00.000Z	crimsun	gilligan_	nope. Sound's fine here.
+2005-01-01T16:31:00.000Z	gilligan_	crimsun	hm.wonder what the hell happened.. it worked just fine before i did the apt-get upgrade..  whatever player I try, it doesnt complain.. but i get only silence..
+2005-01-01T16:31:00.000Z	crimsun	gilligan_	well, what player are you using?
+2005-01-01T16:32:00.000Z	gilligan_	crimsun	doesnt matter.same for whatever i try
+2005-01-01T16:32:00.000Z	crimsun	gilligan_	what sound hardware?
+2005-01-01T16:33:00.000Z	gilligan_	crimsun	powerbook.. onboard sound.. worked fine before..
+2005-10-20T15:09:00.000Z	crimsun	gilligan_	alsasrc is part of gstreamer. It's included by default.
+2005-10-20T15:10:00.000Z	crimsun	gilligan_	dpkg -l gstreamer0.8-alsa|grep ^ii
+2005-10-20T15:11:00.000Z	gilligan_	crimsun	i have that package installed
+2005-10-20T15:11:00.000Z	crimsun	gilligan_	so you should be able to select alsasrc in System> Preferences> Multimedia Systems Selector> Default Audio Source
+2005-10-20T15:16:00.000Z	gilligan_	crimsun	I can select it, but it gives me an error -- I was expecting alsasrc to be a seperate binary and thought the error was because its not installed
+2005-10-20T15:16:00.000Z	crimsun	gilligan_	what error?
+2005-10-20T15:18:00.000Z	gilligan_	crimsun	sorry.. i wasn't quite correct - alsasrc and alsasink are choosen as default (can't be edited) .. when I push test for the default source I get 'Failed to construct pipeline for ALSA'
+2005-10-20T15:19:00.000Z	crimsun	gilligan_	lsof /dev/dsp* /dev/snd/*
+2005-10-20T15:21:00.000Z	gilligan_	crimsun	gilligan@toontown:~ $ sudo lsof /dev/dsp/* /dev/snd/*
+2005-10-20T15:21:00.000Z	crimsun	gilligan_	you typoed
+2005-10-20T15:22:00.000Z	gilligan_	crimsun	I don't have any sound deamons running.. ESD gave uber-crappy results.. using alsa only with dmix
+2005-10-20T15:22:00.000Z	crimsun	gilligan_	did you construct your own ~/.asoundrc or /etc/asound.conf?
+2005-10-20T15:23:00.000Z	gilligan_	crimsun	yes
+2005-10-20T15:23:00.000Z	crimsun	gilligan_	move it out of the way
+2005-10-20T15:23:00.000Z	gilligan_	crimsun	in order to enable mixing
+2005-10-20T15:23:00.000Z	gilligan_	crimsun	moving it out of the way will result in loss of mixing
+2005-10-20T15:23:00.000Z	crimsun	gilligan_	we've enabled mixing by default in Breezy. Your old ~/.asoundrc is unnecessary.
+2005-10-20T15:23:00.000Z	gilligan_	crimsun	aah
+2005-10-20T15:23:00.000Z	gilligan_	crimsun	ok
+2005-10-20T15:26:00.000Z	gilligan_	crimsun	now testing the default src doesn't give any errors but no sound is played and the whole app crashes when pushing the stop button
+2005-10-20T15:27:00.000Z	crimsun	gilligan_	what happens if you use customsrc and specify alsasrc device=plug:dsnoop ?
+2005-10-20T15:28:00.000Z	gilligan_	crimsun	i can't .. the input field is not editable
+2005-10-20T15:29:00.000Z	gilligan_	crimsun	playing some arbitrary sound with alsaplayer works -- using rythmbox (which I suppose uses gstreamer) to play some .ogg results in utterly stuttred sound
+2005-10-20T15:30:00.000Z	crimsun	gilligan_	I just tested all the sources, and they all work for me.
+2005-10-20T15:30:00.000Z	crimsun	gilligan_	choose Custom, and put in: alsasrc device=plug:dsnoop
+2005-10-20T15:32:00.000Z	gilligan_	crimsun	no change.. no sound and crashes when pushing OK button
+2005-10-20T15:33:00.000Z	crimsun	gilligan_	what about the silence source?
+2005-10-20T15:34:00.000Z	gilligan_	crimsun	that does not crash
+2005-10-20T15:34:00.000Z	crimsun	gilligan_	good.
+2005-10-20T15:34:00.000Z	crimsun	gilligan_	now open a Terminal and test using arecord
+2005-10-20T15:37:00.000Z	gilligan_	crimsun	seems to be working -- however in rhythmbox I still get utterly distorted sound for playback
+2005-10-20T15:38:00.000Z	gilligan_	crimsun	like pausing/stuttering every second
+2005-10-20T15:38:00.000Z	gilligan_	crimsun	i didn't have such issues with hoary
+2005-10-20T15:39:00.000Z	crimsun	gilligan_	what if you pass -Dplug:dsnoop to arecord?
+2005-10-20T15:41:00.000Z	gilligan_	crimsun	nevermind about the input -- actual problem is the output
+2005-10-20T15:43:00.000Z	gilligan_	crimsun	aplay output works fine.. so alsa per se is O.K I suppose
+2005-10-20T15:44:00.000Z	crimsun	gilligan_	what if, in the default audio sink, you choose Custom and put: alsasink device=plug:dmix ?
+2005-10-20T15:44:00.000Z	gilligan_	crimsun	sec,,
+2005-10-20T15:45:00.000Z	gilligan_	crimsun	test works in the gstramer-properties dialog.. but same problem with playback
+2005-10-20T15:46:00.000Z	gilligan_	crimsun	ah.. no
+2005-10-20T15:46:00.000Z	gilligan_	crimsun	restarted rhtymbox and it is working now
+2005-10-20T15:47:00.000Z	gilligan_	crimsun	thanks alot for your time&help
+2005-10-20T15:49:00.000Z	crimsun	gilligan_	np
+2005-10-20T15:50:00.000Z	gilligan_	crimsun	it's strange tho.. "alsasink device=plug:dmix" should be the default setting anyway, no ?
+2005-10-20T15:54:00.000Z	crimsun	gilligan_	no, dmix should be the default, not plug:dmix.
+2005-10-20T15:54:00.000Z	crimsun	gilligan_	it's always better to let the hardware handle it instead of passing it for conversion through alsa-lib before handing it back to the hardware.
+2005-10-20T15:55:00.000Z	crimsun	gilligan_	plug:dmix is a special case, not the common fast-path.
+2005-10-20T15:56:00.000Z	gilligan_	crimsun	sigh.. now i am getting whitenoise problems again
+2005-10-20T15:58:00.000Z	gilligan_	crimsun	maybe my soundcard is just a piece of shite
+2005-10-20T15:59:00.000Z	crimsun	gilligan_	could be. Which chipset?
+2005-10-20T16:00:00.000Z	gilligan_	crimsun	snd_intel8x0, snd_ac97 - onboard soundcard..
+2005-10-20T16:00:00.000Z	crimsun	gilligan_	yeah, the onboard chipsets can be rather problematic.
+2005-10-20T16:00:00.000Z	gilligan_	crimsun	I get lots of crappy interference sound.. like I "hear" the hdd etc
+2005-10-20T16:00:00.000Z	crimsun	gilligan_	that's why I bought an M-Audio Transit USB a while ago
+2005-10-20T16:01:00.000Z	gilligan_	crimsun	some leet soundcard?
+2005-10-20T16:02:00.000Z	crimsun	gilligan_	hardly, just much better than my integrated ac97-based one
+2005-10-20T16:03:00.000Z	gilligan_	crimsun	oh..ok
+2005-10-20T16:03:00.000Z	gilligan_	crimsun	what did it cost?
+2005-10-20T16:05:00.000Z	gilligan_	crimsun	my card also has digital-out .. wonder if that'd be any better
+2005-10-20T16:12:00.000Z	gilligan_	crimsun	now the default alsasink works aswell .. lord knows why

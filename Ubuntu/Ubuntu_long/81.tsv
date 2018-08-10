@@ -1,0 +1,71 @@
+2006-09-10T15:15:00.000Z	thedash		I still have had no luck being able to see the other computers on my router [and in my workgrou, supposedly] 
+2006-09-10T15:17:00.000Z	sethk	thedash	can you ping them by ip?
+2006-09-10T15:18:00.000Z	sethk	thedash	can you ping the router by ip?
+2006-09-10T15:18:00.000Z	sethk	thedash	ok.
+2006-09-10T15:19:00.000Z	thedash	sethk	and that is a router problem?
+2006-09-10T15:20:00.000Z	sethk	thedash	no, probably on the linux box.
+2006-09-10T15:20:00.000Z	sethk	thedash	I'm assuming that the router and windows boxes have been there and talking to each other for a while, and you added a linux box
+2006-09-10T15:22:00.000Z	thedash	sethk	a couple of the windows boxes have been on for a while, but my ubuntu box and another windows box were added at about the same time
+2006-09-10T15:23:00.000Z	sethk	thedash	ok, tell me the ip and netmask of the linux box, and the ip and netmask of one of the old windows boxes
+2006-09-10T15:24:00.000Z	thedash	sethk	umm, as I see, all the IPs are 192.168.1.*, from the router, and I am not sure on the netmask atm
+2006-09-10T15:25:00.000Z	thedash	sethk	if (netmask == subnet mask) { return 255.255.255.0 }
+2006-09-10T15:25:00.000Z	sethk	thedash	yes, subnet mask is more correct
+2006-09-10T15:25:00.000Z	sethk	thedash	the netmask is the same on the windows box and the ubuntu box?
+2006-09-10T15:26:00.000Z	thedash	sethk	yes the netmasks are the same
+2006-09-10T15:27:00.000Z	sethk	thedash	if the ip of both is 192.168.1.x, and the netmask for both is 255.255.255.0, and you can't ping each from the other, then they aren't on the same subnet.
+2006-09-10T15:27:00.000Z	sethk	thedash	in other words you might have a bad cable or some such issue
+2006-09-10T15:27:00.000Z	sethk	thedash	if you have a crossover cable, try cabling the linux box directly to the windows box, and see if you can ping the windows box
+2006-09-10T15:28:00.000Z	thedash	sethk	ok, after a reviow of the computers connected, I see I can ping them
+2006-09-10T15:28:00.000Z	thedash	sethk	[I was trying to ping the one that was offline :X] 
+2006-09-10T15:28:00.000Z	sethk	thedash	ok, that makes more sense
+2006-09-10T15:28:00.000Z	sethk	thedash	if you could ping the one that's off line I would wonder.  :)
+2006-09-10T15:28:00.000Z	sethk	thedash	so it's sounds like you have a samba issue, then.
+2006-09-10T15:29:00.000Z	thedash	sethk	you are an expert in samba stuff too, I hope? :P
+2006-09-10T15:30:00.000Z	sethk	thedash	not an expert, but I know a bit about it.  the most common problem with samba is that the windows side doesn't recognize the username/password.  Try using a username and password that works on a windows box with a share, and see if you can see the share.  That is, if windows box x has a share, use a username and password (in samba) that can log into x, and then see if you can see x's shares
+2006-09-10T15:31:00.000Z	sethk	thedash	no
+2006-09-10T15:31:00.000Z	sethk	thedash	dhcp is strictly at the IP level
+2006-09-10T15:31:00.000Z	sethk	thedash	by "I" you mean the linux box?
+2006-09-10T15:32:00.000Z	sethk	thedash	first question is, then, is the linux box configured to use dhcp?
+2006-09-10T15:32:00.000Z	sethk	thedash	ok, but where does the .102 come from?  did you statically configure the linux box to be 102, or is the linux box configured to use dhcp?
+2006-09-10T15:33:00.000Z	sethk	thedash	that means it is DHCP.  Sometimes you have to add the mac address of a machine to the router's configuration, to tell the router that the machine is allowed to be on the network.
+2006-09-10T15:34:00.000Z	sethk	thedash	that's a guess, because I don't know what router you are using, and I don't know the router's configuration
+2006-09-10T15:34:00.000Z	sethk	thedash	but that's the only way I can think of that the linux box wouldn't be in that list
+2006-09-10T15:34:00.000Z	sethk	thedash	if you bring up the network manager dialog, the ethernet port (or wireless port) should be listed, and if you click on properties, it should tell you whether it is using dhcp, or has a static configuration.
+2006-09-10T15:36:00.000Z	sethk	thedash	ok.  then the reason it doesn't show up on that list (the router's list of local boxes) has to be configuration within the router.
+2006-09-10T15:36:00.000Z	sethk	thedash	assuming you didn't recycle the router since the linux box got it's address
+2006-09-10T15:37:00.000Z	sethk	thedash	I'm doing a few things at once here, so if I don't answer right away, wait a bit.
+2006-09-10T15:37:00.000Z	sethk	thedash	can't hurt to refresh it again
+2006-09-10T15:44:00.000Z	sethk	thedash	try my suggestion about using a username/password in samba that is usable to log into a windows box with a share
+2006-09-10T15:44:00.000Z	thedash	sethk	will do
+2006-09-10T15:51:00.000Z	sethk	thedash	depends on how you set it up
+2006-09-10T15:51:00.000Z	sethk	thedash	I believe by default no, but I'm not certain
+2006-09-10T15:52:00.000Z	sethk	thedash	one easy way to find out, try it.
+2006-09-29T08:22:00.000Z	sethk	thedash	you mean poor drivers?
+2006-09-29T08:23:00.000Z	sethk	thedash	no, the problem is with the device drivers, not the controllers
+2006-09-29T08:23:00.000Z	sethk	thedash	give me details.
+2006-09-29T08:24:00.000Z	sethk	thedash	it's a driver problem.
+2006-09-29T08:24:00.000Z	sethk	thedash	you can try the most recent release of the kernel from kernel.org, see if it's been fixed yet.
+2006-09-29T08:24:00.000Z	sethk	thedash	I have one box with that problem, but it's been about a month since I tried updating the kernel.
+2006-09-29T08:26:00.000Z	sethk	thedash	upgrading the kernel is simple
+2006-09-29T08:26:00.000Z	sethk	thedash	pm me if you want to attempt it.
+2006-09-29T08:33:00.000Z	sethk	thedash	man mount will tell you
+2006-09-29T08:34:00.000Z	sethk	thedash	briefly the pass controls the order of checking for clean file systems at boot time
+2006-09-29T08:34:00.000Z	sethk	thedash	don't worry about dumping, it is mostly irrelevant
+2006-09-29T08:36:00.000Z	sethk	thedash	can you mount from the command line, without using fstab?
+2006-09-29T08:37:00.000Z	sethk	thedash	if you are 100% sure it is an ext3 file system, then you can try to repair it with fsck.ext3
+2006-09-29T08:39:00.000Z	sethk	thedash	there are tools for ext3 that can attempt to recover it.  there are redundent superblocks written when the file system is created
+2006-09-29T08:39:00.000Z	sethk	thedash	how did it get damaged?
+2006-09-29T08:39:00.000Z	sethk	thedash	then do mkfs.ext3 on it
+2006-09-29T08:41:00.000Z	sethk	thedash	it's unusual to use the entire device for a file system, but there is nothing wrong with doing it that way.  using fdisk might be easier, because lots of people don't know that you can use the entire device, and not have a partition table, and they'll confuse you about what arguments to use for various commands
+2006-09-29T08:45:00.000Z	sethk	thedash	what did you run?
+2006-09-29T08:45:00.000Z	sethk	thedash	you have to give it an argument, such as    mkfs.ext3 /dev/hdq1
+2006-09-29T08:45:00.000Z	sethk	thedash	of course it isn't q, but you see what I mean hopefully
+2006-09-29T08:46:00.000Z	sethk	thedash	that's not what you said
+2006-09-29T08:46:00.000Z	sethk	thedash	it's hard to tell you what you are doing wrong when you don't say what you are doing
+2006-09-29T08:47:00.000Z	sethk	thedash	ok, but I thought you said you had problems with the sata drive?
+2006-09-29T08:47:00.000Z	sethk	thedash	try this:    mount | grep sda
+2006-09-29T08:47:00.000Z	sethk	thedash	see if anything from sda is in use.
+2006-09-29T08:47:00.000Z	sethk	thedash	if it's a driver problem, you can't fix it that way.
+2006-09-29T08:48:00.000Z	sethk	thedash	if you do:     ls /dev/sda*         does anything show up?
+2006-09-29T08:49:00.000Z	sethk	thedash	ok
+2006-09-29T08:58:00.000Z	sethk	thedash	of course.  you've done nothing that has any possibility of fixing it.  I did tell you what you need to do, quite a while ago.

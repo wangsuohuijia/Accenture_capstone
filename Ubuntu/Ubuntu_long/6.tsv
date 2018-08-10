@@ -1,0 +1,114 @@
+2011-01-24T06:10:00.000Z	Dakrav		can some one tell me what partition i should increase to increase the room for ubuntu on my laptop please? it says there is 'sda1' (win7), 'sda2' ntfs 104.9 mb, and 'sda3' ntfs 11.1 gb
+2011-01-24T06:11:00.000Z	cablop	Dakrav	i think you had to make the partitions before installing any OS... at this point you need something to partition from Windows... to avoid breaking the way Windows recognizes the partitions
+2011-01-24T06:12:00.000Z	Dakrav	cablop	i already decreased the win 7 partition size from the ubuntu installer, is that a bad thing?
+2011-01-24T06:13:00.000Z	cablop	Dakrav	as long as the ubuntuinstaller didn't changed the partition number this is not an issue
+2011-01-24T06:14:00.000Z	Dakrav	cablop	what does that mean?
+2011-01-24T06:14:00.000Z	cablop	Dakrav	try EASEUS Partition Manager and move some partitions up
+2011-01-24T06:14:00.000Z	cablop	Dakrav	some services and the booting itself depend on the partition number, if they expect for Windows to be on the second partition it won't boot if it is now in the third partition
+2011-01-24T06:15:00.000Z	cablop	Dakrav	partitions are not stored in the partition table in the way they are in the disk, the first could be allocated at the end the second at the beginning and the third in the space in between
+2011-01-24T06:15:00.000Z	Dakrav	cablop	it's the same number, just different size, i just want to increase ubuntu's now, but i'm not sure which one to do
+2011-01-24T06:17:00.000Z	cablop	Dakrav	my suggestion would be: 1st partition, /boot; 2nd, the Win 7 boot; 3rd partition, Windows 7, 4th, an extended partition... then place inside the extended partition new partitions... that ntfs you said, and one or more for linux
+2011-01-24T06:19:00.000Z	cablop	Dakrav	you have a problem there, and it is you only have room left for one partition, and you need at least 2 if not willing to face some problems... dunno if your board or bios is able to reach the latest partition... and because if you use only one the boot will be on it...
+2011-01-24T06:19:00.000Z	cablop	Dakrav	some boards and bios cannot boot a system if it is placed beyond some disk sector, cylinder or sixze
+2011-01-24T06:19:00.000Z	Dakrav	cablop	i have 3 partitions, one for win7 and two others
+2011-01-24T06:20:00.000Z	cablop	Dakrav	yes, Windows 7 creates a small partition of about 100 MB to hold thngs it needs for booting... and you have an extra one... 10 GB maybe? so that would be the recovery partition of your computer
+2011-01-24T06:21:00.000Z	Dakrav	cablop	okay, i get it now
+2011-01-24T06:22:00.000Z	cablop	Dakrav	 no matter what operative system you use, and what do geeks or the microsoft staff says... i *highly* recommend to use at least three partitions for an Operative System, one for the boot partition, the system partition and the users and data partition, that would really ease your life when doing performance or recovery
+2011-01-24T06:24:00.000Z	Dakrav	cablop	okay, i can make new partitions in the ubuntu install thing, could i just make the 3 with that?
+2011-01-24T06:24:00.000Z	cablop	Dakrav	(well, Win XP or Vista does not use a boot partition, so just two for them, but still 3 parts for Win7)
+2011-01-24T06:25:00.000Z	cablop	Dakrav	yes you can, but... you'll face a problem... by design the partition table has only room for up to 4 partitions in a disk
+2011-01-24T06:25:00.000Z	Dakrav	cablop	can i user the ubuntu installer to make the boot, user, and data partitions for ubuntu?
+2011-01-24T06:25:00.000Z	Dakrav	cablop	oh
+2011-01-24T06:26:00.000Z	Dakrav	cablop	so should i use one of the ones you specified?
+2011-01-24T06:26:00.000Z	cablop	Dakrav	with a trick, you convert one partition into an extended partition, that has it's own virtual partition table allowing you to extend the number of partitions, but... you cannot make a partition inside an extended partition booteable
+2011-01-24T06:27:00.000Z	cablop	Dakrav	just cause some boards or bios cannot read the extended partition info, that's why
+2011-01-24T06:28:00.000Z	Dakrav	cablop	is there any way you could walk me through this? i'm a noob and barely know what your saying. but i don't know how to do
+2011-01-24T06:30:00.000Z	Dakrav	cablop	no idea what you said
+2011-01-24T06:30:00.000Z	cablop	Dakrav	are you installing from a live cd or the alternate install or usb?
+2011-01-24T06:32:00.000Z	cablop	Dakrav	if it leads you to a full ubuntu with the install icon on the desktop, yup, a live cd
+2011-01-24T06:32:00.000Z	Dakrav	cablop	then yeah, it's a live cd
+2011-01-24T06:33:00.000Z	Dakrav	cablop	i'm going to use ubuntu almost every time i start my laptop
+2011-01-24T06:35:00.000Z	cablop	Dakrav	according to maco you can install it on an extended pertition... i never placed all in the extended partition, so i cannot say it would work as expected
+2011-01-24T06:35:00.000Z	Dakrav	cablop	i clicked to create partition, and it says 'Use as:' and one option is 'swap area' should i do that?
+2011-01-24T06:36:00.000Z	Dakrav	cablop	i got gparted
+2011-01-24T06:38:00.000Z	Dakrav	cablop	yeah, what should i do now?
+2011-01-24T06:40:00.000Z	Dakrav	cablop	unallocated - unallocated - 1 MiB;   /dev/sda1 - ext4 - 46.57 GiB;   unallocated - unallocated - 408.79 GiB;   /dev/sda2 - ntfs - 100 MiB;   /dev/sda3 - ntfs - 10.31 GiB
+2011-01-24T06:42:00.000Z	cablop	Dakrav	mmm wait a second, it does not make sense...
+2011-01-24T06:43:00.000Z	cablop	Dakrav	except if the 10 GB partition is Win7... but i barely believe Win7 will sit on that small disk
+2011-01-24T06:44:00.000Z	Dakrav	cablop	sda1 is win7, but i made that 50 gb instead of taking up all of my hard drive
+2011-01-24T06:46:00.000Z	cablop	Dakrav	if you had important data there then you need to stop now and recover it
+2011-01-24T06:48:00.000Z	cablop	Dakrav	what is on the 10 GB partition?
+2011-01-24T06:49:00.000Z	cablop	Dakrav	are you therE?
+2011-01-24T06:49:00.000Z	Dakrav	cablop	i have no idea what is on anything, i just installed win7 turned off, boot to the ubuntu live cd and said, try, then i guess i deleted win7, and now i'm here. i'm going to use ubuntu for everything.
+2011-01-24T06:50:00.000Z	cablop	Dakrav	or sth like that
+2011-01-24T06:51:00.000Z	Dakrav	cablop	where do i find nautilus?
+2011-01-24T06:51:00.000Z	cablop	Dakrav	this is the file explorer on ubuntu
+2011-01-24T06:51:00.000Z	cablop	Dakrav	just open the computer or desktop or home place  in the places menu
+2011-01-24T06:52:00.000Z	Dakrav	cablop	k, what do i do now?
+2011-01-24T06:53:00.000Z	cablop	Dakrav	well, tell me what's inside it... or if you don't care and are unwilling to use the recovery of the laptop (cause is another windows or the previous vista before you upgrade, then you can delete that partition...
+2011-01-24T06:54:00.000Z	cablop	Dakrav	so the cleanest way is to start with an empty disk, then plan your partitions... do you plan to install more systems than ubuntu and windows in the future?
+2011-01-24T06:55:00.000Z	Dakrav	cablop	there was no previous vista, it came with win 7 and i put ubuntu on it not wanting win7 to be on it, but i have to put win7 on it acording to my mom,
+2011-01-24T06:55:00.000Z	Dakrav	cablop	just ubuntu and win7
+2011-01-24T06:55:00.000Z	cablop	Dakrav	haha, ok, then you face a user req there :P
+2011-01-24T06:55:00.000Z	cablop	Dakrav	so, your mother would be the windows user and you the linux one...
+2011-01-24T06:56:00.000Z	Dakrav	cablop	yes, but she only needs about 10 gb
+2011-01-24T06:56:00.000Z	cablop	Dakrav	ok, something so special that you will need the Windows for?
+2011-01-24T06:56:00.000Z	cablop	Dakrav	something not replaceable?
+2011-01-24T06:56:00.000Z	Dakrav	cablop	sure
+2011-01-24T06:57:00.000Z	cablop	Dakrav	ok, Win 7 would eat 50 GB if you will use it for usage and minimal file storage... 100 GB if she is going to save her music and other stuff
+2011-01-24T06:58:00.000Z	Dakrav	cablop	just 50
+2011-01-24T06:58:00.000Z	cablop	Dakrav	remember this thing, if this is a mechanical disk, not a SSD, the farer from the beginning of the disk the slower the disk is
+2011-01-24T06:59:00.000Z	cablop	Dakrav	but the farer from the beginning the hardest to boot it on some bios,
+2011-01-24T06:59:00.000Z	Dakrav	cablop	not sure what tha means lol, sorry
+2011-01-24T07:00:00.000Z	Dakrav	cablop	okay
+2011-01-24T07:01:00.000Z	Dakrav	cablop	okay, makes sense
+2011-01-24T07:01:00.000Z	cablop	Dakrav	the swap partition is going to be the virtual memory equivalent, so don't put it at the end of the disk...
+2011-01-24T07:02:00.000Z	cablop	Dakrav	it would be slower
+2011-01-24T07:02:00.000Z	Dakrav	cablop	okay, should i delete all other partitions before i start doing this?
+2011-01-24T07:03:00.000Z	cablop	Dakrav	one partition left and you cannot guarantee if the partitions would be ok
+2011-01-24T07:03:00.000Z	Dakrav	cablop	is it okay to do it from gparted?
+2011-01-24T07:03:00.000Z	cablop	Dakrav	but delettte all before
+2011-01-24T07:03:00.000Z	Dakrav	cablop	delete each and every one right?
+2011-01-24T07:03:00.000Z	cablop	Dakrav	if you can use the windows in a virtual machine that would be nice for you :P
+2011-01-24T07:04:00.000Z	Dakrav	cablop	i don't know what that is, i'm using a desktop for this chat, and have my laptop on my lap
+2011-01-24T07:04:00.000Z	cablop	Dakrav	yes, don't leave one left, if you have the Windows 7 installer of your computer on a disk you won't gface a problem
+2011-01-24T07:05:00.000Z	Dakrav	cablop	i have win7 on a cd
+2011-01-24T07:05:00.000Z	Dakrav	cablop	yes, i have the cd right here
+2011-01-24T07:05:00.000Z	cablop	Dakrav	ok, perfect, then you don't need the recovery installer... anyway... we can trust on it after changig the partitions as it would expect them to be
+2011-01-24T07:06:00.000Z	cablop	Dakrav	so go ahead and delete the partitions
+2011-01-24T07:06:00.000Z	cablop	Dakrav	i'll think for a second a nice layout...
+2011-01-24T07:06:00.000Z	Dakrav	cablop	k, all done
+2011-01-24T07:08:00.000Z	cablop	Dakrav	how much ram does your laptop have? are you planning to increase it?
+2011-01-24T07:09:00.000Z	Dakrav	cablop	it has a 500 gb hard drive i believe, and i don't plan on increasing it
+2011-01-24T07:09:00.000Z	cablop	Dakrav	i mean ram
+2011-01-24T07:10:00.000Z	Dakrav	cablop	i think it has 4, 4-6 i think
+2011-01-24T07:13:00.000Z	cablop	Dakrav	ok bios has a 1024 cylinder booteable boundary and can affect some linux distros also
+2011-01-24T07:13:00.000Z	Dakrav	cablop	k
+2011-01-24T07:14:00.000Z	cablop	Dakrav	so, to be sure well place a small boot partition at the beginning... 100 MB or 255 MB would be enough
+2011-01-24T07:14:00.000Z	Dakrav	cablop	k
+2011-01-24T07:14:00.000Z	cablop	Dakrav	well 50 MB, but hard to tweak if you want to play around
+2011-01-24T07:15:00.000Z	cablop	Dakrav	i'll recommend 255 MB
+2011-01-24T07:15:00.000Z	Dakrav	cablop	k
+2011-01-24T07:15:00.000Z	cablop	Dakrav	2nd partition, Win 7 50 GB, format as ntfs
+2011-01-24T07:16:00.000Z	Dakrav	cablop	wait, should i be making these already?
+2011-01-24T07:17:00.000Z	cablop	Dakrav	3rd partition, swap 1.5~2.5 times your RAM size, if you plan to increase it's RAM then use the desired RAM amount, not the current
+2011-01-24T07:17:00.000Z	cablop	Dakrav	that is, for example, in my netbook it came with 1 GB but i plan to increase to 2 GB, then i use a 5GB swap
+2011-01-24T07:17:00.000Z	Dakrav	cablop	okay, should i start making these partitions?
+2011-01-24T07:18:00.000Z	Dakrav	cablop	gotya
+2011-01-24T07:18:00.000Z	cablop	Dakrav	swap aize will be important you need it to be able to hibernate
+2011-01-24T07:18:00.000Z	Dakrav	cablop	i never use hibernate
+2011-01-24T07:20:00.000Z	cablop	Dakrav	then 4rth partition, you can set it for whole linux or use an extended with many smaller inside... one recommendation is to set one for root / and other for /home, ubuntu will work well with 25 GB for root partition ( / )
+2011-01-24T07:21:00.000Z	cablop	Dakrav	it is a laptop... you'll need hibernation... not all the time you have energy supply or you cannot just lose work in the event of changing the battery
+2011-01-24T07:22:00.000Z	Dakrav	cablop	okay
+2011-01-24T07:22:00.000Z	cablop	Dakrav	create the partitions in the ordr they should look in the disk... old-school but will save you of headaches
+2011-01-24T07:24:00.000Z	cablop	Dakrav	next, install Win 7 first, don't delete or change partitions, don tlet it create anything else
+2011-01-24T07:25:00.000Z	Dakrav	cablop	k
+2011-01-24T07:27:00.000Z	cablop	Dakrav	then restart and install Windows in the 50 GiB partition, allow it to format it, but not delete or create an additional one... that way we are forcing it to put the booteable stuff into the same partition, and your mother will see just one C:disk
+2011-01-24T07:29:00.000Z	cablop	Dakrav	then back to linux and use the partitions... remember, the first one should have /boot at the mounting point, the system one /... if you use another for the user files then /home is the mounting point
+2011-01-24T07:29:00.000Z	cablop	Dakrav	that's all
+2011-01-24T07:33:00.000Z	cablop	Dakrav	if you install linux before windows, windows will overwrite the linux loader and then you'll have to rebuild it... not a nice thing on some systems
+2011-01-24T07:33:00.000Z	Dakrav	cablop	yeah, i already had that happen once
+2011-01-24T07:36:00.000Z	cablop	Dakrav	yup, nowadays some CDs can recover your linux loader... but hard for some special configurations... like having an encrypted disk or LVM partitions... or a raid array.. so you must know about mounting those special filesystems, chrooting and thinks like what sda and hd0 are... hehe
+2011-01-24T07:37:00.000Z	Dakrav	cablop	lol, i'm no where near knowing those
+2011-01-24T07:44:00.000Z	Dakrav	cablop	i have to go, i'm sorry
+2011-01-24T07:44:00.000Z	cablop	Dakrav	same here

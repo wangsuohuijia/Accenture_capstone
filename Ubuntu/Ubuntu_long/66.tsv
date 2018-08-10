@@ -1,0 +1,39 @@
+2011-10-24T21:43:00.000Z	kisil		Hey, I'm having network issues in 11.10, and I'm having trouble finding up-to-date docs. I used to understand the tools, but now dhclient has moved, and the GUI failures are opaque. When I reboot, I'm assigned an IP, but can't ping my router. When I disable my wireless and reenable via the settings GUI, it fails but doesn't give an error
+2011-10-24T21:44:00.000Z	kisil		troubleshooting ideas?
+2011-10-24T21:44:00.000Z	phlak_user	kisil	why dont you sudo tail -f /var/log/syslog when the connection attempt is going on? youll get more transperancy
+2011-10-24T21:48:00.000Z	kisil	phlak_user	Thanks. I connected while logging, and saw an error. NetworkManager changes state to need-auth, then I get <warn> No agents were available for this request.
+2011-10-24T21:48:00.000Z	phlak_user	kisil	ok so is it wired or wireless?
+2011-10-24T21:48:00.000Z	kisil	phlak_user	wireless
+2011-10-24T21:49:00.000Z	phlak_user	kisil	do you have wpa-supplicant?
+2011-10-24T21:51:00.000Z	kisil	phlak_user	yes, wpa-supplicatn is installed
+2011-10-24T21:53:00.000Z	phlak_user	kisil	do you have a profile created for the network you are connecting to? if so, can you pl delete it and connect afresh?
+2011-10-24T21:55:00.000Z	kisil	phlak_user	where would that be stored? I don't have the wireless icon in the notification bar, and the settings tool has no way to do that
+2011-10-24T21:56:00.000Z	phlak_user	kisil	on network manager applet, there should be an option for ":edit connections", in the dialog that appears, click on wireless and delete the profiles
+2011-10-24T21:58:00.000Z	kisil	phlak_user	I remember that dialog but I can't find it since the update to Unity.
+2011-10-24T21:59:00.000Z	phlak_user	kisil	just click on the network icon in the system tray
+2011-10-24T21:59:00.000Z	kisil	phlak_user	like I said, that icon's missing.
+2011-10-24T22:00:00.000Z	kisil	phlak_user	I don't know how to add it
+2011-10-24T22:00:00.000Z	phlak_user	kisil	does ps -fe|grep nm-applet show the process ?
+2011-10-24T22:02:00.000Z	kisil	phlak_user	No, but running nm-applet helped. I'm now back to where I am on boot; IP assigned but can't ping router
+2011-10-24T22:03:00.000Z	phlak_user	kisil	now can you go and edit the profiles?
+2011-10-24T22:07:00.000Z	kisil	phlak_user	Yes, I can. Deleting and recreating the connection didn't fix the problem. I still have an IP assigned, but can't ping the router
+2011-10-24T22:07:00.000Z	phlak_user	kisil	can you pastebin the output of ifconfig
+2011-10-24T22:10:00.000Z	kisil	phlak_user	can't pastebin, I don't have a connection on that computer. But my broadcast and mask are correct, sent/received packets are incrementing. I haven an IPV6 address assigned, is that still broken?
+2011-10-24T22:11:00.000Z	phlak_user	kisil	a) has the ip been assigned by the router? b) output of route -n
+2011-10-24T22:13:00.000Z	kisil	phlak_user	not sure how to read that, but "0.0.0.0 10.1.10.1 0.0.0.0 UG Metric:0 Ref:0 Use: 0 Iface wlan1 \n 10.1.10.0 0.0.0.0 255.255.255.0 U 2 0 0 wlan1 \n 169.254.0.0 0.0.0.0 255.255.0.0 U 1000 0 0 wlan1"
+2011-10-24T22:14:00.000Z	kisil	phlak_user	Not sure about the last line but I'll investigate that later.
+2011-10-24T22:15:00.000Z	phlak_user	kisil	what is your ip address?
+2011-10-24T22:16:00.000Z	kisil	phlak_user	10.1.10.13. Router is at 10.1.10.1. This machine is at 10.1.10.11 so I'm pretty sure the network's otherwise OK
+2011-10-24T22:17:00.000Z	phlak_user	kisil	are you able to ping this machine (.11) from that machine (.13) ?
+2011-10-24T22:18:00.000Z	kisil	phlak_user	no. I can't ping any other device on the network
+2011-10-24T22:19:00.000Z	kisil	phlak_user	same thing in the opposite directon; other machines can't see .13
+2011-10-24T22:21:00.000Z	phlak_user	kisil	are you able to run tcpdump on .13 machine and see whats going on?
+2011-10-24T22:23:00.000Z	kisil	phlak_user	no suitable device found.
+2011-10-24T22:23:00.000Z	phlak_user	kisil	sudo tcpdump -i wlan1
+2011-10-24T22:25:00.000Z	kisil	phlak_user	haha thanks. It runs, but reports no activity on ping, even in -vv mode
+2011-10-24T22:27:00.000Z	phlak_user	kisil	im not clear about something; why is your wireless called wlan1 (do you have another wifi card/stick called wlan0 too?)
+2011-10-24T22:27:00.000Z	kisil	phlak_user	actually, it's reporting occasional dns requsts from dropbox :-)
+2011-10-24T22:27:00.000Z	phlak_user	kisil	it must be the other way, your machine is reaching out to dropbox
+2011-10-24T22:28:00.000Z	kisil	phlak_user	yes, I mean dropbox on my machine calling home; sorry if that was unclear. I don't know why it's wlan1 either.
+2011-10-24T22:29:00.000Z	phlak_user	kisil	can you pastebin the output of iwconfig pl?
+2011-10-24T22:35:00.000Z	kisil	phlak_user	http://pastebin.com/mQYSKiuV

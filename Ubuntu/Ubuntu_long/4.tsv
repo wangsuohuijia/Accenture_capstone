@@ -1,0 +1,140 @@
+2008-12-27T21:31:00.000Z	cubevanbaby		hey hey question for you all. I'm using xfce and thunbar and feh. I am now able to right click and set a wallpaper which is awesome. I wanted to try getting it to work at startup and added the following to my autostarted programs eval `cat $HOME/.fehbg` & but it doesn't seem to work. Then I tried using another feh command where I specified a filename but I can;t remember off the top. didn't work though. LOL any
+2008-12-27T21:31:00.000Z	cubevanbaby		one have any other ideas?
+2008-12-27T21:32:00.000Z	onetinsoldier	cubevanbaby	try making a file called .xsession. start it at the top with   #! /bin/bash
+2008-12-27T21:32:00.000Z	onetinsoldier	cubevanbaby	then put your feh command in it next. let me know if that works ok
+2008-12-27T21:33:00.000Z	onetinsoldier	cubevanbaby	you're welcome, i just hope that works ok for you. i'm pretty sure it will though
+2008-12-27T21:40:00.000Z	onetinsoldier	cubevanbaby	hmmm, does sound weird. do you already have a file in your home dir named .xsession?
+2008-12-27T21:45:00.000Z	onetinsoldier	cubevanbaby	oh, look at the permissions of that file. make sure that you do have write permission to it
+2008-12-27T21:46:00.000Z	cubevanbaby	onetinsoldier	argh you're right I don't apparently
+2008-12-27T21:46:00.000Z	onetinsoldier	cubevanbaby	ok, roger
+2008-12-27T21:47:00.000Z	onetinsoldier	cubevanbaby	who is the owner of the file? show me the output of  ls -l .xsession
+2008-12-27T21:48:00.000Z	cubevanbaby	onetinsoldier	crap I think it belongs to the other user. hold on -_-' lol
+2008-12-27T21:49:00.000Z	onetinsoldier	cubevanbaby	in your home dir? i don't know why it would....
+2008-12-27T21:50:00.000Z	cubevanbaby	onetinsoldier	-rw-r--r-- 2 root root 23 2008-07-27 17:50 .xsession
+2008-12-27T21:51:00.000Z	onetinsoldier	cubevanbaby	have you ever started X Windows as the root user somehow?
+2008-12-27T21:52:00.000Z	cubevanbaby	onetinsoldier	not that I know of... :-/
+2008-12-27T21:52:00.000Z	onetinsoldier	cubevanbaby	ok, hang on
+2008-12-27T21:57:00.000Z	onetinsoldier	cubevanbaby	ok, if your username in you system is cubevanbaby, then do the following command --> sudo chown cubevanbaby.cubevanbaby .xsession
+2008-12-27T21:59:00.000Z	onetinsoldier	cubevanbaby	ok, cool. you're welcome. :-) good luck
+2008-12-27T22:49:00.000Z	cubevanbaby	onetinsoldier	so... I may have done something majorly wrong with editing .xsession now it just keeps bringing me back to the login screen over and over agian :-/
+2008-12-27T23:09:00.000Z	onetinsoldier	cubevanbaby	have you received help for the .xsession problem?
+2008-12-27T23:09:00.000Z	onetinsoldier	cubevanbaby	i was away....
+2008-12-27T23:19:00.000Z	cubevanbaby	onetinsoldier	yes thanks. lol fixing it now
+2008-12-27T23:20:00.000Z	onetinsoldier	cubevanbaby	ok, roger. just curious, how are you getting it fixed? what line did you remove?
+2008-12-27T23:21:00.000Z	cubevanbaby	onetinsoldier	- usr/bin/icewm -_-''
+2008-12-27T23:21:00.000Z	onetinsoldier	cubevanbaby	if you own a file or have proper permission, always make a backup copy of the file before editing it
+2008-12-27T23:21:00.000Z	onetinsoldier	cubevanbaby	roger that
+2008-12-27T23:22:00.000Z	cubevanbaby	onetinsoldier	yeah I should have done that i don't know why i didn't was taking gambling and lost lol
+2008-12-27T23:22:00.000Z	onetinsoldier	cubevanbaby	i've made the same mistake a few times. i think we all have, hehe.
+2008-12-27T23:34:00.000Z	onetinsoldier	cubevanbaby	:-)
+2008-12-27T23:36:00.000Z	cubevanbaby	onetinsoldier	well it's true! XD you guys are reaching out and helping people get started on linux and none of you have to be doing this. certainly wasn't around I don't think when my friend started using it oh gosh like a decade ago maybe more. and if so it certainly wasn't as popular or out there as it is now
+2008-12-27T23:39:00.000Z	onetinsoldier	cubevanbaby	i like helping, it's fun. and we need as many linux users as possible! and i think, the more people get help, the more they stick with it
+2008-12-27T23:42:00.000Z	cubevanbaby	onetinsoldier	it's totally true. I think the thing that scares people the most is that fear of lack of support. I know I was scared at first. then I found the channel. lol. and everyone is so awesome. there are so many people who want to help and offer to teach it's amazing. I did not expect after 3 days to even get as far as I am now. I thought I would be sitting here crying sucking my thumb with a broken lap
+2008-12-27T23:43:00.000Z	onetinsoldier	cubevanbaby	lol. i am happy to hear you haven't regretted taking the plunge
+2008-12-28T00:02:00.000Z	onetinsoldier	cubevanbaby	what's happening? i think all you said was the line that was missing in there was...  /usr/bin/icewm-session   ....you didn't just add that back into it?
+2008-12-28T00:03:00.000Z	onetinsoldier	cubevanbaby	or are you having a different issue now?
+2008-12-28T00:05:00.000Z	cubevanbaby	onetinsoldier	- it keeps giving me a line highlighted in red with an error E486: Pattern not found :usr
+2008-12-28T00:06:00.000Z	onetinsoldier	cubevanbaby	what does? what are you trying to do exactly and what's giving you this red line?
+2008-12-28T00:06:00.000Z	onetinsoldier	cubevanbaby	use pastebin if you have to
+2008-12-28T00:07:00.000Z	onetinsoldier	cubevanbaby	would you like to start with a fresh .xsession file? if so, just delete the current one and i'll give you steps to take to make sure a fresh new one is created, from scratch
+2008-12-28T00:08:00.000Z	onetinsoldier	cubevanbaby	on second though, just in case, rename the current one. ;-)
+2008-12-28T00:08:00.000Z	cubevanbaby	onetinsoldier	sounds good to me
+2008-12-28T00:08:00.000Z	onetinsoldier	cubevanbaby	ok, one moment
+2008-12-28T00:10:00.000Z	onetinsoldier	cubevanbaby	ignore the instructions in here about running the 'Xorg -configure' command. other than ignoring that, follow the instructions and it should create a fresh new .xsession file for you. after it has been created, then there should be no problem with you adding your 'feh' command to it
+2008-12-28T00:11:00.000Z	onetinsoldier	cubevanbaby	1) determine what display_manager you use with --> cat /etc/X11/default-display-manager  2) log out of x-windows  3) Ctrl+Alt+F1  4) login to the console termminal  4) sudo invoke-rc.d <display_manager> stop (for example -->  invoke-rc.d gdm stop  <--, this shuts down x-windows completely)  5) sudo Xorg -configure (this command should create a full xorg.conf.new file in the root users home directory)
+2008-12-28T00:12:00.000Z	onetinsoldier	cubevanbaby	and ignore steps 6 & 7 as well, of course
+2008-12-28T00:12:00.000Z	onetinsoldier	cubevanbaby	ignore steps 5, 6 & 7
+2008-12-28T00:13:00.000Z	cubevanbaby	onetinsoldier	got it thanks. I'll give this a whirl and let you know what happens\
+2008-12-28T00:13:00.000Z	onetinsoldier	cubevanbaby	you can copy and paste all of that into a file and save to your hard drive to make it easier.
+2008-12-28T00:13:00.000Z	onetinsoldier	cubevanbaby	ok, good luck :-)
+2008-12-28T00:13:00.000Z	cubevanbaby	onetinsoldier	- already have lol
+2008-12-28T00:19:00.000Z	onetinsoldier	cubevanbaby	yes...  that's to determing what you will use for the invoke-rc.d command
+2008-12-28T00:22:00.000Z	onetinsoldier	cubevanbaby	the menu up top in 8.10...  System --> Logout
+2008-12-28T00:24:00.000Z	onetinsoldier	cubevanbaby	but that's in compiz... not sure for xfce. it shoukld be right down there on your menu somewhere
+2008-12-28T00:24:00.000Z	cubevanbaby	onetinsoldier	I don't have a menu :-/ when I type that out it returns /usr/bin/xdm and then brings me back to root@user:~#
+2008-12-28T00:26:00.000Z	onetinsoldier	cubevanbaby	ok, this will kill everything you have open.. but here's how you can do it.   invoke-rc.d gdm stop   ...if gdm is your display manager
+2008-12-28T00:28:00.000Z	onetinsoldier	cubevanbaby	just do that from a terminal while you're in X
+2008-12-28T00:28:00.000Z	onetinsoldier	cubevanbaby	can you boot into normal mode?
+2008-12-28T00:29:00.000Z	onetinsoldier	cubevanbaby	what happens when you try to boot into normal mode?
+2008-12-28T00:29:00.000Z	cubevanbaby	onetinsoldier	no that's why it's so horrficially broken lol
+2008-12-28T00:29:00.000Z	cubevanbaby	onetinsoldier	if I go to login the screen goes black and brings me back to the login screen
+2008-12-28T00:30:00.000Z	cubevanbaby	onetinsoldier	so then I went into recovery so everything is text based now and I'm a bit lost because I've never been in the recovery console. from there I selected root
+2008-12-28T00:30:00.000Z	onetinsoldier	cubevanbaby	ok, at that point, try following the instructions, start with step #3
+2008-12-28T00:31:00.000Z	onetinsoldier	cubevanbaby	and don't bogart that j
+2008-12-28T00:32:00.000Z	onetinsoldier	cubevanbaby	roger
+2008-12-28T00:47:00.000Z	cubevanbaby	onetinsoldier	ok done XD do I just exit and try to reboot normally now or is there other stuff to do/
+2008-12-28T00:48:00.000Z	onetinsoldier	cubevanbaby	when you say 'done'. what do you mean exactly?
+2008-12-28T00:50:00.000Z	cubevanbaby	onetinsoldier	- nm lol I went back to your message and you said that once I finished off the steps that it would recreate .xconfig for me. lol
+2008-12-28T00:50:00.000Z	onetinsoldier	cubevanbaby	ok. get to it now
+2008-12-28T00:50:00.000Z	onetinsoldier	cubevanbaby	ahh! i see
+2008-12-28T00:51:00.000Z	onetinsoldier	cubevanbaby	just make sure you rename the .xsession file
+2008-12-28T00:51:00.000Z	onetinsoldier	cubevanbaby	then start at step #3 and ignore steps 5, 6, & 7
+2008-12-28T00:53:00.000Z	cubevanbaby	onetinsoldier	ok cool. so do I just boot up normally or do I need to do all that in recovery?
+2008-12-28T00:53:00.000Z	onetinsoldier	cubevanbaby	do this by booting up normally, or trying to anyway
+2008-12-28T00:57:00.000Z	cubevanbaby	onetinsoldier	sadly didn't work :(
+2008-12-28T00:59:00.000Z	onetinsoldier	cubevanbaby	ok.. i don't know what you've done to breakit exactly then i guess. what happened when you did   Ctrl+Alt+F1  ..? you have to tell me these kinds of things rather than just say it's still broken or doesn't work
+2008-12-28T01:00:00.000Z	cubevanbaby	onetinsoldier	sorry lol hitting ctrl+alt+f1 didn't work in recovery so I hit exit and booted normally
+2008-12-28T01:00:00.000Z	onetinsoldier	cubevanbaby	ok, and?
+2008-12-28T01:01:00.000Z	cubevanbaby	onetinsoldier	well when I tried to log in it kept looping
+2008-12-28T01:01:00.000Z	onetinsoldier	cubevanbaby	as i said.. start at Step #3
+2008-12-28T01:02:00.000Z	onetinsoldier	cubevanbaby	step #3 is NOT logging in
+2008-12-28T01:02:00.000Z	cubevanbaby	onetinsoldier	yeah I just clued in when I was at the login screen hitting crtl+alt+f1 worked and i was like oh crap that's what he meant
+2008-12-28T01:02:00.000Z	onetinsoldier	cubevanbaby	rofl
+2008-12-28T01:05:00.000Z	onetinsoldier	cubevanbaby	yep... hehe
+2008-12-28T01:19:00.000Z	onetinsoldier	cubevanbaby	ok, you're using xdm?
+2008-12-28T01:20:00.000Z	onetinsoldier	cubevanbaby	yes, gdm is gnome
+2008-12-28T01:21:00.000Z	onetinsoldier	cubevanbaby	if you're a kde user, you might want to install kdm  --> sudo apt-get install kdm
+2008-12-28T01:30:00.000Z	onetinsoldier	cubevanbaby	have you don't step #8 yet?
+2008-12-28T01:31:00.000Z	onetinsoldier	cubevanbaby	have you done step #8 using 'xdm' yet?
+2008-12-28T01:35:00.000Z	cubevanbaby	onetinsoldier	when i do step 8 it outputs a bunch of stuff looks like a list of commands like force, try anyways  etc. i try typing sudo invoke-rc.d force and it says I'm missing a parameter :-/ sorry I missed stp 8 before -_-
+2008-12-28T01:38:00.000Z	onetinsoldier	cubevanbaby	you''l want to astebin this stuff. first do  -->  apt-get install gpm pastebinit
+2008-12-28T01:38:00.000Z	onetinsoldier	cubevanbaby	you'll want to pastebin this stuff. first do  -->  apt-get install gpm pastebinit
+2008-12-28T01:39:00.000Z	cubevanbaby	onetinsoldier	ok hold on
+2008-12-28T01:40:00.000Z	cubevanbaby	onetinsoldier	I can't connect to the internet dunno how I'll pastebin.
+2008-12-28T01:40:00.000Z	onetinsoldier	cubevanbaby	oh darn
+2008-12-28T01:41:00.000Z	onetinsoldier	cubevanbaby	hard tohelp with this kind of thing if i can't see what's happening
+2008-12-28T01:42:00.000Z	onetinsoldier	cubevanbaby	reboot and try again. iwill give it to you blow by blow
+2008-12-28T01:43:00.000Z	cubevanbaby	onetinsoldier	when I'm at step 8 when I type sudo invoke-rc.d it gives me a list of options and it's discription quiet, force, try anyway, disclose-deny, query, nofallback, help
+2008-12-28T01:44:00.000Z	cubevanbaby	onetinsoldier	will do just got your message
+2008-12-28T01:45:00.000Z	onetinsoldier	cubevanbaby	just ell me when you have rebooted
+2008-12-28T01:47:00.000Z	cubevanbaby	onetinsoldier	k k rebooted lol
+2008-12-28T01:48:00.000Z	onetinsoldier	cubevanbaby	ok,, not Ctrl+Alt+F1 and login... tel me when you;ve done that
+2008-12-28T01:48:00.000Z	onetinsoldier	cubevanbaby	ok,, now Ctrl+Alt+F1 and login... tel me when you;ve done that
+2008-12-28T01:49:00.000Z	onetinsoldier	cubevanbaby	now  sudo -i   and login
+2008-12-28T01:51:00.000Z	cubevanbaby	onetinsoldier	when I go to ctrl+alt+f1 i get my user name login: do i simply type sudo -i login here??
+2008-12-28T01:51:00.000Z	onetinsoldier	cubevanbaby	type in just --> sudo -i
+2008-12-28T01:52:00.000Z	cubevanbaby	onetinsoldier	ok now do I hit enter?
+2008-12-28T01:52:00.000Z	onetinsoldier	cubevanbaby	after you type that command, login to your root user by entering your password
+2008-12-28T01:52:00.000Z	cubevanbaby	onetinsoldier	I tried entering sudo -i then in password my password and I get login incorrect
+2008-12-28T01:53:00.000Z	onetinsoldier	cubevanbaby	type in -->  sudo -i   ...then press Enter. then enter in your password
+2008-12-28T01:54:00.000Z	cubevanbaby	onetinsoldier	i did exactly that it returns login incorrect
+2008-12-28T01:54:00.000Z	onetinsoldier	cubevanbaby	you are able to login as your normal user... correct?
+2008-12-28T01:55:00.000Z	cubevanbaby	onetinsoldier	I logged in using my userid and my password tried sudo -i and then my password again now I'm in root@myusername:~# is that where you wanted me to be?
+2008-12-28T01:55:00.000Z	onetinsoldier	cubevanbaby	loggin in as your normal user was no problem... correct?
+2008-12-28T01:56:00.000Z	onetinsoldier	cubevanbaby	ahhh! finally!
+2008-12-28T01:56:00.000Z	onetinsoldier	cubevanbaby	yes
+2008-12-28T01:57:00.000Z	onetinsoldier	cubevanbaby	ok, now. are you sure that you have renamed the .xsession file that was in your normal user's home directory?
+2008-12-28T01:58:00.000Z	cubevanbaby	onetinsoldier	 no I never renamed .xsession. don't know how.
+2008-12-28T01:59:00.000Z	onetinsoldier	cubevanbaby	what is your normal user's name in ubuntu?
+2008-12-28T01:59:00.000Z	cubevanbaby	onetinsoldier	ilmob
+2008-12-28T02:00:00.000Z	onetinsoldier	cubevanbaby	ok, now, the next command is -->  cd /home/ilmod
+2008-12-28T02:01:00.000Z	onetinsoldier	cubevanbaby	sorry.. typo
+2008-12-28T02:01:00.000Z	onetinsoldier	cubevanbaby	ok, now, the next command is -->  cd /home/ilmob
+2008-12-28T02:01:00.000Z	cubevanbaby	onetinsoldier	no it's cool I'm starting to understand
+2008-12-28T02:02:00.000Z	onetinsoldier	cubevanbaby	ok, now... the next command is  -->  mv -v .xession xsession-bad
+2008-12-28T02:04:00.000Z	onetinsoldier	cubevanbaby	ok, good. now, to try and help make sure you don't do any damage as root user, let's get you out of your normal user's home directory  -->   cd    ...then simply press Enter
+2008-12-28T02:04:00.000Z	cubevanbaby	onetinsoldier	ok cool now I'm back into root@ilmob:~#
+2008-12-28T02:05:00.000Z	onetinsoldier	cubevanbaby	ok, next command is...   invoke-rc.d xdm stop
+2008-12-28T02:06:00.000Z	cubevanbaby	onetinsoldier	done! :)
+2008-12-28T02:07:00.000Z	onetinsoldier	cubevanbaby	ok, for the next command, let me know if there is any problem, which i'm sure you'll do  -->  invoke-rc.d xdm start   ...if you get any complaint, let me know
+2008-12-28T02:09:00.000Z	cubevanbaby	onetinsoldier	totally worked! brilliant!!
+2008-12-28T02:09:00.000Z	onetinsoldier	cubevanbaby	w00ooties!
+2008-12-28T02:12:00.000Z	onetinsoldier	cubevanbaby	now that you have a good .xsession file, make a backup of it. then edit it.... put in your 'feh' command after the  #! /bin/bash (which is at the top of the file) and follow the feh command with an ampersand... like so
+2008-12-28T02:13:00.000Z	onetinsoldier	cubevanbaby	feh --bg-scale /usr/share/xfce4/backdrops/paltanen.jpg &
+2008-12-28T02:14:00.000Z	onetinsoldier	cubevanbaby	put that command after the #! /bin/bash and before any other command, before the /usr/bin/icewm-session  command or whatever the /usr/bin/session command is named
+2008-12-28T02:16:00.000Z	cubevanbaby	onetinsoldier	all good!
+2008-12-28T02:17:00.000Z	onetinsoldier	cubevanbaby	ok. great! you did see how to add the 'feh' command, right?
+2008-12-28T02:17:00.000Z	cubevanbaby	onetinsoldier	sure did :)
+2008-12-28T02:17:00.000Z	onetinsoldier	cubevanbaby	ok, cool
+2008-12-28T02:19:00.000Z	cubevanbaby	onetinsoldier	thanks for the walkthrough i totally understand now what you were asking me to do end to end
+2008-12-28T02:19:00.000Z	onetinsoldier	cubevanbaby	hehe. you're welcome

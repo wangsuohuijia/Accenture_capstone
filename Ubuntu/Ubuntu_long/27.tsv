@@ -1,0 +1,48 @@
+2011-01-18T10:17:00.000Z	shifnix	bloopletech	my dmesg http://paste.ubuntu.com/555316/
+2011-01-18T10:24:00.000Z	shifnix	bloopletech	sure, sec
+2011-01-18T10:28:00.000Z	shifnix	bloopletech	http://paste.ubuntu.com/555319/
+2011-01-18T10:30:00.000Z	shifnix	bloopletech	weird. it should just be using VESA right now ,since that's what i put in xorg.conf
+2011-01-18T10:30:00.000Z	bloopletech	shifnix	no hang on
+2011-01-18T10:30:00.000Z	shifnix	bloopletech	ok
+2011-01-18T10:30:00.000Z	bloopletech	shifnix	right now your system is partiall stuffed up because you've still gut the propietry driver hanging around
+2011-01-18T10:31:00.000Z	bloopletech	shifnix	you got to choose whether you want to try and get a version of the prop. driver that supports your chipset, or switch over to the radeon driver
+2011-01-18T10:35:00.000Z	shifnix	bloopletech	i'm down for trying whatever driver will get me OpenGL support
+2011-01-18T10:35:00.000Z	bloopletech	shifnix	ok, well won't hurt to try the open ssource driver
+2011-01-18T10:35:00.000Z	bloopletech	shifnix	one sec
+2011-01-18T10:37:00.000Z	bloopletech	shifnix	you'll need to remove/purge the ATI driver, start with https://wiki.ubuntu.com/X/Troubleshooting/FglrxInteferesWithRadeonDriver
+2011-01-18T10:37:00.000Z	bloopletech	shifnix	if you installed the propreitry driver using the installer from ATI as opposed to an ubuntu package then you need to remove it a different way
+2011-01-18T10:38:00.000Z	shifnix	bloopletech	i don't THINK i installed anything extra; it's got whatever ubuntu put on it and updated through the update manager. if i did, however, add something, it would have been through aptitude
+2011-01-18T10:39:00.000Z	bloopletech	shifnix	ok, cool, then run the commands under the 'Problem: Need to purge -fglrx' section of that article
+2011-01-18T10:39:00.000Z	bloopletech	shifnix	actually the 'Problem: Need to fully remove -fglrx and reinstall -ati from scratch' section
+2011-01-18T10:39:00.000Z	shifnix	bloopletech	ok, i will try this and report back....
+2011-01-18T10:40:00.000Z	bloopletech	shifnix	then reboot and see
+2011-01-18T10:56:00.000Z	shifnix	bloopletech	interestingly, i cna't get the ATI driver to show iup in the restricted drivers manager for the life of me
+2011-01-18T10:57:00.000Z	bloopletech	shifnix	I don't trust that dialog box ;), what's happening for you at the moment?
+2011-01-18T11:06:00.000Z	shifnix	bloopletech	bad news,,,lots of artifacts :(
+2011-01-18T11:06:00.000Z	bloopletech	shifnix	pastie your latest xorg config
+2011-01-18T11:06:00.000Z	shifnix	bloopletech	i don't have one by default. i made one to force the VESA driver before, but i moved that so x wouldn't load it
+2011-01-18T11:07:00.000Z	bloopletech	shifnix	Log, not config :)
+2011-01-18T11:07:00.000Z	shifnix	bloopletech	np, sec
+2011-01-18T11:08:00.000Z	shifnix	bloopletech	http://paste.ubuntu.com/555323/
+2011-01-18T11:10:00.000Z	bloopletech	shifnix	That looks a lot healthier - what do you mean specifically by artifacts?
+2011-01-18T11:15:00.000Z	shifnix	bloopletech	it looks like this: http://shifuimam.com/misc/Screenshot.png
+2011-01-18T11:19:00.000Z	bloopletech	shifnix	well that is wack
+2011-01-18T11:19:00.000Z	shifnix	bloopletech	i know :(
+2011-01-18T11:19:00.000Z	bloopletech	shifnix	hmm
+2011-01-18T11:19:00.000Z	bloopletech	shifnix	you're running 10.10 with gnome right?
+2011-01-18T11:19:00.000Z	bloopletech	shifnix	are you running compiz?
+2011-01-18T11:19:00.000Z	shifnix	bloopletech	no. it won't enable.
+2011-01-18T11:20:00.000Z	bloopletech	shifnix	as in, the option is greyed out?
+2011-01-18T11:21:00.000Z	shifnix	bloopletech	it's not grayed out, but when i click it, the screen flashes a few times and i get a popup saying that desktop effects could not be enabled
+2011-01-18T11:21:00.000Z	bloopletech	shifnix	hmm hang on
+2011-01-18T11:27:00.000Z	bloopletech	shifnix	heh, you're lurking in #xkcd-*?
+2011-01-18T11:29:00.000Z	shifnix	bloopletech	yarr..i op in #xkcd-pub. i got quasi-permabanned from #xkcd :(
+2011-01-18T11:30:00.000Z	bloopletech	shifnix	heh :)
+2011-01-18T11:30:00.000Z	shifnix	bloopletech	so, does it looks like i may be SOL on OpenGL support?
+2011-01-18T11:31:00.000Z	bloopletech	shifnix	those issues are real strange considering that your card should be fairly well supported - try going to #radeon and asking there
+2011-01-18T11:31:00.000Z	bloopletech	shifnix	those guys are the experts ;)
+2011-01-18T11:31:00.000Z	shifnix	bloopletech	thanks
+2011-01-18T11:32:00.000Z	bloopletech	shifnix	np
+2011-01-18T11:59:00.000Z	shifnix	bloopletech	good news - it looks like OpenGL is working, and i was able to enable compositing, and now terminal appears to be artifact-free
+2011-01-18T11:59:00.000Z	bloopletech	shifnix	wow cool - what fixed it?
+2011-01-18T11:59:00.000Z	shifnix	bloopletech	i lied, terminal still artifacts with lots of text output :\

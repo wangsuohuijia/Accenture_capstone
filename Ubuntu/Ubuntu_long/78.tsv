@@ -1,0 +1,74 @@
+2008-04-23T19:17:00.000Z	confused		Ubuntu networking is giving me a lot of problems in my laptop. I need to switch between LANS at my work, and the wireless at my home. I know how to use the network-admin dialog. But it screws up so often. I get socioflags error, sometimes dns resolution doesn't work. And sometimes networking just doesn't work without any reasons.
+2008-04-23T19:18:00.000Z	thoreauputic	confused	network-manager doesn't do it automatically for you?
+2008-04-23T19:18:00.000Z	confused	thoreauputic	It doesn't do anything for me. I know how to set the gateway, ip, dns and I do it manually. And it works quite often. But it breaks down too often.
+2008-04-23T19:19:00.000Z	thoreauputic	confused	 So network-manager doesn't "Just Work" for you at all?
+2008-04-23T19:19:00.000Z	thoreauputic	confused	are you using dhcp ?
+2008-04-23T19:19:00.000Z	confused	thoreauputic	Yes! No I use static ips.
+2008-04-23T19:19:00.000Z	confused	thoreauputic	I have deleted everything from the network manager.
+2008-04-23T19:20:00.000Z	confused	thoreauputic	And will key in my home and work space again.
+2008-04-23T19:20:00.000Z	thoreauputic	confused	Umm.. OK.
+2008-04-23T19:20:00.000Z	confused	thoreauputic	But it breaks down so often. Especially at work when I switch between different switches. It just acts up.
+2008-04-23T19:20:00.000Z	thoreauputic	confused	did you do this because you hate n-m, or because you prefer to do things this way?
+2008-04-23T19:21:00.000Z	confused	thoreauputic	Did what? I use the n-m to manually key in everything. Properly. And then it starts working.
+2008-04-23T19:21:00.000Z	confused	thoreauputic	Then when I go to another place at my work and use that LAN or switch between wireless or something. It just refuses to start
+2008-04-23T19:21:00.000Z	thoreauputic	confused	no, network-manager is the bit that doesn't require manual config
+2008-04-23T19:22:00.000Z	confused	thoreauputic	Oh. I am not aware. But I am ok with manually doing it to get it working.
+2008-04-23T19:22:00.000Z	thoreauputic	confused	sounds like you are choosing manual - if you use dhcp that isn't necessary
+2008-04-23T19:22:00.000Z	confused	thoreauputic	Both my home and network don't have dhcp.
+2008-04-23T19:22:00.000Z	thoreauputic	confused	Hmmm - by choice?
+2008-04-23T19:23:00.000Z	confused	thoreauputic	I know the subnets, the gateway, the dns, the wpa keys. I put in everything at the proper place. And for no reason it refuses to work when I switch lan wires
+2008-04-23T19:23:00.000Z	confused	thoreauputic	my work doesn't have dhcp because of the network admin.
+2008-04-23T19:23:00.000Z	confused	thoreauputic	And I don't need a dhcp at my home
+2008-04-23T19:23:00.000Z	confused	thoreauputic	Can you tell me how to clear everything associated with my network and start from scratch?
+2008-04-23T19:23:00.000Z	thoreauputic	confused	I think n-m gets confused by static configs and falls over
+2008-04-23T19:23:00.000Z	confused	thoreauputic	Like how would a plain ubuntu install be?
+2008-04-23T19:24:00.000Z	confused	thoreauputic	Can I just not have the network manager? I am ready to key in everything in the network-admin and toggle it myself
+2008-04-23T19:24:00.000Z	thoreauputic	confused	If you know you only ever use static Ips I would simply uninstall network-manager
+2008-04-23T19:24:00.000Z	confused	thoreauputic	I don't want the 'just work' facility
+2008-04-23T19:24:00.000Z	confused	thoreauputic	Are you sure it is causing all these problems?
+2008-04-23T19:24:00.000Z	thoreauputic	confused	Yes, you can uninstall n-m
+2008-04-23T19:25:00.000Z	thoreauputic	confused	No - I'm not there to troubleshoot :) But removing it would tell you
+2008-04-23T19:25:00.000Z	confused	thoreauputic	When I say System>Network what is that utility called?
+2008-04-23T19:25:00.000Z	confused	thoreauputic	And how do i start network-manager?
+2008-04-23T19:26:00.000Z	thoreauputic	confused	Umm - for troubleshooting purpose, uninstall network-manager-gnome and network-manager, see if that helps. If not then the problem is elsewhere, right?
+2008-04-23T19:27:00.000Z	thoreauputic	confused	You can put it back if that makes no difference
+2008-04-23T19:27:00.000Z	confused	thoreauputic	what is the utility in system>network called?
+2008-04-23T19:27:00.000Z	confused	thoreauputic	It is through that that I key in all the info.
+2008-04-23T19:28:00.000Z	confused	thoreauputic	Can I just ask the network manager to not take initiative?
+2008-04-23T19:28:00.000Z	thoreauputic	confused	netwrk-admin I think
+2008-04-23T19:28:00.000Z	confused	thoreauputic	Can you tell me how to wipe all network configs and start afresh?
+2008-04-23T19:28:00.000Z	thoreauputic	confused	network-admin
+2008-04-23T19:28:00.000Z	confused	thoreauputic	Maybe the network manager can be tamed?
+2008-04-23T19:28:00.000Z	thoreauputic	confused	Just uninstall it and see what happens!
+2008-04-23T19:29:00.000Z	thoreauputic	confused	It's part of the troubleshooting
+2008-04-23T19:29:00.000Z	thoreauputic	confused	It's reversible
+2008-04-23T19:29:00.000Z	confused	thoreauputic	But there are no white and blacks, just right now my laptop started working when I re-started the wireless through dhcp.
+2008-04-23T19:30:00.000Z	thoreauputic	confused	Last repetition - remove n-m. If that works, great. If not, put it back and try again
+2008-04-23T19:30:00.000Z	confused	thoreauputic	ok ok. Even you are stuck on that.
+2008-04-23T19:31:00.000Z	thoreauputic	confused	I'm not stuck. I'm suggesting a troubleshooting procedure
+2008-04-23T19:31:00.000Z	confused	thoreauputic	Can you tell me how to search the ubuntu wiki and community docs properly? I never get results.
+2008-04-23T19:31:00.000Z	confused	thoreauputic	I never saw the n-m gui though. Where does it lie?
+2008-04-23T19:32:00.000Z	thoreauputic	confused	Usually all you see is the applet icon in the notification area
+2008-04-23T19:33:00.000Z	confused	thoreauputic	amenado: you know once I had removed that interfaces file and then it took 30 minutes everytime to start my laptop. Then ikonia suggested putting in some "lo" back in that file and it became well.
+2008-04-23T19:33:00.000Z	confused	thoreauputic	Oh yes. Loopback it was.
+2008-04-23T19:33:00.000Z	thoreauputic	confused	correct - you only need the loopback in that file
+2008-04-23T19:34:00.000Z	thoreauputic	confused	But that is only for using n-m - if you want manual config only, it's better to remove n-m
+2008-04-23T19:34:00.000Z	confused	thoreauputic	Can I use n-m if I need to manually put my ip, gateway, dns, wpa keys all different for different networks?
+2008-04-23T19:36:00.000Z	thoreauputic	confused	Theoretically yes. In fact the Debian and Ubuntu versions of n-m don't like that. I think the hardy version might have fixed the conflict, but I don't know that for sure
+2008-04-23T19:36:00.000Z	confused	thoreauputic	Alright I will junk it. But the network-admin will remain perfectly usable won't it?
+2008-04-23T19:37:00.000Z	thoreauputic	confused	yes, it's separate
+2008-04-23T19:38:00.000Z	confused	thoreauputic	Both are gone. Do I need to restart? I deleted all the 'locations' in the network-admin. Tell me which other config files to clear.
+2008-04-23T19:38:00.000Z	thoreauputic	confused	Umm - you din't uninstall network-admin, did you?
+2008-04-23T19:38:00.000Z	confused	thoreauputic	No just network-manager and *-gnome.
+2008-04-23T19:39:00.000Z	thoreauputic	confused	OK
+2008-04-23T19:39:00.000Z	confused	thoreauputic	It now says networkManager applet could not find the required resources it cannot continue.
+2008-04-23T19:39:00.000Z	thoreauputic	confused	So now you should be able to manually config
+2008-04-23T19:40:00.000Z	thoreauputic	confused	of course :) You uninstalled it Try running /etc/init.d/dbus restart
+2008-04-23T19:40:00.000Z	thoreauputic	confused	 You should be able to use network-admin to make your settings now without conflicts
+2008-04-23T19:43:00.000Z	confused	thoreauputic	Is there a way to remove the network-admin configured optons?
+2008-04-23T19:44:00.000Z	thoreauputic	confused	... umm, obviously you can remove them either from the GUI or by editing /etc/network/interfaces
+2008-04-23T19:47:00.000Z	confused	thoreauputic	After clearing the interface file, restarting dbus and restarting networking still the internet works!
+2008-04-23T19:48:00.000Z	confused	thoreauputic	Shouldn't it let me manually key in stuff before working?
+2008-04-23T19:48:00.000Z	thoreauputic	confused	Are you *sure* you have no dhcp server on your network?
+2008-04-23T19:50:00.000Z	thoreauputic	confused	alternatively, the fact that it is working means that your manual config is correct.
+2008-04-23T19:50:00.000Z	thoreauputic	confused	in which case you don't need to re-enter it

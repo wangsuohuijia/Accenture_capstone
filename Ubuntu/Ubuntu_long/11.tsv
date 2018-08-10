@@ -1,0 +1,114 @@
+2009-06-17T14:57:00.000Z	om26er		how to install xorg server
+2009-06-17T14:59:00.000Z	om26er		how to install xorg server
+2009-06-17T14:59:00.000Z	om26er		plz
+2009-06-17T14:59:00.000Z	om26er		xorg-server
+2009-06-17T14:59:00.000Z	ActionParsnip	om26er	have you by any chance install ubuntu server and now want a gui?
+2009-06-17T15:00:00.000Z	ActionParsnip	om26er	ok cool, you can run: sudo apt-get install xserver-xorg
+2009-06-17T15:02:00.000Z	ActionParsnip	om26er	then you are fine, as it says, its already installed
+2009-07-28T12:40:00.000Z	om26er	ActionParsnip	what that mean
+2009-07-28T12:39:00.000Z	om26er	ActionParsnip	you must know this. is there any cd image of ubunu-base install which does not require the internet during installation
+2009-07-28T12:40:00.000Z	ActionParsnip	om26er	you could put the alternate cd on a usb stick and boot to the minimal iso maybe
+2009-07-28T12:41:00.000Z	ActionParsnip	om26er	you can use the alternate cd as an offline repo, boot to the minimal cd then use the offline repo to install what you wish. it may not work but makes sense
+2009-07-28T12:42:00.000Z	om26er	ActionParsnip	can you please provide a link for tutoria;
+2009-07-28T12:42:00.000Z	ActionParsnip	om26er	there isnt one. i just thought of it just now
+2009-07-28T12:43:00.000Z	om26er	ActionParsnip	ok boot from minimal and select the alternate cd image ??
+2009-07-28T12:43:00.000Z	ActionParsnip	om26er	if you use the alternate cd i think it will do what you need
+2009-07-28T12:44:00.000Z	om26er	ActionParsnip	alternate cd asks for a cd rom module to load and I don't have any cd rom for my netbook
+2009-07-28T12:45:00.000Z	ActionParsnip	om26er	if you put it on a usb stick you can install from that
+2009-07-28T12:46:00.000Z	ActionParsnip	om26er	if you have a windows system you can use this guide: http://www.pendrivelinux.com/usb-ubuntu-804-persistent-install-tutorial/
+2009-07-28T12:46:00.000Z	ActionParsnip	om26er	the bottom guide is what i use
+2009-07-28T12:47:00.000Z	om26er	ActionParsnip	I have fedora and ubuntu
+2009-07-28T12:48:00.000Z	ActionParsnip	om26er	er....ok
+2009-07-28T12:48:00.000Z	ActionParsnip	om26er	yuo can use the top half then
+2009-07-28T12:54:00.000Z	om26er	ActionParsnip	unetbootin gives the following options default, install, command line install, expert install, command line expert
+2009-07-28T12:54:00.000Z	ActionParsnip	om26er	install sounds good if you want to install the OS? Depends what you want to do
+2009-07-28T12:55:00.000Z	om26er	ActionParsnip	just the ubuntu base install
+2009-10-26T17:43:00.000Z	om26er	ActionParsnip	what is xpud
+2009-10-26T17:43:00.000Z	ActionParsnip	om26er	its a very limited linux distro
+2009-11-11T18:00:00.000Z	ActionParsnip	om26er	i dont reboot much but karmic seems faster
+2009-11-11T18:29:00.000Z	om26er	ActionParsnip	how is it better
+2009-11-11T18:31:00.000Z	ActionParsnip	om26er	ubuntu comes with a whole bunch of stuff I never use as well as a tonne of drivers which bloat the system further, minimal allows you to install noly what you need
+2009-11-11T18:32:00.000Z	ActionParsnip	om26er	you can get an insanely lean system by ulite then lxde. If you are just gonna install ubuntu-desktop package then you are wasting your time with ulite
+2009-11-17T19:56:00.000Z	ActionParsnip	om26er	boot to gnome then run: sudo apt-get --reinstall install lxde
+2009-11-17T19:57:00.000Z	om26er	ActionParsnip	ok installed and now testing (will logout)
+2009-11-17T20:00:00.000Z	om26er	ActionParsnip	no did not work
+2009-11-17T20:01:00.000Z	ActionParsnip	om26er	if you delete the hidden config files and folders for lxde and try relogging in
+2009-11-17T20:01:00.000Z	om26er	ActionParsnip	ok
+2009-11-17T20:03:00.000Z	om26er	ActionParsnip	there is no config file related to lxde or lubuntu
+2009-11-17T20:03:00.000Z	ActionParsnip	om26er	not even in ~/.config ?
+2009-11-17T20:04:00.000Z	om26er	ActionParsnip	not even there
+2009-11-17T20:05:00.000Z	ActionParsnip	om26er	very strange, i'd --purge removel all the lxde stuff (and deps) as well as the lubuntu-desktop metapackge, then just install lxde
+2009-11-17T20:05:00.000Z	om26er	ActionParsnip	ok
+2009-11-17T21:26:00.000Z	ActionParsnip	om26er	only on my work laptop, theres no 64bit one yet
+2009-11-19T18:13:00.000Z	ActionParsnip	om26er	good move, saves heartache if you need a reinstall
+2009-11-19T18:15:00.000Z	om26er	ActionParsnip	how will that /home be used at next install?
+2009-11-19T18:16:00.000Z	ActionParsnip	om26er	you set it to mount to /home in custom partitioning but tell the installer not to format it
+2009-11-19T18:17:00.000Z	om26er	ActionParsnip	thanx
+2009-11-20T15:26:00.000Z	ActionParsnip	om26er	if you run nvidia-settings   are their resolutions listed?
+2009-11-20T15:27:00.000Z	om26er	ActionParsnip	1280*1024 is not availble there but 1378*768 is available. my lcd is 5:4
+2009-11-20T15:27:00.000Z	ActionParsnip	om26er	ok then close the app and run: gksudo nvidia-settings
+2009-11-20T15:28:00.000Z	ActionParsnip	om26er	set the resolution to something and click, write settings to X config file
+2009-11-20T15:28:00.000Z	om26er	ActionParsnip	ok
+2009-11-20T15:28:00.000Z	ActionParsnip	om26er	you can then run: gksudo gedit /etc/X11/xorg.conf    and edit te res to what you wish
+2009-11-20T15:31:00.000Z	om26er	ActionParsnip	ok i set it to 1280*1024 in the xorg.conf and then rebooted but still no change
+2009-11-20T15:31:00.000Z	ActionParsnip	om26er	did you change the xorg.conf file before rebooting?
+2009-11-20T15:31:00.000Z	ActionParsnip	om26er	hmm weird
+2009-11-20T15:31:00.000Z	om26er	ActionParsnip	yes i did
+2009-11-20T15:32:00.000Z	ActionParsnip	om26er	can you pastebin your xorg.conf file
+2009-11-22T22:17:00.000Z	om26er	ActionParsnip	i install package 'lxde' i can login to lxde session but cannot use internet because there is not network manager applet in it
+2009-11-23T19:17:00.000Z	om26er	ActionParsnip	when i login to lxde session the fonts are all big but if i first login to gnome and logout and login to lxde then fonts are fine
+2009-11-23T19:18:00.000Z	ActionParsnip	om26er	log a bug is all I can suggest
+2009-11-24T18:59:00.000Z	ActionParsnip	om26er	same as any other programming language
+2009-11-30T19:42:00.000Z	ActionParsnip	om26er	http://download.macromedia.com/pub/labs/flashplayer10/libflashplayer-10.0.32.18.linux-x86_64.so.tar.gz
+2009-11-30T19:43:00.000Z	ActionParsnip	om26er	32bit one runs via nspluginwrapper and will update with the packages, if you use the 64bit one you will need to manually upgrade but it doesnt need the wrapper
+2009-11-30T20:17:00.000Z	ActionParsnip	om26er	you can set it with a certain geometry with -g but i am unsure of the amount of control or syntax you would use
+2009-12-05T22:15:00.000Z	ActionParsnip	om26er	worth trying an upgrade first, if its bad then clean install
+2009-12-08T18:33:00.000Z	om26er	ActionParsnip	i read somewhere that hardware rendering was just for windows!
+2009-12-08T18:33:00.000Z	ActionParsnip	om26er	as far as I know its in both in 10.1
+2009-12-08T19:28:00.000Z	ActionParsnip	om26er	synaptic touchpad driver, maybe. There is a boot option you can use: i8042.reset
+2009-12-08T19:30:00.000Z	ActionParsnip	om26er	tried the daily build ppa?
+2009-12-08T19:31:00.000Z	om26er	ActionParsnip	no, should I?
+2009-12-08T19:31:00.000Z	om26er	ActionParsnip	you talking about xorg daily ppa?
+2009-12-08T19:33:00.000Z	ActionParsnip	om26er	i use it, seems ok
+2009-12-08T19:33:00.000Z	ActionParsnip	om26er	i've reverted to the alpha/beta head I was when i was 16
+2009-12-08T19:38:00.000Z	om26er	ActionParsnip	xorg-edgers ppa is not made for karmic+1 yet
+2009-12-08T19:38:00.000Z	ActionParsnip	om26er	works here
+2009-12-08T19:39:00.000Z	om26er	ActionParsnip	using this: https://launchpad.net/~xorg-edgers/+archive/drivers-only
+2009-12-08T19:39:00.000Z	om26er	ActionParsnip	ok got another that should work
+2009-12-08T19:40:00.000Z	ActionParsnip	om26er	try: https://launchpad.net/~xorg-edgers/+archive/ppa
+2009-12-08T19:40:00.000Z	ActionParsnip	om26er	those are just the drivers
+2009-12-08T19:40:00.000Z	om26er	ActionParsnip	yes it works
+2009-12-08T19:41:00.000Z	om26er	ActionParsnip	thanx
+2009-12-08T19:42:00.000Z	ActionParsnip	om26er	;)
+2009-12-08T20:04:00.000Z	ActionParsnip	om26er	http://bbs.archlinux.org/viewtopic.php?id=74861 theres one there just remove the driver line
+2010-05-26T18:50:00.000Z	om26er	ActionParsnip	it cant even keep a contant down speed :P
+2010-05-26T18:51:00.000Z	ActionParsnip	om26er	i just like the headless + webui
+2010-06-23T14:43:00.000Z	ActionParsnip	om26er	+1 dude
+2011-02-28T21:12:00.000Z	ActionParsnip	om26er	http://forum.xchat.org/viewtopic.php?t=2568
+2011-02-28T21:13:00.000Z	om26er	ActionParsnip	thanks
+2011-07-23T14:27:00.000Z	ActionParsnip	om26er	what model is the system?
+2011-07-23T14:27:00.000Z	om26er	ActionParsnip	eepc 1215p
+2011-07-23T14:28:00.000Z	ActionParsnip	om26er	can you give the output of:
+2011-07-23T14:28:00.000Z	ActionParsnip	om26er	lsb_release -d
+2011-07-23T14:29:00.000Z	om26er	ActionParsnip	Ubuntu 11.04
+2011-07-23T14:29:00.000Z	om26er	ActionParsnip	is there a kernel module that I could reload so that the system thinks I rebooted?
+2011-07-23T14:30:00.000Z	ActionParsnip	om26er	can you give the output of:  sudo apt-get -y install pastebinit; clear; lsmod | pastebinit
+2011-07-23T14:30:00.000Z	ActionParsnip	om26er	https://wiki.ubuntu.com/HardwareSupport/Machines/Netbooks#Asus_Eee_PC_1215P   says it works fine
+2011-07-23T14:32:00.000Z	om26er	ActionParsnip	yes it does say that but I have the problem, its ubuntu certified and still :/ http://paste.ubuntu.com/650528/
+2011-07-23T14:32:00.000Z	ActionParsnip	om26er	what stuff says isn't useful. If its broken then it's broken :(
+2011-07-23T14:33:00.000Z	ActionParsnip	om26er	sudo modprobe -r psmouse; sleep 2; sudo modprobe psmouse
+2011-07-23T14:33:00.000Z	ActionParsnip	om26er	did you go into mouse settings andenable two finger scrolling
+2011-07-23T14:34:00.000Z	om26er	ActionParsnip	2-fingers scroll is disabled and thanks for the command, the next time it happens i'll see if that solves the issue
+2011-07-23T14:34:00.000Z	om26er	ActionParsnip	if modprobe thing does that is it then an issue in the driver or the hardware?
+2011-07-23T14:36:00.000Z	ActionParsnip	om26er	you may need a boot option on the module
+2011-07-23T14:37:00.000Z	om26er	ActionParsnip	what does that mean ? :)
+2011-07-23T14:37:00.000Z	ActionParsnip	om26er	try adding: options psmouse proto=exps   to /etc/modprobe.d/psmouse.conf   then rerun the modprobe based command I gave earlier. May help
+2011-07-23T14:37:00.000Z	ActionParsnip	om26er	you can load modules with extra options, makes them behave differently
+2011-07-23T14:38:00.000Z	om26er	ActionParsnip	also the issue just happened and reloading worked :)
+2011-07-23T14:39:00.000Z	om26er	ActionParsnip	now giving the above a try
+2011-07-23T14:39:00.000Z	ActionParsnip	om26er	it will as it removed the module and reloads it ;)
+2011-07-23T14:41:00.000Z	ActionParsnip	om26er	you could try simply adding to /etc/rc.local   to unload then load the driver just before login, may help
+2011-07-23T14:41:00.000Z	ActionParsnip	om26er	then you wouldn't need the psmouse.conf file, but try with. It's all worth a try
+2011-07-23T14:42:00.000Z	ActionParsnip	om26er	basically you will be fighting that module until it plays nice, also make sure you enable the multitouch thing I mentioned earlier in mouse options
+2011-07-23T14:42:00.000Z	om26er	ActionParsnip	so I should try to add options psmouse proto=exps to /etc/rc.local ?
+2011-07-23T14:45:00.000Z	om26er	ActionParsnip	adding psmouse.conf makes cursor less sensitive it seems is that normal?

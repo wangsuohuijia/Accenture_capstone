@@ -1,0 +1,140 @@
+2004-12-20T10:00:00.000Z	BockBilbo		is it possible to upgrade openoffice.org in ubuntu from 1.1.2 to 1.1.3???
+2004-12-20T10:02:00.000Z	BockBilbo		warty
+2004-12-20T10:03:00.000Z	bob2	BockBilbo	warty will not get a new version of openoffice, sorry
+2004-12-20T10:05:00.000Z	bob2	BockBilbo	change 'warty' to 'hoary'
+2004-12-20T10:11:00.000Z	bob2	BockBilbo	er, the chipset is plenty of information
+2005-01-22T16:38:00.000Z	bob2	BockBilbo	'apt-get dist-upgrade'
+2005-01-22T16:39:00.000Z	BockBilbo	bob2	i have i just reinstalled the whole system
+2005-01-22T16:40:00.000Z	bob2	BockBilbo	'wireless toolkit'?
+2005-01-22T16:41:00.000Z	bob2	BockBilbo	I don't know what that is.  if you mean 'wireless drivers', then make sure you have linux-restricted-modules for your kernel installed.
+2005-01-22T16:43:00.000Z	bob2	BockBilbo	wireless-tools is avilable on hoary, too, and installed by default
+2005-01-22T16:45:00.000Z	bob2	BockBilbo	good luck
+2005-01-22T09:21:00.000Z	BockBilbo	bob2	you there?
+2005-01-22T09:22:00.000Z	bob2	BockBilbo	that's ok
+2005-01-22T09:23:00.000Z	bob2	BockBilbo	er, that's not normal
+2005-01-22T09:23:00.000Z	bob2	BockBilbo	paste your /etc/apt/sources.list to #flood please
+2005-01-22T09:26:00.000Z	BockBilbo	bob2	im gonna paste it now
+2005-01-22T09:28:00.000Z	bob2	BockBilbo	that's all?
+2005-01-22T09:28:00.000Z	BockBilbo	bob2	its what it is not commented
+2005-01-22T09:29:00.000Z	BockBilbo	bob2	do i have smthing missing?
+2005-01-22T09:30:00.000Z	bob2	BockBilbo	not that I can see
+2005-01-22T09:30:00.000Z	bob2	BockBilbo	try asking on the user list maybe
+2005-02-06T07:16:00.000Z	bob2	BockBilbo	no
+2005-02-06T07:29:00.000Z	bob2	BockBilbo	you'll note that is for Fedora
+2005-02-06T07:29:00.000Z	BockBilbo	bob2	i have
+2005-02-06T07:44:00.000Z	BockBilbo	bob2	the OOo2 packages are really unstable
+2005-02-06T07:47:00.000Z	bob2	BockBilbo	I don't know
+2005-03-14T06:07:00.000Z	bob2	BockBilbo	mkfs -t whatever /dev/uba1
+2005-03-14T06:10:00.000Z	bob2	BockBilbo	sure
+2005-03-14T06:11:00.000Z	bob2	BockBilbo	you mount them as you would "normal" disks
+2005-03-14T06:11:00.000Z	bob2	BockBilbo	fdisk makes partitions
+2005-03-14T06:11:00.000Z	bob2	BockBilbo	mkfs "formats"
+2005-03-14T06:11:00.000Z	BockBilbo	bob2	does it also format?
+2005-03-14T06:12:00.000Z	bob2	BockBilbo	no
+2005-03-14T06:14:00.000Z	BockBilbo	bob2	willl it matter if I format the usb HD from a different PC from the one that will use it?
+2005-03-14T06:15:00.000Z	bob2	BockBilbo	nope
+2005-03-14T06:15:00.000Z	bob2	BockBilbo	or with sudo, yes
+2005-03-14T06:18:00.000Z	BockBilbo	bob2	lok, i had that error while doing "mkfs -t ext3 /dev/sda"
+2005-03-14T06:18:00.000Z	bob2	BockBilbo	are you sure that's the right device?
+2005-03-14T06:19:00.000Z	BockBilbo	bob2	im sure, yes
+2005-03-14T06:23:00.000Z	bob2	BockBilbo	I don't know what would give that error aside from using the wrong device
+2005-03-14T06:24:00.000Z	BockBilbo	bob2	i think the HD is wrong partitioned
+2005-03-14T06:28:00.000Z	bob2	BockBilbo	use 'cfdisk /dev/sda'
+2005-03-14T06:28:00.000Z	BockBilbo	bob2	what does that?
+2005-03-14T06:29:00.000Z	bob2	BockBilbo	it's a less annoying version of disk
+2005-03-14T06:31:00.000Z	bob2	BockBilbo	primary
+2005-03-14T06:34:00.000Z	bob2	BockBilbo	that's fine
+2005-03-14T06:35:00.000Z	bob2	BockBilbo	right
+2005-03-14T06:36:00.000Z	BockBilbo	bob2	lok , shold i format it right now?
+2005-03-14T06:36:00.000Z	bob2	BockBilbo	right
+2005-03-14T06:38:00.000Z	bob2	BockBilbo	'fdisk -l /dev/sda'
+2005-03-14T06:39:00.000Z	BockBilbo	bob2	doing  that it shows the only partition of sda, which is named sda1.... but then
+2005-03-14T06:40:00.000Z	bob2	BockBilbo	unplug, replug
+2005-03-14T06:41:00.000Z	BockBilbo	bob2	by unpluggin and plugging it... gnome has detected the HD and mounted it on /media/usbdisk
+2005-03-14T06:42:00.000Z	bob2	BockBilbo	no, sda1
+2005-03-14T06:43:00.000Z	bob2	BockBilbo	still?
+2005-03-14T06:43:00.000Z	bob2	BockBilbo	the kernel rescanned it when you plugged it in again
+2005-03-14T06:43:00.000Z	bob2	BockBilbo	yes
+2005-03-14T06:44:00.000Z	BockBilbo	bob2	its formating
+2005-03-14T06:48:00.000Z	bob2	BockBilbo	try mounting it
+2005-03-14T06:48:00.000Z	bob2	BockBilbo	that's fine
+2005-03-14T06:49:00.000Z	bob2	BockBilbo	depends what the permissions are
+2005-03-14T06:51:00.000Z	bob2	BockBilbo	also, 5% is reserved for root's use
+2005-03-14T06:51:00.000Z	bob2	BockBilbo	you can reduce that percentage with 'tune2fs'
+2005-03-14T07:08:00.000Z	bob2	BockBilbo	it won't exist initially
+2005-03-14T07:08:00.000Z	bob2	BockBilbo	just let hotplug/g-v-m do it for you
+2005-03-14T07:09:00.000Z	BockBilbo	bob2	how do i do that?
+2005-03-14T07:13:00.000Z	BockBilbo	bob2	hotplug doesnt recognize sda1
+2005-03-14T07:13:00.000Z	bob2	BockBilbo	ok
+2005-03-14T07:13:00.000Z	bob2	BockBilbo	I don't know
+2005-03-14T07:14:00.000Z	BockBilbo	bob2	where you here when i talked about a bug/error i found on the array 5 of hoary?
+2005-03-14T07:15:00.000Z	bob2	BockBilbo	no
+2005-03-14T07:17:00.000Z	BockBilbo	bob2	it happens that i installed ubuntu hoary in a pc with a d-link wireless card. The installation procedure detected my wifi card and used it in the installation, but after rebooting, the system did not detect the wifi card. I looked around te problem, and i discovered that the installation didnt ut the firmware file in the /lib/hotplug/firmware directory
+2005-03-14T07:17:00.000Z	bob2	BockBilbo	oh, ok
+2005-03-14T07:33:00.000Z	BockBilbo	bob2	do you know how to make hotplug run on boot before the external hd mounting?
+2005-03-14T07:34:00.000Z	bob2	BockBilbo	no, sorry
+2005-03-14T07:37:00.000Z	BockBilbo	bob2	i have added it to fstab
+2005-04-08T05:23:00.000Z	BockBilbo	bob2	eyequeue hey
+2005-04-08T05:25:00.000Z	bob2	BockBilbo	howdy
+2005-04-09T11:08:00.000Z	BockBilbo	bob2	u there?
+2005-04-22T08:16:00.000Z	bob2	BockBilbo	suspend-to-disk should work everywhere, suspend-to-ram varies by hardware
+2005-04-22T08:18:00.000Z	BockBilbo	bob2	ok... so... see.. a month ago I installed hoary from an array and it enabled the suspend mode... which i dont have on my laptop... how do i enable it?
+2005-04-22T08:18:00.000Z	bob2	BockBilbo	I don't understand your question
+2005-04-22T08:18:00.000Z	bob2	BockBilbo	do you mean "How do I get my laptop to suspend when I close the lid?"?
+2005-04-22T09:01:00.000Z	bob2	BockBilbo	libdvdcss, yes
+2005-04-22T09:01:00.000Z	BockBilbo	bob2	 thats what i meant
+2005-06-16T08:35:00.000Z	bob2	BockBilbo	nvidia or i810 chipset?
+2005-06-16T08:35:00.000Z	BockBilbo	bob2	no idea
+2005-06-16T08:35:00.000Z	bob2	BockBilbo	then find out
+2005-06-16T08:36:00.000Z	bob2	BockBilbo	then presumably i915, known bug
+2005-06-16T08:36:00.000Z	bob2	BockBilbo	it's possible to get it working with a small amount of fiddling in an installed system
+2005-06-16T08:37:00.000Z	BockBilbo	bob2	will it work fine if i install hoary?
+2005-06-16T08:37:00.000Z	bob2	BockBilbo	yes, as I said, with a small amount of fiddling
+2005-06-16T08:38:00.000Z	bob2	BockBilbo	it will work out of the box when hoary gets a new X server soon, I think
+2005-06-16T08:38:00.000Z	bob2	BockBilbo	yes
+2005-06-16T08:38:00.000Z	bob2	BockBilbo	the only issue is with the autoconfiguration
+2005-06-16T08:39:00.000Z	bob2	BockBilbo	then it's i386
+2005-06-16T09:21:00.000Z	BockBilbo	bob2	i have just installed ubutnu on the machine
+2005-06-16T09:22:00.000Z	bob2	BockBilbo	yes, as I said, you will need to twiddle the X config to get it to work properly
+2005-06-16T09:23:00.000Z	BockBilbo	bob2	is there any tutorial about how to twidle it?
+2005-06-16T09:23:00.000Z	bob2	BockBilbo	first, find if you actually have a i915
+2005-06-16T09:24:00.000Z	BockBilbo	bob2	thats what im trying to do
+2005-06-16T09:24:00.000Z	bob2	BockBilbo	what does "lspci | grep VGA" print out?
+2005-06-16T09:26:00.000Z	BockBilbo	bob2	: lscpi | grep VGA --> 0000:01:00.0 VGA compatible controller: VIA Technologies, Inc VT8378 [S3 UniChrome]  Integrated Video (rev 001)
+2005-06-16T09:26:00.000Z	bob2	BockBilbo	oh, suck
+2005-06-16T09:26:00.000Z	BockBilbo	bob2	i know it sucks
+2005-06-16T09:27:00.000Z	bob2	BockBilbo	it should work out of the box, tho
+2005-06-16T09:27:00.000Z	BockBilbo	bob2	so... what might happen?
+2005-09-16T07:41:00.000Z	bob2	BockBilbo	sudo dpkg-reconfigure linux-image-$(uname -r)
+2005-09-16T07:42:00.000Z	bob2	BockBilbo	which was in mdz's announce email, iirc...
+2005-09-18T08:55:00.000Z	BockBilbo	bob2	got a usplash question...
+2005-09-18T08:56:00.000Z	BockBilbo	bob2	as i told you the last day, ive dist-upgraded to breezy from hoary, and cant make usplash work at boot
+2005-09-18T08:57:00.000Z	bob2	BockBilbo	what does 'uname -r' print?
+2005-09-18T08:58:00.000Z	BockBilbo	bob2	2.6.12-8-686
+2005-09-18T08:59:00.000Z	bob2	BockBilbo	you're completely up to date with breezy?
+2005-09-18T09:00:00.000Z	BockBilbo	bob2	yes
+2005-09-18T09:00:00.000Z	bob2	BockBilbo	and what dpkg-reconfigure command are you running?
+2005-09-18T09:01:00.000Z	BockBilbo	bob2	dpkg-reconfigure usplash && dpkg-reconfigure linux-image-2.6.12-8-686
+2005-09-18T09:04:00.000Z	BockBilbo	bob2	done the dpkg-reconfigure -plow of both packages.. should i reboot to see if it worked? or do i have to do any modification to /boot/grub/menu.list
+2005-09-18T09:05:00.000Z	bob2	BockBilbo	you don't get a config option at all?
+2005-09-18T09:06:00.000Z	BockBilbo	bob2	 this is what i get : http://paste.ubuntulinux.nl/2157
+2005-09-18T09:07:00.000Z	bob2	BockBilbo	er, have you been getting that for the past few days you've been asking about this?
+2005-09-18T09:08:00.000Z	BockBilbo	bob2	yes
+2005-09-18T09:08:00.000Z	bob2	BockBilbo	did you read it?
+2005-09-18T09:08:00.000Z	bob2	BockBilbo	specifically the "Searching for splash image... none found, skipping..." bit
+2005-09-18T09:08:00.000Z	BockBilbo	bob2	u talking about this Searching for splash image... none found, skipping...?
+2005-09-18T09:09:00.000Z	BockBilbo	bob2	am i wrong?
+2005-09-18T09:09:00.000Z	bob2	BockBilbo	I don't know
+2005-09-18T09:10:00.000Z	BockBilbo	bob2	didnt you have this problem? or u just dont use usplash?
+2005-09-18T09:10:00.000Z	bob2	BockBilbo	look in your menu.lst
+2005-09-18T09:11:00.000Z	BockBilbo	bob2	i have it
+2005-09-18T09:16:00.000Z	bob2	BockBilbo	that's not useful either, it Just Works for nearly everyone else
+2005-09-18T09:16:00.000Z	bob2	BockBilbo	you really never did anything weird?
+2005-09-18T09:16:00.000Z	BockBilbo	bob2	i just want to know if in /boot/grub/menu.list they have usplash instead of splash in the kernel option
+2005-09-18T09:22:00.000Z	bob2	BockBilbo	did anyone reply to your post to the mailing list?
+2005-09-18T09:22:00.000Z	BockBilbo	bob2	i didnt send any mail to the mailing list
+2005-09-18T09:23:00.000Z	bob2	BockBilbo	oh
+2005-09-18T09:23:00.000Z	BockBilbo	bob2	let me check the latest emails in the list, maybe someone had the same prob
+2005-09-18T09:26:00.000Z	BockBilbo	bob2	ive fount an email from 2 days ago that says this: "do dpkg-reconfigure linux-image-<version of kernel you're running>
+2005-10-11T15:51:00.000Z	BockBilbo	bob2	do you have any clue of why cant i see some fonts in flash sites using the flashplugin-nonfree ?
+2005-10-11T15:53:00.000Z	bob2	BockBilbo	I don't use flash

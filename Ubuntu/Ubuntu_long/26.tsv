@@ -1,0 +1,58 @@
+2008-10-17T16:57:00.000Z	Draconicus		Okay, here's the deal. I've been working with Xorg for four years. This new version and its xorg.conf setup have got my head spinning. My resolution and driver were just fine until I rebooted. I've configured it with the "low graphics mode" dialog and a number of other things. nvidia-settings claims that my nvidia driver isn't actually enabled, and it doesn't appear to be, but Ubuntu seems to think it is. Furthermore, I can't obtain 
+2008-10-17T16:57:00.000Z	Draconicus		Did that cut off somewhere?
+2008-10-17T16:57:00.000Z	Draconicus		I'm on 8.04
+2008-10-17T16:58:00.000Z	ActionParsnip	Draconicus	you could always try envyng-gtk
+2008-10-17T16:58:00.000Z	Draconicus	ActionParsnip	What's that?
+2008-10-17T16:58:00.000Z	ActionParsnip	Draconicus	sudo apt-get -y install envyng-gtk; gksudo envyng-gtk
+2008-10-17T17:03:00.000Z	ActionParsnip	Draconicus	i run mine solidly for months and its fine
+2008-10-17T17:04:00.000Z	Draconicus	ActionParsnip	What's your secret? I run Xfce, Firefox, Pidgin, X-Chat, a few odd GTK apps here and there, some Java now and then... I don't do a lot, but my system gets bogtastical.
+2008-10-17T17:05:00.000Z	Draconicus	ActionParsnip	Of course, I'm using an AMD Athlon XP 3200+ and a gig of DDR200... so...
+2008-10-17T17:05:00.000Z	Draconicus	ActionParsnip	Rather, DDR 200.
+2008-10-17T17:05:00.000Z	ActionParsnip	Draconicus	not a bad system, depends what its for
+2008-10-17T17:05:00.000Z	Draconicus	ActionParsnip	I told you what it's for.
+2008-10-17T17:06:00.000Z	ActionParsnip	Draconicus	then its more than enough
+2008-10-17T17:06:00.000Z	ActionParsnip	Draconicus	you can do all that on a 700Mhz CPU with 1 Gb ram (eee pc)
+2008-10-17T17:06:00.000Z	Draconicus	ActionParsnip	So why the horrible performance I've experienced since updating to 8.04?
+2008-10-17T17:07:00.000Z	ActionParsnip	Draconicus	ive always had problems updating. How about with a clean install?
+2008-10-17T17:07:00.000Z	Draconicus	ActionParsnip	This _is_ a clean install.
+2008-10-17T17:07:00.000Z	ActionParsnip	Draconicus	oic, i thought you'd updated from gutsy
+2008-10-17T17:08:00.000Z	Draconicus	ActionParsnip	I tried to. That was a disaster, so I reinstalled fresh, quite reluctantly.
+2008-10-17T17:08:00.000Z	Draconicus	ActionParsnip	There's still a few apps I can't find anymore...
+2008-10-17T17:08:00.000Z	ActionParsnip	Draconicus	try reducing apps and services and remove some ttys will make it nicer
+2008-10-17T17:08:00.000Z	ActionParsnip	Draconicus	what apps?
+2008-10-17T17:09:00.000Z	Draconicus	ActionParsnip	Just old stuff - Beryl, XMMS. Depreciated software. I'm doing fine compiling those from source, so no biggy. Also, how on earth do I remove ttys?
+2008-10-17T17:09:00.000Z	ActionParsnip	Draconicus	beryl is now compiz fusion
+2008-10-17T17:10:00.000Z	ActionParsnip	Draconicus	and imho is stil garbage
+2008-10-17T17:10:00.000Z	Draconicus	ActionParsnip	No. Beryl is still Beryl, from a footprint standpoint. It runs on a PII system with a GeForce 4, something Fusion can only dream of. It's significantly lighter, regardless of enabled settings (fusion-side) because fusion runs a module for every plugin regardless of whether it's enabled or not.
+2008-10-17T17:12:00.000Z	ActionParsnip	Draconicus	i run fluxbox which i think it way better than beryl / compiz
+2008-10-17T17:12:00.000Z	Draconicus	ActionParsnip	I see. :3
+2008-10-17T17:26:00.000Z	Draconicus	ActionParsnip	So how do I remove ttys?
+2008-10-17T17:28:00.000Z	ActionParsnip	Draconicus	http://ubuntuforums.org/showthread.php?t=407273
+2008-10-17T17:39:00.000Z	Draconicus	ActionParsnip	Hey. I'm back.
+2008-10-17T17:39:00.000Z	ActionParsnip	Draconicus	the new version apparently doesnt need it. It blew me away too. I always config it myself
+2008-10-17T17:41:00.000Z	Draconicus	ActionParsnip	Well, you configure it yourself - maybe you can help. EnvyNG configured my xorg nice and shiny, with correct resolution. I know it's working, because now it goes out of the range of my monitor! I'm pretty sure it's because of the refresh rate, but adding @65 to my resolution tags doesn't work. Suggestions?
+2008-10-17T17:42:00.000Z	ActionParsnip	Draconicus	try setting the leftmost resolution i xorg.conf to 1024x768
+2008-10-17T17:42:00.000Z	ActionParsnip	Draconicus	or try a silly low refresh like 50
+2008-10-17T17:43:00.000Z	Draconicus	ActionParsnip	Will adjusting it from nvidia-settings after that be a viable, permanent solution? How will I get to my 1600x1200?
+2008-10-17T17:44:00.000Z	ActionParsnip	Draconicus	id get some kind of display using the drivers then build up
+2008-10-17T17:44:00.000Z	Draconicus	ActionParsnip	Good plan, but I've proven that 1600x1200@65 works... why won't it here?
+2008-10-17T17:50:00.000Z	Draconicus	ActionParsnip	I'll be back. :3
+2008-10-17T17:55:00.000Z	Draconicus	ActionParsnip	I'm baaaack.
+2008-10-17T17:56:00.000Z	ActionParsnip	Draconicus	better?
+2008-10-17T17:56:00.000Z	Draconicus	ActionParsnip	Well, here's the thing, I can run at 1024x768. Xorg.conf ignores the two @60 tagged resolutions in front of it. Also, I seem not to be using the nvidia driver still. No graphics acceleration. nvidia-settings says I'm not.
+2008-10-17T17:57:00.000Z	ActionParsnip	Draconicus	what graphics card do you have?
+2008-10-17T17:58:00.000Z	Draconicus	ActionParsnip	FX 5200. :<
+2008-10-17T17:59:00.000Z	ActionParsnip	Draconicus	try nvidia-glx
+2008-10-17T17:59:00.000Z	Draconicus	ActionParsnip	I did try that... but alright.
+2008-10-17T17:59:00.000Z	Draconicus	ActionParsnip	Didn't try them with this xorg.conf
+2008-10-17T18:00:00.000Z	Draconicus	ActionParsnip	brb
+2008-10-17T18:00:00.000Z	ActionParsnip	Draconicus	you could always install easyubuntu
+2008-10-17T18:03:00.000Z	Draconicus	ActionParsnip	Howdy. No go on the driver. Still not loading nvidia x module...
+2008-10-17T18:03:00.000Z	ActionParsnip	Draconicus	you could install easyubuntu
+2008-10-17T18:03:00.000Z	Draconicus	ActionParsnip	Do you know if there's some way to force X to adhere strictly to the xorg.conf file?
+2008-10-17T18:03:00.000Z	Draconicus	ActionParsnip	Don't make me cringe.... :o
+2008-10-17T18:03:00.000Z	ActionParsnip	Draconicus	not sure, maybe you could add it as an arg when you start x
+2008-10-17T18:10:00.000Z	Draconicus	ActionParsnip	I think I've got it now. Ubuntu realized it wasn't using the nvidia driver. I'm enabling it through the dialog.
+2008-10-17T18:11:00.000Z	ActionParsnip	Draconicus	so you have direct rendering now?
+2008-10-17T18:12:00.000Z	Draconicus	ActionParsnip	Rebooting. Wish me luck.
+2008-10-17T18:12:00.000Z	Draconicus	ActionParsnip	And no. Just the "Hardware Drivers" dialog gave me the option.

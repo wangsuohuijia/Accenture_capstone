@@ -1,0 +1,85 @@
+2010-08-20T06:38:00.000Z	sammarks14		it says its located at /home/sammarks/xorg.conf.new
+2010-08-20T06:38:00.000Z	sammarks14		do i move that to /etc/X11/xorg.conf?
+2010-08-20T06:38:00.000Z	sammarks14		and second, when i was working in the terminal, my computer froze
+2010-08-20T06:38:00.000Z	sammarks14		i was not in GNOME
+2010-08-20T06:40:00.000Z	sammarks14		#babyeater: well, i stopped the service...
+2010-08-20T06:40:00.000Z	sammarks14		i think
+2010-08-20T06:41:00.000Z	sammarks14		i said "sudo stop gdm"
+2010-08-20T06:41:00.000Z	sammarks14		it replied with "gdm stop/waiting"
+2010-08-20T06:41:00.000Z	sammarks14		it said "stop/waiting", was there any issue with the "waiting" part?
+2010-08-20T06:42:00.000Z	sammarks14		shouldnt it have just said stop?
+2010-08-20T06:42:00.000Z	coz_	sammarks14	 if you want to be sure try   sudo  /etc/init.d/gdm  stop
+2010-08-20T06:43:00.000Z	coz_	sammarks14	 ok then you were successful :)
+2010-08-20T06:45:00.000Z	coz_	sammarks14	 I came in late...what is it that you were trying to do originally/
+2010-08-20T06:47:00.000Z	coz_	sammarks14	  is this a laptop or desktop
+2010-08-20T06:47:00.000Z	coz_	sammarks14	 ok and you installed ubuntu lucid on this
+2010-08-20T06:47:00.000Z	coz_	sammarks14	 ok
+2010-08-20T06:48:00.000Z	coz_	sammarks14	 first thing I would try is to insert the cd you burned and when the menu appaears...after choosing your languagle....choose the check cd for errors opton
+2010-08-20T06:48:00.000Z	coz_	sammarks14	 oh
+2010-08-20T06:48:00.000Z	coz_	sammarks14	  do you have windows installed on this system right now?
+2010-08-20T06:48:00.000Z	coz_	sammarks14	 ok and is there a reason you didnt want to install ubuntu on its own partition?
+2010-08-20T06:49:00.000Z	coz_	sammarks14	   well  several things to try first...download and burn the live cd for you system... make sure you burn it at 1x  or as close as possible
+2010-08-20T06:50:00.000Z	sammarks14	coz_	should i download the 32 bit or 64 bit version?
+2010-08-20T06:50:00.000Z	coz_	sammarks14	 eigher would work
+2010-08-20T06:51:00.000Z	coz_	sammarks14	either
+2010-08-20T06:51:00.000Z	coz_	sammarks14	 but tell me what you have as system memory ....the amount
+2010-08-20T06:52:00.000Z	coz_	sammarks14	 ok with 32 bit cd and install ubuntu will only see 3.5 gigs of that memory...with 64 bit it will see and use it all
+2010-08-20T06:52:00.000Z	coz_	sammarks14	 the functionality will not be diminished if you use 32 bit however
+2010-08-20T06:53:00.000Z	coz_	sammarks14	 I use 32 bit on my 64 bit system  here
+2010-08-20T06:53:00.000Z	coz_	sammarks14	 its your choice ... I personally didnt want to deal with any 64 bit issues that might arrise
+2010-08-20T06:54:00.000Z	coz_	sammarks14	  I would be sure the windows install is completely defragged first  if you intend on installing this
+2010-08-20T06:57:00.000Z	sammarks14	coz_	i don't have an option of the speed with the burner i have, but i can verify after burning.
+2010-08-20T06:57:00.000Z	coz_	sammarks14	 ok
+2010-08-20T06:57:00.000Z	coz_	sammarks14	 but when you actuallly run the live cd  choose check cd for errors before doing anything
+2010-08-20T06:59:00.000Z	sammarks14	coz_	im also going to uninstall the wubi version.
+2010-08-20T07:00:00.000Z	coz_	sammarks14	 that is a wise decision
+2010-08-20T07:00:00.000Z	coz_	sammarks14	 then defrag  windows  and then start the live cd
+2010-08-20T07:00:00.000Z	sammarks14	coz_	but i just defragged, like, 8 hours ago...
+2010-08-20T07:00:00.000Z	coz_	sammarks14	 understood
+2010-08-20T07:02:00.000Z	coz_	sammarks14	 ok good luck with this ...if after the  check cd for errors on the ubuntu disk passes  you can either play around in the live cd or install it
+2010-08-20T07:02:00.000Z	sammarks14	coz_	will do
+2010-08-20T07:05:00.000Z	sammarks14	coz_	it didn't offer an option to verify contents
+2010-08-20T07:06:00.000Z	coz_	sammarks14	 really??  mm thats odd...did you download the live cd or minimal cd
+2010-08-20T07:06:00.000Z	coz_	sammarks14	  mm what options were avialable on the menu?
+2010-08-20T07:07:00.000Z	sammarks14	coz_	it looked like it was going to log me in, but then it showed the install
+2010-08-20T07:07:00.000Z	coz_	sammarks14	 when this started did it ask you to choose a language?
+2010-08-20T07:07:00.000Z	coz_	sammarks14	ok and the menu that followed   ...there were no choices?
+2010-08-20T07:08:00.000Z	coz_	sammarks14	 ok
+2010-08-20T07:24:00.000Z	coz_	sammarks14	 ok
+2010-08-20T07:09:00.000Z	coz_	sammarks14	 well let it get through this  and see what happens...if the install is successful I think you will be happier...you will eventually come to the partitioning dialog... you want to install it along side window
+2010-08-20T07:10:00.000Z	coz_	sammarks14	 ok then it shouldnt overwrite windows
+2010-08-20T07:14:00.000Z	sammarks14	coz_	good lord the resizing of the partition takes forever
+2010-08-20T07:14:00.000Z	coz_	sammarks14	 mm  how large is the hard drive?
+2010-08-20T07:15:00.000Z	coz_	sammarks14	 well give it time
+2010-08-20T07:18:00.000Z	sammarks14	coz_	computer restarted.
+2010-08-20T07:18:00.000Z	coz_	sammarks14	 it restarted?  by itself?
+2010-08-20T07:18:00.000Z	coz_	sammarks14	 mmm that does not sound good   run the live cd again
+2010-08-20T07:18:00.000Z	coz_	sammarks14	  this time choose try
+2010-08-20T07:19:00.000Z	coz_	sammarks14	 then click  the install icon on the desktop
+2010-08-20T07:20:00.000Z	sammarks14	coz_	okay, im running the installer
+2010-08-20T07:22:00.000Z	coz_	sammarks14	 this should not be restarting just to go to the live cd Desktop
+2010-08-20T07:22:00.000Z	sammarks14	coz_	okay, its booting.
+2010-08-20T07:23:00.000Z	sammarks14	coz_	do you just want me to sit at the desktop?
+2010-08-20T07:23:00.000Z	coz_	sammarks14	 well I want to see if it does indeed actually get to the Desktop
+2010-08-20T07:23:00.000Z	coz_	sammarks14	 then you can use the  Install  Icon  that should be there on the desktop
+2010-08-20T07:24:00.000Z	coz_	sammarks14	 yeah dont use  enter ...just type long sentences
+2010-08-20T07:25:00.000Z	coz_	sammarks14	 ok there should be an  "Install"  icon there
+2010-08-20T07:25:00.000Z	coz_	sammarks14	 oooo
+2010-08-20T07:26:00.000Z	coz_	sammarks14	 was there a test memory  option in the menu at all?
+2010-08-20T07:26:00.000Z	coz_	sammarks14	 where did you download the cd from do you h ave the link?
+2010-08-20T07:28:00.000Z	coz_	sammarks14	 ah yes I forgot about that little keyboard icon
+2010-08-20T07:28:00.000Z	coz_	sammarks14	 please hit a key when you reboot to get menu options
+2010-08-20T07:28:00.000Z	coz_	sammarks14	 that would first choice  after that choose check cd
+2010-08-20T07:29:00.000Z	coz_	sammarks14	 well it could me memory... even cpu    I cant tell from this end...but alteast you have the test memory and check cd options to rule these out
+2010-08-20T07:30:00.000Z	coz_	sammarks14	 first thing;'s  first  see what memory test reports
+2010-08-20T07:32:00.000Z	coz_	sammarks14	 well if you mean the memory test ...let it complete
+2010-08-20T07:32:00.000Z	sammarks14	coz_	should i make a forum post?
+2010-08-20T07:32:00.000Z	coz_	sammarks14	 about what?
+2010-08-20T07:33:00.000Z	coz_	sammarks14	 we are not sure what the  issue is yet
+2010-08-20T07:34:00.000Z	sammarks14	coz_	im just saying, if i have to go, how are we going to continue troubleshooting the problem?
+2010-08-20T07:34:00.000Z	coz_	sammarks14	well  there will be many here who can help  and I know I will most likely be here  tomorrow as will many that are here now :)
+2010-08-20T07:35:00.000Z	coz_	sammarks14	 right....well... until we have some idea what the problem is  there is nothing to report :)
+2010-08-20T07:36:00.000Z	coz_	sammarks14	 yes  .... did you search google or the forum for similar reports?
+2010-08-20T07:36:00.000Z	coz_	sammarks14	 oh !
+2010-08-20T07:39:00.000Z	sammarks14	coz_	do you think if it was the CPU, it would freeze the memory test as weel?
+2010-08-20T07:41:00.000Z	sammarks14	coz_	well, im going to go for the night while this works

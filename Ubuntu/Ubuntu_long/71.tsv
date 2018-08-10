@@ -1,0 +1,68 @@
+2007-12-22T03:14:00.000Z	jimmy__		everytime i try to install tomcat5.5 from synaptic i get E: tomcat5.5: subprocess post-installation script returned error exit status 1.....can anyone help me out please?
+2007-12-22T03:15:00.000Z	chickenFuego	jimmy__	I installed tomacat 5.5 on feisty. It worked fine. Can you paste your output to a pastebin please?
+2007-12-22T03:16:00.000Z	jimmy__	chickenFuego	: sorry can you explain what you want me to paste in? I'm new to linux
+2007-12-22T03:17:00.000Z	chickenFuego	jimmy__	please copy/paste here and give me the url: http://paste.ubuntu-nl.org/
+2007-12-22T03:20:00.000Z	chickenFuego	jimmy__	you could try the following at the command line: "sudo apt-get install tomcat5.5" - It might solve the dependencies in a better way. paste the outputplz.
+2007-12-22T03:21:00.000Z	jimmy__	chickenFuego	http://paste.ubuntu-nl.org/49217/
+2007-12-22T03:22:00.000Z	chickenFuego	jimmy__	no problem.. you just need to close all applications related to package management, and rerun apt-get.
+2007-12-22T03:23:00.000Z	jimmy__	chickenFuego	sorry, do i just run the command line install command u typed earlier?
+2007-12-22T03:23:00.000Z	chickenFuego	jimmy__	yes.
+2007-12-22T03:25:00.000Z	jimmy__	chickenFuego	still errors :( http://paste.ubuntu-nl.org/49218/ I havent done any dev work on this pc and have no other IDEs etc installed
+2007-12-22T03:26:00.000Z	chickenFuego	jimmy__	which ubuntu version do you have? type "cat /etc/apt/sources.list to know the name
+2007-12-22T03:26:00.000Z	chickenFuego	jimmy__	feisty?
+2007-12-22T03:28:00.000Z	jimmy__	chickenFuego	I'm on 7.10, but heres the output of that command anyway :D
+2007-12-22T03:29:00.000Z	jimmy__	chickenFuego	I don't know how to, can I be a pain and ask?
+2007-12-22T03:29:00.000Z	chickenFuego	jimmy__	just do a "sudo apt-get install sun-java6-jdk"
+2007-12-22T03:35:00.000Z	chickenFuego	jimmy__	once you have sun-java installed, change the following line in /etc/default/tomcat5.5. : "#JAVA_HOME=xxx" to "JAVA_HOME=/usr/lib/jvm/java-6-sun" - everything should work after that (rerun  apt-get install ...)
+2007-12-22T03:37:00.000Z	jimmy__	chickenFuego	thanks for all the help, I will try that in one moment when the download is done :D
+2007-12-22T03:37:00.000Z	chickenFuego	jimmy__	the installation script of tomcat should actually ask for the java version you want to use..but it doesn't -so I had to set it manually.
+2007-12-22T03:37:00.000Z	chickenFuego	jimmy__	which download??
+2007-12-22T03:41:00.000Z	jimmy__	chickenFuego	I installed the java-6-sdk, changed the JAVA_home (although it was correct anyway) and reran apt-get install tomcat5.5 here is teh output http://paste.ubuntu-nl.org/49221/
+2007-12-22T03:42:00.000Z	chickenFuego	jimmy__	JAVA_HOME was commented out in the original file, no?
+2007-12-22T03:43:00.000Z	jimmy__	chickenFuego	ah yes my bad :P so how can i be sure it installed ok?
+2007-12-22T03:46:00.000Z	jimmy__	chickenFuego	: Thank you so much! *gives you a beer* , just one last thing, where will my "public_html" or the place I put my JSPs etc be? (like /var/wwwroot/htdocs for apache)?
+2007-12-22T03:48:00.000Z	chickenFuego	jimmy__	the place is: "/usr/share/tomcat5.5-webapps/", but I really recommend to use an IDE (eg. eclispe with wtp plugin) to automatically generate the config files of tomcat..
+2007-12-22T03:49:00.000Z	jimmy__	chickenFuego	I've been advised to not use an IDE so I learn how it "really" comes together, is it relatively easy to configure eclipse to tomcat? (I've got some basic experience of eclipse)
+2007-12-22T03:50:00.000Z	chickenFuego	jimmy__	I would say: no it is not that easy and logical to set-up. But with a good tutorial you need 10min!
+2007-12-22T03:51:00.000Z	chickenFuego	jimmy__	the trick with the eclipse wtp plugin is that eclipse can stop/start/restart your tomcat, republish files after editing etc. It is great!
+2007-12-22T03:51:00.000Z	jimmy__	chickenFuego	I just install eclipse from synaptic? and btw, how do I send PMs here? :P
+2007-12-22T03:52:00.000Z	chickenFuego	jimmy__	here is the wininig tutorial ;) http://www.ibm.com/developerworks/library/os-eclipse-tomcat/index.html
+2007-12-22T03:53:00.000Z	chickenFuego	jimmy__	 but you need the "sudo ln -s /usr/share/tomcat5.5-webapps/ /usr/share/tomcat5.5/webapps/" on ubuntu for this tutorial to work.
+2007-12-22T03:53:00.000Z	chickenFuego	jimmy__	see you in 10 min? ;)
+2007-12-22T03:55:00.000Z	jimmy__	chickenFuego	Ok thanks for the guide, I've made the "ln" link and now setting up eclipse, are you sticking around? bound to get stuck somewhere :P
+2007-12-22T03:55:00.000Z	chickenFuego	jimmy__	yes I am here. This story is fresh for me. I did it two weeks ago.
+2007-12-22T03:59:00.000Z	jimmy__	chickenFuego	yes I think, http://paste.ubuntu-nl.org/49227/
+2007-12-22T04:09:00.000Z	jimmy__	chickenFuego	got eclipse up, trying the tutorial you linked me, got as far as selecting the callisto details but when i select the ones required it greys out the "Next" button, error message http://paste.ubuntu-nl.org/49230/
+2007-12-22T04:10:00.000Z	chickenFuego	jimmy__	typical dependency crap with eclipse plugins.. you might have a checkbox "select dependencies" or so in your eclipse dialog.
+2007-12-22T04:11:00.000Z	chickenFuego	jimmy__	the button "select required" on the right I think.
+2007-12-22T04:12:00.000Z	jimmy__	chickenFuego	: problem existed between chair and keyboard :P
+2007-12-22T04:12:00.000Z	chickenFuego	jimmy__	lol.
+2007-12-22T04:13:00.000Z	jimmy__	chickenFuego	have you also set up mySQL yourself?
+2007-12-22T04:14:00.000Z	chickenFuego	jimmy__	yes, but this is a easier piece of cake as compared to tomcat/eclipse-wtp!
+2007-12-22T04:15:00.000Z	chickenFuego	jimmy__	the coolest with mysql is that if you install phpmyadmin and then go to http://localhost/, you can just do everything with some clicks!
+2007-12-22T04:15:00.000Z	jimmy__	chickenFuego	sounds like a plan to me ;))
+2007-12-22T04:18:00.000Z	chickenFuego	jimmy__	seems like you will need to now where to put the java jdbc drivers for mysql soon ;)
+2007-12-22T04:19:00.000Z	jimmy__	chickenFuego	yes, my colleagues "shudder" at the mention of JDBC, is it that bad?
+2007-12-22T04:20:00.000Z	chickenFuego	jimmy__	I had only good experiences with jdbc, and with ubuntu.
+2007-12-22T04:21:00.000Z	jimmy__	chickenFuego	sounds good :D Ok, eclipse updated OK and restarted, now what?
+2007-12-22T04:22:00.000Z	jimmy__	chickenFuego	Ok, one sec...
+2007-12-22T04:26:00.000Z	jimmy__	chickenFuego	it wont accept my tomcat installation directory, its /etc/tomcat5.5 isnt it?
+2007-12-22T04:27:00.000Z	chickenFuego	jimmy__	no, I think it is: /usr/share/tomcat5.5
+2007-12-22T04:28:00.000Z	chickenFuego	jimmy__	and it fails at this point if you are missing the soft-link trick.
+2007-12-22T04:29:00.000Z	jimmy__	chickenFuego	http://paste.ubuntu-nl.org/49231/
+2007-12-22T04:31:00.000Z	chickenFuego	jimmy__	is it an eclipse crash???!?!?
+2007-12-22T04:32:00.000Z	jimmy__	chickenFuego	yes, after i clicked "finish" on teh create dynamic web project
+2007-12-22T04:32:00.000Z	chickenFuego	jimmy__	but was is ok just before? tomcat was found??
+2007-12-22T04:34:00.000Z	jimmy__	chickenFuego	strange, eclipse closed down but was able to re-open and open the .project
+2007-12-22T04:35:00.000Z	chickenFuego	jimmy__	you might report a bug to eclipse, ask the expert at #eclipse to know were to do it.
+2007-12-22T04:36:00.000Z	jimmy__	chickenFuego	can i go back onto the project settings dialog? missed a setting...
+2007-12-22T04:36:00.000Z	chickenFuego	jimmy__	keep on going. As I said the setup is not that easy. But when you are done, this environment is highly productive!
+2007-12-22T04:37:00.000Z	chickenFuego	jimmy__	try to delete/recreate a wtp project I would say.
+2007-12-22T04:42:00.000Z	jimmy__	chickenFuego	I have no projects to add to the server... no idea what I'm doing here..
+2007-12-22T04:45:00.000Z	chickenFuego	jimmy__	create new project will create all the settings for an empty jsp/serlvets tomcat. Add an helloworld example from the tutorial to check if it is working.
+2007-12-22T04:46:00.000Z	jimmy__	chickenFuego	I can't create a new project cos of that error/exiting eclipse, can I give u an RDP so you can see for yourself?
+2007-12-22T04:46:00.000Z	chickenFuego	jimmy__	RDP?
+2007-12-22T04:47:00.000Z	jimmy__	chickenFuego	remote desktop / ssh
+2007-12-22T04:47:00.000Z	jimmy__	chickenFuego	can you MSN me for details/login? mine is jimmy@teamstag.co.uk
+2007-12-22T21:40:00.000Z	chickenFuego	jimmy__	??
+2007-12-22T22:20:00.000Z	chickenFuego	jimmy__	did you read me for the bug fix?

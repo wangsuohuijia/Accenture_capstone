@@ -1,0 +1,42 @@
+2010-06-24T19:51:00.000Z	bluntu		Hello
+2010-06-24T19:51:00.000Z	bluntu		Is there someone who can help me with an ubuntu install?
+2010-06-24T19:53:00.000Z	bluntu		I am trying to install 10.04, but I can't get passed step 4.
+2010-06-24T19:53:00.000Z	bluntu		There are no partitions showing up in the window
+2010-06-24T19:54:00.000Z	bluntu		I am using unetbootin to install
+2010-06-24T19:54:00.000Z	bluntu		from my HD
+2010-06-24T19:55:00.000Z	bluntu		can anyone help me here with this install?
+2010-06-24T19:56:00.000Z	Dr_Willis	bluntu	 using unetbootin to install to a hard drive? that wont do a 'normal' install it will be a live-cd-type install that may not save changes
+2010-06-24T19:56:00.000Z	Dr_Willis	bluntu	 somthing seems odd about yoru statements..  you want to install 10.04 to the hd?
+2010-06-24T19:57:00.000Z	Dr_Willis	bluntu	 You did a unetbootin install to the  hard drive.. and bootted that THEN ran the ubuntu installer from the unetbootin-installed-to-hd-setup ?
+2010-06-24T19:57:00.000Z	Dr_Willis	bluntu	 you mean step 4 of the ubuntu installer right? not unetbootins dialogs?
+2010-06-24T19:58:00.000Z	bluntu	Dr_Willis	this is what I did: I had Windows XP and downloaded an ISO for Ubuntu and try to install that now using Unetbootin
+2010-06-24T19:58:00.000Z	bluntu	Dr_Willis	indeed
+2010-06-24T19:58:00.000Z	Dr_Willis	bluntu	 so you are at step4 of the Unetbootin installer then?
+2010-06-24T19:59:00.000Z	Dr_Willis	bluntu	 so you used unetbootin - to put the iso on the HD.. booted the HD?
+2010-06-24T19:59:00.000Z	Dr_Willis	bluntu	 and youa re trying to install to the SAME hard drive as the unetbootin booted  from?
+2010-06-24T20:00:00.000Z	Dr_Willis	bluntu	 if you had the HD allready parttioned you Might be able to install to the OTHEr partitions..  but unetbootin proberly made a single partition on the HD.
+2010-06-24T20:00:00.000Z	Dr_Willis	bluntu	 best would been to use a USB flash drive as an installer medium
+2010-06-24T20:01:00.000Z	bluntu	Dr_Willis	the computer doesn;t allow startup from USB
+2010-06-24T20:01:00.000Z	Dr_Willis	bluntu	 You MIGHT be able to use gparted to resize the partitions.
+2010-06-24T20:01:00.000Z	bluntu	Dr_Willis	but Gparted requires me to boot from cd right?
+2010-06-24T20:01:00.000Z	Dr_Willis	bluntu	 then install to a 2nd partion other then the one you used unetbootin on.
+2010-06-24T20:02:00.000Z	Dr_Willis	bluntu	 No it does not. Your unetbootin 'setup' IS basically the same as booting from cd also.
+2010-06-24T20:02:00.000Z	Dr_Willis	bluntu	 well.. it might  in this case.. actually I think there IS a new 'toram' option for 10.04
+2010-06-24T20:02:00.000Z	bluntu	Dr_Willis	but to use gparted I need to stat up from cd
+2010-06-24T20:02:00.000Z	Dr_Willis	bluntu	 how much ram ya got?
+2010-06-24T20:02:00.000Z	bluntu	Dr_Willis	512 mb
+2010-06-24T20:04:00.000Z	bluntu	Dr_Willis	I am using basically a Harddrive with a CPU and Ethernetport...
+2010-06-24T20:05:00.000Z	bluntu	Dr_Willis	isn;t it possible to install Ubuntu whilest starting up? Without going into the 'Live' mode?
+2010-06-24T20:05:00.000Z	Dr_Willis	bluntu	 the installcd and that boot setup you got should hagve a 'test' and 'install' item at one of the first dialogs..
+2010-06-24T20:06:00.000Z	Dr_Willis	bluntu	 it used to be a grub item  int he last release. its a little dialog in 10.04
+2010-06-24T20:06:00.000Z	bluntu	Dr_Willis	nah, it boots straight into live
+2010-06-24T20:06:00.000Z	Dr_Willis	bluntu	 unetbootin may be giving it some options when it boots.
+2010-06-24T20:07:00.000Z	Dr_Willis	bluntu	 examine the boot configs unetbootin is using thats on the hard drive.
+2010-06-24T20:07:00.000Z	bluntu	Dr_Willis	where do I find the configs?
+2010-06-24T20:08:00.000Z	Dr_Willis	bluntu	 on the hard drive you installed to. unetbootin may be using syslinux, so will be some syslinux.cfg or suimiler config
+2010-06-24T20:08:00.000Z	Dr_Willis	bluntu	 one of the MANY reasions i dont do unetbootin installs to 'hard drives' :)  i end up debugging unetbootins setup to much
+2010-06-24T20:09:00.000Z	bluntu	Dr_Willis	I am willing to try anything else to get this installed asap. If you can provide me with a better idea, I'll do that in a heartbeat
+2010-06-24T20:09:00.000Z	Dr_Willis	bluntu	 if you scres up  a config.. and system wont boot.. well.. you are stuck arent you.
+2010-06-24T20:09:00.000Z	Dr_Willis	bluntu	 put hd in a 2nd machine..  install to it there.
+2010-06-24T20:11:00.000Z	bluntu	Dr_Willis	how about installing from the net?
+2010-06-24T20:11:00.000Z	Dr_Willis	bluntu	 never tried. I got plenty of cd/dvd/flash drives.

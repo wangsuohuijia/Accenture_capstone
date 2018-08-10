@@ -1,0 +1,76 @@
+2006-05-26T06:38:00.000Z	maike-maus		hello. can anybody help me getting my network / internet working?
+2006-05-26T06:39:00.000Z	nandz_	maike-maus	where are you stuck right now?
+2006-05-26T06:40:00.000Z	maike-maus	nandz_	 network monitor in panel shows connection lo: but nothing happens
+2006-05-26T06:41:00.000Z	nandz_	maike-maus	"lo" is the loopback interface
+2006-05-26T06:41:00.000Z	nandz_	maike-maus	"lo" will not connect you across to the internet or LAN
+2006-05-26T06:41:00.000Z	nandz_	maike-maus	you need something like "eth0" or "eth1" -- is it there?
+2006-05-26T06:42:00.000Z	maike-maus	nandz_	ok, at network monitor there is only lo - at network system there is also eth0  and it is actived...
+2006-05-26T06:43:00.000Z	nandz_	maike-maus	can you see two blinking computer in the top-right hand corner of your screen?
+2006-05-26T06:44:00.000Z	nandz_	maike-maus	open network settings (System->Administration->Network Settings) -- do you see eth0/eth1?
+2006-05-26T06:44:00.000Z	maike-maus	nandz_	yethis is what I called network monitors...
+2006-05-26T06:44:00.000Z	nandz_	maike-maus	if yes, then open then select eth0/eth1 and open the properties dialog box
+2006-05-26T06:45:00.000Z	nandz_	maike-maus	are you doing it? (btw -- how're you on IRC -- someone else's machine?)
+2006-05-26T06:46:00.000Z	maike-maus	nandz_	yes, I can see them there - and now I'm on my old machine online
+2006-05-26T06:46:00.000Z	nandz_	maike-maus	okay -- are you on a LAN, if yes - then you probably need to configure eth0
+2006-05-26T06:46:00.000Z	nandz_	maike-maus	select eth0 -- and fire up the properties dialog box
+2006-05-26T06:47:00.000Z	maike-maus	nandz_	ok, the box is opened
+2006-05-26T06:47:00.000Z	nandz_	maike-maus	does your LAN have a DHCP server?
+2006-05-26T06:47:00.000Z	maike-maus	nandz_	the connection is aivated (checked box) and dhcp is choosen
+2006-05-26T06:48:00.000Z	nandz_	maike-maus	okay -- then fire up a terminal window (command prompt) and type "ifconfig"
+2006-05-26T06:48:00.000Z	maike-maus	nandz_	ok, I did it - do you need some information from ifconfig?
+2006-05-26T06:49:00.000Z	nandz_	maike-maus	just see if eth0 has been assigned an IP address
+2006-05-26T06:50:00.000Z	maike-maus	nandz_	  no
+2006-05-26T06:50:00.000Z	nandz_	maike-maus	the output of ifconfig should have something like "inet addr: x.y.z.w" against eth0 -- are you with me?
+2006-05-26T06:51:00.000Z	nandz_	maike-maus	I'm sending you my ifconfig output in a private message
+2006-05-26T06:51:00.000Z	maike-maus	nandz_	 well there is:    inet6 Adresse: fe80::240:d0ff:fe82:b3ab/64    but I think this     not an IP adress, right?
+2006-05-26T06:52:00.000Z	nandz_	maike-maus	check the line just above that inet6 line
+2006-05-26T06:52:00.000Z	nandz_	maike-maus	it should have your IP address -- is it there?
+2006-05-26T06:53:00.000Z	maike-maus	nandz_	 no, only the hardware adress
+2006-05-26T06:53:00.000Z	nandz_	maike-maus	okay chuck this -- do you know any IP address in your LAN -- an IP address of a machine that you're sure will be on the network right now?
+2006-05-26T06:53:00.000Z	nandz_	maike-maus	or the hostname/website address of a machine on your LAN -- something like an intranet server or something
+2006-05-26T06:53:00.000Z	maike-maus	nandz_	  Protokoll: Ethernet Hardware Adresse  00:40:D0:82:B3:AB
+2006-05-26T06:54:00.000Z	nandz_	maike-maus	try pinging another machine on your LAN
+2006-05-26T06:54:00.000Z	maike-maus	nandz_	yes, I know other IP adresses of my network
+2006-05-26T06:54:00.000Z	nandz_	maike-maus	try pinging it
+2006-05-26T06:54:00.000Z	nandz_	maike-maus	$ ping ip_address
+2006-05-26T06:55:00.000Z	nandz_	maike-maus	you with me?
+2006-05-26T06:55:00.000Z	maike-maus	nandz_	connect: Network is unreachable
+2006-05-26T06:56:00.000Z	nandz_	maike-maus	hmm --what was the IP that you tried?
+2006-05-26T06:56:00.000Z	maike-maus	nandz_	192.168.0.102
+2006-05-26T06:56:00.000Z	nandz_	maike-maus	okay -- let's try something else
+2006-05-26T06:57:00.000Z	nandz_	maike-maus	type $ route -n
+2006-05-26T06:57:00.000Z	nandz_	maike-maus	do you know the IP address of the gateway on your LAN?
+2006-05-26T06:57:00.000Z	maike-maus	nandz_	no entries - the gateway is the router right?
+2006-05-26T06:58:00.000Z	nandz_	maike-maus	yes -- in many cases
+2006-05-26T06:58:00.000Z	nandz_	maike-maus	in all probability your DHCP is screwing up the config
+2006-05-26T06:58:00.000Z	nandz_	maike-maus	has someone given you a static IP address for your maching -- I think you should dump DHCP and configure your network by hand
+2006-05-26T06:59:00.000Z	nandz_	maike-maus	you'll need an IP address for your machine and the IP address of the default gateway -- do you have that?
+2006-05-26T06:59:00.000Z	maike-maus	nandz_	yes, I have both
+2006-05-26T06:59:00.000Z	nandz_	maike-maus	great -- go to network settings dialog box again
+2006-05-26T07:00:00.000Z	nandz_	maike-maus	switch from DHCP to Static IP address
+2006-05-26T07:00:00.000Z	nandz_	maike-maus	and enter the details below
+2006-05-26T07:00:00.000Z	maike-maus	nandz_	ok, I#m there
+2006-05-26T07:01:00.000Z	nandz_	maike-maus	entered the details?
+2006-05-26T07:01:00.000Z	maike-maus	nandz_	yes
+2006-05-26T07:01:00.000Z	nandz_	maike-maus	the subnet mask should be filled in automatically -- don't worry about that
+2006-05-26T07:01:00.000Z	nandz_	maike-maus	now click ok -- and try pinging some other machine again
+2006-05-26T07:01:00.000Z	nandz_	maike-maus	oh before that -- deactivate/activate eth0
+2006-05-26T07:02:00.000Z	nandz_	maike-maus	any luck?
+2006-05-26T07:02:00.000Z	maike-maus	nandz_	  host unreachable
+2006-05-26T07:03:00.000Z	nandz_	maike-maus	check ifconfig again -- can you see your IP address this time?
+2006-05-26T07:04:00.000Z	nandz_	maike-maus	if you see your IP address against eth0 -- then try pinging the default gw -- and just check -- have you plugged in your LAN cable?
+2006-05-26T07:05:00.000Z	maike-maus	nandz_	I can see the IP adress there
+2006-05-26T07:05:00.000Z	nandz_	maike-maus	well then -- try pinging the gw
+2006-05-26T07:06:00.000Z	nandz_	maike-maus	have you plugged in the LAN cable?
+2006-05-26T07:06:00.000Z	nandz_	maike-maus	can you see a light blinking and all -- are you sure the h/w is working perfectly?
+2006-05-26T07:06:00.000Z	maike-maus	nandz_	I can ping myself - but not the router
+2006-05-26T07:07:00.000Z	nandz_	maike-maus	try pinging yourself with your external IP -- NOT 127.0.0.1 -- can you do that?
+2006-05-26T07:07:00.000Z	maike-maus	nandz_	yes I pinged me correctly with 192.168.0.104
+2006-05-26T07:08:00.000Z	nandz_	maike-maus	checked the h/w? and are you sure the other machine is really up? try some alternate IP addresses
+2006-05-26T07:09:00.000Z	maike-maus	nandz_	the other machine works fine and the hardware of my new system works as well
+2006-05-26T07:10:00.000Z	nandz_	maike-maus	what's the output of your route -n command?
+2006-05-26T07:13:00.000Z	nandz_	maike-maus	is 192.168.0.1 your default gw?
+2006-05-26T07:17:00.000Z	maike-maus	nandz_	  yes this  my router
+2006-05-26T07:17:00.000Z	nandz_	maike-maus	then I'm stumped -- seems to me that e'thing is correct -- are you sure the kernel recognizes your ethernet card properly?
+2006-05-26T07:17:00.000Z	maike-maus	nandz_	 I don't know? With win it works...
+2006-05-26T07:19:00.000Z	maike-maus	nandz_	the both targets 0.0.0.0 and 192.168.0.0   are pingable...

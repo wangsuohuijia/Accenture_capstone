@@ -1,0 +1,65 @@
+2006-04-14T05:29:00.000Z	solan		Can any1 please help me with a ipw2200 problem on my breezy with Automatix installed?
+2006-04-14T05:30:00.000Z	solan		so how do I remove it again then? complete reinstall?
+2006-04-14T05:31:00.000Z	mwe	solan	I don't think you have to reinstall
+2006-04-14T05:31:00.000Z	solan	mwe	could you please help me remove it then?
+2006-04-14T05:32:00.000Z	mwe	solan	automatix?
+2006-04-14T05:32:00.000Z	solan	mwe	I'm new to ubuntu and a friend of mine told me that Automatix would fix a lot of problems I would encounter as a n00b..
+2006-04-14T05:32:00.000Z	mwe	solan	it works most of the time but quite a few people have had problems with it though
+2006-04-14T05:33:00.000Z	mwe	solan	I haven't used it so I'm not sure how to remove it
+2006-04-14T05:33:00.000Z	mwe	solan	How did you install it?
+2006-04-14T05:34:00.000Z	solan	mwe	downloaded, make, and ran it from Applications and System Tools
+2006-04-14T05:35:00.000Z	mwe	solan	if you installed it with make install, can't you make uninstall in the source dir?
+2006-04-14T05:36:00.000Z	solan	mwe	hmmm..... I can try, but the problem is that it has installed all sorts of stuff..... like firefox, thunderbird and lots of other...
+2006-04-14T05:36:00.000Z	mwe	solan	that's probably ok if it didn't break
+2006-04-14T05:37:00.000Z	mwe	solan	I understand it enables the root account, doesn't it?
+2006-04-14T05:37:00.000Z	mwe	solan	maybe you should disable the root account again if it did
+2006-04-14T05:39:00.000Z	solan	mwe	enables? isn't the root account always enabled?
+2006-04-14T05:39:00.000Z	mwe	solan	no not in ubuntu
+2006-04-14T05:39:00.000Z	mwe	solan	root login is disabled by default
+2006-04-14T05:39:00.000Z	mwe	solan	well the account is enabled, but root login is disabled
+2006-04-14T05:39:00.000Z	solan	mwe	hmm... so that's why everybody is using sudo...:)
+2006-04-14T05:40:00.000Z	mwe	solan	yeah. just use sudo -i if you need a root prompt
+2006-04-14T05:40:00.000Z	mwe	solan	sudo passwd -l root
+2006-04-14T05:41:00.000Z	solan	mwe	password...?
+2006-04-14T05:41:00.000Z	mwe	solan	no sudo passwd -l root
+2006-04-14T05:41:00.000Z	mwe	solan	that will set an encrypted password that no real password will encrypt to
+2006-04-14T05:42:00.000Z	solan	mwe	so that I can't log in a root and f**k everything up?
+2006-04-14T05:42:00.000Z	mwe	solan	now you can't login as root, then.
+2006-04-14T05:42:00.000Z	mwe	solan	or someone else who tries to hax0r your box
+2006-04-14T05:42:00.000Z	solan	mwe	yeah...
+2006-04-14T05:43:00.000Z	mwe	solan	but is it breezy?
+2006-04-14T05:43:00.000Z	solan	mwe	yupp...
+2006-04-14T05:44:00.000Z	mwe	solan	then maybe you should sudo nano /etc/shadow and replace the encrypted password with a * so recovery mode will work
+2006-04-14T05:44:00.000Z	mwe	solan	the one for root that is
+2006-04-14T05:45:00.000Z	solan	mwe	done...
+2006-04-14T05:45:00.000Z	mwe	solan	good
+2006-04-14T05:46:00.000Z	mwe	solan	I don't think you should have to worry now then. just don't use automatix again :)
+2006-04-14T05:46:00.000Z	solan	mwe	mkay.. will try to keep away from it;)
+2006-04-14T06:27:00.000Z	mwe	solan	yes?
+2006-04-14T06:27:00.000Z	mwe	solan	it should be well supported but you need the firmware
+2006-04-14T06:28:00.000Z	solan	mwe	- I'v tried to update the firmware by using this guide: http://www.ubuntuforums.org/showthread.php?t=26623&highlight=intel+PRO%2FWireless, but I coulden't remove the old modules, so I ended up removing all records of the card in Ubuntu:(
+2006-04-14T06:30:00.000Z	mwe	solan	so the default module is gone?
+2006-04-14T06:30:00.000Z	mwe	solan	and replaced with the one you tried to install?
+2006-04-14T06:30:00.000Z	solan	mwe	- everything is gone... it's not listed in the network conf GUI, and not listed in iwconfig
+2006-04-14T06:32:00.000Z	mwe	solan	reinstall linux-image-$(uname -r) to get the module back if it really gone
+2006-04-14T06:32:00.000Z	solan	mwe	- I got an error at the make command for ieee80211... something about a directory or file that wasn't found..
+2006-04-14T06:33:00.000Z	mwe	solan	yes? what file? use pastebin.com and paste the error
+2006-04-14T06:36:00.000Z	solan	mwe	- did you get the msg?
+2006-04-14T06:37:00.000Z	mwe	solan	wht msg. didn't get any from you
+2006-04-14T06:38:00.000Z	solan	mwe	- hmm... strange... opend a dialogue window with you...
+2006-04-14T06:38:00.000Z	mwe	solan	are your registered?
+2006-04-14T06:39:00.000Z	solan	mwe	- what?
+2006-04-14T06:39:00.000Z	solan	mwe	- don't think so, how do I register?
+2006-04-14T06:39:00.000Z	mwe	solan	are you registered on freenode? if not you can't /msg people
+2006-04-14T06:40:00.000Z	solan	mwe	- how do I register on freenode?
+2006-04-14T06:40:00.000Z	mwe	solan	read that
+2006-04-14T06:43:00.000Z	solan	mwe	- did you get it now?
+2006-04-14T06:43:00.000Z	mwe	solan	yeah. I can't read that. please use pastebin.com and paste the url here
+2006-04-14T06:44:00.000Z	mwe	solan	well install build-essential and gcc-3.4
+2006-04-14T06:44:00.000Z	solan	mwe	- done that already...
+2006-04-14T06:45:00.000Z	mwe	solan	but it says gcc-3.4 not found so I doubt it's installed
+2006-04-14T06:46:00.000Z	solan	mwe	- http://pastebin.com/649360
+2006-04-14T06:46:00.000Z	mwe	solan	sudo apt-get install gcc-3.4
+2006-04-14T06:46:00.000Z	solan	mwe	- on it...
+2006-04-14T06:48:00.000Z	solan	mwe	- looks like it's working... thx alot:D
+2006-04-14T06:48:00.000Z	mwe	solan	yw

@@ -1,0 +1,84 @@
+2009-07-26T09:10:00.000Z	mataks		help pls.   what program that can edit windows tranparancy?
+2009-07-26T09:11:00.000Z	coz_	mataks	 then compiz controls window transparency
+2009-07-26T09:11:00.000Z	mataks	coz_	do i have to download it? im just new in linux.. i just have a fresh install yesterday
+2009-07-26T09:11:00.000Z	coz_	mataks	 no  is this ubuntu   9.04?
+2009-07-26T09:12:00.000Z	mataks	coz_	: yes im using ubuntu 9.04
+2009-07-26T09:12:00.000Z	coz_	mataks	  ok and which video card ?   in terminal    lspci | grep -i vga
+2009-07-26T09:13:00.000Z	coz_	mataks	 let me know the video card first and then we will install ccsm
+2009-07-26T09:13:00.000Z	coz_	mataks	 ok and did you already install the nvidia driver via  system/administratioin/hardware drivers?
+2009-07-26T09:13:00.000Z	coz_	mataks	 ok  and did you reboot  after installing that driver??
+2009-07-26T09:14:00.000Z	mataks	coz_	: yes i  reboot many times. :)
+2009-07-26T09:14:00.000Z	coz_	mataks	 ok open a terminal  and type      ccsm
+2009-07-26T09:14:00.000Z	coz_	mataks	 tell if anything opens
+2009-07-26T09:14:00.000Z	coz_	mataks	  thats what you want
+2009-07-26T09:14:00.000Z	coz_	mataks	 right that is  ccsm  or   compizconfig  settings manager
+2009-07-26T09:15:00.000Z	mataks	coz_	 ok which setttings here can change windows transparancy
+2009-07-26T09:15:00.000Z	coz_	mataks	  ok  what is it you want to do with the windows
+2009-07-26T09:16:00.000Z	coz_	mataks	 in that ccsm   under the Accessibility plugn  you can change or add windows under the "Opacity"  tab
+2009-07-26T09:17:00.000Z	coz_	mataks	  if you want "all" windows  to be transparent then in the  "Window specific settings" fiels type    any  if you want specific windows to be transparent let me know which ones
+2009-07-26T09:17:00.000Z	coz_	mataks	 that should be the window specific  "field"
+2009-07-26T09:19:00.000Z	coz_	mataks	 you still here?
+2009-07-26T09:21:00.000Z	coz_	mataks	 also you can meet me in #compiz
+2009-07-26T09:23:00.000Z	mataks	coz_	 do you know how to edit transparancy on taskbar?
+2009-07-26T09:25:00.000Z	coz_	mataks	 hold on guy
+2009-07-26T10:20:00.000Z	coz_	mataks	 sorry guy
+2009-07-26T10:20:00.000Z	coz_	mataks	 did you get that solved?
+2009-07-26T10:25:00.000Z	mataks	coz_	 no man..  help pls i want to install these theme in my computer.. http://gnome-look.org/content/preview.php?preview=1&id=78633&file1=78633-1.jpg&file2=78633-2.jpg&file3=78633-3.jpg&name=BlueSpace+II     <-- why is that i can't see trasnaparency in mine.. help pls.....
+2009-07-26T10:26:00.000Z	coz_	mataks	 give me the direct  them link not the preview link :)
+2009-07-26T10:27:00.000Z	mataks	coz_	 here  http://gnome-look.org/content/show.php/BlueSpace+II?content=78633
+2009-07-26T10:27:00.000Z	coz_	mataks	 ok did you install that  yet?
+2009-07-26T10:27:00.000Z	mataks	coz_	 i don't know how to isntall. when i drag it to appearance it says failed to install
+2009-07-26T10:27:00.000Z	coz_	mataks	 ok hold on
+2009-07-26T10:28:00.000Z	coz_	mataks	 ok is that pacakage on the desktop?
+2009-07-26T10:29:00.000Z	mataks	coz_	 what you mean?
+2009-07-26T10:29:00.000Z	coz_	mataks	  right click the pacakage and click  "extract here"
+2009-07-26T10:29:00.000Z	mataks	coz_	 i already extracted the file  and i have gtk folder sumthing n other 2
+2009-07-26T10:29:00.000Z	coz_	mataks	ok  right click that folder and  "create archive"
+2009-07-26T10:29:00.000Z	coz_	mataks	 make sure it is set to  tar.gz
+2009-07-26T10:29:00.000Z	mataks	coz_	 what folder will i click?
+2009-07-26T10:30:00.000Z	coz_	mataks	 when you extracted that pacakge you got a  BLueSpace_II folder correct?
+2009-07-26T10:30:00.000Z	mataks	coz_	 k done.. i make zip it to tar.gz
+2009-07-26T10:31:00.000Z	coz_	mataks	 if the folder is  BlueSpace_II  then yes right click it and make sure it is pacakges as a tar.gz
+2009-07-26T10:31:00.000Z	coz_	mataks	 then drag that onto the appearance window
+2009-07-26T10:31:00.000Z	mataks	coz_	 still it failed. i drag it already
+2009-07-26T10:31:00.000Z	coz_	mataks	 hold on
+2009-07-26T10:32:00.000Z	coz_	mataks	  download this   http://files.getdropbox.com/u/132551/BlueSpace_II.tar.gz
+2009-07-26T10:32:00.000Z	coz_	mataks	 drag that pacakge on to the appearance window then click the  "Customize" button
+2009-07-26T10:33:00.000Z	mataks	coz_	 still failed.. it says can't move directory over directory
+2009-07-26T10:34:00.000Z	coz_	mataks	 ok go into the home directory under .themes
+2009-07-26T10:34:00.000Z	coz_	mataks	 delete the theme there first
+2009-07-26T10:34:00.000Z	coz_	mataks	 then drag that pacakge onto the window
+2009-07-26T10:35:00.000Z	mataks	coz_	 ey man how to go to .themes folder..  i forgot hehe
+2009-07-26T10:35:00.000Z	coz_	mataks	 hit ctrl+h
+2009-07-26T10:36:00.000Z	coz_	mataks	 that shows hidden folders
+2009-07-26T10:37:00.000Z	mataks	coz_	 yehey.. i installed it now.. what's next?
+2009-07-26T10:38:00.000Z	coz_	mataks	 hit the  "Customize" button
+2009-07-26T10:38:00.000Z	coz_	mataks	 under the Controls tab  find the theme
+2009-07-26T10:38:00.000Z	mataks	coz_	 the theme change but with no transparancy
+2009-07-26T10:39:00.000Z	coz_	mataks	 right hoold on
+2009-07-26T10:39:00.000Z	coz_	mataks	 now open ccsm
+2009-07-26T10:39:00.000Z	mataks	coz_	ok it's open now
+2009-07-26T10:40:00.000Z	coz_	mataks	 ok hold on one minute :)
+2009-07-26T10:41:00.000Z	coz_	mataks	 ok  under the Accessibility category click on the Opacity brightness and saturation plugin
+2009-07-26T10:41:00.000Z	mataks	coz_	 k wait
+2009-07-26T10:42:00.000Z	mataks	coz_	 and then
+2009-07-26T10:42:00.000Z	coz_	mataks	 ok under the Opcaity tab  in the window specific settings field
+2009-07-26T10:43:00.000Z	coz_	mataks	 copy and paste this into the field      (name=gnome-panel) | (type=Menu | PopupMenu | DropdownMenu | Dialog | ModalDialog) -18621
+2009-07-26T10:43:00.000Z	mataks	coz_	 ok done
+2009-07-26T10:44:00.000Z	coz_	mataks	 ok test it out
+2009-07-26T10:44:00.000Z	mataks	coz_	 ahmm.. nothings change for me
+2009-07-26T10:44:00.000Z	coz_	mataks	 is compiz running?  do dyou have wobbly windows
+2009-07-26T10:45:00.000Z	coz_	mataks	 mmm
+2009-07-26T10:45:00.000Z	coz_	mataks	 ok that window rules string did strange things here hold on
+2009-07-26T10:47:00.000Z	coz_	mataks	 hold on
+2009-07-26T10:47:00.000Z	mataks	coz_	 help i  think i screwed up. . i can't see my taskbars now.. and trays after i check the opacity and saturation..
+2009-07-26T10:47:00.000Z	coz_	mataks	 no problem ok are you still in ccsm
+2009-07-26T10:48:00.000Z	coz_	mataks	  uncheck the opcaity  plugin  then    highlight that string I gave you and hit the edit button
+2009-07-26T10:49:00.000Z	mataks	coz_	ok
+2009-07-26T10:49:00.000Z	coz_	mataks	 when the dialog opens  move the slider up to nearly 80
+2009-07-26T10:49:00.000Z	mataks	coz_	 there it goes back.. i think too much opacity is set to make it invisible
+2009-07-26T10:50:00.000Z	mataks	coz_	 yehey.. thnx you soo much.. it's working now :)
+2009-07-26T10:50:00.000Z	coz_	mataks	 cool :)
+2009-07-26T10:51:00.000Z	coz_	mataks	 it takes a while to get used to the hundreds of settings in compiz
+2009-07-26T10:51:00.000Z	mataks	coz_	 thank you so much..  :)
+2009-07-26T10:52:00.000Z	coz_	mataks	 no problem guy enjoy  :)

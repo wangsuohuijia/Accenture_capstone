@@ -1,0 +1,60 @@
+2011-05-22T21:52:00.000Z	Sidewinder1	BluesKaj	I'm guessing that after Nectar installed ubuntu, then booted directly into win, that there were some configuration issues in the brand new ubuntu install that were not satisfied. That's why I suggested reinstalling and booting immediately into ubuntu, if that makes any sense///
+2011-05-22T21:53:00.000Z	Sidewinder1	BluesKaj	Just a WAG on my part.
+2011-05-22T21:54:00.000Z	BluesKaj	Sidewinder1	that may be the case , but if Nectar boots the recovery kernel , perhaps it can be fixed , by choosing repair broken packages in the dialog , thenrebooting
+2011-05-22T21:56:00.000Z	Sidewinder1	BluesKaj	Thax!
+2011-06-09T21:49:00.000Z	BluesKaj	Sidewinder1	one can connect without NM using settings in /etc/network/interfaces for ethernet / eth0 : http://www.cyberciti.biz/faq/setting-up-an-network-interfaces-file/
+2011-06-09T22:04:00.000Z	BluesKaj	Sidewinder1	install git and study a tutorial how to use the git repository to install that driver ..that's the only source that I can see for that driver
+2011-06-09T22:05:00.000Z	Sidewinder1	BluesKaj	Who, me?
+2011-06-09T22:08:00.000Z	Sidewinder1	BluesKaj	If you're purposely trying to confuse me, you succeeded. :-)
+2011-06-09T22:13:00.000Z	BluesKaj	Sidewinder1	sorry I din't mean to .. I'm not a fan of git , but sometimes one has to wear a hair shirt for short time ...It has it's use,but it's somewhat beyond my scope or energy level , dunno which :)
+2011-06-17T22:15:00.000Z	BluesKaj	Sidewinder1	these conversations are getting ridiculous to follow ..ppl have to address their answers to nicks who are asking
+2011-06-17T22:15:00.000Z	Sidewinder1	BluesKaj	Totally agree! :-)
+2011-07-24T19:43:00.000Z	BluesKaj	Sidewinder1	:)
+2011-07-24T19:56:00.000Z	Sidewinder1	BluesKaj	Baet me.
+2011-09-11T18:17:00.000Z	BluesKaj	Sidewinder1	zykotick9 , one of the best dvd tools for authoring and creating dvd images is tovid ...cli but it gives instructions what to do in each step as the build to a dvd progresses
+2011-09-11T18:18:00.000Z	Sidewinder1	BluesKaj	Oh my goodness, CLI, Sidewinder1 doesn't know how to type; that's why I stick to GUI as much as I can.
+2011-09-25T17:32:00.000Z	Sidewinder1	BluesKaj	You may need to reinstall the proprietary flash driver, with new card installed?
+2011-09-25T17:34:00.000Z	Sidewinder1	BluesKaj	Just a "WAG", on my part..
+2011-09-25T17:34:00.000Z	BluesKaj	Sidewinder1	strange thing is I have some flv files that play ok on dragonplaye
+2011-10-23T19:09:00.000Z	BluesKaj	Sidewinder1	ouyes , nmap isn't one of my strong-suits , but I've never seen that output before with nmap
+2011-10-28T15:32:00.000Z	Sidewinder1	BluesKaj	My sixth grade math teacher used to say, "Don't say you're sorry; just don't let it happen again." :-)
+2011-11-05T20:56:00.000Z	Sidewinder1	BluesKaj	Nice to see a familiar face, once in a while. :-)
+2011-11-05T20:58:00.000Z	BluesKaj	Sidewinder1	:)
+2011-11-17T18:31:00.000Z	Sidewinder1	BluesKaj	Mornin'!
+2011-11-24T20:37:00.000Z	Sidewinder1	BluesKaj	Mornin'!
+2011-11-25T19:25:00.000Z	Sidewinder1	BluesKaj	Mornin'.!
+2011-11-25T19:26:00.000Z	Sidewinder1	BluesKaj	Don't you just love how I volunteer your help? :p
+2011-11-25T19:27:00.000Z	BluesKaj	Sidewinder1	yeah :)
+2011-11-25T19:27:00.000Z	Sidewinder1	BluesKaj	A guy's gotta' have some fun.. :)
+2011-11-25T19:29:00.000Z	Sidewinder1	BluesKaj	He wants to dual boot with 10.04, doesn't care for unity; imagine that..
+2011-11-25T19:34:00.000Z	Sidewinder1	BluesKaj	I already suggested 10.04; he could also use 11.04 with classic.
+2011-11-25T19:35:00.000Z	BluesKaj	Sidewinder1	he doesn't have any real problems IMO , he's just not sure what to do
+2011-11-25T19:36:00.000Z	Sidewinder1	BluesKaj	No, no problems; his original question was could he download Hardy 'caise he didn't like unity; that's when I suggested Lucid. :-)
+2011-12-04T18:07:00.000Z	Sidewinder1	BluesKaj	A little slow in here, this mornin'; but that's a good thing. It means that everyone already has all the answers to their questions. :-)
+2011-12-06T19:33:00.000Z	Sidewinder1	BluesKaj	Mornin' dude!
+2011-12-08T18:14:00.000Z	BluesKaj	Sidewinder1	the piano player part is a bit arcane , dunno how you guessed that
+2012-01-03T19:48:00.000Z	BluesKaj	Sidewinder1	if he runs the repair from windows it do more than bork grub
+2012-01-03T19:49:00.000Z	Sidewinder1	BluesKaj	That's what I thought; maybe I should've used the 'danger', factiod. ;-)
+2012-01-03T19:51:00.000Z	Sidewinder1	BluesKaj	If I'm correct, the "fix-MBR", command "should only kill GRUB, not the rest?..
+2012-01-03T19:53:00.000Z	BluesKaj	Sidewinder1	inwindows XP Sidewinder1, but Vista and W7 use a different method to fix the mbr and it's not a s straightforward afaik
+2012-01-03T19:54:00.000Z	Sidewinder1	BluesKaj	Yea, am familiar with XP, not so (never), Vista, 7.
+2012-01-03T21:19:00.000Z	BluesKaj	Sidewinder1	I had the ifconfig command under the wrong heading, but thanks to the correction trolls my mistake was pcked up :)
+2012-07-17T19:38:00.000Z	Sidewinder1	BluesKaj	With the problems that you and I've been discussing, I wonder if dding my sdb would help with that bad superblock and bad magic number stuff?
+2012-07-17T19:41:00.000Z	BluesKaj	Sidewinder1	dd'ing to where tho ?
+2012-07-17T19:44:00.000Z	Sidewinder1	BluesKaj	Nah, I just meant that since I've already tried a new partition table; reformatting; reinstalling with the same "no boot" results, dding the entire drive, then repeating partitioning, reinstalling might be the answer.. Just a wild guess on my part.
+2012-07-17T21:03:00.000Z	BluesKaj	Sidewinder1	what's your decision, or were you able to get some help ?
+2012-07-17T21:10:00.000Z	Sidewinder1	BluesKaj	I just got finished creating new part. table, reformatting and reinstallingl same unsuccessful result. The curious thing is that after the reinstall the next reboot threw me into grubrescue (as it did before) and I had to reinstall grub to sda5 (12.04). The curious part is that even though I reformatted sdb with the "/", it no longer has the/ when viewed in gparted... :-(
+2012-07-17T21:11:00.000Z	Sidewinder1	BluesKaj	I'll just be quasi-satisfied running it from livecd.. :(
+2012-07-17T21:13:00.000Z	Sidewinder1	BluesKaj	Thanks again for all of your time/help! ;-)
+2012-07-17T21:14:00.000Z	BluesKaj	Sidewinder1	it really should work as a proper install , there has to be a solution to the HDD recognition problem, altho support in bktrk would be best
+2012-07-17T21:19:00.000Z	Sidewinder1	BluesKaj	I totally agree; I'm convinced that it has something to do with bt using sda/b versus my UUIDs cause on reboot the first message says (the UUID) no such device and throws me into grub-rescue. If I had a more intimate knowledge of grub-rescue, I could probably fix it from there. Guess that'll be my next challenge. Ahain, thanx.
+2012-07-17T21:21:00.000Z	BluesKaj	Sidewinder1	maybe the sata drive is mistakenly set as the default boot drive in the bios , that same scenario happened to me when i chose my 2nd drive as the default.
+2012-07-17T21:23:00.000Z	BluesKaj	Sidewinder1	in other words the grub menu on the 2nd drive ges overwritten at boot
+2012-07-17T21:23:00.000Z	Sidewinder1	BluesKaj	Perhaps; I've had enough for one day; don't want to try to solve the problem with the hammer.. Have a good one! And thanks again..
+2012-09-02T17:24:00.000Z	Sidewinder1	BluesKaj	When the world starts to make sense, watch out.
+2012-09-02T17:34:00.000Z	Sidewinder1	BluesKaj	You were a year ahead of me.
+2012-09-02T17:53:00.000Z	BluesKaj	Sidewinder1	cloaks protect us from jerks ...there are a few around :)
+2012-09-02T17:56:00.000Z	Sidewinder1	BluesKaj	Yes, I'm well aware; perhaps I just put a little too much faith in my router; not that I ever experienced any problems. I might debate the word "few" in your stmt. ;-)
+2012-09-02T18:03:00.000Z	BluesKaj	Sidewinder1	I had a guy pound my router for 2 hrs one day ....think he did some research and managed to find my IP ...he was obviously skilled  at networking , even though I was cloaked...it goes to show there are no gurantees :P
+2012-09-02T18:06:00.000Z	Sidewinder1	BluesKaj	Thanks for that; I guess anything's possible. Did your router totally prevent intrusion?
+2012-09-02T18:07:00.000Z	BluesKaj	Sidewinder1	yes but it really slowed my internet speed

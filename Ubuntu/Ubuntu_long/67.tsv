@@ -1,0 +1,86 @@
+2004-09-28T05:21:00.000Z	Kamion		mmm, shiny new amd64 box just arrived this morning
+2004-09-28T05:23:00.000Z	Kamion		hi jono, will try to reply to your mail soonish
+2004-09-28T05:24:00.000Z	jono	Kamion	cool, which one are you?
+2004-09-28T05:24:00.000Z	Kamion	jono	/whois :-)
+2004-09-28T05:24:00.000Z	jono	Kamion	ahhh cool, nice to meet you Colin
+2004-09-28T05:25:00.000Z	jono	Kamion	Aq (Stuart Langridge) mentions you a lot
+2004-09-28T05:25:00.000Z	Kamion	jono	figures, we've known each other a long time :)
+2004-09-28T05:25:00.000Z	jono	Kamion	cool
+2004-09-28T06:11:00.000Z	Kamion	jono	/dev/pmu is the power management device on powermacs; the error dialog is a GNOME bug
+2004-09-28T06:12:00.000Z	jono	Kamion	ahhh right
+2004-10-03T16:50:00.000Z	Kamion	jono	basically, yes; only main right now, although we were discussing that at the technical board meeting earlier
+2004-10-03T16:50:00.000Z	jono	Kamion	cool, so may non-free be made available
+2004-10-03T16:51:00.000Z	jono	Kamion	its worrying me a little that I may not be able to use debian packages in ubuntu
+2004-10-03T16:51:00.000Z	Kamion	jono	at some point soonish that will probably happen, yes, although there's still a bit of debate about the implementation
+2004-10-03T16:52:00.000Z	jono	Kamion	so is the idea that when Ubuntu upgrades to a new version, a simple dist-upgrade will get everyone up to date?
+2004-10-03T16:52:00.000Z	Kamion	jono	right
+2004-10-03T16:53:00.000Z	Kamion	jono	if anything more is needed there'll be a warty->hoary upgrade tool or whatever and it'll be announced, but hopefully it shouldn't be too involved
+2004-10-03T16:53:00.000Z	jono	Kamion	right
+2004-10-03T16:53:00.000Z	jono	Kamion	it would b e cool to do a simple upgrade to everything
+2004-10-03T16:54:00.000Z	jono	Kamion	will the upgrade include universe software?
+2004-10-03T16:54:00.000Z	Kamion	jono	sure, universe will be resynced
+2004-10-03T16:55:00.000Z	jono	Kamion	surely the dependencies in universe must be huge?
+2004-10-03T16:55:00.000Z	Kamion	jono	correct, which is why it's hard to recommend using Debian packages
+2004-10-03T16:55:00.000Z	Kamion	jono	we get away with it because we rebuild the entirety of universe from source
+2004-10-03T16:55:00.000Z	jono	Kamion	right
+2004-10-03T16:56:00.000Z	jono	Kamion	is ubuntu going to allow newer packages to be installed in between releases?
+2004-10-03T16:57:00.000Z	Kamion	jono	the hoary development repository will be open during development, if that's what you mean
+2004-10-03T16:57:00.000Z	jono	Kamion	ahhh right, so if a new version of Blender comes out and is added to debian unstable, I assume it will be in the hoary repo?
+2004-10-03T16:59:00.000Z	jono	Kamion	did you get a chance to look at those questions I mailed you btw?
+2004-10-03T16:59:00.000Z	Kamion	jono	yep, AIUI hoary universe will roll along with Debian sid until the UpstreamVersionFreeze
+2004-10-03T05:00:00.000Z	Kamion	jono	hm, no, totally snowed under, I'll try to get back to you soon though
+2004-10-03T05:00:00.000Z	jono	Kamion	this process sounds good - have a freeze on hoary to get ready - would'nt surprise me if Debian takes this route at some point
+2004-10-03T05:01:00.000Z	jono	Kamion	I realise you are busy dude, thanks for bearing it in mind though :)
+2004-10-11T06:13:00.000Z	Kamion	jono	yaboot doesn't support passing an initrd parameter on its command line
+2004-10-11T06:14:00.000Z	Kamion	jono	you'll have to boot from the CD, run up to partitioning, switch to tty2, chroot, fix /etc/yaboot.conf, run ybin
+2004-10-11T06:14:00.000Z	jono	Kamion	what d you mean run up paritioning?
+2004-10-11T06:27:00.000Z	Kamion	jono	ctrl-f2 definitely won't work
+2004-10-11T06:27:00.000Z	Kamion	jono	try: alt-f2, alt-fn-f2 (pressed in that order), command-f2, command-fn-f2 (pressed in that order)
+2004-10-11T06:28:00.000Z	Kamion	jono	nano
+2004-10-11T06:36:00.000Z	Kamion	jono	alt (or whatever)-f1
+2004-10-11T06:45:00.000Z	jono	Kamion	I did take it out, and I thought that was why it broke
+2004-10-11T06:55:00.000Z	Kamion	jono	oh, if you're using that config file then you must use an initrd
+2004-10-11T06:56:00.000Z	jono	Kamion	to patch the orinoco driver - I am testing it for bug 1438
+2004-10-11T06:56:00.000Z	Kamion	jono	ah, maybe just substituting the single module would be easier
+2004-10-11T06:57:00.000Z	jono	Kamion	I tried that but it didnt work
+2004-10-11T07:00:00.000Z	Kamion	jono	the details of the technique are d-i specific; the general idea is, well, general
+2004-10-11T07:02:00.000Z	Kamion	jono	'depmod -a'?
+2004-10-11T07:04:00.000Z	jono	Kamion	wont that overwrite my modules file with the modules in 2.6.8.1 directory as opposed to my stock kernel 2.6.8.1-3-powerpc?
+2004-10-11T07:08:00.000Z	Kamion	jono	yes, debian-installer certainly isn't the only installer to do this
+2004-10-11T07:08:00.000Z	jono	Kamion	cool
+2004-10-11T08:08:00.000Z	jono	Kamion	when I mounted my disk behind the installer, I used /dev/disc/disc0/part6 - is that MAc specific or common with all installers at that point?
+2004-10-11T08:09:00.000Z	Kamion	jono	partition numbers obviously vary, the devfs-style naming is common to all d-i architectures currently
+2004-10-11T08:09:00.000Z	Kamion	jono	it'll probably change eventually, for obvious reasons we want to move away from devfs
+2004-10-11T08:11:00.000Z	jono	Kamion	why is /dev/discs/disc0/part(n) used instead of /dev/hda(n) ?
+2004-10-11T08:15:00.000Z	Kamion	jono	when d-i was originally being built there was no sensible alternative to devfs
+2004-10-11T12:33:00.000Z	jono	Kamion	are you heading down to the Linux Expo in London?
+2004-10-11T12:35:00.000Z	Kamion	jono	when is it?
+2004-10-11T12:35:00.000Z	jono	Kamion	you should come down :)
+2004-10-11T12:36:00.000Z	Kamion	jono	might nip down for socializing in the evening
+2004-10-11T12:37:00.000Z	jono	Kamion	we have to go at about 7pm on the 7th, but we will meet up for sure
+2004-10-11T12:37:00.000Z	jono	Kamion	I do karate too - which belt and style are you?
+2004-10-11T12:37:00.000Z	jono	Kamion	cool, which club?
+2004-10-11T12:38:00.000Z	Kamion	jono	oh, I'm just incapable of driving cal, yes, I'll come down on Wednesday evening then
+2004-10-11T12:39:00.000Z	jono	Kamion	cool
+2004-10-20T05:17:00.000Z	jono	Kamion	ping
+2004-10-20T06:45:00.000Z	Kamion	jono	pong
+2004-10-20T06:46:00.000Z	Kamion	jono	both at the same time, if I have anything to do with it
+2004-10-20T06:46:00.000Z	jono	Kamion	heya man :)
+2004-10-20T06:46:00.000Z	jono	Kamion	it was great meeting you the other day
+2004-10-20T06:47:00.000Z	jono	Kamion	it was a shame I couldnt stick around a bit longer - I was running around like a headless chicken - when you freelance you have a thousand bosses ;P
+2004-10-20T06:47:00.000Z	Kamion	jono	yeah, understood, will try to swing up to Brum sometime and meet up for a beer
+2004-10-20T06:47:00.000Z	jono	Kamion	yeah, sure :) I still need to buy you one
+2004-10-20T06:48:00.000Z	jono	Kamion	 no probs, you seema busy chap at the moment
+2004-10-20T06:49:00.000Z	Kamion	jono	hopefully workload'll drop a bit post-warty for a while
+2004-10-31T06:16:00.000Z	Kamion	jono	no?
+2004-11-07T17:31:00.000Z	Kamion	jono	note, FWIW, that the installer still uses devfs.
+2004-11-07T17:31:00.000Z	jono	Kamion	oh really? thats interesting, why is that?
+2004-11-07T17:32:00.000Z	Kamion	jono	historical
+2004-11-07T17:33:00.000Z	Kamion	jono	that part of the installer was written before devfs was deprecated, and it's a fairly big upheaval to shift
+2004-11-07T17:35:00.000Z	jono	Kamion	what would I need to do to persuade you guys to include Blender as a program in main?
+2004-12-13T16:51:00.000Z	Kamion	jono	typically used to transfer control to ntldr or similar
+2004-12-13T16:55:00.000Z	Kamion	jono	if you use 'default saved', then menu entries with the 'savedefault' option will become the default after they're selected
+2004-12-14T08:17:00.000Z	Kamion	jono	it's a map of the positions of symbols in the kernel, for use by things like depmod and ksymoops
+2004-12-14T08:18:00.000Z	Kamion	jono	http://www.dirac.org/linux/system.map/
+2004-12-14T08:19:00.000Z	jono	Kamion	cheers :)
+2004-12-15T17:06:00.000Z	jono	Kamion	ping

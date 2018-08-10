@@ -1,0 +1,31 @@
+2012-02-22T01:50:00.000Z	JetJaguar	Pikkachu	That's a difficult question since there are a lot of different ways to do a "fresh install"
+2012-02-22T01:51:00.000Z	JetJaguar	Pikkachu	Your "fresh install" may include apps that others don't choose to install.
+2012-02-22T02:06:00.000Z	Pikkachu	JetJaguar	include what apps? from what I've seen from oneiric, the only option you have is a check for some proprietary MP3 package
+2012-02-22T02:07:00.000Z	JetJaguar	Pikkachu	So when you installed you just did a default install?  You didn't manually choose applications to install?
+2012-02-22T02:09:00.000Z	Pikkachu	JetJaguar	does Oneiric allow you to pikc up random apps to install? I didn't see that option
+2012-02-22T02:10:00.000Z	JetJaguar	Pikkachu	The standard installer doesn't.  I just installs a predefined group of applications.
+2012-02-22T02:11:00.000Z	Pikkachu	JetJaguar	I didn't know there were other official installers, I couldn't notice them on the download page. Where are them and what are their purpose?
+2012-02-22T02:12:00.000Z	JetJaguar	Pikkachu	For advanced users or for those that was a server rather than a desktop.
+2012-02-22T02:13:00.000Z	Pikkachu	JetJaguar	ok, it's not hard even in that case
+2012-02-22T02:13:00.000Z	Pikkachu	JetJaguar	it's just about knowing which non-default stuff was installed even if during system install
+2012-02-22T02:14:00.000Z	JetJaguar	Pikkachu	You may be able to look at the list of apps installed by default and compare to what you have installed.
+2012-02-22T02:15:00.000Z	JetJaguar	Pikkachu	Pretty sure the apps installed by default are available in the read me or in the documentation somewhere.
+2012-02-22T02:16:00.000Z	Pikkachu	JetJaguar	I could play with apt history but it's boring... I could keep myself some history, I could  add some function like install { sudo apt-get install "$@" && add-to-install-history }... but I wanted a ready-to-use solution
+2012-02-22T02:17:00.000Z	JetJaguar	Pikkachu	I don't know of anything like that.  Someone else may though.
+2012-02-22T02:17:00.000Z	Pikkachu	JetJaguar	as for standard apps listed somewhere I'm not so sure, it would rather be a deb package list and comparing it to current installed packages would not give the apps since they may consist on several dependencies
+2012-02-22T02:17:00.000Z	Pikkachu	JetJaguar	thanks anyway Jet
+2012-02-22T02:18:00.000Z	Pikkachu	JetJaguar	if I had time I'd just write some gui for that function or maybe patching software center or synaptic, it would be really nice to have something similar to the add/remove panel from windows
+2012-02-22T02:18:00.000Z	JetJaguar	Pikkachu	Well Ubuntu doesn't "officially" use DEB anymore I think.  It CAN use them but It officially uses the Software Center now.
+2012-02-22T02:19:00.000Z	Pikkachu	JetJaguar	what do you exactly mean with 'DEB'?
+2012-02-22T02:22:00.000Z	JetJaguar	Pikkachu	 Well, I know there is some kind of difference between the package managers for Ubuntu and Debian.
+2012-02-22T02:26:00.000Z	Pikkachu	JetJaguar	what package managers? apt? aptitude? synaptic? software center?
+2012-02-22T02:27:00.000Z	Pikkachu	JetJaguar	what just happened is that they just wrote software center as alternative to synaptic and removed this one from oneiric as installed by default
+2012-02-22T02:28:00.000Z	Pikkachu	JetJaguar	I've seen the (btw buggy) filter dialog of synaptic, never seen a way to create such a filter though
+2012-02-22T02:29:00.000Z	JetJaguar	Pikkachu	Just a suggestion.
+2012-02-22T02:36:00.000Z	Pikkachu	JetJaguar	ok, but from what I've seen it's not possible :(
+2012-02-22T02:37:00.000Z	JetJaguar	Pikkachu	Well, looks like you may just have to roll your own then.  :|
+2012-02-22T02:38:00.000Z	Pikkachu	JetJaguar	yeah :( thanks anyway
+2012-02-22T02:40:00.000Z	JetJaguar	Pikkachu	Drive space is so cheep now that I don't think many folks care what's on their system.
+2012-02-22T02:40:00.000Z	Pikkachu	JetJaguar	it's not a matter of disk usage
+2012-02-22T02:41:00.000Z	Pikkachu	JetJaguar	it's a matter of knowing what custom applications you've installed, just like in add/remove dialog in windows
+2012-02-22T02:41:00.000Z	JetJaguar	Pikkachu	I know what you mean.  Just not many folks out there use an application to track their apps I guess.
