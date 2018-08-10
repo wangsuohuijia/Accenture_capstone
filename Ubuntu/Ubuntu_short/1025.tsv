@@ -1,0 +1,16 @@
+2011-10-25T01:35:00.000Z	digz		thanks barkingfish.
+2011-10-25T01:35:00.000Z	digz		barkingfish - i can move the mouse fine, just no left clicking.
+2011-10-25T01:37:00.000Z	digz		thanks mate.
+2011-10-25T01:39:00.000Z	p1ruj3	digz	In most applications, you can always right-click on the mouse to access the options menu. On the keyboard, you can simply press Shift + F10 to achieve this ‘right-click‘ effect - perhaps your mouse is setup as left handed... not sure what the left click shortcut is
+2011-10-25T01:48:00.000Z	p1ruj3	digz	do youhave another mouse to try?
+2011-10-25T01:50:00.000Z	p1ruj3	digz	try disabling the trackpad in bios
+2011-10-25T01:52:00.000Z	p1ruj3	digz	machine model #? it would be in bios
+2011-10-25T01:54:00.000Z	p1ruj3	digz	i doubt this will work but fn f9 i think is the disable toggle
+2011-10-25T01:56:00.000Z	p1ruj3	digz	reboot machine, hold fn f2 and go into bios
+2011-10-25T01:56:00.000Z	p1ruj3	digz	goto advanced and internal pointing devices
+2011-10-25T01:57:00.000Z	p1ruj3	digz	did fn + f9 do anything?
+2011-10-25T01:59:00.000Z	p1ruj3	digz	egrep "Name|Handlers" /proc/bus/input/devices
+2011-10-25T02:00:00.000Z	p1ruj3	digz	pastebin contents of /etc/X11/xrg.conf
+2011-10-25T02:01:00.000Z	p1ruj3	digz	type dmesg then unplug your mouse and plug it in, type dmesg and pastebin me the appended lines
+2011-10-25T02:05:00.000Z	p1ruj3	digz	pastebin the info i requested and go bios disable come back and if its still jacked ill review
+2011-10-25T02:48:00.000Z	p1ruj3	digz	whats the word im about outa here..

@@ -1,0 +1,16 @@
+2011-11-07T00:44:00.000Z	diamonds		Medibuntu's repository is deactivated by upgrading to a newer Ubuntu release, so you should run this command again after the release upgrade.
+2011-11-07T00:44:00.000Z	diamonds		a-fucking-ha
+2011-11-07T00:44:00.000Z	diamonds		>:(
+2011-11-07T00:44:00.000Z	diamonds		sorry
+2011-11-07T00:45:00.000Z	diamonds		why in the name of pete doesn't Ubuntu give you a flopping heads-up when it deactivates a bunch of codecs??
+2011-11-07T00:45:00.000Z	diamonds		it already broke my touchpad on update...
+2011-11-07T00:46:00.000Z	diamonds		I feel sometimes like the Ubuntu core team dgaf about the average user's experience
+2011-11-07T00:46:00.000Z	Boontoo	diamonds	yeah, me too...but it's not like they get paid. I mean they are building to fit the average user
+2011-11-07T00:46:00.000Z	diamonds	Boontoo	fair enough on the first point, don't see eye to eye on the second
+2011-11-07T00:47:00.000Z	Boontoo	diamonds	I can't use the newer versions because I have a specific setup for recording studio equipment
+2011-11-07T00:47:00.000Z	Boontoo	diamonds	but if I were using a generic laptop without all sorts of specific configs, it usually works fine for me
+2011-11-07T00:48:00.000Z	Boontoo	diamonds	you can always freeze your version, so as not to update except for security
+2011-11-07T00:48:00.000Z	diamonds	Boontoo	that's a not-very-good workaround imo :/
+2011-11-07T00:48:00.000Z	Boontoo	diamonds	that should save most of your old codecs, provided you dodge the dist-upgrade
+2011-11-07T00:49:00.000Z	Boontoo	diamonds	*shrug* I dunno then
+2011-11-07T00:50:00.000Z	Boontoo	diamonds	oh yeah, I understand...right now I am staring at an inoperable shell

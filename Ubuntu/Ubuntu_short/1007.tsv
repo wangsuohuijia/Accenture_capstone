@@ -1,0 +1,16 @@
+2011-10-29T19:56:00.000Z	BigTaxi		The site I was given has no advice for actually DISCOVERING the card on my laptop. Any tips there?
+2011-10-29T19:56:00.000Z	Nisstyre	BigTaxi	lspci
+2011-10-29T19:57:00.000Z	BigTaxi	Nisstyre	I should have clarified. I can only see the card in the terminal. That's it.
+2011-10-29T19:57:00.000Z	Nisstyre	BigTaxi	I don't understand what you mean by that
+2011-10-29T19:58:00.000Z	Nisstyre	BigTaxi	do you have the correct kernel module(s) loaded?
+2011-10-29T19:59:00.000Z	Nisstyre	BigTaxi	do "lsmod" and look for your card
+2011-10-29T20:06:00.000Z	Nisstyre	BigTaxi	anyway, is there a daemon script for pcmcia in /etc/init.d/ ?
+2011-10-29T20:07:00.000Z	Nisstyre	BigTaxi	yes
+2011-10-29T20:08:00.000Z	Nisstyre	BigTaxi	that may be what you're looking for
+2011-10-29T20:13:00.000Z	BigTaxi	Nisstyre	Don't leave me now :(
+2011-10-29T20:14:00.000Z	Nisstyre	BigTaxi	have you done "pccardctl info" ?
+2011-10-29T20:15:00.000Z	Nisstyre	BigTaxi	try running it
+2011-10-29T20:15:00.000Z	Nisstyre	BigTaxi	try using your card now
+2011-10-29T20:22:00.000Z	BigTaxi	Nisstyre	How would one normally find something in the PCMCIA slot? I dont know what it would look like if it WAS working
+2011-10-29T20:24:00.000Z	Nisstyre	BigTaxi	I've never owned a pcmcia card
+2011-10-29T20:51:00.000Z	BigTaxi	Nisstyre	How can I tell if I /etc/init.d/pcmciautils did anyhing?

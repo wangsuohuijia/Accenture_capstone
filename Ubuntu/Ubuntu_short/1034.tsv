@@ -1,0 +1,16 @@
+2012-05-18T03:14:00.000Z	zooz		hi people
+2012-05-18T03:15:00.000Z	zooz		is there a way to disable "reconfigure" on every package install?
+2012-05-18T03:15:00.000Z	zooz		it annoys hell of a lot out of me
+2012-05-18T03:15:00.000Z	zooz		especially coming from RHEL/Fedora type of distros..
+2012-05-18T03:16:00.000Z	zooz		the other I asked the other day, how do I disable services auto start after it is installed?
+2012-05-18T03:16:00.000Z	psusi	zooz	by default, only the high priority questions are asked, which are rare
+2012-05-18T03:17:00.000Z	psusi	zooz	apparently the information is vital to get the package working and a suitable default could not be determined
+2012-05-18T03:18:00.000Z	zooz	psusi	what if I, a user, want to decide which info is vital and when to enter it?
+2012-05-18T03:18:00.000Z	psusi	zooz	for unattended installs, you answer the questions in advance
+2012-05-18T03:18:00.000Z	psusi	zooz	you don't... if it is required or the package doesn't work, then it is required...
+2012-05-18T03:19:00.000Z	zooz	psusi	then answer me this: I have a 100 ubuntu servers and I want to install a package called "foo"
+2012-05-18T03:19:00.000Z	psusi	zooz	though it is always possible that whoever packaged the program marked the question as required when it really could have a sensible default
+2012-05-18T03:20:00.000Z	zooz	psusi	so according to you, I have to go through all of the 100 servers and manually answer all those stupid questions?
+2012-05-18T03:20:00.000Z	psusi	zooz	there was a way to specify the answer in advance when you go to install, but yea.... and it's only broken if the answer isn't *really* required for the package to work, which would mean whoever packaged the program messed up
+2012-05-18T03:25:00.000Z	zooz	psusi	thanks for the information, that helped me understand the philosophy of debian and/or ubuntu
+2012-05-18T03:25:00.000Z	zooz	psusi	I have been using RHEL/CentOS/Fedora for many many years and never experienced that kind of nonsense

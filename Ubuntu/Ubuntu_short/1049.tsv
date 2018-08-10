@@ -1,0 +1,16 @@
+2011-10-18T22:02:00.000Z	kimi_tesal		network manager of gnome shell is always overrites /etc/resolv.conf file and use the old dns. :(
+2011-10-18T22:04:00.000Z	llutz	kimi_tesal	edit your dhclient.conf, prepend-dns-nameserver
+2011-10-18T22:05:00.000Z	llutz	kimi_tesal	 or  /etc/resolvconf/resolv.conf.d/base  to get fixed dns-entries  (needs package "resolvconf" being installed)
+2011-10-18T22:08:00.000Z	kimi_tesal	llutz	i installed resolvconf . and i am looking to /etc/resolvconf/resolv.conf.d folder. what should i do now?
+2011-10-18T22:09:00.000Z	llutz	kimi_tesal	add your dns-server ip to  /etc/resolvconf/resolv.conf.d/base
+2011-10-18T22:10:00.000Z	kimi_tesal	llutz	i add. now?
+2011-10-18T22:10:00.000Z	llutz	kimi_tesal	restart connection
+2011-10-18T22:12:00.000Z	kimi_tesal	llutz	i did. but did not changed my dns which i write on .base fie .. :(
+2011-10-18T22:13:00.000Z	llutz	kimi_tesal	more info "man resolvconf"
+2011-10-18T22:18:00.000Z	llutz	kimi_tesal	"sudo resolvconf -u"
+2011-10-18T22:19:00.000Z	kimi_tesal	llutz	i did it. now?
+2011-10-18T22:19:00.000Z	llutz	kimi_tesal	check /etc/resolv.conf, should contain correct dns now
+2011-10-18T22:21:00.000Z	kimi_tesal	llutz	yes it is. but my old dns still there too. i have many dns there now. the old and the new.
+2011-10-18T22:21:00.000Z	kimi_tesal	llutz	isystem still use the old dns. :(
+2011-10-18T22:22:00.000Z	llutz	kimi_tesal	 add it to /etc/resolvconf/resolvconf.d/head    and run resolvconf -u again
+2011-10-18T22:23:00.000Z	llutz	kimi_tesal	for more info read "man resolvconf, all written down there"

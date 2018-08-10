@@ -1,0 +1,16 @@
+2012-01-23T20:32:00.000Z	wdonkey		can't be done easily
+2012-01-23T20:32:00.000Z	wdonkey		i dont want to share printers, only files
+2012-01-23T20:33:00.000Z	LjL	wdonkey	maybe this is not relevant and you already know it, but aside from putting your interfaces into ad-hoc mode, you will also need to manually give them correct IPs, since DHCP won't be served...
+2012-01-23T20:33:00.000Z	wdonkey	LjL	its relevant thanks
+2012-01-23T20:36:00.000Z	wdonkey	LjL	what would a correct ip be ?
+2012-01-23T20:37:00.000Z	LjL	wdonkey	depends on what IPs you are already using for your other LAN (i assume you have one?) you could use 192.168.0.x or 10.0.0.x
+2012-01-23T20:38:00.000Z	LjL	wdonkey	yes for example. if you use 192.168.0.x, then give a netmask of 255.255.255.0.
+2012-01-23T20:40:00.000Z	wdonkey	LjL	shall i check the available to all user square ? it is by default on my 11.10 but not on my 11.04
+2012-01-23T20:42:00.000Z	LjL	wdonkey	i'm afraid i don't know what that is, but i *suppose* it's just to tell NetworkManager whether to use it for when other people log in too, in that case, that's your choice
+2012-01-23T20:43:00.000Z	wdonkey	LjL	so ok, i've created that wireless connection, but when i try  connecting onto it, it disconnects me from my router and from internet
+2012-01-23T20:44:00.000Z	LjL	wdonkey	uh well, i can't say i'm too familiar with NetworkManager at all, but... you do have it clear that you can't use a single wireless card to stay connected to two different networks?
+2012-01-23T20:45:00.000Z	wdonkey	LjL	i guess i am now
+2012-01-23T20:46:00.000Z	LjL	wdonkey	it might or might not be possible (i don't know) with some cards and drivers to connect to two different SSIDs that are *on the same channel*, but i have no idea how to go about doing that, or even 100% sure it's actually possible
+2012-01-23T20:48:00.000Z	wdonkey	LjL	alright, thanks for this. ill be right back
+2012-01-23T23:17:00.000Z	wdonkey	LjL	are you there ?
+2012-01-24T00:54:00.000Z	LjL	wdonkey	Nautilus is GNOME's file manager

@@ -1,0 +1,16 @@
+2012-03-25T12:22:00.000Z	SilfenX		if anyone got a moment to spare, I m curious as to why I have NO access to alter settings/move around icons on desktop, make persistent changes in system tools etc. I ve set up my system according to this tutorial: http://www.havetheknowhow.com/Configure-the-server/Install-VNC.html
+2012-03-25T12:23:00.000Z	Crowler	SilfenX	because ubuntu made "foolproof"
+2012-03-25T12:26:00.000Z	Crowler	SilfenX	i doubt you'll find more freedom in any modern package based distro
+2012-03-25T12:28:00.000Z	SilfenX	Crowler	sitting down at the actual machine running ubuntu, the screen only shows a terminal prompt while if I access it via VNC from my windows machine, I get a very basic looking gnome desktopthingamajingy
+2012-03-25T12:29:00.000Z	Crowler	SilfenX	alt+f7?
+2012-03-25T12:30:00.000Z	Crowler	SilfenX	stock vnc is "foolproof" too
+2012-03-25T12:39:00.000Z	SilfenX	Crowler	alt+f7 on ubuntu machine gives a bunch of text, ending with 'The vnc HOME variable is not set'
+2012-03-25T12:41:00.000Z	Crowler	SilfenX	stock vnc doesnt allow you to connect to your established linux session
+2012-03-25T12:42:00.000Z	Crowler	SilfenX	so if you connect via vnc, you get logged out from gui locally
+2012-03-25T12:42:00.000Z	SilfenX	Crowler	ok. Since you say 'stock vnc', I assume there is something else out there might let me do that?
+2012-03-25T12:42:00.000Z	Crowler	SilfenX	there is
+2012-03-25T12:43:00.000Z	Crowler	SilfenX	try some derivatives, like tightvnc
+2012-03-25T12:43:00.000Z	SilfenX	Crowler	this setup is based on ubuntu server 10.04 and has only got gnome-core installed
+2012-03-25T12:44:00.000Z	SilfenX	Crowler	just to prevent it from running a heavy local gui which I really dont need if I can get this to work properly. It s meant to sit healdess in a closet
+2012-03-25T12:45:00.000Z	SilfenX	Crowler	the vncserver I m running now I think is called vnc4server/x11?
+2012-03-25T12:46:00.000Z	Crowler	SilfenX	try some lightweight UI, but they usually ugly, outdated and you have to configure them by manually editing config files

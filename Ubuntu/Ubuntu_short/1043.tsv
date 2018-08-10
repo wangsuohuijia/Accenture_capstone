@@ -1,0 +1,16 @@
+2011-12-22T19:40:00.000Z	deej1976	dp	try running sudo apt-get update first in a termina;
+2011-12-22T19:40:00.000Z	deej1976		*terminal
+2011-12-22T19:40:00.000Z	dp	deej1976	I did.
+2011-12-22T19:40:00.000Z	dp		but, I'll do it once more
+2011-12-22T19:41:00.000Z	dp		Reinstallation of libebook1.2-12 is not possible, it cannot be downloaded.
+2011-12-22T19:42:00.000Z	deej1976	dp	"apt-cache search libebook"  finds libebook1.2-12
+2011-12-22T19:43:00.000Z	dp	deej1976	I understand that
+2011-12-22T19:43:00.000Z	dp	deej1976	but I cannot install it
+2011-12-22T19:44:00.000Z	deej1976	dp	can you pastebin the complete errro
+2011-12-22T19:44:00.000Z	deej1976		*error
+2011-12-22T19:45:00.000Z	dp	deej1976	I pasted it here: Reinstallation of libebook1.2-12 is not possible, it cannot be downloaded.
+2011-12-22T19:51:00.000Z	deej1976	dp	have you run a "sudo apt-get upgrade" ?
+2011-12-22T19:53:00.000Z	dp	deej1976	yes. that's actually what uninstalled empathy in the first place
+2011-12-22T19:54:00.000Z	deej1976	dp	What did you install to cause empathy to uninstall ? have you added an empathy PPA
+2011-12-22T19:55:00.000Z	dp	deej1976	I did an upgrade. AFAIK, I have no empathy PPAs
+2011-12-22T19:58:00.000Z	deej1976	dp	Sorry, if you've not got any extra ppa's enabled, and it was removed with an upgrade, it's past my experiences

@@ -1,0 +1,16 @@
+2011-11-02T22:13:00.000Z	eHAPPY		Is it possible to write to a protected folder without giving it read/write access?
+2011-11-02T22:13:00.000Z	riffautae	eHAPPY	who is writing to the folder?
+2011-11-02T22:14:00.000Z	eHAPPY	riffautae	a normal user (me) i just dont want to 777 it out
+2011-11-02T22:14:00.000Z	eHAPPY		could i make folders inside that one and write to those?
+2011-11-02T22:14:00.000Z	riffautae	eHAPPY	you could change the owner of the file to you or alternativly the group to users and then only add write access to that
+2011-11-02T22:15:00.000Z	eHAPPY		ok and thats the only way?
+2011-11-02T22:15:00.000Z	eHAPPY		or the best way*
+2011-11-02T22:15:00.000Z	riffautae	eHAPPY	depends on your use case, what is the folder?
+2011-11-02T22:15:00.000Z	eHAPPY	riffautae	its just a watch folder for rtorrent
+2011-11-02T22:16:00.000Z	riffautae	eHAPPY	so you want rtorrent and yourself to be able to write to it?
+2011-11-02T22:16:00.000Z	eHAPPY	riffautae	yeh :P
+2011-11-02T22:16:00.000Z	eHAPPY		rtorrent can just fine, but i cant :(
+2011-11-02T22:17:00.000Z	riffautae	eHAPPY	is rtorrent running as root or some custom user?
+2011-11-02T22:17:00.000Z	eHAPPY		custom
+2011-11-02T22:17:00.000Z	riffautae	eHAPPY	yea you should be able to change the group to 'users' and set g+rw to be able to access it
+2011-11-02T22:18:00.000Z	eHAPPY	riffautae	ok ill try that, thanks :)

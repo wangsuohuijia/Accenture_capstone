@@ -1,0 +1,16 @@
+2011-11-01T18:57:00.000Z	cablop		ok, then 28 GB still to much to root?
+2011-11-01T18:57:00.000Z	cablop		ok...
+2011-11-01T18:57:00.000Z	cablop		so no answer
+2011-11-01T18:58:00.000Z	cablop		is dm-crypt multi-threading in *ubuntu*?
+2011-11-01T18:58:00.000Z	deej1976	cablop	what are you deploying?
+2011-11-11T18:06:00.000Z	deej1976	cablop	that works
+2011-11-11T18:08:00.000Z	deej1976	cablop	What are you trying to archive?
+2011-11-11T18:10:00.000Z	cablop	deej1976	 setup a server, but to leave gui environment on it to administer it remotelly using nx, vnc or ssh -X
+2011-11-11T18:11:00.000Z	deej1976	cablop	I'm with ActionParsnip cli admin is easy
+2011-11-22T14:47:00.000Z	deej1976	cablop	rapidsvn, and nautuilas have extensions for svn
+2011-11-22T14:48:00.000Z	cablop	deej1976	yep, but the nautilus of the gnome 3 seems to make those extensions broken
+2011-11-22T14:48:00.000Z	deej1976	cablop	Ok, I've not tried them recently
+2011-11-22T15:03:00.000Z	deej1976	cablop	Bazaar VCS has svn plugin
+2011-11-22T15:03:00.000Z	cablop	deej1976	nice!
+2011-11-22T15:03:00.000Z	deej1976	cablop	and SVN Workbench, both in Software Centre
+2011-11-22T15:14:00.000Z	deej1976	cablop	which interface is really ot, as it's really a matter of personal opinion

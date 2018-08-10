@@ -1,0 +1,16 @@
+2011-11-14T11:21:00.000Z	sion	harsh343	: sudo usermod -aG admin hary
+2011-11-14T11:25:00.000Z	sion	harsh343	your problem is that the user you're using does not have root access
+2011-11-14T11:25:00.000Z	harsh343	sion	then what i can do ?
+2011-11-14T11:26:00.000Z	sion	harsh343	do you know the password to your previous username?
+2011-11-14T11:26:00.000Z	harsh343	sion	yes i am only the user of my lapt
+2011-11-14T11:28:00.000Z	sion	harsh343	I obviously don't understand your problem, what are you trying to achieve?
+2011-11-14T11:32:00.000Z	sion	harsh343	why do you want to 'sudo nautilus'? what will you do once you get nautilus?
+2011-11-14T11:38:00.000Z	sion	harsh343	check which user owns the pendrive with: ls -l /media/pendrive (replacing /media/pendrive with path to your pendrive)
+2011-11-14T11:39:00.000Z	sion	harsh343	if the owner of the file is not the current user then you will probably not be able to write to it without either a) changing permissions b) changing ownership c) changing users d) remounting drive
+2011-11-14T11:47:00.000Z	sion	harsh343	unfortunately my proxy is blocking your pastebin at the moment :(
+2011-11-14T11:47:00.000Z	harsh343	sion	hows ?
+2011-11-14T11:57:00.000Z	sion	harsh343	sorry, could send me the output of "ls -l /media" in a private message (so as not to flood the channel) because my pastebin doesn't work?
+2011-11-14T12:04:00.000Z	sion	harsh343	are you still there? did you manage with your pen drive?
+2011-11-14T12:05:00.000Z	harsh343	sion	yes boss
+2011-11-14T12:05:00.000Z	sion	harsh343	problem solved? or not yet?
+2011-11-14T12:06:00.000Z	harsh343	sion	not

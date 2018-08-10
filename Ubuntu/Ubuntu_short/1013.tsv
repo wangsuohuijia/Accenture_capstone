@@ -1,0 +1,16 @@
+2012-03-05T03:31:00.000Z	PhantomPhreak53		Ok I have been fighting with this all day and can't seem to get it back up and running. Basically when I do apt-get upgrade I get this error: http://pastebin.com/ZBbnx4zE I have tried reinstall php, apt-get -f install, tried removing the packages and nothing seems to work
+2012-03-05T03:32:00.000Z	nsadmin	PhantomPhreak53	this is the whole apache/php thing?
+2012-03-05T03:32:00.000Z	PhantomPhreak53	nsadmin	I am on nginx and php5
+2012-03-05T03:32:00.000Z	nsadmin	PhantomPhreak53	and that's what you want?
+2012-03-05T03:33:00.000Z	nsadmin	PhantomPhreak53	that is
+2012-03-05T03:34:00.000Z	PhantomPhreak53	nsadmin	php seems to be the problem so php should be fixed first
+2012-03-05T03:37:00.000Z	PhantomPhreak53	nsadmin	any recomendations
+2012-03-05T03:37:00.000Z	nsadmin	PhantomPhreak53	what is not working about your php?
+2012-03-05T03:38:00.000Z	PhantomPhreak53	nsadmin	the php package didn't install correclty and I can't remove it with apt-get remove
+2012-03-05T03:38:00.000Z	nsadmin	PhantomPhreak53	hmm. so we should fix that first
+2012-03-05T03:39:00.000Z	PhantomPhreak53	nsadmin	been trying all day
+2012-03-05T03:40:00.000Z	PhantomPhreak53	nsadmin	http://pastebin.com/wJEUWeVT
+2012-03-05T03:43:00.000Z	nsadmin	PhantomPhreak53	so that shows you're not mixing (good) and you have lucid and updates to lucid
+2012-03-05T03:44:00.000Z	PhantomPhreak53	nsadmin	what do you recomend
+2012-03-05T03:46:00.000Z	nsadmin	PhantomPhreak53	the name of the package making all the problems is php? apt-cache policy php | pastebinit
+2012-03-05T03:47:00.000Z	PhantomPhreak53	nsadmin	http://pastebin.com/cBTUKzPy

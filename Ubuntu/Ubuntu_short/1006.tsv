@@ -1,0 +1,16 @@
+2011-10-31T06:20:00.000Z	afflicto		Hello everyone - I instaled ubuntu 10.04 yesterday, then upgraded to 11.10, then tried to enable the gnome 3 interface, first - gnome 3 was enabled but it seemed to use textures from another theme, text wasn't displaying correctly etc. I fiddler with the terminal and did some stuff I don't even know.... I essentially broke the installation and I want to reinstall. - Question is: Should i use 11.10 or 10.04?  I want Gnome 3 with the d
+2011-10-31T06:20:00.000Z	Polah	afflicto	install 11.10 from ISO and the reinstall GNOME3. It could be that your system can't support it though.
+2011-10-31T06:21:00.000Z	afflicto	Polah	hm. I did have some window dragging lag.
+2011-10-31T06:22:00.000Z	afflicto	Polah	but when I used gnome 3 without the dash thing (I don't know how I did that though) It looked like gnome 2, very old looking. At that point window dragging was 100% smooth.
+2011-10-31T06:22:00.000Z	Polah	afflicto	GNOME Fallback I think it's called?
+2011-10-31T06:23:00.000Z	afflicto	Polah	why did that happen, thogh?
+2011-10-31T06:24:00.000Z	Polah	afflicto	I know the shell uses Mutter, but I don't know if the fallback mode uses it or not, but it could be an issue with that. I know the fallback is for systems which don't support hardware accelerated graphics
+2011-10-31T06:26:00.000Z	afflicto	Polah	hm k.. Anyway, I'm downloading 11.10 64-bit now. It's finnished now
+2011-10-31T06:58:00.000Z	afflicto	Polah	Now that I have a clean 11.10 install (without ATI drivers) and the Unity interface is working smoothly. What do I do to enable the Gnome 3 interface? sudo apt-get install gnome-shell or something?
+2011-10-31T06:59:00.000Z	Polah	afflicto	sudo apt-get install gnome should get gnome-shell and gnome-panel, it's definitely get -shell at least. Then try out shell and see if it's buggy (GNOME from the login screen), if it is then you can use GNOME Fallback (gnome-panel)
+2011-10-31T07:00:00.000Z	afflicto	Polah	yea well I won't use gnome fallback since it doesn't have that Dash button and not the application\window switcher that comes up upon pressing the Super button. Anyway, I'l try to install the gnome shell. so Brb!
+2011-10-31T07:04:00.000Z	afflicto	Polah	just to be very clear: This is what I'm after = http://lh4.googleusercontent.com/-Q-wzDm1TLuY/TpxpYBBPmQI/AAAAAAAAGUk/lzeNiv0aS2U/elegance_gnome-shell.png
+2011-10-31T07:05:00.000Z	Polah	afflicto	you'll need to get the theme for that then (unless it comes by default, I don't know)
+2011-10-31T07:22:00.000Z	Polah	afflicto	try again and see what it says
+2011-10-31T07:23:00.000Z	afflicto	Polah	"Gnome shell is already the newest version".
+2011-10-31T07:24:00.000Z	Polah	afflicto	then I guess log out and try to switch to it then (:

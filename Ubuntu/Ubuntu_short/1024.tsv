@@ -1,0 +1,16 @@
+2011-11-09T23:27:00.000Z	o0o0	hc96	some dhcp client
+2011-11-09T23:27:00.000Z	o0o0	hc96	missing
+2011-11-09T23:28:00.000Z	hc96	o0o0	how would I? I did nothing to my system, it broke the internet without anything done from me
+2011-11-09T23:30:00.000Z	o0o0		what is the default dhcp package?
+2011-11-09T23:31:00.000Z	o0o0		jtr__,thnx
+2011-11-09T23:32:00.000Z	o0o0		jtr__,thnx
+2011-11-09T23:32:00.000Z	o0o0		jtr__,:)
+2011-11-09T23:32:00.000Z	o0o0	hc96	try installing this http://packages.ubuntu.com/oneiric/all/dhcp3-client/download
+2011-11-09T23:33:00.000Z	o0o0	hc96	srry http://packages.ubuntu.com/oneiric/dhcpcd
+2011-11-09T23:34:00.000Z	o0o0	hc96	it seems dhcp3-client is a transitional
+2011-11-09T23:34:00.000Z	hc96	o0o0	I should install the deamon?
+2011-11-09T23:35:00.000Z	o0o0	hc96	which daemon?
+2011-11-09T23:36:00.000Z	hc96		dhcpd is a daemon
+2011-11-09T23:36:00.000Z	o0o0	hc96	now that i took a closer look http://packages.ubuntu.com/oneiric/isc-dhcp-client
+2011-11-09T23:38:00.000Z	o0o0	hc96	whichever you like
+2011-11-09T23:38:00.000Z	o0o0	hc96	:daemon is ok i thinlk

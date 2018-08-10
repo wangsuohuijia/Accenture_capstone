@@ -1,0 +1,16 @@
+2012-09-20T19:18:00.000Z	Onkeltem		How to check signatures of all the files on a computer?
+2012-09-20T19:19:00.000Z	Onkeltem		backslash: to be sure files were not modified
+2012-09-20T19:21:00.000Z	Boondoklife	Onkeltem	You have hashes of every file on your computer?
+2012-09-20T19:21:00.000Z	Onkeltem	Boondoklife	I don't know, I asking it
+2012-09-20T19:21:00.000Z	Onkeltem	Boondoklife	can Ubuntu check itself?
+2012-09-20T19:22:00.000Z	Onkeltem	Boondoklife	I understand that, but I think there should be a way with apt/dpk
+2012-09-20T19:22:00.000Z	Onkeltem	Boondoklife	does they keep md5 of every file?
+2012-09-20T19:28:00.000Z	Onkeltem	Boondoklife	last installation took 2 weeks
+2012-09-20T19:28:00.000Z	Onkeltem	Boondoklife	I have no time
+2012-09-20T19:29:00.000Z	Onkeltem	Boondoklife	how can backup help if I don't know what to look for
+2012-09-20T19:29:00.000Z	Boondoklife	Onkeltem	a backup would allow you to backup your data and restore the OS
+2012-09-20T19:29:00.000Z	Onkeltem	Boondoklife	how would I know when mware was got into the system?
+2012-09-20T19:31:00.000Z	Onkeltem	Boondoklife	I had time yet to work out appropriate backup solution
+2012-09-20T19:31:00.000Z	Onkeltem	Boondoklife	 can you recommend one?
+2012-09-20T19:31:00.000Z	Onkeltem	Boondoklife	is it using some server on the Internet?
+2012-09-20T19:34:00.000Z	Onkeltem	Boondoklife	thanks. But currently I have no additional LAN servers/data storages :(

@@ -1,0 +1,16 @@
+2011-12-02T15:32:00.000Z	deej1976	aum___	Who wrote this specification, what software are you trying to use?
+2011-12-02T16:59:00.000Z	deej1976	aum___	Read up on :http://www.webupd8.org/2010/08/ofris-deep-freeze-like-application-for.html
+2011-12-02T17:04:00.000Z	aum___	deej1976	thanks
+2011-12-02T17:04:00.000Z	deej1976	aum___	also Gofris
+2011-12-02T17:05:00.000Z	deej1976	aum___	no 11.10 option
+2011-12-02T17:11:00.000Z	aum___	deej1976	ok thanks.
+2011-12-02T17:31:00.000Z	deej1976	aum___	sudo apt-get install gnome-shell gnome-tweak-tool
+2011-12-02T17:35:00.000Z	aum___	deej1976	i think gnome-shell is not in ubuntu 10.04
+2011-12-02T17:35:00.000Z	deej1976	aum___	Nope, and gnome should be install by default on desktop. Is this a server?
+2011-12-02T17:36:00.000Z	aum___	deej1976	no, i installed command line system through alternate cd
+2011-12-02T17:38:00.000Z	deej1976	aum___	ubuntu-desktop is a meta-package if you look at the contents it will list the packages
+2011-12-02T17:39:00.000Z	aum___	deej1976	i know but it installs many other applications which i do not want
+2011-12-02T17:41:00.000Z	deej1976	aum___	I said look at the package not install it, it will list all the packages that make ubuntu-desktop including the gnome related packages
+2011-12-02T17:42:00.000Z	deej1976	aum___	e.g. gnome-session
+2011-12-02T17:43:00.000Z	aum___	deej1976	do you know how to create an icon in a panel of icewm?
+2011-12-02T17:43:00.000Z	deej1976	aum___	Nope never used icewm

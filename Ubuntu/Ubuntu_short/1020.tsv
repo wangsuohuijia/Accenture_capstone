@@ -1,0 +1,16 @@
+2011-10-30T13:37:00.000Z	xgt001		hello....i installed oss video drivers removing fglrx updates ... I am getting just the wallpaper when I select unity or unity 2d help please
+2011-10-30T13:38:00.000Z	s0nee	xgt001	what do you mean by "just the wallpaper" ?
+2011-10-30T13:39:00.000Z	xgt001	s0nee	I mean only wallpaper after I login from lightdm... if I select gnome fallback it works, but I have installed the radeon driver :(
+2011-10-30T13:40:00.000Z	s0nee	xgt001	did you reconfigure the xorg.conf ?
+2011-10-30T13:55:00.000Z	s0nee	xgt001	run "lspci | grep VGA" then post the output
+2011-10-30T13:55:00.000Z	xgt001	s0nee	01:00.0 VGA compatible controller: ATI Technologies Inc Robson CE [AMD Radeon HD 6300 Series]
+2011-10-30T13:56:00.000Z	s0nee	xgt001	ok. now are you in graphical mode ?
+2011-10-30T13:56:00.000Z	xgt001	s0nee	i am in unity 2d
+2011-10-30T13:57:00.000Z	s0nee	xgt001	run "gksudo gedit /etc/X11/xorg.conf" then look for lines that start with "Driver"
+2011-10-30T13:58:00.000Z	xgt001	s0nee	err...i opened it its all blank... i have the fglrx backup xorg.conf.... could it be of any use?
+2011-10-30T13:59:00.000Z	s0nee	xgt001	hmm then use the old one. look for the line "Driver <your old driver>" and replace it with "Driver <your new driver>"
+2011-10-30T14:00:00.000Z	xgt001	s0nee	hmmm thanks... anyone know how to make radeon driver auto generate xorg.conf file?
+2011-10-30T14:01:00.000Z	s0nee	xgt001	run "sudo Xorg -configure" to generate a new xorg.conf file
+2011-10-30T14:01:00.000Z	s0nee	xgt001	then replace it with the current one
+2011-10-30T14:02:00.000Z	xgt001	s0nee	i get this error Server is already active for display 0 .... should i do it in tty?
+2011-10-30T14:02:00.000Z	s0nee	xgt001	switch to a tty then run "sudo pkill X" to stop X server. then run xorg -configure again

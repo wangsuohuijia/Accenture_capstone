@@ -1,0 +1,16 @@
+2012-07-31T22:12:00.000Z	NetRunnerBlack		Hi guys. I'm got a button that told me to use package manager or apt-get, and when I did so I received this error message.
+2012-07-31T22:13:00.000Z	NetRunnerBlack		netrunnerblack@GothixMindsEyeIII:~$ sudo apt-get check [sudo] password for netrunnerblack: Reading package lists... Error! E: Encountered a section with no Package: header E: Problem with MergeList /var/lib/apt/lists/archive.ubuntulinux.jp_ubuntu-ja_precise_en E: The package lists or status file could not be parsed or opened.
+2012-07-31T22:13:00.000Z	CaptainQuirk	NetRunnerBlack	what version of ubuntu are you using ?
+2012-07-31T22:15:00.000Z	NetRunnerBlack	CaptainQuirk	Precise
+2012-07-31T22:15:00.000Z	NetRunnerBlack		12.04
+2012-07-31T22:16:00.000Z	CaptainQuirk		did you run any command to update your sources list recently ?
+2012-07-31T22:16:00.000Z	NetRunnerBlack		Not recently
+2012-07-31T22:16:00.000Z	NetRunnerBlack		I've added source packages in the past though, should I update again?
+2012-07-31T22:19:00.000Z	CaptainQuirk	NetRunnerBlack	Have you tried to find a match on google for your problem
+2012-07-31T22:21:00.000Z	CaptainQuirk	NetRunnerBlack	have you tried to remove those packages from your sources list
+2012-07-31T22:22:00.000Z	CaptainQuirk	NetRunnerBlack	one by one, and test
+2012-07-31T22:22:00.000Z	NetRunnerBlack	CaptainQuirk	1) No, but I'm using DuckDuckGo. 2) No, I'm a bit of a newb at all this and didn't want to break something. ^^
+2012-07-31T22:23:00.000Z	CaptainQuirk	NetRunnerBlack	Well first open the sources list, wherever it is on 12.04
+2012-07-31T22:25:00.000Z	NetRunnerBlack		test
+2012-07-31T22:25:00.000Z	NetRunnerBlack		Sorry. Okay, I've found the file referanced.
+2012-07-31T22:26:00.000Z	CaptainQuirk	NetRunnerBlack	what file ?

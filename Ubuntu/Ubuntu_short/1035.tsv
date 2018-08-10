@@ -1,0 +1,16 @@
+2011-10-23T10:20:00.000Z	sskniranjan		whenever i start my computer the message come that choose any one among windows 7 or ubuntu other wise the highlightened will be selected automatically.[windows 7]. what to do to change the default os from windows to ubuntu
+2011-10-23T10:20:00.000Z	bhavesh	sskniranjan	Download grub-customizer, you can edit the default OS u want to select through it
+2011-10-23T10:22:00.000Z	bhavesh	sskniranjan	That would remove the GRUB screen from appearing..
+2011-10-23T10:23:00.000Z	sskniranjan	bhavesh	waht is grub
+2011-10-23T10:23:00.000Z	bhavesh	sskniranjan	GRUB is the orangle/black list of operating systems you see before you select windows or Ubutnu
+2011-10-23T10:24:00.000Z	bhavesh	sskniranjan	this one : http://1.bp.blogspot.com/-jR0AhQ1Heu4/TlMt_Gg6VBI/AAAAAAAAANU/hifhVf5pOrE/s1600/1288715432.grub.png
+2011-10-23T10:24:00.000Z	bhavesh	sskniranjan	You want to select Ubuntu as default OS?
+2011-10-23T10:25:00.000Z	sskniranjan	bhavesh	: i want the same thing happening now but what i want is that . instead of window the highlight shows ubuntu. how to do that
+2011-10-23T10:25:00.000Z	bhavesh	sskniranjan	Download grub customizer (search in software center) and run it by sudo grub-customizer
+2011-10-23T10:26:00.000Z	bhavesh	sskniranjan	In grub-customizer click "Preferences" which would open a new window and select predefined to Ubuntu
+2011-10-23T10:29:00.000Z	sskniranjan	bhavesh	what is erm
+2011-10-23T10:29:00.000Z	bhavesh	sskniranjan	This would answer all your questions: http://www.webupd8.org/2010/11/grub-customizer-20-can-change-default.html
+2011-10-23T10:29:00.000Z	sskniranjan	bhavesh	thanx. are u indian. name sounds like indian
+2011-10-23T10:30:00.000Z	bhavesh	sskniranjan	The page has instructions to Install grub-customizer and change default grub entry
+2011-10-23T14:21:00.000Z	sskniranjan	bhavesh	mada karo na yaar
+2011-10-23T14:21:00.000Z	bhavesh	sskniranjan	in PM <

@@ -1,0 +1,16 @@
+2011-10-20T05:24:00.000Z	lucianoloder		ssfdre38:yes, there is
+2011-10-20T05:25:00.000Z	ssfdre38	lucianoloder	do you know where cause im trying to set up a oneiric chroot for program testing
+2011-10-20T05:25:00.000Z	lucianoloder	ssfdre38	there is a folder, /etc/apt/sources_list.d, containing other "sources.list"  archives, that you can fill with one document per sources list, if you want
+2011-10-20T05:26:00.000Z	ssfdre38	lucianoloder	i have source.list.d not sources_list.d
+2011-10-20T05:26:00.000Z	lucianoloder	ssfdre38	ok, its the same thing, ...
+2011-10-20T05:26:00.000Z	lucianoloder	ssfdre38	but what are you trying to do, install ubuntu oneric in other partiton for testing?
+2011-10-20T05:27:00.000Z	ssfdre38	lucianoloder	just chroot the distro so i can get it for program testing and dev
+2011-10-20T05:33:00.000Z	ssfdre38	lucianoloder	just so you know i did cp the entire /etc/apt folder over to my chroot
+2011-10-20T05:35:00.000Z	lucianoloder	ssfdre38	I dont know if it will help you, but you can install any debian-like system using debootstrap, ..
+2011-10-20T05:36:00.000Z	lucianoloder	ssfdre38	At least i used it one time or other to bring a system up
+2011-10-20T05:36:00.000Z	lucianoloder	ssfdre38	of course, to do a chroot you will need to mount /dev, /sys and /proc too, ..
+2011-10-20T05:37:00.000Z	lucianoloder	ssfdre38	they are all mounted in the chrooted system?
+2011-10-20T05:42:00.000Z	lucianoloder	ssfdre38	well, i think that it should work, maybe you need to "sudo apt-get update" after changing the source_list packets, ...
+2011-10-20T05:42:00.000Z	ssfdre38	lucianoloder	i just got it all working now
+2011-10-20T05:43:00.000Z	lucianoloder	ssfdre38	well, happy hacking for you, ...
+2011-10-20T05:44:00.000Z	ssfdre38	lucianoloder	more like happy modding

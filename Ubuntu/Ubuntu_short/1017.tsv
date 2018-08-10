@@ -1,0 +1,16 @@
+2012-03-30T11:54:00.000Z	Onkeltem		Hi all. I have problem with Network Manager - I can't change anything in Network Settings. See this short screencast: http://www.screencast.com/users/Onkeltem/folders/Default/media/6ea518fd-b2bb-4be7-8f8a-23545b4e8e5d
+2012-03-30T11:55:00.000Z	Onkeltem		Roughly speaking, the auth window popups for moments and disappears
+2012-03-30T11:56:00.000Z	almoxarife	Onkeltem	you changed the settings, where is the issue?
+2012-03-30T11:57:00.000Z	almoxarife	Onkeltem	btw, you changed to 'address-only' and did not give it a 'dns source' , not sure about that
+2012-03-30T11:58:00.000Z	Onkeltem	almoxarife	not the issue, any change behaves like this
+2012-03-30T11:58:00.000Z	Onkeltem	almoxarife	even if I change only "auto"
+2012-03-30T11:59:00.000Z	almoxarife	Onkeltem	like what?
+2012-03-30T11:59:00.000Z	Onkeltem	almoxarife	the auth window popups and disappears not allowing to enter password
+2012-03-30T12:00:00.000Z	almoxarife	Onkeltem	but do the changes take effect?
+2012-03-30T12:01:00.000Z	Onkeltem	almoxarife	no of course, This is the problem
+2012-03-30T12:01:00.000Z	almoxarife	Onkeltem	of course
+2012-03-30T12:02:00.000Z	Onkeltem	almoxarife	I cound't save any changes to NM settins on this new installation of Ubuntu 11.10. To get network working I copied /etc/Network Manager forlder from another Ubutnu 11.10 machine
+2012-03-30T12:06:00.000Z	almoxarife	Onkeltem	nothing you did seems to me requires root access
+2012-03-30T12:07:00.000Z	Onkeltem	almoxarife	well, it actually requires - note "for all users" at the bottom
+2012-03-30T12:08:00.000Z	almoxarife	Onkeltem	you didn't change 'for all users'
+2012-03-30T12:18:00.000Z	Onkeltem	almoxarife	yes, it is already system conntection. So changing anything from it initiates write to /etc

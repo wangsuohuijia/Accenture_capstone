@@ -1,0 +1,16 @@
+2011-12-13T06:57:00.000Z	crassus		So if I've compiled something from source and want to uninstall it, do I have to have the same source to do the 'sudo make uninstall' ?
+2011-12-13T06:58:00.000Z	crassus		if I've rm'd that original source, will it be a problem if I re-download it, extract, and then do the sudo make uninstall in the new source?
+2011-12-13T06:58:00.000Z	crassus		as along as they're the same version and all
+2011-12-13T06:59:00.000Z	lsv	crassus	If you get the same source, then I think it should work.
+2011-12-13T07:00:00.000Z	lsv	crassus	maybe you could check the version of your program and then look for that version of the source
+2011-12-13T07:00:00.000Z	crassus	lsv	yep, that's what I'm doing
+2011-12-13T07:00:00.000Z	crassus		problem is it's hugeass texlive2011
+2011-12-13T07:00:00.000Z	crassus		so it will be a huge hassle to redownload
+2011-12-13T07:01:00.000Z	lsv	crassus	oohh...
+2011-12-13T07:01:00.000Z	crassus		yeah, 4gb download
+2011-12-13T07:01:00.000Z	crassus		not fun
+2011-12-13T07:01:00.000Z	lsv	crassus	4gb of source?
+2011-12-13T07:01:00.000Z	crassus		I wish there was an uninstall binary that was outside of the source that was put in /usr/bin or whatever
+2011-12-13T07:02:00.000Z	crassus		yeah, tex is huge man
+2011-12-13T07:02:00.000Z	lsv		is there any man page for that program?
+2011-12-13T07:07:00.000Z	lsv	crassus	does it have a man page?  Maybe the man page has some info?

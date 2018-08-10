@@ -1,0 +1,16 @@
+2011-11-11T20:53:00.000Z	deej1976	koskoz	System Settings -> System info -> Default Applications
+2011-11-11T20:53:00.000Z	koskoz	deej1976	I don't have default application in system settings...
+2011-11-11T20:57:00.000Z	koskoz	deej1976	it's strange because when I click on the mail icon on the top right of the desktop it's evolution which is set, not thunderbird
+2011-11-11T20:57:00.000Z	deej1976	koskoz	Have you Gone into System Settings -> System Info -> Default Applications ?
+2011-11-11T20:58:00.000Z	koskoz	deej1976	yes, and it's thunderbird which is set
+2011-11-11T20:58:00.000Z	deej1976	koskoz	Is evolution still running?
+2011-11-11T20:59:00.000Z	koskoz	deej1976	it's not even launched
+2011-11-11T21:00:00.000Z	deej1976	koskoz	On my fresh install clicking Mail brings up Thunderbird
+2011-11-11T21:00:00.000Z	koskoz	deej1976	that's really weird, I just made the upgrade from 10.10 to 11.10
+2011-11-11T21:02:00.000Z	deej1976	koskoz	What happens if you run Thunderbird, it should complain about not being default app
+2011-11-11T21:03:00.000Z	koskoz	deej1976	it shouldn't considering it's already the default mail client
+2011-11-11T21:03:00.000Z	deej1976	koskoz	Have you tried it?
+2011-11-11T21:04:00.000Z	koskoz	deej1976	yes
+2011-11-11T21:06:00.000Z	deej1976	koskoz	Have you tried un-installing evolution
+2011-11-11T21:06:00.000Z	koskoz	deej1976	not yet
+2011-11-11T21:07:00.000Z	koskoz	deej1976	I think I'll just reboot because VLC is set as the default video app and it still not launching as the default one

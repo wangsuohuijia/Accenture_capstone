@@ -1,0 +1,16 @@
+2011-11-26T00:16:00.000Z	Lubomir		hello. i installed ubuntu 11.10, run the updates, reboot and now the system dont boot any more. it hang up at grub and i have the grub command line infront of mine
+2011-11-26T00:16:00.000Z	MeQuerSat	Lubomir	can you select Recovery Mode ?
+2011-11-26T00:17:00.000Z	Lubomir	MeQuerSat	i cant select anything. it just give me an command line
+2011-11-26T00:17:00.000Z	MeQuerSat	Lubomir	does it display: grub>
+2011-11-26T00:18:00.000Z	Lubomir	MeQuerSat	yes
+2011-11-26T00:19:00.000Z	MeQuerSat	Lubomir	do you have EFI ?
+2011-11-26T00:20:00.000Z	Lubomir	MeQuerSat	no. its an older centrino notebook. Like i told. I just installed fresh ubuntu and select "use whole hdd". I boot into it, run the updates that have been automaticly shown and now it does not boot any more
+2011-11-26T00:21:00.000Z	MeQuerSat	Lubomir	you can boot from the live-cd again and reinstall grub
+2011-11-26T00:23:00.000Z	Lubomir	MeQuerSat	how can i do this exactly?
+2011-11-26T00:24:00.000Z	MeQuerSat	Lubomir	google it
+2011-11-26T00:39:00.000Z	MeQuerSat	Lubomir	did you use /dev/sdX or /dev/sda ?
+2011-11-26T00:41:00.000Z	MeQuerSat	Lubomir	that rarely happens
+2011-11-26T00:42:00.000Z	MeQuerSat	Lubomir	what was the output after which you ran the grub-install command?
+2011-11-26T00:43:00.000Z	Lubomir	MeQuerSat	that it installed successfully and with no errors
+2011-11-26T00:45:00.000Z	MeQuerSat	Lubomir	phlux, https://help.ubuntu.com/community/Grub2#Use_Boot-Repair_Graphical_Tool
+2011-11-26T00:47:00.000Z	MeQuerSat	Lubomir	you can also install the boot-repair program from the live-cd..

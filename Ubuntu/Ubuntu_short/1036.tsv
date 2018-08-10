@@ -1,0 +1,16 @@
+2011-12-04T12:03:00.000Z	sn00p		How do I change my graphics driver in ubuntu 11.10 from vesa to intel? since ubuntu dont have xorg.conf? is it in grub.conf?
+2011-12-04T12:05:00.000Z	ZooMonkey	sn00p	the old intel vid driver used to be i700, i800, etc.. and frankly u might b better off with VESA compared to those! :)
+2011-12-04T12:06:00.000Z	ZooMonkey	sn00p	run a scan on the bus for your chipset
+2011-12-04T12:08:00.000Z	sn00p	ZooMonkey	no xorg in there
+2011-12-04T12:09:00.000Z	sn00p	ZooMonkey	sn00p@sn00p:/usr/share/X11/xorg.conf.d$
+2011-12-04T12:10:00.000Z	sn00p	ZooMonkey	there is no .conf in ther
+2011-12-04T12:10:00.000Z	ZooMonkey	sn00p	yes but settle down they are upset and may boot you
+2011-12-04T12:11:00.000Z	ZooMonkey	sn00p	aw shucks. That's where you woulda gone if you had a Touchscreen. Sorry. :( I remembering the wrong spot.
+2011-12-04T12:14:00.000Z	sn00p	ZooMonkey	empty
+2011-12-04T12:14:00.000Z	ZooMonkey	sn00p	does going to Additional Drivers do anything? Its empty u say?
+2011-12-04T12:14:00.000Z	sn00p	ZooMonkey	yep
+2011-12-04T12:15:00.000Z	ZooMonkey	sn00p	Im personally curious as I hav boards that still run that use those chips.
+2011-12-04T12:18:00.000Z	ZooMonkey	sn00p	what Ubuntu r u running? 11.10?
+2011-12-04T12:18:00.000Z	sn00p	ZooMonkey	it was running fine when I had 10
+2011-12-04T12:18:00.000Z	ZooMonkey	sn00p	I had a sneaking suspicion! Switch down to Linux Mint 10 if you want My opinion.
+2011-12-04T12:19:00.000Z	ZooMonkey	sn00p	it just installs MP3 and video and things for you automatically. Its shortcut and works same as ubuntu.

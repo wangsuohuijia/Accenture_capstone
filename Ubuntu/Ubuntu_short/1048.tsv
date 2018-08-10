@@ -1,0 +1,16 @@
+2011-10-19T04:04:00.000Z	bnmorgan		holy crap i think i'm in over my head.
+2011-10-19T04:05:00.000Z	bnmorgan		could someone walk me through creating a VM to run windoze in?
+2011-10-19T04:06:00.000Z	bnmorgan		pref in a direct window so that I don't irritate everyone else with my stupid questions.
+2011-10-19T04:07:00.000Z	scarleo	bnmorgan	just install VirtualBox, it's pretty self-explanatory
+2011-10-19T05:32:00.000Z	scarleo	bnmorgan	did you try System Settings -> Displays and then untick Mirror Displays?
+2011-10-19T05:33:00.000Z	bnmorgan	scarleo	yes, it tells me an error "required virtual size does not fit available size: " and lists several sizes.
+2011-10-19T05:34:00.000Z	scarleo	bnmorgan	Could you try unplug that extra monitor and logout/login then connect it again?
+2011-10-19T05:46:00.000Z	bnmorgan	scarleo	where do i find driver info?
+2011-10-19T05:48:00.000Z	scarleo	bnmorgan	you could have a look here: https://help.ubuntu.com/community/BinaryDriverHowto/ATI
+2011-10-19T05:49:00.000Z	bnmorgan	scarleo	argh. looks like my answer. it worked till i updated to what i thought were the proper proprietary drivers.
+2011-10-19T05:53:00.000Z	scarleo	bnmorgan	You can read here https://help.ubuntu.com/community/RadeonDriver, just purge the fglrx ones and install the radeon ones instead
+2011-10-19T06:07:00.000Z	bnmorgan	scarleo	for the time being i think i surrender. i don't have the patience left to try to get it going.
+2011-10-19T06:07:00.000Z	bnmorgan	scarleo	back to windoze :(
+2011-10-19T06:11:00.000Z	scarleo	bnmorgan	thats too bad
+2011-10-19T06:13:00.000Z	bnmorgan	scarleo	i know. i'll give it another go in a day or two when i'm not at the end of 13 hrs work and a migraine
+2011-10-19T06:13:00.000Z	scarleo	bnmorgan	that sounds better :) get some rest

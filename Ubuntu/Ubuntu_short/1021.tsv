@@ -1,0 +1,16 @@
+2011-10-26T07:59:00.000Z	TexasRussian	Roasted	what version are you currently using?
+2011-10-26T08:00:00.000Z	Roasted	TexasRussian	11.10. I had issues in 10.04 where the wireless would just drop off after a bit.
+2011-10-26T08:00:00.000Z	Roasted	TexasRussian	so far I'm on 11.10 and looping a ping to a local news site in intervals of 3 seconds.
+2011-10-26T08:00:00.000Z	Roasted	TexasRussian	830 requests later, still going strnog
+2011-10-26T08:01:00.000Z	TexasRussian	Roasted	so your wireless just drops the WPA encryption after a while
+2011-10-26T08:01:00.000Z	Roasted	TexasRussian	in 10.04 it did using the Intel 2200 BG card
+2011-10-26T08:01:00.000Z	Roasted	TexasRussian	I had been using a broadcom since then (yuck)
+2011-10-26T08:01:00.000Z	Roasted	TexasRussian	but when I installed 11.10 I also had to replace the internal speakers so I had it gutted. I figured I'd swap wifi cards and see and so far its working, to my surprise...
+2011-10-26T08:02:00.000Z	Roasted	TexasRussian	I'm just curious if anybody had similar success as I'm currently having, as the Intel 2200 was a problematic card for some people
+2011-10-26T08:02:00.000Z	Roasted	TexasRussian	it was the ONE Intel card to avoid using, it seemed.
+2011-10-26T08:02:00.000Z	TexasRussian	Roasted	soo, you don't have a problem?
+2011-10-26T08:04:00.000Z	Roasted	TexasRussian	so far, no. I'm just curious if anybody else has had such luck with this card.
+2011-10-26T08:04:00.000Z	TexasRussian	Roasted	lol, ok and no I didn't have that problem
+2011-10-26T08:04:00.000Z	Roasted	TexasRussian	I guess considering it's an older card I didn't expect it to work. So I'm a little shocked at the moment
+2011-10-26T08:05:00.000Z	TexasRussian	Roasted	yeah a lot of network cards that didn't work in earlier releases now work in 11.10
+2011-10-26T08:05:00.000Z	Roasted	TexasRussian	I wonder if it worked in 11.04 even... I  never tried 11.04 on here.

@@ -1,0 +1,16 @@
+2011-11-08T15:26:00.000Z	bonhoffer		i got a kernel panic so i booted with usb, how do i see my attached disk
+2011-11-08T15:26:00.000Z	bonhoffer		i thought i would be in /mnt
+2011-11-08T15:28:00.000Z	bonhoffer		and in 11.x, how do i get a terminal?
+2011-11-08T15:28:00.000Z	bonhoffer		i looks like mac for stupid people
+2011-11-08T15:28:00.000Z	deej1976	bonhoffer	Click the clog in the top left and type terminal
+2011-11-08T15:29:00.000Z	deej1976	bonhoffer	disk utility
+2011-11-08T15:30:00.000Z	deej1976	bonhoffer	look under /media
+2011-11-08T15:32:00.000Z	bonhoffer	deej1976	under media i have cdrom (which is not connected) and 84526...
+2011-11-08T16:39:00.000Z	deej1976	bonhoffer	ctrl-x ctrl-v
+2011-11-08T16:39:00.000Z	bonhoffer	deej1976	thanks for answering such a basic question
+2011-11-08T16:51:00.000Z	deej1976	bonhoffer	Any settings in the bios to assign more memory to onboard graphics
+2011-11-08T16:51:00.000Z	bonhoffer	deej1976	thanks, i'll look in that direction
+2011-11-08T16:52:00.000Z	bonhoffer	deej1976	but you don't think i need something like: http://gigabyte-ga-z68ap-d3-rev-1-0-intel-vga.driver.soft32download.com/
+2011-11-08T16:54:00.000Z	deej1976	bonhoffer	http://intellinuxgraphics.org/2011Q3.html
+2011-11-08T16:55:00.000Z	deej1976	bonhoffer	Not very user friendly for install though
+2011-11-08T16:55:00.000Z	bonhoffer	deej1976	thanks -- is the Z68 a graphics chip

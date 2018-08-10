@@ -1,0 +1,16 @@
+2011-11-01T03:23:00.000Z	andref		Hi
+2011-11-01T03:23:00.000Z	andref		I have one small user question,  can I ask it here?
+2011-11-01T03:23:00.000Z	edbian	andref	yep :)
+2011-11-01T03:23:00.000Z	edbian	andref	That's the purpose of this channel?
+2011-11-01T03:24:00.000Z	edbian	andref	and that is... ?
+2011-11-01T03:25:00.000Z	edbian	andref	All on one line please
+2011-11-01T03:32:00.000Z	edbian	andref	Ask in the python channel (but off the top of my head env vars missing, why are you not using os.system, guessing 'andref' needs a shell, sudo -s /bin/bash andref gives andref a shell)
+2011-11-01T03:33:00.000Z	edbian	andref	That was close enough to one line :)
+2011-11-01T03:34:00.000Z	andref	edbian	so it is python's issue?
+2011-11-01T03:34:00.000Z	edbian	andref	I don't know but that's my best guess
+2011-11-01T03:35:00.000Z	andref	edbian	I thought that maybe AppArmor or something is blocking me
+2011-11-01T03:36:00.000Z	edbian	andref	It might be, I don't know enough about the details
+2011-11-01T03:38:00.000Z	andref	edbian	and you all: do you know if AppArmor constrints are applayed to non-root user services?
+2011-11-01T03:38:00.000Z	edbian	andref	apparmor is a firewall right?  Why would it have anything to do with some application plugin without networking?
+2011-11-01T03:40:00.000Z	andref	edbian	firewall? I've readden a piece of Ubuntu server book and it semms it is rather something that ph4nt0m_ says
+2011-11-01T03:41:00.000Z	edbian	andref	IDK

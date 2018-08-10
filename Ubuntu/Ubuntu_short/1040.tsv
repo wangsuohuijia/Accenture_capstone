@@ -1,0 +1,16 @@
+2011-10-20T01:25:00.000Z	span89		no wireless extensions for lo or eth0
+2011-10-20T01:26:00.000Z	span89		sounds about right
+2011-10-20T01:27:00.000Z	span89		it looks like I'm just gonna have to go back to Windows. I'm really sad about this. I've tried to install Ubuntu on 3 machines and all of them had ONE thing that wasn't compatible (which was necessary in order for me to use it), causing me to revert back to windows
+2011-10-20T01:27:00.000Z	span89		it suckssssssss. I think I'll just have to try it on a newer machine instead of trying to test it on legacy devices
+2011-10-20T01:28:00.000Z	avn-matt	span89	if u need help then ask, otherwise....
+2011-10-20T01:29:00.000Z	span89	avn-matt	Answer that kindly, please.
+2011-10-20T01:29:00.000Z	avn-matt	span89	ask now
+2011-10-20T01:29:00.000Z	span89	avn-matt	Currently, I'm trying to get my wireless working on this Dell Latitude D610. It's using a Broadcom BCM4306
+2011-10-20T01:31:00.000Z	avn-matt	span89	http://davidwatson.org/2007/05/broadcom-4306-on-feisty-fawn.html guide here
+2011-10-20T01:31:00.000Z	avn-matt	span89	also reference http://ubuntuforums.org/showthread.php?p=11334571#post11334571
+2011-10-20T01:32:00.000Z	avn-matt	span89	I just googled "ubuntu your card name" and came up with 5 guides in two seconds... probably why you didn't get an answer in here
+2011-10-20T01:33:00.000Z	span89	avn-matt	No need to be nasty. I've tried 4 different guides. I've tried to install the firmware cutter and legacy installer through Synaptic and the Terminal as well, but neither worked.
+2011-10-20T01:33:00.000Z	span89	avn-matt	So what now?
+2011-10-20T01:33:00.000Z	span89	avn-matt	11.04
+2011-10-20T01:34:00.000Z	span89	avn-matt	What I'm wondering is if an earlier version of Ubuntu would play friendlier with what I'm using.
+2011-10-20T01:35:00.000Z	avn-matt	span89	dont upgrade to 11.10 or you might end up in here for the same reason i am....

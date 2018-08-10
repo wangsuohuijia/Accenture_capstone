@@ -1,0 +1,16 @@
+2011-11-04T11:32:00.000Z	ActionParsnip	alvin2_	put / on SSD and swap /var /tmp and /home on a platter based partition. Makes things nice
+2011-11-04T11:34:00.000Z	alvin2_	ActionParsnip	ouch! i don't have SSD , just a harddisk and i have windogs7 with it,
+2011-11-04T11:35:00.000Z	ActionParsnip	alvin2_	ubuntu boots in about 20seconds here on my hardware circa 2000 to 2005. I'm sure the default boot is plenty fast on anything you have
+2011-11-04T11:36:00.000Z	alvin2_	ActionParsnip	my current partition layout is 512mb=ext2=/boot ; 18gb=ext4=/ ; 1gb=swap <<< all in ext3
+2011-11-04T11:36:00.000Z	ActionParsnip	alvin2_	why not make the OS faster while you actually are using it
+2011-11-04T11:37:00.000Z	ActionParsnip	alvin2_	how much RAM do you have?
+2011-11-04T11:38:00.000Z	alvin2_	ActionParsnip	but as i choose ubuntu, there's a two line messages saying "FATAL: mod probe can't load modules /var/lib/ blah blah. . . i worry what is that message.. i havve 1gb RAM
+2011-11-04T11:39:00.000Z	ActionParsnip	alvin2_	then you want 2gb swap as you have less than 2gb ram so you should use double your ram amount for swap. If you had 2gb ram or more you would use the same amount
+2011-11-04T11:40:00.000Z	ActionParsnip	alvin2_	have you considered buying more ram. You could double your ram for very cheap
+2011-11-04T11:42:00.000Z	alvin2_	ActionParsnip	i thought 1gb swap for a 1gb RAM is quite enough... btw, is that ok that i have a seperate partition for /boot?
+2011-11-04T11:43:00.000Z	ActionParsnip	alvin2_	its fine but may fill if you don't clear old kernels out using the package system
+2011-11-04T11:45:00.000Z	alvin2_	ActionParsnip	but why am i getting that message? fatal error: couldn't fine modules linux-xxx failed to load modules /var/lib/modules bla blah ,,,, i can't remember the exact message
+2011-11-04T11:47:00.000Z	ActionParsnip	alvin2_	sounds like you added a module name in /etc/modules  or are loading it with a command. If you can get the error you can use it in websearches
+2011-11-04T11:49:00.000Z	alvin2_	ActionParsnip	where in the log viewer can i find that message about /var/lib?
+2011-11-04T11:50:00.000Z	ActionParsnip	alvin2_	dmesg   possibly
+2011-11-04T11:53:00.000Z	alvin2_	ActionParsnip	not in there, maybe i might just have to clean and install ubuntu again for 4th time in just a month :(

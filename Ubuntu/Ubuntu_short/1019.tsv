@@ -1,0 +1,16 @@
+2011-10-28T00:30:00.000Z	ubidoobi2		i don't see my 65 bit acer in the list of compatable computers for ubuntu ... does this mean it's not supported .. or does this mean i should try a 32 bit install instead? ... or neither LOL
+2011-10-28T00:32:00.000Z	ubidoobi2		desktop
+2011-10-28T00:32:00.000Z	ubidoobi2		gentoo64: yeah you would think so ... gpart don't see it either
+2011-10-28T00:32:00.000Z	ubidoobi2		gentoo64 : sorry .. yes gpart sees the drive .. the installer don't .. sorry
+2011-10-28T00:33:00.000Z	ubidoobi2		i did a low level format on the drive yesterday ... installed win7 again .. no problems .. tried 2 other hdds i got laying around .. all the same
+2011-10-28T00:35:00.000Z	robin0800	ubidoobi2	if you have installed the raid device on an hd that is excluded from the installer
+2011-10-28T00:36:00.000Z	ubidoobi2	robin0800	drive is set to IDE
+2011-10-28T00:38:00.000Z	robin0800	ubidoobi2	if you have more than one hd the partioner ask if you want to install the raid device if you do that disc is then excluded from the installer
+2011-10-28T00:39:00.000Z	ubidoobi2	robin0800	only one hdd in the box is wired up
+2011-10-28T00:40:00.000Z	robin0800	ubidoobi2	and its properly detected by the bios?
+2011-10-28T00:40:00.000Z	ubidoobi2	robin0800	... yes it detects fine
+2011-10-28T00:41:00.000Z	robin0800	ubidoobi2	is it partioned and formatted
+2011-10-28T00:44:00.000Z	robin0800	ubidoobi2	use gparted to mark first partition as active
+2011-10-28T00:45:00.000Z	robin0800	ubidoobi2	change the order then
+2011-10-28T00:46:00.000Z	ubidoobi2	robin0800	: i've tried every combination in there .. all same result
+2011-10-28T00:51:00.000Z	ubidoobi2	robin0800	: ...i've tried formatted and partitioned

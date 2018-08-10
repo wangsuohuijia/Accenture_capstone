@@ -1,0 +1,16 @@
+2011-11-15T17:10:00.000Z	VictorCL		S
+2011-11-15T17:11:00.000Z	VictorCL		no like , if I write text in uppercase .. select the text and make it lowercase  ,, in any place
+2011-11-15T17:11:00.000Z	VictorCL		is there keyboard shortcut for this?
+2011-11-15T17:12:00.000Z	VictorCL		any where , on ubuntu , global context
+2011-11-15T17:12:00.000Z	VictorCL		I know that some software come with that option
+2011-11-15T17:12:00.000Z	VictorCL		like editors
+2011-11-15T17:13:00.000Z	VictorCL		like  I WRITE THIS ON UPPERCASE ..UPS <-- select this text ctrl+l  (for example) ..and make it lowercase :D
+2011-11-15T17:13:00.000Z	VictorCL		mm would be handy
+2011-11-15T17:14:00.000Z	VictorCL		is there a big difference between 11.04 and 11.10 ¿
+2011-11-15T17:14:00.000Z	VictorCL		should I upgrade¿
+2011-11-15T17:15:00.000Z	crizzy	VictorCL	i would actually recommend waiting for 12.04, gnome3 is still missing a lot of old configuration options
+2011-11-15T17:16:00.000Z	crizzy	VictorCL	configuration tools are a big mess, you can't even change fonts without "tweak tools"
+2011-11-15T17:18:00.000Z	crizzy	VictorCL	better fix. take screwdriver, rip off your caps lock key
+2012-03-02T14:47:00.000Z	crizzy	VictorCL	next month
+2012-03-02T14:47:00.000Z	crizzy	VictorCL	ubuntu versioning is year.month yy.mm
+2012-03-02T14:47:00.000Z	crizzy	VictorCL	and releases happen always .04 and .10. with only one exception so far which was 6.06, which was delayed 2 months to give it extra stability

@@ -1,0 +1,16 @@
+2011-11-25T17:57:00.000Z	luca_bi		How can I install a file tar.gz?
+2011-11-25T17:58:00.000Z	rj11	luca_bi	You don't install a tar.gz file. What you do with it depends on its contents.
+2011-11-25T17:59:00.000Z	luca_bi	rj11	It's SilverStripe
+2011-11-25T17:59:00.000Z	rj11	luca_bi	tar zxf the-file.tar.gz to unpack it. :)
+2011-11-25T18:02:00.000Z	luca_bi	rj11	My problem is that I never remember the command to unpack a file
+2011-11-25T18:03:00.000Z	rj11	luca_bi	Just do 'man 1 tar' the next time. At the bottom there are a few examples. :)
+2011-11-25T18:06:00.000Z	luca_bi	rj11	man 1 tar??
+2011-11-25T18:07:00.000Z	rj11	luca_bi	Try 'man 1 tar' in a terminal.
+2011-11-25T18:09:00.000Z	rj11	luca_bi	man = short for manual.
+2011-11-25T18:11:00.000Z	rj11	luca_bi	z = gzip, x = extract, f = file. It's the command tar executes.
+2011-11-25T18:12:00.000Z	luca_bi	rj11	Extract all files from archive.tar.
+2011-11-25T18:12:00.000Z	rj11	luca_bi	See 'man 1 tar' for details. It's all explained there.
+2011-11-25T18:12:00.000Z	rj11	luca_bi	Yes, and you're tar is gzipped, so add the z: tar zxf file.tar.gz (the - is optional).
+2011-11-25T18:14:00.000Z	luca_bi	rj11	tar zxf is not a universal command for each file .tar?
+2011-11-25T18:16:00.000Z	rj11	luca_bi	Read the man page. It explains it.
+2011-11-25T18:19:00.000Z	luca_bi	rj11	which is the difference between tar and gzip?
