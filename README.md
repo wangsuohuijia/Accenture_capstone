@@ -17,3 +17,11 @@ choose the best one and do sentiment analysis on Ubuntu corpus. plot the sentime
 improving the chatbot performance. 
 
 
+
+
+注明！！！！
+
+有些数据太大，我将它们压缩之后上传的，使用的时候解压一下就好了。
+
+
+
