@@ -16,11 +16,8 @@ Use models to train yelp data and twitter data, and then apply these models on I
 choose the best one and do sentiment analysis on Ubuntu corpus. plot the sentiment changes and do analysis about
 improving the chatbot performance. 
 
-
 NB：
 As for some large data which cannot be submitted in the GitHub, I compress them into zips.
-
-
 
 Code file
 1. combine_yelp_twitter.py and 2. combine_yelp_twitter_balance.py:     Combine the data
@@ -34,6 +31,10 @@ Code file
 8. Plotting_ubuntu.py:     Plot figures about the sentiment analysis
 
 9. count_new_class_labels.py:     Create a new feature called the "new class label" and count the number of different labels
+
+
+
+
 
 
 
