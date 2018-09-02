@@ -1,3 +1,3 @@
-this is for the data that we use to train models
+there are the data that we used to train and evaluate models
 
-some of them are zip files since they are very large, please uncompress them before using them. 
+Some of them are zip files since they are very large, no need to uncompress them during the process of the running the code. But if you want to check the data manually, please uncompress them. 
