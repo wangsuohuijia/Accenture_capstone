@@ -21,17 +21,19 @@ NB：
 As for some large data which cannot be submitted in the GitHub, I compress them into zips.
 
 
-Combine the data: combine_yelp_twitter.py and combine_yelp_twitter_balance.py
 
-Preprocess the data: preprocessing.py and preprocessing_CombineData_IMDB.py
+Code file
+1. combine_yelp_twitter.py and 2. combine_yelp_twitter_balance.py:     Combine the data
 
-Build models and save the results: RandomForest.py and Logistic_Regression.py
+3. preprocessing.py and 4. preprocessing_CombineData_IMDB.py:     Preprocess the data
 
-Apply models on the Ubuntu dataset: Apply_RF_LR_on_Ubuntu.py
+5. RandomForest.py and 6. Logistic_Regression.py:     Build models and save the results
 
-Plot figures about the sentiment analysis: Plotting_ubuntu.py
+7. Apply_RF_LR_on_Ubuntu.py:     Apply models on the Ubuntu dataset
 
-Create a new feature called the "new class label" and count the number of different labels: count_new_class_labels.py
+8. Plotting_ubuntu.py:     Plot figures about the sentiment analysis
+
+9. count_new_class_labels.py:     Create a new feature called the "new class label" and count the number of different labels
 
 
 
