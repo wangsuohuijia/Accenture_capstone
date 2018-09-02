@@ -4,6 +4,11 @@ from pprint import pprint
 
 
 ## TODO - read 100,000 yelp data
+import zipfile
+import os
+path = os.getcwd()
+zf = zipfile.ZipFile('data_file\\yelp.zip','r')
+zf.extractall(path= path+'\\data_file')
 yelp_ori_sentiment_file = pd.read_csv('data_file\\yelp.csv',encoding = "ISO-8859-1",usecols=['stars','text'])
 len(yelp_ori_sentiment_file)
 yelp_ori_sentiment_file.head()
