@@ -1,6 +1,6 @@
 # Accenture_capstone
 
-this is a project for Accenture company.
+This is a project for Accenture company.
 
 Project title:
 Using sentiment analysis to identify the positive sentiment from customers in end-to-end dialogue systems
@@ -12,17 +12,26 @@ Models:
 Random Forest, Logistic regression, SVC, LSTM
 
 Purpose: 
-use models to train yelp data and twitter data, and then apply these models on IMDB data. 
+Use models to train yelp data and twitter data, and then apply these models on IMDB data. 
 choose the best one and do sentiment analysis on Ubuntu corpus. plot the sentiment changes and do analysis about
 improving the chatbot performance. 
 
 
 NB：
-as for some 
+As for some large data which cannot be submitted in the GitHub, I compress them into zips.
 
-注明！！！！
 
-有些数据太大，我将它们压缩之后上传的，使用的时候解压一下就好了。
+Combine the data: combine_yelp_twitter.py and combine_yelp_twitter_balance.py
+
+Preprocess the data: preprocessing.py and preprocessing_CombineData_IMDB.py
+
+Build models and save the results: RandomForest.py and Logistic_Regression.py
+
+Apply models on the Ubuntu dataset: Apply_RF_LR_on_Ubuntu.py
+
+Plot figures about the sentiment analysis: Plotting_ubuntu.py
+
+Create a new feature called the "new class label" and count the number of different labels: count_new_class_labels.py
 
 
 
